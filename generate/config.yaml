@@ -1,0 +1,5 @@
+templateDir: templates
+additionalProperties:
+  supportsRetry: false
+  packageName: VaultClient
+  packageVersion: 0.0.1
