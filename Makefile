@@ -16,7 +16,7 @@ delete-generated:
 		build.sh \
 		git_push.sh \
 		mono_nunit_test.sh \
-		VaultClient.sln
+		VaultClient.sln \
 		.gitignore \
 		.openapi-generator \
 		.openapi-generator-ignore \
