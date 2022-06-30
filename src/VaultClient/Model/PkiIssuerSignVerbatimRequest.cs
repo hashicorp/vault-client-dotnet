@@ -51,10 +51,10 @@ namespace VaultClient.Model
             Der = 2,
 
             /// <summary>
-            /// Enum Pembundle for value: pem_bundle
+            /// Enum PemBundle for value: pem_bundle
             /// </summary>
             [EnumMember(Value = "pem_bundle")]
-            Pembundle = 3
+            PemBundle = 3
 
         }
 

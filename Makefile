@@ -24,18 +24,15 @@ delete-generated:
 
 generate:
 	docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:$(OPENAPI_GENERATOR_VERSION) generate \
-			-g csharp \
+			-g csharp-netcore \
 			-i /local/$(OPENAPI_SPEC_PATH) \
 			-c /local/$(GENERATE_CONFIG_PATH) \
 			-t /local/$(GENERATE_TEMPLATES_PATH) \
 			-o /local/$(OUTPUT_PATH)
 
 clean:
+	dotnet clean
 	rm -rf \
-		src/VaultClient/bin \
-		src/VaultClient/obj \
-		src/VaultClient.Test/bin \
-		src/VaultClient.Test/obj \
 		build.bat \
 		build.sh \
 		git_push.sh \
