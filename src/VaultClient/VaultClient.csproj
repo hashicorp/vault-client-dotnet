@@ -12,7 +12,7 @@ The version of the OpenAPI document: 1.12.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4E8AA4E-45DB-4FD6-BAF2-F637CF2B45FF}</ProjectGuid>
+    <ProjectGuid>{D2835342-1063-4CED-93A9-950634B0CF1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VaultClient</RootNamespace>

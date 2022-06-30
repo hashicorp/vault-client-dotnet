@@ -10,19 +10,13 @@ regen: delete-generated generate clean
 
 delete-generated:
 	rm -rf \
-		api \
 		docs \
 		src \
-		gradle \
-		build.gradle \
-		build.sbt \
+		build.bat \
+		build.sh \
 		git_push.sh \
-		gradle.properties \
-		gradlew \
-		gradlew.bat \
-		pom.xml \
-		README.md \
-		settings.gradle \
+		mono_nunit_test.sh \
+		VaultClient.sln
 		.gitignore \
 		.openapi-generator \
 		.openapi-generator-ignore \
@@ -42,7 +36,10 @@ clean:
 		src/VaultClient/obj \
 		src/VaultClient.Test/bin \
 		src/VaultClient.Test/obj \
+		build.bat \
+		build.sh \
 		git_push.sh \
+		mono_nunit_test.sh \
 		.openapi-generator \
 		.openapi-generator-ignore \
 		.travis.yml
