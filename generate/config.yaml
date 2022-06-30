@@ -1,4 +1,3 @@
-templateDir: templates
 additionalProperties:
   supportsRetry: false
   packageName: VaultClient

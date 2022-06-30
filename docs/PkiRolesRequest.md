@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **NotBeforeDuration** | **int** | The duration before now which the certificate needs to be backdated by. | [optional] [default to 30]
 **Organization** | **List&lt;string&gt;** | If set, O (Organization) will be set to this value in certificates issued by this role. | [optional] 
 **Ou** | **List&lt;string&gt;** | If set, OU (OrganizationalUnit) will be set to this value in certificates issued by this role. | [optional] 
-**PolicyIdentifiers** | **List&lt;string&gt;** | A comma-separated string or list of policy OIDs. | [optional] 
+**PolicyIdentifiers** | **List&lt;string&gt;** | A comma-separated string or list of policy OIDs, or a JSON list of qualified policy information, which must include an oid, and may include a notice and/or cps url, using the form [{\&quot;oid\&quot;&#x3D;\&quot;1.3.6.1.4.1.7.8\&quot;,\&quot;notice\&quot;&#x3D;\&quot;I am a user Notice\&quot;}, {\&quot;oid\&quot;&#x3D;\&quot;1.3.6.1.4.1.44947.1.2.4 \&quot;,\&quot;cps\&quot;&#x3D;\&quot;https://example.com\&quot;}]. | [optional] 
 **PostalCode** | **List&lt;string&gt;** | If set, Postal Code will be set to this value in certificates issued by this role. | [optional] 
 **Province** | **List&lt;string&gt;** | If set, Province will be set to this value in certificates issued by this role. | [optional] 
 **RequireCn** | **bool** | If set to false, makes the &#39;common_name&#39; field optional while generating a certificate. | [optional] [default to true]
