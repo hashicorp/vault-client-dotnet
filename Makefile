@@ -4,7 +4,7 @@ GENERATE_CONFIG_PATH      ?= generate/config.yaml
 GENERATE_TEMPLATES_PATH   ?= generate/templates
 OUTPUT_PATH               ?= .
 
-.PHONY: delete-generated generate clean build regen
+.PHONY: delete-generated generate clean build build-prod regen
 
 regen: delete-generated generate clean
 
