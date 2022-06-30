@@ -48,7 +48,6 @@ Method | HTTP request | Description
 [**GetSysInternalCountersEntities**](SystemApi.md#getsysinternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
 [**GetSysInternalCountersRequests**](SystemApi.md#getsysinternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
 [**GetSysInternalCountersTokens**](SystemApi.md#getsysinternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
-[**GetSysInternalSpecsDynamic**](SystemApi.md#getsysinternalspecsdynamic) | **GET** /sys/internal/specs/dynamic | Generate an OpenAPI 3 document of all mounted paths.
 [**GetSysInternalSpecsOpenapi**](SystemApi.md#getsysinternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
 [**GetSysInternalUiFeatureFlags**](SystemApi.md#getsysinternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
 [**GetSysInternalUiMounts**](SystemApi.md#getsysinternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
@@ -177,7 +176,6 @@ Disable the audit device at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -190,10 +188,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
 
             try
@@ -249,7 +244,6 @@ Disable the auth method at the given auth path
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -262,10 +256,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
 
             try
@@ -321,7 +312,6 @@ Disable auditing of the given request header.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -334,10 +324,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | 
 
             try
@@ -393,7 +380,6 @@ Remove any CORS settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -406,10 +392,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -461,7 +444,6 @@ Remove a UI header.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -474,10 +456,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | The name of the header.
 
             try
@@ -533,7 +512,6 @@ Cancels any in-progress root generation attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -546,10 +524,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -601,7 +576,6 @@ Cancels any in-progress root generation attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -614,10 +588,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -669,7 +640,6 @@ Disable the mount point specified at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -682,10 +652,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -741,7 +708,6 @@ Remove the plugin with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -754,10 +720,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
 
             try
@@ -813,7 +776,6 @@ Remove the plugin with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -826,10 +788,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
 
@@ -887,7 +846,6 @@ Delete the ACL policy with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -900,10 +858,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -959,7 +914,6 @@ Delete a password policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -972,10 +926,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -1031,7 +982,6 @@ Delete the policy with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1044,10 +994,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -1103,7 +1050,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1116,10 +1062,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | Name of the quota rule.
 
             try
@@ -1174,7 +1117,6 @@ Delete the key with given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1187,10 +1129,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1242,7 +1181,6 @@ Delete the key with given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1255,10 +1193,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | 
 
             try
@@ -1314,7 +1249,6 @@ Delete the backup copy of PGP-encrypted unseal keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1327,10 +1261,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1384,7 +1315,6 @@ This clears the rekey settings as well as any progress made. This must be called
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1397,10 +1327,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1452,7 +1379,6 @@ Allows fetching or deleting the backup of the rotated unseal keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1465,10 +1391,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1522,7 +1445,6 @@ This clears any progress made and resets the nonce. Unlike a `DELETE` against `s
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1535,10 +1457,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1590,7 +1509,6 @@ List the enabled audit devices.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1603,10 +1521,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1658,7 +1573,6 @@ List the currently enabled credential backends.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1671,10 +1585,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1726,7 +1637,6 @@ Read the configuration of the auth engine at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1739,10 +1649,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
 
             try
@@ -1800,7 +1707,6 @@ This endpoint requires sudo capability on the final path, but the same functiona
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1813,10 +1719,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | Tune the configuration parameters for an auth path.
 
             try
@@ -1872,7 +1775,6 @@ List the request headers that are configured to be audited.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1885,10 +1787,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -1940,7 +1839,6 @@ List the information for the given request header.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1953,10 +1851,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | 
 
             try
@@ -2012,7 +1907,6 @@ Return the current CORS settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2025,10 +1919,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2082,7 +1973,6 @@ The sanitized output strips configuration values in the storage, HA storage, and
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2095,10 +1985,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2150,7 +2037,6 @@ Return a list of configured UI headers.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2163,10 +2049,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2222,7 +2105,6 @@ Return the given UI header's configuration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2235,10 +2117,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | The name of the header.
 
             try
@@ -2294,7 +2173,6 @@ Read the configuration and progress of the current root generation attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2307,10 +2185,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2362,7 +2237,6 @@ Read the configuration and progress of the current root generation attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2375,10 +2249,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2430,7 +2301,6 @@ Check the HA status of a Vault cluster
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2443,10 +2313,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2498,7 +2365,6 @@ Returns the health status of Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2511,10 +2377,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2572,7 +2435,6 @@ Information about the host instance that this Vault server is running on.   The 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2585,10 +2447,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2642,7 +2501,6 @@ This path responds to the following HTTP methods.   GET /    Returns a map of in
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2655,10 +2513,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2710,7 +2565,6 @@ Returns the initialization status of Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2723,10 +2577,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2778,7 +2629,6 @@ Report the client count metrics, for this namespace and all child namespaces.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2791,10 +2641,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2846,7 +2693,6 @@ Report the client count metrics, for this namespace and all child namespaces.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2859,10 +2705,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2914,7 +2757,6 @@ Report the number of clients for this month, for this namespace and all child na
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2927,10 +2769,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -2982,7 +2821,6 @@ Read the client count tracking configuration.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2995,10 +2833,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3050,7 +2885,6 @@ Backwards compatibility is not guaranteed for this API
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3063,10 +2897,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3118,7 +2949,6 @@ Backwards compatibility is not guaranteed for this API
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3131,10 +2961,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3186,7 +3013,6 @@ Backwards compatibility is not guaranteed for this API
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3199,10 +3025,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3212,74 +3035,6 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling SystemApi.GetSysInternalCountersTokens: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsysinternalspecsdynamic"></a>
-# **GetSysInternalSpecsDynamic**
-> void GetSysInternalSpecsDynamic ()
-
-Generate an OpenAPI 3 document of all mounted paths.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
-
-namespace Example
-{
-    public class GetSysInternalSpecsDynamicExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
-
-            try
-            {
-                // Generate an OpenAPI 3 document of all mounted paths.
-                apiInstance.GetSysInternalSpecsDynamic();
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalSpecsDynamic: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3322,7 +3077,6 @@ Generate an OpenAPI 3 document of all mounted paths.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3335,10 +3089,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3390,7 +3141,6 @@ Lists enabled feature flags.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3403,10 +3153,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3458,7 +3205,6 @@ Lists all enabled and visible auth and secrets mounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3471,10 +3217,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3526,7 +3269,6 @@ Return information about the given mount.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3539,10 +3281,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path of the mount.
 
             try
@@ -3598,7 +3337,6 @@ Backwards compatibility is not guaranteed for this API
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3611,10 +3349,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3666,7 +3401,6 @@ Backwards compatibility is not guaranteed for this API
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3679,10 +3413,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3734,7 +3465,6 @@ Provides information about the backend encryption key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3747,10 +3477,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3802,7 +3529,6 @@ Returns the high availability status and current leader instance of Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3815,10 +3541,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3870,7 +3593,6 @@ List leases associated with this Vault cluster
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3883,10 +3605,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -3938,7 +3657,6 @@ Count of leases associated with this Vault cluster
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3951,10 +3669,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -4006,7 +3721,6 @@ Returns a list of lease ids.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4019,10 +3733,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4078,7 +3789,6 @@ Returns a list of lease ids.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4091,10 +3801,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
             var list = "true";  // string | Must be set to `true`
 
@@ -4152,7 +3859,6 @@ Export the metrics aggregated for telemetry purpose.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4165,10 +3871,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var format = "format_example";  // string | Format to export metrics into. Currently accepts only \"prometheus\". (optional) 
 
             try
@@ -4224,7 +3927,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4237,10 +3939,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var logFormat = "\"standard\"";  // string | Output format of logs. Supported values are \"standard\" and \"json\". The default is \"standard\". (optional)  (default to "standard")
             var logLevel = "logLevel_example";  // string | Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\". (optional) 
 
@@ -4297,7 +3996,6 @@ List the currently mounted backends.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4310,10 +4008,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -4365,7 +4060,6 @@ Read the configuration of the secret engine at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4378,10 +4072,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -4437,7 +4128,6 @@ Tune backend configuration parameters for this mount.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4450,10 +4140,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -4509,7 +4196,6 @@ Lists all the plugins known to Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4522,10 +4208,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -4577,7 +4260,6 @@ Return the configuration data for the plugin with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4590,10 +4272,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
 
             try
@@ -4649,7 +4328,6 @@ List the plugins in the catalog.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4662,10 +4340,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
             var list = "true";  // string | Must be set to `true`
 
@@ -4723,7 +4398,6 @@ Return the configuration data for the plugin with the given name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4736,10 +4410,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
 
@@ -4797,7 +4468,6 @@ List the configured access control policies.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4810,10 +4480,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4869,7 +4536,6 @@ Retrieve information about the named ACL policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4882,10 +4548,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -4941,7 +4604,6 @@ List the existing password policies.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4954,10 +4616,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5013,7 +4672,6 @@ Retrieve an existing password policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5026,10 +4684,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -5085,7 +4740,6 @@ Generate a password from an existing password policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5098,10 +4752,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -5157,7 +4808,6 @@ List the configured access control policies.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5170,10 +4820,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -5229,7 +4876,6 @@ Retrieve the policy body for the named policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5242,10 +4888,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -5303,7 +4946,6 @@ Returns an HTML page listing the available  profiles. This should be mainly acce
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5316,10 +4958,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5373,7 +5012,6 @@ Returns a sampling of all past memory allocations.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5386,10 +5024,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5443,7 +5078,6 @@ Returns stack traces that led to blocking on synchronization primitives
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5456,10 +5090,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5513,7 +5144,6 @@ Returns the running program's command line, with arguments separated by NUL byte
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5526,10 +5156,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5583,7 +5210,6 @@ Returns stack traces of all current goroutines.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5596,10 +5222,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5653,7 +5276,6 @@ Returns a sampling of memory allocations of live object.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5666,10 +5288,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5723,7 +5342,6 @@ Returns stack traces of holders of contended mutexes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5736,10 +5354,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5793,7 +5408,6 @@ Returns a pprof-formatted cpu profile payload. Profiling lasts for duration spec
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5806,10 +5420,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5863,7 +5474,6 @@ Returns the program counters listed in the request.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5876,10 +5486,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -5933,7 +5540,6 @@ Returns stack traces that led to the creation of new OS threads
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5946,10 +5552,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6003,7 +5606,6 @@ Returns  the execution trace in binary form. Tracing lasts for duration specifie
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6016,10 +5618,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6071,7 +5670,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6084,10 +5682,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6138,7 +5733,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6151,10 +5745,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6209,7 +5800,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6222,10 +5812,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | Name of the quota rule.
 
             try
@@ -6280,7 +5867,6 @@ Read the value of the key at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6293,10 +5879,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -6352,7 +5935,6 @@ Read the value of the key at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6365,10 +5947,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | 
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -6426,7 +6005,6 @@ Return the backup copy of PGP-encrypted unseal keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6439,10 +6017,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6494,7 +6069,6 @@ Reads the configuration and progress of the current rekey attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6507,10 +6081,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6562,7 +6133,6 @@ Allows fetching or deleting the backup of the rotated unseal keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6575,10 +6145,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6630,7 +6197,6 @@ Read the configuration and progress of the current rekey verification attempt.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6643,10 +6209,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6698,7 +6261,6 @@ Check status of a mount migration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6711,10 +6273,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var migrationId = "migrationId_example";  // string | The ID of the migration operation
 
             try
@@ -6770,7 +6329,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6783,10 +6341,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6837,7 +6392,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6850,10 +6404,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6904,7 +6455,6 @@ Check the seal status of a Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6917,10 +6467,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -6972,7 +6519,6 @@ Returns map of historical version change entries
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6985,10 +6531,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7044,7 +6587,6 @@ Look up wrapping properties for the requester's token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7057,10 +6599,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -7112,7 +6651,6 @@ The hash of the given string via the given audit backend
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7125,10 +6663,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
             var systemAuditHashRequest = new SystemAuditHashRequest(); // SystemAuditHashRequest |  (optional) 
 
@@ -7186,7 +6721,6 @@ Enable a new audit device at the supplied path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7199,10 +6733,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
             var systemAuditRequest = new SystemAuditRequest(); // SystemAuditRequest |  (optional) 
 
@@ -7262,7 +6793,6 @@ After enabling, the auth method can be accessed and configured via the auth path
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7275,10 +6805,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
             var systemAuthRequest = new SystemAuthRequest(); // SystemAuthRequest |  (optional) 
 
@@ -7338,7 +6865,6 @@ This endpoint requires sudo capability on the final path, but the same functiona
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7351,10 +6877,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | Tune the configuration parameters for an auth path.
             var systemAuthTuneRequest = new SystemAuthTuneRequest(); // SystemAuthTuneRequest |  (optional) 
 
@@ -7412,7 +6935,6 @@ Fetches the capabilities of the given token on the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7425,10 +6947,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemCapabilitiesRequest = new SystemCapabilitiesRequest(); // SystemCapabilitiesRequest |  (optional) 
 
             try
@@ -7484,7 +7003,6 @@ Fetches the capabilities of the token associated with the given token, on the gi
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7497,10 +7015,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemCapabilitiesAccessorRequest = new SystemCapabilitiesAccessorRequest(); // SystemCapabilitiesAccessorRequest |  (optional) 
 
             try
@@ -7556,7 +7071,6 @@ Fetches the capabilities of the given token on the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7569,10 +7083,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemCapabilitiesSelfRequest = new SystemCapabilitiesSelfRequest(); // SystemCapabilitiesSelfRequest |  (optional) 
 
             try
@@ -7628,7 +7139,6 @@ Enable auditing of a header.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7641,10 +7151,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | 
             var systemConfigAuditingRequestHeadersRequest = new SystemConfigAuditingRequestHeadersRequest(); // SystemConfigAuditingRequestHeadersRequest |  (optional) 
 
@@ -7702,7 +7209,6 @@ Configure the CORS settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7715,10 +7221,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemConfigCorsRequest = new SystemConfigCorsRequest(); // SystemConfigCorsRequest |  (optional) 
 
             try
@@ -7774,7 +7277,6 @@ Reload the given subsystem
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7787,10 +7289,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var subsystem = "subsystem_example";  // string | 
 
             try
@@ -7846,7 +7345,6 @@ Configure the values to be returned for the UI header.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7859,10 +7357,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var header = "header_example";  // string | The name of the header.
             var systemConfigUiHeadersRequest = new SystemConfigUiHeadersRequest(); // SystemConfigUiHeadersRequest |  (optional) 
 
@@ -7922,7 +7417,6 @@ Only a single root generation attempt can take place at a time. One (and only on
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7935,10 +7429,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemGenerateRootRequest = new SystemGenerateRootRequest(); // SystemGenerateRootRequest |  (optional) 
 
             try
@@ -7996,7 +7487,6 @@ Only a single root generation attempt can take place at a time. One (and only on
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8009,10 +7499,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemGenerateRootAttemptRequest = new SystemGenerateRootAttemptRequest(); // SystemGenerateRootAttemptRequest |  (optional) 
 
             try
@@ -8070,7 +7557,6 @@ If the threshold number of unseal key shares is reached, Vault will complete the
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8083,10 +7569,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemGenerateRootUpdateRequest = new SystemGenerateRootUpdateRequest(); // SystemGenerateRootUpdateRequest |  (optional) 
 
             try
@@ -8144,7 +7627,6 @@ The Vault must not have been previously initialized. The recovery options, as we
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8157,10 +7639,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemInitRequest = new SystemInitRequest(); // SystemInitRequest |  (optional) 
 
             try
@@ -8216,7 +7695,6 @@ Enable or disable collection of client count, set retention period, or set defau
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8229,10 +7707,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemInternalCountersConfigRequest = new SystemInternalCountersConfigRequest(); // SystemInternalCountersConfigRequest |  (optional) 
 
             try
@@ -8288,7 +7763,6 @@ Retrieve lease metadata.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8301,10 +7775,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemLeasesLookupRequest = new SystemLeasesLookupRequest(); // SystemLeasesLookupRequest |  (optional) 
 
             try
@@ -8360,7 +7831,6 @@ Renews a lease, requesting to extend the lease.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8373,10 +7843,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemLeasesRenewRequest = new SystemLeasesRenewRequest(); // SystemLeasesRenewRequest |  (optional) 
 
             try
@@ -8432,7 +7899,6 @@ Renews a lease, requesting to extend the lease.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8445,10 +7911,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemLeasesRenewLeaseRequest = new SystemLeasesRenewLeaseRequest(); // SystemLeasesRenewLeaseRequest |  (optional) 
 
@@ -8506,7 +7969,6 @@ Revokes a lease immediately.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8519,10 +7981,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemLeasesRevokeRequest = new SystemLeasesRevokeRequest(); // SystemLeasesRevokeRequest |  (optional) 
 
             try
@@ -8580,7 +8039,6 @@ Unlike `/sys/leases/revoke-prefix`, this path ignores backend errors encountered
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8593,10 +8051,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
 
             try
@@ -8652,7 +8107,6 @@ Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path prop
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8665,10 +8119,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
             var systemLeasesRevokePrefixRequest = new SystemLeasesRevokePrefixRequest(); // SystemLeasesRevokePrefixRequest |  (optional) 
 
@@ -8726,7 +8177,6 @@ Revokes a lease immediately.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8739,10 +8189,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemLeasesRevokeLeaseRequest = new SystemLeasesRevokeLeaseRequest(); // SystemLeasesRevokeLeaseRequest |  (optional) 
 
@@ -8800,7 +8247,6 @@ This endpoint performs cleanup tasks that can be run if certain error conditions
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8813,10 +8259,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -8868,7 +8311,6 @@ Validates the login for the given MFA methods. Upon successful validation, it re
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8881,10 +8323,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemMfaValidateRequest = new SystemMfaValidateRequest(); // SystemMfaValidateRequest |  (optional) 
 
             try
@@ -8940,7 +8379,6 @@ Enable a new secrets engine at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8953,10 +8391,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
             var systemMountsRequest = new SystemMountsRequest(); // SystemMountsRequest |  (optional) 
 
@@ -9014,7 +8449,6 @@ Tune backend configuration parameters for this mount.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9027,10 +8461,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
             var systemMountsTuneRequest = new SystemMountsTuneRequest(); // SystemMountsTuneRequest |  (optional) 
 
@@ -9088,7 +8519,6 @@ Register a new plugin, or updates an existing one with the supplied name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9101,10 +8531,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
             var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
 
@@ -9162,7 +8589,6 @@ Register a new plugin, or updates an existing one with the supplied name.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9175,10 +8601,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
             var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
@@ -9240,7 +8663,6 @@ Either the plugin name (`plugin`) or the desired plugin backend mounts (`mounts`
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9253,10 +8675,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemPluginsReloadBackendRequest = new SystemPluginsReloadBackendRequest(); // SystemPluginsReloadBackendRequest |  (optional) 
 
             try
@@ -9312,7 +8731,6 @@ Add a new or update an existing ACL policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9325,10 +8743,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
             var systemPoliciesAclRequest = new SystemPoliciesAclRequest(); // SystemPoliciesAclRequest |  (optional) 
 
@@ -9386,7 +8801,6 @@ Add a new or update an existing password policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9399,10 +8813,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the password policy.
             var systemPoliciesPasswordRequest = new SystemPoliciesPasswordRequest(); // SystemPoliciesPasswordRequest |  (optional) 
 
@@ -9460,7 +8871,6 @@ Add a new or update an existing policy.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9473,10 +8883,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
             var systemPolicyRequest = new SystemPolicyRequest(); // SystemPolicyRequest |  (optional) 
 
@@ -9534,7 +8941,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9547,10 +8953,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemQuotasConfigRequest = new SystemQuotasConfigRequest(); // SystemQuotasConfigRequest |  (optional) 
 
             try
@@ -9605,7 +9008,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9618,10 +9020,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var name = "name_example";  // string | Name of the quota rule.
             var systemQuotasRateLimitRequest = new SystemQuotasRateLimitRequest(); // SystemQuotasRateLimitRequest |  (optional) 
 
@@ -9678,7 +9077,6 @@ Update the value of the key at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9691,10 +9089,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
 
             try
@@ -9750,7 +9145,6 @@ Update the value of the key at the given path.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9763,10 +9157,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var path = "path_example";  // string | 
             var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
 
@@ -9826,7 +9217,6 @@ Only a single rekey attempt can take place at a time, and changing the parameter
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9839,10 +9229,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRekeyInitRequest = new SystemRekeyInitRequest(); // SystemRekeyInitRequest |  (optional) 
 
             try
@@ -9898,7 +9285,6 @@ Enter a single unseal key share to progress the rekey of the Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9911,10 +9297,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRekeyUpdateRequest = new SystemRekeyUpdateRequest(); // SystemRekeyUpdateRequest |  (optional) 
 
             try
@@ -9970,7 +9353,6 @@ Enter a single new key share to progress the rekey verification operation.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9983,10 +9365,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRekeyVerifyRequest = new SystemRekeyVerifyRequest(); // SystemRekeyVerifyRequest |  (optional) 
 
             try
@@ -10042,7 +9421,6 @@ Initiate a mount migration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10055,10 +9433,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRemountRequest = new SystemRemountRequest(); // SystemRemountRequest |  (optional) 
 
             try
@@ -10114,7 +9489,6 @@ Renews a lease, requesting to extend the lease.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10127,10 +9501,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRenewRequest = new SystemRenewRequest(); // SystemRenewRequest |  (optional) 
 
             try
@@ -10186,7 +9557,6 @@ Renews a lease, requesting to extend the lease.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10199,10 +9569,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemRenewLeaseRequest = new SystemRenewLeaseRequest(); // SystemRenewLeaseRequest |  (optional) 
 
@@ -10260,7 +9627,6 @@ Revokes a lease immediately.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10273,10 +9639,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRevokeRequest = new SystemRevokeRequest(); // SystemRevokeRequest |  (optional) 
 
             try
@@ -10334,7 +9697,6 @@ Unlike `/sys/leases/revoke-prefix`, this path ignores backend errors encountered
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10347,10 +9709,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
 
             try
@@ -10406,7 +9765,6 @@ Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path prop
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10419,10 +9777,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
             var systemRevokePrefixRequest = new SystemRevokePrefixRequest(); // SystemRevokePrefixRequest |  (optional) 
 
@@ -10480,7 +9835,6 @@ Revokes a lease immediately.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10493,10 +9847,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemRevokeLeaseRequest = new SystemRevokeLeaseRequest(); // SystemRevokeLeaseRequest |  (optional) 
 
@@ -10554,7 +9905,6 @@ Rotates the backend encryption key used to persist data.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10567,10 +9917,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -10622,7 +9969,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10635,10 +9981,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemRotateConfigRequest = new SystemRotateConfigRequest(); // SystemRotateConfigRequest |  (optional) 
 
             try
@@ -10693,7 +10036,6 @@ Seal the Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10706,10 +10048,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -10763,7 +10102,6 @@ This endpoint forces the node to give up active status. If the node does not hav
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10776,10 +10114,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {
@@ -10831,7 +10166,6 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10844,10 +10178,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
 
             try
@@ -10903,7 +10234,6 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10916,10 +10246,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
 
@@ -10977,7 +10304,6 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10990,10 +10316,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
             try
@@ -11049,7 +10372,6 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11062,10 +10384,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
@@ -11123,7 +10442,6 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11136,10 +10454,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
@@ -11199,7 +10514,6 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11212,10 +10526,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
@@ -11273,7 +10584,6 @@ Unseal the Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11286,10 +10596,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemUnsealRequest = new SystemUnsealRequest(); // SystemUnsealRequest |  (optional) 
 
             try
@@ -11345,7 +10652,6 @@ Look up wrapping properties for the given token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11358,10 +10664,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemWrappingLookupRequest = new SystemWrappingLookupRequest(); // SystemWrappingLookupRequest |  (optional) 
 
             try
@@ -11417,7 +10720,6 @@ Rotates a response-wrapped token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11430,10 +10732,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemWrappingRewrapRequest = new SystemWrappingRewrapRequest(); // SystemWrappingRewrapRequest |  (optional) 
 
             try
@@ -11489,7 +10788,6 @@ Unwraps a response-wrapped token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11502,10 +10800,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
             var systemWrappingUnwrapRequest = new SystemWrappingUnwrapRequest(); // SystemWrappingUnwrapRequest |  (optional) 
 
             try
@@ -11561,7 +10856,6 @@ Response-wraps an arbitrary JSON object.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11574,10 +10868,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new SystemApi(config);
 
             try
             {

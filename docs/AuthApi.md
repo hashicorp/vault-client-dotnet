@@ -287,7 +287,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -300,10 +299,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
 
             try
@@ -359,7 +355,6 @@ Read/write/delete a single app-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -372,10 +367,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the app-id mapping
 
             try
@@ -431,7 +423,6 @@ Read/write/delete a single user-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -444,10 +435,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the user-id mapping
 
             try
@@ -503,7 +491,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -516,10 +503,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -575,7 +559,6 @@ Impose secret_id to be presented during login using this role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -588,10 +571,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -647,7 +627,6 @@ Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -660,10 +639,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -719,7 +695,6 @@ Updates the value of 'period' on the role
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -732,10 +707,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -791,7 +763,6 @@ Policies of the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -804,10 +775,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -863,7 +831,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -876,10 +843,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -934,7 +898,6 @@ Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses wh
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -947,10 +910,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1006,7 +966,6 @@ Invalidate an issued secret_id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1019,10 +978,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1078,7 +1034,6 @@ Use limit of the SecretID generated against the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1091,10 +1046,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1150,7 +1102,6 @@ Duration in seconds, representing the lifetime of the SecretIDs that are generat
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1163,10 +1114,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1222,7 +1170,6 @@ Comma separated string or list of CIDR blocks. If set, specifies the blocks of I
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1235,10 +1182,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1294,7 +1238,6 @@ Duration in seconds, the maximum lifetime of the tokens issued by using the Secr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1307,10 +1250,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1366,7 +1306,6 @@ Number of times issued tokens can be used
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1379,10 +1318,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1438,7 +1374,6 @@ Duration in seconds, the lifetime of the token issued by using the SecretID that
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1451,10 +1386,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1510,7 +1442,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1523,10 +1454,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var certName = "certName_example";  // string | Name of the certificate.
 
             try
@@ -1581,7 +1509,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1594,10 +1521,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -1648,7 +1572,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1661,10 +1584,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
 
             try
@@ -1719,7 +1639,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1732,10 +1651,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -1786,7 +1702,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1799,10 +1714,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -1853,7 +1765,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1866,10 +1777,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -1920,7 +1828,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1933,10 +1840,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -1987,7 +1891,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2000,10 +1903,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -2058,7 +1958,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2071,10 +1970,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -2129,7 +2025,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2142,10 +2037,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -2200,7 +2092,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2213,10 +2104,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -2271,7 +2159,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2284,10 +2171,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -2342,7 +2226,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2355,10 +2238,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -2409,7 +2289,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2422,10 +2301,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2480,7 +2356,6 @@ Manage trusted certificates used for authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2493,10 +2368,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -2552,7 +2424,6 @@ Manage Certificate Revocation Lists checked during authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2565,10 +2436,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -2624,7 +2492,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2637,10 +2504,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -2691,7 +2555,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2704,10 +2567,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role.
 
             try
@@ -2762,7 +2622,6 @@ Create a GCP role with associated policies and required attributes.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2775,10 +2634,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2834,7 +2690,6 @@ Read/write/delete a single teams mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2847,10 +2702,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the teams mapping
 
             try
@@ -2906,7 +2758,6 @@ Read/write/delete a single users mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2919,10 +2770,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the users mapping
 
             try
@@ -2978,7 +2826,6 @@ Delete an existing role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2991,10 +2838,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3050,7 +2894,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3063,10 +2906,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -3121,7 +2961,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3134,10 +2973,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3193,7 +3029,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3206,10 +3041,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -3265,7 +3097,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3278,10 +3109,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP user.
 
             try
@@ -3337,7 +3165,6 @@ Manages the configuration for the Vault Auth Plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3350,10 +3177,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -3405,7 +3229,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3418,10 +3241,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -3477,7 +3297,6 @@ Delete an existing role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3490,10 +3309,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3549,7 +3365,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3562,10 +3377,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the Okta group.
 
             try
@@ -3621,7 +3433,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3634,10 +3445,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the user.
 
             try
@@ -3693,7 +3501,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3706,10 +3513,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the RADIUS user.
 
             try
@@ -3765,7 +3569,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3778,10 +3581,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -3836,7 +3636,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3849,10 +3648,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username for this user.
 
             try
@@ -3908,7 +3704,6 @@ Lists all the roles that are registered with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3921,10 +3716,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3980,7 +3772,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3993,10 +3784,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
 
             try
@@ -4052,7 +3840,6 @@ Lists all the roles that are registered with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4065,10 +3852,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4124,7 +3908,6 @@ Read mappings for app-id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4137,10 +3920,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -4196,7 +3976,6 @@ Read/write/delete a single app-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4209,10 +3988,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the app-id mapping
 
             try
@@ -4268,7 +4044,6 @@ Read mappings for user-id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4281,10 +4056,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -4340,7 +4112,6 @@ Read/write/delete a single user-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4353,10 +4124,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the user-id mapping
 
             try
@@ -4412,7 +4180,6 @@ Lists all the roles registered with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4425,10 +4192,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4484,7 +4248,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4497,10 +4260,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4556,7 +4316,6 @@ Impose secret_id to be presented during login using this role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4569,10 +4328,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4628,7 +4384,6 @@ Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4641,10 +4396,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4700,7 +4452,6 @@ Enables cluster local secret IDs
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4713,10 +4464,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4772,7 +4520,6 @@ Updates the value of 'period' on the role
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4785,10 +4532,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4844,7 +4588,6 @@ Policies of the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4857,10 +4600,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4916,7 +4656,6 @@ Returns the 'role_id' of the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4929,10 +4668,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4988,7 +4724,6 @@ Generate a SecretID against this role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5001,10 +4736,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var list = "true";  // string | Must be set to `true`
 
@@ -5062,7 +4794,6 @@ Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses wh
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5075,10 +4806,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5134,7 +4862,6 @@ Use limit of the SecretID generated against the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5147,10 +4874,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5206,7 +4930,6 @@ Duration in seconds, representing the lifetime of the SecretIDs that are generat
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5219,10 +4942,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5278,7 +4998,6 @@ Comma separated string or list of CIDR blocks. If set, specifies the blocks of I
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5291,10 +5010,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5350,7 +5066,6 @@ Duration in seconds, the maximum lifetime of the tokens issued by using the Secr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5363,10 +5078,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5422,7 +5134,6 @@ Number of times issued tokens can be used
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5435,10 +5146,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5494,7 +5202,6 @@ Duration in seconds, the lifetime of the token issued by using the SecretID that
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5507,10 +5214,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5566,7 +5270,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5579,10 +5282,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var certName = "certName_example";  // string | Name of the certificate.
 
             try
@@ -5637,7 +5337,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5650,10 +5349,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5708,7 +5404,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5721,10 +5416,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -5775,7 +5467,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5788,10 +5479,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -5842,7 +5530,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5855,10 +5542,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5913,7 +5597,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5926,10 +5609,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
 
             try
@@ -5984,7 +5664,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5997,10 +5676,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -6051,7 +5727,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6064,10 +5739,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -6118,7 +5790,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6131,10 +5802,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -6185,7 +5853,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6198,10 +5865,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -6252,7 +5916,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6265,10 +5928,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6323,7 +5983,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6336,10 +5995,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -6394,7 +6050,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6407,10 +6062,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6465,7 +6117,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6478,10 +6129,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -6536,7 +6184,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6549,10 +6196,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6607,7 +6251,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6620,10 +6263,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -6678,7 +6318,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6691,10 +6330,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6749,7 +6385,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6762,10 +6397,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6820,7 +6452,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6833,10 +6464,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -6891,7 +6519,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6904,10 +6531,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6962,7 +6586,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6975,10 +6598,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -7033,7 +6653,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7046,10 +6665,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -7100,7 +6716,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7113,10 +6728,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7171,7 +6783,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7184,10 +6795,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -7242,7 +6850,6 @@ This path allows you to configure the centrify auth provider to interact with th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7255,10 +6862,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -7310,7 +6914,6 @@ Manage trusted certificates used for authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7323,10 +6926,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7382,7 +6982,6 @@ Manage trusted certificates used for authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7395,10 +6994,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -7454,7 +7050,6 @@ Manage Certificate Revocation Lists checked during authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7467,10 +7062,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -7526,7 +7118,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7539,10 +7130,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -7593,7 +7181,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7606,10 +7193,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7664,7 +7248,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7677,10 +7260,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role.
 
             try
@@ -7735,7 +7315,6 @@ Configure credentials used to query the GCP IAM API to verify authenticating ser
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7748,10 +7327,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -7803,7 +7379,6 @@ Lists all the roles that are registered with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7816,10 +7391,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7875,7 +7447,6 @@ Create a GCP role with associated policies and required attributes.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7888,10 +7459,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -7947,7 +7515,6 @@ Lists all the roles that are registered with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7960,10 +7527,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8019,7 +7583,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8032,10 +7595,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8086,7 +7646,6 @@ Read mappings for teams
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8099,10 +7658,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -8158,7 +7714,6 @@ Read/write/delete a single teams mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8171,10 +7726,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the teams mapping
 
             try
@@ -8230,7 +7782,6 @@ Read mappings for users
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8243,10 +7794,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -8302,7 +7850,6 @@ Read/write/delete a single users mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8315,10 +7862,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the users mapping
 
             try
@@ -8374,7 +7918,6 @@ Read the current JWT authentication backend configuration.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8387,10 +7930,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8442,7 +7982,6 @@ Callback endpoint to complete an OIDC login.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8455,10 +7994,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8512,7 +8048,6 @@ The list will contain the names of the roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8525,10 +8060,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8584,7 +8116,6 @@ Read an existing role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8597,10 +8128,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -8656,7 +8184,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8669,10 +8196,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8723,7 +8247,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8736,10 +8259,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8790,7 +8310,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8803,10 +8322,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8861,7 +8377,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8874,10 +8389,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -8932,7 +8444,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8945,10 +8456,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -8999,7 +8507,6 @@ Configures the JWT Public Key and Kubernetes API information.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9012,10 +8519,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -9067,7 +8571,6 @@ Lists all the roles registered with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9080,10 +8583,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9139,7 +8639,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9152,10 +8651,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9211,7 +8707,6 @@ Configure the LDAP server to connect to, along with its options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9224,10 +8719,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -9279,7 +8771,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9292,10 +8783,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9351,7 +8839,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9364,10 +8851,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -9423,7 +8907,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9436,10 +8919,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9495,7 +8975,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9508,10 +8987,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP user.
 
             try
@@ -9567,7 +9043,6 @@ Manages the configuration for the Vault Auth Plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9580,10 +9055,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -9635,7 +9107,6 @@ Lists all the roles that are registered with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9648,10 +9119,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9707,7 +9175,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9720,10 +9187,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -9779,7 +9243,6 @@ Read the current JWT authentication backend configuration.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9792,10 +9255,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -9847,7 +9307,6 @@ Callback endpoint to complete an OIDC login.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9860,10 +9319,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -9917,7 +9373,6 @@ The list will contain the names of the roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9930,10 +9385,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9989,7 +9441,6 @@ Read an existing role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10002,10 +9453,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -10061,7 +9509,6 @@ This endpoint allows you to configure the Okta and its configuration options.  T
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10074,10 +9521,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -10129,7 +9573,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10142,10 +9585,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10201,7 +9641,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10214,10 +9653,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the Okta group.
 
             try
@@ -10273,7 +9709,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10286,10 +9721,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10345,7 +9777,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10358,10 +9789,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the user.
 
             try
@@ -10417,7 +9845,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10430,10 +9857,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var nonce = "nonce_example";  // string | Nonce provided during a login request to retrieve the number verification challenge for the matching request.
 
             try
@@ -10488,7 +9912,6 @@ Configure the RADIUS server to connect to, along with its options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10501,10 +9924,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -10556,7 +9976,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10569,10 +9988,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10628,7 +10044,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10641,10 +10056,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the RADIUS user.
 
             try
@@ -10700,7 +10112,6 @@ List token accessors, which can then be be used to iterate and discover their pr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10713,10 +10124,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10772,7 +10180,6 @@ This endpoint will lookup a token and its properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10785,10 +10192,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -10840,7 +10244,6 @@ This endpoint will lookup a token and its properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10853,10 +10256,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -10908,7 +10308,6 @@ This endpoint lists configured roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10921,10 +10320,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10980,7 +10376,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10993,10 +10388,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -11051,7 +10443,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11064,10 +10455,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -11123,7 +10511,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11136,10 +10523,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username for this user.
 
             try
@@ -11195,7 +10579,6 @@ Authenticates an RAM entity with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11208,10 +10591,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var alicloudLoginRequest = new AlicloudLoginRequest(); // AlicloudLoginRequest |  (optional) 
 
             try
@@ -11267,7 +10647,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11280,10 +10659,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
             var alicloudRoleRequest = new AlicloudRoleRequest(); // AlicloudRoleRequest |  (optional) 
 
@@ -11341,7 +10717,6 @@ Log in with an App ID and User ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11354,10 +10729,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
 
             try
@@ -11413,7 +10785,6 @@ Log in with an App ID and User ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11426,10 +10797,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var appId = "appId_example";  // string | The unique app ID
             var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
 
@@ -11487,7 +10855,6 @@ Read/write/delete a single app-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11500,10 +10867,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the app-id mapping
             var appIdMapAppIdRequest = new AppIdMapAppIdRequest(); // AppIdMapAppIdRequest |  (optional) 
 
@@ -11561,7 +10925,6 @@ Read/write/delete a single user-id mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11574,10 +10937,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the user-id mapping
             var appIdMapUserIdRequest = new AppIdMapUserIdRequest(); // AppIdMapUserIdRequest |  (optional) 
 
@@ -11635,7 +10995,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11648,10 +11007,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var approleLoginRequest = new ApproleLoginRequest(); // ApproleLoginRequest |  (optional) 
 
             try
@@ -11706,7 +11062,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11719,10 +11074,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleRequest = new ApproleRoleRequest(); // ApproleRoleRequest |  (optional) 
 
@@ -11780,7 +11132,6 @@ Impose secret_id to be presented during login using this role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11793,10 +11144,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleBindSecretIdRequest = new ApproleRoleBindSecretIdRequest(); // ApproleRoleBindSecretIdRequest |  (optional) 
 
@@ -11854,7 +11202,6 @@ Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11867,10 +11214,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleBoundCidrListRequest = new ApproleRoleBoundCidrListRequest(); // ApproleRoleBoundCidrListRequest |  (optional) 
 
@@ -11928,7 +11272,6 @@ Assign a SecretID of choice against the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11941,10 +11284,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleCustomSecretIdRequest = new ApproleRoleCustomSecretIdRequest(); // ApproleRoleCustomSecretIdRequest |  (optional) 
 
@@ -12002,7 +11342,6 @@ Updates the value of 'period' on the role
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12015,10 +11354,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRolePeriodRequest = new ApproleRolePeriodRequest(); // ApproleRolePeriodRequest |  (optional) 
 
@@ -12076,7 +11412,6 @@ Policies of the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12089,10 +11424,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRolePoliciesRequest = new ApproleRolePoliciesRequest(); // ApproleRolePoliciesRequest |  (optional) 
 
@@ -12150,7 +11482,6 @@ Returns the 'role_id' of the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12163,10 +11494,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleRoleIdRequest = new ApproleRoleRoleIdRequest(); // ApproleRoleRoleIdRequest |  (optional) 
 
@@ -12224,7 +11552,6 @@ Generate a SecretID against this role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12237,10 +11564,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdRequest = new ApproleRoleSecretIdRequest(); // ApproleRoleSecretIdRequest |  (optional) 
 
@@ -12298,7 +11622,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12311,10 +11634,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdAccessorDestroyRequest = new ApproleRoleSecretIdAccessorDestroyRequest(); // ApproleRoleSecretIdAccessorDestroyRequest |  (optional) 
 
@@ -12371,7 +11691,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12384,10 +11703,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdAccessorLookupRequest = new ApproleRoleSecretIdAccessorLookupRequest(); // ApproleRoleSecretIdAccessorLookupRequest |  (optional) 
 
@@ -12444,7 +11760,6 @@ Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses wh
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12457,10 +11772,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdBoundCidrsRequest = new ApproleRoleSecretIdBoundCidrsRequest(); // ApproleRoleSecretIdBoundCidrsRequest |  (optional) 
 
@@ -12518,7 +11830,6 @@ Invalidate an issued secret_id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12531,10 +11842,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdDestroyRequest = new ApproleRoleSecretIdDestroyRequest(); // ApproleRoleSecretIdDestroyRequest |  (optional) 
 
@@ -12592,7 +11900,6 @@ Read the properties of an issued secret_id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12605,10 +11912,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdLookupRequest = new ApproleRoleSecretIdLookupRequest(); // ApproleRoleSecretIdLookupRequest |  (optional) 
 
@@ -12666,7 +11970,6 @@ Use limit of the SecretID generated against the role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12679,10 +11982,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdNumUsesRequest = new ApproleRoleSecretIdNumUsesRequest(); // ApproleRoleSecretIdNumUsesRequest |  (optional) 
 
@@ -12740,7 +12040,6 @@ Duration in seconds, representing the lifetime of the SecretIDs that are generat
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12753,10 +12052,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdTtlRequest = new ApproleRoleSecretIdTtlRequest(); // ApproleRoleSecretIdTtlRequest |  (optional) 
 
@@ -12814,7 +12110,6 @@ Comma separated string or list of CIDR blocks. If set, specifies the blocks of I
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12827,10 +12122,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenBoundCidrsRequest = new ApproleRoleTokenBoundCidrsRequest(); // ApproleRoleTokenBoundCidrsRequest |  (optional) 
 
@@ -12888,7 +12180,6 @@ Duration in seconds, the maximum lifetime of the tokens issued by using the Secr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12901,10 +12192,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenMaxTtlRequest = new ApproleRoleTokenMaxTtlRequest(); // ApproleRoleTokenMaxTtlRequest |  (optional) 
 
@@ -12962,7 +12250,6 @@ Number of times issued tokens can be used
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12975,10 +12262,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenNumUsesRequest = new ApproleRoleTokenNumUsesRequest(); // ApproleRoleTokenNumUsesRequest |  (optional) 
 
@@ -13036,7 +12320,6 @@ Duration in seconds, the lifetime of the token issued by using the SecretID that
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13049,10 +12332,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenTtlRequest = new ApproleRoleTokenTtlRequest(); // ApproleRoleTokenTtlRequest |  (optional) 
 
@@ -13110,7 +12390,6 @@ Trigger the clean-up of expired SecretID entries.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13123,10 +12402,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -13178,7 +12454,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13191,10 +12466,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var certName = "certName_example";  // string | Name of the certificate.
             var awsConfigCertificateRequest = new AwsConfigCertificateRequest(); // AwsConfigCertificateRequest |  (optional) 
 
@@ -13251,7 +12523,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13264,10 +12535,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigClientRequest = new AwsConfigClientRequest(); // AwsConfigClientRequest |  (optional) 
 
             try
@@ -13322,7 +12590,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13335,10 +12602,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigIdentityRequest = new AwsConfigIdentityRequest(); // AwsConfigIdentityRequest |  (optional) 
 
             try
@@ -13393,7 +12657,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13406,10 +12669,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -13460,7 +12720,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13473,10 +12732,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
             var awsConfigStsRequest = new AwsConfigStsRequest(); // AwsConfigStsRequest |  (optional) 
 
@@ -13533,7 +12789,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13546,10 +12801,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigTidyIdentityAccesslistRequest = new AwsConfigTidyIdentityAccesslistRequest(); // AwsConfigTidyIdentityAccesslistRequest |  (optional) 
 
             try
@@ -13604,7 +12856,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13617,10 +12868,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigTidyIdentityWhitelistRequest = new AwsConfigTidyIdentityWhitelistRequest(); // AwsConfigTidyIdentityWhitelistRequest |  (optional) 
 
             try
@@ -13675,7 +12923,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13688,10 +12935,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigTidyRoletagBlacklistRequest = new AwsConfigTidyRoletagBlacklistRequest(); // AwsConfigTidyRoletagBlacklistRequest |  (optional) 
 
             try
@@ -13746,7 +12990,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13759,10 +13002,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsConfigTidyRoletagDenylistRequest = new AwsConfigTidyRoletagDenylistRequest(); // AwsConfigTidyRoletagDenylistRequest |  (optional) 
 
             try
@@ -13817,7 +13057,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13830,10 +13069,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsLoginRequest = new AwsLoginRequest(); // AwsLoginRequest |  (optional) 
 
             try
@@ -13888,7 +13124,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13901,10 +13136,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
             var awsRoleRequest = new AwsRoleRequest(); // AwsRoleRequest |  (optional) 
 
@@ -13961,7 +13193,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13974,10 +13205,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
             var awsRoleTagRequest = new AwsRoleTagRequest(); // AwsRoleTagRequest |  (optional) 
 
@@ -14034,7 +13262,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14047,10 +13274,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -14105,7 +13329,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14118,10 +13341,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -14176,7 +13396,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14189,10 +13408,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsTidyIdentityAccesslistRequest = new AwsTidyIdentityAccesslistRequest(); // AwsTidyIdentityAccesslistRequest |  (optional) 
 
             try
@@ -14247,7 +13463,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14260,10 +13475,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsTidyIdentityWhitelistRequest = new AwsTidyIdentityWhitelistRequest(); // AwsTidyIdentityWhitelistRequest |  (optional) 
 
             try
@@ -14318,7 +13530,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14331,10 +13542,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsTidyRoletagBlacklistRequest = new AwsTidyRoletagBlacklistRequest(); // AwsTidyRoletagBlacklistRequest |  (optional) 
 
             try
@@ -14389,7 +13597,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14402,10 +13609,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var awsTidyRoletagDenylistRequest = new AwsTidyRoletagDenylistRequest(); // AwsTidyRoletagDenylistRequest |  (optional) 
 
             try
@@ -14460,7 +13664,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14473,10 +13676,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var azureConfigRequest = new AzureConfigRequest(); // AzureConfigRequest |  (optional) 
 
             try
@@ -14531,7 +13731,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14544,10 +13743,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var azureLoginRequest = new AzureLoginRequest(); // AzureLoginRequest |  (optional) 
 
             try
@@ -14602,7 +13798,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14615,10 +13810,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var azureRoleRequest = new AzureRoleRequest(); // AzureRoleRequest |  (optional) 
 
@@ -14675,7 +13867,6 @@ This path allows you to configure the centrify auth provider to interact with th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14688,10 +13879,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var centrifyConfigRequest = new CentrifyConfigRequest(); // CentrifyConfigRequest |  (optional) 
 
             try
@@ -14747,7 +13935,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14760,10 +13947,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var centrifyLoginRequest = new CentrifyLoginRequest(); // CentrifyLoginRequest |  (optional) 
 
             try
@@ -14819,7 +14003,6 @@ Manage trusted certificates used for authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14832,10 +14015,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
             var certCertsRequest = new CertCertsRequest(); // CertCertsRequest |  (optional) 
 
@@ -14893,7 +14073,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14906,10 +14085,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var certConfigRequest = new CertConfigRequest(); // CertConfigRequest |  (optional) 
 
             try
@@ -14964,7 +14140,6 @@ Manage Certificate Revocation Lists checked during authentication.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14977,10 +14152,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | The name of the certificate
             var certCrlsRequest = new CertCrlsRequest(); // CertCrlsRequest |  (optional) 
 
@@ -15038,7 +14210,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15051,10 +14222,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var certLoginRequest = new CertLoginRequest(); // CertLoginRequest |  (optional) 
 
             try
@@ -15109,7 +14277,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15122,10 +14289,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var cfConfigRequest = new CfConfigRequest(); // CfConfigRequest |  (optional) 
 
             try
@@ -15180,7 +14344,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15193,10 +14356,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var cfLoginRequest = new CfLoginRequest(); // CfLoginRequest |  (optional) 
 
             try
@@ -15251,7 +14411,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15264,10 +14423,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | The name of the role.
             var cfRolesRequest = new CfRolesRequest(); // CfRolesRequest |  (optional) 
 
@@ -15324,7 +14480,6 @@ Configure credentials used to query the GCP IAM API to verify authenticating ser
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15337,10 +14492,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var gcpConfigRequest = new GcpConfigRequest(); // GcpConfigRequest |  (optional) 
 
             try
@@ -15396,7 +14548,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15409,10 +14560,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var gcpLoginRequest = new GcpLoginRequest(); // GcpLoginRequest |  (optional) 
 
             try
@@ -15467,7 +14615,6 @@ Create a GCP role with associated policies and required attributes.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15480,10 +14627,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleRequest = new GcpRoleRequest(); // GcpRoleRequest |  (optional) 
 
@@ -15541,7 +14685,6 @@ Add or remove labels for an existing 'gce' role
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15554,10 +14697,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleLabelsRequest = new GcpRoleLabelsRequest(); // GcpRoleLabelsRequest |  (optional) 
 
@@ -15615,7 +14755,6 @@ Add or remove service accounts for an existing `iam` role
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15628,10 +14767,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleServiceAccountsRequest = new GcpRoleServiceAccountsRequest(); // GcpRoleServiceAccountsRequest |  (optional) 
 
@@ -15689,7 +14825,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15702,10 +14837,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var githubConfigRequest = new GithubConfigRequest(); // GithubConfigRequest |  (optional) 
 
             try
@@ -15760,7 +14892,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15773,10 +14904,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var githubLoginRequest = new GithubLoginRequest(); // GithubLoginRequest |  (optional) 
 
             try
@@ -15831,7 +14959,6 @@ Read/write/delete a single teams mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15844,10 +14971,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the teams mapping
             var githubMapTeamsRequest = new GithubMapTeamsRequest(); // GithubMapTeamsRequest |  (optional) 
 
@@ -15905,7 +15029,6 @@ Read/write/delete a single users mapping
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15918,10 +15041,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var key = "key_example";  // string | Key for the users mapping
             var githubMapUsersRequest = new GithubMapUsersRequest(); // GithubMapUsersRequest |  (optional) 
 
@@ -15981,7 +15101,6 @@ The JWT authentication backend validates JWTs (or OIDC) using the configured cre
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15994,10 +15113,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var jwtConfigRequest = new JwtConfigRequest(); // JwtConfigRequest |  (optional) 
 
             try
@@ -16053,7 +15169,6 @@ Authenticates to Vault using a JWT (or OIDC) token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16066,10 +15181,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var jwtLoginRequest = new JwtLoginRequest(); // JwtLoginRequest |  (optional) 
 
             try
@@ -16125,7 +15237,6 @@ Request an authorization URL to start an OIDC login flow.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16138,10 +15249,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var jwtOidcAuthUrlRequest = new JwtOidcAuthUrlRequest(); // JwtOidcAuthUrlRequest |  (optional) 
 
             try
@@ -16197,7 +15305,6 @@ Callback endpoint to handle form_posts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16210,10 +15317,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var jwtOidcCallbackRequest = new JwtOidcCallbackRequest(); // JwtOidcCallbackRequest |  (optional) 
 
             try
@@ -16271,7 +15375,6 @@ A role is required to authenticate with this backend. The role binds   JWT token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16284,10 +15387,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var jwtRoleRequest = new JwtRoleRequest(); // JwtRoleRequest |  (optional) 
 
@@ -16345,7 +15445,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16358,10 +15457,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var kerberosConfigRequest = new KerberosConfigRequest(); // KerberosConfigRequest |  (optional) 
 
             try
@@ -16416,7 +15512,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16429,10 +15524,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var kerberosConfigLdapRequest = new KerberosConfigLdapRequest(); // KerberosConfigLdapRequest |  (optional) 
 
             try
@@ -16487,7 +15579,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16500,10 +15591,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
             var kerberosGroupsRequest = new KerberosGroupsRequest(); // KerberosGroupsRequest |  (optional) 
 
@@ -16560,7 +15648,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16573,10 +15660,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var kerberosLoginRequest = new KerberosLoginRequest(); // KerberosLoginRequest |  (optional) 
 
             try
@@ -16631,7 +15715,6 @@ Configures the JWT Public Key and Kubernetes API information.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16644,10 +15727,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var kubernetesConfigRequest = new KubernetesConfigRequest(); // KubernetesConfigRequest |  (optional) 
 
             try
@@ -16703,7 +15783,6 @@ Authenticates Kubernetes service accounts with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16716,10 +15795,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var kubernetesLoginRequest = new KubernetesLoginRequest(); // KubernetesLoginRequest |  (optional) 
 
             try
@@ -16775,7 +15851,6 @@ Register an role with the backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16788,10 +15863,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var kubernetesRoleRequest = new KubernetesRoleRequest(); // KubernetesRoleRequest |  (optional) 
 
@@ -16849,7 +15921,6 @@ Configure the LDAP server to connect to, along with its options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16862,10 +15933,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var ldapConfigRequest = new LdapConfigRequest(); // LdapConfigRequest |  (optional) 
 
             try
@@ -16921,7 +15989,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16934,10 +16001,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP group.
             var ldapGroupsRequest = new LdapGroupsRequest(); // LdapGroupsRequest |  (optional) 
 
@@ -16995,7 +16059,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17008,10 +16071,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | DN (distinguished name) to be used for login.
             var ldapLoginRequest = new LdapLoginRequest(); // LdapLoginRequest |  (optional) 
 
@@ -17069,7 +16129,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17082,10 +16141,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the LDAP user.
             var ldapUsersRequest = new LdapUsersRequest(); // LdapUsersRequest |  (optional) 
 
@@ -17143,7 +16199,6 @@ Manages the configuration for the Vault Auth Plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17156,10 +16211,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var ociConfigRequest = new OciConfigRequest(); // OciConfigRequest |  (optional) 
 
             try
@@ -17215,7 +16267,6 @@ Authenticates to Vault using OCI credentials
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17228,10 +16279,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
             var ociLoginRequest = new OciLoginRequest(); // OciLoginRequest |  (optional) 
 
@@ -17289,7 +16337,6 @@ Create a role and associate policies to it.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17302,10 +16349,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var role = "role_example";  // string | Name of the role.
             var ociRoleRequest = new OciRoleRequest(); // OciRoleRequest |  (optional) 
 
@@ -17365,7 +16409,6 @@ The JWT authentication backend validates JWTs (or OIDC) using the configured cre
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17378,10 +16421,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var oidcConfigRequest = new OidcConfigRequest(); // OidcConfigRequest |  (optional) 
 
             try
@@ -17437,7 +16477,6 @@ Authenticates to Vault using a JWT (or OIDC) token.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17450,10 +16489,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var oidcLoginRequest = new OidcLoginRequest(); // OidcLoginRequest |  (optional) 
 
             try
@@ -17509,7 +16545,6 @@ Request an authorization URL to start an OIDC login flow.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17522,10 +16557,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var oidcOidcAuthUrlRequest = new OidcOidcAuthUrlRequest(); // OidcOidcAuthUrlRequest |  (optional) 
 
             try
@@ -17581,7 +16613,6 @@ Callback endpoint to handle form_posts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17594,10 +16625,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var oidcOidcCallbackRequest = new OidcOidcCallbackRequest(); // OidcOidcCallbackRequest |  (optional) 
 
             try
@@ -17655,7 +16683,6 @@ A role is required to authenticate with this backend. The role binds   JWT token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17668,10 +16695,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the role.
             var oidcRoleRequest = new OidcRoleRequest(); // OidcRoleRequest |  (optional) 
 
@@ -17729,7 +16753,6 @@ This endpoint allows you to configure the Okta and its configuration options.  T
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17742,10 +16765,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var oktaConfigRequest = new OktaConfigRequest(); // OktaConfigRequest |  (optional) 
 
             try
@@ -17801,7 +16821,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17814,10 +16833,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the Okta group.
             var oktaGroupsRequest = new OktaGroupsRequest(); // OktaGroupsRequest |  (optional) 
 
@@ -17875,7 +16891,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17888,10 +16903,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username to be used for login.
             var oktaLoginRequest = new OktaLoginRequest(); // OktaLoginRequest |  (optional) 
 
@@ -17949,7 +16961,6 @@ Manage additional groups for users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17962,10 +16973,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the user.
             var oktaUsersRequest = new OktaUsersRequest(); // OktaUsersRequest |  (optional) 
 
@@ -18023,7 +17031,6 @@ Configure the RADIUS server to connect to, along with its options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18036,10 +17043,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var radiusConfigRequest = new RadiusConfigRequest(); // RadiusConfigRequest |  (optional) 
 
             try
@@ -18095,7 +17099,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18108,10 +17111,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest |  (optional) 
 
             try
@@ -18167,7 +17167,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18180,10 +17179,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var urlusername = "urlusername_example";  // string | Username to be used for login. (URL parameter)
             var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest |  (optional) 
 
@@ -18241,7 +17237,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18254,10 +17249,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var name = "name_example";  // string | Name of the RADIUS user.
             var radiusUsersRequest = new RadiusUsersRequest(); // RadiusUsersRequest |  (optional) 
 
@@ -18315,7 +17307,6 @@ The token create path is used to create new tokens.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18328,10 +17319,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -18383,7 +17371,6 @@ The token create path is used to create new orphan tokens.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18396,10 +17383,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -18451,7 +17435,6 @@ This token create path is used to create new tokens adhering to the given role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18464,10 +17447,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -18523,7 +17503,6 @@ This endpoint will lookup a token and its properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18536,10 +17515,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenLookupRequest = new TokenLookupRequest(); // TokenLookupRequest |  (optional) 
 
             try
@@ -18595,7 +17571,6 @@ This endpoint will lookup a token associated with the given accessor and its pro
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18608,10 +17583,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenLookupAccessorRequest = new TokenLookupAccessorRequest(); // TokenLookupAccessorRequest |  (optional) 
 
             try
@@ -18667,7 +17639,6 @@ This endpoint will lookup a token and its properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18680,10 +17651,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenLookupSelfRequest = new TokenLookupSelfRequest(); // TokenLookupSelfRequest |  (optional) 
 
             try
@@ -18739,7 +17707,6 @@ This endpoint will renew the given token and prevent expiration.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18752,10 +17719,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRenewRequest = new TokenRenewRequest(); // TokenRenewRequest |  (optional) 
 
             try
@@ -18811,7 +17775,6 @@ This endpoint will renew a token associated with the given accessor and its prop
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18824,10 +17787,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRenewAccessorRequest = new TokenRenewAccessorRequest(); // TokenRenewAccessorRequest |  (optional) 
 
             try
@@ -18883,7 +17843,6 @@ This endpoint will renew the token used to call it and prevent expiration.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18896,10 +17855,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRenewSelfRequest = new TokenRenewSelfRequest(); // TokenRenewSelfRequest |  (optional) 
 
             try
@@ -18955,7 +17911,6 @@ This endpoint will delete the given token and all of its child tokens.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18968,10 +17923,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRevokeRequest = new TokenRevokeRequest(); // TokenRevokeRequest |  (optional) 
 
             try
@@ -19027,7 +17979,6 @@ This endpoint will delete the token associated with the accessor and all of its 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19040,10 +17991,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRevokeAccessorRequest = new TokenRevokeAccessorRequest(); // TokenRevokeAccessorRequest |  (optional) 
 
             try
@@ -19099,7 +18047,6 @@ This endpoint will delete the token and orphan its child tokens.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19112,10 +18059,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var tokenRevokeOrphanRequest = new TokenRevokeOrphanRequest(); // TokenRevokeOrphanRequest |  (optional) 
 
             try
@@ -19171,7 +18115,6 @@ This endpoint will delete the token used to call it and all of its child tokens.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19184,10 +18127,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -19239,7 +18179,6 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19252,10 +18191,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var roleName = "roleName_example";  // string | Name of the role
             var tokenRolesRequest = new TokenRolesRequest(); // TokenRolesRequest |  (optional) 
 
@@ -19312,7 +18248,6 @@ This endpoint performs cleanup tasks that can be run if certain error conditions
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19325,10 +18260,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
 
             try
             {
@@ -19380,7 +18312,6 @@ Log in with a username and password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19393,10 +18324,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username of the user.
             var userpassLoginRequest = new UserpassLoginRequest(); // UserpassLoginRequest |  (optional) 
 
@@ -19454,7 +18382,6 @@ Manage users allowed to authenticate.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19467,10 +18394,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersRequest = new UserpassUsersRequest(); // UserpassUsersRequest |  (optional) 
 
@@ -19528,7 +18452,6 @@ Reset user's password.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19541,10 +18464,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersPasswordRequest = new UserpassUsersPasswordRequest(); // UserpassUsersPasswordRequest |  (optional) 
 
@@ -19602,7 +18522,6 @@ Update the policies associated with the username.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19615,10 +18534,7 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new AuthApi(config);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersPoliciesRequest = new UserpassUsersPoliciesRequest(); // UserpassUsersPoliciesRequest |  (optional) 
 
