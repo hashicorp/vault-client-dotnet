@@ -43,3 +43,6 @@ clean:
 
 build:
 	dotnet build
+
+build-prod:
+	dotnet build -c release
