@@ -9,6 +9,7 @@
 
 
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace VaultClient.Client
@@ -29,7 +30,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the POST http verb.
@@ -40,7 +41,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the PUT http verb.
@@ -51,7 +52,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the DELETE http verb.
@@ -62,7 +63,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the HEAD http verb.
@@ -73,7 +74,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the OPTIONS http verb.
@@ -84,7 +85,7 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the PATCH http verb.
@@ -95,6 +96,6 @@ namespace VaultClient.Client
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }
