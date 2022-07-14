@@ -121,6 +121,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -133,7 +134,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -189,6 +193,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -201,7 +206,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -257,6 +265,7 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -269,7 +278,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
 
             try
@@ -325,6 +337,7 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -337,7 +350,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
 
             try
@@ -393,6 +409,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -405,7 +422,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
 
             try
@@ -460,6 +480,7 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -472,7 +493,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
 
             try
@@ -528,6 +552,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -540,7 +565,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
 
             try
@@ -595,6 +623,7 @@ Delete a login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -607,7 +636,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
 
             try
@@ -663,6 +695,7 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -675,7 +708,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -731,6 +767,7 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -743,7 +780,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -799,6 +839,7 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -811,7 +852,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -867,6 +911,7 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -879,7 +924,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -935,6 +983,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -947,7 +996,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
 
             try
@@ -1002,6 +1054,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1014,7 +1067,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
 
             try
@@ -1069,6 +1125,7 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1081,7 +1138,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -1137,6 +1197,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1149,7 +1210,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -1204,6 +1268,7 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1216,7 +1281,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1272,6 +1340,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1284,7 +1353,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
 
             try
@@ -1339,6 +1411,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1351,7 +1424,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
 
             try
@@ -1407,6 +1483,7 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1419,7 +1496,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1475,6 +1555,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1487,7 +1568,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -1543,6 +1627,7 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1555,7 +1640,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1611,6 +1699,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1623,7 +1712,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -1679,6 +1771,7 @@ List all the entity IDs
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1691,7 +1784,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1747,6 +1843,7 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1759,7 +1856,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
 
             try
@@ -1815,6 +1915,7 @@ List all the entity names
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1827,7 +1928,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1883,6 +1987,7 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1895,7 +2000,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
 
             try
@@ -1951,6 +2059,7 @@ List all the group alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1963,7 +2072,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2019,6 +2131,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2031,7 +2144,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
 
             try
@@ -2086,6 +2202,7 @@ List all the group IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2098,7 +2215,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2154,6 +2274,7 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2166,7 +2287,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
 
             try
@@ -2222,6 +2346,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2234,7 +2359,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2289,6 +2417,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2301,7 +2430,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
 
             try
@@ -2356,6 +2488,7 @@ List login enforcements
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2368,7 +2501,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2424,6 +2560,7 @@ Read the current login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2436,7 +2573,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
 
             try
@@ -2492,6 +2632,7 @@ List MFA method configurations for all MFA methods
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2504,7 +2645,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2560,6 +2704,7 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2572,7 +2717,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2628,6 +2776,7 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2640,7 +2789,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -2696,6 +2848,7 @@ Read the current configuration for the given ID regardless of the MFA method typ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2708,7 +2861,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -2764,6 +2920,7 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2776,7 +2933,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2832,6 +2992,7 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2844,7 +3005,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -2900,6 +3064,7 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2912,7 +3077,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2968,6 +3136,7 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2980,7 +3149,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -3036,6 +3208,7 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3048,7 +3221,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3104,6 +3280,7 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3116,7 +3293,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -3172,6 +3352,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3184,7 +3365,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3239,6 +3423,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3251,7 +3436,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
 
             try
@@ -3306,6 +3494,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3318,7 +3507,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3373,6 +3565,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3385,7 +3578,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
 
             try
@@ -3440,6 +3636,7 @@ OIDC configuration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3452,7 +3649,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3504,6 +3704,7 @@ List OIDC keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3516,7 +3717,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3572,6 +3776,7 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3584,7 +3789,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -3640,6 +3848,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3652,7 +3861,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3707,6 +3919,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3719,7 +3932,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -3774,6 +3990,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3786,7 +4003,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -3841,6 +4061,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3853,7 +4074,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -3908,6 +4132,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3920,7 +4145,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -3975,6 +4203,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3987,7 +4216,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -4042,6 +4274,7 @@ List configured OIDC roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4054,7 +4287,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4110,6 +4346,7 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4122,7 +4359,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4178,6 +4418,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4190,7 +4431,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4245,6 +4489,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4257,7 +4502,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
 
             try
@@ -4312,6 +4560,7 @@ Generate an OIDC token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4324,7 +4573,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4380,6 +4632,7 @@ Retrieve public keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4392,7 +4645,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4444,6 +4700,7 @@ Query OIDC configurations
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4456,7 +4713,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4508,6 +4768,7 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4520,7 +4781,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4576,6 +4840,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4588,7 +4853,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
 
             try
@@ -4644,6 +4912,7 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4656,7 +4925,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityAliasRequest = new IdentityAliasRequest(); // IdentityAliasRequest |  (optional) 
 
             try
@@ -4712,6 +4984,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4724,7 +4997,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
             var identityAliasIdRequest = new IdentityAliasIdRequest(); // IdentityAliasIdRequest |  (optional) 
 
@@ -4782,6 +5058,7 @@ Create a new entity
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4794,7 +5071,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityEntityRequest = new IdentityEntityRequest(); // IdentityEntityRequest |  (optional) 
 
             try
@@ -4850,6 +5130,7 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4862,7 +5143,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityEntityAliasRequest = new IdentityEntityAliasRequest(); // IdentityEntityAliasRequest |  (optional) 
 
             try
@@ -4918,6 +5202,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4930,7 +5215,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
             var identityEntityAliasIdRequest = new IdentityEntityAliasIdRequest(); // IdentityEntityAliasIdRequest |  (optional) 
 
@@ -4988,6 +5276,7 @@ Delete all of the entities provided
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5000,7 +5289,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityEntityBatchDeleteRequest = new IdentityEntityBatchDeleteRequest(); // IdentityEntityBatchDeleteRequest |  (optional) 
 
             try
@@ -5056,6 +5348,7 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5068,7 +5361,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
             var identityEntityIdRequest = new IdentityEntityIdRequest(); // IdentityEntityIdRequest |  (optional) 
 
@@ -5126,6 +5422,7 @@ Merge two or more entities together
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5138,7 +5435,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityEntityMergeRequest = new IdentityEntityMergeRequest(); // IdentityEntityMergeRequest |  (optional) 
 
             try
@@ -5194,6 +5494,7 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5206,7 +5507,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
             var identityEntityNameRequest = new IdentityEntityNameRequest(); // IdentityEntityNameRequest |  (optional) 
 
@@ -5264,6 +5568,7 @@ Create a new group.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5276,7 +5581,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityGroupRequest = new IdentityGroupRequest(); // IdentityGroupRequest |  (optional) 
 
             try
@@ -5332,6 +5640,7 @@ Creates a new group alias, or updates an existing one.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5344,7 +5653,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityGroupAliasRequest = new IdentityGroupAliasRequest(); // IdentityGroupAliasRequest |  (optional) 
 
             try
@@ -5400,6 +5712,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5412,7 +5725,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
             var identityGroupAliasIdRequest = new IdentityGroupAliasIdRequest(); // IdentityGroupAliasIdRequest |  (optional) 
 
@@ -5469,6 +5785,7 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5481,7 +5798,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
             var identityGroupIdRequest = new IdentityGroupIdRequest(); // IdentityGroupIdRequest |  (optional) 
 
@@ -5539,6 +5859,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5551,7 +5872,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
             var identityGroupNameRequest = new IdentityGroupNameRequest(); // IdentityGroupNameRequest |  (optional) 
 
@@ -5608,6 +5932,7 @@ Query entities based on various properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5620,7 +5945,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityLookupEntityRequest = new IdentityLookupEntityRequest(); // IdentityLookupEntityRequest |  (optional) 
 
             try
@@ -5676,6 +6004,7 @@ Query groups based on various properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5688,7 +6017,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityLookupGroupRequest = new IdentityLookupGroupRequest(); // IdentityLookupGroupRequest |  (optional) 
 
             try
@@ -5744,6 +6076,7 @@ Create or update a login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5756,7 +6089,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
             var identityMfaLoginEnforcementRequest = new IdentityMfaLoginEnforcementRequest(); // IdentityMfaLoginEnforcementRequest |  (optional) 
 
@@ -5814,6 +6150,7 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5826,7 +6163,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodDuoRequest = new IdentityMfaMethodDuoRequest(); // IdentityMfaMethodDuoRequest |  (optional) 
 
@@ -5884,6 +6224,7 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5896,7 +6237,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodOktaRequest = new IdentityMfaMethodOktaRequest(); // IdentityMfaMethodOktaRequest |  (optional) 
 
@@ -5954,6 +6298,7 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5966,7 +6311,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodPingidRequest = new IdentityMfaMethodPingidRequest(); // IdentityMfaMethodPingidRequest |  (optional) 
 
@@ -6024,6 +6372,7 @@ Destroys a TOTP secret for the given MFA method ID on the given entity
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6036,7 +6385,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpAdminDestroyRequest = new IdentityMfaMethodTotpAdminDestroyRequest(); // IdentityMfaMethodTotpAdminDestroyRequest |  (optional) 
 
             try
@@ -6092,6 +6444,7 @@ Update or create TOTP secret for the given method ID on the given entity.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6104,7 +6457,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpAdminGenerateRequest = new IdentityMfaMethodTotpAdminGenerateRequest(); // IdentityMfaMethodTotpAdminGenerateRequest |  (optional) 
 
             try
@@ -6160,6 +6516,7 @@ Update or create TOTP secret for the given method ID on the given entity.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6172,7 +6529,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpGenerateRequest = new IdentityMfaMethodTotpGenerateRequest(); // IdentityMfaMethodTotpGenerateRequest |  (optional) 
 
             try
@@ -6228,6 +6588,7 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6240,7 +6601,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodTotpRequest = new IdentityMfaMethodTotpRequest(); // IdentityMfaMethodTotpRequest |  (optional) 
 
@@ -6298,6 +6662,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6310,7 +6675,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
             var identityOidcAssignmentRequest = new IdentityOidcAssignmentRequest(); // IdentityOidcAssignmentRequest |  (optional) 
 
@@ -6367,6 +6735,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6379,7 +6748,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
             var identityOidcClientRequest = new IdentityOidcClientRequest(); // IdentityOidcClientRequest |  (optional) 
 
@@ -6436,6 +6808,7 @@ OIDC configuration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6448,7 +6821,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityOidcConfigRequest = new IdentityOidcConfigRequest(); // IdentityOidcConfigRequest |  (optional) 
 
             try
@@ -6504,6 +6880,7 @@ Verify the authenticity of an OIDC token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6516,7 +6893,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityOidcIntrospectRequest = new IdentityOidcIntrospectRequest(); // IdentityOidcIntrospectRequest |  (optional) 
 
             try
@@ -6572,6 +6952,7 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6584,7 +6965,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var identityOidcKeyRequest = new IdentityOidcKeyRequest(); // IdentityOidcKeyRequest |  (optional) 
 
@@ -6642,6 +7026,7 @@ Rotate a named OIDC key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6654,7 +7039,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var identityOidcKeyRotateRequest = new IdentityOidcKeyRotateRequest(); // IdentityOidcKeyRotateRequest |  (optional) 
 
@@ -6712,6 +7100,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6724,7 +7113,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderRequest = new IdentityOidcProviderRequest(); // IdentityOidcProviderRequest |  (optional) 
 
@@ -6781,6 +7173,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6793,7 +7186,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderAuthorizeRequest = new IdentityOidcProviderAuthorizeRequest(); // IdentityOidcProviderAuthorizeRequest |  (optional) 
 
@@ -6850,6 +7246,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6862,7 +7259,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderTokenRequest = new IdentityOidcProviderTokenRequest(); // IdentityOidcProviderTokenRequest |  (optional) 
 
@@ -6919,6 +7319,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6931,7 +7332,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -6986,6 +7390,7 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6998,7 +7403,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var identityOidcRoleRequest = new IdentityOidcRoleRequest(); // IdentityOidcRoleRequest |  (optional) 
 
@@ -7056,6 +7464,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7068,7 +7477,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
             var identityOidcScopeRequest = new IdentityOidcScopeRequest(); // IdentityOidcScopeRequest |  (optional) 
 
@@ -7125,6 +7537,7 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7137,7 +7550,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var identityPersonaRequest = new IdentityPersonaRequest(); // IdentityPersonaRequest |  (optional) 
 
             try
@@ -7193,6 +7609,7 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7205,7 +7622,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new IdentityApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
             var identityPersonaIdRequest = new IdentityPersonaIdRequest(); // IdentityPersonaIdRequest |  (optional) 
 

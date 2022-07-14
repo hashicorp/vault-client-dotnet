@@ -320,6 +320,7 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -332,7 +333,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -384,6 +388,7 @@ Delete a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -396,7 +401,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -452,6 +460,7 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -464,7 +473,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -520,6 +532,7 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -532,7 +545,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -584,6 +600,7 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -596,7 +613,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -652,6 +672,7 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -664,7 +685,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
 
             try
@@ -720,6 +744,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -732,7 +757,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -783,6 +811,7 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -795,7 +824,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -851,6 +883,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -863,7 +896,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -918,6 +954,7 @@ Deletes the secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -930,7 +967,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
 
             try
@@ -986,6 +1026,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -998,7 +1039,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
 
             try
@@ -1053,6 +1097,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1065,7 +1110,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
 
             try
@@ -1120,6 +1168,7 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1132,7 +1181,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1184,6 +1236,7 @@ Deregister an existing key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1196,7 +1249,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.
 
             try
@@ -1252,6 +1308,7 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1264,7 +1321,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -1320,6 +1380,7 @@ Delete old crypto key versions from Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1332,7 +1393,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -1388,6 +1452,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1400,7 +1465,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1451,6 +1519,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1463,7 +1532,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1518,6 +1590,7 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1530,7 +1603,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -1586,6 +1662,7 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1598,7 +1675,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
 
             try
@@ -1654,6 +1734,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1666,7 +1747,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1717,6 +1801,7 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1729,7 +1814,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1781,6 +1869,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1793,7 +1882,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1848,6 +1940,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1860,7 +1953,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1911,6 +2007,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1923,7 +2020,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
 
             try
@@ -1978,6 +2078,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -1990,7 +2091,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -2045,6 +2149,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2057,7 +2162,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -2112,6 +2220,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2124,7 +2233,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2175,6 +2287,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2187,7 +2300,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
 
             try
@@ -2242,6 +2358,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2254,7 +2371,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -2309,6 +2429,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2321,7 +2442,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2372,6 +2496,7 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2384,7 +2509,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2440,6 +2568,7 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2452,7 +2581,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -2508,6 +2640,7 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2520,7 +2653,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -2576,6 +2712,7 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2588,7 +2725,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2640,6 +2780,7 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2652,7 +2793,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2704,6 +2848,7 @@ Register a shared private key with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2716,7 +2861,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var keyName = "keyName_example";  // string | [Required] Name of the key
 
             try
@@ -2772,6 +2920,7 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2784,7 +2933,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
 
             try
@@ -2840,6 +2992,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2852,7 +3005,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2903,6 +3059,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2915,7 +3072,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -2970,6 +3130,7 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -2982,7 +3143,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -3038,6 +3202,7 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3050,7 +3215,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -3106,6 +3274,7 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3118,7 +3287,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3170,6 +3342,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3182,7 +3355,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -3237,6 +3413,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3249,7 +3426,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3304,6 +3484,7 @@ Read a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3316,7 +3497,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -3372,6 +3556,7 @@ Check the status of the service accounts in a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3384,7 +3569,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -3440,6 +3628,7 @@ List the name of each role currently stored.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3452,7 +3641,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3508,6 +3700,7 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3520,7 +3713,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -3576,6 +3772,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3588,7 +3785,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3639,6 +3839,7 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3651,7 +3852,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3703,6 +3907,7 @@ Generate an API key or STS credential using the given role's configuration.'
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3715,7 +3920,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -3771,6 +3979,7 @@ List the existing roles in this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3783,7 +3992,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3839,6 +4051,7 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3851,7 +4064,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -3907,6 +4123,7 @@ Configure the default lease information for generated credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3919,7 +4136,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3971,6 +4191,7 @@ Configure the root credentials that are used to manage IAM.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -3983,7 +4204,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4035,6 +4259,7 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4047,7 +4272,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4099,6 +4327,7 @@ List the existing roles in this backend
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4111,7 +4340,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4167,6 +4399,7 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4179,7 +4412,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
 
             try
@@ -4235,6 +4471,7 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4247,7 +4484,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4303,6 +4543,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4315,7 +4556,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4366,6 +4610,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4378,7 +4623,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the Vault role
 
             try
@@ -4433,6 +4681,7 @@ List existing roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4445,7 +4694,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4501,6 +4753,7 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4513,7 +4766,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -4569,6 +4825,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4581,7 +4838,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4632,6 +4892,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4644,7 +4905,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -4699,6 +4963,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4711,7 +4976,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4766,6 +5034,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4778,7 +5047,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -4833,6 +5105,7 @@ Retrieve the secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4845,7 +5118,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -4903,6 +5179,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4915,7 +5192,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4966,6 +5246,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -4978,7 +5259,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5033,6 +5317,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5045,7 +5330,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
 
             try
@@ -5100,6 +5388,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5112,7 +5401,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5167,6 +5459,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5179,7 +5472,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5234,6 +5530,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5246,7 +5543,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5301,6 +5601,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5313,7 +5614,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
 
             try
@@ -5368,6 +5672,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5380,7 +5685,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -5435,6 +5743,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5447,7 +5756,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -5502,6 +5814,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5514,7 +5827,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5569,6 +5885,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5581,7 +5898,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5636,6 +5956,7 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5648,7 +5969,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5700,6 +6024,7 @@ List named keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5712,7 +6037,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5768,6 +6096,7 @@ Configure the key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5780,7 +6109,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -5836,6 +6168,7 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5848,7 +6181,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -5904,6 +6240,7 @@ Retrieve the public key associated with the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5916,7 +6253,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.
 
             try
@@ -5972,6 +6312,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -5984,7 +6325,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6035,6 +6379,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6047,7 +6392,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6102,6 +6450,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6114,7 +6463,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6169,6 +6521,7 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6181,7 +6534,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -6239,6 +6595,7 @@ Configure the  credentials that are used to manage Database Users.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6251,7 +6608,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6303,6 +6663,7 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6315,7 +6676,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6371,6 +6735,7 @@ List the existing roles in this backend
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6383,7 +6748,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6439,6 +6807,7 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6451,7 +6820,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
 
             try
@@ -6507,6 +6879,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6519,7 +6892,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6570,6 +6946,7 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6582,7 +6959,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6634,6 +7014,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6646,7 +7027,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6701,6 +7085,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6713,7 +7098,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6768,6 +7156,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6780,7 +7169,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6835,6 +7227,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6847,7 +7240,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6898,6 +7294,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6910,7 +7307,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the dynamic role.
 
             try
@@ -6965,6 +7365,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -6977,7 +7378,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7032,6 +7436,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7044,7 +7449,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
 
             try
@@ -7099,6 +7507,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7111,7 +7520,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role.
 
             try
@@ -7166,6 +7578,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7178,7 +7591,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7233,6 +7649,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7245,7 +7662,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -7300,6 +7720,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7312,7 +7733,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7363,6 +7787,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7375,7 +7800,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7426,6 +7854,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7438,7 +7867,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7489,6 +7921,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7501,7 +7934,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7552,6 +7988,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7564,7 +8001,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7615,6 +8055,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7627,7 +8068,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -7682,6 +8126,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7694,7 +8139,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -7749,6 +8197,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7761,7 +8210,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -7816,6 +8268,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7828,7 +8281,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7883,6 +8339,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7895,7 +8352,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7946,6 +8406,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -7958,7 +8419,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8009,6 +8473,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8021,7 +8486,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8072,6 +8540,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8084,7 +8553,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8135,6 +8607,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8147,7 +8620,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8198,6 +8674,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8210,7 +8687,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8261,6 +8741,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8273,7 +8754,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8324,6 +8808,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8336,7 +8821,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8387,6 +8875,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8399,7 +8888,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -8454,6 +8946,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8466,7 +8959,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -8521,6 +9017,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8533,7 +9030,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8588,6 +9088,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8600,7 +9101,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8651,6 +9155,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8663,7 +9168,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
 
             try
@@ -8718,6 +9226,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8730,7 +9239,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8785,6 +9297,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8797,7 +9310,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8852,6 +9368,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8864,7 +9381,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -8919,6 +9439,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8931,7 +9452,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8982,6 +9506,7 @@ Configure the lease parameters for generated credentials
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -8994,7 +9519,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9046,6 +9574,7 @@ Request RabbitMQ credentials for a certain role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9058,7 +9587,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9114,6 +9646,7 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9126,7 +9659,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9182,6 +9718,7 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9194,7 +9731,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9250,6 +9790,7 @@ Read the backend level settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9262,7 +9803,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9314,6 +9858,7 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9326,7 +9871,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -9382,6 +9930,7 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9394,7 +9943,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -9452,6 +10004,7 @@ Read the structure of a secret entry from the Key-Value store with the values re
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9464,7 +10017,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -9520,6 +10076,7 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9532,7 +10089,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9584,6 +10144,7 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9596,7 +10157,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9648,6 +10212,7 @@ Retrieve the public key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9660,7 +10225,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9712,6 +10280,7 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9724,7 +10293,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9780,6 +10352,7 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9792,7 +10365,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
 
             try
@@ -9848,6 +10424,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9860,7 +10437,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9911,6 +10491,7 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9923,7 +10504,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -9979,6 +10563,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -9991,7 +10576,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10046,6 +10634,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10058,7 +10647,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -10113,6 +10705,7 @@ Request time-based one-time use password or validate a password for a certain ke
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10125,7 +10718,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -10181,6 +10777,7 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10193,7 +10790,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10249,6 +10849,7 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10261,7 +10862,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -10317,6 +10921,7 @@ Backup the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10329,7 +10934,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -10385,6 +10993,7 @@ Returns the size of the active cache
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10397,7 +11006,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10449,6 +11061,7 @@ Export named encryption or signing key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10461,7 +11074,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
 
@@ -10519,6 +11135,7 @@ Export named encryption or signing key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10531,7 +11148,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
             var version = "version_example";  // string | Version of the key
@@ -10591,6 +11211,7 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10603,7 +11224,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10659,6 +11283,7 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10671,7 +11296,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -10727,6 +11355,7 @@ Returns the public key to use for wrapping imported keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10739,7 +11368,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10791,6 +11423,7 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10803,7 +11436,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var adConfigRequest = new AdConfigRequest(); // AdConfigRequest |  (optional) 
 
             try
@@ -10859,6 +11495,7 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10871,7 +11508,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryManageCheckInRequest = new AdLibraryManageCheckInRequest(); // AdLibraryManageCheckInRequest |  (optional) 
 
@@ -10929,6 +11569,7 @@ Update a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -10941,7 +11582,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryRequest = new AdLibraryRequest(); // AdLibraryRequest |  (optional) 
 
@@ -10999,6 +11643,7 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11011,7 +11656,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryCheckInRequest = new AdLibraryCheckInRequest(); // AdLibraryCheckInRequest |  (optional) 
 
@@ -11069,6 +11717,7 @@ Check a service account out from the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11081,7 +11730,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set
             var adLibraryCheckOutRequest = new AdLibraryCheckOutRequest(); // AdLibraryCheckOutRequest |  (optional) 
 
@@ -11139,6 +11791,7 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11151,7 +11804,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var adRolesRequest = new AdRolesRequest(); // AdRolesRequest |  (optional) 
 
@@ -11209,6 +11865,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11221,7 +11878,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role
 
             try
@@ -11276,6 +11936,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11288,7 +11949,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11339,6 +12003,7 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11351,7 +12016,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var alicloudConfigRequest = new AlicloudConfigRequest(); // AlicloudConfigRequest |  (optional) 
 
             try
@@ -11407,6 +12075,7 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11419,7 +12088,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
             var alicloudRoleRequest = new AlicloudRoleRequest(); // AlicloudRoleRequest |  (optional) 
 
@@ -11477,6 +12149,7 @@ Configure the default lease information for generated credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11489,7 +12162,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var awsConfigLeaseRequest = new AwsConfigLeaseRequest(); // AwsConfigLeaseRequest |  (optional) 
 
             try
@@ -11545,6 +12221,7 @@ Configure the root credentials that are used to manage IAM.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11557,7 +12234,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var awsConfigRootRequest = new AwsConfigRootRequest(); // AwsConfigRootRequest |  (optional) 
 
             try
@@ -11613,6 +12293,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11625,7 +12306,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11676,6 +12360,7 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11688,7 +12373,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var awsCredsRequest = new AwsCredsRequest(); // AwsCredsRequest |  (optional) 
 
             try
@@ -11744,6 +12432,7 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11756,7 +12445,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var awsRolesRequest = new AwsRolesRequest(); // AwsRolesRequest |  (optional) 
 
@@ -11814,6 +12506,7 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11826,7 +12519,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var awsStsRequest = new AwsStsRequest(); // AwsStsRequest |  (optional) 
 
@@ -11884,6 +12580,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11896,7 +12593,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var azureConfigRequest = new AzureConfigRequest(); // AzureConfigRequest |  (optional) 
 
             try
@@ -11951,6 +12651,7 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -11963,7 +12664,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var azureRolesRequest = new AzureRolesRequest(); // AzureRolesRequest |  (optional) 
 
@@ -12021,6 +12725,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12033,7 +12738,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -12084,6 +12792,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12096,7 +12805,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var consulConfigAccessRequest = new ConsulConfigAccessRequest(); // ConsulConfigAccessRequest |  (optional) 
 
             try
@@ -12151,6 +12863,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12163,7 +12876,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var consulRolesRequest = new ConsulRolesRequest(); // ConsulRolesRequest |  (optional) 
 
@@ -12220,6 +12936,7 @@ Store a secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12232,7 +12949,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
 
             try
@@ -12288,6 +13008,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12300,7 +13021,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var gcpConfigRequest = new GcpConfigRequest(); // GcpConfigRequest |  (optional) 
 
             try
@@ -12355,6 +13079,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12367,7 +13092,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -12418,6 +13146,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12430,7 +13159,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
             var gcpKeyRequest = new GcpKeyRequest(); // GcpKeyRequest |  (optional) 
 
@@ -12487,6 +13219,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12499,7 +13232,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
             var gcpRolesetRequest = new GcpRolesetRequest(); // GcpRolesetRequest |  (optional) 
 
@@ -12556,6 +13292,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12568,7 +13305,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -12623,6 +13363,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12635,7 +13376,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -12690,6 +13434,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12702,7 +13447,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
             var gcpRolesetKeyRequest = new GcpRolesetKeyRequest(); // GcpRolesetKeyRequest |  (optional) 
 
@@ -12759,6 +13507,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12771,7 +13520,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -12826,6 +13578,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12838,7 +13591,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
             var gcpStaticAccountRequest = new GcpStaticAccountRequest(); // GcpStaticAccountRequest |  (optional) 
 
@@ -12895,6 +13651,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12907,7 +13664,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
             var gcpStaticAccountKeyRequest = new GcpStaticAccountKeyRequest(); // GcpStaticAccountKeyRequest |  (optional) 
 
@@ -12964,6 +13724,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -12976,7 +13737,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the account.
 
             try
@@ -13031,6 +13795,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13043,7 +13808,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -13098,6 +13866,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13110,7 +13879,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -13165,6 +13937,7 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13177,7 +13950,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var gcpkmsConfigRequest = new GcpkmsConfigRequest(); // GcpkmsConfigRequest |  (optional) 
 
             try
@@ -13233,6 +14009,7 @@ Decrypt a ciphertext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13245,7 +14022,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsDecryptRequest = new GcpkmsDecryptRequest(); // GcpkmsDecryptRequest |  (optional) 
 
@@ -13303,6 +14083,7 @@ Encrypt a plaintext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13315,7 +14096,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsEncryptRequest = new GcpkmsEncryptRequest(); // GcpkmsEncryptRequest |  (optional) 
 
@@ -13373,6 +14157,7 @@ Configure the key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13385,7 +14170,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
             var gcpkmsKeysConfigRequest = new GcpkmsKeysConfigRequest(); // GcpkmsKeysConfigRequest |  (optional) 
 
@@ -13443,6 +14231,7 @@ Deregister an existing key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13455,7 +14244,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.
 
             try
@@ -13511,6 +14303,7 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13523,7 +14316,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
             var gcpkmsKeysRequest = new GcpkmsKeysRequest(); // GcpkmsKeysRequest |  (optional) 
 
@@ -13581,6 +14377,7 @@ Register an existing crypto key in Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13593,7 +14390,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.
             var gcpkmsKeysRegisterRequest = new GcpkmsKeysRegisterRequest(); // GcpkmsKeysRegisterRequest |  (optional) 
 
@@ -13651,6 +14451,7 @@ Rotate a crypto key to a new primary version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13663,7 +14464,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.
 
             try
@@ -13719,6 +14523,7 @@ Delete old crypto key versions from Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13731,7 +14536,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -13787,6 +14595,7 @@ Re-encrypt existing ciphertext data to a new version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13799,7 +14608,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.
             var gcpkmsReencryptRequest = new GcpkmsReencryptRequest(); // GcpkmsReencryptRequest |  (optional) 
 
@@ -13857,6 +14669,7 @@ Signs a message or digest using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13869,7 +14682,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsSignRequest = new GcpkmsSignRequest(); // GcpkmsSignRequest |  (optional) 
 
@@ -13927,6 +14743,7 @@ Verify a signature using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -13939,7 +14756,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsVerifyRequest = new GcpkmsVerifyRequest(); // GcpkmsVerifyRequest |  (optional) 
 
@@ -13997,6 +14817,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14009,7 +14830,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var kubernetesConfigRequest = new KubernetesConfigRequest(); // KubernetesConfigRequest |  (optional) 
 
             try
@@ -14064,6 +14888,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14076,7 +14901,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Vault role
             var kubernetesCredsRequest = new KubernetesCredsRequest(); // KubernetesCredsRequest |  (optional) 
 
@@ -14133,6 +14961,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14145,7 +14974,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var kubernetesRolesRequest = new KubernetesRolesRequest(); // KubernetesRolesRequest |  (optional) 
 
@@ -14202,6 +15034,7 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14214,7 +15047,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -14270,6 +15106,7 @@ Configure the  credentials that are used to manage Database Users.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14282,7 +15119,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var mongodbatlasConfigRequest = new MongodbatlasConfigRequest(); // MongodbatlasConfigRequest |  (optional) 
 
             try
@@ -14338,6 +15178,7 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14350,7 +15191,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -14406,6 +15250,7 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14418,7 +15263,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
             var mongodbatlasRolesRequest = new MongodbatlasRolesRequest(); // MongodbatlasRolesRequest |  (optional) 
 
@@ -14476,6 +15324,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14488,7 +15337,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var nomadConfigAccessRequest = new NomadConfigAccessRequest(); // NomadConfigAccessRequest |  (optional) 
 
             try
@@ -14543,6 +15395,7 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14555,7 +15408,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var nomadConfigLeaseRequest = new NomadConfigLeaseRequest(); // NomadConfigLeaseRequest |  (optional) 
 
             try
@@ -14611,6 +15467,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14623,7 +15480,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var nomadRoleRequest = new NomadRoleRequest(); // NomadRoleRequest |  (optional) 
 
@@ -14680,6 +15540,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14692,7 +15553,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var openldapConfigRequest = new OpenldapConfigRequest(); // OpenldapConfigRequest |  (optional) 
 
             try
@@ -14747,6 +15611,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14759,7 +15624,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
             var openldapRoleRequest = new OpenldapRoleRequest(); // OpenldapRoleRequest |  (optional) 
 
@@ -14816,6 +15684,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14828,7 +15697,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role
 
             try
@@ -14883,6 +15755,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14895,7 +15768,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
 
             try
             {
@@ -14946,6 +15822,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -14958,7 +15835,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var openldapStaticRoleRequest = new OpenldapStaticRoleRequest(); // OpenldapStaticRoleRequest |  (optional) 
 
@@ -15015,6 +15895,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15027,7 +15908,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiBundleRequest = new PkiBundleRequest(); // PkiBundleRequest |  (optional) 
 
             try
@@ -15082,6 +15966,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15094,7 +15979,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiCertRequest = new PkiCertRequest(); // PkiCertRequest |  (optional) 
 
             try
@@ -15149,6 +16037,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15161,7 +16050,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiConfigCaRequest = new PkiConfigCaRequest(); // PkiConfigCaRequest |  (optional) 
 
             try
@@ -15216,6 +16108,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15228,7 +16121,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiConfigCrlRequest = new PkiConfigCrlRequest(); // PkiConfigCrlRequest |  (optional) 
 
             try
@@ -15283,6 +16179,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15295,7 +16192,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiConfigIssuersRequest = new PkiConfigIssuersRequest(); // PkiConfigIssuersRequest |  (optional) 
 
             try
@@ -15350,6 +16250,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15362,7 +16263,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiConfigKeysRequest = new PkiConfigKeysRequest(); // PkiConfigKeysRequest |  (optional) 
 
             try
@@ -15417,6 +16321,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15429,7 +16334,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiConfigUrlsRequest = new PkiConfigUrlsRequest(); // PkiConfigUrlsRequest |  (optional) 
 
             try
@@ -15484,6 +16392,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15496,7 +16405,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiIntermediateCrossSignRequest = new PkiIntermediateCrossSignRequest(); // PkiIntermediateCrossSignRequest |  (optional) 
 
             try
@@ -15551,6 +16463,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15563,7 +16476,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIntermediateGenerateRequest = new PkiIntermediateGenerateRequest(); // PkiIntermediateGenerateRequest |  (optional) 
 
@@ -15620,6 +16536,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15632,7 +16549,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiIntermediateSetSignedRequest = new PkiIntermediateSetSignedRequest(); // PkiIntermediateSetSignedRequest |  (optional) 
 
             try
@@ -15687,6 +16607,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15699,7 +16620,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiInternalExportedRequest = new PkiInternalExportedRequest(); // PkiInternalExportedRequest |  (optional) 
 
             try
@@ -15754,6 +16678,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15766,7 +16691,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssueRequest = new PkiIssueRequest(); // PkiIssueRequest |  (optional) 
 
@@ -15823,6 +16751,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15835,7 +16764,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerIssueRequest = new PkiIssuerIssueRequest(); // PkiIssuerIssueRequest |  (optional) 
@@ -15894,6 +16826,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15906,7 +16839,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignIntermediateRequest = new PkiIssuerSignIntermediateRequest(); // PkiIssuerSignIntermediateRequest |  (optional) 
 
@@ -15963,6 +16899,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -15975,7 +16912,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerSignRequest = new PkiIssuerSignRequest(); // PkiIssuerSignRequest |  (optional) 
@@ -16034,6 +16974,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16046,7 +16987,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignSelfIssuedRequest = new PkiIssuerSignSelfIssuedRequest(); // PkiIssuerSignSelfIssuedRequest |  (optional) 
 
@@ -16103,6 +17047,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16115,7 +17060,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignVerbatimRequest = new PkiIssuerSignVerbatimRequest(); // PkiIssuerSignVerbatimRequest |  (optional) 
 
@@ -16172,6 +17120,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16184,7 +17133,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerSignVerbatimRequest = new PkiIssuerSignVerbatimRequest(); // PkiIssuerSignVerbatimRequest |  (optional) 
@@ -16243,6 +17195,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16255,7 +17208,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiDerPemRequest = new PkiDerPemRequest(); // PkiDerPemRequest |  (optional) 
 
@@ -16312,6 +17268,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16324,7 +17281,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIssuersGenerateIntermediateRequest = new PkiIssuersGenerateIntermediateRequest(); // PkiIssuersGenerateIntermediateRequest |  (optional) 
 
@@ -16381,6 +17341,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16393,7 +17354,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIssuersGenerateRootRequest = new PkiIssuersGenerateRootRequest(); // PkiIssuersGenerateRootRequest |  (optional) 
 
@@ -16450,6 +17414,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16462,7 +17427,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiJsonRequest = new PkiJsonRequest(); // PkiJsonRequest |  (optional) 
 
             try
@@ -16517,6 +17485,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16529,7 +17498,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
             var pkiKeyRequest = new PkiKeyRequest(); // PkiKeyRequest |  (optional) 
 
@@ -16586,6 +17558,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16598,7 +17571,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiKeysImportRequest = new PkiKeysImportRequest(); // PkiKeysImportRequest |  (optional) 
 
             try
@@ -16653,6 +17629,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16665,7 +17642,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiKmsRequest = new PkiKmsRequest(); // PkiKmsRequest |  (optional) 
 
             try
@@ -16720,6 +17700,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16732,7 +17713,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiRevokeRequest = new PkiRevokeRequest(); // PkiRevokeRequest |  (optional) 
 
             try
@@ -16787,6 +17771,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16799,7 +17784,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var pkiRolesRequest = new PkiRolesRequest(); // PkiRolesRequest |  (optional) 
 
@@ -16856,6 +17844,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16868,7 +17857,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiRootGenerateRequest = new PkiRootGenerateRequest(); // PkiRootGenerateRequest |  (optional) 
 
@@ -16925,6 +17917,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -16937,7 +17930,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiRootReplaceRequest = new PkiRootReplaceRequest(); // PkiRootReplaceRequest |  (optional) 
 
             try
@@ -16992,6 +17988,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17004,7 +18001,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiRootRotateRequest = new PkiRootRotateRequest(); // PkiRootRotateRequest |  (optional) 
 
@@ -17061,6 +18061,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17073,7 +18074,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiRootSignIntermediateRequest = new PkiRootSignIntermediateRequest(); // PkiRootSignIntermediateRequest |  (optional) 
 
             try
@@ -17128,6 +18132,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17140,7 +18145,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiRootSignSelfIssuedRequest = new PkiRootSignSelfIssuedRequest(); // PkiRootSignSelfIssuedRequest |  (optional) 
 
             try
@@ -17195,6 +18203,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17207,7 +18216,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiSignRequest = new PkiSignRequest(); // PkiSignRequest |  (optional) 
 
@@ -17264,6 +18276,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17276,7 +18289,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiSignVerbatimRequest = new PkiSignVerbatimRequest(); // PkiSignVerbatimRequest |  (optional) 
 
             try
@@ -17331,6 +18347,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17343,7 +18360,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiSignVerbatimRequest = new PkiSignVerbatimRequest(); // PkiSignVerbatimRequest |  (optional) 
 
@@ -17400,6 +18420,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17412,7 +18433,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var pkiTidyRequest = new PkiTidyRequest(); // PkiTidyRequest |  (optional) 
 
             try
@@ -17467,6 +18491,7 @@ Configure the connection URI, username, and password to talk to RabbitMQ managem
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17479,7 +18504,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var rabbitmqConfigConnectionRequest = new RabbitmqConfigConnectionRequest(); // RabbitmqConfigConnectionRequest |  (optional) 
 
             try
@@ -17535,6 +18563,7 @@ Configure the lease parameters for generated credentials
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17547,7 +18576,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var rabbitmqConfigLeaseRequest = new RabbitmqConfigLeaseRequest(); // RabbitmqConfigLeaseRequest |  (optional) 
 
             try
@@ -17603,6 +18635,7 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17615,7 +18648,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var rabbitmqRolesRequest = new RabbitmqRolesRequest(); // RabbitmqRolesRequest |  (optional) 
 
@@ -17673,6 +18709,7 @@ Configure backend level settings that are applied to every key in the key-value 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17685,7 +18722,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var kvConfigRequest = new KvConfigRequest(); // KvConfigRequest |  (optional) 
 
             try
@@ -17741,6 +18781,7 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17753,7 +18794,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDataRequest = new KvDataRequest(); // KvDataRequest |  (optional) 
 
@@ -17811,6 +18855,7 @@ Marks one or more versions as deleted in the KV store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17823,7 +18868,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDeleteRequest = new KvDeleteRequest(); // KvDeleteRequest |  (optional) 
 
@@ -17881,6 +18929,7 @@ Permanently removes one or more versions in the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17893,7 +18942,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDestroyRequest = new KvDestroyRequest(); // KvDestroyRequest |  (optional) 
 
@@ -17951,6 +19003,7 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -17963,7 +19016,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvMetadataRequest = new KvMetadataRequest(); // KvMetadataRequest |  (optional) 
 
@@ -18021,6 +19077,7 @@ Undeletes one or more versions from the KV store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18033,7 +19090,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvUndeleteRequest = new KvUndeleteRequest(); // KvUndeleteRequest |  (optional) 
 
@@ -18091,6 +19151,7 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18103,7 +19164,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var sshConfigCaRequest = new SshConfigCaRequest(); // SshConfigCaRequest |  (optional) 
 
             try
@@ -18159,6 +19223,7 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18171,7 +19236,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var sshConfigZeroaddressRequest = new SshConfigZeroaddressRequest(); // SshConfigZeroaddressRequest |  (optional) 
 
             try
@@ -18227,6 +19295,7 @@ Creates a credential for establishing SSH connection with the remote host.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18239,7 +19308,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required] Name of the role
             var sshCredsRequest = new SshCredsRequest(); // SshCredsRequest |  (optional) 
 
@@ -18297,6 +19369,7 @@ Register a shared private key with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18309,7 +19382,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var keyName = "keyName_example";  // string | [Required] Name of the key
             var sshKeysRequest = new SshKeysRequest(); // SshKeysRequest |  (optional) 
 
@@ -18367,6 +19443,7 @@ List all the roles associated with the given IP address.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18379,7 +19456,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var sshLookupRequest = new SshLookupRequest(); // SshLookupRequest |  (optional) 
 
             try
@@ -18435,6 +19515,7 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18447,7 +19528,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
             var sshRolesRequest = new SshRolesRequest(); // SshRolesRequest |  (optional) 
 
@@ -18505,6 +19589,7 @@ Request signing an SSH key using a certain role with the provided details.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18517,7 +19602,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request.
             var sshSignRequest = new SshSignRequest(); // SshSignRequest |  (optional) 
 
@@ -18575,6 +19663,7 @@ Validate the OTP provided by Vault SSH Agent.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18587,7 +19676,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var sshVerifyRequest = new SshVerifyRequest(); // SshVerifyRequest |  (optional) 
 
             try
@@ -18643,6 +19735,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18655,7 +19748,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var terraformConfigRequest = new TerraformConfigRequest(); // TerraformConfigRequest |  (optional) 
 
             try
@@ -18710,6 +19806,7 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18722,7 +19819,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -18778,6 +19878,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18790,7 +19891,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var terraformRoleRequest = new TerraformRoleRequest(); // TerraformRoleRequest |  (optional) 
 
@@ -18847,6 +19951,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18859,7 +19964,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the team or organization role
 
             try
@@ -18914,6 +20022,7 @@ Request time-based one-time use password or validate a password for a certain ke
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18926,7 +20035,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
             var totpCodeRequest = new TotpCodeRequest(); // TotpCodeRequest |  (optional) 
 
@@ -18984,6 +20096,7 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -18996,7 +20109,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
             var totpKeysRequest = new TotpKeysRequest(); // TotpKeysRequest |  (optional) 
 
@@ -19054,6 +20170,7 @@ Configures a new cache of the specified size
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19066,7 +20183,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var transitCacheConfigRequest = new TransitCacheConfigRequest(); // TransitCacheConfigRequest |  (optional) 
 
             try
@@ -19122,6 +20242,7 @@ Generate a data key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19134,7 +20255,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The backend key used for encrypting the data key
             var plaintext = "plaintext_example";  // string | \"plaintext\" will return the key in both plaintext and ciphertext; \"wrapped\" will return the ciphertext only.
             var transitDatakeyRequest = new TransitDatakeyRequest(); // TransitDatakeyRequest |  (optional) 
@@ -19194,6 +20318,7 @@ Decrypt a ciphertext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19206,7 +20331,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var transitDecryptRequest = new TransitDecryptRequest(); // TransitDecryptRequest |  (optional) 
 
@@ -19264,6 +20392,7 @@ Encrypt a plaintext value or a batch of plaintext blocks using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19276,7 +20405,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var transitEncryptRequest = new TransitEncryptRequest(); // TransitEncryptRequest |  (optional) 
 
@@ -19334,6 +20466,7 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19346,7 +20479,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var transitHashRequest = new TransitHashRequest(); // TransitHashRequest |  (optional) 
 
             try
@@ -19402,6 +20538,7 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19414,7 +20551,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var transitHashRequest = new TransitHashRequest(); // TransitHashRequest |  (optional) 
 
@@ -19472,6 +20612,7 @@ Generate an HMAC for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19484,7 +20625,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use for the HMAC function
             var transitHmacRequest = new TransitHmacRequest(); // TransitHmacRequest |  (optional) 
 
@@ -19542,6 +20686,7 @@ Generate an HMAC for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19554,7 +20699,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use for the HMAC function
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var transitHmacRequest = new TransitHmacRequest(); // TransitHmacRequest |  (optional) 
@@ -19614,6 +20762,7 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19626,7 +20775,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysRequest = new TransitKeysRequest(); // TransitKeysRequest |  (optional) 
 
@@ -19684,6 +20836,7 @@ Configure a named encryption key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19696,7 +20849,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysConfigRequest = new TransitKeysConfigRequest(); // TransitKeysConfigRequest |  (optional) 
 
@@ -19754,6 +20910,7 @@ Imports an externally-generated key into a new transit key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19766,7 +20923,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the key
             var transitKeysImportRequest = new TransitKeysImportRequest(); // TransitKeysImportRequest |  (optional) 
 
@@ -19824,6 +20984,7 @@ Imports an externally-generated key into an existing imported key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19836,7 +20997,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the key
             var transitKeysImportVersionRequest = new TransitKeysImportVersionRequest(); // TransitKeysImportVersionRequest |  (optional) 
 
@@ -19894,6 +21058,7 @@ Rotate named encryption key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19906,7 +21071,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -19962,6 +21130,7 @@ Trim key versions of a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -19974,7 +21143,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysTrimRequest = new TransitKeysTrimRequest(); // TransitKeysTrimRequest |  (optional) 
 
@@ -20032,6 +21204,7 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20044,7 +21217,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
             try
@@ -20100,6 +21276,7 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20112,7 +21289,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
@@ -20170,6 +21350,7 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20182,7 +21363,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
@@ -20242,6 +21426,7 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20254,7 +21439,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
@@ -20312,6 +21500,7 @@ Restore the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20324,7 +21513,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var transitRestoreRequest = new TransitRestoreRequest(); // TransitRestoreRequest |  (optional) 
 
             try
@@ -20380,6 +21572,7 @@ Restore the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20392,7 +21585,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | If set, this will be the name of the restored key.
             var transitRestoreRequest = new TransitRestoreRequest(); // TransitRestoreRequest |  (optional) 
 
@@ -20450,6 +21646,7 @@ Rewrap ciphertext
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20462,7 +21659,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitRewrapRequest = new TransitRewrapRequest(); // TransitRewrapRequest |  (optional) 
 
@@ -20520,6 +21720,7 @@ Generate a signature for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20532,7 +21733,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var transitSignRequest = new TransitSignRequest(); // TransitSignRequest |  (optional) 
 
@@ -20590,6 +21794,7 @@ Generate a signature for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20602,7 +21807,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
             var transitSignRequest = new TransitSignRequest(); // TransitSignRequest |  (optional) 
@@ -20662,6 +21870,7 @@ Verify a signature or HMAC for input data created using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20674,7 +21883,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var transitVerifyRequest = new TransitVerifyRequest(); // TransitVerifyRequest |  (optional) 
 
@@ -20732,6 +21944,7 @@ Verify a signature or HMAC for input data created using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using VaultClient.Api;
 using VaultClient.Client;
 using VaultClient.Model;
@@ -20744,7 +21957,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
-            var apiInstance = new SecretsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
             var transitVerifyRequest = new TransitVerifyRequest(); // TransitVerifyRequest |  (optional) 
