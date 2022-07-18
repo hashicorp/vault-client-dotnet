@@ -44,4 +44,7 @@ build:
 	dotnet build
 
 build-prod:
-	dotnet build -c release
+	dotnet build -c Release
+
+test:
+	dotnet test -c Release
