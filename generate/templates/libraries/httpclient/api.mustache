@@ -2,6 +2,7 @@
 
 using System;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Threading;
 using System.Threading.Tasks;
 using {{packageName}}.Client;
@@ -133,10 +134,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// <returns></returns>
         public {{classname}}(string basePath)
         {
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                new {{packageName}}.Client.Configuration { BasePath = basePath }
-            );
+            this.Configuration = new {{packageName}}.Client.Configuration { BasePath = basePath };
             this.ApiClient = new {{packageName}}.Client.ApiClient(this.Configuration.BasePath);
             this.Client =  this.ApiClient;
             {{#supportsAsync}}
@@ -157,10 +155,7 @@ namespace {{packageName}}.{{apiPackage}}
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                configuration
-            );
+            this.Configuration = configuration;
             this.ApiClient = new {{packageName}}.Client.ApiClient(this.Configuration.BasePath);
             this.Client = this.ApiClient;
             {{#supportsAsync}}
@@ -201,10 +196,7 @@ namespace {{packageName}}.{{apiPackage}}
         {
             if (client == null) throw new ArgumentNullException("client");
 
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                new {{packageName}}.Client.Configuration { BasePath = basePath }
-            );
+            this.Configuration = new {{packageName}}.Client.Configuration { BasePath = basePath };
             this.ApiClient = new {{packageName}}.Client.ApiClient(client, this.Configuration.BasePath, handler);
             this.Client =  this.ApiClient;
             {{#supportsAsync}}
@@ -230,10 +222,7 @@ namespace {{packageName}}.{{apiPackage}}
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
 
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                configuration
-            );
+            this.Configuration = configuration;
             this.ApiClient = new {{packageName}}.Client.ApiClient(client, this.Configuration.BasePath, handler);
             this.Client = this.ApiClient;
             {{#supportsAsync}}

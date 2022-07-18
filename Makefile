@@ -19,7 +19,6 @@ delete-generated:
 		VaultClient.sln \
 		.gitignore \
 		.openapi-generator \
-		.openapi-generator-ignore \
 		.travis.yml
 
 generate:

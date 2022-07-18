@@ -10,6 +10,7 @@
 
 using System;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Threading;
 using System.Threading.Tasks;
 using VaultClient.Client;
@@ -6595,10 +6596,7 @@ namespace VaultClient.Api
         /// <returns></returns>
         public SystemApi(string basePath)
         {
-            this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
-                VaultClient.Client.GlobalConfiguration.Instance,
-                new VaultClient.Client.Configuration { BasePath = basePath }
-            );
+            this.Configuration = new VaultClient.Client.Configuration { BasePath = basePath };
             this.ApiClient = new VaultClient.Client.ApiClient(this.Configuration.BasePath);
             this.Client =  this.ApiClient;
             this.AsynchronousClient = this.ApiClient;
@@ -6617,10 +6615,7 @@ namespace VaultClient.Api
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
-                VaultClient.Client.GlobalConfiguration.Instance,
-                configuration
-            );
+            this.Configuration = configuration;
             this.ApiClient = new VaultClient.Client.ApiClient(this.Configuration.BasePath);
             this.Client = this.ApiClient;
             this.AsynchronousClient = this.ApiClient;
@@ -6659,10 +6654,7 @@ namespace VaultClient.Api
         {
             if (client == null) throw new ArgumentNullException("client");
 
-            this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
-                VaultClient.Client.GlobalConfiguration.Instance,
-                new VaultClient.Client.Configuration { BasePath = basePath }
-            );
+            this.Configuration = new VaultClient.Client.Configuration { BasePath = basePath };
             this.ApiClient = new VaultClient.Client.ApiClient(client, this.Configuration.BasePath, handler);
             this.Client =  this.ApiClient;
             this.AsynchronousClient = this.ApiClient;
@@ -6686,10 +6678,7 @@ namespace VaultClient.Api
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
 
-            this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
-                VaultClient.Client.GlobalConfiguration.Instance,
-                configuration
-            );
+            this.Configuration = configuration;
             this.ApiClient = new VaultClient.Client.ApiClient(client, this.Configuration.BasePath, handler);
             this.Client = this.ApiClient;
             this.AsynchronousClient = this.ApiClient;
