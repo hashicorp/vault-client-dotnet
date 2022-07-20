@@ -3719,7 +3719,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuditPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3728,17 +3728,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/audit/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -3764,7 +3764,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuditPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3775,17 +3775,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3809,7 +3809,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuthPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3818,17 +3818,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/auth/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -3854,7 +3854,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuthPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3865,17 +3865,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3899,7 +3899,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigAuditingRequestHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3908,17 +3908,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -3944,7 +3944,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigAuditingRequestHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3955,17 +3955,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3984,7 +3984,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysConfigCors()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3993,16 +3993,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/cors", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4023,7 +4023,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4034,16 +4034,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/cors", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4067,7 +4067,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigUiHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4076,17 +4076,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4112,7 +4112,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigUiHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4123,17 +4123,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4152,7 +4152,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysGenerateRoot()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4161,16 +4161,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4191,7 +4191,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4202,16 +4202,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4230,7 +4230,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysGenerateRootAttempt()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4239,16 +4239,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4269,7 +4269,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4280,16 +4280,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4313,7 +4313,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysMountsPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4322,17 +4322,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/mounts/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4358,7 +4358,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysMountsPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4369,17 +4369,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4403,7 +4403,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4412,17 +4412,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4448,7 +4448,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4459,17 +4459,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4498,7 +4498,7 @@ namespace VaultClient.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4507,18 +4507,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4549,7 +4549,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4560,18 +4560,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4595,7 +4595,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesAclName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4604,17 +4604,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4640,7 +4640,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesAclName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4651,17 +4651,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4685,7 +4685,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesPasswordName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4694,17 +4694,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4730,7 +4730,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesPasswordName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4741,17 +4741,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4775,7 +4775,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPolicyName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4784,17 +4784,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policy/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4820,7 +4820,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPolicyName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4831,17 +4831,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4865,7 +4865,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysQuotasRateLimitName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4874,17 +4874,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4910,7 +4910,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysQuotasRateLimitName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4921,17 +4921,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4950,7 +4950,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysRaw()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4959,16 +4959,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/raw", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4989,7 +4989,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5000,16 +5000,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5033,7 +5033,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysRawPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5042,17 +5042,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/raw/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5078,7 +5078,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysRawPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5089,17 +5089,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5118,7 +5118,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysRekeyBackup()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5127,16 +5127,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/backup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5157,7 +5157,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5168,16 +5168,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/backup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5196,7 +5196,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysRekeyInit()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5205,16 +5205,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/init", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5235,7 +5235,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5246,16 +5246,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/init", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5274,7 +5274,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5283,16 +5283,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/recovery-key-backup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5313,7 +5313,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5324,16 +5324,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/recovery-key-backup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5352,7 +5352,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSysRekeyVerify()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5361,16 +5361,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/verify", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5391,7 +5391,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5402,16 +5402,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/verify", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5430,7 +5430,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysAudit()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5439,16 +5439,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/audit", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/audit", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5469,7 +5469,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5480,16 +5480,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5508,7 +5508,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysAuth()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5517,16 +5517,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5547,7 +5547,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5558,16 +5558,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5591,7 +5591,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5600,17 +5600,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5636,7 +5636,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5647,17 +5647,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5681,7 +5681,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPathTune");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5690,17 +5690,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}/tune", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5726,7 +5726,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPathTune");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5737,17 +5737,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5766,7 +5766,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysConfigAuditingRequestHeaders()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5775,16 +5775,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5805,7 +5805,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5816,16 +5816,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5849,7 +5849,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigAuditingRequestHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5858,17 +5858,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5894,7 +5894,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigAuditingRequestHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5905,17 +5905,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5934,7 +5934,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysConfigCors()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5943,16 +5943,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/cors", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5973,7 +5973,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5984,16 +5984,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6012,7 +6012,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysConfigStateSanitized()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6021,16 +6021,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/state/sanitized", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/state/sanitized", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6051,7 +6051,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6062,16 +6062,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6095,7 +6095,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysConfigUiHeaders");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6104,17 +6104,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6140,7 +6140,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysConfigUiHeaders");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6151,17 +6151,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6185,7 +6185,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigUiHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6194,17 +6194,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6230,7 +6230,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigUiHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6241,17 +6241,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6270,7 +6270,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysGenerateRoot()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6279,16 +6279,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/generate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6309,7 +6309,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6320,16 +6320,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6348,7 +6348,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysGenerateRootAttempt()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6357,16 +6357,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6387,7 +6387,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6398,16 +6398,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6426,7 +6426,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysHaStatus()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6435,16 +6435,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/ha-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/ha-status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6465,7 +6465,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6476,16 +6476,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6504,7 +6504,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysHealth()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6513,16 +6513,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/health", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/health", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6543,7 +6543,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6554,16 +6554,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/health", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/health", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6582,7 +6582,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysHostInfo()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6591,16 +6591,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/host-info", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/host-info", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6621,7 +6621,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6632,16 +6632,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6660,7 +6660,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInFlightReq()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6669,16 +6669,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/in-flight-req", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/in-flight-req", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6699,7 +6699,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6710,16 +6710,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6738,7 +6738,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInit()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6747,16 +6747,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/init", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6777,7 +6777,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6788,16 +6788,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/init", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6816,7 +6816,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersActivity()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6825,16 +6825,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6855,7 +6855,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6866,16 +6866,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6894,7 +6894,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersActivityExport()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6903,16 +6903,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/export", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/export", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6933,7 +6933,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6944,16 +6944,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6972,7 +6972,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersActivityMonthly()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6981,16 +6981,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7011,7 +7011,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7022,16 +7022,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7050,7 +7050,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersConfig()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7059,16 +7059,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7089,7 +7089,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7100,16 +7100,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7128,7 +7128,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersEntities()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7137,16 +7137,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/entities", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/entities", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7167,7 +7167,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7178,16 +7178,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7206,7 +7206,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersRequests()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7215,16 +7215,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/requests", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/requests", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7245,7 +7245,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7256,16 +7256,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7284,7 +7284,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalCountersTokens()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7293,16 +7293,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/tokens", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/tokens", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7323,7 +7323,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7334,16 +7334,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7362,7 +7362,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalSpecsOpenapi()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7371,16 +7371,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/specs/openapi", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/specs/openapi", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7401,7 +7401,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7412,16 +7412,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7440,7 +7440,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalUiFeatureFlags()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7449,16 +7449,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/feature-flags", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7479,7 +7479,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7490,16 +7490,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7518,7 +7518,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalUiMounts()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7527,16 +7527,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7557,7 +7557,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7568,16 +7568,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7601,7 +7601,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysInternalUiMountsPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7610,17 +7610,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7646,7 +7646,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysInternalUiMountsPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7657,17 +7657,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7686,7 +7686,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalUiNamespaces()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7695,16 +7695,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/namespaces", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/namespaces", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7725,7 +7725,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7736,16 +7736,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7764,7 +7764,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysInternalUiResultantAcl()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7773,16 +7773,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7803,7 +7803,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7814,16 +7814,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7842,7 +7842,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysKeyStatus()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7851,16 +7851,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/key-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/key-status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7881,7 +7881,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7892,16 +7892,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7920,7 +7920,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysLeader()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7929,16 +7929,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leader", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leader", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -7959,7 +7959,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7970,16 +7970,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7998,7 +7998,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysLeases()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8007,16 +8007,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8037,7 +8037,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8048,16 +8048,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8076,7 +8076,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysLeasesCount()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8085,16 +8085,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/count", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/count", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8115,7 +8115,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8126,16 +8126,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8159,7 +8159,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookup");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8168,17 +8168,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8204,7 +8204,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookup");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8215,17 +8215,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8254,7 +8254,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookupPrefix");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8263,18 +8263,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8305,7 +8305,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookupPrefix");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8316,18 +8316,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8347,7 +8347,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysMetrics(string format = default(string))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8356,20 +8356,20 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (format != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "format", format));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/metrics", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/metrics", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8391,7 +8391,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8402,20 +8402,20 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (format != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "format", format));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8436,7 +8436,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8445,24 +8445,24 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (logFormat != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
             }
             if (logLevel != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
             }
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/monitor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/monitor", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8485,7 +8485,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8496,24 +8496,24 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (logFormat != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
             }
             if (logLevel != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
             }
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8532,7 +8532,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysMounts()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8541,16 +8541,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8571,7 +8571,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8582,16 +8582,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8615,7 +8615,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8624,17 +8624,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8660,7 +8660,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8671,17 +8671,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8705,7 +8705,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPathTune");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8714,17 +8714,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}/tune", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8750,7 +8750,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPathTune");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8761,17 +8761,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8790,7 +8790,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPluginsCatalog()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8799,16 +8799,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8829,7 +8829,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8840,16 +8840,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8873,7 +8873,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8882,17 +8882,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -8918,7 +8918,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8929,17 +8929,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8968,7 +8968,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPluginsCatalogType");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8977,18 +8977,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9019,7 +9019,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPluginsCatalogType");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9030,18 +9030,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9070,7 +9070,7 @@ namespace VaultClient.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogTypeName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9079,18 +9079,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9121,7 +9121,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogTypeName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9132,18 +9132,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9167,7 +9167,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesAcl");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9176,17 +9176,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9212,7 +9212,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesAcl");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9223,17 +9223,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9257,7 +9257,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesAclName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9266,17 +9266,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9302,7 +9302,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesAclName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9313,17 +9313,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9347,7 +9347,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesPassword");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9356,17 +9356,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9392,7 +9392,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesPassword");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9403,17 +9403,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9437,7 +9437,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9446,17 +9446,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9482,7 +9482,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9493,17 +9493,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9527,7 +9527,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordNameGenerate");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9536,17 +9536,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}/generate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9572,7 +9572,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordNameGenerate");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9583,17 +9583,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9613,7 +9613,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPolicy(string list = default(string))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9622,20 +9622,20 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policy", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9657,7 +9657,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9668,20 +9668,20 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9705,7 +9705,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPolicyName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9714,17 +9714,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policy/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9750,7 +9750,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPolicyName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9761,17 +9761,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9790,7 +9790,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprof()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9799,16 +9799,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9829,7 +9829,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9840,16 +9840,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9868,7 +9868,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofAllocs()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9877,16 +9877,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/allocs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/allocs", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9907,7 +9907,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9918,16 +9918,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/allocs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/allocs", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9946,7 +9946,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofBlock()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9955,16 +9955,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/block", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/block", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -9985,7 +9985,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9996,16 +9996,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/block", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/block", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10024,7 +10024,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofCmdline()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10033,16 +10033,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/cmdline", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/cmdline", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10063,7 +10063,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10074,16 +10074,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/cmdline", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/cmdline", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10102,7 +10102,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofGoroutine()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10111,16 +10111,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/goroutine", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/goroutine", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10141,7 +10141,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10152,16 +10152,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/goroutine", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/goroutine", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10180,7 +10180,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofHeap()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10189,16 +10189,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/heap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/heap", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10219,7 +10219,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10230,16 +10230,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/heap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/heap", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10258,7 +10258,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofMutex()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10267,16 +10267,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/mutex", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/mutex", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10297,7 +10297,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10308,16 +10308,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/mutex", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/mutex", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10336,7 +10336,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofProfile()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10345,16 +10345,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/profile", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/profile", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10375,7 +10375,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10386,16 +10386,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/profile", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/profile", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10414,7 +10414,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofSymbol()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10423,16 +10423,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/symbol", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/symbol", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10453,7 +10453,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10464,16 +10464,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/symbol", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/symbol", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10492,7 +10492,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofThreadcreate()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10501,16 +10501,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/threadcreate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/threadcreate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10531,7 +10531,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10542,16 +10542,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/threadcreate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/threadcreate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10570,7 +10570,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysPprofTrace()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10579,16 +10579,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/trace", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/trace", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10609,7 +10609,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10620,16 +10620,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/trace", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/trace", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10648,7 +10648,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysQuotasConfig()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10657,16 +10657,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10687,7 +10687,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10698,16 +10698,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10731,7 +10731,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysQuotasRateLimit");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10740,17 +10740,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10776,7 +10776,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysQuotasRateLimit");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10787,17 +10787,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10821,7 +10821,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysQuotasRateLimitName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10830,17 +10830,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10866,7 +10866,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysQuotasRateLimitName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10877,17 +10877,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10907,7 +10907,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRaw(string list = default(string))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10916,20 +10916,20 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/raw", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -10951,7 +10951,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10962,20 +10962,20 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11000,7 +11000,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysRawPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11009,21 +11009,21 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/raw/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11050,7 +11050,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysRawPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11061,21 +11061,21 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
             {
-                localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11094,7 +11094,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRekeyBackup()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11103,16 +11103,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/backup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11133,7 +11133,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11144,16 +11144,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/backup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11172,7 +11172,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRekeyInit()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11181,16 +11181,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/init", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11211,7 +11211,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11222,16 +11222,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/init", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11250,7 +11250,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRekeyRecoveryKeyBackup()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11259,16 +11259,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/recovery-key-backup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11289,7 +11289,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11300,16 +11300,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/recovery-key-backup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11328,7 +11328,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRekeyVerify()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11337,16 +11337,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/verify", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11367,7 +11367,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11378,16 +11378,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/verify", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11411,7 +11411,7 @@ namespace VaultClient.Api
             if (migrationId == null)
                 throw new ApiException(400, "Missing required parameter 'migrationId' when calling SystemApi->GetSysRemountStatusMigrationId");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11420,17 +11420,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("migration_id", VaultClient.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
+            requestOptions.PathParameters.Add("migration_id", VaultClient.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/remount/status/{migration_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11456,7 +11456,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'migrationId' when calling SystemApi->GetSysRemountStatusMigrationId");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11467,17 +11467,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("migration_id", VaultClient.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
+            requestOptions.PathParameters.Add("migration_id", VaultClient.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11496,7 +11496,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysReplicationStatus()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11505,16 +11505,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/replication/status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/replication/status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11535,7 +11535,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11546,16 +11546,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/replication/status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/replication/status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11574,7 +11574,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysRotateConfig()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11583,16 +11583,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rotate/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11613,7 +11613,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11624,16 +11624,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rotate/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11652,7 +11652,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysSealStatus()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11661,16 +11661,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/seal-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/seal-status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11691,7 +11691,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11702,16 +11702,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/seal-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/seal-status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11735,7 +11735,7 @@ namespace VaultClient.Api
             if (list == null)
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysVersionHistory");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11744,17 +11744,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/version-history/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/version-history/", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11780,7 +11780,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysVersionHistory");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11791,17 +11791,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11820,7 +11820,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSysWrappingLookup()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11829,16 +11829,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/wrapping/lookup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11859,7 +11859,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11870,16 +11870,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/wrapping/lookup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11904,7 +11904,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditHashPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11914,18 +11914,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuditHashRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuditHashRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/audit-hash/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/audit-hash/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -11952,7 +11952,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditHashPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11964,18 +11964,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuditHashRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuditHashRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12000,7 +12000,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12010,18 +12010,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuditRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuditRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/audit/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12048,7 +12048,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12060,18 +12060,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuditRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuditRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12096,7 +12096,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12106,18 +12106,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuthRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuthRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12144,7 +12144,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12156,18 +12156,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuthRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuthRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12192,7 +12192,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPathTune");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12202,18 +12202,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuthTuneRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuthTuneRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}/tune", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12240,7 +12240,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPathTune");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12252,18 +12252,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemAuthTuneRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemAuthTuneRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12283,7 +12283,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12293,17 +12293,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemCapabilitiesRequest;
+            requestOptions.Data = systemCapabilitiesRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12325,7 +12325,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12337,17 +12337,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemCapabilitiesRequest;
+            requestOptions.Data = systemCapabilitiesRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12367,7 +12367,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12377,17 +12377,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemCapabilitiesAccessorRequest;
+            requestOptions.Data = systemCapabilitiesAccessorRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-accessor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-accessor", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12409,7 +12409,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12421,17 +12421,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemCapabilitiesAccessorRequest;
+            requestOptions.Data = systemCapabilitiesAccessorRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12451,7 +12451,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12461,17 +12461,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemCapabilitiesSelfRequest;
+            requestOptions.Data = systemCapabilitiesSelfRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-self", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12493,7 +12493,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12505,17 +12505,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemCapabilitiesSelfRequest;
+            requestOptions.Data = systemCapabilitiesSelfRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12540,7 +12540,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigAuditingRequestHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12550,18 +12550,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
-            localVarRequestOptions.Data = systemConfigAuditingRequestHeadersRequest;
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.Data = systemConfigAuditingRequestHeadersRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12588,7 +12588,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigAuditingRequestHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12600,18 +12600,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
-            localVarRequestOptions.Data = systemConfigAuditingRequestHeadersRequest;
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.Data = systemConfigAuditingRequestHeadersRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12631,7 +12631,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12641,17 +12641,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemConfigCorsRequest;
+            requestOptions.Data = systemConfigCorsRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/cors", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12673,7 +12673,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12685,17 +12685,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemConfigCorsRequest;
+            requestOptions.Data = systemConfigCorsRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12719,7 +12719,7 @@ namespace VaultClient.Api
             if (subsystem == null)
                 throw new ApiException(400, "Missing required parameter 'subsystem' when calling SystemApi->PostSysConfigReloadSubsystem");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12728,17 +12728,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("subsystem", VaultClient.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
+            requestOptions.PathParameters.Add("subsystem", VaultClient.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/reload/{subsystem}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12764,7 +12764,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'subsystem' when calling SystemApi->PostSysConfigReloadSubsystem");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12775,17 +12775,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("subsystem", VaultClient.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
+            requestOptions.PathParameters.Add("subsystem", VaultClient.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12810,7 +12810,7 @@ namespace VaultClient.Api
             if (header == null)
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigUiHeadersHeader");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12820,18 +12820,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
-            localVarRequestOptions.Data = systemConfigUiHeadersRequest;
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.Data = systemConfigUiHeadersRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12858,7 +12858,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigUiHeadersHeader");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12870,18 +12870,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
-            localVarRequestOptions.Data = systemConfigUiHeadersRequest;
+            requestOptions.PathParameters.Add("header", VaultClient.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.Data = systemConfigUiHeadersRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12901,7 +12901,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12911,17 +12911,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemGenerateRootRequest;
+            requestOptions.Data = systemGenerateRootRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -12943,7 +12943,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12955,17 +12955,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemGenerateRootRequest;
+            requestOptions.Data = systemGenerateRootRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12985,7 +12985,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12995,17 +12995,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemGenerateRootAttemptRequest;
+            requestOptions.Data = systemGenerateRootAttemptRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13027,7 +13027,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13039,17 +13039,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemGenerateRootAttemptRequest;
+            requestOptions.Data = systemGenerateRootAttemptRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13069,7 +13069,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13079,17 +13079,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemGenerateRootUpdateRequest;
+            requestOptions.Data = systemGenerateRootUpdateRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/update", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/update", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13111,7 +13111,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13123,17 +13123,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemGenerateRootUpdateRequest;
+            requestOptions.Data = systemGenerateRootUpdateRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13153,7 +13153,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13163,17 +13163,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemInitRequest;
+            requestOptions.Data = systemInitRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/init", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13195,7 +13195,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13207,17 +13207,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemInitRequest;
+            requestOptions.Data = systemInitRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/init", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13237,7 +13237,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13247,17 +13247,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemInternalCountersConfigRequest;
+            requestOptions.Data = systemInternalCountersConfigRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/internal/counters/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13279,7 +13279,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13291,17 +13291,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemInternalCountersConfigRequest;
+            requestOptions.Data = systemInternalCountersConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13321,7 +13321,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13331,17 +13331,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemLeasesLookupRequest;
+            requestOptions.Data = systemLeasesLookupRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/lookup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13363,7 +13363,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13375,17 +13375,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemLeasesLookupRequest;
+            requestOptions.Data = systemLeasesLookupRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13405,7 +13405,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13415,17 +13415,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemLeasesRenewRequest;
+            requestOptions.Data = systemLeasesRenewRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13447,7 +13447,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13459,17 +13459,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemLeasesRenewRequest;
+            requestOptions.Data = systemLeasesRenewRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13494,7 +13494,7 @@ namespace VaultClient.Api
             if (urlLeaseId == null)
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRenewUrlLeaseId");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13504,18 +13504,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRenewLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemLeasesRenewLeaseRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew/{url_lease_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13542,7 +13542,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRenewUrlLeaseId");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13554,18 +13554,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRenewLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemLeasesRenewLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13585,7 +13585,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13595,17 +13595,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemLeasesRevokeRequest;
+            requestOptions.Data = systemLeasesRevokeRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13627,7 +13627,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13639,17 +13639,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemLeasesRevokeRequest;
+            requestOptions.Data = systemLeasesRevokeRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13673,7 +13673,7 @@ namespace VaultClient.Api
             if (prefix == null)
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokeForcePrefix");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13682,17 +13682,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-force/{prefix}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13718,7 +13718,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokeForcePrefix");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13729,17 +13729,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13764,7 +13764,7 @@ namespace VaultClient.Api
             if (prefix == null)
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokePrefixPrefix");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13774,18 +13774,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRevokePrefixRequest;
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.Data = systemLeasesRevokePrefixRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-prefix/{prefix}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13812,7 +13812,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokePrefixPrefix");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13824,18 +13824,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRevokePrefixRequest;
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.Data = systemLeasesRevokePrefixRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13860,7 +13860,7 @@ namespace VaultClient.Api
             if (urlLeaseId == null)
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRevokeUrlLeaseId");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13870,18 +13870,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRevokeLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemLeasesRevokeLeaseRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke/{url_lease_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13908,7 +13908,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRevokeUrlLeaseId");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13920,18 +13920,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemLeasesRevokeLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemLeasesRevokeLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13950,7 +13950,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysLeasesTidy()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13959,16 +13959,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/tidy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/tidy", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -13989,7 +13989,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14000,16 +14000,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/tidy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/tidy", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14029,7 +14029,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14039,17 +14039,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemMfaValidateRequest;
+            requestOptions.Data = systemMfaValidateRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mfa/validate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mfa/validate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14071,7 +14071,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14083,17 +14083,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemMfaValidateRequest;
+            requestOptions.Data = systemMfaValidateRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14118,7 +14118,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14128,18 +14128,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemMountsRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemMountsRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14166,7 +14166,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14178,18 +14178,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemMountsRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemMountsRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14214,7 +14214,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPathTune");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14224,18 +14224,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemMountsTuneRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemMountsTuneRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}/tune", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14262,7 +14262,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPathTune");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14274,18 +14274,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemMountsTuneRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemMountsTuneRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14310,7 +14310,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14320,18 +14320,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPluginsCatalogRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPluginsCatalogRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14358,7 +14358,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14370,18 +14370,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPluginsCatalogRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPluginsCatalogRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14411,7 +14411,7 @@ namespace VaultClient.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->PostSysPluginsCatalogTypeName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14421,19 +14421,19 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
-            localVarRequestOptions.Data = systemPluginsCatalogRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.Data = systemPluginsCatalogRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14465,7 +14465,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'type' when calling SystemApi->PostSysPluginsCatalogTypeName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14477,19 +14477,19 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
-            localVarRequestOptions.Data = systemPluginsCatalogRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.Data = systemPluginsCatalogRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14509,7 +14509,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14519,17 +14519,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemPluginsReloadBackendRequest;
+            requestOptions.Data = systemPluginsReloadBackendRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/reload/backend", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/reload/backend", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14551,7 +14551,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14563,17 +14563,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemPluginsReloadBackendRequest;
+            requestOptions.Data = systemPluginsReloadBackendRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14598,7 +14598,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesAclName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14608,18 +14608,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPoliciesAclRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPoliciesAclRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14646,7 +14646,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesAclName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14658,18 +14658,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPoliciesAclRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPoliciesAclRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14694,7 +14694,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesPasswordName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14704,18 +14704,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPoliciesPasswordRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPoliciesPasswordRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14742,7 +14742,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesPasswordName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14754,18 +14754,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPoliciesPasswordRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPoliciesPasswordRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14790,7 +14790,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPolicyName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14800,18 +14800,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPolicyRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPolicyRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policy/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14838,7 +14838,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPolicyName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14850,18 +14850,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemPolicyRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemPolicyRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14881,7 +14881,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14891,17 +14891,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemQuotasConfigRequest;
+            requestOptions.Data = systemQuotasConfigRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/quotas/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -14923,7 +14923,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14935,17 +14935,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemQuotasConfigRequest;
+            requestOptions.Data = systemQuotasConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14970,7 +14970,7 @@ namespace VaultClient.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysQuotasRateLimitName");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14980,18 +14980,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemQuotasRateLimitRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemQuotasRateLimitRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15018,7 +15018,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysQuotasRateLimitName");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15030,18 +15030,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = systemQuotasRateLimitRequest;
+            requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = systemQuotasRateLimitRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15061,7 +15061,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15071,17 +15071,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRawRequest;
+            requestOptions.Data = systemRawRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/raw", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15103,7 +15103,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15115,17 +15115,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRawRequest;
+            requestOptions.Data = systemRawRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15150,7 +15150,7 @@ namespace VaultClient.Api
             if (path == null)
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysRawPath");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15160,18 +15160,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemRawRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemRawRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/raw/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15198,7 +15198,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysRawPath");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15210,18 +15210,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
-            localVarRequestOptions.Data = systemRawRequest;
+            requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.Data = systemRawRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15241,7 +15241,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15251,17 +15251,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRekeyInitRequest;
+            requestOptions.Data = systemRekeyInitRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/init", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15283,7 +15283,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15295,17 +15295,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRekeyInitRequest;
+            requestOptions.Data = systemRekeyInitRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15325,7 +15325,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15335,17 +15335,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRekeyUpdateRequest;
+            requestOptions.Data = systemRekeyUpdateRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/update", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/update", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15367,7 +15367,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15379,17 +15379,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRekeyUpdateRequest;
+            requestOptions.Data = systemRekeyUpdateRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15409,7 +15409,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15419,17 +15419,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRekeyVerifyRequest;
+            requestOptions.Data = systemRekeyVerifyRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/verify", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15451,7 +15451,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15463,17 +15463,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRekeyVerifyRequest;
+            requestOptions.Data = systemRekeyVerifyRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15493,7 +15493,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15503,17 +15503,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRemountRequest;
+            requestOptions.Data = systemRemountRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/remount", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/remount", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15535,7 +15535,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15547,17 +15547,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRemountRequest;
+            requestOptions.Data = systemRemountRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15577,7 +15577,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15587,17 +15587,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRenewRequest;
+            requestOptions.Data = systemRenewRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/renew", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/renew", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15619,7 +15619,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15631,17 +15631,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRenewRequest;
+            requestOptions.Data = systemRenewRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15666,7 +15666,7 @@ namespace VaultClient.Api
             if (urlLeaseId == null)
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRenewUrlLeaseId");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15676,18 +15676,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemRenewLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemRenewLeaseRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/renew/{url_lease_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15714,7 +15714,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRenewUrlLeaseId");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15726,18 +15726,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemRenewLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemRenewLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15757,7 +15757,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15767,17 +15767,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRevokeRequest;
+            requestOptions.Data = systemRevokeRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15799,7 +15799,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15811,17 +15811,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRevokeRequest;
+            requestOptions.Data = systemRevokeRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15845,7 +15845,7 @@ namespace VaultClient.Api
             if (prefix == null)
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokeForcePrefix");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15854,17 +15854,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke-force/{prefix}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15890,7 +15890,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokeForcePrefix");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15901,17 +15901,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15936,7 +15936,7 @@ namespace VaultClient.Api
             if (prefix == null)
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokePrefixPrefix");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15946,18 +15946,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.Data = systemRevokePrefixRequest;
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.Data = systemRevokePrefixRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -15984,7 +15984,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokePrefixPrefix");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15996,18 +15996,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            localVarRequestOptions.Data = systemRevokePrefixRequest;
+            requestOptions.PathParameters.Add("prefix", VaultClient.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.Data = systemRevokePrefixRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16032,7 +16032,7 @@ namespace VaultClient.Api
             if (urlLeaseId == null)
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRevokeUrlLeaseId");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16042,18 +16042,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemRevokeLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemRevokeLeaseRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16080,7 +16080,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRevokeUrlLeaseId");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16092,18 +16092,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            localVarRequestOptions.Data = systemRevokeLeaseRequest;
+            requestOptions.PathParameters.Add("url_lease_id", VaultClient.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.Data = systemRevokeLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16122,7 +16122,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRotate()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16131,16 +16131,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rotate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rotate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16161,7 +16161,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16172,16 +16172,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16201,7 +16201,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16211,17 +16211,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemRotateConfigRequest;
+            requestOptions.Data = systemRotateConfigRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rotate/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16243,7 +16243,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16255,17 +16255,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemRotateConfigRequest;
+            requestOptions.Data = systemRotateConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16284,7 +16284,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysSeal()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16293,16 +16293,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/seal", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/seal", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16323,7 +16323,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16334,16 +16334,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/seal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/seal", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16362,7 +16362,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysStepDown()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16371,16 +16371,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/step-down", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/step-down", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16401,7 +16401,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16412,16 +16412,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/step-down", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/step-down", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16441,7 +16441,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16451,17 +16451,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemToolsHashRequest;
+            requestOptions.Data = systemToolsHashRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16483,7 +16483,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16495,17 +16495,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemToolsHashRequest;
+            requestOptions.Data = systemToolsHashRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16530,7 +16530,7 @@ namespace VaultClient.Api
             if (urlalgorithm == null)
                 throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling SystemApi->PostSysToolsHashUrlalgorithm");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16540,18 +16540,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
-            localVarRequestOptions.Data = systemToolsHashRequest;
+            requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+            requestOptions.Data = systemToolsHashRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash/{urlalgorithm}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16578,7 +16578,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling SystemApi->PostSysToolsHashUrlalgorithm");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16590,18 +16590,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
-            localVarRequestOptions.Data = systemToolsHashRequest;
+            requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+            requestOptions.Data = systemToolsHashRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16621,7 +16621,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16631,17 +16631,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16663,7 +16663,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16675,17 +16675,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16710,7 +16710,7 @@ namespace VaultClient.Api
             if (source == null)
                 throw new ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSource");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16720,18 +16720,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16758,7 +16758,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSource");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16770,18 +16770,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16811,7 +16811,7 @@ namespace VaultClient.Api
             if (urlbytes == null)
                 throw new ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16821,19 +16821,19 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
-            localVarRequestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}/{urlbytes}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16865,7 +16865,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16877,19 +16877,19 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
-            localVarRequestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16914,7 +16914,7 @@ namespace VaultClient.Api
             if (urlbytes == null)
                 throw new ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomUrlbytes");
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16924,18 +16924,18 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{urlbytes}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -16962,7 +16962,7 @@ namespace VaultClient.Api
                 throw new ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomUrlbytes");
 
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16974,18 +16974,18 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
-            localVarRequestOptions.Data = systemToolsRandomRequest;
+            requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.Data = systemToolsRandomRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17005,7 +17005,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17015,17 +17015,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemUnsealRequest;
+            requestOptions.Data = systemUnsealRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/unseal", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/unseal", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -17047,7 +17047,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17059,17 +17059,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemUnsealRequest;
+            requestOptions.Data = systemUnsealRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17089,7 +17089,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17099,17 +17099,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemWrappingLookupRequest;
+            requestOptions.Data = systemWrappingLookupRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/lookup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -17131,7 +17131,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17143,17 +17143,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemWrappingLookupRequest;
+            requestOptions.Data = systemWrappingLookupRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17173,7 +17173,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17183,17 +17183,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemWrappingRewrapRequest;
+            requestOptions.Data = systemWrappingRewrapRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/rewrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/rewrap", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -17215,7 +17215,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17227,17 +17227,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemWrappingRewrapRequest;
+            requestOptions.Data = systemWrappingRewrapRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17257,7 +17257,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17267,17 +17267,17 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = systemWrappingUnwrapRequest;
+            requestOptions.Data = systemWrappingUnwrapRequest;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/unwrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/unwrap", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -17299,7 +17299,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17311,17 +17311,17 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = systemWrappingUnwrapRequest;
+            requestOptions.Data = systemWrappingUnwrapRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17340,7 +17340,7 @@ namespace VaultClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSysWrappingWrap()
         {
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17349,16 +17349,16 @@ namespace VaultClient.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/wrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/wrap", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -17379,7 +17379,7 @@ namespace VaultClient.Api
         public async Task<ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
+            VaultClient.Client.RequestOptions requestOptions = new VaultClient.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17390,16 +17390,16 @@ namespace VaultClient.Api
 
 
             var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/wrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/wrap", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
