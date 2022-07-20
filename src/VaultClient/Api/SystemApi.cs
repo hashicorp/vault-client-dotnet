@@ -3640,7 +3640,7 @@ namespace VaultClient.Api
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public SystemApi(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
+        public SystemApi(VaultClient.Client.ISynchronousClient client, IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -3668,12 +3668,12 @@ namespace VaultClient.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public VaultClient.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public VaultClient.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.

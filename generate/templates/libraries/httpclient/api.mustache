@@ -218,7 +218,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>{{/supportsAsync}}
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public {{classname}}({{packageName}}.Client.ISynchronousClient client, {{#supportsAsync}}{{packageName}}.Client.IAsynchronousClient asyncClient, {{/supportsAsync}}{{packageName}}.Client.IReadableConfiguration configuration)
+        public {{classname}}({{packageName}}.Client.ISynchronousClient client, {{#supportsAsync}}IAsynchronousClient asyncClient, {{/supportsAsync}}{{packageName}}.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             {{#supportsAsync}}
@@ -251,13 +251,13 @@ namespace {{packageName}}.{{apiPackage}}
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public {{packageName}}.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
         {{/supportsAsync}}
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public {{packageName}}.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
