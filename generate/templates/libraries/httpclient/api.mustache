@@ -479,15 +479,15 @@ namespace {{packageName}}.{{apiPackage}}
             {{/authMethods}}
 
             // make the HTTP request
-            var localVarResponse = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions, this.Configuration);
+            var response = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("{{operationId}}", localVarResponse);
+                Exception _exception = this.ExceptionFactory("{{operationId}}", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
         {{#supportsAsync}}
@@ -533,11 +533,11 @@ namespace {{packageName}}.{{apiPackage}}
             };
 
 
-            var localVarContentType = {{packageName}}.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = {{packageName}}.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = {{packageName}}.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = {{packageName}}.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             {{#pathParams}}
             {{#required}}
@@ -664,15 +664,15 @@ namespace {{packageName}}.{{apiPackage}}
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("{{operationId}}", localVarResponse);
+                Exception _exception = this.ExceptionFactory("{{operationId}}", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
         {{/supportsAsync}}

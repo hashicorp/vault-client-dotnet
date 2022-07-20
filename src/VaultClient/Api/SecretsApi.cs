@@ -7034,15 +7034,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ad/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ad/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7065,25 +7065,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7118,15 +7118,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ad/library/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ad/library/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7154,26 +7154,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7208,15 +7208,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7244,26 +7244,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7292,15 +7292,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/alicloud/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/alicloud/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7323,25 +7323,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7376,15 +7376,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7412,26 +7412,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7466,15 +7466,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7502,26 +7502,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7550,15 +7550,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/azure/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/azure/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7581,25 +7581,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7634,15 +7634,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7670,26 +7670,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7724,15 +7724,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7760,26 +7760,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7814,15 +7814,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7850,26 +7850,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7904,15 +7904,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7940,26 +7940,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -7994,15 +7994,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8030,26 +8030,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8078,15 +8078,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcpkms/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcpkms/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8109,25 +8109,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8162,15 +8162,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8198,26 +8198,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8252,15 +8252,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8288,26 +8288,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8342,15 +8342,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8378,26 +8378,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8426,15 +8426,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/kubernetes/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/kubernetes/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8457,25 +8457,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8510,15 +8510,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8546,26 +8546,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8600,15 +8600,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/kv/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/kv/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8636,26 +8636,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8690,15 +8690,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8726,26 +8726,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8774,15 +8774,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/nomad/config/access", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/nomad/config/access", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8805,25 +8805,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8852,15 +8852,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/nomad/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/nomad/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8883,25 +8883,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8936,15 +8936,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -8972,26 +8972,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9020,15 +9020,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/openldap/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/openldap/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9051,25 +9051,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9104,15 +9104,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9140,26 +9140,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9194,15 +9194,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9230,26 +9230,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9284,15 +9284,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9320,26 +9320,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9368,15 +9368,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/pki//json", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/pki//json", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9399,25 +9399,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9452,15 +9452,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9488,26 +9488,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key_ref", VaultClient.Client.ClientUtils.ParameterToString(keyRef)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9542,15 +9542,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9578,26 +9578,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9626,15 +9626,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/pki/root", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/pki/root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9657,25 +9657,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/pki/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePkiRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9710,15 +9710,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9746,26 +9746,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9800,15 +9800,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/secret/data/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/secret/data/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9836,26 +9836,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9890,15 +9890,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9926,26 +9926,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -9974,15 +9974,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ssh/config/ca", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ssh/config/ca", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10005,25 +10005,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10052,15 +10052,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10083,25 +10083,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10136,15 +10136,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10172,26 +10172,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key_name", VaultClient.Client.ClientUtils.ParameterToString(keyName)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10226,15 +10226,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10262,26 +10262,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10310,15 +10310,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/terraform/config", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/terraform/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10341,25 +10341,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10394,15 +10394,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10430,26 +10430,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10484,15 +10484,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10520,26 +10520,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10574,15 +10574,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Delete<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10610,26 +10610,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10658,15 +10658,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10689,25 +10689,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10742,15 +10742,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10778,26 +10778,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10832,15 +10832,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/library", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/library", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibrary", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibrary", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10868,26 +10868,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/library", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibrary", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibrary", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10922,15 +10922,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/library/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/library/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -10958,26 +10958,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11012,15 +11012,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/library/{name}/status", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/library/{name}/status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibraryNameStatus", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibraryNameStatus", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11048,26 +11048,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}/status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}/status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdLibraryNameStatus", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdLibraryNameStatus", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11102,15 +11102,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11138,26 +11138,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11192,15 +11192,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11228,26 +11228,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11276,15 +11276,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ad/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ad/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11307,25 +11307,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ad/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAdRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAdRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11354,15 +11354,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/alicloud/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/alicloud/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11385,25 +11385,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11438,15 +11438,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/alicloud/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/alicloud/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11474,26 +11474,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/alicloud/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11528,15 +11528,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/alicloud/role", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/alicloud/role", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11564,26 +11564,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11618,15 +11618,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11654,26 +11654,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11702,15 +11702,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11733,25 +11733,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11780,15 +11780,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/config/root", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/config/root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsConfigRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsConfigRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11811,25 +11811,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/config/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsConfigRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsConfigRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11858,15 +11858,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/creds", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/creds", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsCreds", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsCreds", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11889,25 +11889,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/creds", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/creds", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsCreds", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsCreds", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11942,15 +11942,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -11978,26 +11978,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12032,15 +12032,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12068,26 +12068,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12122,15 +12122,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/aws/sts/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/aws/sts/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsStsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsStsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12158,26 +12158,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/aws/sts/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/sts/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAwsStsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAwsStsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12206,15 +12206,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/azure/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/azure/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12237,25 +12237,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12290,15 +12290,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/azure/creds/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/azure/creds/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12326,26 +12326,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/azure/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12380,15 +12380,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/azure/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/azure/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12416,26 +12416,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/azure/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12470,15 +12470,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12506,26 +12506,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12554,15 +12554,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/consul/config/access", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/consul/config/access", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12585,25 +12585,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/consul/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12638,15 +12638,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/consul/creds/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/consul/creds/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12674,26 +12674,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/consul/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12728,15 +12728,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/consul/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/consul/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12764,26 +12764,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/consul/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12818,15 +12818,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12854,26 +12854,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12913,15 +12913,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -12950,11 +12950,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
@@ -12965,15 +12965,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13002,15 +13002,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13033,25 +13033,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13086,15 +13086,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpKeyRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpKeyRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13122,26 +13122,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpKeyRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpKeyRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13176,15 +13176,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13212,26 +13212,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13266,15 +13266,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13302,26 +13302,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13356,15 +13356,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13392,26 +13392,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesetRolesetToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13446,15 +13446,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/rolesets", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/rolesets", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesets", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesets", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13482,26 +13482,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/rolesets", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/rolesets", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpRolesets", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpRolesets", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13536,15 +13536,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13572,26 +13572,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13626,15 +13626,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13662,26 +13662,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13716,15 +13716,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13752,26 +13752,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccountNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13806,15 +13806,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/static-accounts", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/static-accounts", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccounts", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccounts", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13842,26 +13842,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-accounts", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-accounts", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpStaticAccounts", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpStaticAccounts", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13896,15 +13896,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpTokenRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpTokenRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13932,26 +13932,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpTokenRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpTokenRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -13980,15 +13980,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcpkms/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcpkms/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14011,25 +14011,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14064,15 +14064,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcpkms/keys", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcpkms/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14100,26 +14100,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14154,15 +14154,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysConfigKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysConfigKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14190,26 +14190,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysConfigKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysConfigKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14244,15 +14244,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14280,26 +14280,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14334,15 +14334,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/gcpkms/pubkey/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/gcpkms/pubkey/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsPubkeyKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsPubkeyKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14370,26 +14370,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/pubkey/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/pubkey/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetGcpkmsPubkeyKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetGcpkmsPubkeyKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14418,15 +14418,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/kubernetes/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/kubernetes/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14449,25 +14449,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14502,15 +14502,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/kubernetes/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/kubernetes/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14538,26 +14538,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14592,15 +14592,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14628,26 +14628,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14687,15 +14687,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/kv/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/kv/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14724,11 +14724,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
@@ -14739,15 +14739,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14776,15 +14776,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/mongodbatlas/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/mongodbatlas/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14807,25 +14807,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14860,15 +14860,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14896,26 +14896,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14950,15 +14950,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/mongodbatlas/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/mongodbatlas/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -14986,26 +14986,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15040,15 +15040,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15076,26 +15076,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15124,15 +15124,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/nomad/config/access", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/nomad/config/access", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15155,25 +15155,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15202,15 +15202,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/nomad/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/nomad/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15233,25 +15233,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15286,15 +15286,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/nomad/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/nomad/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15322,26 +15322,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/nomad/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15376,15 +15376,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/nomad/role", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/nomad/role", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15412,26 +15412,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/nomad/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15466,15 +15466,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15502,26 +15502,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15550,15 +15550,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15581,25 +15581,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15634,15 +15634,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15670,26 +15670,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15724,15 +15724,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/role", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/role", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15760,26 +15760,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15814,15 +15814,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15850,26 +15850,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15904,15 +15904,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/static-cred/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/static-cred/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticCredName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticCredName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15940,26 +15940,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-cred/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-cred/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticCredName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticCredName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -15994,15 +15994,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/static-role", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/static-role", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16030,26 +16030,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16084,15 +16084,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16120,26 +16120,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16168,15 +16168,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/ca", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/ca", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16199,25 +16199,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16246,15 +16246,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/ca_chain", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/ca_chain", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCaChain", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCaChain", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16277,25 +16277,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/ca_chain", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca_chain", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCaChain", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCaChain", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16324,15 +16324,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/ca/pem", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/ca/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCaPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCaPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16355,25 +16355,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/ca/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCaPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCaPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16402,15 +16402,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/cert/ca_chain", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/cert/ca_chain", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertCaChain", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertCaChain", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16433,25 +16433,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/ca_chain", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/ca_chain", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertCaChain", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertCaChain", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16480,15 +16480,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/cert/crl", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/cert/crl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16511,25 +16511,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16564,15 +16564,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/cert/{serial}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerial", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerial", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16600,26 +16600,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("serial", VaultClient.Client.ClientUtils.ParameterToString(serial)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerial", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerial", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16654,15 +16654,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/cert/{serial}/raw", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}/raw", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRaw", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRaw", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16690,26 +16690,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("serial", VaultClient.Client.ClientUtils.ParameterToString(serial)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRaw", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRaw", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16744,15 +16744,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/cert/{serial}/raw/pem", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}/raw/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRawPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRawPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16780,26 +16780,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("serial", VaultClient.Client.ClientUtils.ParameterToString(serial)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRawPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCertSerialRawPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16834,15 +16834,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/certs", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/certs", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCerts", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCerts", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16870,26 +16870,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/certs", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/certs", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCerts", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCerts", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16918,15 +16918,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/config/crl", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/config/crl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16949,25 +16949,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/config/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -16996,15 +16996,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/config/issuers", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/config/issuers", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17027,25 +17027,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/config/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17074,15 +17074,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/config/keys", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/config/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17105,25 +17105,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/config/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17152,15 +17152,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/config/urls", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/config/urls", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigUrls", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigUrls", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17183,25 +17183,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/config/urls", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/urls", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiConfigUrls", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiConfigUrls", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17230,15 +17230,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/crl", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/crl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17261,25 +17261,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17308,15 +17308,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/crl/pem", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/crl/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrlPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrlPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17339,25 +17339,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrlPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrlPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17386,15 +17386,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/crl/rotate", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/crl/rotate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrlRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrlRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17417,25 +17417,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiCrlRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiCrlRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17464,15 +17464,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki//der", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki//der", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiDer", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiDer", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17495,25 +17495,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki//der", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki//der", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiDer", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiDer", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17548,15 +17548,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefCrlPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefCrlPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17584,26 +17584,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefCrlPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefCrlPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17638,15 +17638,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17674,26 +17674,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17728,15 +17728,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/issuers", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/issuers", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17764,26 +17764,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17812,15 +17812,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki//json", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki//json", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17843,25 +17843,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17896,15 +17896,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17932,26 +17932,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key_ref", VaultClient.Client.ClientUtils.ParameterToString(keyRef)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -17986,15 +17986,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/keys", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18022,26 +18022,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18076,15 +18076,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18112,26 +18112,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18166,15 +18166,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18202,26 +18202,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18250,15 +18250,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/pki/tidy-status", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/pki/tidy-status", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiTidyStatus", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiTidyStatus", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18281,25 +18281,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/pki/tidy-status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/tidy-status", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPkiTidyStatus", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPkiTidyStatus", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18328,15 +18328,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18359,25 +18359,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18412,15 +18412,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/rabbitmq/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/rabbitmq/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18448,26 +18448,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18502,15 +18502,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/rabbitmq/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/rabbitmq/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18538,26 +18538,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18592,15 +18592,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18628,26 +18628,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18676,15 +18676,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/secret/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/secret/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18707,25 +18707,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/secret/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18760,15 +18760,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/secret/data/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/secret/data/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18796,26 +18796,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18855,15 +18855,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18892,11 +18892,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
@@ -18907,15 +18907,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18950,15 +18950,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/secret/subkeys/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/secret/subkeys/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretSubkeysPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretSubkeysPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -18986,26 +18986,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/secret/subkeys/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/subkeys/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSecretSubkeysPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSecretSubkeysPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19034,15 +19034,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ssh/config/ca", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ssh/config/ca", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19065,25 +19065,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19112,15 +19112,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19143,25 +19143,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19190,15 +19190,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ssh/public_key", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ssh/public_key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshPublicKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshPublicKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19221,25 +19221,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ssh/public_key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/public_key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshPublicKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshPublicKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19274,15 +19274,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ssh/roles", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ssh/roles", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19310,26 +19310,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshRoles", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshRoles", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19364,15 +19364,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19400,26 +19400,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19448,15 +19448,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/terraform/config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/terraform/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19479,25 +19479,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19532,15 +19532,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/terraform/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/terraform/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19568,26 +19568,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/terraform/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19622,15 +19622,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/terraform/role", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/terraform/role", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19658,26 +19658,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/terraform/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19712,15 +19712,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19748,26 +19748,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19802,15 +19802,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/totp/code/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/totp/code/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpCodeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpCodeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19838,26 +19838,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/totp/code/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/code/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpCodeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpCodeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19892,15 +19892,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/totp/keys", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/totp/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19928,26 +19928,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/totp/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -19982,15 +19982,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20018,26 +20018,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20072,15 +20072,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/backup/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/backup/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitBackupName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitBackupName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20108,26 +20108,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/backup/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/backup/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitBackupName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitBackupName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20156,15 +20156,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/cache-config", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/cache-config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitCacheConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitCacheConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20187,25 +20187,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/cache-config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/cache-config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitCacheConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitCacheConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20246,15 +20246,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/export/{type}/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/export/{type}/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitExportTypeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitExportTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20287,11 +20287,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
@@ -20299,15 +20299,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitExportTypeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitExportTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20354,15 +20354,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/export/{type}/{name}/{version}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/export/{type}/{name}/{version}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitExportTypeNameVersion", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitExportTypeNameVersion", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20400,11 +20400,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("type", VaultClient.Client.ClientUtils.ParameterToString(type)); // path parameter
@@ -20413,15 +20413,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}/{version}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}/{version}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitExportTypeNameVersion", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitExportTypeNameVersion", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20456,15 +20456,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/keys", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20492,26 +20492,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.QueryParameters.Add(VaultClient.Client.ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20546,15 +20546,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20582,26 +20582,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20630,15 +20630,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/transit/wrapping_key", requestOptions, this.Configuration);
+            var response = this.Client.Get<Object>("/transit/wrapping_key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitWrappingKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitWrappingKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20661,25 +20661,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/transit/wrapping_key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/wrapping_key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTransitWrappingKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTransitWrappingKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20711,15 +20711,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20744,26 +20744,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = adConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20801,15 +20801,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/library/manage/{name}/check-in", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/library/manage/{name}/check-in", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryManageNameCheckIn", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryManageNameCheckIn", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20839,11 +20839,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryManageCheckInRequest;
@@ -20851,15 +20851,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/library/manage/{name}/check-in", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/manage/{name}/check-in", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryManageNameCheckIn", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryManageNameCheckIn", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20897,15 +20897,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/library/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/library/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20935,11 +20935,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryRequest;
@@ -20947,15 +20947,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -20993,15 +20993,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/library/{name}/check-in", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/library/{name}/check-in", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckIn", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckIn", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21031,11 +21031,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckInRequest;
@@ -21043,15 +21043,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-in", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-in", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckIn", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckIn", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21089,15 +21089,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/library/{name}/check-out", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/library/{name}/check-out", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckOut", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckOut", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21127,11 +21127,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckOutRequest;
@@ -21139,15 +21139,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-out", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-out", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckOut", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdLibraryNameCheckOut", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21185,15 +21185,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21223,11 +21223,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adRolesRequest;
@@ -21235,15 +21235,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21278,15 +21278,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/rotate-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/rotate-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21314,26 +21314,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21362,15 +21362,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ad/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ad/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21393,25 +21393,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAdRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAdRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21443,15 +21443,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/alicloud/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/alicloud/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21476,26 +21476,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = alicloudConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAlicloudConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAlicloudConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21533,15 +21533,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/alicloud/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21571,11 +21571,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = alicloudRoleRequest;
@@ -21583,15 +21583,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAlicloudRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAlicloudRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21623,15 +21623,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21656,26 +21656,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = awsConfigLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21707,15 +21707,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/config/root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/config/root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21740,26 +21740,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = awsConfigRootRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/config/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21788,15 +21788,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/config/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/config/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21819,25 +21819,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/config/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsConfigRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsConfigRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21869,15 +21869,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/creds", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/creds", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsCreds", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsCreds", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21902,26 +21902,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = awsCredsRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/creds", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/creds", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsCreds", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsCreds", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21959,15 +21959,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -21997,11 +21997,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsRolesRequest;
@@ -22009,15 +22009,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22055,15 +22055,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/aws/sts/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/aws/sts/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsStsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsStsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22093,11 +22093,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsStsRequest;
@@ -22105,15 +22105,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/aws/sts/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/sts/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAwsStsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAwsStsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22145,15 +22145,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/azure/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/azure/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22178,26 +22178,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = azureConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22235,15 +22235,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/azure/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22273,11 +22273,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = azureRolesRequest;
@@ -22285,15 +22285,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22322,15 +22322,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/azure/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/azure/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22353,25 +22353,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/azure/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostAzureRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostAzureRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22403,15 +22403,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/consul/config/access", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/consul/config/access", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostConsulConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostConsulConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22436,26 +22436,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = consulConfigAccessRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/consul/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/consul/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostConsulConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostConsulConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22493,15 +22493,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/consul/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22531,11 +22531,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = consulRolesRequest;
@@ -22543,15 +22543,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/consul/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostConsulRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostConsulRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22586,15 +22586,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/cubbyhole/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22622,26 +22622,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/cubbyhole/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostCubbyholePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostCubbyholePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22673,15 +22673,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22706,26 +22706,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = gcpConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22754,15 +22754,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/config/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/config/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpConfigRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpConfigRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22785,25 +22785,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/config/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpConfigRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpConfigRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22841,15 +22841,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpKeyRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpKeyRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22879,11 +22879,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpKeyRequest;
@@ -22891,15 +22891,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/key/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpKeyRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpKeyRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22937,15 +22937,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -22975,11 +22975,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpRolesetRequest;
@@ -22987,15 +22987,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23030,15 +23030,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/roleset/{name}/rotate", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23066,26 +23066,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23120,15 +23120,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23156,26 +23156,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetNameRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23213,15 +23213,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23251,11 +23251,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpRolesetKeyRequest;
@@ -23263,15 +23263,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23306,15 +23306,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23342,26 +23342,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpRolesetRolesetToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23399,15 +23399,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23437,11 +23437,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountRequest;
@@ -23449,15 +23449,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23495,15 +23495,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23533,11 +23533,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountKeyRequest;
@@ -23545,15 +23545,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23588,15 +23588,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23624,26 +23624,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23678,15 +23678,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23714,26 +23714,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/token", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpStaticAccountNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23768,15 +23768,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpTokenRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpTokenRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23804,26 +23804,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("roleset", VaultClient.Client.ClientUtils.ParameterToString(roleset)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/token/{roleset}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpTokenRoleset", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpTokenRoleset", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23855,15 +23855,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23888,26 +23888,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = gcpkmsConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23945,15 +23945,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/decrypt/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/decrypt/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsDecryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsDecryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -23983,11 +23983,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsDecryptRequest;
@@ -23995,15 +23995,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/decrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/decrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsDecryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsDecryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24041,15 +24041,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/encrypt/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/encrypt/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsEncryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsEncryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24079,11 +24079,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsEncryptRequest;
@@ -24091,15 +24091,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/encrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/encrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsEncryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsEncryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24137,15 +24137,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysConfigKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysConfigKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24175,11 +24175,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysConfigRequest;
@@ -24187,15 +24187,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysConfigKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysConfigKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24230,15 +24230,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysDeregisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysDeregisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24266,26 +24266,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysDeregisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysDeregisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24323,15 +24323,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24361,11 +24361,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRequest;
@@ -24373,15 +24373,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24419,15 +24419,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/register/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/register/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRegisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRegisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24457,11 +24457,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRegisterRequest;
@@ -24469,15 +24469,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/register/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/register/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRegisterKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRegisterKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24512,15 +24512,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/rotate/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/rotate/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24548,26 +24548,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/rotate/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/rotate/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRotateKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysRotateKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24602,15 +24602,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysTrimKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysTrimKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24638,26 +24638,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysTrimKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsKeysTrimKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24695,15 +24695,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/reencrypt/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/reencrypt/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsReencryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsReencryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24733,11 +24733,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsReencryptRequest;
@@ -24745,15 +24745,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/reencrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/reencrypt/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsReencryptKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsReencryptKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24791,15 +24791,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/sign/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/sign/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsSignKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsSignKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24829,11 +24829,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsSignRequest;
@@ -24841,15 +24841,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/sign/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/sign/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsSignKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsSignKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24887,15 +24887,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/gcpkms/verify/{key}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/gcpkms/verify/{key}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsVerifyKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsVerifyKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24925,11 +24925,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key", VaultClient.Client.ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsVerifyRequest;
@@ -24937,15 +24937,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/verify/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/verify/{key}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostGcpkmsVerifyKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostGcpkmsVerifyKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -24977,15 +24977,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/kubernetes/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/kubernetes/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25010,26 +25010,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = kubernetesConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25067,15 +25067,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/kubernetes/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/kubernetes/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25105,11 +25105,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesCredsRequest;
@@ -25117,15 +25117,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25163,15 +25163,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25201,11 +25201,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesRolesRequest;
@@ -25213,15 +25213,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKubernetesRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKubernetesRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25256,15 +25256,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/kv/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/kv/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25292,26 +25292,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kv/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostKvPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostKvPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25343,15 +25343,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/mongodbatlas/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/mongodbatlas/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25376,26 +25376,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = mongodbatlasConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25430,15 +25430,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25466,26 +25466,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25523,15 +25523,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25561,11 +25561,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = mongodbatlasRolesRequest;
@@ -25573,15 +25573,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostMongodbatlasRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostMongodbatlasRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25613,15 +25613,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/nomad/config/access", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/nomad/config/access", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25646,26 +25646,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = nomadConfigAccessRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/access", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadConfigAccess", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadConfigAccess", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25697,15 +25697,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/nomad/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/nomad/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25730,26 +25730,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = nomadConfigLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25787,15 +25787,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/nomad/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25825,11 +25825,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = nomadRoleRequest;
@@ -25837,15 +25837,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostNomadRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostNomadRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25877,15 +25877,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/openldap/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/openldap/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25910,26 +25910,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = openldapConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -25967,15 +25967,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/openldap/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26005,11 +26005,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapRoleRequest;
@@ -26017,15 +26017,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26060,15 +26060,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/openldap/rotate-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/openldap/rotate-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26096,26 +26096,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26144,15 +26144,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/openldap/rotate-root", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/openldap/rotate-root", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26175,25 +26175,25 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-root", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoot", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapRotateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26231,15 +26231,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26269,11 +26269,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapStaticRoleRequest;
@@ -26281,15 +26281,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/static-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostOpenldapStaticRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostOpenldapStaticRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26321,15 +26321,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/bundle", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/bundle", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiBundle", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiBundle", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26354,26 +26354,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiBundleRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/bundle", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/bundle", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiBundle", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiBundle", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26405,15 +26405,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/cert", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/cert", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiCert", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiCert", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26438,26 +26438,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiCertRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/cert", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/cert", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiCert", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiCert", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26489,15 +26489,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/config/ca", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/config/ca", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26522,26 +26522,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiConfigCaRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26573,15 +26573,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/config/crl", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/config/crl", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26606,26 +26606,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiConfigCrlRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/config/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/crl", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigCrl", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigCrl", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26657,15 +26657,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/config/issuers", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/config/issuers", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26690,26 +26690,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiConfigIssuersRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/config/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/issuers", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigIssuers", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigIssuers", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26741,15 +26741,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/config/keys", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/config/keys", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26774,26 +26774,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiConfigKeysRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/config/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/keys", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26825,15 +26825,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/config/urls", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/config/urls", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigUrls", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigUrls", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26858,26 +26858,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiConfigUrlsRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/config/urls", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/urls", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiConfigUrls", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiConfigUrls", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26909,15 +26909,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/intermediate/cross-sign", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/intermediate/cross-sign", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateCrossSign", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateCrossSign", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26942,26 +26942,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiIntermediateCrossSignRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/cross-sign", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/cross-sign", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateCrossSign", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateCrossSign", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -26999,15 +26999,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/intermediate/generate/{exported}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/intermediate/generate/{exported}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateGenerateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateGenerateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27037,11 +27037,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("exported", VaultClient.Client.ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIntermediateGenerateRequest;
@@ -27049,15 +27049,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/generate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/generate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateGenerateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateGenerateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27089,15 +27089,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/intermediate/set-signed", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/intermediate/set-signed", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateSetSigned", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateSetSigned", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27122,26 +27122,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiIntermediateSetSignedRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/set-signed", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/set-signed", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIntermediateSetSigned", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIntermediateSetSigned", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27173,15 +27173,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/internal|exported", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/internal|exported", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiInternalExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiInternalExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27206,26 +27206,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiInternalExportedRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/internal|exported", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/internal|exported", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiInternalExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiInternalExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27263,15 +27263,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issue/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issue/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssueRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssueRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27301,11 +27301,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssueRequest;
@@ -27313,15 +27313,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issue/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issue/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssueRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssueRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27365,15 +27365,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefIssueRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefIssueRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27408,11 +27408,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
@@ -27421,15 +27421,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefIssueRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefIssueRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27467,15 +27467,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignIntermediate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignIntermediate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27505,11 +27505,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
@@ -27517,15 +27517,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignIntermediate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignIntermediate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27569,15 +27569,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27612,11 +27612,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
@@ -27625,15 +27625,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27671,15 +27671,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignSelfIssued", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignSelfIssued", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27709,11 +27709,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
@@ -27721,15 +27721,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignSelfIssued", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignSelfIssued", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27767,15 +27767,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27805,11 +27805,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
@@ -27817,15 +27817,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27869,15 +27869,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatimRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatimRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27912,11 +27912,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
@@ -27925,15 +27925,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatimRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerIssuerRefSignVerbatimRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -27971,15 +27971,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28009,11 +28009,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("issuer_ref", VaultClient.Client.ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiDerPemRequest;
@@ -28021,15 +28021,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuerRefDerPem", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuerRefDerPem", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28067,15 +28067,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateIntermediateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateIntermediateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28105,11 +28105,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("exported", VaultClient.Client.ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
@@ -28117,15 +28117,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateIntermediateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateIntermediateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28163,15 +28163,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/issuers/generate/root/{exported}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/issuers/generate/root/{exported}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateRootExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateRootExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28201,11 +28201,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("exported", VaultClient.Client.ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateRootRequest;
@@ -28213,15 +28213,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/root/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/root/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateRootExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiIssuersGenerateRootExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28253,15 +28253,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki//json", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki//json", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28286,26 +28286,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiJsonRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki//json", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiJson", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiJson", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28343,15 +28343,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28381,11 +28381,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key_ref", VaultClient.Client.ClientUtils.ParameterToString(keyRef)); // path parameter
             requestOptions.Data = pkiKeyRequest;
@@ -28393,15 +28393,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/key/{key_ref}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKeyKeyRef", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKeyKeyRef", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28433,15 +28433,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/keys/import", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/keys/import", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKeysImport", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKeysImport", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28466,26 +28466,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiKeysImportRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/keys/import", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/keys/import", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKeysImport", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKeysImport", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28517,15 +28517,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/kms", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/kms", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKms", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKms", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28550,26 +28550,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiKmsRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/kms", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/kms", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiKms", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiKms", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28601,15 +28601,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/revoke", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/revoke", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRevoke", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28634,26 +28634,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiRevokeRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/revoke", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/revoke", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRevoke", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28691,15 +28691,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28729,11 +28729,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = pkiRolesRequest;
@@ -28741,15 +28741,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28787,15 +28787,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/root/generate/{exported}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/root/generate/{exported}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootGenerateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootGenerateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28825,11 +28825,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("exported", VaultClient.Client.ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootGenerateRequest;
@@ -28837,15 +28837,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/root/generate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/generate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootGenerateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootGenerateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28877,15 +28877,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/root/replace", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/root/replace", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootReplace", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootReplace", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28910,26 +28910,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiRootReplaceRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/root/replace", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/replace", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootReplace", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootReplace", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -28967,15 +28967,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/root/rotate/{exported}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/root/rotate/{exported}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootRotateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootRotateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29005,11 +29005,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("exported", VaultClient.Client.ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootRotateRequest;
@@ -29017,15 +29017,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/root/rotate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/rotate/{exported}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootRotateExported", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootRotateExported", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29057,15 +29057,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/root/sign-intermediate", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/root/sign-intermediate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootSignIntermediate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootSignIntermediate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29090,26 +29090,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiRootSignIntermediateRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-intermediate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-intermediate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootSignIntermediate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootSignIntermediate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29141,15 +29141,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/root/sign-self-issued", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/root/sign-self-issued", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootSignSelfIssued", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootSignSelfIssued", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29174,26 +29174,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-self-issued", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-self-issued", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiRootSignSelfIssued", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiRootSignSelfIssued", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29231,15 +29231,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/sign/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/sign/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29269,11 +29269,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignRequest;
@@ -29281,15 +29281,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29321,15 +29321,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/sign-verbatim", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/sign-verbatim", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29354,26 +29354,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiSignVerbatimRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29411,15 +29411,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/sign-verbatim/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/sign-verbatim/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatimRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatimRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29449,11 +29449,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignVerbatimRequest;
@@ -29461,15 +29461,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatimRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiSignVerbatimRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29501,15 +29501,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/pki/tidy", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/pki/tidy", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiTidy", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiTidy", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29534,26 +29534,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = pkiTidyRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/pki/tidy", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/tidy", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostPkiTidy", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostPkiTidy", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29585,15 +29585,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/rabbitmq/config/connection", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/rabbitmq/config/connection", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigConnection", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigConnection", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29618,26 +29618,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = rabbitmqConfigConnectionRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/connection", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/connection", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigConnection", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigConnection", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29669,15 +29669,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29702,26 +29702,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = rabbitmqConfigLeaseRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/lease", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigLease", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqConfigLease", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29759,15 +29759,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29797,11 +29797,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = rabbitmqRolesRequest;
@@ -29809,15 +29809,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/roles/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostRabbitmqRolesName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostRabbitmqRolesName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29849,15 +29849,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29882,26 +29882,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = kvConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29939,15 +29939,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/data/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/data/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -29977,11 +29977,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDataRequest;
@@ -29989,15 +29989,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/data/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30035,15 +30035,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/delete/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/delete/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDeletePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDeletePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30073,11 +30073,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDeleteRequest;
@@ -30085,15 +30085,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/delete/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/delete/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDeletePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDeletePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30131,15 +30131,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/destroy/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/destroy/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDestroyPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDestroyPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30169,11 +30169,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDestroyRequest;
@@ -30181,15 +30181,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/destroy/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/destroy/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretDestroyPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretDestroyPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30227,15 +30227,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/metadata/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30265,11 +30265,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvMetadataRequest;
@@ -30277,15 +30277,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/metadata/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretMetadataPath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretMetadataPath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30323,15 +30323,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/secret/undelete/{path}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/secret/undelete/{path}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretUndeletePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretUndeletePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30361,11 +30361,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("path", VaultClient.Client.ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvUndeleteRequest;
@@ -30373,15 +30373,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/secret/undelete/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/undelete/{path}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSecretUndeletePath", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSecretUndeletePath", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30413,15 +30413,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/config/ca", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/config/ca", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30446,26 +30446,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = sshConfigCaRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/ca", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshConfigCa", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshConfigCa", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30497,15 +30497,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30530,26 +30530,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = sshConfigZeroaddressRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/zeroaddress", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshConfigZeroaddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshConfigZeroaddress", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30587,15 +30587,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/creds/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/creds/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30625,11 +30625,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshCredsRequest;
@@ -30637,15 +30637,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/creds/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshCredsRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshCredsRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30683,15 +30683,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshKeysKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshKeysKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30721,11 +30721,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("key_name", VaultClient.Client.ClientUtils.ParameterToString(keyName)); // path parameter
             requestOptions.Data = sshKeysRequest;
@@ -30733,15 +30733,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/keys/{key_name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshKeysKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshKeysKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30773,15 +30773,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/lookup", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/lookup", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshLookup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshLookup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30806,26 +30806,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = sshLookupRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/lookup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/lookup", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshLookup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshLookup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30863,15 +30863,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/roles/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30901,11 +30901,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshRolesRequest;
@@ -30913,15 +30913,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/roles/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshRolesRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshRolesRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30959,15 +30959,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/sign/{role}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/sign/{role}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -30997,11 +30997,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("role", VaultClient.Client.ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshSignRequest;
@@ -31009,15 +31009,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/sign/{role}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshSignRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshSignRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31049,15 +31049,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/ssh/verify", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/ssh/verify", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshVerify", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshVerify", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31082,26 +31082,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = sshVerifyRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/ssh/verify", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/verify", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSshVerify", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostSshVerify", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31133,15 +31133,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/terraform/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/terraform/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31166,26 +31166,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = terraformConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31220,15 +31220,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/terraform/creds/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/terraform/creds/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31256,26 +31256,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/terraform/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/creds/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformCredsName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformCredsName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31313,15 +31313,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/terraform/role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31351,11 +31351,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = terraformRoleRequest;
@@ -31363,15 +31363,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31406,15 +31406,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/terraform/rotate-role/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/terraform/rotate-role/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31442,26 +31442,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/terraform/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/rotate-role/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTerraformRotateRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTerraformRotateRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31499,15 +31499,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/totp/code/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/totp/code/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTotpCodeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTotpCodeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31537,11 +31537,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpCodeRequest;
@@ -31549,15 +31549,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/totp/code/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/totp/code/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTotpCodeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTotpCodeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31595,15 +31595,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/totp/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31633,11 +31633,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpKeysRequest;
@@ -31645,15 +31645,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/totp/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTotpKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTotpKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31685,15 +31685,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/cache-config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/cache-config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitCacheConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitCacheConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31718,26 +31718,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = transitCacheConfigRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/cache-config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/cache-config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitCacheConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitCacheConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31781,15 +31781,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitDatakeyPlaintextName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitDatakeyPlaintextName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31824,11 +31824,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("plaintext", VaultClient.Client.ClientUtils.ParameterToString(plaintext)); // path parameter
@@ -31837,15 +31837,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitDatakeyPlaintextName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitDatakeyPlaintextName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31883,15 +31883,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/decrypt/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/decrypt/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitDecryptName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitDecryptName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31921,11 +31921,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitDecryptRequest;
@@ -31933,15 +31933,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/decrypt/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/decrypt/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitDecryptName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitDecryptName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -31979,15 +31979,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/encrypt/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/encrypt/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitEncryptName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitEncryptName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32017,11 +32017,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitEncryptRequest;
@@ -32029,15 +32029,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/encrypt/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/encrypt/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitEncryptName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitEncryptName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32069,15 +32069,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/hash", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/hash", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHash", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHash", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32102,26 +32102,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = transitHashRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/hash", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHash", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHash", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32159,15 +32159,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/hash/{urlalgorithm}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/hash/{urlalgorithm}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHashUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHashUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32197,11 +32197,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitHashRequest;
@@ -32209,15 +32209,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/hash/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHashUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHashUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32255,15 +32255,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/hmac/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/hmac/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHmacName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHmacName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32293,11 +32293,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitHmacRequest;
@@ -32305,15 +32305,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHmacName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHmacName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32357,15 +32357,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHmacNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHmacNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32400,11 +32400,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
@@ -32413,15 +32413,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitHmacNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitHmacNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32459,15 +32459,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32497,11 +32497,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysRequest;
@@ -32509,15 +32509,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32555,15 +32555,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}/config", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/config", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32593,11 +32593,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysConfigRequest;
@@ -32605,15 +32605,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/config", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32651,15 +32651,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}/import", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/import", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImport", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImport", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32689,11 +32689,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportRequest;
@@ -32701,15 +32701,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImport", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImport", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32747,15 +32747,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}/import_version", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/import_version", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImportVersion", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImportVersion", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32785,11 +32785,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportVersionRequest;
@@ -32797,15 +32797,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import_version", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import_version", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImportVersion", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameImportVersion", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32840,15 +32840,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}/rotate", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/rotate", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32876,26 +32876,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/rotate", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32933,15 +32933,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/keys/{name}/trim", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/trim", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameTrim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameTrim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -32971,11 +32971,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysTrimRequest;
@@ -32983,15 +32983,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/trim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/trim", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitKeysNameTrim", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitKeysNameTrim", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33023,15 +33023,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/random", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/random", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandom", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandom", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33056,26 +33056,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = transitRandomRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/random", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandom", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandom", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33113,15 +33113,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/random/{source}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/random/{source}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomSource", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomSource", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33151,11 +33151,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.Data = transitRandomRequest;
@@ -33163,15 +33163,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomSource", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomSource", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33215,15 +33215,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/random/{source}/{urlbytes}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/random/{source}/{urlbytes}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomSourceUrlbytes", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomSourceUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33258,11 +33258,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("source", VaultClient.Client.ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
@@ -33271,15 +33271,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomSourceUrlbytes", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomSourceUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33317,15 +33317,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/random/{urlbytes}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/random/{urlbytes}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomUrlbytes", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33355,11 +33355,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("urlbytes", VaultClient.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = transitRandomRequest;
@@ -33367,15 +33367,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{urlbytes}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRandomUrlbytes", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRandomUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33407,15 +33407,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/restore", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/restore", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRestore", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRestore", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33440,26 +33440,26 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.Data = transitRestoreRequest;
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/restore", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRestore", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRestore", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33497,15 +33497,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/restore/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/restore/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRestoreName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRestoreName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33535,11 +33535,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRestoreRequest;
@@ -33547,15 +33547,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/restore/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRestoreName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRestoreName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33593,15 +33593,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/rewrap/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/rewrap/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRewrapName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRewrapName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33631,11 +33631,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRewrapRequest;
@@ -33643,15 +33643,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/rewrap/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/rewrap/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitRewrapName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitRewrapName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33689,15 +33689,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/sign/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/sign/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitSignName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitSignName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33727,11 +33727,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitSignRequest;
@@ -33739,15 +33739,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitSignName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitSignName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33791,15 +33791,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitSignNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitSignNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33834,11 +33834,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
@@ -33847,15 +33847,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitSignNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitSignNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33893,15 +33893,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/verify/{name}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/verify/{name}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitVerifyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitVerifyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33931,11 +33931,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitVerifyRequest;
@@ -33943,15 +33943,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitVerifyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitVerifyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -33995,15 +33995,15 @@ namespace VaultClient.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, this.Configuration);
+            var response = this.Client.Post<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitVerifyNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitVerifyNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
@@ -34038,11 +34038,11 @@ namespace VaultClient.Api
             };
 
 
-            var localVarContentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = VaultClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var acceptHeader = VaultClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (acceptHeader != null) requestOptions.HeaderParameters.Add("Accept", acceptHeader);
 
             requestOptions.PathParameters.Add("name", VaultClient.Client.ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", VaultClient.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
@@ -34051,15 +34051,15 @@ namespace VaultClient.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostTransitVerifyNameUrlalgorithm", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostTransitVerifyNameUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
     }
