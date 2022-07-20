@@ -27,29 +27,13 @@ namespace VaultClient.Api
         /// <summary>
         /// Disable the audit device at the given path.
         /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <returns></returns>
-        void DeleteSysAuditPath(string path);
-
-        /// <summary>
-        /// Disable the audit device at the given path.
-        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysAuditPathWithHttpInfo(string path);
-        /// <summary>
-        /// Disable the auth method at the given auth path
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns></returns>
-        void DeleteSysAuthPath(string path);
-
+        ApiResponse<Object> DeleteSysAuditPath(string path);
         /// <summary>
         /// Disable the auth method at the given auth path
         /// </summary>
@@ -59,15 +43,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysAuthPathWithHttpInfo(string path);
-        /// <summary>
-        /// Disable auditing of the given request header.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns></returns>
-        void DeleteSysConfigAuditingRequestHeadersHeader(string header);
-
+        ApiResponse<Object> DeleteSysAuthPath(string path);
         /// <summary>
         /// Disable auditing of the given request header.
         /// </summary>
@@ -77,14 +53,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header);
-        /// <summary>
-        /// Remove any CORS settings.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysConfigCors();
-
+        ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeader(string header);
         /// <summary>
         /// Remove any CORS settings.
         /// </summary>
@@ -93,15 +62,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigCorsWithHttpInfo();
-        /// <summary>
-        /// Remove a UI header.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns></returns>
-        void DeleteSysConfigUiHeadersHeader(string header);
-
+        ApiResponse<Object> DeleteSysConfigCors();
         /// <summary>
         /// Remove a UI header.
         /// </summary>
@@ -111,14 +72,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigUiHeadersHeaderWithHttpInfo(string header);
-        /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysGenerateRoot();
-
+        ApiResponse<Object> DeleteSysConfigUiHeadersHeader(string header);
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -127,14 +81,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysGenerateRootWithHttpInfo();
-        /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysGenerateRootAttempt();
-
+        ApiResponse<Object> DeleteSysGenerateRoot();
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -143,15 +90,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysGenerateRootAttemptWithHttpInfo();
-        /// <summary>
-        /// Disable the mount point specified at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        void DeleteSysMountsPath(string path);
-
+        ApiResponse<Object> DeleteSysGenerateRootAttempt();
         /// <summary>
         /// Disable the mount point specified at the given path.
         /// </summary>
@@ -161,15 +100,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysMountsPathWithHttpInfo(string path);
-        /// <summary>
-        /// Remove the plugin with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <returns></returns>
-        void DeleteSysPluginsCatalogName(string name);
-
+        ApiResponse<Object> DeleteSysMountsPath(string path);
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -179,16 +110,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPluginsCatalogNameWithHttpInfo(string name);
-        /// <summary>
-        /// Remove the plugin with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <returns></returns>
-        void DeleteSysPluginsCatalogTypeName(string name, string type);
-
+        ApiResponse<Object> DeleteSysPluginsCatalogName(string name);
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -199,15 +121,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPluginsCatalogTypeNameWithHttpInfo(string name, string type);
-        /// <summary>
-        /// Delete the ACL policy with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        void DeleteSysPoliciesAclName(string name);
-
+        ApiResponse<Object> DeleteSysPluginsCatalogTypeName(string name, string type);
         /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
@@ -217,15 +131,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPoliciesAclNameWithHttpInfo(string name);
-        /// <summary>
-        /// Delete a password policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        void DeleteSysPoliciesPasswordName(string name);
-
+        ApiResponse<Object> DeleteSysPoliciesAclName(string name);
         /// <summary>
         /// Delete a password policy.
         /// </summary>
@@ -235,15 +141,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPoliciesPasswordNameWithHttpInfo(string name);
-        /// <summary>
-        /// Delete the policy with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        void DeleteSysPolicyName(string name);
-
+        ApiResponse<Object> DeleteSysPoliciesPasswordName(string name);
         /// <summary>
         /// Delete the policy with the given name.
         /// </summary>
@@ -253,15 +151,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPolicyNameWithHttpInfo(string name);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <returns></returns>
-        void DeleteSysQuotasRateLimitName(string name);
-
+        ApiResponse<Object> DeleteSysPolicyName(string name);
         /// <summary>
         /// 
         /// </summary>
@@ -271,14 +161,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysQuotasRateLimitNameWithHttpInfo(string name);
-        /// <summary>
-        /// Delete the key with given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysRaw();
-
+        ApiResponse<Object> DeleteSysQuotasRateLimitName(string name);
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -287,15 +170,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRawWithHttpInfo();
-        /// <summary>
-        /// Delete the key with given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        void DeleteSysRawPath(string path);
-
+        ApiResponse<Object> DeleteSysRaw();
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -305,14 +180,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRawPathWithHttpInfo(string path);
-        /// <summary>
-        /// Delete the backup copy of PGP-encrypted unseal keys.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysRekeyBackup();
-
+        ApiResponse<Object> DeleteSysRawPath(string path);
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -321,17 +189,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyBackupWithHttpInfo();
-        /// <summary>
-        /// Cancels any in-progress rekey.
-        /// </summary>
-        /// <remarks>
-        /// This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysRekeyInit();
-
+        ApiResponse<Object> DeleteSysRekeyBackup();
         /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
@@ -340,14 +198,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyInitWithHttpInfo();
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysRekeyRecoveryKeyBackup();
-
+        ApiResponse<Object> DeleteSysRekeyInit();
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -356,17 +207,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackupWithHttpInfo();
-        /// <summary>
-        /// Cancel any in-progress rekey verification operation.
-        /// </summary>
-        /// <remarks>
-        /// This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteSysRekeyVerify();
-
+        ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup();
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
         /// </summary>
@@ -375,14 +216,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyVerifyWithHttpInfo();
-        /// <summary>
-        /// List the enabled audit devices.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysAudit();
-
+        ApiResponse<Object> DeleteSysRekeyVerify();
         /// <summary>
         /// List the enabled audit devices.
         /// </summary>
@@ -391,14 +225,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuditWithHttpInfo();
-        /// <summary>
-        /// List the currently enabled credential backends.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysAuth();
-
+        ApiResponse<Object> GetSysAudit();
         /// <summary>
         /// List the currently enabled credential backends.
         /// </summary>
@@ -407,15 +234,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuthWithHttpInfo();
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns></returns>
-        void GetSysAuthPath(string path);
-
+        ApiResponse<Object> GetSysAuth();
         /// <summary>
         /// Read the configuration of the auth engine at the given path.
         /// </summary>
@@ -425,18 +244,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuthPathWithHttpInfo(string path);
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <returns></returns>
-        void GetSysAuthPathTune(string path);
-
+        ApiResponse<Object> GetSysAuthPath(string path);
         /// <summary>
         /// Reads the given auth path&#39;s configuration.
         /// </summary>
@@ -446,14 +254,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuthPathTuneWithHttpInfo(string path);
-        /// <summary>
-        /// List the request headers that are configured to be audited.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysConfigAuditingRequestHeaders();
-
+        ApiResponse<Object> GetSysAuthPathTune(string path);
         /// <summary>
         /// List the request headers that are configured to be audited.
         /// </summary>
@@ -462,15 +263,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigAuditingRequestHeadersWithHttpInfo();
-        /// <summary>
-        /// List the information for the given request header.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns></returns>
-        void GetSysConfigAuditingRequestHeadersHeader(string header);
-
+        ApiResponse<Object> GetSysConfigAuditingRequestHeaders();
         /// <summary>
         /// List the information for the given request header.
         /// </summary>
@@ -480,14 +273,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header);
-        /// <summary>
-        /// Return the current CORS settings.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysConfigCors();
-
+        ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeader(string header);
         /// <summary>
         /// Return the current CORS settings.
         /// </summary>
@@ -496,17 +282,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigCorsWithHttpInfo();
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration.
-        /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysConfigStateSanitized();
-
+        ApiResponse<Object> GetSysConfigCors();
         /// <summary>
         /// Return a sanitized version of the Vault server configuration.
         /// </summary>
@@ -515,15 +291,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigStateSanitizedWithHttpInfo();
-        /// <summary>
-        /// Return a list of configured UI headers.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysConfigUiHeaders(string list);
-
+        ApiResponse<Object> GetSysConfigStateSanitized();
         /// <summary>
         /// Return a list of configured UI headers.
         /// </summary>
@@ -533,15 +301,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigUiHeadersWithHttpInfo(string list);
-        /// <summary>
-        /// Return the given UI header&#39;s configuration
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns></returns>
-        void GetSysConfigUiHeadersHeader(string header);
-
+        ApiResponse<Object> GetSysConfigUiHeaders(string list);
         /// <summary>
         /// Return the given UI header&#39;s configuration
         /// </summary>
@@ -551,14 +311,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigUiHeadersHeaderWithHttpInfo(string header);
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysGenerateRoot();
-
+        ApiResponse<Object> GetSysConfigUiHeadersHeader(string header);
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
@@ -567,14 +320,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysGenerateRootWithHttpInfo();
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysGenerateRootAttempt();
-
+        ApiResponse<Object> GetSysGenerateRoot();
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
@@ -583,14 +329,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysGenerateRootAttemptWithHttpInfo();
-        /// <summary>
-        /// Check the HA status of a Vault cluster
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysHaStatus();
-
+        ApiResponse<Object> GetSysGenerateRootAttempt();
         /// <summary>
         /// Check the HA status of a Vault cluster
         /// </summary>
@@ -599,14 +338,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHaStatusWithHttpInfo();
-        /// <summary>
-        /// Returns the health status of Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysHealth();
-
+        ApiResponse<Object> GetSysHaStatus();
         /// <summary>
         /// Returns the health status of Vault.
         /// </summary>
@@ -615,17 +347,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHealthWithHttpInfo();
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on.
-        /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysHostInfo();
-
+        ApiResponse<Object> GetSysHealth();
         /// <summary>
         /// Information about the host instance that this Vault server is running on.
         /// </summary>
@@ -634,17 +356,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHostInfoWithHttpInfo();
-        /// <summary>
-        /// reports in-flight requests
-        /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInFlightReq();
-
+        ApiResponse<Object> GetSysHostInfo();
         /// <summary>
         /// reports in-flight requests
         /// </summary>
@@ -653,14 +365,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInFlightReqWithHttpInfo();
-        /// <summary>
-        /// Returns the initialization status of Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInit();
-
+        ApiResponse<Object> GetSysInFlightReq();
         /// <summary>
         /// Returns the initialization status of Vault.
         /// </summary>
@@ -669,14 +374,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInitWithHttpInfo();
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersActivity();
-
+        ApiResponse<Object> GetSysInit();
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
@@ -685,14 +383,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivityWithHttpInfo();
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersActivityExport();
-
+        ApiResponse<Object> GetSysInternalCountersActivity();
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
@@ -701,14 +392,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivityExportWithHttpInfo();
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersActivityMonthly();
-
+        ApiResponse<Object> GetSysInternalCountersActivityExport();
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces.
         /// </summary>
@@ -717,14 +401,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivityMonthlyWithHttpInfo();
-        /// <summary>
-        /// Read the client count tracking configuration.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersConfig();
-
+        ApiResponse<Object> GetSysInternalCountersActivityMonthly();
         /// <summary>
         /// Read the client count tracking configuration.
         /// </summary>
@@ -733,14 +410,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersConfigWithHttpInfo();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersEntities();
-
+        ApiResponse<Object> GetSysInternalCountersConfig();
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -749,14 +419,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersEntitiesWithHttpInfo();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersRequests();
-
+        ApiResponse<Object> GetSysInternalCountersEntities();
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -765,14 +428,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersRequestsWithHttpInfo();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalCountersTokens();
-
+        ApiResponse<Object> GetSysInternalCountersRequests();
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -781,14 +437,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersTokensWithHttpInfo();
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalSpecsOpenapi();
-
+        ApiResponse<Object> GetSysInternalCountersTokens();
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths.
         /// </summary>
@@ -797,14 +446,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalSpecsOpenapiWithHttpInfo();
-        /// <summary>
-        /// Lists enabled feature flags.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalUiFeatureFlags();
-
+        ApiResponse<Object> GetSysInternalSpecsOpenapi();
         /// <summary>
         /// Lists enabled feature flags.
         /// </summary>
@@ -813,14 +455,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiFeatureFlagsWithHttpInfo();
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalUiMounts();
-
+        ApiResponse<Object> GetSysInternalUiFeatureFlags();
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts.
         /// </summary>
@@ -829,15 +464,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiMountsWithHttpInfo();
-        /// <summary>
-        /// Return information about the given mount.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <returns></returns>
-        void GetSysInternalUiMountsPath(string path);
-
+        ApiResponse<Object> GetSysInternalUiMounts();
         /// <summary>
         /// Return information about the given mount.
         /// </summary>
@@ -847,14 +474,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path of the mount.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiMountsPathWithHttpInfo(string path);
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalUiNamespaces();
-
+        ApiResponse<Object> GetSysInternalUiMountsPath(string path);
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -863,14 +483,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiNamespacesWithHttpInfo();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysInternalUiResultantAcl();
-
+        ApiResponse<Object> GetSysInternalUiNamespaces();
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -879,14 +492,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiResultantAclWithHttpInfo();
-        /// <summary>
-        /// Provides information about the backend encryption key.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysKeyStatus();
-
+        ApiResponse<Object> GetSysInternalUiResultantAcl();
         /// <summary>
         /// Provides information about the backend encryption key.
         /// </summary>
@@ -895,14 +501,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysKeyStatusWithHttpInfo();
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysLeader();
-
+        ApiResponse<Object> GetSysKeyStatus();
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault.
         /// </summary>
@@ -911,14 +510,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeaderWithHttpInfo();
-        /// <summary>
-        /// List leases associated with this Vault cluster
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysLeases();
-
+        ApiResponse<Object> GetSysLeader();
         /// <summary>
         /// List leases associated with this Vault cluster
         /// </summary>
@@ -927,14 +519,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesWithHttpInfo();
-        /// <summary>
-        /// Count of leases associated with this Vault cluster
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysLeasesCount();
-
+        ApiResponse<Object> GetSysLeases();
         /// <summary>
         /// Count of leases associated with this Vault cluster
         /// </summary>
@@ -943,15 +528,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesCountWithHttpInfo();
-        /// <summary>
-        /// Returns a list of lease ids.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysLeasesLookup(string list);
-
+        ApiResponse<Object> GetSysLeasesCount();
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -961,16 +538,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesLookupWithHttpInfo(string list);
-        /// <summary>
-        /// Returns a list of lease ids.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysLeasesLookupPrefix(string prefix, string list);
-
+        ApiResponse<Object> GetSysLeasesLookup(string list);
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -981,15 +549,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesLookupPrefixWithHttpInfo(string prefix, string list);
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <returns></returns>
-        void GetSysMetrics(string format = default(string));
-
+        ApiResponse<Object> GetSysLeasesLookupPrefix(string prefix, string list);
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose.
         /// </summary>
@@ -999,16 +559,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMetricsWithHttpInfo(string format = default(string));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <returns></returns>
-        void GetSysMonitor(string logFormat = default(string), string logLevel = default(string));
-
+        ApiResponse<Object> GetSysMetrics(string format = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -1019,14 +570,7 @@ namespace VaultClient.Api
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMonitorWithHttpInfo(string logFormat = default(string), string logLevel = default(string));
-        /// <summary>
-        /// List the currently mounted backends.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysMounts();
-
+        ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string));
         /// <summary>
         /// List the currently mounted backends.
         /// </summary>
@@ -1035,15 +579,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMountsWithHttpInfo();
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        void GetSysMountsPath(string path);
-
+        ApiResponse<Object> GetSysMounts();
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
         /// </summary>
@@ -1053,15 +589,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMountsPathWithHttpInfo(string path);
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        void GetSysMountsPathTune(string path);
-
+        ApiResponse<Object> GetSysMountsPath(string path);
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -1071,14 +599,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMountsPathTuneWithHttpInfo(string path);
-        /// <summary>
-        /// Lists all the plugins known to Vault
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPluginsCatalog();
-
+        ApiResponse<Object> GetSysMountsPathTune(string path);
         /// <summary>
         /// Lists all the plugins known to Vault
         /// </summary>
@@ -1087,15 +608,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogWithHttpInfo();
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <returns></returns>
-        void GetSysPluginsCatalogName(string name);
-
+        ApiResponse<Object> GetSysPluginsCatalog();
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -1105,16 +618,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogNameWithHttpInfo(string name);
-        /// <summary>
-        /// List the plugins in the catalog.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysPluginsCatalogType(string type, string list);
-
+        ApiResponse<Object> GetSysPluginsCatalogName(string name);
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
@@ -1125,16 +629,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogTypeWithHttpInfo(string type, string list);
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <returns></returns>
-        void GetSysPluginsCatalogTypeName(string name, string type);
-
+        ApiResponse<Object> GetSysPluginsCatalogType(string type, string list);
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -1145,15 +640,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogTypeNameWithHttpInfo(string name, string type);
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysPoliciesAcl(string list);
-
+        ApiResponse<Object> GetSysPluginsCatalogTypeName(string name, string type);
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -1163,15 +650,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesAclWithHttpInfo(string list);
-        /// <summary>
-        /// Retrieve information about the named ACL policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        void GetSysPoliciesAclName(string name);
-
+        ApiResponse<Object> GetSysPoliciesAcl(string list);
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
@@ -1181,15 +660,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesAclNameWithHttpInfo(string name);
-        /// <summary>
-        /// List the existing password policies.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysPoliciesPassword(string list);
-
+        ApiResponse<Object> GetSysPoliciesAclName(string name);
         /// <summary>
         /// List the existing password policies.
         /// </summary>
@@ -1199,15 +670,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPasswordWithHttpInfo(string list);
-        /// <summary>
-        /// Retrieve an existing password policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        void GetSysPoliciesPasswordName(string name);
-
+        ApiResponse<Object> GetSysPoliciesPassword(string list);
         /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
@@ -1217,15 +680,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPasswordNameWithHttpInfo(string name);
-        /// <summary>
-        /// Generate a password from an existing password policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        void GetSysPoliciesPasswordNameGenerate(string name);
-
+        ApiResponse<Object> GetSysPoliciesPasswordName(string name);
         /// <summary>
         /// Generate a password from an existing password policy.
         /// </summary>
@@ -1235,15 +690,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPasswordNameGenerateWithHttpInfo(string name);
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        void GetSysPolicy(string list = default(string));
-
+        ApiResponse<Object> GetSysPoliciesPasswordNameGenerate(string name);
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -1253,15 +700,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPolicyWithHttpInfo(string list = default(string));
-        /// <summary>
-        /// Retrieve the policy body for the named policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        void GetSysPolicyName(string name);
-
+        ApiResponse<Object> GetSysPolicy(string list = default(string));
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
@@ -1271,17 +710,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPolicyNameWithHttpInfo(string name);
-        /// <summary>
-        /// Returns an HTML page listing the available profiles.
-        /// </summary>
-        /// <remarks>
-        /// Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprof();
-
+        ApiResponse<Object> GetSysPolicyName(string name);
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
@@ -1290,17 +719,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofWithHttpInfo();
-        /// <summary>
-        /// Returns a sampling of all past memory allocations.
-        /// </summary>
-        /// <remarks>
-        /// Returns a sampling of all past memory allocations.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofAllocs();
-
+        ApiResponse<Object> GetSysPprof();
         /// <summary>
         /// Returns a sampling of all past memory allocations.
         /// </summary>
@@ -1309,17 +728,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofAllocsWithHttpInfo();
-        /// <summary>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofBlock();
-
+        ApiResponse<Object> GetSysPprofAllocs();
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
@@ -1328,17 +737,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofBlockWithHttpInfo();
-        /// <summary>
-        /// Returns the running program&#39;s command line.
-        /// </summary>
-        /// <remarks>
-        /// Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofCmdline();
-
+        ApiResponse<Object> GetSysPprofBlock();
         /// <summary>
         /// Returns the running program&#39;s command line.
         /// </summary>
@@ -1347,17 +746,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofCmdlineWithHttpInfo();
-        /// <summary>
-        /// Returns stack traces of all current goroutines.
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces of all current goroutines.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofGoroutine();
-
+        ApiResponse<Object> GetSysPprofCmdline();
         /// <summary>
         /// Returns stack traces of all current goroutines.
         /// </summary>
@@ -1366,17 +755,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofGoroutineWithHttpInfo();
-        /// <summary>
-        /// Returns a sampling of memory allocations of live object.
-        /// </summary>
-        /// <remarks>
-        /// Returns a sampling of memory allocations of live object.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofHeap();
-
+        ApiResponse<Object> GetSysPprofGoroutine();
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
         /// </summary>
@@ -1385,17 +764,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofHeapWithHttpInfo();
-        /// <summary>
-        /// Returns stack traces of holders of contended mutexes
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces of holders of contended mutexes
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofMutex();
-
+        ApiResponse<Object> GetSysPprofHeap();
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
         /// </summary>
@@ -1404,17 +773,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofMutexWithHttpInfo();
-        /// <summary>
-        /// Returns a pprof-formatted cpu profile payload.
-        /// </summary>
-        /// <remarks>
-        /// Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofProfile();
-
+        ApiResponse<Object> GetSysPprofMutex();
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
         /// </summary>
@@ -1423,17 +782,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofProfileWithHttpInfo();
-        /// <summary>
-        /// Returns the program counters listed in the request.
-        /// </summary>
-        /// <remarks>
-        /// Returns the program counters listed in the request.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofSymbol();
-
+        ApiResponse<Object> GetSysPprofProfile();
         /// <summary>
         /// Returns the program counters listed in the request.
         /// </summary>
@@ -1442,17 +791,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofSymbolWithHttpInfo();
-        /// <summary>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofThreadcreate();
-
+        ApiResponse<Object> GetSysPprofSymbol();
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
         /// </summary>
@@ -1461,17 +800,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofThreadcreateWithHttpInfo();
-        /// <summary>
-        /// Returns the execution trace in binary form.
-        /// </summary>
-        /// <remarks>
-        /// Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysPprofTrace();
-
+        ApiResponse<Object> GetSysPprofThreadcreate();
         /// <summary>
         /// Returns the execution trace in binary form.
         /// </summary>
@@ -1480,14 +809,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofTraceWithHttpInfo();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysQuotasConfig();
-
+        ApiResponse<Object> GetSysPprofTrace();
         /// <summary>
         /// 
         /// </summary>
@@ -1496,15 +818,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasConfigWithHttpInfo();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysQuotasRateLimit(string list);
-
+        ApiResponse<Object> GetSysQuotasConfig();
         /// <summary>
         /// 
         /// </summary>
@@ -1514,15 +828,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasRateLimitWithHttpInfo(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <returns></returns>
-        void GetSysQuotasRateLimitName(string name);
-
+        ApiResponse<Object> GetSysQuotasRateLimit(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -1532,15 +838,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasRateLimitNameWithHttpInfo(string name);
-        /// <summary>
-        /// Read the value of the key at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        void GetSysRaw(string list = default(string));
-
+        ApiResponse<Object> GetSysQuotasRateLimitName(string name);
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -1550,16 +848,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRawWithHttpInfo(string list = default(string));
-        /// <summary>
-        /// Read the value of the key at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        void GetSysRawPath(string path, string list = default(string));
-
+        ApiResponse<Object> GetSysRaw(string list = default(string));
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -1570,14 +859,7 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRawPathWithHttpInfo(string path, string list = default(string));
-        /// <summary>
-        /// Return the backup copy of PGP-encrypted unseal keys.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysRekeyBackup();
-
+        ApiResponse<Object> GetSysRawPath(string path, string list = default(string));
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -1586,14 +868,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyBackupWithHttpInfo();
-        /// <summary>
-        /// Reads the configuration and progress of the current rekey attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysRekeyInit();
-
+        ApiResponse<Object> GetSysRekeyBackup();
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
         /// </summary>
@@ -1602,14 +877,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyInitWithHttpInfo();
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysRekeyRecoveryKeyBackup();
-
+        ApiResponse<Object> GetSysRekeyInit();
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -1618,14 +886,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyRecoveryKeyBackupWithHttpInfo();
-        /// <summary>
-        /// Read the configuration and progress of the current rekey verification attempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysRekeyVerify();
-
+        ApiResponse<Object> GetSysRekeyRecoveryKeyBackup();
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
         /// </summary>
@@ -1634,15 +895,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyVerifyWithHttpInfo();
-        /// <summary>
-        /// Check status of a mount migration
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="migrationId">The ID of the migration operation</param>
-        /// <returns></returns>
-        void GetSysRemountStatusMigrationId(string migrationId);
-
+        ApiResponse<Object> GetSysRekeyVerify();
         /// <summary>
         /// Check status of a mount migration
         /// </summary>
@@ -1652,14 +905,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRemountStatusMigrationIdWithHttpInfo(string migrationId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysReplicationStatus();
-
+        ApiResponse<Object> GetSysRemountStatusMigrationId(string migrationId);
         /// <summary>
         /// 
         /// </summary>
@@ -1668,14 +914,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysReplicationStatusWithHttpInfo();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysRotateConfig();
-
+        ApiResponse<Object> GetSysReplicationStatus();
         /// <summary>
         /// 
         /// </summary>
@@ -1684,14 +923,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRotateConfigWithHttpInfo();
-        /// <summary>
-        /// Check the seal status of a Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysSealStatus();
-
+        ApiResponse<Object> GetSysRotateConfig();
         /// <summary>
         /// Check the seal status of a Vault.
         /// </summary>
@@ -1700,15 +932,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysSealStatusWithHttpInfo();
-        /// <summary>
-        /// Returns map of historical version change entries
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        void GetSysVersionHistory(string list);
-
+        ApiResponse<Object> GetSysSealStatus();
         /// <summary>
         /// Returns map of historical version change entries
         /// </summary>
@@ -1718,14 +942,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysVersionHistoryWithHttpInfo(string list);
-        /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void GetSysWrappingLookup();
-
+        ApiResponse<Object> GetSysVersionHistory(string list);
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token.
         /// </summary>
@@ -1734,16 +951,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysWrappingLookupWithHttpInfo();
-        /// <summary>
-        /// The hash of the given string via the given audit backend
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditHashRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest));
-
+        ApiResponse<Object> GetSysWrappingLookup();
         /// <summary>
         /// The hash of the given string via the given audit backend
         /// </summary>
@@ -1754,16 +962,7 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuditHashPathWithHttpInfo(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest));
-        /// <summary>
-        /// Enable a new audit device at the supplied path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest));
-
+        ApiResponse<Object> PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest));
         /// <summary>
         /// Enable a new audit device at the supplied path.
         /// </summary>
@@ -1774,19 +973,7 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuditPathWithHttpInfo(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest));
-        /// <summary>
-        /// Enables a new auth method.
-        /// </summary>
-        /// <remarks>
-        /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="systemAuthRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest));
-
+        ApiResponse<Object> PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest));
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
@@ -1797,19 +984,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuthPathWithHttpInfo(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest));
-        /// <summary>
-        /// Tune configuration parameters for a given auth path.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="systemAuthTuneRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest));
-
+        ApiResponse<Object> PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest));
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
@@ -1820,15 +995,7 @@ namespace VaultClient.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuthPathTuneWithHttpInfo(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest));
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest));
-
+        ApiResponse<Object> PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest));
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -1838,15 +1005,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilitiesWithHttpInfo(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest));
-        /// <summary>
-        /// Fetches the capabilities of the token associated with the given token, on the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest));
-
+        ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest));
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
         /// </summary>
@@ -1856,15 +1015,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilitiesAccessorWithHttpInfo(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest));
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest));
-
+        ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest));
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -1874,16 +1025,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilitiesSelfWithHttpInfo(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest));
-        /// <summary>
-        /// Enable auditing of a header.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest));
-
+        ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest));
         /// <summary>
         /// Enable auditing of a header.
         /// </summary>
@@ -1894,15 +1036,7 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest));
-        /// <summary>
-        /// Configure the CORS settings.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemConfigCorsRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest));
-
+        ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest));
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
@@ -1912,15 +1046,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigCorsWithHttpInfo(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest));
-        /// <summary>
-        /// Reload the given subsystem
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subsystem"></param>
-        /// <returns></returns>
-        void PostSysConfigReloadSubsystem(string subsystem);
-
+        ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest));
         /// <summary>
         /// Reload the given subsystem
         /// </summary>
@@ -1930,16 +1056,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigReloadSubsystemWithHttpInfo(string subsystem);
-        /// <summary>
-        /// Configure the values to be returned for the UI header.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest));
-
+        ApiResponse<Object> PostSysConfigReloadSubsystem(string subsystem);
         /// <summary>
         /// Configure the values to be returned for the UI header.
         /// </summary>
@@ -1950,18 +1067,7 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigUiHeadersHeaderWithHttpInfo(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest));
-        /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest));
-
+        ApiResponse<Object> PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest));
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -1971,18 +1077,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRootWithHttpInfo(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest));
-        /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest));
-
+        ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest));
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -1992,18 +1087,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRootAttemptWithHttpInfo(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest));
-        /// <summary>
-        /// Enter a single unseal key share to progress the root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest));
-
+        ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest));
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
         /// </summary>
@@ -2013,18 +1097,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRootUpdateWithHttpInfo(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest));
-        /// <summary>
-        /// Initialize a new Vault.
-        /// </summary>
-        /// <remarks>
-        /// The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInitRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest));
-
+        ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest));
         /// <summary>
         /// Initialize a new Vault.
         /// </summary>
@@ -2034,15 +1107,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysInitWithHttpInfo(SystemInitRequest systemInitRequest = default(SystemInitRequest));
-        /// <summary>
-        /// Enable or disable collection of client count, set retention period, or set default reporting period.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest));
-
+        ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest));
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
         /// </summary>
@@ -2052,15 +1117,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysInternalCountersConfigWithHttpInfo(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest));
-        /// <summary>
-        /// Retrieve lease metadata.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesLookupRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest));
-
+        ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest));
         /// <summary>
         /// Retrieve lease metadata.
         /// </summary>
@@ -2070,15 +1127,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesLookupWithHttpInfo(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRenewRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest));
-
+        ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -2088,16 +1137,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRenewWithHttpInfo(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest));
-
+        ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -2108,15 +1148,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRenewUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRevokeRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest));
-
+        ApiResponse<Object> PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -2126,18 +1158,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokeWithHttpInfo(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest));
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns></returns>
-        void PostSysLeasesRevokeForcePrefix(string prefix);
-
+        ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest));
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -2147,16 +1168,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokeForcePrefixWithHttpInfo(string prefix);
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest));
-
+        ApiResponse<Object> PostSysLeasesRevokeForcePrefix(string prefix);
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -2167,16 +1179,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokePrefixPrefixWithHttpInfo(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest));
-
+        ApiResponse<Object> PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -2187,14 +1190,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokeUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest));
-        /// <summary>
-        /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void PostSysLeasesTidy();
-
+        ApiResponse<Object> PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest));
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -2203,15 +1199,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesTidyWithHttpInfo();
-        /// <summary>
-        /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemMfaValidateRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest));
-
+        ApiResponse<Object> PostSysLeasesTidy();
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
@@ -2221,16 +1209,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMfaValidateWithHttpInfo(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest));
-        /// <summary>
-        /// Enable a new secrets engine at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest));
-
+        ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest));
         /// <summary>
         /// Enable a new secrets engine at the given path.
         /// </summary>
@@ -2241,16 +1220,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMountsPathWithHttpInfo(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest));
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsTuneRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest));
-
+        ApiResponse<Object> PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest));
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -2261,16 +1231,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMountsPathTuneWithHttpInfo(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest));
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
-
+        ApiResponse<Object> PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest));
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -2281,17 +1242,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsCatalogNameWithHttpInfo(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
-
+        ApiResponse<Object> PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -2303,18 +1254,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsCatalogTypeNameWithHttpInfo(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
-        /// <summary>
-        /// Reload mounted plugin backends.
-        /// </summary>
-        /// <remarks>
-        /// Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest));
-
+        ApiResponse<Object> PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
@@ -2324,16 +1264,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsReloadBackendWithHttpInfo(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest));
-        /// <summary>
-        /// Add a new or update an existing ACL policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPoliciesAclRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest));
-
+        ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest));
         /// <summary>
         /// Add a new or update an existing ACL policy.
         /// </summary>
@@ -2344,16 +1275,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPoliciesAclNameWithHttpInfo(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest));
-        /// <summary>
-        /// Add a new or update an existing password policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest));
-
+        ApiResponse<Object> PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest));
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
@@ -2364,16 +1286,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPoliciesPasswordNameWithHttpInfo(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest));
-        /// <summary>
-        /// Add a new or update an existing policy.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPolicyRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest));
-
+        ApiResponse<Object> PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest));
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
@@ -2384,15 +1297,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPolicyNameWithHttpInfo(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemQuotasConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest));
-
+        ApiResponse<Object> PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -2402,16 +1307,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysQuotasConfigWithHttpInfo(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest));
-
+        ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -2422,15 +1318,7 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysQuotasRateLimitNameWithHttpInfo(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest));
-        /// <summary>
-        /// Update the value of the key at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest));
-
+        ApiResponse<Object> PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest));
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -2440,16 +1328,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRawWithHttpInfo(SystemRawRequest systemRawRequest = default(SystemRawRequest));
-        /// <summary>
-        /// Update the value of the key at the given path.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest));
-
+        ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest));
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -2460,18 +1339,7 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRawPathWithHttpInfo(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest));
-        /// <summary>
-        /// Initializes a new rekey attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyInitRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest));
-
+        ApiResponse<Object> PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest));
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
@@ -2481,15 +1349,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyInitWithHttpInfo(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest));
-        /// <summary>
-        /// Enter a single unseal key share to progress the rekey of the Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyUpdateRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest));
-
+        ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest));
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
         /// </summary>
@@ -2499,15 +1359,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyUpdateWithHttpInfo(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest));
-        /// <summary>
-        /// Enter a single new key share to progress the rekey verification operation.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyVerifyRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest));
-
+        ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest));
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
         /// </summary>
@@ -2517,15 +1369,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyVerifyWithHttpInfo(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest));
-        /// <summary>
-        /// Initiate a mount migration
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRemountRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest));
-
+        ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest));
         /// <summary>
         /// Initiate a mount migration
         /// </summary>
@@ -2535,15 +1379,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRemountWithHttpInfo(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRenewRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest));
-
+        ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -2553,16 +1389,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRenewWithHttpInfo(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRenewLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest));
-
+        ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -2573,15 +1400,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRenewUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRevokeRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest));
-
+        ApiResponse<Object> PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -2591,18 +1410,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokeWithHttpInfo(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest));
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns></returns>
-        void PostSysRevokeForcePrefix(string prefix);
-
+        ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest));
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -2612,16 +1420,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokeForcePrefixWithHttpInfo(string prefix);
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemRevokePrefixRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest));
-
+        ApiResponse<Object> PostSysRevokeForcePrefix(string prefix);
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -2632,16 +1431,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokePrefixPrefixWithHttpInfo(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRevokeLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest));
-
+        ApiResponse<Object> PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -2652,14 +1442,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokeUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest));
-        /// <summary>
-        /// Rotates the backend encryption key used to persist data.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void PostSysRotate();
-
+        ApiResponse<Object> PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest));
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
@@ -2668,15 +1451,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRotateWithHttpInfo();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRotateConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest));
-
+        ApiResponse<Object> PostSysRotate();
         /// <summary>
         /// 
         /// </summary>
@@ -2686,14 +1461,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRotateConfigWithHttpInfo(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest));
-        /// <summary>
-        /// Seal the Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void PostSysSeal();
-
+        ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest));
         /// <summary>
         /// Seal the Vault.
         /// </summary>
@@ -2702,17 +1470,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysSealWithHttpInfo();
-        /// <summary>
-        /// Cause the node to give up active status.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void PostSysStepDown();
-
+        ApiResponse<Object> PostSysSeal();
         /// <summary>
         /// Cause the node to give up active status.
         /// </summary>
@@ -2721,15 +1479,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysStepDownWithHttpInfo();
-        /// <summary>
-        /// Generate a hash sum for input data
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
-
+        ApiResponse<Object> PostSysStepDown();
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -2739,16 +1489,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsHashWithHttpInfo(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
-        /// <summary>
-        /// Generate a hash sum for input data
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
-
+        ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -2759,15 +1500,7 @@ namespace VaultClient.Api
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsHashUrlalgorithmWithHttpInfo(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-
+        ApiResponse<Object> PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -2777,16 +1510,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomWithHttpInfo(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-
+        ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -2797,17 +1521,7 @@ namespace VaultClient.Api
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomSourceWithHttpInfo(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-
+        ApiResponse<Object> PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -2819,16 +1533,7 @@ namespace VaultClient.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomSourceUrlbytesWithHttpInfo(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-
+        ApiResponse<Object> PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -2839,15 +1544,7 @@ namespace VaultClient.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomUrlbytesWithHttpInfo(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
-        /// <summary>
-        /// Unseal the Vault.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemUnsealRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest));
-
+        ApiResponse<Object> PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
@@ -2857,15 +1554,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysUnsealWithHttpInfo(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest));
-        /// <summary>
-        /// Look up wrapping properties for the given token.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingLookupRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest));
-
+        ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest));
         /// <summary>
         /// Look up wrapping properties for the given token.
         /// </summary>
@@ -2875,15 +1564,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingLookupWithHttpInfo(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest));
-        /// <summary>
-        /// Rotates a response-wrapped token.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingRewrapRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest));
-
+        ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest));
         /// <summary>
         /// Rotates a response-wrapped token.
         /// </summary>
@@ -2893,15 +1574,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingRewrapWithHttpInfo(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest));
-        /// <summary>
-        /// Unwraps a response-wrapped token.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
-        /// <returns></returns>
-        void PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest));
-
+        ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest));
         /// <summary>
         /// Unwraps a response-wrapped token.
         /// </summary>
@@ -2911,14 +1584,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingUnwrapWithHttpInfo(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest));
-        /// <summary>
-        /// Response-wraps an arbitrary JSON object.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void PostSysWrappingWrap();
-
+        ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest));
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
         /// </summary>
@@ -2927,7 +1593,7 @@ namespace VaultClient.Api
         /// </remarks>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingWrapWithHttpInfo();
+        ApiResponse<Object> PostSysWrappingWrap();
         #endregion Synchronous Operations
     }
 
@@ -2937,18 +1603,7 @@ namespace VaultClient.Api
     public interface ISystemApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
-        /// <summary>
-        /// Disable the audit device at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+   
         /// <summary>
         /// Disable the audit device at the given path.
         /// </summary>
@@ -2959,19 +1614,8 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysAuditPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Disable the auth method at the given auth path
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Disable the auth method at the given auth path
         /// </summary>
@@ -2982,19 +1626,8 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysAuthPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Disable auditing of the given request header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Disable auditing of the given request header.
         /// </summary>
@@ -3005,18 +1638,8 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Remove any CORS settings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Remove any CORS settings.
         /// </summary>
@@ -3026,19 +1649,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigCorsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Remove a UI header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Remove a UI header.
         /// </summary>
@@ -3049,18 +1661,8 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -3070,18 +1672,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysGenerateRootWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -3091,19 +1683,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysGenerateRootAttemptWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Disable the mount point specified at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Disable the mount point specified at the given path.
         /// </summary>
@@ -3114,19 +1695,8 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Remove the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -3137,20 +1707,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPluginsCatalogNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Remove the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -3162,19 +1720,8 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete the ACL policy with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
@@ -3185,19 +1732,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPoliciesAclNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete a password policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete a password policy.
         /// </summary>
@@ -3208,19 +1744,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPoliciesPasswordNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete the policy with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete the policy with the given name.
         /// </summary>
@@ -3231,19 +1756,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPolicyNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -3254,18 +1768,8 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysQuotasRateLimitNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete the key with given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -3275,19 +1779,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRawWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete the key with given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -3298,18 +1791,8 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRawPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete the backup copy of PGP-encrypted unseal keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -3319,18 +1802,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Cancels any in-progress rekey.
-        /// </summary>
-        /// <remarks>
-        /// This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
@@ -3340,18 +1813,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -3361,18 +1824,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Cancel any in-progress rekey verification operation.
-        /// </summary>
-        /// <remarks>
-        /// This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
         /// </summary>
@@ -3382,18 +1835,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyVerifyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the enabled audit devices.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the enabled audit devices.
         /// </summary>
@@ -3403,18 +1846,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuditWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the currently enabled credential backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the currently enabled credential backends.
         /// </summary>
@@ -3424,19 +1857,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the configuration of the auth engine at the given path.
         /// </summary>
@@ -3447,19 +1869,8 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Reads the given auth path&#39;s configuration.
         /// </summary>
@@ -3470,18 +1881,8 @@ namespace VaultClient.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthPathTuneWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the request headers that are configured to be audited.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the request headers that are configured to be audited.
         /// </summary>
@@ -3491,19 +1892,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the information for the given request header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the information for the given request header.
         /// </summary>
@@ -3514,18 +1904,8 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return the current CORS settings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return the current CORS settings.
         /// </summary>
@@ -3535,18 +1915,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigCorsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration.
-        /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return a sanitized version of the Vault server configuration.
         /// </summary>
@@ -3556,19 +1926,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigStateSanitizedWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return a list of configured UI headers.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return a list of configured UI headers.
         /// </summary>
@@ -3579,19 +1938,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigUiHeadersWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return the given UI header&#39;s configuration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return the given UI header&#39;s configuration
         /// </summary>
@@ -3602,18 +1950,8 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
@@ -3623,18 +1961,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysGenerateRootWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
@@ -3644,18 +1972,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysGenerateRootAttemptWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Check the HA status of a Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Check the HA status of a Vault cluster
         /// </summary>
@@ -3665,18 +1983,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHaStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the health status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the health status of Vault.
         /// </summary>
@@ -3686,18 +1994,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHealthWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on.
-        /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Information about the host instance that this Vault server is running on.
         /// </summary>
@@ -3707,18 +2005,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHostInfoWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// reports in-flight requests
-        /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// reports in-flight requests
         /// </summary>
@@ -3728,18 +2016,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInFlightReqWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the initialization status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the initialization status of Vault.
         /// </summary>
@@ -3749,18 +2027,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
@@ -3770,18 +2038,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
@@ -3791,18 +2049,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityExportWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces.
         /// </summary>
@@ -3812,18 +2060,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityMonthlyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the client count tracking configuration.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the client count tracking configuration.
         /// </summary>
@@ -3833,18 +2071,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -3854,18 +2082,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersEntitiesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -3875,18 +2093,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersRequestsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -3896,18 +2104,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersTokensWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths.
         /// </summary>
@@ -3917,18 +2115,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalSpecsOpenapiWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Lists enabled feature flags.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Lists enabled feature flags.
         /// </summary>
@@ -3938,18 +2126,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiFeatureFlagsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts.
         /// </summary>
@@ -3959,19 +2137,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiMountsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return information about the given mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return information about the given mount.
         /// </summary>
@@ -3982,18 +2149,8 @@ namespace VaultClient.Api
         /// <param name="path">The path of the mount.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -4003,18 +2160,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiNamespacesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
@@ -4024,18 +2171,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiResultantAclWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Provides information about the backend encryption key.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Provides information about the backend encryption key.
         /// </summary>
@@ -4045,18 +2182,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysKeyStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault.
         /// </summary>
@@ -4066,18 +2193,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeaderWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List leases associated with this Vault cluster
         /// </summary>
@@ -4087,18 +2204,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Count of leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Count of leases associated with this Vault cluster
         /// </summary>
@@ -4108,19 +2215,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesCountWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns a list of lease ids.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -4131,20 +2227,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesLookupWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns a list of lease ids.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -4156,19 +2240,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesLookupPrefixWithHttpInfoAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose.
         /// </summary>
@@ -4179,20 +2252,8 @@ namespace VaultClient.Api
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMetricsWithHttpInfoAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -4204,18 +2265,8 @@ namespace VaultClient.Api
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMonitorWithHttpInfoAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the currently mounted backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the currently mounted backends.
         /// </summary>
@@ -4225,19 +2276,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
         /// </summary>
@@ -4248,19 +2288,8 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -4271,18 +2300,8 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsPathTuneWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Lists all the plugins known to Vault
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Lists all the plugins known to Vault
         /// </summary>
@@ -4292,19 +2311,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -4315,20 +2323,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the plugins in the catalog.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
@@ -4340,20 +2336,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeWithHttpInfoAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -4365,19 +2349,8 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -4388,19 +2361,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesAclWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve information about the named ACL policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
@@ -4411,19 +2373,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesAclNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the existing password policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the existing password policies.
         /// </summary>
@@ -4434,19 +2385,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve an existing password policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
@@ -4457,19 +2397,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate a password from an existing password policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate a password from an existing password policy.
         /// </summary>
@@ -4480,19 +2409,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -4503,19 +2421,8 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPolicyWithHttpInfoAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve the policy body for the named policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
@@ -4526,18 +2433,8 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPolicyNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns an HTML page listing the available profiles.
-        /// </summary>
-        /// <remarks>
-        /// Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
@@ -4547,18 +2444,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns a sampling of all past memory allocations.
-        /// </summary>
-        /// <remarks>
-        /// Returns a sampling of all past memory allocations.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns a sampling of all past memory allocations.
         /// </summary>
@@ -4568,18 +2455,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofAllocsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
@@ -4589,18 +2466,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofBlockWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the running program&#39;s command line.
-        /// </summary>
-        /// <remarks>
-        /// Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the running program&#39;s command line.
         /// </summary>
@@ -4610,18 +2477,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofCmdlineWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns stack traces of all current goroutines.
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces of all current goroutines.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns stack traces of all current goroutines.
         /// </summary>
@@ -4631,18 +2488,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofGoroutineWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns a sampling of memory allocations of live object.
-        /// </summary>
-        /// <remarks>
-        /// Returns a sampling of memory allocations of live object.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
         /// </summary>
@@ -4652,18 +2499,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofHeapWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns stack traces of holders of contended mutexes
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces of holders of contended mutexes
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
         /// </summary>
@@ -4673,18 +2510,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofMutexWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns a pprof-formatted cpu profile payload.
-        /// </summary>
-        /// <remarks>
-        /// Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
         /// </summary>
@@ -4694,18 +2521,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofProfileWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the program counters listed in the request.
-        /// </summary>
-        /// <remarks>
-        /// Returns the program counters listed in the request.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the program counters listed in the request.
         /// </summary>
@@ -4715,18 +2532,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofSymbolWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
         /// </summary>
@@ -4736,18 +2543,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofThreadcreateWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns the execution trace in binary form.
-        /// </summary>
-        /// <remarks>
-        /// Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns the execution trace in binary form.
         /// </summary>
@@ -4757,18 +2554,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofTraceWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -4778,19 +2565,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -4801,19 +2577,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasRateLimitWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -4824,19 +2589,8 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasRateLimitNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the value of the key at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -4847,20 +2601,8 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRawWithHttpInfoAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the value of the key at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -4872,18 +2614,8 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRawPathWithHttpInfoAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Return the backup copy of PGP-encrypted unseal keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -4893,18 +2625,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Reads the configuration and progress of the current rekey attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
         /// </summary>
@@ -4914,18 +2636,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -4935,18 +2647,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Read the configuration and progress of the current rekey verification attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
         /// </summary>
@@ -4956,19 +2658,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyVerifyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Check status of a mount migration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="migrationId">The ID of the migration operation</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Check status of a mount migration
         /// </summary>
@@ -4979,18 +2670,8 @@ namespace VaultClient.Api
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRemountStatusMigrationIdWithHttpInfoAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -5000,18 +2681,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysReplicationStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -5021,18 +2692,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRotateConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Check the seal status of a Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Check the seal status of a Vault.
         /// </summary>
@@ -5042,19 +2703,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysSealStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Returns map of historical version change entries
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Returns map of historical version change entries
         /// </summary>
@@ -5065,18 +2715,8 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysVersionHistoryWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token.
         /// </summary>
@@ -5086,20 +2726,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysWrappingLookupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// The hash of the given string via the given audit backend
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// The hash of the given string via the given audit backend
         /// </summary>
@@ -5111,20 +2739,8 @@ namespace VaultClient.Api
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuditHashPathWithHttpInfoAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enable a new audit device at the supplied path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enable a new audit device at the supplied path.
         /// </summary>
@@ -5136,20 +2752,8 @@ namespace VaultClient.Api
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuditPathWithHttpInfoAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enables a new auth method.
-        /// </summary>
-        /// <remarks>
-        /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="systemAuthRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
@@ -5161,20 +2765,8 @@ namespace VaultClient.Api
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuthPathWithHttpInfoAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Tune configuration parameters for a given auth path.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="systemAuthTuneRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
@@ -5186,19 +2778,8 @@ namespace VaultClient.Api
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuthPathTuneWithHttpInfoAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -5209,19 +2790,8 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesWithHttpInfoAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Fetches the capabilities of the token associated with the given token, on the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
         /// </summary>
@@ -5232,19 +2802,8 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesAccessorWithHttpInfoAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -5255,20 +2814,8 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesSelfWithHttpInfoAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enable auditing of a header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enable auditing of a header.
         /// </summary>
@@ -5280,19 +2827,8 @@ namespace VaultClient.Api
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Configure the CORS settings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemConfigCorsRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
@@ -5303,19 +2839,8 @@ namespace VaultClient.Api
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigCorsWithHttpInfoAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Reload the given subsystem
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subsystem"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Reload the given subsystem
         /// </summary>
@@ -5326,20 +2851,8 @@ namespace VaultClient.Api
         /// <param name="subsystem"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigReloadSubsystemWithHttpInfoAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Configure the values to be returned for the UI header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Configure the values to be returned for the UI header.
         /// </summary>
@@ -5351,19 +2864,8 @@ namespace VaultClient.Api
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -5374,19 +2876,8 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootWithHttpInfoAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -5397,19 +2888,8 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootAttemptWithHttpInfoAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enter a single unseal key share to progress the root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
         /// </summary>
@@ -5420,19 +2900,8 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootUpdateWithHttpInfoAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Initialize a new Vault.
-        /// </summary>
-        /// <remarks>
-        /// The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Initialize a new Vault.
         /// </summary>
@@ -5443,19 +2912,8 @@ namespace VaultClient.Api
         /// <param name="systemInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysInitWithHttpInfoAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enable or disable collection of client count, set retention period, or set default reporting period.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
         /// </summary>
@@ -5466,19 +2924,8 @@ namespace VaultClient.Api
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysInternalCountersConfigWithHttpInfoAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Retrieve lease metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesLookupRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Retrieve lease metadata.
         /// </summary>
@@ -5489,19 +2936,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesLookupWithHttpInfoAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRenewRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -5512,20 +2948,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRenewWithHttpInfoAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -5537,19 +2961,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRevokeRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -5560,19 +2973,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeWithHttpInfoAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -5583,20 +2985,8 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeForcePrefixWithHttpInfoAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -5608,20 +2998,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixWithHttpInfoAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -5633,18 +3011,8 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -5654,19 +3022,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesTidyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemMfaValidateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
@@ -5677,20 +3034,8 @@ namespace VaultClient.Api
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMfaValidateWithHttpInfoAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enable a new secrets engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enable a new secrets engine at the given path.
         /// </summary>
@@ -5702,20 +3047,8 @@ namespace VaultClient.Api
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMountsPathWithHttpInfoAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsTuneRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -5727,20 +3060,8 @@ namespace VaultClient.Api
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMountsPathTuneWithHttpInfoAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -5752,21 +3073,8 @@ namespace VaultClient.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsCatalogNameWithHttpInfoAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -5779,19 +3087,8 @@ namespace VaultClient.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Reload mounted plugin backends.
-        /// </summary>
-        /// <remarks>
-        /// Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
@@ -5802,20 +3099,8 @@ namespace VaultClient.Api
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsReloadBackendWithHttpInfoAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Add a new or update an existing ACL policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPoliciesAclRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Add a new or update an existing ACL policy.
         /// </summary>
@@ -5827,20 +3112,8 @@ namespace VaultClient.Api
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPoliciesAclNameWithHttpInfoAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Add a new or update an existing password policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
@@ -5852,20 +3125,8 @@ namespace VaultClient.Api
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPoliciesPasswordNameWithHttpInfoAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Add a new or update an existing policy.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPolicyRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
@@ -5877,19 +3138,8 @@ namespace VaultClient.Api
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPolicyNameWithHttpInfoAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemQuotasConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -5900,20 +3150,8 @@ namespace VaultClient.Api
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysQuotasConfigWithHttpInfoAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -5925,19 +3163,8 @@ namespace VaultClient.Api
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysQuotasRateLimitNameWithHttpInfoAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Update the value of the key at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -5948,20 +3175,8 @@ namespace VaultClient.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRawWithHttpInfoAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Update the value of the key at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -5973,19 +3188,8 @@ namespace VaultClient.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRawPathWithHttpInfoAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Initializes a new rekey attempt.
-        /// </summary>
-        /// <remarks>
-        /// Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyInitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
@@ -5996,19 +3200,8 @@ namespace VaultClient.Api
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyInitWithHttpInfoAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enter a single unseal key share to progress the rekey of the Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyUpdateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
         /// </summary>
@@ -6019,19 +3212,8 @@ namespace VaultClient.Api
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyUpdateWithHttpInfoAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Enter a single new key share to progress the rekey verification operation.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyVerifyRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
         /// </summary>
@@ -6042,19 +3224,8 @@ namespace VaultClient.Api
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyVerifyWithHttpInfoAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Initiate a mount migration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRemountRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Initiate a mount migration
         /// </summary>
@@ -6065,19 +3236,8 @@ namespace VaultClient.Api
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRemountWithHttpInfoAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRenewRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -6088,20 +3248,8 @@ namespace VaultClient.Api
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRenewWithHttpInfoAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRenewLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -6113,19 +3261,8 @@ namespace VaultClient.Api
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRenewUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRevokeRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -6136,19 +3273,8 @@ namespace VaultClient.Api
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeWithHttpInfoAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -6159,20 +3285,8 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeForcePrefixWithHttpInfoAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemRevokePrefixRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -6184,20 +3298,8 @@ namespace VaultClient.Api
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokePrefixPrefixWithHttpInfoAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRevokeLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -6209,18 +3311,8 @@ namespace VaultClient.Api
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Rotates the backend encryption key used to persist data.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
@@ -6230,19 +3322,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRotateWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRotateConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// 
         /// </summary>
@@ -6253,18 +3334,8 @@ namespace VaultClient.Api
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRotateConfigWithHttpInfoAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Seal the Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Seal the Vault.
         /// </summary>
@@ -6274,18 +3345,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysSealWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Cause the node to give up active status.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Cause the node to give up active status.
         /// </summary>
@@ -6295,19 +3356,8 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysStepDownWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate a hash sum for input data
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -6318,20 +3368,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsHashWithHttpInfoAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate a hash sum for input data
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -6343,19 +3381,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsHashUrlalgorithmWithHttpInfoAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -6366,20 +3393,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomWithHttpInfoAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -6391,21 +3406,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomSourceWithHttpInfoAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -6418,20 +3420,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesWithHttpInfoAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Generate random bytes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -6443,19 +3433,8 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomUrlbytesWithHttpInfoAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Unseal the Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemUnsealRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
@@ -6466,19 +3445,8 @@ namespace VaultClient.Api
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysUnsealWithHttpInfoAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Look up wrapping properties for the given token.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingLookupRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Look up wrapping properties for the given token.
         /// </summary>
@@ -6489,19 +3457,8 @@ namespace VaultClient.Api
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingLookupWithHttpInfoAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Rotates a response-wrapped token.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingRewrapRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Rotates a response-wrapped token.
         /// </summary>
@@ -6512,19 +3469,8 @@ namespace VaultClient.Api
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingRewrapWithHttpInfoAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Unwraps a response-wrapped token.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Unwraps a response-wrapped token.
         /// </summary>
@@ -6535,18 +3481,8 @@ namespace VaultClient.Api
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingUnwrapWithHttpInfoAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Response-wraps an arbitrary JSON object.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        Task PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken));
-
+        Task<ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken));
+   
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
         /// </summary>
@@ -6556,7 +3492,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingWrapWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -6770,16 +3706,6 @@ namespace VaultClient.Api
             set { _exceptionFactory = value; }
         }
 
-        /// <summary>
-        /// Disable the audit device at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <returns></returns>
-        public void DeleteSysAuditPath(string path)
-        {
-            DeleteSysAuditPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Disable the audit device at the given path. 
@@ -6787,7 +3713,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysAuditPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysAuditPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -6823,17 +3749,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable the audit device at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysAuditPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Disable the audit device at the given path. 
@@ -6842,7 +3757,7 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysAuditPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -6881,16 +3796,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable the auth method at the given auth path 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns></returns>
-        public void DeleteSysAuthPath(string path)
-        {
-            DeleteSysAuthPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Disable the auth method at the given auth path 
@@ -6898,7 +3803,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysAuthPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysAuthPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -6934,17 +3839,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable the auth method at the given auth path 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysAuthPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Disable the auth method at the given auth path 
@@ -6953,7 +3847,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysAuthPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -6992,16 +3886,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable auditing of the given request header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns></returns>
-        public void DeleteSysConfigAuditingRequestHeadersHeader(string header)
-        {
-            DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfo(header);
-        }
 
         /// <summary>
         /// Disable auditing of the given request header. 
@@ -7009,7 +3893,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -7045,17 +3929,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable auditing of the given request header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(header, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Disable auditing of the given request header. 
@@ -7064,7 +3937,7 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -7103,22 +3976,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove any CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysConfigCors()
-        {
-            DeleteSysConfigCorsWithHttpInfo();
-        }
 
         /// <summary>
         /// Remove any CORS settings. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigCorsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigCors()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7149,16 +4013,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove any CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysConfigCorsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Remove any CORS settings. 
@@ -7166,7 +4020,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigCorsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7200,16 +4054,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove a UI header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns></returns>
-        public void DeleteSysConfigUiHeadersHeader(string header)
-        {
-            DeleteSysConfigUiHeadersHeaderWithHttpInfo(header);
-        }
 
         /// <summary>
         /// Remove a UI header. 
@@ -7217,7 +4061,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigUiHeadersHeaderWithHttpInfo(string header)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysConfigUiHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -7253,17 +4097,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove a UI header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysConfigUiHeadersHeaderWithHttpInfoAsync(header, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Remove a UI header. 
@@ -7272,7 +4105,7 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -7311,22 +4144,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysGenerateRoot()
-        {
-            DeleteSysGenerateRootWithHttpInfo();
-        }
 
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysGenerateRootWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysGenerateRoot()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7357,16 +4181,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysGenerateRootWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
@@ -7374,7 +4188,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysGenerateRootWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7408,22 +4222,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysGenerateRootAttempt()
-        {
-            DeleteSysGenerateRootAttemptWithHttpInfo();
-        }
 
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysGenerateRootAttemptWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysGenerateRootAttempt()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7454,16 +4259,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysGenerateRootAttemptWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
@@ -7471,7 +4266,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysGenerateRootAttemptWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7505,16 +4300,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable the mount point specified at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        public void DeleteSysMountsPath(string path)
-        {
-            DeleteSysMountsPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Disable the mount point specified at the given path. 
@@ -7522,7 +4307,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysMountsPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysMountsPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -7558,17 +4343,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Disable the mount point specified at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysMountsPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Disable the mount point specified at the given path. 
@@ -7577,7 +4351,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -7616,16 +4390,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <returns></returns>
-        public void DeleteSysPluginsCatalogName(string name)
-        {
-            DeleteSysPluginsCatalogNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Remove the plugin with the given name. 
@@ -7633,7 +4397,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysPluginsCatalogNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysPluginsCatalogName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7669,17 +4433,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysPluginsCatalogNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Remove the plugin with the given name. 
@@ -7688,7 +4441,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPluginsCatalogNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7727,17 +4480,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <returns></returns>
-        public void DeleteSysPluginsCatalogTypeName(string name, string type)
-        {
-            DeleteSysPluginsCatalogTypeNameWithHttpInfo(name, type);
-        }
 
         /// <summary>
         /// Remove the plugin with the given name. 
@@ -7746,7 +4488,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysPluginsCatalogTypeNameWithHttpInfo(string name, string type)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysPluginsCatalogTypeName(string name, string type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7787,18 +4529,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Remove the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysPluginsCatalogTypeNameWithHttpInfoAsync(name, type, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Remove the plugin with the given name. 
@@ -7808,7 +4538,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7852,16 +4582,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the ACL policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        public void DeleteSysPoliciesAclName(string name)
-        {
-            DeleteSysPoliciesAclNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Delete the ACL policy with the given name. 
@@ -7869,7 +4589,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysPoliciesAclNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysPoliciesAclName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7905,17 +4625,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the ACL policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysPoliciesAclNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete the ACL policy with the given name. 
@@ -7924,7 +4633,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPoliciesAclNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7963,16 +4672,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete a password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        public void DeleteSysPoliciesPasswordName(string name)
-        {
-            DeleteSysPoliciesPasswordNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Delete a password policy. 
@@ -7980,7 +4679,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysPoliciesPasswordNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysPoliciesPasswordName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8016,17 +4715,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete a password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysPoliciesPasswordNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete a password policy. 
@@ -8035,7 +4723,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPoliciesPasswordNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8074,16 +4762,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        public void DeleteSysPolicyName(string name)
-        {
-            DeleteSysPolicyNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Delete the policy with the given name. 
@@ -8091,7 +4769,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysPolicyNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysPolicyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8127,17 +4805,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysPolicyNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete the policy with the given name. 
@@ -8146,7 +4813,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPolicyNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8185,16 +4852,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <returns></returns>
-        public void DeleteSysQuotasRateLimitName(string name)
-        {
-            DeleteSysQuotasRateLimitNameWithHttpInfo(name);
-        }
 
         /// <summary>
         ///  
@@ -8202,7 +4859,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysQuotasRateLimitNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysQuotasRateLimitName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8238,17 +4895,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysQuotasRateLimitNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -8257,7 +4903,7 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysQuotasRateLimitNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8296,22 +4942,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the key with given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysRaw()
-        {
-            DeleteSysRawWithHttpInfo();
-        }
 
         /// <summary>
         /// Delete the key with given path. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRawWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRaw()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8342,16 +4979,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the key with given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRawWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete the key with given path. 
@@ -8359,7 +4986,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRawWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8393,16 +5020,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the key with given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public void DeleteSysRawPath(string path)
-        {
-            DeleteSysRawPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Delete the key with given path. 
@@ -8410,7 +5027,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRawPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRawPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -8446,17 +5063,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the key with given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRawPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete the key with given path. 
@@ -8465,7 +5071,7 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRawPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -8504,22 +5110,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the backup copy of PGP-encrypted unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysRekeyBackup()
-        {
-            DeleteSysRekeyBackupWithHttpInfo();
-        }
 
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyBackupWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyBackup()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8550,16 +5147,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Delete the backup copy of PGP-encrypted unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRekeyBackupWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys. 
@@ -8567,7 +5154,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8601,22 +5188,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysRekeyInit()
-        {
-            DeleteSysRekeyInitWithHttpInfo();
-        }
 
         /// <summary>
         /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyInitWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyInit()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8647,16 +5225,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRekeyInitWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
@@ -8664,7 +5232,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8698,22 +5266,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysRekeyRecoveryKeyBackup()
-        {
-            DeleteSysRekeyRecoveryKeyBackupWithHttpInfo();
-        }
 
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackupWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8744,16 +5303,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRekeyRecoveryKeyBackupWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
@@ -8761,7 +5310,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8795,22 +5344,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteSysRekeyVerify()
-        {
-            DeleteSysRekeyVerifyWithHttpInfo();
-        }
 
         /// <summary>
         /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyVerifyWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> DeleteSysRekeyVerify()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8841,16 +5381,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await DeleteSysRekeyVerifyWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
@@ -8858,7 +5388,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyVerifyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8892,22 +5422,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the enabled audit devices. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysAudit()
-        {
-            GetSysAuditWithHttpInfo();
-        }
 
         /// <summary>
         /// List the enabled audit devices. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysAuditWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysAudit()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8938,16 +5459,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the enabled audit devices. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysAuditWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the enabled audit devices. 
@@ -8955,7 +5466,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuditWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8989,22 +5500,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the currently enabled credential backends. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysAuth()
-        {
-            GetSysAuthWithHttpInfo();
-        }
 
         /// <summary>
         /// List the currently enabled credential backends. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysAuthWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysAuth()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9035,16 +5537,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the currently enabled credential backends. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysAuthWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the currently enabled credential backends. 
@@ -9052,7 +5544,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9086,16 +5578,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns></returns>
-        public void GetSysAuthPath(string path)
-        {
-            GetSysAuthPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Read the configuration of the auth engine at the given path. 
@@ -9103,7 +5585,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysAuthPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> GetSysAuthPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -9139,17 +5621,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysAuthPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the configuration of the auth engine at the given path. 
@@ -9158,7 +5629,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -9197,16 +5668,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <returns></returns>
-        public void GetSysAuthPathTune(string path)
-        {
-            GetSysAuthPathTuneWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
@@ -9214,7 +5675,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysAuthPathTuneWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> GetSysAuthPathTune(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -9250,17 +5711,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysAuthPathTuneWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
@@ -9269,7 +5719,7 @@ namespace VaultClient.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthPathTuneWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -9308,22 +5758,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the request headers that are configured to be audited. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysConfigAuditingRequestHeaders()
-        {
-            GetSysConfigAuditingRequestHeadersWithHttpInfo();
-        }
 
         /// <summary>
         /// List the request headers that are configured to be audited. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigAuditingRequestHeadersWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigAuditingRequestHeaders()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9354,16 +5795,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the request headers that are configured to be audited. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigAuditingRequestHeadersWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the request headers that are configured to be audited. 
@@ -9371,7 +5802,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigAuditingRequestHeadersWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9405,16 +5836,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the information for the given request header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns></returns>
-        public void GetSysConfigAuditingRequestHeadersHeader(string header)
-        {
-            GetSysConfigAuditingRequestHeadersHeaderWithHttpInfo(header);
-        }
 
         /// <summary>
         /// List the information for the given request header. 
@@ -9422,7 +5843,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header)
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -9458,17 +5879,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the information for the given request header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(header, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the information for the given request header. 
@@ -9477,7 +5887,7 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -9516,22 +5926,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the current CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysConfigCors()
-        {
-            GetSysConfigCorsWithHttpInfo();
-        }
 
         /// <summary>
         /// Return the current CORS settings. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigCorsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigCors()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9562,16 +5963,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the current CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigCorsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return the current CORS settings. 
@@ -9579,7 +5970,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigCorsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9613,22 +6004,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysConfigStateSanitized()
-        {
-            GetSysConfigStateSanitizedWithHttpInfo();
-        }
 
         /// <summary>
         /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigStateSanitizedWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigStateSanitized()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9659,16 +6041,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigStateSanitizedWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
@@ -9676,7 +6048,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigStateSanitizedWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9710,16 +6082,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return a list of configured UI headers. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysConfigUiHeaders(string list)
-        {
-            GetSysConfigUiHeadersWithHttpInfo(list);
-        }
 
         /// <summary>
         /// Return a list of configured UI headers. 
@@ -9727,7 +6089,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigUiHeadersWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigUiHeaders(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -9763,17 +6125,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return a list of configured UI headers. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigUiHeadersWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return a list of configured UI headers. 
@@ -9782,7 +6133,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigUiHeadersWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -9821,16 +6172,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the given UI header&#39;s configuration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns></returns>
-        public void GetSysConfigUiHeadersHeader(string header)
-        {
-            GetSysConfigUiHeadersHeaderWithHttpInfo(header);
-        }
 
         /// <summary>
         /// Return the given UI header&#39;s configuration 
@@ -9838,7 +6179,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysConfigUiHeadersHeaderWithHttpInfo(string header)
+        public VaultClient.Client.ApiResponse<Object> GetSysConfigUiHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -9874,17 +6215,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the given UI header&#39;s configuration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysConfigUiHeadersHeaderWithHttpInfoAsync(header, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return the given UI header&#39;s configuration 
@@ -9893,7 +6223,7 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -9932,22 +6262,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysGenerateRoot()
-        {
-            GetSysGenerateRootWithHttpInfo();
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysGenerateRootWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysGenerateRoot()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9978,16 +6299,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysGenerateRootWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
@@ -9995,7 +6306,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysGenerateRootWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10029,22 +6340,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysGenerateRootAttempt()
-        {
-            GetSysGenerateRootAttemptWithHttpInfo();
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysGenerateRootAttemptWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysGenerateRootAttempt()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10075,16 +6377,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysGenerateRootAttemptWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
@@ -10092,7 +6384,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysGenerateRootAttemptWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10126,22 +6418,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check the HA status of a Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysHaStatus()
-        {
-            GetSysHaStatusWithHttpInfo();
-        }
 
         /// <summary>
         /// Check the HA status of a Vault cluster 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysHaStatusWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysHaStatus()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10172,16 +6455,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check the HA status of a Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysHaStatusWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Check the HA status of a Vault cluster 
@@ -10189,7 +6462,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHaStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10223,22 +6496,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the health status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysHealth()
-        {
-            GetSysHealthWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the health status of Vault. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysHealthWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysHealth()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10269,16 +6533,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the health status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysHealthWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the health status of Vault. 
@@ -10286,7 +6540,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHealthWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10320,22 +6574,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysHostInfo()
-        {
-            GetSysHostInfoWithHttpInfo();
-        }
 
         /// <summary>
         /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysHostInfoWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysHostInfo()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10366,16 +6611,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysHostInfoWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
@@ -10383,7 +6618,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHostInfoWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10417,22 +6652,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInFlightReq()
-        {
-            GetSysInFlightReqWithHttpInfo();
-        }
 
         /// <summary>
         /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInFlightReqWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInFlightReq()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10463,16 +6689,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInFlightReqWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
@@ -10480,7 +6696,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInFlightReqWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10514,22 +6730,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the initialization status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInit()
-        {
-            GetSysInitWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the initialization status of Vault. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInitWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInit()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10560,16 +6767,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the initialization status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInitWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the initialization status of Vault. 
@@ -10577,7 +6774,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10611,22 +6808,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersActivity()
-        {
-            GetSysInternalCountersActivityWithHttpInfo();
-        }
 
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivityWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivity()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10657,16 +6845,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersActivityWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
@@ -10674,7 +6852,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10708,22 +6886,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersActivityExport()
-        {
-            GetSysInternalCountersActivityExportWithHttpInfo();
-        }
 
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivityExportWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivityExport()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10754,16 +6923,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersActivityExportWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
@@ -10771,7 +6930,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityExportWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10805,22 +6964,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersActivityMonthly()
-        {
-            GetSysInternalCountersActivityMonthlyWithHttpInfo();
-        }
 
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivityMonthlyWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersActivityMonthly()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10851,16 +7001,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersActivityMonthlyWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces. 
@@ -10868,7 +7008,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityMonthlyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10902,22 +7042,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the client count tracking configuration. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersConfig()
-        {
-            GetSysInternalCountersConfigWithHttpInfo();
-        }
 
         /// <summary>
         /// Read the client count tracking configuration. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersConfigWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersConfig()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10948,16 +7079,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the client count tracking configuration. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersConfigWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the client count tracking configuration. 
@@ -10965,7 +7086,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10999,22 +7120,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersEntities()
-        {
-            GetSysInternalCountersEntitiesWithHttpInfo();
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersEntitiesWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersEntities()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11045,16 +7157,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersEntitiesWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
@@ -11062,7 +7164,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersEntitiesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11096,22 +7198,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersRequests()
-        {
-            GetSysInternalCountersRequestsWithHttpInfo();
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersRequestsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersRequests()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11142,16 +7235,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersRequestsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
@@ -11159,7 +7242,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersRequestsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11193,22 +7276,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalCountersTokens()
-        {
-            GetSysInternalCountersTokensWithHttpInfo();
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersTokensWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalCountersTokens()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11239,16 +7313,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalCountersTokensWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
@@ -11256,7 +7320,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersTokensWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11290,22 +7354,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalSpecsOpenapi()
-        {
-            GetSysInternalSpecsOpenapiWithHttpInfo();
-        }
 
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalSpecsOpenapiWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalSpecsOpenapi()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11336,16 +7391,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalSpecsOpenapiWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths. 
@@ -11353,7 +7398,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalSpecsOpenapiWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11387,22 +7432,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists enabled feature flags. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalUiFeatureFlags()
-        {
-            GetSysInternalUiFeatureFlagsWithHttpInfo();
-        }
 
         /// <summary>
         /// Lists enabled feature flags. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiFeatureFlagsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiFeatureFlags()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11433,16 +7469,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists enabled feature flags. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalUiFeatureFlagsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Lists enabled feature flags. 
@@ -11450,7 +7476,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiFeatureFlagsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11484,22 +7510,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalUiMounts()
-        {
-            GetSysInternalUiMountsWithHttpInfo();
-        }
 
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiMountsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiMounts()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11530,16 +7547,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalUiMountsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts. 
@@ -11547,7 +7554,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiMountsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11581,16 +7588,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return information about the given mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <returns></returns>
-        public void GetSysInternalUiMountsPath(string path)
-        {
-            GetSysInternalUiMountsPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Return information about the given mount. 
@@ -11598,7 +7595,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path of the mount.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiMountsPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiMountsPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -11634,17 +7631,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return information about the given mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalUiMountsPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return information about the given mount. 
@@ -11653,7 +7639,7 @@ namespace VaultClient.Api
         /// <param name="path">The path of the mount.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -11692,22 +7678,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalUiNamespaces()
-        {
-            GetSysInternalUiNamespacesWithHttpInfo();
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiNamespacesWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiNamespaces()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11738,16 +7715,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalUiNamespacesWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
@@ -11755,7 +7722,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiNamespacesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11789,22 +7756,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysInternalUiResultantAcl()
-        {
-            GetSysInternalUiResultantAclWithHttpInfo();
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiResultantAclWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysInternalUiResultantAcl()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11835,16 +7793,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysInternalUiResultantAclWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
@@ -11852,7 +7800,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiResultantAclWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11886,22 +7834,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Provides information about the backend encryption key. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysKeyStatus()
-        {
-            GetSysKeyStatusWithHttpInfo();
-        }
 
         /// <summary>
         /// Provides information about the backend encryption key. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysKeyStatusWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysKeyStatus()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11932,16 +7871,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Provides information about the backend encryption key. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysKeyStatusWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Provides information about the backend encryption key. 
@@ -11949,7 +7878,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysKeyStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11983,22 +7912,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysLeader()
-        {
-            GetSysLeaderWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysLeaderWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysLeader()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12029,16 +7949,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysLeaderWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault. 
@@ -12046,7 +7956,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeaderWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12080,22 +7990,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysLeases()
-        {
-            GetSysLeasesWithHttpInfo();
-        }
 
         /// <summary>
         /// List leases associated with this Vault cluster 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysLeasesWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysLeases()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12126,16 +8027,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysLeasesWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List leases associated with this Vault cluster 
@@ -12143,7 +8034,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12177,22 +8068,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Count of leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysLeasesCount()
-        {
-            GetSysLeasesCountWithHttpInfo();
-        }
 
         /// <summary>
         /// Count of leases associated with this Vault cluster 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysLeasesCountWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysLeasesCount()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12223,16 +8105,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Count of leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysLeasesCountWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Count of leases associated with this Vault cluster 
@@ -12240,7 +8112,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesCountWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12274,16 +8146,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a list of lease ids. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysLeasesLookup(string list)
-        {
-            GetSysLeasesLookupWithHttpInfo(list);
-        }
 
         /// <summary>
         /// Returns a list of lease ids. 
@@ -12291,7 +8153,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysLeasesLookupWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysLeasesLookup(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -12327,17 +8189,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a list of lease ids. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysLeasesLookupWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns a list of lease ids. 
@@ -12346,7 +8197,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesLookupWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -12385,17 +8236,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a list of lease ids. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysLeasesLookupPrefix(string prefix, string list)
-        {
-            GetSysLeasesLookupPrefixWithHttpInfo(prefix, list);
-        }
 
         /// <summary>
         /// Returns a list of lease ids. 
@@ -12404,7 +8244,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysLeasesLookupPrefixWithHttpInfo(string prefix, string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysLeasesLookupPrefix(string prefix, string list)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -12445,18 +8285,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a list of lease ids. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysLeasesLookupPrefixWithHttpInfoAsync(prefix, list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns a list of lease ids. 
@@ -12466,7 +8294,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesLookupPrefixWithHttpInfoAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -12510,16 +8338,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <returns></returns>
-        public void GetSysMetrics(string format = default(string))
-        {
-            GetSysMetricsWithHttpInfo(format);
-        }
 
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose. 
@@ -12527,7 +8345,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysMetricsWithHttpInfo(string format = default(string))
+        public VaultClient.Client.ApiResponse<Object> GetSysMetrics(string format = default(string))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12562,17 +8380,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysMetricsWithHttpInfoAsync(format, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose. 
@@ -12581,7 +8388,7 @@ namespace VaultClient.Api
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMetricsWithHttpInfoAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12619,17 +8426,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <returns></returns>
-        public void GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
-        {
-            GetSysMonitorWithHttpInfo(logFormat, logLevel);
-        }
 
         /// <summary>
         ///  
@@ -12638,7 +8434,7 @@ namespace VaultClient.Api
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysMonitorWithHttpInfo(string logFormat = default(string), string logLevel = default(string))
+        public VaultClient.Client.ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12677,18 +8473,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysMonitorWithHttpInfoAsync(logFormat, logLevel, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -12698,7 +8482,7 @@ namespace VaultClient.Api
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMonitorWithHttpInfoAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12740,22 +8524,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the currently mounted backends. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysMounts()
-        {
-            GetSysMountsWithHttpInfo();
-        }
 
         /// <summary>
         /// List the currently mounted backends. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysMountsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysMounts()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12786,16 +8561,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the currently mounted backends. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysMountsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the currently mounted backends. 
@@ -12803,7 +8568,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12837,16 +8602,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        public void GetSysMountsPath(string path)
-        {
-            GetSysMountsPathWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Read the configuration of the secret engine at the given path. 
@@ -12854,7 +8609,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysMountsPathWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> GetSysMountsPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -12890,17 +8645,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysMountsPathWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the configuration of the secret engine at the given path. 
@@ -12909,7 +8653,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsPathWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -12948,16 +8692,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune backend configuration parameters for this mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns></returns>
-        public void GetSysMountsPathTune(string path)
-        {
-            GetSysMountsPathTuneWithHttpInfo(path);
-        }
 
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
@@ -12965,7 +8699,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysMountsPathTuneWithHttpInfo(string path)
+        public VaultClient.Client.ApiResponse<Object> GetSysMountsPathTune(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -13001,17 +8735,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune backend configuration parameters for this mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysMountsPathTuneWithHttpInfoAsync(path, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
@@ -13020,7 +8743,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsPathTuneWithHttpInfoAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -13059,22 +8782,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists all the plugins known to Vault 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPluginsCatalog()
-        {
-            GetSysPluginsCatalogWithHttpInfo();
-        }
 
         /// <summary>
         /// Lists all the plugins known to Vault 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalog()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13105,16 +8819,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Lists all the plugins known to Vault 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPluginsCatalogWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Lists all the plugins known to Vault 
@@ -13122,7 +8826,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13156,16 +8860,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <returns></returns>
-        public void GetSysPluginsCatalogName(string name)
-        {
-            GetSysPluginsCatalogNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
@@ -13173,7 +8867,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13209,17 +8903,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPluginsCatalogNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
@@ -13228,7 +8911,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13267,17 +8950,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the plugins in the catalog. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysPluginsCatalogType(string type, string list)
-        {
-            GetSysPluginsCatalogTypeWithHttpInfo(type, list);
-        }
 
         /// <summary>
         /// List the plugins in the catalog. 
@@ -13286,7 +8958,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogTypeWithHttpInfo(string type, string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogType(string type, string list)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -13327,18 +8999,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the plugins in the catalog. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPluginsCatalogTypeWithHttpInfoAsync(type, list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the plugins in the catalog. 
@@ -13348,7 +9008,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogTypeWithHttpInfoAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -13392,17 +9052,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <returns></returns>
-        public void GetSysPluginsCatalogTypeName(string name, string type)
-        {
-            GetSysPluginsCatalogTypeNameWithHttpInfo(name, type);
-        }
 
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
@@ -13411,7 +9060,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogTypeNameWithHttpInfo(string name, string type)
+        public VaultClient.Client.ApiResponse<Object> GetSysPluginsCatalogTypeName(string name, string type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13452,18 +9101,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPluginsCatalogTypeNameWithHttpInfoAsync(name, type, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
@@ -13473,7 +9110,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13517,16 +9154,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysPoliciesAcl(string list)
-        {
-            GetSysPoliciesAclWithHttpInfo(list);
-        }
 
         /// <summary>
         /// List the configured access control policies. 
@@ -13534,7 +9161,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesAclWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesAcl(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13570,17 +9197,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPoliciesAclWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the configured access control policies. 
@@ -13589,7 +9205,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesAclWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13628,16 +9244,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve information about the named ACL policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        public void GetSysPoliciesAclName(string name)
-        {
-            GetSysPoliciesAclNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Retrieve information about the named ACL policy. 
@@ -13645,7 +9251,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesAclNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesAclName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13681,17 +9287,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve information about the named ACL policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPoliciesAclNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Retrieve information about the named ACL policy. 
@@ -13700,7 +9295,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesAclNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13739,16 +9334,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the existing password policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysPoliciesPassword(string list)
-        {
-            GetSysPoliciesPasswordWithHttpInfo(list);
-        }
 
         /// <summary>
         /// List the existing password policies. 
@@ -13756,7 +9341,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPasswordWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPassword(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13792,17 +9377,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the existing password policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPoliciesPasswordWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the existing password policies. 
@@ -13811,7 +9385,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13850,16 +9424,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        public void GetSysPoliciesPasswordName(string name)
-        {
-            GetSysPoliciesPasswordNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Retrieve an existing password policy. 
@@ -13867,7 +9431,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPasswordNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPasswordName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13903,17 +9467,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPoliciesPasswordNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Retrieve an existing password policy. 
@@ -13922,7 +9475,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13961,16 +9514,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a password from an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <returns></returns>
-        public void GetSysPoliciesPasswordNameGenerate(string name)
-        {
-            GetSysPoliciesPasswordNameGenerateWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Generate a password from an existing password policy. 
@@ -13978,7 +9521,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPasswordNameGenerateWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysPoliciesPasswordNameGenerate(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14014,17 +9557,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a password from an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPoliciesPasswordNameGenerateWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate a password from an existing password policy. 
@@ -14033,7 +9565,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14072,16 +9604,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        public void GetSysPolicy(string list = default(string))
-        {
-            GetSysPolicyWithHttpInfo(list);
-        }
 
         /// <summary>
         /// List the configured access control policies. 
@@ -14089,7 +9611,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPolicyWithHttpInfo(string list = default(string))
+        public VaultClient.Client.ApiResponse<Object> GetSysPolicy(string list = default(string))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14124,17 +9646,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPolicyWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// List the configured access control policies. 
@@ -14143,7 +9654,7 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPolicyWithHttpInfoAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14181,16 +9692,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve the policy body for the named policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns></returns>
-        public void GetSysPolicyName(string name)
-        {
-            GetSysPolicyNameWithHttpInfo(name);
-        }
 
         /// <summary>
         /// Retrieve the policy body for the named policy. 
@@ -14198,7 +9699,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPolicyNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysPolicyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14234,17 +9735,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve the policy body for the named policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPolicyNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Retrieve the policy body for the named policy. 
@@ -14253,7 +9743,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPolicyNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14292,22 +9782,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprof()
-        {
-            GetSysPprofWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprof()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14338,16 +9819,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
@@ -14355,7 +9826,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14389,22 +9860,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofAllocs()
-        {
-            GetSysPprofAllocsWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofAllocsWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofAllocs()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14435,16 +9897,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofAllocsWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
@@ -14452,7 +9904,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofAllocsWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14486,22 +9938,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofBlock()
-        {
-            GetSysPprofBlockWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofBlockWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofBlock()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14532,16 +9975,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofBlockWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
@@ -14549,7 +9982,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofBlockWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14583,22 +10016,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofCmdline()
-        {
-            GetSysPprofCmdlineWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofCmdlineWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofCmdline()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14629,16 +10053,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofCmdlineWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
@@ -14646,7 +10060,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofCmdlineWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14680,22 +10094,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofGoroutine()
-        {
-            GetSysPprofGoroutineWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofGoroutineWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofGoroutine()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14726,16 +10131,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofGoroutineWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
@@ -14743,7 +10138,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofGoroutineWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14777,22 +10172,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofHeap()
-        {
-            GetSysPprofHeapWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofHeapWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofHeap()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14823,16 +10209,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofHeapWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
@@ -14840,7 +10216,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofHeapWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14874,22 +10250,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofMutex()
-        {
-            GetSysPprofMutexWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofMutexWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofMutex()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14920,16 +10287,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofMutexWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
@@ -14937,7 +10294,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofMutexWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14971,22 +10328,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofProfile()
-        {
-            GetSysPprofProfileWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofProfileWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofProfile()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15017,16 +10365,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofProfileWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
@@ -15034,7 +10372,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofProfileWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15068,22 +10406,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the program counters listed in the request. Returns the program counters listed in the request.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofSymbol()
-        {
-            GetSysPprofSymbolWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the program counters listed in the request. Returns the program counters listed in the request.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofSymbolWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofSymbol()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15114,16 +10443,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the program counters listed in the request. Returns the program counters listed in the request.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofSymbolWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the program counters listed in the request. Returns the program counters listed in the request.
@@ -15131,7 +10450,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofSymbolWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15165,22 +10484,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofThreadcreate()
-        {
-            GetSysPprofThreadcreateWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofThreadcreateWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofThreadcreate()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15211,16 +10521,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofThreadcreateWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
@@ -15228,7 +10528,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofThreadcreateWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15262,22 +10562,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysPprofTrace()
-        {
-            GetSysPprofTraceWithHttpInfo();
-        }
 
         /// <summary>
         /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysPprofTraceWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysPprofTrace()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15308,16 +10599,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysPprofTraceWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
@@ -15325,7 +10606,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofTraceWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15359,22 +10640,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysQuotasConfig()
-        {
-            GetSysQuotasConfigWithHttpInfo();
-        }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysQuotasConfigWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysQuotasConfig()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15405,16 +10677,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysQuotasConfigWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -15422,7 +10684,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15456,16 +10718,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysQuotasRateLimit(string list)
-        {
-            GetSysQuotasRateLimitWithHttpInfo(list);
-        }
 
         /// <summary>
         ///  
@@ -15473,7 +10725,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysQuotasRateLimitWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysQuotasRateLimit(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15509,17 +10761,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysQuotasRateLimitWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -15528,7 +10769,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasRateLimitWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15567,16 +10808,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <returns></returns>
-        public void GetSysQuotasRateLimitName(string name)
-        {
-            GetSysQuotasRateLimitNameWithHttpInfo(name);
-        }
 
         /// <summary>
         ///  
@@ -15584,7 +10815,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysQuotasRateLimitNameWithHttpInfo(string name)
+        public VaultClient.Client.ApiResponse<Object> GetSysQuotasRateLimitName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15620,17 +10851,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysQuotasRateLimitNameWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -15639,7 +10859,7 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasRateLimitNameWithHttpInfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15678,16 +10898,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        public void GetSysRaw(string list = default(string))
-        {
-            GetSysRawWithHttpInfo(list);
-        }
 
         /// <summary>
         /// Read the value of the key at the given path. 
@@ -15695,7 +10905,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRawWithHttpInfo(string list = default(string))
+        public VaultClient.Client.ApiResponse<Object> GetSysRaw(string list = default(string))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15730,17 +10940,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRawWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the value of the key at the given path. 
@@ -15749,7 +10948,7 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRawWithHttpInfoAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15787,17 +10986,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns></returns>
-        public void GetSysRawPath(string path, string list = default(string))
-        {
-            GetSysRawPathWithHttpInfo(path, list);
-        }
 
         /// <summary>
         /// Read the value of the key at the given path. 
@@ -15806,7 +10994,7 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRawPathWithHttpInfo(string path, string list = default(string))
+        public VaultClient.Client.ApiResponse<Object> GetSysRawPath(string path, string list = default(string))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -15846,18 +11034,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRawPathWithHttpInfoAsync(path, list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the value of the key at the given path. 
@@ -15867,7 +11043,7 @@ namespace VaultClient.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRawPathWithHttpInfoAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -15910,22 +11086,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the backup copy of PGP-encrypted unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysRekeyBackup()
-        {
-            GetSysRekeyBackupWithHttpInfo();
-        }
 
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRekeyBackupWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysRekeyBackup()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15956,16 +11123,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Return the backup copy of PGP-encrypted unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRekeyBackupWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys. 
@@ -15973,7 +11130,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16007,22 +11164,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reads the configuration and progress of the current rekey attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysRekeyInit()
-        {
-            GetSysRekeyInitWithHttpInfo();
-        }
 
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRekeyInitWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysRekeyInit()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16053,16 +11201,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reads the configuration and progress of the current rekey attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRekeyInitWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt. 
@@ -16070,7 +11208,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyInitWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16104,22 +11242,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysRekeyRecoveryKeyBackup()
-        {
-            GetSysRekeyRecoveryKeyBackupWithHttpInfo();
-        }
 
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRekeyRecoveryKeyBackupWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysRekeyRecoveryKeyBackup()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16150,16 +11279,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Allows fetching or deleting the backup of the rotated unseal keys. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRekeyRecoveryKeyBackupWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
@@ -16167,7 +11286,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16201,22 +11320,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current rekey verification attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysRekeyVerify()
-        {
-            GetSysRekeyVerifyWithHttpInfo();
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRekeyVerifyWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysRekeyVerify()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16247,16 +11357,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Read the configuration and progress of the current rekey verification attempt. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRekeyVerifyWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt. 
@@ -16264,7 +11364,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyVerifyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16298,16 +11398,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check status of a mount migration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="migrationId">The ID of the migration operation</param>
-        /// <returns></returns>
-        public void GetSysRemountStatusMigrationId(string migrationId)
-        {
-            GetSysRemountStatusMigrationIdWithHttpInfo(migrationId);
-        }
 
         /// <summary>
         /// Check status of a mount migration 
@@ -16315,7 +11405,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRemountStatusMigrationIdWithHttpInfo(string migrationId)
+        public VaultClient.Client.ApiResponse<Object> GetSysRemountStatusMigrationId(string migrationId)
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
@@ -16351,17 +11441,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check status of a mount migration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="migrationId">The ID of the migration operation</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRemountStatusMigrationIdWithHttpInfoAsync(migrationId, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Check status of a mount migration 
@@ -16370,7 +11449,7 @@ namespace VaultClient.Api
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRemountStatusMigrationIdWithHttpInfoAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
@@ -16409,22 +11488,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysReplicationStatus()
-        {
-            GetSysReplicationStatusWithHttpInfo();
-        }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysReplicationStatusWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysReplicationStatus()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16455,16 +11525,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysReplicationStatusWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -16472,7 +11532,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysReplicationStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16506,22 +11566,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysRotateConfig()
-        {
-            GetSysRotateConfigWithHttpInfo();
-        }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysRotateConfigWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysRotateConfig()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16552,16 +11603,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysRotateConfigWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -16569,7 +11610,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRotateConfigWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16603,22 +11644,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check the seal status of a Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysSealStatus()
-        {
-            GetSysSealStatusWithHttpInfo();
-        }
 
         /// <summary>
         /// Check the seal status of a Vault. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysSealStatusWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysSealStatus()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16649,16 +11681,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Check the seal status of a Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysSealStatusWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Check the seal status of a Vault. 
@@ -16666,7 +11688,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysSealStatusWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16700,16 +11722,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns map of historical version change entries 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns></returns>
-        public void GetSysVersionHistory(string list)
-        {
-            GetSysVersionHistoryWithHttpInfo(list);
-        }
 
         /// <summary>
         /// Returns map of historical version change entries 
@@ -16717,7 +11729,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysVersionHistoryWithHttpInfo(string list)
+        public VaultClient.Client.ApiResponse<Object> GetSysVersionHistory(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16753,17 +11765,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Returns map of historical version change entries 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysVersionHistoryWithHttpInfoAsync(list, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Returns map of historical version change entries 
@@ -16772,7 +11773,7 @@ namespace VaultClient.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysVersionHistoryWithHttpInfoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16811,22 +11812,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetSysWrappingLookup()
-        {
-            GetSysWrappingLookupWithHttpInfo();
-        }
 
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> GetSysWrappingLookupWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> GetSysWrappingLookup()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16857,16 +11849,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await GetSysWrappingLookupWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token. 
@@ -16874,7 +11856,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysWrappingLookupWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16908,17 +11890,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// The hash of the given string via the given audit backend 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditHashRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest))
-        {
-            PostSysAuditHashPathWithHttpInfo(path, systemAuditHashRequest);
-        }
 
         /// <summary>
         /// The hash of the given string via the given audit backend 
@@ -16927,7 +11898,7 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysAuditHashPathWithHttpInfo(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -16965,18 +11936,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// The hash of the given string via the given audit backend 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysAuditHashPathWithHttpInfoAsync(path, systemAuditHashRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// The hash of the given string via the given audit backend 
@@ -16986,7 +11945,7 @@ namespace VaultClient.Api
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuditHashPathWithHttpInfoAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17027,17 +11986,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable a new audit device at the supplied path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest))
-        {
-            PostSysAuditPathWithHttpInfo(path, systemAuditRequest);
-        }
 
         /// <summary>
         /// Enable a new audit device at the supplied path. 
@@ -17046,7 +11994,7 @@ namespace VaultClient.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysAuditPathWithHttpInfo(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17084,18 +12032,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable a new audit device at the supplied path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
-        /// <param name="systemAuditRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysAuditPathWithHttpInfoAsync(path, systemAuditRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enable a new audit device at the supplied path. 
@@ -17105,7 +12041,7 @@ namespace VaultClient.Api
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuditPathWithHttpInfoAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17146,17 +12082,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="systemAuthRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest))
-        {
-            PostSysAuthPathWithHttpInfo(path, systemAuthRequest);
-        }
 
         /// <summary>
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
@@ -17165,7 +12090,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysAuthPathWithHttpInfo(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17203,18 +12128,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="systemAuthRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysAuthPathWithHttpInfoAsync(path, systemAuthRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
@@ -17224,7 +12137,7 @@ namespace VaultClient.Api
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuthPathWithHttpInfoAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17265,17 +12178,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="systemAuthTuneRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest))
-        {
-            PostSysAuthPathTuneWithHttpInfo(path, systemAuthTuneRequest);
-        }
 
         /// <summary>
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
@@ -17284,7 +12186,7 @@ namespace VaultClient.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysAuthPathTuneWithHttpInfo(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17322,18 +12224,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="systemAuthTuneRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysAuthPathTuneWithHttpInfoAsync(path, systemAuthTuneRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
@@ -17343,7 +12233,7 @@ namespace VaultClient.Api
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuthPathTuneWithHttpInfoAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -17384,16 +12274,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
-        {
-            PostSysCapabilitiesWithHttpInfo(systemCapabilitiesRequest);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
@@ -17401,7 +12281,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysCapabilitiesWithHttpInfo(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17434,17 +12314,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysCapabilitiesWithHttpInfoAsync(systemCapabilitiesRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
@@ -17453,7 +12322,7 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesWithHttpInfoAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17489,16 +12358,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the token associated with the given token, on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
-        {
-            PostSysCapabilitiesAccessorWithHttpInfo(systemCapabilitiesAccessorRequest);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path. 
@@ -17506,7 +12365,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysCapabilitiesAccessorWithHttpInfo(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17539,17 +12398,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the token associated with the given token, on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysCapabilitiesAccessorWithHttpInfoAsync(systemCapabilitiesAccessorRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path. 
@@ -17558,7 +12406,7 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesAccessorWithHttpInfoAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17594,16 +12442,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
-        {
-            PostSysCapabilitiesSelfWithHttpInfo(systemCapabilitiesSelfRequest);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
@@ -17611,7 +12449,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysCapabilitiesSelfWithHttpInfo(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17644,17 +12482,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Fetches the capabilities of the given token on the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysCapabilitiesSelfWithHttpInfoAsync(systemCapabilitiesSelfRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
@@ -17663,7 +12490,7 @@ namespace VaultClient.Api
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesSelfWithHttpInfoAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17699,17 +12526,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable auditing of a header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest))
-        {
-            PostSysConfigAuditingRequestHeadersHeaderWithHttpInfo(header, systemConfigAuditingRequestHeadersRequest);
-        }
 
         /// <summary>
         /// Enable auditing of a header. 
@@ -17718,7 +12534,7 @@ namespace VaultClient.Api
         /// <param name="header"></param>
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeaderWithHttpInfo(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -17756,18 +12572,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable auditing of a header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(header, systemConfigAuditingRequestHeadersRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enable auditing of a header. 
@@ -17777,7 +12581,7 @@ namespace VaultClient.Api
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderWithHttpInfoAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -17818,16 +12622,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Configure the CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemConfigCorsRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
-        {
-            PostSysConfigCorsWithHttpInfo(systemConfigCorsRequest);
-        }
 
         /// <summary>
         /// Configure the CORS settings. 
@@ -17835,7 +12629,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysConfigCorsWithHttpInfo(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17868,17 +12662,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Configure the CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemConfigCorsRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysConfigCorsWithHttpInfoAsync(systemConfigCorsRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Configure the CORS settings. 
@@ -17887,7 +12670,7 @@ namespace VaultClient.Api
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigCorsWithHttpInfoAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17923,16 +12706,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reload the given subsystem 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subsystem"></param>
-        /// <returns></returns>
-        public void PostSysConfigReloadSubsystem(string subsystem)
-        {
-            PostSysConfigReloadSubsystemWithHttpInfo(subsystem);
-        }
 
         /// <summary>
         /// Reload the given subsystem 
@@ -17940,7 +12713,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysConfigReloadSubsystemWithHttpInfo(string subsystem)
+        public VaultClient.Client.ApiResponse<Object> PostSysConfigReloadSubsystem(string subsystem)
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
@@ -17976,17 +12749,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reload the given subsystem 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subsystem"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysConfigReloadSubsystemWithHttpInfoAsync(subsystem, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Reload the given subsystem 
@@ -17995,7 +12757,7 @@ namespace VaultClient.Api
         /// <param name="subsystem"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigReloadSubsystemWithHttpInfoAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
@@ -18034,17 +12796,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Configure the values to be returned for the UI header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest))
-        {
-            PostSysConfigUiHeadersHeaderWithHttpInfo(header, systemConfigUiHeadersRequest);
-        }
 
         /// <summary>
         /// Configure the values to be returned for the UI header. 
@@ -18053,7 +12804,7 @@ namespace VaultClient.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysConfigUiHeadersHeaderWithHttpInfo(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -18091,18 +12842,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Configure the values to be returned for the UI header. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysConfigUiHeadersHeaderWithHttpInfoAsync(header, systemConfigUiHeadersRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Configure the values to be returned for the UI header. 
@@ -18112,7 +12851,7 @@ namespace VaultClient.Api
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigUiHeadersHeaderWithHttpInfoAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -18153,16 +12892,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
-        {
-            PostSysGenerateRootWithHttpInfo(systemGenerateRootRequest);
-        }
 
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
@@ -18170,7 +12899,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRootWithHttpInfo(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18203,17 +12932,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysGenerateRootWithHttpInfoAsync(systemGenerateRootRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
@@ -18222,7 +12940,7 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootWithHttpInfoAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18258,16 +12976,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
-        {
-            PostSysGenerateRootAttemptWithHttpInfo(systemGenerateRootAttemptRequest);
-        }
 
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
@@ -18275,7 +12983,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRootAttemptWithHttpInfo(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18308,17 +13016,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysGenerateRootAttemptWithHttpInfoAsync(systemGenerateRootAttemptRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
@@ -18327,7 +13024,7 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootAttemptWithHttpInfoAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18363,16 +13060,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
-        {
-            PostSysGenerateRootUpdateWithHttpInfo(systemGenerateRootUpdateRequest);
-        }
 
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
@@ -18380,7 +13067,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRootUpdateWithHttpInfo(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18413,17 +13100,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysGenerateRootUpdateWithHttpInfoAsync(systemGenerateRootUpdateRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
@@ -18432,7 +13108,7 @@ namespace VaultClient.Api
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootUpdateWithHttpInfoAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18468,16 +13144,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInitRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
-        {
-            PostSysInitWithHttpInfo(systemInitRequest);
-        }
 
         /// <summary>
         /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
@@ -18485,7 +13151,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysInitWithHttpInfo(SystemInitRequest systemInitRequest = default(SystemInitRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18518,17 +13184,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysInitWithHttpInfoAsync(systemInitRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
@@ -18537,7 +13192,7 @@ namespace VaultClient.Api
         /// <param name="systemInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysInitWithHttpInfoAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18573,16 +13228,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable or disable collection of client count, set retention period, or set default reporting period. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
-        {
-            PostSysInternalCountersConfigWithHttpInfo(systemInternalCountersConfigRequest);
-        }
 
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period. 
@@ -18590,7 +13235,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysInternalCountersConfigWithHttpInfo(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18623,17 +13268,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable or disable collection of client count, set retention period, or set default reporting period. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysInternalCountersConfigWithHttpInfoAsync(systemInternalCountersConfigRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period. 
@@ -18642,7 +13276,7 @@ namespace VaultClient.Api
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysInternalCountersConfigWithHttpInfoAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18678,16 +13312,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve lease metadata. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesLookupRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
-        {
-            PostSysLeasesLookupWithHttpInfo(systemLeasesLookupRequest);
-        }
 
         /// <summary>
         /// Retrieve lease metadata. 
@@ -18695,7 +13319,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesLookupWithHttpInfo(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18728,17 +13352,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Retrieve lease metadata. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesLookupRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesLookupWithHttpInfoAsync(systemLeasesLookupRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Retrieve lease metadata. 
@@ -18747,7 +13360,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesLookupWithHttpInfoAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18783,16 +13396,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRenewRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
-        {
-            PostSysLeasesRenewWithHttpInfo(systemLeasesRenewRequest);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -18800,7 +13403,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRenewWithHttpInfo(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18833,17 +13436,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRenewRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRenewWithHttpInfoAsync(systemLeasesRenewRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -18852,7 +13444,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRenewWithHttpInfoAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18888,17 +13480,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest))
-        {
-            PostSysLeasesRenewUrlLeaseIdWithHttpInfo(urlLeaseId, systemLeasesRenewLeaseRequest);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -18907,7 +13488,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRenewUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -18945,18 +13526,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRenewUrlLeaseIdWithHttpInfoAsync(urlLeaseId, systemLeasesRenewLeaseRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -18966,7 +13535,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -19007,16 +13576,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRevokeRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
-        {
-            PostSysLeasesRevokeWithHttpInfo(systemLeasesRevokeRequest);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -19024,7 +13583,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokeWithHttpInfo(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19057,17 +13616,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemLeasesRevokeRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRevokeWithHttpInfoAsync(systemLeasesRevokeRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -19076,7 +13624,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeWithHttpInfoAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19112,16 +13660,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns></returns>
-        public void PostSysLeasesRevokeForcePrefix(string prefix)
-        {
-            PostSysLeasesRevokeForcePrefixWithHttpInfo(prefix);
-        }
 
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
@@ -19129,7 +13667,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokeForcePrefixWithHttpInfo(string prefix)
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokeForcePrefix(string prefix)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -19165,17 +13703,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRevokeForcePrefixWithHttpInfoAsync(prefix, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
@@ -19184,7 +13711,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeForcePrefixWithHttpInfoAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -19223,17 +13750,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest))
-        {
-            PostSysLeasesRevokePrefixPrefixWithHttpInfo(prefix, systemLeasesRevokePrefixRequest);
-        }
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
@@ -19242,7 +13758,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokePrefixPrefixWithHttpInfo(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -19280,18 +13796,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRevokePrefixPrefixWithHttpInfoAsync(prefix, systemLeasesRevokePrefixRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
@@ -19301,7 +13805,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixWithHttpInfoAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -19342,17 +13846,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest))
-        {
-            PostSysLeasesRevokeUrlLeaseIdWithHttpInfo(urlLeaseId, systemLeasesRevokeLeaseRequest);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -19361,7 +13854,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokeUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -19399,18 +13892,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesRevokeUrlLeaseIdWithHttpInfoAsync(urlLeaseId, systemLeasesRevokeLeaseRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -19420,7 +13901,7 @@ namespace VaultClient.Api
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -19461,22 +13942,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void PostSysLeasesTidy()
-        {
-            PostSysLeasesTidyWithHttpInfo();
-        }
 
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysLeasesTidyWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> PostSysLeasesTidy()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19507,16 +13979,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysLeasesTidyWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred. 
@@ -19524,7 +13986,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesTidyWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19558,16 +14020,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemMfaValidateRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
-        {
-            PostSysMfaValidateWithHttpInfo(systemMfaValidateRequest);
-        }
 
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
@@ -19575,7 +14027,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysMfaValidateWithHttpInfo(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19608,17 +14060,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemMfaValidateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysMfaValidateWithHttpInfoAsync(systemMfaValidateRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
@@ -19627,7 +14068,7 @@ namespace VaultClient.Api
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMfaValidateWithHttpInfoAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19663,17 +14104,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable a new secrets engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest))
-        {
-            PostSysMountsPathWithHttpInfo(path, systemMountsRequest);
-        }
 
         /// <summary>
         /// Enable a new secrets engine at the given path. 
@@ -19682,7 +14112,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysMountsPathWithHttpInfo(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19720,18 +14150,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enable a new secrets engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysMountsPathWithHttpInfoAsync(path, systemMountsRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enable a new secrets engine at the given path. 
@@ -19741,7 +14159,7 @@ namespace VaultClient.Api
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMountsPathWithHttpInfoAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19782,17 +14200,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune backend configuration parameters for this mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsTuneRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest))
-        {
-            PostSysMountsPathTuneWithHttpInfo(path, systemMountsTuneRequest);
-        }
 
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
@@ -19801,7 +14208,7 @@ namespace VaultClient.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysMountsPathTuneWithHttpInfo(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19839,18 +14246,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Tune backend configuration parameters for this mount. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="systemMountsTuneRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysMountsPathTuneWithHttpInfoAsync(path, systemMountsTuneRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
@@ -19860,7 +14255,7 @@ namespace VaultClient.Api
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMountsPathTuneWithHttpInfoAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19901,17 +14296,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
-        {
-            PostSysPluginsCatalogNameWithHttpInfo(name, systemPluginsCatalogRequest);
-        }
 
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
@@ -19920,7 +14304,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPluginsCatalogNameWithHttpInfo(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19958,18 +14342,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPluginsCatalogNameWithHttpInfoAsync(name, systemPluginsCatalogRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
@@ -19979,7 +14351,7 @@ namespace VaultClient.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsCatalogNameWithHttpInfoAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20020,18 +14392,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
-        {
-            PostSysPluginsCatalogTypeNameWithHttpInfo(name, type, systemPluginsCatalogRequest);
-        }
 
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
@@ -20041,7 +14401,7 @@ namespace VaultClient.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPluginsCatalogTypeNameWithHttpInfo(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20084,19 +14444,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Register a new plugin, or updates an existing one with the supplied name. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="systemPluginsCatalogRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPluginsCatalogTypeNameWithHttpInfoAsync(name, type, systemPluginsCatalogRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
@@ -20107,7 +14454,7 @@ namespace VaultClient.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsCatalogTypeNameWithHttpInfoAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20153,16 +14500,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
-        {
-            PostSysPluginsReloadBackendWithHttpInfo(systemPluginsReloadBackendRequest);
-        }
 
         /// <summary>
         /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
@@ -20170,7 +14507,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPluginsReloadBackendWithHttpInfo(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20203,17 +14540,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPluginsReloadBackendWithHttpInfoAsync(systemPluginsReloadBackendRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
@@ -20222,7 +14548,7 @@ namespace VaultClient.Api
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsReloadBackendWithHttpInfoAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20258,17 +14584,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing ACL policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPoliciesAclRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest))
-        {
-            PostSysPoliciesAclNameWithHttpInfo(name, systemPoliciesAclRequest);
-        }
 
         /// <summary>
         /// Add a new or update an existing ACL policy. 
@@ -20277,7 +14592,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPoliciesAclNameWithHttpInfo(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20315,18 +14630,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing ACL policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPoliciesAclRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPoliciesAclNameWithHttpInfoAsync(name, systemPoliciesAclRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Add a new or update an existing ACL policy. 
@@ -20336,7 +14639,7 @@ namespace VaultClient.Api
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPoliciesAclNameWithHttpInfoAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20377,17 +14680,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest))
-        {
-            PostSysPoliciesPasswordNameWithHttpInfo(name, systemPoliciesPasswordRequest);
-        }
 
         /// <summary>
         /// Add a new or update an existing password policy. 
@@ -20396,7 +14688,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPoliciesPasswordNameWithHttpInfo(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20434,18 +14726,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing password policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
-        /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPoliciesPasswordNameWithHttpInfoAsync(name, systemPoliciesPasswordRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Add a new or update an existing password policy. 
@@ -20455,7 +14735,7 @@ namespace VaultClient.Api
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPoliciesPasswordNameWithHttpInfoAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20496,17 +14776,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPolicyRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest))
-        {
-            PostSysPolicyNameWithHttpInfo(name, systemPolicyRequest);
-        }
 
         /// <summary>
         /// Add a new or update an existing policy. 
@@ -20515,7 +14784,7 @@ namespace VaultClient.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysPolicyNameWithHttpInfo(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20553,18 +14822,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Add a new or update an existing policy. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="systemPolicyRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysPolicyNameWithHttpInfoAsync(name, systemPolicyRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Add a new or update an existing policy. 
@@ -20574,7 +14831,7 @@ namespace VaultClient.Api
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPolicyNameWithHttpInfoAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20615,16 +14872,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemQuotasConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
-        {
-            PostSysQuotasConfigWithHttpInfo(systemQuotasConfigRequest);
-        }
 
         /// <summary>
         ///  
@@ -20632,7 +14879,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysQuotasConfigWithHttpInfo(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20665,17 +14912,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemQuotasConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysQuotasConfigWithHttpInfoAsync(systemQuotasConfigRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -20684,7 +14920,7 @@ namespace VaultClient.Api
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysQuotasConfigWithHttpInfoAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20720,17 +14956,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest))
-        {
-            PostSysQuotasRateLimitNameWithHttpInfo(name, systemQuotasRateLimitRequest);
-        }
 
         /// <summary>
         ///  
@@ -20739,7 +14964,7 @@ namespace VaultClient.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysQuotasRateLimitNameWithHttpInfo(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20777,18 +15002,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
-        /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysQuotasRateLimitNameWithHttpInfoAsync(name, systemQuotasRateLimitRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -20798,7 +15011,7 @@ namespace VaultClient.Api
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysQuotasRateLimitNameWithHttpInfoAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -20839,16 +15052,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Update the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
-        {
-            PostSysRawWithHttpInfo(systemRawRequest);
-        }
 
         /// <summary>
         /// Update the value of the key at the given path. 
@@ -20856,7 +15059,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRawWithHttpInfo(SystemRawRequest systemRawRequest = default(SystemRawRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20889,17 +15092,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Update the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRawWithHttpInfoAsync(systemRawRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Update the value of the key at the given path. 
@@ -20908,7 +15100,7 @@ namespace VaultClient.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRawWithHttpInfoAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20944,17 +15136,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Update the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest))
-        {
-            PostSysRawPathWithHttpInfo(path, systemRawRequest);
-        }
 
         /// <summary>
         /// Update the value of the key at the given path. 
@@ -20963,7 +15144,7 @@ namespace VaultClient.Api
         /// <param name="path"></param>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRawPathWithHttpInfo(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -21001,18 +15182,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Update the value of the key at the given path. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
-        /// <param name="systemRawRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRawPathWithHttpInfoAsync(path, systemRawRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Update the value of the key at the given path. 
@@ -21022,7 +15191,7 @@ namespace VaultClient.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRawPathWithHttpInfoAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -21063,16 +15232,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyInitRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
-        {
-            PostSysRekeyInitWithHttpInfo(systemRekeyInitRequest);
-        }
 
         /// <summary>
         /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
@@ -21080,7 +15239,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRekeyInitWithHttpInfo(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21113,17 +15272,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyInitRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRekeyInitWithHttpInfoAsync(systemRekeyInitRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
@@ -21132,7 +15280,7 @@ namespace VaultClient.Api
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyInitWithHttpInfoAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21168,16 +15316,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single unseal key share to progress the rekey of the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyUpdateRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
-        {
-            PostSysRekeyUpdateWithHttpInfo(systemRekeyUpdateRequest);
-        }
 
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault. 
@@ -21185,7 +15323,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRekeyUpdateWithHttpInfo(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21218,17 +15356,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single unseal key share to progress the rekey of the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyUpdateRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRekeyUpdateWithHttpInfoAsync(systemRekeyUpdateRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault. 
@@ -21237,7 +15364,7 @@ namespace VaultClient.Api
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyUpdateWithHttpInfoAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21273,16 +15400,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single new key share to progress the rekey verification operation. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyVerifyRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
-        {
-            PostSysRekeyVerifyWithHttpInfo(systemRekeyVerifyRequest);
-        }
 
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation. 
@@ -21290,7 +15407,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRekeyVerifyWithHttpInfo(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21323,17 +15440,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Enter a single new key share to progress the rekey verification operation. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRekeyVerifyRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRekeyVerifyWithHttpInfoAsync(systemRekeyVerifyRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation. 
@@ -21342,7 +15448,7 @@ namespace VaultClient.Api
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyVerifyWithHttpInfoAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21378,16 +15484,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initiate a mount migration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRemountRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
-        {
-            PostSysRemountWithHttpInfo(systemRemountRequest);
-        }
 
         /// <summary>
         /// Initiate a mount migration 
@@ -21395,7 +15491,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRemountWithHttpInfo(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21428,17 +15524,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Initiate a mount migration 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRemountRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRemountWithHttpInfoAsync(systemRemountRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Initiate a mount migration 
@@ -21447,7 +15532,7 @@ namespace VaultClient.Api
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRemountWithHttpInfoAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21483,16 +15568,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRenewRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
-        {
-            PostSysRenewWithHttpInfo(systemRenewRequest);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -21500,7 +15575,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRenewWithHttpInfo(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21533,17 +15608,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRenewRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRenewWithHttpInfoAsync(systemRenewRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -21552,7 +15616,7 @@ namespace VaultClient.Api
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRenewWithHttpInfoAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21588,17 +15652,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRenewLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest))
-        {
-            PostSysRenewUrlLeaseIdWithHttpInfo(urlLeaseId, systemRenewLeaseRequest);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -21607,7 +15660,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRenewUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21645,18 +15698,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRenewLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRenewUrlLeaseIdWithHttpInfoAsync(urlLeaseId, systemRenewLeaseRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
@@ -21666,7 +15707,7 @@ namespace VaultClient.Api
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRenewUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21707,16 +15748,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRevokeRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
-        {
-            PostSysRevokeWithHttpInfo(systemRevokeRequest);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -21724,7 +15755,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRevokeWithHttpInfo(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21757,17 +15788,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRevokeRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRevokeWithHttpInfoAsync(systemRevokeRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -21776,7 +15796,7 @@ namespace VaultClient.Api
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeWithHttpInfoAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21812,16 +15832,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns></returns>
-        public void PostSysRevokeForcePrefix(string prefix)
-        {
-            PostSysRevokeForcePrefixWithHttpInfo(prefix);
-        }
 
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
@@ -21829,7 +15839,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRevokeForcePrefixWithHttpInfo(string prefix)
+        public VaultClient.Client.ApiResponse<Object> PostSysRevokeForcePrefix(string prefix)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -21865,17 +15875,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRevokeForcePrefixWithHttpInfoAsync(prefix, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
@@ -21884,7 +15883,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeForcePrefixWithHttpInfoAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -21923,17 +15922,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemRevokePrefixRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest))
-        {
-            PostSysRevokePrefixPrefixWithHttpInfo(prefix, systemRevokePrefixRequest);
-        }
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
@@ -21942,7 +15930,7 @@ namespace VaultClient.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRevokePrefixPrefixWithHttpInfo(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -21980,18 +15968,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="systemRevokePrefixRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRevokePrefixPrefixWithHttpInfoAsync(prefix, systemRevokePrefixRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
@@ -22001,7 +15977,7 @@ namespace VaultClient.Api
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokePrefixPrefixWithHttpInfoAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -22042,17 +16018,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRevokeLeaseRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest))
-        {
-            PostSysRevokeUrlLeaseIdWithHttpInfo(urlLeaseId, systemRevokeLeaseRequest);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -22061,7 +16026,7 @@ namespace VaultClient.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRevokeUrlLeaseIdWithHttpInfo(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -22099,18 +16064,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="systemRevokeLeaseRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRevokeUrlLeaseIdWithHttpInfoAsync(urlLeaseId, systemRevokeLeaseRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Revokes a lease immediately. 
@@ -22120,7 +16073,7 @@ namespace VaultClient.Api
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeUrlLeaseIdWithHttpInfoAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -22161,22 +16114,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Rotates the backend encryption key used to persist data. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void PostSysRotate()
-        {
-            PostSysRotateWithHttpInfo();
-        }
 
         /// <summary>
         /// Rotates the backend encryption key used to persist data. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRotateWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> PostSysRotate()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22207,16 +16151,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Rotates the backend encryption key used to persist data. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRotateWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Rotates the backend encryption key used to persist data. 
@@ -22224,7 +16158,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRotateWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22258,16 +16192,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRotateConfigRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
-        {
-            PostSysRotateConfigWithHttpInfo(systemRotateConfigRequest);
-        }
 
         /// <summary>
         ///  
@@ -22275,7 +16199,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysRotateConfigWithHttpInfo(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22308,17 +16232,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemRotateConfigRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysRotateConfigWithHttpInfoAsync(systemRotateConfigRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         ///  
@@ -22327,7 +16240,7 @@ namespace VaultClient.Api
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRotateConfigWithHttpInfoAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22363,22 +16276,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Seal the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void PostSysSeal()
-        {
-            PostSysSealWithHttpInfo();
-        }
 
         /// <summary>
         /// Seal the Vault. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysSealWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> PostSysSeal()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22409,16 +16313,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Seal the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysSealWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Seal the Vault. 
@@ -22426,7 +16320,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysSealWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22460,22 +16354,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void PostSysStepDown()
-        {
-            PostSysStepDownWithHttpInfo();
-        }
 
         /// <summary>
         /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysStepDownWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> PostSysStepDown()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22506,16 +16391,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysStepDownWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
@@ -22523,7 +16398,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysStepDownWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22557,16 +16432,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a hash sum for input data 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
-        {
-            PostSysToolsHashWithHttpInfo(systemToolsHashRequest);
-        }
 
         /// <summary>
         /// Generate a hash sum for input data 
@@ -22574,7 +16439,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsHashWithHttpInfo(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22607,17 +16472,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a hash sum for input data 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsHashWithHttpInfoAsync(systemToolsHashRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate a hash sum for input data 
@@ -22626,7 +16480,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsHashWithHttpInfoAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22662,17 +16516,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a hash sum for input data 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
-        {
-            PostSysToolsHashUrlalgorithmWithHttpInfo(urlalgorithm, systemToolsHashRequest);
-        }
 
         /// <summary>
         /// Generate a hash sum for input data 
@@ -22681,7 +16524,7 @@ namespace VaultClient.Api
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsHashUrlalgorithmWithHttpInfo(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
@@ -22719,18 +16562,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate a hash sum for input data 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
-        /// <param name="systemToolsHashRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsHashUrlalgorithmWithHttpInfoAsync(urlalgorithm, systemToolsHashRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate a hash sum for input data 
@@ -22740,7 +16571,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsHashUrlalgorithmWithHttpInfoAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
@@ -22781,16 +16612,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
-        {
-            PostSysToolsRandomWithHttpInfo(systemToolsRandomRequest);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -22798,7 +16619,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomWithHttpInfo(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22831,17 +16652,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsRandomWithHttpInfoAsync(systemToolsRandomRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -22850,7 +16660,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomWithHttpInfoAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22886,17 +16696,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
-        {
-            PostSysToolsRandomSourceWithHttpInfo(source, systemToolsRandomRequest);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -22905,7 +16704,7 @@ namespace VaultClient.Api
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomSourceWithHttpInfo(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -22943,18 +16742,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsRandomSourceWithHttpInfoAsync(source, systemToolsRandomRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -22964,7 +16751,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomSourceWithHttpInfoAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -23005,18 +16792,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
-        {
-            PostSysToolsRandomSourceUrlbytesWithHttpInfo(source, urlbytes, systemToolsRandomRequest);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -23026,7 +16801,7 @@ namespace VaultClient.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomSourceUrlbytesWithHttpInfo(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -23069,19 +16844,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsRandomSourceUrlbytesWithHttpInfoAsync(source, urlbytes, systemToolsRandomRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -23092,7 +16854,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesWithHttpInfoAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -23138,17 +16900,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
-        {
-            PostSysToolsRandomUrlbytesWithHttpInfo(urlbytes, systemToolsRandomRequest);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -23157,7 +16908,7 @@ namespace VaultClient.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomUrlbytesWithHttpInfo(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
@@ -23195,18 +16946,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Generate random bytes 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="systemToolsRandomRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysToolsRandomUrlbytesWithHttpInfoAsync(urlbytes, systemToolsRandomRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Generate random bytes 
@@ -23216,7 +16955,7 @@ namespace VaultClient.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomUrlbytesWithHttpInfoAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
@@ -23257,16 +16996,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Unseal the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemUnsealRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
-        {
-            PostSysUnsealWithHttpInfo(systemUnsealRequest);
-        }
 
         /// <summary>
         /// Unseal the Vault. 
@@ -23274,7 +17003,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysUnsealWithHttpInfo(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23307,17 +17036,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Unseal the Vault. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemUnsealRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysUnsealWithHttpInfoAsync(systemUnsealRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Unseal the Vault. 
@@ -23326,7 +17044,7 @@ namespace VaultClient.Api
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysUnsealWithHttpInfoAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23362,16 +17080,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Look up wrapping properties for the given token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingLookupRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
-        {
-            PostSysWrappingLookupWithHttpInfo(systemWrappingLookupRequest);
-        }
 
         /// <summary>
         /// Look up wrapping properties for the given token. 
@@ -23379,7 +17087,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysWrappingLookupWithHttpInfo(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23412,17 +17120,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Look up wrapping properties for the given token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingLookupRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysWrappingLookupWithHttpInfoAsync(systemWrappingLookupRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Look up wrapping properties for the given token. 
@@ -23431,7 +17128,7 @@ namespace VaultClient.Api
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingLookupWithHttpInfoAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23467,16 +17164,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Rotates a response-wrapped token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingRewrapRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
-        {
-            PostSysWrappingRewrapWithHttpInfo(systemWrappingRewrapRequest);
-        }
 
         /// <summary>
         /// Rotates a response-wrapped token. 
@@ -23484,7 +17171,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysWrappingRewrapWithHttpInfo(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23517,17 +17204,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Rotates a response-wrapped token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingRewrapRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysWrappingRewrapWithHttpInfoAsync(systemWrappingRewrapRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Rotates a response-wrapped token. 
@@ -23536,7 +17212,7 @@ namespace VaultClient.Api
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingRewrapWithHttpInfoAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23572,16 +17248,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Unwraps a response-wrapped token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
-        /// <returns></returns>
-        public void PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
-        {
-            PostSysWrappingUnwrapWithHttpInfo(systemWrappingUnwrapRequest);
-        }
 
         /// <summary>
         /// Unwraps a response-wrapped token. 
@@ -23589,7 +17255,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysWrappingUnwrapWithHttpInfo(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
+        public VaultClient.Client.ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23622,17 +17288,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Unwraps a response-wrapped token. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysWrappingUnwrapWithHttpInfoAsync(systemWrappingUnwrapRequest, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Unwraps a response-wrapped token. 
@@ -23641,7 +17296,7 @@ namespace VaultClient.Api
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingUnwrapWithHttpInfoAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23677,22 +17332,13 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Response-wraps an arbitrary JSON object. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void PostSysWrappingWrap()
-        {
-            PostSysWrappingWrapWithHttpInfo();
-        }
 
         /// <summary>
         /// Response-wraps an arbitrary JSON object. 
         /// </summary>
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public VaultClient.Client.ApiResponse<Object> PostSysWrappingWrapWithHttpInfo()
+        public VaultClient.Client.ApiResponse<Object> PostSysWrappingWrap()
         {
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23723,16 +17369,6 @@ namespace VaultClient.Api
             return localVarResponse;
         }
 
-        /// <summary>
-        /// Response-wraps an arbitrary JSON object. 
-        /// </summary>
-        /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async Task PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await PostSysWrappingWrapWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         /// <summary>
         /// Response-wraps an arbitrary JSON object. 
@@ -23740,7 +17376,7 @@ namespace VaultClient.Api
         /// <exception cref="VaultClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingWrapWithHttpInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultClient.Client.ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
