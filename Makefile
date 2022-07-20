@@ -8,6 +8,8 @@ OUTPUT_PATH               ?= .
 
 regen: delete-generated generate clean
 
+regen-bin: delete-generated generate clean build
+
 delete-generated:
 	rm -rf \
 		docs \
@@ -37,7 +39,6 @@ clean:
 		git_push.sh \
 		mono_nunit_test.sh \
 		.openapi-generator \
-		.openapi-generator-ignore \
 		.travis.yml
 
 build:
