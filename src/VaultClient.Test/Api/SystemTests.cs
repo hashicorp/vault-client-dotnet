@@ -31,11 +31,11 @@ namespace VaultClient.Test.Api
     /// </remarks>
     public class SystemTests : IDisposable
     {
-        private System instance;
+        private VaultClient.Api.System instance;
 
         public SystemTests()
         {
-            instance = new System();
+            instance = new VaultClient.Api.System();
         }
 
         public void Dispose()

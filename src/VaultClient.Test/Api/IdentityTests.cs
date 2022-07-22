@@ -31,11 +31,11 @@ namespace VaultClient.Test.Api
     /// </remarks>
     public class IdentityTests : IDisposable
     {
-        private Identity instance;
+        private VaultClient.Api.Identity instance;
 
         public IdentityTests()
         {
-            instance = new Identity();
+            instance = new VaultClient.Api.Identity();
         }
 
         public void Dispose()
