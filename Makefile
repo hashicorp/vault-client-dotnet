@@ -36,12 +36,20 @@ generate:
 				--api-name-suffix  "REPLACE~ME"
 
 	rename --force 's/REPLACE~ME//g' docs/*.md
+	rename --force 's/REPLACE~ME//g' src/VaultClient/Api/*.cs
+	rename --force 's/REPLACE~ME//g' src/VaultClient.Test/Api/*.cs
 
-	sed -i'.original' -e 's/REPLACE~ME//g' *.go README.md
+	sed -i'.original' -e 's/REPLACE~ME//g' README.md
 	sed -i'.original' -e 's/REPLACE~ME//g' docs/*.md
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient/Api/*.cs
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient/Client/*.cs
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient.Test/Api/*.cs
 
 	rm -f *.original
 	rm -f docs/*.original
+	rm -f src/VaultClient/Api/*.original
+	rm -f src/VaultClient/Client/*.original
+	rm -f src/VaultClient.Test/Api/*.original
 
 clean:
 	dotnet clean
