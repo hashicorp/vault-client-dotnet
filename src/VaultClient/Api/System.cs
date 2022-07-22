@@ -21,7 +21,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISystemApiSync : IApiAccessor
+    public interface ISystemSync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -1600,7 +1600,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISystemApiAsync : IApiAccessor
+    public interface ISystemAsync : IApiAccessor
     {
         #region Asynchronous Operations
    
@@ -3499,7 +3499,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISystemApi : ISystemApiSync, ISystemApiAsync
+    public interface ISystem : ISystemSync, ISystemAsync
     {
 
     }
@@ -3507,29 +3507,29 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class SystemApi : IDisposable, ISystemApi
+    public partial class System : IDisposable, ISystem
     {
         private VaultClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class.
+        /// Initializes a new instance of the <see cref="System"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
-        public SystemApi() : this((string)null)
+        public System() : this((string)null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class.
+        /// Initializes a new instance of the <see cref="System"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="basePath">The target service's base path in URL format.</param>
         /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
-        public SystemApi(string basePath)
+        public System(string basePath)
         {
             this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
                 VaultClient.Client.GlobalConfiguration.Instance,
@@ -3542,14 +3542,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="System"/> class using Configuration object.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="configuration">An instance of Configuration.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
-        public SystemApi(VaultClient.Client.Configuration configuration)
+        public System(VaultClient.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -3564,7 +3564,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class.
+        /// Initializes a new instance of the <see cref="System"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
@@ -3574,12 +3574,12 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SystemApi(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
+        public System(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class.
+        /// Initializes a new instance of the <see cref="System"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="basePath">The target service's base path in URL format.</param>
@@ -3591,7 +3591,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SystemApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+        public System(HttpClient client, string basePath, HttpClientHandler handler = null)
         {
             if (client == null) throw new ArgumentNullException("client");
 
@@ -3606,7 +3606,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="System"/> class using Configuration object.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="configuration">An instance of Configuration.</param>
@@ -3617,7 +3617,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SystemApi(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
+        public System(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
@@ -3633,14 +3633,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemApi"/> class
+        /// Initializes a new instance of the <see cref="System"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public SystemApi(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
+        public System(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -3717,7 +3717,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuditPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3761,7 +3761,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuditPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3807,7 +3807,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3851,7 +3851,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3897,7 +3897,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3941,7 +3941,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4065,7 +4065,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4109,7 +4109,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->DeleteSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4311,7 +4311,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4355,7 +4355,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4401,7 +4401,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4445,7 +4445,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4492,11 +4492,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4542,11 +4542,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->DeleteSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4593,7 +4593,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4637,7 +4637,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4683,7 +4683,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4727,7 +4727,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4773,7 +4773,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4817,7 +4817,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4863,7 +4863,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4907,7 +4907,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->DeleteSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5031,7 +5031,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5075,7 +5075,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->DeleteSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5589,7 +5589,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5633,7 +5633,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5679,7 +5679,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5723,7 +5723,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysAuthPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5847,7 +5847,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5891,7 +5891,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6093,7 +6093,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysConfigUiHeaders");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6137,7 +6137,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysConfigUiHeaders");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6183,7 +6183,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6227,7 +6227,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->GetSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7599,7 +7599,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysInternalUiMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7643,7 +7643,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysInternalUiMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8157,7 +8157,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8201,7 +8201,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8248,11 +8248,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->GetSysLeasesLookupPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->GetSysLeasesLookupPrefix");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookupPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8298,11 +8298,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->GetSysLeasesLookupPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->GetSysLeasesLookupPrefix");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysLeasesLookupPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8613,7 +8613,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8657,7 +8657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8703,7 +8703,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8747,7 +8747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysMountsPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8871,7 +8871,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8915,7 +8915,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8962,11 +8962,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogType");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogType");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPluginsCatalogType");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9012,11 +9012,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogType");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogType");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPluginsCatalogType");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9064,11 +9064,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9114,11 +9114,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->GetSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9165,7 +9165,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesAcl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9209,7 +9209,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesAcl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9255,7 +9255,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9299,7 +9299,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9345,7 +9345,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesPassword");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9389,7 +9389,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysPoliciesPassword");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9435,7 +9435,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9479,7 +9479,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9525,7 +9525,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordNameGenerate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9569,7 +9569,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPoliciesPasswordNameGenerate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9703,7 +9703,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9747,7 +9747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10729,7 +10729,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysQuotasRateLimit");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10773,7 +10773,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysQuotasRateLimit");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10819,7 +10819,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10863,7 +10863,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->GetSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10998,7 +10998,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11047,7 +11047,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->GetSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11409,7 +11409,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'migrationId' when calling SystemApi->GetSysRemountStatusMigrationId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11453,7 +11453,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'migrationId' when calling SystemApi->GetSysRemountStatusMigrationId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11733,7 +11733,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysVersionHistory");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11777,7 +11777,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SystemApi->GetSysVersionHistory");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11902,7 +11902,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditHashPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11949,7 +11949,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditHashPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11998,7 +11998,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12045,7 +12045,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuditPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12094,7 +12094,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12141,7 +12141,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12190,7 +12190,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12237,7 +12237,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysAuthPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12538,7 +12538,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12585,7 +12585,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigAuditingRequestHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12717,7 +12717,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'subsystem' when calling SystemApi->PostSysConfigReloadSubsystem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12761,7 +12761,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'subsystem' when calling SystemApi->PostSysConfigReloadSubsystem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12808,7 +12808,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12855,7 +12855,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling SystemApi->PostSysConfigUiHeadersHeader");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13492,7 +13492,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRenewUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13539,7 +13539,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRenewUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13671,7 +13671,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokeForcePrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13715,7 +13715,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokeForcePrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13762,7 +13762,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokePrefixPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13809,7 +13809,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysLeasesRevokePrefixPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13858,7 +13858,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRevokeUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13905,7 +13905,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysLeasesRevokeUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14116,7 +14116,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14163,7 +14163,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14212,7 +14212,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14259,7 +14259,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysMountsPathTune");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14308,7 +14308,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14355,7 +14355,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14405,11 +14405,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->PostSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14458,11 +14458,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SystemApi->PostSysPluginsCatalogTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14596,7 +14596,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14643,7 +14643,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesAclName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14692,7 +14692,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14739,7 +14739,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPoliciesPasswordName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14788,7 +14788,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14835,7 +14835,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysPolicyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14968,7 +14968,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15015,7 +15015,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SystemApi->PostSysQuotasRateLimitName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15148,7 +15148,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15195,7 +15195,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SystemApi->PostSysRawPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15664,7 +15664,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRenewUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15711,7 +15711,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRenewUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15843,7 +15843,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokeForcePrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15887,7 +15887,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokeForcePrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15934,7 +15934,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokePrefixPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15981,7 +15981,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling SystemApi->PostSysRevokePrefixPrefix");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16030,7 +16030,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRevokeUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16077,7 +16077,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling SystemApi->PostSysRevokeUrlLeaseId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16528,7 +16528,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SystemApi->PostSysToolsHashUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16575,7 +16575,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SystemApi->PostSysToolsHashUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16708,7 +16708,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSource");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16755,7 +16755,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSource");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16805,11 +16805,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16858,11 +16858,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16912,7 +16912,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16959,7 +16959,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SystemApi->PostSysToolsRandomUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();

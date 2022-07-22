@@ -1,280 +1,280 @@
-# VaultClient.Api.AuthApi
+# VaultClient.Api.Auth
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteAuthAlicloudRoleRole**](AuthApi.md#deleteauthalicloudrolerole) | **DELETE** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-[**DeleteAuthAppIdMapAppIdKey**](AuthApi.md#deleteauthappidmapappidkey) | **DELETE** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**DeleteAuthAppIdMapUserIdKey**](AuthApi.md#deleteauthappidmapuseridkey) | **DELETE** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
-[**DeleteAuthApproleRoleRoleName**](AuthApi.md#deleteauthapprolerolerolename) | **DELETE** /auth/approle/role/{role_name} | Register an role with the backend.
-[**DeleteAuthApproleRoleRoleNameBindSecretId**](AuthApi.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**DeleteAuthApproleRoleRoleNameBoundCidrList**](AuthApi.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteAuthApproleRoleRoleNamePeriod**](AuthApi.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**DeleteAuthApproleRoleRoleNamePolicies**](AuthApi.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/approle/role/{role_name}/policies | Policies of the role.
-[**DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**](AuthApi.md#deleteauthapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
-[**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](AuthApi.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](AuthApi.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](AuthApi.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](AuthApi.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
-[**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](AuthApi.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](AuthApi.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**DeleteAuthApproleRoleRoleNameTokenNumUses**](AuthApi.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**DeleteAuthApproleRoleRoleNameTokenTtl**](AuthApi.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**DeleteAuthAwsConfigCertificateCertName**](AuthApi.md#deleteauthawsconfigcertificatecertname) | **DELETE** /auth/aws/config/certificate/{cert_name} | 
-[**DeleteAuthAwsConfigClient**](AuthApi.md#deleteauthawsconfigclient) | **DELETE** /auth/aws/config/client | 
-[**DeleteAuthAwsConfigStsAccountId**](AuthApi.md#deleteauthawsconfigstsaccountid) | **DELETE** /auth/aws/config/sts/{account_id} | 
-[**DeleteAuthAwsConfigTidyIdentityAccesslist**](AuthApi.md#deleteauthawsconfigtidyidentityaccesslist) | **DELETE** /auth/aws/config/tidy/identity-accesslist | 
-[**DeleteAuthAwsConfigTidyIdentityWhitelist**](AuthApi.md#deleteauthawsconfigtidyidentitywhitelist) | **DELETE** /auth/aws/config/tidy/identity-whitelist | 
-[**DeleteAuthAwsConfigTidyRoletagBlacklist**](AuthApi.md#deleteauthawsconfigtidyroletagblacklist) | **DELETE** /auth/aws/config/tidy/roletag-blacklist | 
-[**DeleteAuthAwsConfigTidyRoletagDenylist**](AuthApi.md#deleteauthawsconfigtidyroletagdenylist) | **DELETE** /auth/aws/config/tidy/roletag-denylist | 
-[**DeleteAuthAwsIdentityAccesslistInstanceId**](AuthApi.md#deleteauthawsidentityaccesslistinstanceid) | **DELETE** /auth/aws/identity-accesslist/{instance_id} | 
-[**DeleteAuthAwsIdentityWhitelistInstanceId**](AuthApi.md#deleteauthawsidentitywhitelistinstanceid) | **DELETE** /auth/aws/identity-whitelist/{instance_id} | 
-[**DeleteAuthAwsRoleRole**](AuthApi.md#deleteauthawsrolerole) | **DELETE** /auth/aws/role/{role} | 
-[**DeleteAuthAwsRoletagBlacklistRoleTag**](AuthApi.md#deleteauthawsroletagblacklistroletag) | **DELETE** /auth/aws/roletag-blacklist/{role_tag} | 
-[**DeleteAuthAwsRoletagDenylistRoleTag**](AuthApi.md#deleteauthawsroletagdenylistroletag) | **DELETE** /auth/aws/roletag-denylist/{role_tag} | 
-[**DeleteAuthAzureConfig**](AuthApi.md#deleteauthazureconfig) | **DELETE** /auth/azure/config | 
-[**DeleteAuthAzureRoleName**](AuthApi.md#deleteauthazurerolename) | **DELETE** /auth/azure/role/{name} | 
-[**DeleteAuthCertCertsName**](AuthApi.md#deleteauthcertcertsname) | **DELETE** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-[**DeleteAuthCertCrlsName**](AuthApi.md#deleteauthcertcrlsname) | **DELETE** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**DeleteAuthCfConfig**](AuthApi.md#deleteauthcfconfig) | **DELETE** /auth/cf/config | 
-[**DeleteAuthCfRolesRole**](AuthApi.md#deleteauthcfrolesrole) | **DELETE** /auth/cf/roles/{role} | 
-[**DeleteAuthGcpRoleName**](AuthApi.md#deleteauthgcprolename) | **DELETE** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-[**DeleteAuthGithubMapTeamsKey**](AuthApi.md#deleteauthgithubmapteamskey) | **DELETE** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-[**DeleteAuthGithubMapUsersKey**](AuthApi.md#deleteauthgithubmapuserskey) | **DELETE** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-[**DeleteAuthJwtRoleName**](AuthApi.md#deleteauthjwtrolename) | **DELETE** /auth/jwt/role/{name} | Delete an existing role.
-[**DeleteAuthKerberosGroupsName**](AuthApi.md#deleteauthkerberosgroupsname) | **DELETE** /auth/kerberos/groups/{name} | 
-[**DeleteAuthKubernetesRoleName**](AuthApi.md#deleteauthkubernetesrolename) | **DELETE** /auth/kubernetes/role/{name} | Register an role with the backend.
-[**DeleteAuthLdapGroupsName**](AuthApi.md#deleteauthldapgroupsname) | **DELETE** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**DeleteAuthLdapUsersName**](AuthApi.md#deleteauthldapusersname) | **DELETE** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-[**DeleteAuthOciConfig**](AuthApi.md#deleteauthociconfig) | **DELETE** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-[**DeleteAuthOciRoleRole**](AuthApi.md#deleteauthocirolerole) | **DELETE** /auth/oci/role/{role} | Create a role and associate policies to it.
-[**DeleteAuthOidcRoleName**](AuthApi.md#deleteauthoidcrolename) | **DELETE** /auth/oidc/role/{name} | Delete an existing role.
-[**DeleteAuthOktaGroupsName**](AuthApi.md#deleteauthoktagroupsname) | **DELETE** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-[**DeleteAuthOktaUsersName**](AuthApi.md#deleteauthoktausersname) | **DELETE** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-[**DeleteAuthRadiusUsersName**](AuthApi.md#deleteauthradiususersname) | **DELETE** /auth/radius/users/{name} | Manage users allowed to authenticate.
-[**DeleteAuthTokenRolesRoleName**](AuthApi.md#deleteauthtokenrolesrolename) | **DELETE** /auth/token/roles/{role_name} | 
-[**DeleteAuthUserpassUsersUsername**](AuthApi.md#deleteauthuserpassusersusername) | **DELETE** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-[**GetAuthAlicloudRole**](AuthApi.md#getauthalicloudrole) | **GET** /auth/alicloud/role | Lists all the roles that are registered with Vault.
-[**GetAuthAlicloudRoleRole**](AuthApi.md#getauthalicloudrolerole) | **GET** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-[**GetAuthAlicloudRoles**](AuthApi.md#getauthalicloudroles) | **GET** /auth/alicloud/roles | Lists all the roles that are registered with Vault.
-[**GetAuthAppIdMapAppId**](AuthApi.md#getauthappidmapappid) | **GET** /auth/app-id/map/app-id | Read mappings for app-id
-[**GetAuthAppIdMapAppIdKey**](AuthApi.md#getauthappidmapappidkey) | **GET** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**GetAuthAppIdMapUserId**](AuthApi.md#getauthappidmapuserid) | **GET** /auth/app-id/map/user-id | Read mappings for user-id
-[**GetAuthAppIdMapUserIdKey**](AuthApi.md#getauthappidmapuseridkey) | **GET** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
-[**GetAuthApproleRole**](AuthApi.md#getauthapprolerole) | **GET** /auth/approle/role | Lists all the roles registered with the backend.
-[**GetAuthApproleRoleRoleName**](AuthApi.md#getauthapprolerolerolename) | **GET** /auth/approle/role/{role_name} | Register an role with the backend.
-[**GetAuthApproleRoleRoleNameBindSecretId**](AuthApi.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**GetAuthApproleRoleRoleNameBoundCidrList**](AuthApi.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**GetAuthApproleRoleRoleNameLocalSecretIds**](AuthApi.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/approle/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
-[**GetAuthApproleRoleRoleNamePeriod**](AuthApi.md#getauthapprolerolerolenameperiod) | **GET** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**GetAuthApproleRoleRoleNamePolicies**](AuthApi.md#getauthapprolerolerolenamepolicies) | **GET** /auth/approle/role/{role_name}/policies | Policies of the role.
-[**GetAuthApproleRoleRoleNameRoleId**](AuthApi.md#getauthapprolerolerolenameroleid) | **GET** /auth/approle/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**GetAuthApproleRoleRoleNameSecretId**](AuthApi.md#getauthapprolerolerolenamesecretid) | **GET** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
-[**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](AuthApi.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**GetAuthApproleRoleRoleNameSecretIdNumUses**](AuthApi.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**GetAuthApproleRoleRoleNameSecretIdTtl**](AuthApi.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
-[**GetAuthApproleRoleRoleNameTokenBoundCidrs**](AuthApi.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**GetAuthApproleRoleRoleNameTokenMaxTtl**](AuthApi.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**GetAuthApproleRoleRoleNameTokenNumUses**](AuthApi.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**GetAuthApproleRoleRoleNameTokenTtl**](AuthApi.md#getauthapprolerolerolenametokenttl) | **GET** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**GetAuthAwsConfigCertificateCertName**](AuthApi.md#getauthawsconfigcertificatecertname) | **GET** /auth/aws/config/certificate/{cert_name} | 
-[**GetAuthAwsConfigCertificates**](AuthApi.md#getauthawsconfigcertificates) | **GET** /auth/aws/config/certificates | 
-[**GetAuthAwsConfigClient**](AuthApi.md#getauthawsconfigclient) | **GET** /auth/aws/config/client | 
-[**GetAuthAwsConfigIdentity**](AuthApi.md#getauthawsconfigidentity) | **GET** /auth/aws/config/identity | 
-[**GetAuthAwsConfigSts**](AuthApi.md#getauthawsconfigsts) | **GET** /auth/aws/config/sts | 
-[**GetAuthAwsConfigStsAccountId**](AuthApi.md#getauthawsconfigstsaccountid) | **GET** /auth/aws/config/sts/{account_id} | 
-[**GetAuthAwsConfigTidyIdentityAccesslist**](AuthApi.md#getauthawsconfigtidyidentityaccesslist) | **GET** /auth/aws/config/tidy/identity-accesslist | 
-[**GetAuthAwsConfigTidyIdentityWhitelist**](AuthApi.md#getauthawsconfigtidyidentitywhitelist) | **GET** /auth/aws/config/tidy/identity-whitelist | 
-[**GetAuthAwsConfigTidyRoletagBlacklist**](AuthApi.md#getauthawsconfigtidyroletagblacklist) | **GET** /auth/aws/config/tidy/roletag-blacklist | 
-[**GetAuthAwsConfigTidyRoletagDenylist**](AuthApi.md#getauthawsconfigtidyroletagdenylist) | **GET** /auth/aws/config/tidy/roletag-denylist | 
-[**GetAuthAwsIdentityAccesslist**](AuthApi.md#getauthawsidentityaccesslist) | **GET** /auth/aws/identity-accesslist | 
-[**GetAuthAwsIdentityAccesslistInstanceId**](AuthApi.md#getauthawsidentityaccesslistinstanceid) | **GET** /auth/aws/identity-accesslist/{instance_id} | 
-[**GetAuthAwsIdentityWhitelist**](AuthApi.md#getauthawsidentitywhitelist) | **GET** /auth/aws/identity-whitelist | 
-[**GetAuthAwsIdentityWhitelistInstanceId**](AuthApi.md#getauthawsidentitywhitelistinstanceid) | **GET** /auth/aws/identity-whitelist/{instance_id} | 
-[**GetAuthAwsRole**](AuthApi.md#getauthawsrole) | **GET** /auth/aws/role | 
-[**GetAuthAwsRoleRole**](AuthApi.md#getauthawsrolerole) | **GET** /auth/aws/role/{role} | 
-[**GetAuthAwsRoles**](AuthApi.md#getauthawsroles) | **GET** /auth/aws/roles | 
-[**GetAuthAwsRoletagBlacklist**](AuthApi.md#getauthawsroletagblacklist) | **GET** /auth/aws/roletag-blacklist | 
-[**GetAuthAwsRoletagBlacklistRoleTag**](AuthApi.md#getauthawsroletagblacklistroletag) | **GET** /auth/aws/roletag-blacklist/{role_tag} | 
-[**GetAuthAwsRoletagDenylist**](AuthApi.md#getauthawsroletagdenylist) | **GET** /auth/aws/roletag-denylist | 
-[**GetAuthAwsRoletagDenylistRoleTag**](AuthApi.md#getauthawsroletagdenylistroletag) | **GET** /auth/aws/roletag-denylist/{role_tag} | 
-[**GetAuthAzureConfig**](AuthApi.md#getauthazureconfig) | **GET** /auth/azure/config | 
-[**GetAuthAzureRole**](AuthApi.md#getauthazurerole) | **GET** /auth/azure/role | 
-[**GetAuthAzureRoleName**](AuthApi.md#getauthazurerolename) | **GET** /auth/azure/role/{name} | 
-[**GetAuthCentrifyConfig**](AuthApi.md#getauthcentrifyconfig) | **GET** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-[**GetAuthCertCerts**](AuthApi.md#getauthcertcerts) | **GET** /auth/cert/certs | Manage trusted certificates used for authentication.
-[**GetAuthCertCertsName**](AuthApi.md#getauthcertcertsname) | **GET** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-[**GetAuthCertCrlsName**](AuthApi.md#getauthcertcrlsname) | **GET** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**GetAuthCfConfig**](AuthApi.md#getauthcfconfig) | **GET** /auth/cf/config | 
-[**GetAuthCfRoles**](AuthApi.md#getauthcfroles) | **GET** /auth/cf/roles | 
-[**GetAuthCfRolesRole**](AuthApi.md#getauthcfrolesrole) | **GET** /auth/cf/roles/{role} | 
-[**GetAuthGcpConfig**](AuthApi.md#getauthgcpconfig) | **GET** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-[**GetAuthGcpRole**](AuthApi.md#getauthgcprole) | **GET** /auth/gcp/role | Lists all the roles that are registered with Vault.
-[**GetAuthGcpRoleName**](AuthApi.md#getauthgcprolename) | **GET** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-[**GetAuthGcpRoles**](AuthApi.md#getauthgcproles) | **GET** /auth/gcp/roles | Lists all the roles that are registered with Vault.
-[**GetAuthGithubConfig**](AuthApi.md#getauthgithubconfig) | **GET** /auth/github/config | 
-[**GetAuthGithubMapTeams**](AuthApi.md#getauthgithubmapteams) | **GET** /auth/github/map/teams | Read mappings for teams
-[**GetAuthGithubMapTeamsKey**](AuthApi.md#getauthgithubmapteamskey) | **GET** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-[**GetAuthGithubMapUsers**](AuthApi.md#getauthgithubmapusers) | **GET** /auth/github/map/users | Read mappings for users
-[**GetAuthGithubMapUsersKey**](AuthApi.md#getauthgithubmapuserskey) | **GET** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-[**GetAuthJwtConfig**](AuthApi.md#getauthjwtconfig) | **GET** /auth/jwt/config | Read the current JWT authentication backend configuration.
-[**GetAuthJwtOidcCallback**](AuthApi.md#getauthjwtoidccallback) | **GET** /auth/jwt/oidc/callback | Callback endpoint to complete an OIDC login.
-[**GetAuthJwtRole**](AuthApi.md#getauthjwtrole) | **GET** /auth/jwt/role | Lists all the roles registered with the backend.
-[**GetAuthJwtRoleName**](AuthApi.md#getauthjwtrolename) | **GET** /auth/jwt/role/{name} | Read an existing role.
-[**GetAuthKerberosConfig**](AuthApi.md#getauthkerberosconfig) | **GET** /auth/kerberos/config | 
-[**GetAuthKerberosConfigLdap**](AuthApi.md#getauthkerberosconfigldap) | **GET** /auth/kerberos/config/ldap | 
-[**GetAuthKerberosGroups**](AuthApi.md#getauthkerberosgroups) | **GET** /auth/kerberos/groups | 
-[**GetAuthKerberosGroupsName**](AuthApi.md#getauthkerberosgroupsname) | **GET** /auth/kerberos/groups/{name} | 
-[**GetAuthKerberosLogin**](AuthApi.md#getauthkerberoslogin) | **GET** /auth/kerberos/login | 
-[**GetAuthKubernetesConfig**](AuthApi.md#getauthkubernetesconfig) | **GET** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
-[**GetAuthKubernetesRole**](AuthApi.md#getauthkubernetesrole) | **GET** /auth/kubernetes/role | Lists all the roles registered with the backend.
-[**GetAuthKubernetesRoleName**](AuthApi.md#getauthkubernetesrolename) | **GET** /auth/kubernetes/role/{name} | Register an role with the backend.
-[**GetAuthLdapConfig**](AuthApi.md#getauthldapconfig) | **GET** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
-[**GetAuthLdapGroups**](AuthApi.md#getauthldapgroups) | **GET** /auth/ldap/groups | Manage additional groups for users allowed to authenticate.
-[**GetAuthLdapGroupsName**](AuthApi.md#getauthldapgroupsname) | **GET** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**GetAuthLdapUsers**](AuthApi.md#getauthldapusers) | **GET** /auth/ldap/users | Manage users allowed to authenticate.
-[**GetAuthLdapUsersName**](AuthApi.md#getauthldapusersname) | **GET** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-[**GetAuthOciConfig**](AuthApi.md#getauthociconfig) | **GET** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-[**GetAuthOciRole**](AuthApi.md#getauthocirole) | **GET** /auth/oci/role | Lists all the roles that are registered with Vault.
-[**GetAuthOciRoleRole**](AuthApi.md#getauthocirolerole) | **GET** /auth/oci/role/{role} | Create a role and associate policies to it.
-[**GetAuthOidcConfig**](AuthApi.md#getauthoidcconfig) | **GET** /auth/oidc/config | Read the current JWT authentication backend configuration.
-[**GetAuthOidcOidcCallback**](AuthApi.md#getauthoidcoidccallback) | **GET** /auth/oidc/oidc/callback | Callback endpoint to complete an OIDC login.
-[**GetAuthOidcRole**](AuthApi.md#getauthoidcrole) | **GET** /auth/oidc/role | Lists all the roles registered with the backend.
-[**GetAuthOidcRoleName**](AuthApi.md#getauthoidcrolename) | **GET** /auth/oidc/role/{name} | Read an existing role.
-[**GetAuthOktaConfig**](AuthApi.md#getauthoktaconfig) | **GET** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-[**GetAuthOktaGroups**](AuthApi.md#getauthoktagroups) | **GET** /auth/okta/groups | Manage users allowed to authenticate.
-[**GetAuthOktaGroupsName**](AuthApi.md#getauthoktagroupsname) | **GET** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-[**GetAuthOktaUsers**](AuthApi.md#getauthoktausers) | **GET** /auth/okta/users | Manage additional groups for users allowed to authenticate.
-[**GetAuthOktaUsersName**](AuthApi.md#getauthoktausersname) | **GET** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-[**GetAuthOktaVerifyNonce**](AuthApi.md#getauthoktaverifynonce) | **GET** /auth/okta/verify/{nonce} | 
-[**GetAuthRadiusConfig**](AuthApi.md#getauthradiusconfig) | **GET** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
-[**GetAuthRadiusUsers**](AuthApi.md#getauthradiususers) | **GET** /auth/radius/users | Manage users allowed to authenticate.
-[**GetAuthRadiusUsersName**](AuthApi.md#getauthradiususersname) | **GET** /auth/radius/users/{name} | Manage users allowed to authenticate.
-[**GetAuthTokenAccessors**](AuthApi.md#getauthtokenaccessors) | **GET** /auth/token/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
-[**GetAuthTokenLookup**](AuthApi.md#getauthtokenlookup) | **GET** /auth/token/lookup | This endpoint will lookup a token and its properties.
-[**GetAuthTokenLookupSelf**](AuthApi.md#getauthtokenlookupself) | **GET** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
-[**GetAuthTokenRoles**](AuthApi.md#getauthtokenroles) | **GET** /auth/token/roles | This endpoint lists configured roles.
-[**GetAuthTokenRolesRoleName**](AuthApi.md#getauthtokenrolesrolename) | **GET** /auth/token/roles/{role_name} | 
-[**GetAuthUserpassUsers**](AuthApi.md#getauthuserpassusers) | **GET** /auth/userpass/users | Manage users allowed to authenticate.
-[**GetAuthUserpassUsersUsername**](AuthApi.md#getauthuserpassusersusername) | **GET** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-[**PostAuthAlicloudLogin**](AuthApi.md#postauthalicloudlogin) | **POST** /auth/alicloud/login | Authenticates an RAM entity with Vault.
-[**PostAuthAlicloudRoleRole**](AuthApi.md#postauthalicloudrolerole) | **POST** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-[**PostAuthAppIdLogin**](AuthApi.md#postauthappidlogin) | **POST** /auth/app-id/login | Log in with an App ID and User ID.
-[**PostAuthAppIdLoginAppId**](AuthApi.md#postauthappidloginappid) | **POST** /auth/app-id/login/{app_id} | Log in with an App ID and User ID.
-[**PostAuthAppIdMapAppIdKey**](AuthApi.md#postauthappidmapappidkey) | **POST** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**PostAuthAppIdMapUserIdKey**](AuthApi.md#postauthappidmapuseridkey) | **POST** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
-[**PostAuthApproleLogin**](AuthApi.md#postauthapprolelogin) | **POST** /auth/approle/login | 
-[**PostAuthApproleRoleRoleName**](AuthApi.md#postauthapprolerolerolename) | **POST** /auth/approle/role/{role_name} | Register an role with the backend.
-[**PostAuthApproleRoleRoleNameBindSecretId**](AuthApi.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**PostAuthApproleRoleRoleNameBoundCidrList**](AuthApi.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**PostAuthApproleRoleRoleNameCustomSecretId**](AuthApi.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/approle/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
-[**PostAuthApproleRoleRoleNamePeriod**](AuthApi.md#postauthapprolerolerolenameperiod) | **POST** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**PostAuthApproleRoleRoleNamePolicies**](AuthApi.md#postauthapprolerolerolenamepolicies) | **POST** /auth/approle/role/{role_name}/policies | Policies of the role.
-[**PostAuthApproleRoleRoleNameRoleId**](AuthApi.md#postauthapprolerolerolenameroleid) | **POST** /auth/approle/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**PostAuthApproleRoleRoleNameSecretId**](AuthApi.md#postauthapprolerolerolenamesecretid) | **POST** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
-[**PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**](AuthApi.md#postauthapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
-[**PostAuthApproleRoleRoleNameSecretIdAccessorLookup**](AuthApi.md#postauthapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/lookup | 
-[**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](AuthApi.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**PostAuthApproleRoleRoleNameSecretIdDestroy**](AuthApi.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**PostAuthApproleRoleRoleNameSecretIdLookup**](AuthApi.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/approle/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
-[**PostAuthApproleRoleRoleNameSecretIdNumUses**](AuthApi.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**PostAuthApproleRoleRoleNameSecretIdTtl**](AuthApi.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
-[**PostAuthApproleRoleRoleNameTokenBoundCidrs**](AuthApi.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**PostAuthApproleRoleRoleNameTokenMaxTtl**](AuthApi.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**PostAuthApproleRoleRoleNameTokenNumUses**](AuthApi.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**PostAuthApproleRoleRoleNameTokenTtl**](AuthApi.md#postauthapprolerolerolenametokenttl) | **POST** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**PostAuthApproleTidySecretId**](AuthApi.md#postauthapproletidysecretid) | **POST** /auth/approle/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
-[**PostAuthAwsConfigCertificateCertName**](AuthApi.md#postauthawsconfigcertificatecertname) | **POST** /auth/aws/config/certificate/{cert_name} | 
-[**PostAuthAwsConfigClient**](AuthApi.md#postauthawsconfigclient) | **POST** /auth/aws/config/client | 
-[**PostAuthAwsConfigIdentity**](AuthApi.md#postauthawsconfigidentity) | **POST** /auth/aws/config/identity | 
-[**PostAuthAwsConfigRotateRoot**](AuthApi.md#postauthawsconfigrotateroot) | **POST** /auth/aws/config/rotate-root | 
-[**PostAuthAwsConfigStsAccountId**](AuthApi.md#postauthawsconfigstsaccountid) | **POST** /auth/aws/config/sts/{account_id} | 
-[**PostAuthAwsConfigTidyIdentityAccesslist**](AuthApi.md#postauthawsconfigtidyidentityaccesslist) | **POST** /auth/aws/config/tidy/identity-accesslist | 
-[**PostAuthAwsConfigTidyIdentityWhitelist**](AuthApi.md#postauthawsconfigtidyidentitywhitelist) | **POST** /auth/aws/config/tidy/identity-whitelist | 
-[**PostAuthAwsConfigTidyRoletagBlacklist**](AuthApi.md#postauthawsconfigtidyroletagblacklist) | **POST** /auth/aws/config/tidy/roletag-blacklist | 
-[**PostAuthAwsConfigTidyRoletagDenylist**](AuthApi.md#postauthawsconfigtidyroletagdenylist) | **POST** /auth/aws/config/tidy/roletag-denylist | 
-[**PostAuthAwsLogin**](AuthApi.md#postauthawslogin) | **POST** /auth/aws/login | 
-[**PostAuthAwsRoleRole**](AuthApi.md#postauthawsrolerole) | **POST** /auth/aws/role/{role} | 
-[**PostAuthAwsRoleRoleTag**](AuthApi.md#postauthawsroleroletag) | **POST** /auth/aws/role/{role}/tag | 
-[**PostAuthAwsRoletagBlacklistRoleTag**](AuthApi.md#postauthawsroletagblacklistroletag) | **POST** /auth/aws/roletag-blacklist/{role_tag} | 
-[**PostAuthAwsRoletagDenylistRoleTag**](AuthApi.md#postauthawsroletagdenylistroletag) | **POST** /auth/aws/roletag-denylist/{role_tag} | 
-[**PostAuthAwsTidyIdentityAccesslist**](AuthApi.md#postauthawstidyidentityaccesslist) | **POST** /auth/aws/tidy/identity-accesslist | 
-[**PostAuthAwsTidyIdentityWhitelist**](AuthApi.md#postauthawstidyidentitywhitelist) | **POST** /auth/aws/tidy/identity-whitelist | 
-[**PostAuthAwsTidyRoletagBlacklist**](AuthApi.md#postauthawstidyroletagblacklist) | **POST** /auth/aws/tidy/roletag-blacklist | 
-[**PostAuthAwsTidyRoletagDenylist**](AuthApi.md#postauthawstidyroletagdenylist) | **POST** /auth/aws/tidy/roletag-denylist | 
-[**PostAuthAzureConfig**](AuthApi.md#postauthazureconfig) | **POST** /auth/azure/config | 
-[**PostAuthAzureLogin**](AuthApi.md#postauthazurelogin) | **POST** /auth/azure/login | 
-[**PostAuthAzureRoleName**](AuthApi.md#postauthazurerolename) | **POST** /auth/azure/role/{name} | 
-[**PostAuthCentrifyConfig**](AuthApi.md#postauthcentrifyconfig) | **POST** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-[**PostAuthCentrifyLogin**](AuthApi.md#postauthcentrifylogin) | **POST** /auth/centrify/login | Log in with a username and password.
-[**PostAuthCertCertsName**](AuthApi.md#postauthcertcertsname) | **POST** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-[**PostAuthCertConfig**](AuthApi.md#postauthcertconfig) | **POST** /auth/cert/config | 
-[**PostAuthCertCrlsName**](AuthApi.md#postauthcertcrlsname) | **POST** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**PostAuthCertLogin**](AuthApi.md#postauthcertlogin) | **POST** /auth/cert/login | 
-[**PostAuthCfConfig**](AuthApi.md#postauthcfconfig) | **POST** /auth/cf/config | 
-[**PostAuthCfLogin**](AuthApi.md#postauthcflogin) | **POST** /auth/cf/login | 
-[**PostAuthCfRolesRole**](AuthApi.md#postauthcfrolesrole) | **POST** /auth/cf/roles/{role} | 
-[**PostAuthGcpConfig**](AuthApi.md#postauthgcpconfig) | **POST** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-[**PostAuthGcpLogin**](AuthApi.md#postauthgcplogin) | **POST** /auth/gcp/login | 
-[**PostAuthGcpRoleName**](AuthApi.md#postauthgcprolename) | **POST** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-[**PostAuthGcpRoleNameLabels**](AuthApi.md#postauthgcprolenamelabels) | **POST** /auth/gcp/role/{name}/labels | Add or remove labels for an existing &#39;gce&#39; role
-[**PostAuthGcpRoleNameServiceAccounts**](AuthApi.md#postauthgcprolenameserviceaccounts) | **POST** /auth/gcp/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
-[**PostAuthGithubConfig**](AuthApi.md#postauthgithubconfig) | **POST** /auth/github/config | 
-[**PostAuthGithubLogin**](AuthApi.md#postauthgithublogin) | **POST** /auth/github/login | 
-[**PostAuthGithubMapTeamsKey**](AuthApi.md#postauthgithubmapteamskey) | **POST** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-[**PostAuthGithubMapUsersKey**](AuthApi.md#postauthgithubmapuserskey) | **POST** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-[**PostAuthJwtConfig**](AuthApi.md#postauthjwtconfig) | **POST** /auth/jwt/config | Configure the JWT authentication backend.
-[**PostAuthJwtLogin**](AuthApi.md#postauthjwtlogin) | **POST** /auth/jwt/login | Authenticates to Vault using a JWT (or OIDC) token.
-[**PostAuthJwtOidcAuthUrl**](AuthApi.md#postauthjwtoidcauthurl) | **POST** /auth/jwt/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-[**PostAuthJwtOidcCallback**](AuthApi.md#postauthjwtoidccallback) | **POST** /auth/jwt/oidc/callback | Callback endpoint to handle form_posts.
-[**PostAuthJwtRoleName**](AuthApi.md#postauthjwtrolename) | **POST** /auth/jwt/role/{name} | Register an role with the backend.
-[**PostAuthKerberosConfig**](AuthApi.md#postauthkerberosconfig) | **POST** /auth/kerberos/config | 
-[**PostAuthKerberosConfigLdap**](AuthApi.md#postauthkerberosconfigldap) | **POST** /auth/kerberos/config/ldap | 
-[**PostAuthKerberosGroupsName**](AuthApi.md#postauthkerberosgroupsname) | **POST** /auth/kerberos/groups/{name} | 
-[**PostAuthKerberosLogin**](AuthApi.md#postauthkerberoslogin) | **POST** /auth/kerberos/login | 
-[**PostAuthKubernetesConfig**](AuthApi.md#postauthkubernetesconfig) | **POST** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
-[**PostAuthKubernetesLogin**](AuthApi.md#postauthkuberneteslogin) | **POST** /auth/kubernetes/login | Authenticates Kubernetes service accounts with Vault.
-[**PostAuthKubernetesRoleName**](AuthApi.md#postauthkubernetesrolename) | **POST** /auth/kubernetes/role/{name} | Register an role with the backend.
-[**PostAuthLdapConfig**](AuthApi.md#postauthldapconfig) | **POST** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
-[**PostAuthLdapGroupsName**](AuthApi.md#postauthldapgroupsname) | **POST** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**PostAuthLdapLoginUsername**](AuthApi.md#postauthldaploginusername) | **POST** /auth/ldap/login/{username} | Log in with a username and password.
-[**PostAuthLdapUsersName**](AuthApi.md#postauthldapusersname) | **POST** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-[**PostAuthOciConfig**](AuthApi.md#postauthociconfig) | **POST** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-[**PostAuthOciLoginRole**](AuthApi.md#postauthociloginrole) | **POST** /auth/oci/login/{role} | Authenticates to Vault using OCI credentials
-[**PostAuthOciRoleRole**](AuthApi.md#postauthocirolerole) | **POST** /auth/oci/role/{role} | Create a role and associate policies to it.
-[**PostAuthOidcConfig**](AuthApi.md#postauthoidcconfig) | **POST** /auth/oidc/config | Configure the JWT authentication backend.
-[**PostAuthOidcLogin**](AuthApi.md#postauthoidclogin) | **POST** /auth/oidc/login | Authenticates to Vault using a JWT (or OIDC) token.
-[**PostAuthOidcOidcAuthUrl**](AuthApi.md#postauthoidcoidcauthurl) | **POST** /auth/oidc/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-[**PostAuthOidcOidcCallback**](AuthApi.md#postauthoidcoidccallback) | **POST** /auth/oidc/oidc/callback | Callback endpoint to handle form_posts.
-[**PostAuthOidcRoleName**](AuthApi.md#postauthoidcrolename) | **POST** /auth/oidc/role/{name} | Register an role with the backend.
-[**PostAuthOktaConfig**](AuthApi.md#postauthoktaconfig) | **POST** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-[**PostAuthOktaGroupsName**](AuthApi.md#postauthoktagroupsname) | **POST** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-[**PostAuthOktaLoginUsername**](AuthApi.md#postauthoktaloginusername) | **POST** /auth/okta/login/{username} | Log in with a username and password.
-[**PostAuthOktaUsersName**](AuthApi.md#postauthoktausersname) | **POST** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-[**PostAuthRadiusConfig**](AuthApi.md#postauthradiusconfig) | **POST** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
-[**PostAuthRadiusLogin**](AuthApi.md#postauthradiuslogin) | **POST** /auth/radius/login | Log in with a username and password.
-[**PostAuthRadiusLoginUrlusername**](AuthApi.md#postauthradiusloginurlusername) | **POST** /auth/radius/login/{urlusername} | Log in with a username and password.
-[**PostAuthRadiusUsersName**](AuthApi.md#postauthradiususersname) | **POST** /auth/radius/users/{name} | Manage users allowed to authenticate.
-[**PostAuthTokenCreate**](AuthApi.md#postauthtokencreate) | **POST** /auth/token/create | The token create path is used to create new tokens.
-[**PostAuthTokenCreateOrphan**](AuthApi.md#postauthtokencreateorphan) | **POST** /auth/token/create-orphan | The token create path is used to create new orphan tokens.
-[**PostAuthTokenCreateRoleName**](AuthApi.md#postauthtokencreaterolename) | **POST** /auth/token/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
-[**PostAuthTokenLookup**](AuthApi.md#postauthtokenlookup) | **POST** /auth/token/lookup | This endpoint will lookup a token and its properties.
-[**PostAuthTokenLookupAccessor**](AuthApi.md#postauthtokenlookupaccessor) | **POST** /auth/token/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**PostAuthTokenLookupSelf**](AuthApi.md#postauthtokenlookupself) | **POST** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
-[**PostAuthTokenRenew**](AuthApi.md#postauthtokenrenew) | **POST** /auth/token/renew | This endpoint will renew the given token and prevent expiration.
-[**PostAuthTokenRenewAccessor**](AuthApi.md#postauthtokenrenewaccessor) | **POST** /auth/token/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**PostAuthTokenRenewSelf**](AuthApi.md#postauthtokenrenewself) | **POST** /auth/token/renew-self | This endpoint will renew the token used to call it and prevent expiration.
-[**PostAuthTokenRevoke**](AuthApi.md#postauthtokenrevoke) | **POST** /auth/token/revoke | This endpoint will delete the given token and all of its child tokens.
-[**PostAuthTokenRevokeAccessor**](AuthApi.md#postauthtokenrevokeaccessor) | **POST** /auth/token/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
-[**PostAuthTokenRevokeOrphan**](AuthApi.md#postauthtokenrevokeorphan) | **POST** /auth/token/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
-[**PostAuthTokenRevokeSelf**](AuthApi.md#postauthtokenrevokeself) | **POST** /auth/token/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
-[**PostAuthTokenRolesRoleName**](AuthApi.md#postauthtokenrolesrolename) | **POST** /auth/token/roles/{role_name} | 
-[**PostAuthTokenTidy**](AuthApi.md#postauthtokentidy) | **POST** /auth/token/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-[**PostAuthUserpassLoginUsername**](AuthApi.md#postauthuserpassloginusername) | **POST** /auth/userpass/login/{username} | Log in with a username and password.
-[**PostAuthUserpassUsersUsername**](AuthApi.md#postauthuserpassusersusername) | **POST** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-[**PostAuthUserpassUsersUsernamePassword**](AuthApi.md#postauthuserpassusersusernamepassword) | **POST** /auth/userpass/users/{username}/password | Reset user&#39;s password.
-[**PostAuthUserpassUsersUsernamePolicies**](AuthApi.md#postauthuserpassusersusernamepolicies) | **POST** /auth/userpass/users/{username}/policies | Update the policies associated with the username.
+[**DeleteAuthAlicloudRoleRole**](Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/alicloud/role/{role} | Create a role and associate policies to it.
+[**DeleteAuthAppIdMapAppIdKey**](Auth.md#deleteauthappidmapappidkey) | **DELETE** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
+[**DeleteAuthAppIdMapUserIdKey**](Auth.md#deleteauthappidmapuseridkey) | **DELETE** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
+[**DeleteAuthApproleRoleRoleName**](Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/approle/role/{role_name} | Register an role with the backend.
+[**DeleteAuthApproleRoleRoleNameBindSecretId**](Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**DeleteAuthApproleRoleRoleNameBoundCidrList**](Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**DeleteAuthApproleRoleRoleNamePeriod**](Auth.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**DeleteAuthApproleRoleRoleNamePolicies**](Auth.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/approle/role/{role_name}/policies | Policies of the role.
+[**DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#deleteauthapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
+[**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+[**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**DeleteAuthApproleRoleRoleNameTokenNumUses**](Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**DeleteAuthApproleRoleRoleNameTokenTtl**](Auth.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**DeleteAuthAwsConfigCertificateCertName**](Auth.md#deleteauthawsconfigcertificatecertname) | **DELETE** /auth/aws/config/certificate/{cert_name} | 
+[**DeleteAuthAwsConfigClient**](Auth.md#deleteauthawsconfigclient) | **DELETE** /auth/aws/config/client | 
+[**DeleteAuthAwsConfigStsAccountId**](Auth.md#deleteauthawsconfigstsaccountid) | **DELETE** /auth/aws/config/sts/{account_id} | 
+[**DeleteAuthAwsConfigTidyIdentityAccesslist**](Auth.md#deleteauthawsconfigtidyidentityaccesslist) | **DELETE** /auth/aws/config/tidy/identity-accesslist | 
+[**DeleteAuthAwsConfigTidyIdentityWhitelist**](Auth.md#deleteauthawsconfigtidyidentitywhitelist) | **DELETE** /auth/aws/config/tidy/identity-whitelist | 
+[**DeleteAuthAwsConfigTidyRoletagBlacklist**](Auth.md#deleteauthawsconfigtidyroletagblacklist) | **DELETE** /auth/aws/config/tidy/roletag-blacklist | 
+[**DeleteAuthAwsConfigTidyRoletagDenylist**](Auth.md#deleteauthawsconfigtidyroletagdenylist) | **DELETE** /auth/aws/config/tidy/roletag-denylist | 
+[**DeleteAuthAwsIdentityAccesslistInstanceId**](Auth.md#deleteauthawsidentityaccesslistinstanceid) | **DELETE** /auth/aws/identity-accesslist/{instance_id} | 
+[**DeleteAuthAwsIdentityWhitelistInstanceId**](Auth.md#deleteauthawsidentitywhitelistinstanceid) | **DELETE** /auth/aws/identity-whitelist/{instance_id} | 
+[**DeleteAuthAwsRoleRole**](Auth.md#deleteauthawsrolerole) | **DELETE** /auth/aws/role/{role} | 
+[**DeleteAuthAwsRoletagBlacklistRoleTag**](Auth.md#deleteauthawsroletagblacklistroletag) | **DELETE** /auth/aws/roletag-blacklist/{role_tag} | 
+[**DeleteAuthAwsRoletagDenylistRoleTag**](Auth.md#deleteauthawsroletagdenylistroletag) | **DELETE** /auth/aws/roletag-denylist/{role_tag} | 
+[**DeleteAuthAzureConfig**](Auth.md#deleteauthazureconfig) | **DELETE** /auth/azure/config | 
+[**DeleteAuthAzureRoleName**](Auth.md#deleteauthazurerolename) | **DELETE** /auth/azure/role/{name} | 
+[**DeleteAuthCertCertsName**](Auth.md#deleteauthcertcertsname) | **DELETE** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
+[**DeleteAuthCertCrlsName**](Auth.md#deleteauthcertcrlsname) | **DELETE** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**DeleteAuthCfConfig**](Auth.md#deleteauthcfconfig) | **DELETE** /auth/cf/config | 
+[**DeleteAuthCfRolesRole**](Auth.md#deleteauthcfrolesrole) | **DELETE** /auth/cf/roles/{role} | 
+[**DeleteAuthGcpRoleName**](Auth.md#deleteauthgcprolename) | **DELETE** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
+[**DeleteAuthGithubMapTeamsKey**](Auth.md#deleteauthgithubmapteamskey) | **DELETE** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
+[**DeleteAuthGithubMapUsersKey**](Auth.md#deleteauthgithubmapuserskey) | **DELETE** /auth/github/map/users/{key} | Read/write/delete a single users mapping
+[**DeleteAuthJwtRoleName**](Auth.md#deleteauthjwtrolename) | **DELETE** /auth/jwt/role/{name} | Delete an existing role.
+[**DeleteAuthKerberosGroupsName**](Auth.md#deleteauthkerberosgroupsname) | **DELETE** /auth/kerberos/groups/{name} | 
+[**DeleteAuthKubernetesRoleName**](Auth.md#deleteauthkubernetesrolename) | **DELETE** /auth/kubernetes/role/{name} | Register an role with the backend.
+[**DeleteAuthLdapGroupsName**](Auth.md#deleteauthldapgroupsname) | **DELETE** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**DeleteAuthLdapUsersName**](Auth.md#deleteauthldapusersname) | **DELETE** /auth/ldap/users/{name} | Manage users allowed to authenticate.
+[**DeleteAuthOciConfig**](Auth.md#deleteauthociconfig) | **DELETE** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
+[**DeleteAuthOciRoleRole**](Auth.md#deleteauthocirolerole) | **DELETE** /auth/oci/role/{role} | Create a role and associate policies to it.
+[**DeleteAuthOidcRoleName**](Auth.md#deleteauthoidcrolename) | **DELETE** /auth/oidc/role/{name} | Delete an existing role.
+[**DeleteAuthOktaGroupsName**](Auth.md#deleteauthoktagroupsname) | **DELETE** /auth/okta/groups/{name} | Manage users allowed to authenticate.
+[**DeleteAuthOktaUsersName**](Auth.md#deleteauthoktausersname) | **DELETE** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
+[**DeleteAuthRadiusUsersName**](Auth.md#deleteauthradiususersname) | **DELETE** /auth/radius/users/{name} | Manage users allowed to authenticate.
+[**DeleteAuthTokenRolesRoleName**](Auth.md#deleteauthtokenrolesrolename) | **DELETE** /auth/token/roles/{role_name} | 
+[**DeleteAuthUserpassUsersUsername**](Auth.md#deleteauthuserpassusersusername) | **DELETE** /auth/userpass/users/{username} | Manage users allowed to authenticate.
+[**GetAuthAlicloudRole**](Auth.md#getauthalicloudrole) | **GET** /auth/alicloud/role | Lists all the roles that are registered with Vault.
+[**GetAuthAlicloudRoleRole**](Auth.md#getauthalicloudrolerole) | **GET** /auth/alicloud/role/{role} | Create a role and associate policies to it.
+[**GetAuthAlicloudRoles**](Auth.md#getauthalicloudroles) | **GET** /auth/alicloud/roles | Lists all the roles that are registered with Vault.
+[**GetAuthAppIdMapAppId**](Auth.md#getauthappidmapappid) | **GET** /auth/app-id/map/app-id | Read mappings for app-id
+[**GetAuthAppIdMapAppIdKey**](Auth.md#getauthappidmapappidkey) | **GET** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
+[**GetAuthAppIdMapUserId**](Auth.md#getauthappidmapuserid) | **GET** /auth/app-id/map/user-id | Read mappings for user-id
+[**GetAuthAppIdMapUserIdKey**](Auth.md#getauthappidmapuseridkey) | **GET** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
+[**GetAuthApproleRole**](Auth.md#getauthapprolerole) | **GET** /auth/approle/role | Lists all the roles registered with the backend.
+[**GetAuthApproleRoleRoleName**](Auth.md#getauthapprolerolerolename) | **GET** /auth/approle/role/{role_name} | Register an role with the backend.
+[**GetAuthApproleRoleRoleNameBindSecretId**](Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**GetAuthApproleRoleRoleNameBoundCidrList**](Auth.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**GetAuthApproleRoleRoleNameLocalSecretIds**](Auth.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/approle/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
+[**GetAuthApproleRoleRoleNamePeriod**](Auth.md#getauthapprolerolerolenameperiod) | **GET** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**GetAuthApproleRoleRoleNamePolicies**](Auth.md#getauthapprolerolerolenamepolicies) | **GET** /auth/approle/role/{role_name}/policies | Policies of the role.
+[**GetAuthApproleRoleRoleNameRoleId**](Auth.md#getauthapprolerolerolenameroleid) | **GET** /auth/approle/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
+[**GetAuthApproleRoleRoleNameSecretId**](Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
+[**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**GetAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**GetAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**GetAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**GetAuthApproleRoleRoleNameTokenNumUses**](Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**GetAuthApproleRoleRoleNameTokenTtl**](Auth.md#getauthapprolerolerolenametokenttl) | **GET** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**GetAuthAwsConfigCertificateCertName**](Auth.md#getauthawsconfigcertificatecertname) | **GET** /auth/aws/config/certificate/{cert_name} | 
+[**GetAuthAwsConfigCertificates**](Auth.md#getauthawsconfigcertificates) | **GET** /auth/aws/config/certificates | 
+[**GetAuthAwsConfigClient**](Auth.md#getauthawsconfigclient) | **GET** /auth/aws/config/client | 
+[**GetAuthAwsConfigIdentity**](Auth.md#getauthawsconfigidentity) | **GET** /auth/aws/config/identity | 
+[**GetAuthAwsConfigSts**](Auth.md#getauthawsconfigsts) | **GET** /auth/aws/config/sts | 
+[**GetAuthAwsConfigStsAccountId**](Auth.md#getauthawsconfigstsaccountid) | **GET** /auth/aws/config/sts/{account_id} | 
+[**GetAuthAwsConfigTidyIdentityAccesslist**](Auth.md#getauthawsconfigtidyidentityaccesslist) | **GET** /auth/aws/config/tidy/identity-accesslist | 
+[**GetAuthAwsConfigTidyIdentityWhitelist**](Auth.md#getauthawsconfigtidyidentitywhitelist) | **GET** /auth/aws/config/tidy/identity-whitelist | 
+[**GetAuthAwsConfigTidyRoletagBlacklist**](Auth.md#getauthawsconfigtidyroletagblacklist) | **GET** /auth/aws/config/tidy/roletag-blacklist | 
+[**GetAuthAwsConfigTidyRoletagDenylist**](Auth.md#getauthawsconfigtidyroletagdenylist) | **GET** /auth/aws/config/tidy/roletag-denylist | 
+[**GetAuthAwsIdentityAccesslist**](Auth.md#getauthawsidentityaccesslist) | **GET** /auth/aws/identity-accesslist | 
+[**GetAuthAwsIdentityAccesslistInstanceId**](Auth.md#getauthawsidentityaccesslistinstanceid) | **GET** /auth/aws/identity-accesslist/{instance_id} | 
+[**GetAuthAwsIdentityWhitelist**](Auth.md#getauthawsidentitywhitelist) | **GET** /auth/aws/identity-whitelist | 
+[**GetAuthAwsIdentityWhitelistInstanceId**](Auth.md#getauthawsidentitywhitelistinstanceid) | **GET** /auth/aws/identity-whitelist/{instance_id} | 
+[**GetAuthAwsRole**](Auth.md#getauthawsrole) | **GET** /auth/aws/role | 
+[**GetAuthAwsRoleRole**](Auth.md#getauthawsrolerole) | **GET** /auth/aws/role/{role} | 
+[**GetAuthAwsRoles**](Auth.md#getauthawsroles) | **GET** /auth/aws/roles | 
+[**GetAuthAwsRoletagBlacklist**](Auth.md#getauthawsroletagblacklist) | **GET** /auth/aws/roletag-blacklist | 
+[**GetAuthAwsRoletagBlacklistRoleTag**](Auth.md#getauthawsroletagblacklistroletag) | **GET** /auth/aws/roletag-blacklist/{role_tag} | 
+[**GetAuthAwsRoletagDenylist**](Auth.md#getauthawsroletagdenylist) | **GET** /auth/aws/roletag-denylist | 
+[**GetAuthAwsRoletagDenylistRoleTag**](Auth.md#getauthawsroletagdenylistroletag) | **GET** /auth/aws/roletag-denylist/{role_tag} | 
+[**GetAuthAzureConfig**](Auth.md#getauthazureconfig) | **GET** /auth/azure/config | 
+[**GetAuthAzureRole**](Auth.md#getauthazurerole) | **GET** /auth/azure/role | 
+[**GetAuthAzureRoleName**](Auth.md#getauthazurerolename) | **GET** /auth/azure/role/{name} | 
+[**GetAuthCentrifyConfig**](Auth.md#getauthcentrifyconfig) | **GET** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**GetAuthCertCerts**](Auth.md#getauthcertcerts) | **GET** /auth/cert/certs | Manage trusted certificates used for authentication.
+[**GetAuthCertCertsName**](Auth.md#getauthcertcertsname) | **GET** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
+[**GetAuthCertCrlsName**](Auth.md#getauthcertcrlsname) | **GET** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**GetAuthCfConfig**](Auth.md#getauthcfconfig) | **GET** /auth/cf/config | 
+[**GetAuthCfRoles**](Auth.md#getauthcfroles) | **GET** /auth/cf/roles | 
+[**GetAuthCfRolesRole**](Auth.md#getauthcfrolesrole) | **GET** /auth/cf/roles/{role} | 
+[**GetAuthGcpConfig**](Auth.md#getauthgcpconfig) | **GET** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**GetAuthGcpRole**](Auth.md#getauthgcprole) | **GET** /auth/gcp/role | Lists all the roles that are registered with Vault.
+[**GetAuthGcpRoleName**](Auth.md#getauthgcprolename) | **GET** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
+[**GetAuthGcpRoles**](Auth.md#getauthgcproles) | **GET** /auth/gcp/roles | Lists all the roles that are registered with Vault.
+[**GetAuthGithubConfig**](Auth.md#getauthgithubconfig) | **GET** /auth/github/config | 
+[**GetAuthGithubMapTeams**](Auth.md#getauthgithubmapteams) | **GET** /auth/github/map/teams | Read mappings for teams
+[**GetAuthGithubMapTeamsKey**](Auth.md#getauthgithubmapteamskey) | **GET** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
+[**GetAuthGithubMapUsers**](Auth.md#getauthgithubmapusers) | **GET** /auth/github/map/users | Read mappings for users
+[**GetAuthGithubMapUsersKey**](Auth.md#getauthgithubmapuserskey) | **GET** /auth/github/map/users/{key} | Read/write/delete a single users mapping
+[**GetAuthJwtConfig**](Auth.md#getauthjwtconfig) | **GET** /auth/jwt/config | Read the current JWT authentication backend configuration.
+[**GetAuthJwtOidcCallback**](Auth.md#getauthjwtoidccallback) | **GET** /auth/jwt/oidc/callback | Callback endpoint to complete an OIDC login.
+[**GetAuthJwtRole**](Auth.md#getauthjwtrole) | **GET** /auth/jwt/role | Lists all the roles registered with the backend.
+[**GetAuthJwtRoleName**](Auth.md#getauthjwtrolename) | **GET** /auth/jwt/role/{name} | Read an existing role.
+[**GetAuthKerberosConfig**](Auth.md#getauthkerberosconfig) | **GET** /auth/kerberos/config | 
+[**GetAuthKerberosConfigLdap**](Auth.md#getauthkerberosconfigldap) | **GET** /auth/kerberos/config/ldap | 
+[**GetAuthKerberosGroups**](Auth.md#getauthkerberosgroups) | **GET** /auth/kerberos/groups | 
+[**GetAuthKerberosGroupsName**](Auth.md#getauthkerberosgroupsname) | **GET** /auth/kerberos/groups/{name} | 
+[**GetAuthKerberosLogin**](Auth.md#getauthkerberoslogin) | **GET** /auth/kerberos/login | 
+[**GetAuthKubernetesConfig**](Auth.md#getauthkubernetesconfig) | **GET** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
+[**GetAuthKubernetesRole**](Auth.md#getauthkubernetesrole) | **GET** /auth/kubernetes/role | Lists all the roles registered with the backend.
+[**GetAuthKubernetesRoleName**](Auth.md#getauthkubernetesrolename) | **GET** /auth/kubernetes/role/{name} | Register an role with the backend.
+[**GetAuthLdapConfig**](Auth.md#getauthldapconfig) | **GET** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
+[**GetAuthLdapGroups**](Auth.md#getauthldapgroups) | **GET** /auth/ldap/groups | Manage additional groups for users allowed to authenticate.
+[**GetAuthLdapGroupsName**](Auth.md#getauthldapgroupsname) | **GET** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**GetAuthLdapUsers**](Auth.md#getauthldapusers) | **GET** /auth/ldap/users | Manage users allowed to authenticate.
+[**GetAuthLdapUsersName**](Auth.md#getauthldapusersname) | **GET** /auth/ldap/users/{name} | Manage users allowed to authenticate.
+[**GetAuthOciConfig**](Auth.md#getauthociconfig) | **GET** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
+[**GetAuthOciRole**](Auth.md#getauthocirole) | **GET** /auth/oci/role | Lists all the roles that are registered with Vault.
+[**GetAuthOciRoleRole**](Auth.md#getauthocirolerole) | **GET** /auth/oci/role/{role} | Create a role and associate policies to it.
+[**GetAuthOidcConfig**](Auth.md#getauthoidcconfig) | **GET** /auth/oidc/config | Read the current JWT authentication backend configuration.
+[**GetAuthOidcOidcCallback**](Auth.md#getauthoidcoidccallback) | **GET** /auth/oidc/oidc/callback | Callback endpoint to complete an OIDC login.
+[**GetAuthOidcRole**](Auth.md#getauthoidcrole) | **GET** /auth/oidc/role | Lists all the roles registered with the backend.
+[**GetAuthOidcRoleName**](Auth.md#getauthoidcrolename) | **GET** /auth/oidc/role/{name} | Read an existing role.
+[**GetAuthOktaConfig**](Auth.md#getauthoktaconfig) | **GET** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**GetAuthOktaGroups**](Auth.md#getauthoktagroups) | **GET** /auth/okta/groups | Manage users allowed to authenticate.
+[**GetAuthOktaGroupsName**](Auth.md#getauthoktagroupsname) | **GET** /auth/okta/groups/{name} | Manage users allowed to authenticate.
+[**GetAuthOktaUsers**](Auth.md#getauthoktausers) | **GET** /auth/okta/users | Manage additional groups for users allowed to authenticate.
+[**GetAuthOktaUsersName**](Auth.md#getauthoktausersname) | **GET** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
+[**GetAuthOktaVerifyNonce**](Auth.md#getauthoktaverifynonce) | **GET** /auth/okta/verify/{nonce} | 
+[**GetAuthRadiusConfig**](Auth.md#getauthradiusconfig) | **GET** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
+[**GetAuthRadiusUsers**](Auth.md#getauthradiususers) | **GET** /auth/radius/users | Manage users allowed to authenticate.
+[**GetAuthRadiusUsersName**](Auth.md#getauthradiususersname) | **GET** /auth/radius/users/{name} | Manage users allowed to authenticate.
+[**GetAuthTokenAccessors**](Auth.md#getauthtokenaccessors) | **GET** /auth/token/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
+[**GetAuthTokenLookup**](Auth.md#getauthtokenlookup) | **GET** /auth/token/lookup | This endpoint will lookup a token and its properties.
+[**GetAuthTokenLookupSelf**](Auth.md#getauthtokenlookupself) | **GET** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
+[**GetAuthTokenRoles**](Auth.md#getauthtokenroles) | **GET** /auth/token/roles | This endpoint lists configured roles.
+[**GetAuthTokenRolesRoleName**](Auth.md#getauthtokenrolesrolename) | **GET** /auth/token/roles/{role_name} | 
+[**GetAuthUserpassUsers**](Auth.md#getauthuserpassusers) | **GET** /auth/userpass/users | Manage users allowed to authenticate.
+[**GetAuthUserpassUsersUsername**](Auth.md#getauthuserpassusersusername) | **GET** /auth/userpass/users/{username} | Manage users allowed to authenticate.
+[**PostAuthAlicloudLogin**](Auth.md#postauthalicloudlogin) | **POST** /auth/alicloud/login | Authenticates an RAM entity with Vault.
+[**PostAuthAlicloudRoleRole**](Auth.md#postauthalicloudrolerole) | **POST** /auth/alicloud/role/{role} | Create a role and associate policies to it.
+[**PostAuthAppIdLogin**](Auth.md#postauthappidlogin) | **POST** /auth/app-id/login | Log in with an App ID and User ID.
+[**PostAuthAppIdLoginAppId**](Auth.md#postauthappidloginappid) | **POST** /auth/app-id/login/{app_id} | Log in with an App ID and User ID.
+[**PostAuthAppIdMapAppIdKey**](Auth.md#postauthappidmapappidkey) | **POST** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
+[**PostAuthAppIdMapUserIdKey**](Auth.md#postauthappidmapuseridkey) | **POST** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
+[**PostAuthApproleLogin**](Auth.md#postauthapprolelogin) | **POST** /auth/approle/login | 
+[**PostAuthApproleRoleRoleName**](Auth.md#postauthapprolerolerolename) | **POST** /auth/approle/role/{role_name} | Register an role with the backend.
+[**PostAuthApproleRoleRoleNameBindSecretId**](Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**PostAuthApproleRoleRoleNameBoundCidrList**](Auth.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**PostAuthApproleRoleRoleNameCustomSecretId**](Auth.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/approle/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
+[**PostAuthApproleRoleRoleNamePeriod**](Auth.md#postauthapprolerolerolenameperiod) | **POST** /auth/approle/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**PostAuthApproleRoleRoleNamePolicies**](Auth.md#postauthapprolerolerolenamepolicies) | **POST** /auth/approle/role/{role_name}/policies | Policies of the role.
+[**PostAuthApproleRoleRoleNameRoleId**](Auth.md#postauthapprolerolerolenameroleid) | **POST** /auth/approle/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
+[**PostAuthApproleRoleRoleNameSecretId**](Auth.md#postauthapprolerolerolenamesecretid) | **POST** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
+[**PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#postauthapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
+[**PostAuthApproleRoleRoleNameSecretIdAccessorLookup**](Auth.md#postauthapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/lookup | 
+[**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**PostAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+[**PostAuthApproleRoleRoleNameSecretIdLookup**](Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/approle/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
+[**PostAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**PostAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**PostAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**PostAuthApproleRoleRoleNameTokenNumUses**](Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**PostAuthApproleRoleRoleNameTokenTtl**](Auth.md#postauthapprolerolerolenametokenttl) | **POST** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**PostAuthApproleTidySecretId**](Auth.md#postauthapproletidysecretid) | **POST** /auth/approle/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
+[**PostAuthAwsConfigCertificateCertName**](Auth.md#postauthawsconfigcertificatecertname) | **POST** /auth/aws/config/certificate/{cert_name} | 
+[**PostAuthAwsConfigClient**](Auth.md#postauthawsconfigclient) | **POST** /auth/aws/config/client | 
+[**PostAuthAwsConfigIdentity**](Auth.md#postauthawsconfigidentity) | **POST** /auth/aws/config/identity | 
+[**PostAuthAwsConfigRotateRoot**](Auth.md#postauthawsconfigrotateroot) | **POST** /auth/aws/config/rotate-root | 
+[**PostAuthAwsConfigStsAccountId**](Auth.md#postauthawsconfigstsaccountid) | **POST** /auth/aws/config/sts/{account_id} | 
+[**PostAuthAwsConfigTidyIdentityAccesslist**](Auth.md#postauthawsconfigtidyidentityaccesslist) | **POST** /auth/aws/config/tidy/identity-accesslist | 
+[**PostAuthAwsConfigTidyIdentityWhitelist**](Auth.md#postauthawsconfigtidyidentitywhitelist) | **POST** /auth/aws/config/tidy/identity-whitelist | 
+[**PostAuthAwsConfigTidyRoletagBlacklist**](Auth.md#postauthawsconfigtidyroletagblacklist) | **POST** /auth/aws/config/tidy/roletag-blacklist | 
+[**PostAuthAwsConfigTidyRoletagDenylist**](Auth.md#postauthawsconfigtidyroletagdenylist) | **POST** /auth/aws/config/tidy/roletag-denylist | 
+[**PostAuthAwsLogin**](Auth.md#postauthawslogin) | **POST** /auth/aws/login | 
+[**PostAuthAwsRoleRole**](Auth.md#postauthawsrolerole) | **POST** /auth/aws/role/{role} | 
+[**PostAuthAwsRoleRoleTag**](Auth.md#postauthawsroleroletag) | **POST** /auth/aws/role/{role}/tag | 
+[**PostAuthAwsRoletagBlacklistRoleTag**](Auth.md#postauthawsroletagblacklistroletag) | **POST** /auth/aws/roletag-blacklist/{role_tag} | 
+[**PostAuthAwsRoletagDenylistRoleTag**](Auth.md#postauthawsroletagdenylistroletag) | **POST** /auth/aws/roletag-denylist/{role_tag} | 
+[**PostAuthAwsTidyIdentityAccesslist**](Auth.md#postauthawstidyidentityaccesslist) | **POST** /auth/aws/tidy/identity-accesslist | 
+[**PostAuthAwsTidyIdentityWhitelist**](Auth.md#postauthawstidyidentitywhitelist) | **POST** /auth/aws/tidy/identity-whitelist | 
+[**PostAuthAwsTidyRoletagBlacklist**](Auth.md#postauthawstidyroletagblacklist) | **POST** /auth/aws/tidy/roletag-blacklist | 
+[**PostAuthAwsTidyRoletagDenylist**](Auth.md#postauthawstidyroletagdenylist) | **POST** /auth/aws/tidy/roletag-denylist | 
+[**PostAuthAzureConfig**](Auth.md#postauthazureconfig) | **POST** /auth/azure/config | 
+[**PostAuthAzureLogin**](Auth.md#postauthazurelogin) | **POST** /auth/azure/login | 
+[**PostAuthAzureRoleName**](Auth.md#postauthazurerolename) | **POST** /auth/azure/role/{name} | 
+[**PostAuthCentrifyConfig**](Auth.md#postauthcentrifyconfig) | **POST** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**PostAuthCentrifyLogin**](Auth.md#postauthcentrifylogin) | **POST** /auth/centrify/login | Log in with a username and password.
+[**PostAuthCertCertsName**](Auth.md#postauthcertcertsname) | **POST** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
+[**PostAuthCertConfig**](Auth.md#postauthcertconfig) | **POST** /auth/cert/config | 
+[**PostAuthCertCrlsName**](Auth.md#postauthcertcrlsname) | **POST** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**PostAuthCertLogin**](Auth.md#postauthcertlogin) | **POST** /auth/cert/login | 
+[**PostAuthCfConfig**](Auth.md#postauthcfconfig) | **POST** /auth/cf/config | 
+[**PostAuthCfLogin**](Auth.md#postauthcflogin) | **POST** /auth/cf/login | 
+[**PostAuthCfRolesRole**](Auth.md#postauthcfrolesrole) | **POST** /auth/cf/roles/{role} | 
+[**PostAuthGcpConfig**](Auth.md#postauthgcpconfig) | **POST** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**PostAuthGcpLogin**](Auth.md#postauthgcplogin) | **POST** /auth/gcp/login | 
+[**PostAuthGcpRoleName**](Auth.md#postauthgcprolename) | **POST** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
+[**PostAuthGcpRoleNameLabels**](Auth.md#postauthgcprolenamelabels) | **POST** /auth/gcp/role/{name}/labels | Add or remove labels for an existing &#39;gce&#39; role
+[**PostAuthGcpRoleNameServiceAccounts**](Auth.md#postauthgcprolenameserviceaccounts) | **POST** /auth/gcp/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
+[**PostAuthGithubConfig**](Auth.md#postauthgithubconfig) | **POST** /auth/github/config | 
+[**PostAuthGithubLogin**](Auth.md#postauthgithublogin) | **POST** /auth/github/login | 
+[**PostAuthGithubMapTeamsKey**](Auth.md#postauthgithubmapteamskey) | **POST** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
+[**PostAuthGithubMapUsersKey**](Auth.md#postauthgithubmapuserskey) | **POST** /auth/github/map/users/{key} | Read/write/delete a single users mapping
+[**PostAuthJwtConfig**](Auth.md#postauthjwtconfig) | **POST** /auth/jwt/config | Configure the JWT authentication backend.
+[**PostAuthJwtLogin**](Auth.md#postauthjwtlogin) | **POST** /auth/jwt/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**PostAuthJwtOidcAuthUrl**](Auth.md#postauthjwtoidcauthurl) | **POST** /auth/jwt/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**PostAuthJwtOidcCallback**](Auth.md#postauthjwtoidccallback) | **POST** /auth/jwt/oidc/callback | Callback endpoint to handle form_posts.
+[**PostAuthJwtRoleName**](Auth.md#postauthjwtrolename) | **POST** /auth/jwt/role/{name} | Register an role with the backend.
+[**PostAuthKerberosConfig**](Auth.md#postauthkerberosconfig) | **POST** /auth/kerberos/config | 
+[**PostAuthKerberosConfigLdap**](Auth.md#postauthkerberosconfigldap) | **POST** /auth/kerberos/config/ldap | 
+[**PostAuthKerberosGroupsName**](Auth.md#postauthkerberosgroupsname) | **POST** /auth/kerberos/groups/{name} | 
+[**PostAuthKerberosLogin**](Auth.md#postauthkerberoslogin) | **POST** /auth/kerberos/login | 
+[**PostAuthKubernetesConfig**](Auth.md#postauthkubernetesconfig) | **POST** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
+[**PostAuthKubernetesLogin**](Auth.md#postauthkuberneteslogin) | **POST** /auth/kubernetes/login | Authenticates Kubernetes service accounts with Vault.
+[**PostAuthKubernetesRoleName**](Auth.md#postauthkubernetesrolename) | **POST** /auth/kubernetes/role/{name} | Register an role with the backend.
+[**PostAuthLdapConfig**](Auth.md#postauthldapconfig) | **POST** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
+[**PostAuthLdapGroupsName**](Auth.md#postauthldapgroupsname) | **POST** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**PostAuthLdapLoginUsername**](Auth.md#postauthldaploginusername) | **POST** /auth/ldap/login/{username} | Log in with a username and password.
+[**PostAuthLdapUsersName**](Auth.md#postauthldapusersname) | **POST** /auth/ldap/users/{name} | Manage users allowed to authenticate.
+[**PostAuthOciConfig**](Auth.md#postauthociconfig) | **POST** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
+[**PostAuthOciLoginRole**](Auth.md#postauthociloginrole) | **POST** /auth/oci/login/{role} | Authenticates to Vault using OCI credentials
+[**PostAuthOciRoleRole**](Auth.md#postauthocirolerole) | **POST** /auth/oci/role/{role} | Create a role and associate policies to it.
+[**PostAuthOidcConfig**](Auth.md#postauthoidcconfig) | **POST** /auth/oidc/config | Configure the JWT authentication backend.
+[**PostAuthOidcLogin**](Auth.md#postauthoidclogin) | **POST** /auth/oidc/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**PostAuthOidcOidcAuthUrl**](Auth.md#postauthoidcoidcauthurl) | **POST** /auth/oidc/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**PostAuthOidcOidcCallback**](Auth.md#postauthoidcoidccallback) | **POST** /auth/oidc/oidc/callback | Callback endpoint to handle form_posts.
+[**PostAuthOidcRoleName**](Auth.md#postauthoidcrolename) | **POST** /auth/oidc/role/{name} | Register an role with the backend.
+[**PostAuthOktaConfig**](Auth.md#postauthoktaconfig) | **POST** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**PostAuthOktaGroupsName**](Auth.md#postauthoktagroupsname) | **POST** /auth/okta/groups/{name} | Manage users allowed to authenticate.
+[**PostAuthOktaLoginUsername**](Auth.md#postauthoktaloginusername) | **POST** /auth/okta/login/{username} | Log in with a username and password.
+[**PostAuthOktaUsersName**](Auth.md#postauthoktausersname) | **POST** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
+[**PostAuthRadiusConfig**](Auth.md#postauthradiusconfig) | **POST** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
+[**PostAuthRadiusLogin**](Auth.md#postauthradiuslogin) | **POST** /auth/radius/login | Log in with a username and password.
+[**PostAuthRadiusLoginUrlusername**](Auth.md#postauthradiusloginurlusername) | **POST** /auth/radius/login/{urlusername} | Log in with a username and password.
+[**PostAuthRadiusUsersName**](Auth.md#postauthradiususersname) | **POST** /auth/radius/users/{name} | Manage users allowed to authenticate.
+[**PostAuthTokenCreate**](Auth.md#postauthtokencreate) | **POST** /auth/token/create | The token create path is used to create new tokens.
+[**PostAuthTokenCreateOrphan**](Auth.md#postauthtokencreateorphan) | **POST** /auth/token/create-orphan | The token create path is used to create new orphan tokens.
+[**PostAuthTokenCreateRoleName**](Auth.md#postauthtokencreaterolename) | **POST** /auth/token/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
+[**PostAuthTokenLookup**](Auth.md#postauthtokenlookup) | **POST** /auth/token/lookup | This endpoint will lookup a token and its properties.
+[**PostAuthTokenLookupAccessor**](Auth.md#postauthtokenlookupaccessor) | **POST** /auth/token/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**PostAuthTokenLookupSelf**](Auth.md#postauthtokenlookupself) | **POST** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
+[**PostAuthTokenRenew**](Auth.md#postauthtokenrenew) | **POST** /auth/token/renew | This endpoint will renew the given token and prevent expiration.
+[**PostAuthTokenRenewAccessor**](Auth.md#postauthtokenrenewaccessor) | **POST** /auth/token/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**PostAuthTokenRenewSelf**](Auth.md#postauthtokenrenewself) | **POST** /auth/token/renew-self | This endpoint will renew the token used to call it and prevent expiration.
+[**PostAuthTokenRevoke**](Auth.md#postauthtokenrevoke) | **POST** /auth/token/revoke | This endpoint will delete the given token and all of its child tokens.
+[**PostAuthTokenRevokeAccessor**](Auth.md#postauthtokenrevokeaccessor) | **POST** /auth/token/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
+[**PostAuthTokenRevokeOrphan**](Auth.md#postauthtokenrevokeorphan) | **POST** /auth/token/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
+[**PostAuthTokenRevokeSelf**](Auth.md#postauthtokenrevokeself) | **POST** /auth/token/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
+[**PostAuthTokenRolesRoleName**](Auth.md#postauthtokenrolesrolename) | **POST** /auth/token/roles/{role_name} | 
+[**PostAuthTokenTidy**](Auth.md#postauthtokentidy) | **POST** /auth/token/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**PostAuthUserpassLoginUsername**](Auth.md#postauthuserpassloginusername) | **POST** /auth/userpass/login/{username} | Log in with a username and password.
+[**PostAuthUserpassUsersUsername**](Auth.md#postauthuserpassusersusername) | **POST** /auth/userpass/users/{username} | Manage users allowed to authenticate.
+[**PostAuthUserpassUsersUsernamePassword**](Auth.md#postauthuserpassusersusernamepassword) | **POST** /auth/userpass/users/{username}/password | Reset user&#39;s password.
+[**PostAuthUserpassUsersUsernamePolicies**](Auth.md#postauthuserpassusersusernamepolicies) | **POST** /auth/userpass/users/{username}/policies | Update the policies associated with the username.
 
 
 <a name="deleteauthalicloudrolerole"></a>
@@ -303,7 +303,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
 
             try
@@ -313,7 +313,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAlicloudRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -375,7 +375,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the app-id mapping
 
             try
@@ -385,7 +385,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAppIdMapAppIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAppIdMapAppIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -447,7 +447,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the user-id mapping
 
             try
@@ -457,7 +457,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAppIdMapUserIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAppIdMapUserIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -519,7 +519,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -529,7 +529,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -591,7 +591,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -601,7 +601,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameBindSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -663,7 +663,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -673,7 +673,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -735,7 +735,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -745,7 +745,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNamePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -807,7 +807,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -817,7 +817,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -879,7 +879,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -888,7 +888,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -950,7 +950,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -960,7 +960,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1022,7 +1022,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1032,7 +1032,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1094,7 +1094,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1104,7 +1104,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1166,7 +1166,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1176,7 +1176,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1238,7 +1238,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1248,7 +1248,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1310,7 +1310,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1320,7 +1320,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1382,7 +1382,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1392,7 +1392,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1454,7 +1454,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -1464,7 +1464,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1526,7 +1526,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certName = "certName_example";  // string | Name of the certificate.
 
             try
@@ -1535,7 +1535,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigCertificateCertName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1597,7 +1597,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1605,7 +1605,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigClient: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1664,7 +1664,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
 
             try
@@ -1673,7 +1673,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigStsAccountId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1735,7 +1735,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1743,7 +1743,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1802,7 +1802,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1810,7 +1810,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1869,7 +1869,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1877,7 +1877,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1936,7 +1936,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1944,7 +1944,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2003,7 +2003,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -2012,7 +2012,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsIdentityAccesslistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsIdentityAccesslistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2074,7 +2074,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -2083,7 +2083,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsIdentityWhitelistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsIdentityWhitelistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2145,7 +2145,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -2154,7 +2154,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2216,7 +2216,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -2225,7 +2225,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoletagBlacklistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2287,7 +2287,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -2296,7 +2296,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoletagDenylistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2358,7 +2358,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2366,7 +2366,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2425,7 +2425,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2434,7 +2434,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthAzureRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAzureRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2496,7 +2496,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -2506,7 +2506,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthCertCertsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCertCertsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2568,7 +2568,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -2578,7 +2578,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthCertCrlsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCertCrlsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2640,7 +2640,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2648,7 +2648,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthCfConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCfConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2707,7 +2707,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role.
 
             try
@@ -2716,7 +2716,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthCfRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCfRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2778,7 +2778,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2788,7 +2788,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthGcpRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthGcpRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2850,7 +2850,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the teams mapping
 
             try
@@ -2860,7 +2860,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthGithubMapTeamsKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2922,7 +2922,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the users mapping
 
             try
@@ -2932,7 +2932,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthGithubMapUsersKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthGithubMapUsersKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2994,7 +2994,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3004,7 +3004,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthJwtRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3066,7 +3066,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -3075,7 +3075,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthKerberosGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3137,7 +3137,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3147,7 +3147,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthKubernetesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthKubernetesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3209,7 +3209,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -3219,7 +3219,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthLdapGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3281,7 +3281,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP user.
 
             try
@@ -3291,7 +3291,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthLdapUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthLdapUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3353,7 +3353,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3362,7 +3362,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthOciConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthOciConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3421,7 +3421,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -3431,7 +3431,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthOciRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthOciRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3493,7 +3493,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -3503,7 +3503,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3565,7 +3565,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Okta group.
 
             try
@@ -3575,7 +3575,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthOktaGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3637,7 +3637,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the user.
 
             try
@@ -3647,7 +3647,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthOktaUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthOktaUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3709,7 +3709,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the RADIUS user.
 
             try
@@ -3719,7 +3719,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthRadiusUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthRadiusUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3781,7 +3781,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -3790,7 +3790,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthTokenRolesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3852,7 +3852,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
 
             try
@@ -3862,7 +3862,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.DeleteAuthUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthUserpassUsersUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3924,7 +3924,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3934,7 +3934,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAlicloudRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3996,7 +3996,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
 
             try
@@ -4006,7 +4006,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4068,7 +4068,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4078,7 +4078,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAlicloudRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4140,7 +4140,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -4150,7 +4150,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAppIdMapAppId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAppIdMapAppId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4212,7 +4212,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the app-id mapping
 
             try
@@ -4222,7 +4222,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAppIdMapAppIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAppIdMapAppIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4284,7 +4284,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -4294,7 +4294,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAppIdMapUserId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAppIdMapUserId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4356,7 +4356,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the user-id mapping
 
             try
@@ -4366,7 +4366,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAppIdMapUserIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAppIdMapUserIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4428,7 +4428,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4438,7 +4438,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4500,7 +4500,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4510,7 +4510,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4572,7 +4572,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4582,7 +4582,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameBindSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4644,7 +4644,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4654,7 +4654,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4716,7 +4716,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4726,7 +4726,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameLocalSecretIds: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameLocalSecretIds: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4788,7 +4788,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4798,7 +4798,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNamePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4860,7 +4860,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4870,7 +4870,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4932,7 +4932,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -4942,7 +4942,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameRoleId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameRoleId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5004,7 +5004,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var list = "true";  // string | Must be set to `true`
 
@@ -5015,7 +5015,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5078,7 +5078,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5088,7 +5088,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5150,7 +5150,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5160,7 +5160,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5222,7 +5222,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5232,7 +5232,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5294,7 +5294,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5304,7 +5304,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5366,7 +5366,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5376,7 +5376,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5438,7 +5438,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5448,7 +5448,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5510,7 +5510,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
 
             try
@@ -5520,7 +5520,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5582,7 +5582,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certName = "certName_example";  // string | Name of the certificate.
 
             try
@@ -5591,7 +5591,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigCertificateCertName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5653,7 +5653,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5662,7 +5662,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigCertificates: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigCertificates: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5724,7 +5724,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5732,7 +5732,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigClient: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5791,7 +5791,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5799,7 +5799,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigIdentity: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigIdentity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5858,7 +5858,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5867,7 +5867,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigSts: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigSts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5929,7 +5929,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
 
             try
@@ -5938,7 +5938,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigStsAccountId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6000,7 +6000,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6008,7 +6008,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6067,7 +6067,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6075,7 +6075,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6134,7 +6134,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6142,7 +6142,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6201,7 +6201,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6209,7 +6209,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6268,7 +6268,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6277,7 +6277,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6339,7 +6339,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -6348,7 +6348,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsIdentityAccesslistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityAccesslistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6410,7 +6410,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6419,7 +6419,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6481,7 +6481,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
 
             try
@@ -6490,7 +6490,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsIdentityWhitelistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityWhitelistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6552,7 +6552,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6561,7 +6561,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6623,7 +6623,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -6632,7 +6632,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6694,7 +6694,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6703,7 +6703,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6765,7 +6765,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6774,7 +6774,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6836,7 +6836,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -6845,7 +6845,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagBlacklistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6907,7 +6907,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6916,7 +6916,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6978,7 +6978,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -6987,7 +6987,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagDenylistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7049,7 +7049,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7057,7 +7057,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7116,7 +7116,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7125,7 +7125,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAzureRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAzureRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7187,7 +7187,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -7196,7 +7196,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthAzureRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAzureRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7258,7 +7258,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7267,7 +7267,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCentrifyConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCentrifyConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7326,7 +7326,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7336,7 +7336,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCertCerts: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCertCerts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7398,7 +7398,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -7408,7 +7408,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCertCertsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCertCertsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7470,7 +7470,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
 
             try
@@ -7480,7 +7480,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCertCrlsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCertCrlsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7542,7 +7542,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7550,7 +7550,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCfConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCfConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7609,7 +7609,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7618,7 +7618,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCfRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCfRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7680,7 +7680,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role.
 
             try
@@ -7689,7 +7689,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthCfRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthCfRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7751,7 +7751,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7760,7 +7760,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGcpConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGcpConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7819,7 +7819,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7829,7 +7829,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGcpRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGcpRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7891,7 +7891,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -7901,7 +7901,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGcpRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGcpRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7963,7 +7963,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7973,7 +7973,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGcpRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGcpRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8035,7 +8035,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8043,7 +8043,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGithubConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGithubConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8102,7 +8102,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -8112,7 +8112,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGithubMapTeams: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapTeams: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8174,7 +8174,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the teams mapping
 
             try
@@ -8184,7 +8184,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapTeamsKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8246,7 +8246,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -8256,7 +8256,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGithubMapUsers: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8318,7 +8318,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the users mapping
 
             try
@@ -8328,7 +8328,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthGithubMapUsersKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapUsersKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8390,7 +8390,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8399,7 +8399,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthJwtConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8458,7 +8458,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8467,7 +8467,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthJwtOidcCallback: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtOidcCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8528,7 +8528,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8538,7 +8538,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthJwtRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8600,7 +8600,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -8610,7 +8610,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthJwtRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8672,7 +8672,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8680,7 +8680,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKerberosConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8739,7 +8739,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8747,7 +8747,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKerberosConfigLdap: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosConfigLdap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8806,7 +8806,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8815,7 +8815,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKerberosGroups: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8877,7 +8877,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -8886,7 +8886,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8948,7 +8948,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8956,7 +8956,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKerberosLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9015,7 +9015,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9024,7 +9024,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKubernetesConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9083,7 +9083,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9093,7 +9093,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKubernetesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9155,7 +9155,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9165,7 +9165,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthKubernetesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9227,7 +9227,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9236,7 +9236,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthLdapConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthLdapConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9295,7 +9295,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9305,7 +9305,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthLdapGroups: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthLdapGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9367,7 +9367,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
 
             try
@@ -9377,7 +9377,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthLdapGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9439,7 +9439,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9449,7 +9449,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthLdapUsers: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthLdapUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9511,7 +9511,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP user.
 
             try
@@ -9521,7 +9521,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthLdapUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthLdapUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9583,7 +9583,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9592,7 +9592,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOciConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOciConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9651,7 +9651,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9661,7 +9661,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOciRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOciRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9723,7 +9723,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -9733,7 +9733,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOciRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOciRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9795,7 +9795,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9804,7 +9804,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOidcConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOidcConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9863,7 +9863,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9872,7 +9872,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOidcOidcCallback: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOidcOidcCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9933,7 +9933,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9943,7 +9943,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOidcRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOidcRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10005,7 +10005,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -10015,7 +10015,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10077,7 +10077,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10086,7 +10086,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10145,7 +10145,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10155,7 +10155,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaGroups: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10217,7 +10217,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Okta group.
 
             try
@@ -10227,7 +10227,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10289,7 +10289,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10299,7 +10299,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaUsers: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10361,7 +10361,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the user.
 
             try
@@ -10371,7 +10371,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10433,7 +10433,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var nonce = "nonce_example";  // string | Nonce provided during a login request to retrieve the number verification challenge for the matching request.
 
             try
@@ -10442,7 +10442,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthOktaVerifyNonce: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthOktaVerifyNonce: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10504,7 +10504,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10513,7 +10513,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthRadiusConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthRadiusConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10572,7 +10572,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10582,7 +10582,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthRadiusUsers: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthRadiusUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10644,7 +10644,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the RADIUS user.
 
             try
@@ -10654,7 +10654,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthRadiusUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthRadiusUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10716,7 +10716,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10726,7 +10726,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthTokenAccessors: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthTokenAccessors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10788,7 +10788,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10797,7 +10797,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthTokenLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthTokenLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10856,7 +10856,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10865,7 +10865,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthTokenLookupSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthTokenLookupSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10924,7 +10924,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10934,7 +10934,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthTokenRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthTokenRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10996,7 +10996,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -11005,7 +11005,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthTokenRolesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11067,7 +11067,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -11077,7 +11077,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthUserpassUsers: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthUserpassUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11139,7 +11139,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
 
             try
@@ -11149,7 +11149,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.GetAuthUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthUserpassUsersUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11211,7 +11211,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var alicloudLoginRequest = new AlicloudLoginRequest(); // AlicloudLoginRequest |  (optional) 
 
             try
@@ -11221,7 +11221,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAlicloudLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAlicloudLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11283,7 +11283,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role as it should appear in Vault.
             var alicloudRoleRequest = new AlicloudRoleRequest(); // AlicloudRoleRequest |  (optional) 
 
@@ -11294,7 +11294,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAlicloudRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11357,7 +11357,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
 
             try
@@ -11367,7 +11367,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAppIdLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAppIdLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11429,7 +11429,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var appId = "appId_example";  // string | The unique app ID
             var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
 
@@ -11440,7 +11440,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAppIdLoginAppId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAppIdLoginAppId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11503,7 +11503,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the app-id mapping
             var appIdMapAppIdRequest = new AppIdMapAppIdRequest(); // AppIdMapAppIdRequest |  (optional) 
 
@@ -11514,7 +11514,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAppIdMapAppIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAppIdMapAppIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11577,7 +11577,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the user-id mapping
             var appIdMapUserIdRequest = new AppIdMapUserIdRequest(); // AppIdMapUserIdRequest |  (optional) 
 
@@ -11588,7 +11588,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAppIdMapUserIdKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAppIdMapUserIdKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11651,7 +11651,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var approleLoginRequest = new ApproleLoginRequest(); // ApproleLoginRequest |  (optional) 
 
             try
@@ -11660,7 +11660,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11722,7 +11722,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleRequest = new ApproleRoleRequest(); // ApproleRoleRequest |  (optional) 
 
@@ -11733,7 +11733,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11796,7 +11796,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleBindSecretIdRequest = new ApproleRoleBindSecretIdRequest(); // ApproleRoleBindSecretIdRequest |  (optional) 
 
@@ -11807,7 +11807,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameBindSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11870,7 +11870,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleBoundCidrListRequest = new ApproleRoleBoundCidrListRequest(); // ApproleRoleBoundCidrListRequest |  (optional) 
 
@@ -11881,7 +11881,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11944,7 +11944,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleCustomSecretIdRequest = new ApproleRoleCustomSecretIdRequest(); // ApproleRoleCustomSecretIdRequest |  (optional) 
 
@@ -11955,7 +11955,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameCustomSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameCustomSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12018,7 +12018,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRolePeriodRequest = new ApproleRolePeriodRequest(); // ApproleRolePeriodRequest |  (optional) 
 
@@ -12029,7 +12029,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNamePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12092,7 +12092,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRolePoliciesRequest = new ApproleRolePoliciesRequest(); // ApproleRolePoliciesRequest |  (optional) 
 
@@ -12103,7 +12103,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12166,7 +12166,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleRoleIdRequest = new ApproleRoleRoleIdRequest(); // ApproleRoleRoleIdRequest |  (optional) 
 
@@ -12177,7 +12177,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameRoleId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameRoleId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12240,7 +12240,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdRequest = new ApproleRoleSecretIdRequest(); // ApproleRoleSecretIdRequest |  (optional) 
 
@@ -12251,7 +12251,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12314,7 +12314,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdAccessorDestroyRequest = new ApproleRoleSecretIdAccessorDestroyRequest(); // ApproleRoleSecretIdAccessorDestroyRequest |  (optional) 
 
@@ -12324,7 +12324,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12387,7 +12387,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdAccessorLookupRequest = new ApproleRoleSecretIdAccessorLookupRequest(); // ApproleRoleSecretIdAccessorLookupRequest |  (optional) 
 
@@ -12397,7 +12397,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdAccessorLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdAccessorLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12460,7 +12460,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdBoundCidrsRequest = new ApproleRoleSecretIdBoundCidrsRequest(); // ApproleRoleSecretIdBoundCidrsRequest |  (optional) 
 
@@ -12471,7 +12471,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12534,7 +12534,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdDestroyRequest = new ApproleRoleSecretIdDestroyRequest(); // ApproleRoleSecretIdDestroyRequest |  (optional) 
 
@@ -12545,7 +12545,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12608,7 +12608,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdLookupRequest = new ApproleRoleSecretIdLookupRequest(); // ApproleRoleSecretIdLookupRequest |  (optional) 
 
@@ -12619,7 +12619,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12682,7 +12682,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdNumUsesRequest = new ApproleRoleSecretIdNumUsesRequest(); // ApproleRoleSecretIdNumUsesRequest |  (optional) 
 
@@ -12693,7 +12693,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12756,7 +12756,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleSecretIdTtlRequest = new ApproleRoleSecretIdTtlRequest(); // ApproleRoleSecretIdTtlRequest |  (optional) 
 
@@ -12767,7 +12767,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12830,7 +12830,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenBoundCidrsRequest = new ApproleRoleTokenBoundCidrsRequest(); // ApproleRoleTokenBoundCidrsRequest |  (optional) 
 
@@ -12841,7 +12841,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12904,7 +12904,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenMaxTtlRequest = new ApproleRoleTokenMaxTtlRequest(); // ApproleRoleTokenMaxTtlRequest |  (optional) 
 
@@ -12915,7 +12915,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12978,7 +12978,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenNumUsesRequest = new ApproleRoleTokenNumUsesRequest(); // ApproleRoleTokenNumUsesRequest |  (optional) 
 
@@ -12989,7 +12989,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13052,7 +13052,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role.
             var approleRoleTokenTtlRequest = new ApproleRoleTokenTtlRequest(); // ApproleRoleTokenTtlRequest |  (optional) 
 
@@ -13063,7 +13063,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13126,7 +13126,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -13135,7 +13135,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthApproleTidySecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleTidySecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13194,7 +13194,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certName = "certName_example";  // string | Name of the certificate.
             var awsConfigCertificateRequest = new AwsConfigCertificateRequest(); // AwsConfigCertificateRequest |  (optional) 
 
@@ -13204,7 +13204,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigCertificateCertName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13267,7 +13267,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigClientRequest = new AwsConfigClientRequest(); // AwsConfigClientRequest |  (optional) 
 
             try
@@ -13276,7 +13276,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigClient: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13338,7 +13338,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigIdentityRequest = new AwsConfigIdentityRequest(); // AwsConfigIdentityRequest |  (optional) 
 
             try
@@ -13347,7 +13347,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigIdentity: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigIdentity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13409,7 +13409,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -13417,7 +13417,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13476,7 +13476,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
             var awsConfigStsRequest = new AwsConfigStsRequest(); // AwsConfigStsRequest |  (optional) 
 
@@ -13486,7 +13486,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigStsAccountId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13549,7 +13549,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigTidyIdentityAccesslistRequest = new AwsConfigTidyIdentityAccesslistRequest(); // AwsConfigTidyIdentityAccesslistRequest |  (optional) 
 
             try
@@ -13558,7 +13558,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13620,7 +13620,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigTidyIdentityWhitelistRequest = new AwsConfigTidyIdentityWhitelistRequest(); // AwsConfigTidyIdentityWhitelistRequest |  (optional) 
 
             try
@@ -13629,7 +13629,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13691,7 +13691,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigTidyRoletagBlacklistRequest = new AwsConfigTidyRoletagBlacklistRequest(); // AwsConfigTidyRoletagBlacklistRequest |  (optional) 
 
             try
@@ -13700,7 +13700,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13762,7 +13762,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsConfigTidyRoletagDenylistRequest = new AwsConfigTidyRoletagDenylistRequest(); // AwsConfigTidyRoletagDenylistRequest |  (optional) 
 
             try
@@ -13771,7 +13771,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13833,7 +13833,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsLoginRequest = new AwsLoginRequest(); // AwsLoginRequest |  (optional) 
 
             try
@@ -13842,7 +13842,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13904,7 +13904,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
             var awsRoleRequest = new AwsRoleRequest(); // AwsRoleRequest |  (optional) 
 
@@ -13914,7 +13914,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13977,7 +13977,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
             var awsRoleTagRequest = new AwsRoleTagRequest(); // AwsRoleTagRequest |  (optional) 
 
@@ -13987,7 +13987,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsRoleRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoleRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14050,7 +14050,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -14059,7 +14059,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoletagBlacklistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14121,7 +14121,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
 
             try
@@ -14130,7 +14130,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoletagDenylistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14192,7 +14192,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsTidyIdentityAccesslistRequest = new AwsTidyIdentityAccesslistRequest(); // AwsTidyIdentityAccesslistRequest |  (optional) 
 
             try
@@ -14201,7 +14201,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14263,7 +14263,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsTidyIdentityWhitelistRequest = new AwsTidyIdentityWhitelistRequest(); // AwsTidyIdentityWhitelistRequest |  (optional) 
 
             try
@@ -14272,7 +14272,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14334,7 +14334,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsTidyRoletagBlacklistRequest = new AwsTidyRoletagBlacklistRequest(); // AwsTidyRoletagBlacklistRequest |  (optional) 
 
             try
@@ -14343,7 +14343,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14405,7 +14405,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var awsTidyRoletagDenylistRequest = new AwsTidyRoletagDenylistRequest(); // AwsTidyRoletagDenylistRequest |  (optional) 
 
             try
@@ -14414,7 +14414,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAwsTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14476,7 +14476,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var azureConfigRequest = new AzureConfigRequest(); // AzureConfigRequest |  (optional) 
 
             try
@@ -14485,7 +14485,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14547,7 +14547,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var azureLoginRequest = new AzureLoginRequest(); // AzureLoginRequest |  (optional) 
 
             try
@@ -14556,7 +14556,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAzureLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAzureLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14618,7 +14618,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var azureRoleRequest = new AzureRoleRequest(); // AzureRoleRequest |  (optional) 
 
@@ -14628,7 +14628,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthAzureRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAzureRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14691,7 +14691,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var centrifyConfigRequest = new CentrifyConfigRequest(); // CentrifyConfigRequest |  (optional) 
 
             try
@@ -14701,7 +14701,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCentrifyConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCentrifyConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14763,7 +14763,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var centrifyLoginRequest = new CentrifyLoginRequest(); // CentrifyLoginRequest |  (optional) 
 
             try
@@ -14773,7 +14773,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCentrifyLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCentrifyLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14835,7 +14835,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
             var certCertsRequest = new CertCertsRequest(); // CertCertsRequest |  (optional) 
 
@@ -14846,7 +14846,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCertCertsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertCertsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14909,7 +14909,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certConfigRequest = new CertConfigRequest(); // CertConfigRequest |  (optional) 
 
             try
@@ -14918,7 +14918,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCertConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14980,7 +14980,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
             var certCrlsRequest = new CertCrlsRequest(); // CertCrlsRequest |  (optional) 
 
@@ -14991,7 +14991,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCertCrlsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertCrlsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15054,7 +15054,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certLoginRequest = new CertLoginRequest(); // CertLoginRequest |  (optional) 
 
             try
@@ -15063,7 +15063,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCertLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15125,7 +15125,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var cfConfigRequest = new CfConfigRequest(); // CfConfigRequest |  (optional) 
 
             try
@@ -15134,7 +15134,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCfConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCfConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15196,7 +15196,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var cfLoginRequest = new CfLoginRequest(); // CfLoginRequest |  (optional) 
 
             try
@@ -15205,7 +15205,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCfLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCfLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15267,7 +15267,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The name of the role.
             var cfRolesRequest = new CfRolesRequest(); // CfRolesRequest |  (optional) 
 
@@ -15277,7 +15277,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthCfRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCfRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15340,7 +15340,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var gcpConfigRequest = new GcpConfigRequest(); // GcpConfigRequest |  (optional) 
 
             try
@@ -15350,7 +15350,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGcpConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15412,7 +15412,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var gcpLoginRequest = new GcpLoginRequest(); // GcpLoginRequest |  (optional) 
 
             try
@@ -15421,7 +15421,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGcpLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15483,7 +15483,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleRequest = new GcpRoleRequest(); // GcpRoleRequest |  (optional) 
 
@@ -15494,7 +15494,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGcpRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15557,7 +15557,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleLabelsRequest = new GcpRoleLabelsRequest(); // GcpRoleLabelsRequest |  (optional) 
 
@@ -15568,7 +15568,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGcpRoleNameLabels: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleNameLabels: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15631,7 +15631,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var gcpRoleServiceAccountsRequest = new GcpRoleServiceAccountsRequest(); // GcpRoleServiceAccountsRequest |  (optional) 
 
@@ -15642,7 +15642,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGcpRoleNameServiceAccounts: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleNameServiceAccounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15705,7 +15705,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var githubConfigRequest = new GithubConfigRequest(); // GithubConfigRequest |  (optional) 
 
             try
@@ -15714,7 +15714,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGithubConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15776,7 +15776,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var githubLoginRequest = new GithubLoginRequest(); // GithubLoginRequest |  (optional) 
 
             try
@@ -15785,7 +15785,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGithubLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15847,7 +15847,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the teams mapping
             var githubMapTeamsRequest = new GithubMapTeamsRequest(); // GithubMapTeamsRequest |  (optional) 
 
@@ -15858,7 +15858,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubMapTeamsKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15921,7 +15921,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the users mapping
             var githubMapUsersRequest = new GithubMapUsersRequest(); // GithubMapUsersRequest |  (optional) 
 
@@ -15932,7 +15932,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthGithubMapUsersKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubMapUsersKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15997,7 +15997,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var jwtConfigRequest = new JwtConfigRequest(); // JwtConfigRequest |  (optional) 
 
             try
@@ -16007,7 +16007,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthJwtConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16069,7 +16069,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var jwtLoginRequest = new JwtLoginRequest(); // JwtLoginRequest |  (optional) 
 
             try
@@ -16079,7 +16079,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthJwtLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16141,7 +16141,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var jwtOidcAuthUrlRequest = new JwtOidcAuthUrlRequest(); // JwtOidcAuthUrlRequest |  (optional) 
 
             try
@@ -16151,7 +16151,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthJwtOidcAuthUrl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtOidcAuthUrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16213,7 +16213,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var jwtOidcCallbackRequest = new JwtOidcCallbackRequest(); // JwtOidcCallbackRequest |  (optional) 
 
             try
@@ -16223,7 +16223,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthJwtOidcCallback: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtOidcCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16287,7 +16287,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var jwtRoleRequest = new JwtRoleRequest(); // JwtRoleRequest |  (optional) 
 
@@ -16298,7 +16298,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthJwtRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16361,7 +16361,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var kerberosConfigRequest = new KerberosConfigRequest(); // KerberosConfigRequest |  (optional) 
 
             try
@@ -16370,7 +16370,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKerberosConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKerberosConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16432,7 +16432,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var kerberosConfigLdapRequest = new KerberosConfigLdapRequest(); // KerberosConfigLdapRequest |  (optional) 
 
             try
@@ -16441,7 +16441,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKerberosConfigLdap: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKerberosConfigLdap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16503,7 +16503,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
             var kerberosGroupsRequest = new KerberosGroupsRequest(); // KerberosGroupsRequest |  (optional) 
 
@@ -16513,7 +16513,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKerberosGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16576,7 +16576,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var kerberosLoginRequest = new KerberosLoginRequest(); // KerberosLoginRequest |  (optional) 
 
             try
@@ -16585,7 +16585,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKerberosLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKerberosLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16647,7 +16647,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var kubernetesConfigRequest = new KubernetesConfigRequest(); // KubernetesConfigRequest |  (optional) 
 
             try
@@ -16657,7 +16657,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKubernetesConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16719,7 +16719,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var kubernetesLoginRequest = new KubernetesLoginRequest(); // KubernetesLoginRequest |  (optional) 
 
             try
@@ -16729,7 +16729,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKubernetesLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16791,7 +16791,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var kubernetesRoleRequest = new KubernetesRoleRequest(); // KubernetesRoleRequest |  (optional) 
 
@@ -16802,7 +16802,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthKubernetesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16865,7 +16865,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var ldapConfigRequest = new LdapConfigRequest(); // LdapConfigRequest |  (optional) 
 
             try
@@ -16875,7 +16875,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthLdapConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16937,7 +16937,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP group.
             var ldapGroupsRequest = new LdapGroupsRequest(); // LdapGroupsRequest |  (optional) 
 
@@ -16948,7 +16948,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17011,7 +17011,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | DN (distinguished name) to be used for login.
             var ldapLoginRequest = new LdapLoginRequest(); // LdapLoginRequest |  (optional) 
 
@@ -17022,7 +17022,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthLdapLoginUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapLoginUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17085,7 +17085,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the LDAP user.
             var ldapUsersRequest = new LdapUsersRequest(); // LdapUsersRequest |  (optional) 
 
@@ -17096,7 +17096,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthLdapUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17159,7 +17159,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var ociConfigRequest = new OciConfigRequest(); // OciConfigRequest |  (optional) 
 
             try
@@ -17169,7 +17169,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOciConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOciConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17231,7 +17231,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
             var ociLoginRequest = new OciLoginRequest(); // OciLoginRequest |  (optional) 
 
@@ -17242,7 +17242,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOciLoginRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOciLoginRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17305,7 +17305,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
             var ociRoleRequest = new OciRoleRequest(); // OciRoleRequest |  (optional) 
 
@@ -17316,7 +17316,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOciRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOciRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17381,7 +17381,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var oidcConfigRequest = new OidcConfigRequest(); // OidcConfigRequest |  (optional) 
 
             try
@@ -17391,7 +17391,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOidcConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOidcConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17453,7 +17453,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var oidcLoginRequest = new OidcLoginRequest(); // OidcLoginRequest |  (optional) 
 
             try
@@ -17463,7 +17463,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOidcLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOidcLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17525,7 +17525,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var oidcOidcAuthUrlRequest = new OidcOidcAuthUrlRequest(); // OidcOidcAuthUrlRequest |  (optional) 
 
             try
@@ -17535,7 +17535,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOidcOidcAuthUrl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOidcOidcAuthUrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17597,7 +17597,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var oidcOidcCallbackRequest = new OidcOidcCallbackRequest(); // OidcOidcCallbackRequest |  (optional) 
 
             try
@@ -17607,7 +17607,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOidcOidcCallback: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOidcOidcCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17671,7 +17671,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var oidcRoleRequest = new OidcRoleRequest(); // OidcRoleRequest |  (optional) 
 
@@ -17682,7 +17682,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17745,7 +17745,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var oktaConfigRequest = new OktaConfigRequest(); // OktaConfigRequest |  (optional) 
 
             try
@@ -17755,7 +17755,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOktaConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOktaConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17817,7 +17817,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Okta group.
             var oktaGroupsRequest = new OktaGroupsRequest(); // OktaGroupsRequest |  (optional) 
 
@@ -17828,7 +17828,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOktaGroupsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17891,7 +17891,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username to be used for login.
             var oktaLoginRequest = new OktaLoginRequest(); // OktaLoginRequest |  (optional) 
 
@@ -17902,7 +17902,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOktaLoginUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOktaLoginUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17965,7 +17965,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the user.
             var oktaUsersRequest = new OktaUsersRequest(); // OktaUsersRequest |  (optional) 
 
@@ -17976,7 +17976,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthOktaUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthOktaUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18039,7 +18039,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var radiusConfigRequest = new RadiusConfigRequest(); // RadiusConfigRequest |  (optional) 
 
             try
@@ -18049,7 +18049,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthRadiusConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthRadiusConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18111,7 +18111,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest |  (optional) 
 
             try
@@ -18121,7 +18121,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthRadiusLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthRadiusLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18183,7 +18183,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var urlusername = "urlusername_example";  // string | Username to be used for login. (URL parameter)
             var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest |  (optional) 
 
@@ -18194,7 +18194,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthRadiusLoginUrlusername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthRadiusLoginUrlusername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18257,7 +18257,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the RADIUS user.
             var radiusUsersRequest = new RadiusUsersRequest(); // RadiusUsersRequest |  (optional) 
 
@@ -18268,7 +18268,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthRadiusUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthRadiusUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18331,7 +18331,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -18340,7 +18340,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenCreate: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18399,7 +18399,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -18408,7 +18408,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenCreateOrphan: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreateOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18467,7 +18467,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
 
             try
@@ -18477,7 +18477,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenCreateRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreateRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18539,7 +18539,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenLookupRequest = new TokenLookupRequest(); // TokenLookupRequest |  (optional) 
 
             try
@@ -18549,7 +18549,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18611,7 +18611,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenLookupAccessorRequest = new TokenLookupAccessorRequest(); // TokenLookupAccessorRequest |  (optional) 
 
             try
@@ -18621,7 +18621,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenLookupAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookupAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18683,7 +18683,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenLookupSelfRequest = new TokenLookupSelfRequest(); // TokenLookupSelfRequest |  (optional) 
 
             try
@@ -18693,7 +18693,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenLookupSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookupSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18755,7 +18755,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRenewRequest = new TokenRenewRequest(); // TokenRenewRequest |  (optional) 
 
             try
@@ -18765,7 +18765,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRenew: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18827,7 +18827,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRenewAccessorRequest = new TokenRenewAccessorRequest(); // TokenRenewAccessorRequest |  (optional) 
 
             try
@@ -18837,7 +18837,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRenewAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenewAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18899,7 +18899,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRenewSelfRequest = new TokenRenewSelfRequest(); // TokenRenewSelfRequest |  (optional) 
 
             try
@@ -18909,7 +18909,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRenewSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenewSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18971,7 +18971,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRevokeRequest = new TokenRevokeRequest(); // TokenRevokeRequest |  (optional) 
 
             try
@@ -18981,7 +18981,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRevoke: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19043,7 +19043,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRevokeAccessorRequest = new TokenRevokeAccessorRequest(); // TokenRevokeAccessorRequest |  (optional) 
 
             try
@@ -19053,7 +19053,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRevokeAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19115,7 +19115,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenRevokeOrphanRequest = new TokenRevokeOrphanRequest(); // TokenRevokeOrphanRequest |  (optional) 
 
             try
@@ -19125,7 +19125,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRevokeOrphan: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19187,7 +19187,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -19196,7 +19196,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRevokeSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19255,7 +19255,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
             var tokenRolesRequest = new TokenRolesRequest(); // TokenRolesRequest |  (optional) 
 
@@ -19265,7 +19265,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRolesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19328,7 +19328,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
 
             try
             {
@@ -19337,7 +19337,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthTokenTidy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19396,7 +19396,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username of the user.
             var userpassLoginRequest = new UserpassLoginRequest(); // UserpassLoginRequest |  (optional) 
 
@@ -19407,7 +19407,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthUserpassLoginUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassLoginUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19470,7 +19470,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersRequest = new UserpassUsersRequest(); // UserpassUsersRequest |  (optional) 
 
@@ -19481,7 +19481,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19544,7 +19544,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersPasswordRequest = new UserpassUsersPasswordRequest(); // UserpassUsersPasswordRequest |  (optional) 
 
@@ -19555,7 +19555,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthUserpassUsersUsernamePassword: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsernamePassword: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19618,7 +19618,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new AuthApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
             var userpassUsersPoliciesRequest = new UserpassUsersPoliciesRequest(); // UserpassUsersPoliciesRequest |  (optional) 
 
@@ -19629,7 +19629,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthApi.PostAuthUserpassUsersUsernamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsernamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

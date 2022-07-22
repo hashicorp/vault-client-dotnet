@@ -29,13 +29,13 @@ namespace {{packageName}}.Test.Api
     public class {{classname}}Tests : IDisposable
     {
         {{^nonPublicApi}}
-        private {{classname}} instance;
+        private {{packageName}}.Api.{{classname}} instance;
 
         {{/nonPublicApi}}
         public {{classname}}Tests()
         {
             {{^nonPublicApi}}
-            instance = new {{classname}}();
+            instance = new {{packageName}}.Api.{{classname}}();
             {{/nonPublicApi}}
         }
 

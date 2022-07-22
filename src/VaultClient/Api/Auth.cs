@@ -21,7 +21,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAuthApiSync : IApiAccessor
+    public interface IAuthSync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -2757,7 +2757,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAuthApiAsync : IApiAccessor
+    public interface IAuthAsync : IApiAccessor
     {
         #region Asynchronous Operations
    
@@ -6035,7 +6035,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAuthApi : IAuthApiSync, IAuthApiAsync
+    public interface IAuth : IAuthSync, IAuthAsync
     {
 
     }
@@ -6043,29 +6043,29 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class AuthApi : IDisposable, IAuthApi
+    public partial class Auth : IDisposable, IAuth
     {
         private VaultClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class.
+        /// Initializes a new instance of the <see cref="Auth"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
-        public AuthApi() : this((string)null)
+        public Auth() : this((string)null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class.
+        /// Initializes a new instance of the <see cref="Auth"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="basePath">The target service's base path in URL format.</param>
         /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
-        public AuthApi(string basePath)
+        public Auth(string basePath)
         {
             this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
                 VaultClient.Client.GlobalConfiguration.Instance,
@@ -6078,14 +6078,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Auth"/> class using Configuration object.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="configuration">An instance of Configuration.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
-        public AuthApi(VaultClient.Client.Configuration configuration)
+        public Auth(VaultClient.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -6100,7 +6100,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class.
+        /// Initializes a new instance of the <see cref="Auth"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
@@ -6110,12 +6110,12 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public AuthApi(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
+        public Auth(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class.
+        /// Initializes a new instance of the <see cref="Auth"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="basePath">The target service's base path in URL format.</param>
@@ -6127,7 +6127,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public AuthApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+        public Auth(HttpClient client, string basePath, HttpClientHandler handler = null)
         {
             if (client == null) throw new ArgumentNullException("client");
 
@@ -6142,7 +6142,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Auth"/> class using Configuration object.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="configuration">An instance of Configuration.</param>
@@ -6153,7 +6153,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public AuthApi(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
+        public Auth(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
@@ -6169,14 +6169,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthApi"/> class
+        /// Initializes a new instance of the <see cref="Auth"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public AuthApi(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
+        public Auth(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -6253,7 +6253,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAlicloudRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6297,7 +6297,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAlicloudRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6343,7 +6343,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapAppIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6387,7 +6387,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapAppIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6433,7 +6433,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapUserIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6477,7 +6477,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapUserIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6523,7 +6523,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6567,7 +6567,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6613,7 +6613,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBindSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6657,7 +6657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBindSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6703,7 +6703,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBoundCidrList");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6747,7 +6747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBoundCidrList");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6793,7 +6793,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePeriod");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6837,7 +6837,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePeriod");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6883,7 +6883,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePolicies");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6927,7 +6927,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePolicies");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6973,7 +6973,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7017,7 +7017,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7063,7 +7063,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7107,7 +7107,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7153,7 +7153,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7197,7 +7197,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7243,7 +7243,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7287,7 +7287,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7333,7 +7333,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7377,7 +7377,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7423,7 +7423,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7467,7 +7467,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7513,7 +7513,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7557,7 +7557,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7603,7 +7603,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7647,7 +7647,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7693,7 +7693,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7737,7 +7737,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7783,7 +7783,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->DeleteAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->DeleteAuthAwsConfigCertificateCertName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7827,7 +7827,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->DeleteAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->DeleteAuthAwsConfigCertificateCertName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7951,7 +7951,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->DeleteAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->DeleteAuthAwsConfigStsAccountId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7995,7 +7995,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->DeleteAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->DeleteAuthAwsConfigStsAccountId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8353,7 +8353,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->DeleteAuthAwsIdentityAccesslistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityAccesslistInstanceId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8397,7 +8397,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->DeleteAuthAwsIdentityAccesslistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityAccesslistInstanceId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8443,7 +8443,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->DeleteAuthAwsIdentityWhitelistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityWhitelistInstanceId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8487,7 +8487,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->DeleteAuthAwsIdentityWhitelistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityWhitelistInstanceId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8533,7 +8533,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAwsRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8577,7 +8577,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAwsRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8623,7 +8623,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->DeleteAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagBlacklistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8667,7 +8667,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->DeleteAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagBlacklistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8713,7 +8713,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->DeleteAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagDenylistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8757,7 +8757,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->DeleteAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagDenylistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8881,7 +8881,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthAzureRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8925,7 +8925,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthAzureRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8971,7 +8971,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCertsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9015,7 +9015,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCertsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9061,7 +9061,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCrlsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9105,7 +9105,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCrlsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9229,7 +9229,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthCfRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9273,7 +9273,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthCfRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9319,7 +9319,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthGcpRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9363,7 +9363,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthGcpRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9409,7 +9409,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapTeamsKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9453,7 +9453,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapTeamsKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9499,7 +9499,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapUsersKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9543,7 +9543,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->DeleteAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapUsersKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9589,7 +9589,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthJwtRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9633,7 +9633,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthJwtRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9679,7 +9679,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKerberosGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9723,7 +9723,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKerberosGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9769,7 +9769,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKubernetesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9813,7 +9813,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKubernetesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9859,7 +9859,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9903,7 +9903,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9949,7 +9949,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9993,7 +9993,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10117,7 +10117,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthOciRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10161,7 +10161,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->DeleteAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthOciRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10207,7 +10207,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10251,7 +10251,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10297,7 +10297,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10341,7 +10341,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10387,7 +10387,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10431,7 +10431,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10477,7 +10477,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthRadiusUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10521,7 +10521,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->DeleteAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthRadiusUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10567,7 +10567,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthTokenRolesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10611,7 +10611,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->DeleteAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthTokenRolesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10657,7 +10657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->DeleteAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->DeleteAuthUserpassUsersUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10701,7 +10701,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->DeleteAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->DeleteAuthUserpassUsersUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10747,7 +10747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAlicloudRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10791,7 +10791,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAlicloudRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10837,7 +10837,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAlicloudRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10881,7 +10881,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAlicloudRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10927,7 +10927,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAlicloudRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10971,7 +10971,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAlicloudRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11105,7 +11105,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapAppIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11149,7 +11149,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapAppIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11283,7 +11283,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapUserIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11327,7 +11327,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapUserIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11373,7 +11373,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthApproleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11417,7 +11417,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthApproleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11463,7 +11463,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11507,7 +11507,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11553,7 +11553,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBindSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11597,7 +11597,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBindSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11643,7 +11643,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBoundCidrList");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11687,7 +11687,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBoundCidrList");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11733,7 +11733,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameLocalSecretIds");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameLocalSecretIds");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11777,7 +11777,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameLocalSecretIds");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameLocalSecretIds");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11823,7 +11823,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePeriod");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11867,7 +11867,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePeriod");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11913,7 +11913,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePolicies");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11957,7 +11957,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePolicies");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12003,7 +12003,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameRoleId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameRoleId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12047,7 +12047,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameRoleId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameRoleId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12094,11 +12094,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12144,11 +12144,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12195,7 +12195,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12239,7 +12239,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12285,7 +12285,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12329,7 +12329,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12375,7 +12375,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12419,7 +12419,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12465,7 +12465,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12509,7 +12509,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12555,7 +12555,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenMaxTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12599,7 +12599,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenMaxTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12645,7 +12645,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12689,7 +12689,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12735,7 +12735,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12779,7 +12779,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12825,7 +12825,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->GetAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->GetAuthAwsConfigCertificateCertName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12869,7 +12869,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->GetAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->GetAuthAwsConfigCertificateCertName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12915,7 +12915,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsConfigCertificates");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigCertificates");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12959,7 +12959,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsConfigCertificates");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigCertificates");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13161,7 +13161,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsConfigSts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigSts");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13205,7 +13205,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsConfigSts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigSts");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13251,7 +13251,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->GetAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->GetAuthAwsConfigStsAccountId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13295,7 +13295,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->GetAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->GetAuthAwsConfigStsAccountId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13653,7 +13653,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsIdentityAccesslist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityAccesslist");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13697,7 +13697,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsIdentityAccesslist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityAccesslist");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13743,7 +13743,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->GetAuthAwsIdentityAccesslistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityAccesslistInstanceId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13787,7 +13787,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->GetAuthAwsIdentityAccesslistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityAccesslistInstanceId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13833,7 +13833,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsIdentityWhitelist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityWhitelist");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13877,7 +13877,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsIdentityWhitelist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityWhitelist");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13923,7 +13923,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->GetAuthAwsIdentityWhitelistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityWhitelistInstanceId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13967,7 +13967,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling AuthApi->GetAuthAwsIdentityWhitelistInstanceId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityWhitelistInstanceId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14013,7 +14013,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14057,7 +14057,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14103,7 +14103,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAwsRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14147,7 +14147,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAwsRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14193,7 +14193,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14237,7 +14237,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14283,7 +14283,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoletagBlacklist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagBlacklist");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14327,7 +14327,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoletagBlacklist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagBlacklist");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14373,7 +14373,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->GetAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagBlacklistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14417,7 +14417,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->GetAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagBlacklistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14463,7 +14463,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoletagDenylist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagDenylist");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14507,7 +14507,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAwsRoletagDenylist");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagDenylist");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14553,7 +14553,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->GetAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagDenylistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14597,7 +14597,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->GetAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagDenylistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14721,7 +14721,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAzureRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAzureRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14765,7 +14765,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthAzureRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAzureRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14811,7 +14811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthAzureRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14855,7 +14855,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthAzureRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14979,7 +14979,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthCertCerts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCerts");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15023,7 +15023,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthCertCerts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCerts");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15069,7 +15069,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCertsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15113,7 +15113,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCertsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15159,7 +15159,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCrlsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15203,7 +15203,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCrlsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15327,7 +15327,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthCfRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCfRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15371,7 +15371,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthCfRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCfRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15417,7 +15417,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthCfRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15461,7 +15461,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthCfRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15585,7 +15585,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthGcpRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15629,7 +15629,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthGcpRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15675,7 +15675,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthGcpRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15719,7 +15719,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthGcpRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15765,7 +15765,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthGcpRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15809,7 +15809,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthGcpRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16021,7 +16021,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapTeamsKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16065,7 +16065,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapTeamsKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16199,7 +16199,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapUsersKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16243,7 +16243,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->GetAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapUsersKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16445,7 +16445,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthJwtRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthJwtRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16489,7 +16489,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthJwtRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthJwtRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16535,7 +16535,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthJwtRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16579,7 +16579,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthJwtRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16781,7 +16781,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthKerberosGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKerberosGroups");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16825,7 +16825,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthKerberosGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKerberosGroups");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16871,7 +16871,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKerberosGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16915,7 +16915,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKerberosGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17117,7 +17117,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthKubernetesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKubernetesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17161,7 +17161,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthKubernetesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKubernetesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17207,7 +17207,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKubernetesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17251,7 +17251,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKubernetesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17375,7 +17375,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthLdapGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapGroups");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17419,7 +17419,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthLdapGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapGroups");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17465,7 +17465,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17509,7 +17509,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17555,7 +17555,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthLdapUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapUsers");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17599,7 +17599,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthLdapUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapUsers");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17645,7 +17645,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17689,7 +17689,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17813,7 +17813,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOciRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOciRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17857,7 +17857,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOciRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOciRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17903,7 +17903,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthOciRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17947,7 +17947,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->GetAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthOciRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18149,7 +18149,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOidcRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOidcRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18193,7 +18193,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOidcRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOidcRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18239,7 +18239,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18283,7 +18283,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18407,7 +18407,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOktaGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaGroups");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18451,7 +18451,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOktaGroups");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaGroups");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18497,7 +18497,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18541,7 +18541,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18587,7 +18587,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOktaUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaUsers");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18631,7 +18631,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthOktaUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaUsers");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18677,7 +18677,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18721,7 +18721,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18767,7 +18767,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'nonce' is set
             if (nonce == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'nonce' when calling AuthApi->GetAuthOktaVerifyNonce");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'nonce' when calling Auth->GetAuthOktaVerifyNonce");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18811,7 +18811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'nonce' is set
             if (nonce == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'nonce' when calling AuthApi->GetAuthOktaVerifyNonce");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'nonce' when calling Auth->GetAuthOktaVerifyNonce");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18935,7 +18935,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthRadiusUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthRadiusUsers");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18979,7 +18979,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthRadiusUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthRadiusUsers");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19025,7 +19025,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthRadiusUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19069,7 +19069,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->GetAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthRadiusUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19115,7 +19115,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthTokenAccessors");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenAccessors");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19159,7 +19159,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthTokenAccessors");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenAccessors");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19361,7 +19361,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthTokenRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19405,7 +19405,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthTokenRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19451,7 +19451,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthTokenRolesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19495,7 +19495,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->GetAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthTokenRolesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19541,7 +19541,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthUserpassUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthUserpassUsers");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19585,7 +19585,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling AuthApi->GetAuthUserpassUsers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthUserpassUsers");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19631,7 +19631,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->GetAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->GetAuthUserpassUsersUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19675,7 +19675,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->GetAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->GetAuthUserpassUsersUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19806,7 +19806,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAlicloudRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19853,7 +19853,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAlicloudRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAlicloudRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19986,7 +19986,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'appId' when calling AuthApi->PostAuthAppIdLoginAppId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'appId' when calling Auth->PostAuthAppIdLoginAppId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20033,7 +20033,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'appId' when calling AuthApi->PostAuthAppIdLoginAppId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'appId' when calling Auth->PostAuthAppIdLoginAppId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20082,7 +20082,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapAppIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20129,7 +20129,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthAppIdMapAppIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapAppIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20178,7 +20178,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapUserIdKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20225,7 +20225,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthAppIdMapUserIdKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapUserIdKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20358,7 +20358,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20405,7 +20405,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20454,7 +20454,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBindSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20501,7 +20501,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameBindSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBindSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20550,7 +20550,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBoundCidrList");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20597,7 +20597,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameBoundCidrList");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBoundCidrList");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20646,7 +20646,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameCustomSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameCustomSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20693,7 +20693,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameCustomSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameCustomSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20742,7 +20742,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePeriod");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20789,7 +20789,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNamePeriod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePeriod");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20838,7 +20838,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePolicies");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20885,7 +20885,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePolicies");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20934,7 +20934,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameRoleId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameRoleId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20981,7 +20981,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameRoleId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameRoleId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21030,7 +21030,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21077,7 +21077,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21126,7 +21126,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21173,7 +21173,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21222,7 +21222,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21269,7 +21269,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21318,7 +21318,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21365,7 +21365,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21414,7 +21414,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdDestroy");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21461,7 +21461,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdDestroy");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdDestroy");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21510,7 +21510,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdLookup");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21557,7 +21557,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdLookup");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdLookup");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21606,7 +21606,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21653,7 +21653,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21702,7 +21702,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21749,7 +21749,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameSecretIdTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21798,7 +21798,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenBoundCidrs");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21845,7 +21845,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenBoundCidrs");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21894,7 +21894,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenMaxTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21941,7 +21941,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenMaxTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenMaxTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21990,7 +21990,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenNumUses");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22037,7 +22037,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenNumUses");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenNumUses");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22086,7 +22086,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenTtl");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22133,7 +22133,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthApproleRoleRoleNameTokenTtl");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenTtl");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22260,7 +22260,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->PostAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->PostAuthAwsConfigCertificateCertName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22307,7 +22307,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling AuthApi->PostAuthAwsConfigCertificateCertName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->PostAuthAwsConfigCertificateCertName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22602,7 +22602,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->PostAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->PostAuthAwsConfigStsAccountId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22649,7 +22649,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling AuthApi->PostAuthAwsConfigStsAccountId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->PostAuthAwsConfigStsAccountId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23118,7 +23118,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23165,7 +23165,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAwsRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23214,7 +23214,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAwsRoleRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23261,7 +23261,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthAwsRoleRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23309,7 +23309,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->PostAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagBlacklistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23353,7 +23353,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->PostAuthAwsRoletagBlacklistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagBlacklistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23399,7 +23399,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->PostAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagDenylistRoleTag");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23443,7 +23443,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling AuthApi->PostAuthAwsRoletagDenylistRoleTag");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagDenylistRoleTag");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23994,7 +23994,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthAzureRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24041,7 +24041,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthAzureRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthAzureRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24258,7 +24258,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCertsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24305,7 +24305,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthCertCertsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCertsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24438,7 +24438,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCrlsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24485,7 +24485,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthCertCrlsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCrlsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24786,7 +24786,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthCfRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24833,7 +24833,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthCfRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthCfRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25050,7 +25050,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25097,7 +25097,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25146,7 +25146,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleNameLabels");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameLabels");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25193,7 +25193,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleNameLabels");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameLabels");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25242,7 +25242,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleNameServiceAccounts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameServiceAccounts");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25289,7 +25289,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthGcpRoleNameServiceAccounts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameServiceAccounts");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25506,7 +25506,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapTeamsKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25553,7 +25553,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthGithubMapTeamsKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapTeamsKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25602,7 +25602,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapUsersKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25649,7 +25649,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling AuthApi->PostAuthGithubMapUsersKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapUsersKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26034,7 +26034,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthJwtRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26081,7 +26081,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthJwtRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthJwtRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26298,7 +26298,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKerberosGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26345,7 +26345,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthKerberosGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKerberosGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26646,7 +26646,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKubernetesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26693,7 +26693,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthKubernetesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKubernetesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26826,7 +26826,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26873,7 +26873,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthLdapGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26922,7 +26922,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthLdapLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthLdapLoginUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26969,7 +26969,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthLdapLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthLdapLoginUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27018,7 +27018,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27065,7 +27065,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthLdapUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27198,7 +27198,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthOciLoginRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciLoginRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27245,7 +27245,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthOciLoginRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciLoginRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27294,7 +27294,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciRoleRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27341,7 +27341,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling AuthApi->PostAuthOciRoleRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciRoleRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27726,7 +27726,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27773,7 +27773,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27906,7 +27906,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaGroupsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27953,7 +27953,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOktaGroupsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaGroupsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28002,7 +28002,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthOktaLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthOktaLoginUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28049,7 +28049,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthOktaLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthOktaLoginUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28098,7 +28098,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28145,7 +28145,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthOktaUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28362,7 +28362,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlusername' is set
             if (urlusername == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlusername' when calling AuthApi->PostAuthRadiusLoginUrlusername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlusername' when calling Auth->PostAuthRadiusLoginUrlusername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28409,7 +28409,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlusername' is set
             if (urlusername == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlusername' when calling AuthApi->PostAuthRadiusLoginUrlusername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlusername' when calling Auth->PostAuthRadiusLoginUrlusername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28458,7 +28458,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthRadiusUsersName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28505,7 +28505,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling AuthApi->PostAuthRadiusUsersName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthRadiusUsersName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28709,7 +28709,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthTokenCreateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenCreateRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28753,7 +28753,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthTokenCreateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenCreateRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29634,7 +29634,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenRolesRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29681,7 +29681,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling AuthApi->PostAuthTokenRolesRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenRolesRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29808,7 +29808,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassLoginUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29855,7 +29855,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassLoginUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassLoginUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29904,7 +29904,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsername");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29951,7 +29951,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsername");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsername");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30000,7 +30000,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsernamePassword");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePassword");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30047,7 +30047,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsernamePassword");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePassword");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30096,7 +30096,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsernamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePolicies");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30143,7 +30143,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling AuthApi->PostAuthUserpassUsersUsernamePolicies");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePolicies");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();

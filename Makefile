@@ -23,13 +23,34 @@ delete-generated:
 		.openapi-generator \
 		.travis.yml
 
+# --api-name-suffix does not allow empty strings; "REPLACE~ME" is a workaround
 generate:
-	docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:$(OPENAPI_GENERATOR_VERSION) generate \
-			-g csharp-netcore \
-			-i /local/$(OPENAPI_SPEC_PATH) \
-			-c /local/$(GENERATE_CONFIG_PATH) \
-			-t /local/$(GENERATE_TEMPLATES_PATH) \
-			-o /local/$(OUTPUT_PATH)
+	docker run \
+		--rm \
+		--volume "${PWD}:/local" \
+			openapitools/openapi-generator-cli:$(OPENAPI_GENERATOR_VERSION) generate \
+				--generator-name   csharp-netcore \
+				--input-spec       /local/$(OPENAPI_SPEC_PATH) \
+				--config           /local/$(GENERATE_CONFIG_PATH) \
+				--template-dir     /local/$(GENERATE_TEMPLATES_PATH) \
+				--output           /local/$(OUTPUT_PATH) \
+				--api-name-suffix  "REPLACE~ME"
+
+	rename --force 's/REPLACE~ME//g' docs/*.md
+	rename --force 's/REPLACE~ME//g' src/VaultClient/Api/*.cs
+	rename --force 's/REPLACE~ME//g' src/VaultClient.Test/Api/*.cs
+
+	sed -i'.original' -e 's/REPLACE~ME//g' README.md
+	sed -i'.original' -e 's/REPLACE~ME//g' docs/*.md
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient/Api/*.cs
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient/Client/*.cs
+	sed -i'.original' -e 's/REPLACE~ME//g' src/VaultClient.Test/Api/*.cs
+
+	rm -f *.original
+	rm -f docs/*.original
+	rm -f src/VaultClient/Api/*.original
+	rm -f src/VaultClient/Client/*.original
+	rm -f src/VaultClient.Test/Api/*.original
 
 clean:
 	dotnet clean

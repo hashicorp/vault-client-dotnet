@@ -1,313 +1,313 @@
-# VaultClient.Api.SecretsApi
+# VaultClient.Api.Secrets
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteAdConfig**](SecretsApi.md#deleteadconfig) | **DELETE** /ad/config | Configure the AD server to connect to, along with password options.
-[**DeleteAdLibraryName**](SecretsApi.md#deleteadlibraryname) | **DELETE** /ad/library/{name} | Delete a library set.
-[**DeleteAdRolesName**](SecretsApi.md#deleteadrolesname) | **DELETE** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**DeleteAlicloudConfig**](SecretsApi.md#deletealicloudconfig) | **DELETE** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-[**DeleteAlicloudRoleName**](SecretsApi.md#deletealicloudrolename) | **DELETE** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**DeleteAwsRolesName**](SecretsApi.md#deleteawsrolesname) | **DELETE** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**DeleteAzureConfig**](SecretsApi.md#deleteazureconfig) | **DELETE** /azure/config | 
-[**DeleteAzureRolesName**](SecretsApi.md#deleteazurerolesname) | **DELETE** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**DeleteConsulRolesName**](SecretsApi.md#deleteconsulrolesname) | **DELETE** /consul/roles/{name} | 
-[**DeleteCubbyholePath**](SecretsApi.md#deletecubbyholepath) | **DELETE** /cubbyhole/{path} | Deletes the secret at the specified location.
-[**DeleteGcpRolesetName**](SecretsApi.md#deletegcprolesetname) | **DELETE** /gcp/roleset/{name} | 
-[**DeleteGcpStaticAccountName**](SecretsApi.md#deletegcpstaticaccountname) | **DELETE** /gcp/static-account/{name} | 
-[**DeleteGcpkmsConfig**](SecretsApi.md#deletegcpkmsconfig) | **DELETE** /gcpkms/config | Configure the GCP KMS secrets engine
-[**DeleteGcpkmsKeysDeregisterKey**](SecretsApi.md#deletegcpkmskeysderegisterkey) | **DELETE** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
-[**DeleteGcpkmsKeysKey**](SecretsApi.md#deletegcpkmskeyskey) | **DELETE** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**DeleteGcpkmsKeysTrimKey**](SecretsApi.md#deletegcpkmskeystrimkey) | **DELETE** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
-[**DeleteKubernetesConfig**](SecretsApi.md#deletekubernetesconfig) | **DELETE** /kubernetes/config | 
-[**DeleteKubernetesRolesName**](SecretsApi.md#deletekubernetesrolesname) | **DELETE** /kubernetes/roles/{name} | 
-[**DeleteKvPath**](SecretsApi.md#deletekvpath) | **DELETE** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**DeleteMongodbatlasRolesName**](SecretsApi.md#deletemongodbatlasrolesname) | **DELETE** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**DeleteNomadConfigAccess**](SecretsApi.md#deletenomadconfigaccess) | **DELETE** /nomad/config/access | 
-[**DeleteNomadConfigLease**](SecretsApi.md#deletenomadconfiglease) | **DELETE** /nomad/config/lease | Configure the lease parameters for generated tokens
-[**DeleteNomadRoleName**](SecretsApi.md#deletenomadrolename) | **DELETE** /nomad/role/{name} | 
-[**DeleteOpenldapConfig**](SecretsApi.md#deleteopenldapconfig) | **DELETE** /openldap/config | 
-[**DeleteOpenldapRoleName**](SecretsApi.md#deleteopenldaprolename) | **DELETE** /openldap/role/{name} | 
-[**DeleteOpenldapStaticRoleName**](SecretsApi.md#deleteopenldapstaticrolename) | **DELETE** /openldap/static-role/{name} | 
-[**DeletePkiIssuerRefDerPem**](SecretsApi.md#deletepkiissuerrefderpem) | **DELETE** /pki/{issuer_ref}/der|/pem | 
-[**DeletePkiJson**](SecretsApi.md#deletepkijson) | **DELETE** /pki//json | 
-[**DeletePkiKeyKeyRef**](SecretsApi.md#deletepkikeykeyref) | **DELETE** /pki/key/{key_ref} | 
-[**DeletePkiRolesName**](SecretsApi.md#deletepkirolesname) | **DELETE** /pki/roles/{name} | 
-[**DeletePkiRoot**](SecretsApi.md#deletepkiroot) | **DELETE** /pki/root | 
-[**DeleteRabbitmqRolesName**](SecretsApi.md#deleterabbitmqrolesname) | **DELETE** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-[**DeleteSecretDataPath**](SecretsApi.md#deletesecretdatapath) | **DELETE** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**DeleteSecretMetadataPath**](SecretsApi.md#deletesecretmetadatapath) | **DELETE** /secret/metadata/{path} | Configures settings for the KV store
-[**DeleteSshConfigCa**](SecretsApi.md#deletesshconfigca) | **DELETE** /ssh/config/ca | Set the SSH private key used for signing certificates.
-[**DeleteSshConfigZeroaddress**](SecretsApi.md#deletesshconfigzeroaddress) | **DELETE** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**DeleteSshKeysKeyName**](SecretsApi.md#deletesshkeyskeyname) | **DELETE** /ssh/keys/{key_name} | Register a shared private key with Vault.
-[**DeleteSshRolesRole**](SecretsApi.md#deletesshrolesrole) | **DELETE** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
-[**DeleteTerraformConfig**](SecretsApi.md#deleteterraformconfig) | **DELETE** /terraform/config | 
-[**DeleteTerraformRoleName**](SecretsApi.md#deleteterraformrolename) | **DELETE** /terraform/role/{name} | 
-[**DeleteTotpKeysName**](SecretsApi.md#deletetotpkeysname) | **DELETE** /totp/keys/{name} | Manage the keys that can be created with this backend.
-[**DeleteTransitKeysName**](SecretsApi.md#deletetransitkeysname) | **DELETE** /transit/keys/{name} | Managed named encryption keys
-[**GetAdConfig**](SecretsApi.md#getadconfig) | **GET** /ad/config | Configure the AD server to connect to, along with password options.
-[**GetAdCredsName**](SecretsApi.md#getadcredsname) | **GET** /ad/creds/{name} | 
-[**GetAdLibrary**](SecretsApi.md#getadlibrary) | **GET** /ad/library | 
-[**GetAdLibraryName**](SecretsApi.md#getadlibraryname) | **GET** /ad/library/{name} | Read a library set.
-[**GetAdLibraryNameStatus**](SecretsApi.md#getadlibrarynamestatus) | **GET** /ad/library/{name}/status | Check the status of the service accounts in a library set.
-[**GetAdRoles**](SecretsApi.md#getadroles) | **GET** /ad/roles | List the name of each role currently stored.
-[**GetAdRolesName**](SecretsApi.md#getadrolesname) | **GET** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**GetAdRotateRoot**](SecretsApi.md#getadrotateroot) | **GET** /ad/rotate-root | 
-[**GetAlicloudConfig**](SecretsApi.md#getalicloudconfig) | **GET** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-[**GetAlicloudCredsName**](SecretsApi.md#getalicloudcredsname) | **GET** /alicloud/creds/{name} | Generate an API key or STS credential using the given role&#39;s configuration.&#39;
-[**GetAlicloudRole**](SecretsApi.md#getalicloudrole) | **GET** /alicloud/role | List the existing roles in this backend.
-[**GetAlicloudRoleName**](SecretsApi.md#getalicloudrolename) | **GET** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**GetAwsConfigLease**](SecretsApi.md#getawsconfiglease) | **GET** /aws/config/lease | Configure the default lease information for generated credentials.
-[**GetAwsConfigRoot**](SecretsApi.md#getawsconfigroot) | **GET** /aws/config/root | Configure the root credentials that are used to manage IAM.
-[**GetAwsCreds**](SecretsApi.md#getawscreds) | **GET** /aws/creds | Generate AWS credentials from a specific Vault role.
-[**GetAwsRoles**](SecretsApi.md#getawsroles) | **GET** /aws/roles | List the existing roles in this backend
-[**GetAwsRolesName**](SecretsApi.md#getawsrolesname) | **GET** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**GetAwsStsName**](SecretsApi.md#getawsstsname) | **GET** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
-[**GetAzureConfig**](SecretsApi.md#getazureconfig) | **GET** /azure/config | 
-[**GetAzureCredsRole**](SecretsApi.md#getazurecredsrole) | **GET** /azure/creds/{role} | 
-[**GetAzureRoles**](SecretsApi.md#getazureroles) | **GET** /azure/roles | List existing roles.
-[**GetAzureRolesName**](SecretsApi.md#getazurerolesname) | **GET** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**GetConsulConfigAccess**](SecretsApi.md#getconsulconfigaccess) | **GET** /consul/config/access | 
-[**GetConsulCredsRole**](SecretsApi.md#getconsulcredsrole) | **GET** /consul/creds/{role} | 
-[**GetConsulRoles**](SecretsApi.md#getconsulroles) | **GET** /consul/roles | 
-[**GetConsulRolesName**](SecretsApi.md#getconsulrolesname) | **GET** /consul/roles/{name} | 
-[**GetCubbyholePath**](SecretsApi.md#getcubbyholepath) | **GET** /cubbyhole/{path} | Retrieve the secret at the specified location.
-[**GetGcpConfig**](SecretsApi.md#getgcpconfig) | **GET** /gcp/config | 
-[**GetGcpKeyRoleset**](SecretsApi.md#getgcpkeyroleset) | **GET** /gcp/key/{roleset} | 
-[**GetGcpRolesetName**](SecretsApi.md#getgcprolesetname) | **GET** /gcp/roleset/{name} | 
-[**GetGcpRolesetRolesetKey**](SecretsApi.md#getgcprolesetrolesetkey) | **GET** /gcp/roleset/{roleset}/key | 
-[**GetGcpRolesetRolesetToken**](SecretsApi.md#getgcprolesetrolesettoken) | **GET** /gcp/roleset/{roleset}/token | 
-[**GetGcpRolesets**](SecretsApi.md#getgcprolesets) | **GET** /gcp/rolesets | 
-[**GetGcpStaticAccountName**](SecretsApi.md#getgcpstaticaccountname) | **GET** /gcp/static-account/{name} | 
-[**GetGcpStaticAccountNameKey**](SecretsApi.md#getgcpstaticaccountnamekey) | **GET** /gcp/static-account/{name}/key | 
-[**GetGcpStaticAccountNameToken**](SecretsApi.md#getgcpstaticaccountnametoken) | **GET** /gcp/static-account/{name}/token | 
-[**GetGcpStaticAccounts**](SecretsApi.md#getgcpstaticaccounts) | **GET** /gcp/static-accounts | 
-[**GetGcpTokenRoleset**](SecretsApi.md#getgcptokenroleset) | **GET** /gcp/token/{roleset} | 
-[**GetGcpkmsConfig**](SecretsApi.md#getgcpkmsconfig) | **GET** /gcpkms/config | Configure the GCP KMS secrets engine
-[**GetGcpkmsKeys**](SecretsApi.md#getgcpkmskeys) | **GET** /gcpkms/keys | List named keys
-[**GetGcpkmsKeysConfigKey**](SecretsApi.md#getgcpkmskeysconfigkey) | **GET** /gcpkms/keys/config/{key} | Configure the key in Vault
-[**GetGcpkmsKeysKey**](SecretsApi.md#getgcpkmskeyskey) | **GET** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**GetGcpkmsPubkeyKey**](SecretsApi.md#getgcpkmspubkeykey) | **GET** /gcpkms/pubkey/{key} | Retrieve the public key associated with the named key
-[**GetKubernetesConfig**](SecretsApi.md#getkubernetesconfig) | **GET** /kubernetes/config | 
-[**GetKubernetesRoles**](SecretsApi.md#getkubernetesroles) | **GET** /kubernetes/roles | 
-[**GetKubernetesRolesName**](SecretsApi.md#getkubernetesrolesname) | **GET** /kubernetes/roles/{name} | 
-[**GetKvPath**](SecretsApi.md#getkvpath) | **GET** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**GetMongodbatlasConfig**](SecretsApi.md#getmongodbatlasconfig) | **GET** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
-[**GetMongodbatlasCredsName**](SecretsApi.md#getmongodbatlascredsname) | **GET** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-[**GetMongodbatlasRoles**](SecretsApi.md#getmongodbatlasroles) | **GET** /mongodbatlas/roles | List the existing roles in this backend
-[**GetMongodbatlasRolesName**](SecretsApi.md#getmongodbatlasrolesname) | **GET** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**GetNomadConfigAccess**](SecretsApi.md#getnomadconfigaccess) | **GET** /nomad/config/access | 
-[**GetNomadConfigLease**](SecretsApi.md#getnomadconfiglease) | **GET** /nomad/config/lease | Configure the lease parameters for generated tokens
-[**GetNomadCredsName**](SecretsApi.md#getnomadcredsname) | **GET** /nomad/creds/{name} | 
-[**GetNomadRole**](SecretsApi.md#getnomadrole) | **GET** /nomad/role | 
-[**GetNomadRoleName**](SecretsApi.md#getnomadrolename) | **GET** /nomad/role/{name} | 
-[**GetOpenldapConfig**](SecretsApi.md#getopenldapconfig) | **GET** /openldap/config | 
-[**GetOpenldapCredsName**](SecretsApi.md#getopenldapcredsname) | **GET** /openldap/creds/{name} | 
-[**GetOpenldapRole**](SecretsApi.md#getopenldaprole) | **GET** /openldap/role | 
-[**GetOpenldapRoleName**](SecretsApi.md#getopenldaprolename) | **GET** /openldap/role/{name} | 
-[**GetOpenldapStaticCredName**](SecretsApi.md#getopenldapstaticcredname) | **GET** /openldap/static-cred/{name} | 
-[**GetOpenldapStaticRole**](SecretsApi.md#getopenldapstaticrole) | **GET** /openldap/static-role | 
-[**GetOpenldapStaticRoleName**](SecretsApi.md#getopenldapstaticrolename) | **GET** /openldap/static-role/{name} | 
-[**GetPkiCa**](SecretsApi.md#getpkica) | **GET** /pki/ca | 
-[**GetPkiCaChain**](SecretsApi.md#getpkicachain) | **GET** /pki/ca_chain | 
-[**GetPkiCaPem**](SecretsApi.md#getpkicapem) | **GET** /pki/ca/pem | 
-[**GetPkiCertCaChain**](SecretsApi.md#getpkicertcachain) | **GET** /pki/cert/ca_chain | 
-[**GetPkiCertCrl**](SecretsApi.md#getpkicertcrl) | **GET** /pki/cert/crl | 
-[**GetPkiCertSerial**](SecretsApi.md#getpkicertserial) | **GET** /pki/cert/{serial} | 
-[**GetPkiCertSerialRaw**](SecretsApi.md#getpkicertserialraw) | **GET** /pki/cert/{serial}/raw | 
-[**GetPkiCertSerialRawPem**](SecretsApi.md#getpkicertserialrawpem) | **GET** /pki/cert/{serial}/raw/pem | 
-[**GetPkiCerts**](SecretsApi.md#getpkicerts) | **GET** /pki/certs | 
-[**GetPkiConfigCrl**](SecretsApi.md#getpkiconfigcrl) | **GET** /pki/config/crl | 
-[**GetPkiConfigIssuers**](SecretsApi.md#getpkiconfigissuers) | **GET** /pki/config/issuers | 
-[**GetPkiConfigKeys**](SecretsApi.md#getpkiconfigkeys) | **GET** /pki/config/keys | 
-[**GetPkiConfigUrls**](SecretsApi.md#getpkiconfigurls) | **GET** /pki/config/urls | 
-[**GetPkiCrl**](SecretsApi.md#getpkicrl) | **GET** /pki/crl | 
-[**GetPkiCrlPem**](SecretsApi.md#getpkicrlpem) | **GET** /pki/crl/pem | 
-[**GetPkiCrlRotate**](SecretsApi.md#getpkicrlrotate) | **GET** /pki/crl/rotate | 
-[**GetPkiDer**](SecretsApi.md#getpkider) | **GET** /pki//der | 
-[**GetPkiIssuerRefCrlPem**](SecretsApi.md#getpkiissuerrefcrlpem) | **GET** /pki/{issuer_ref}/crl/pem | 
-[**GetPkiIssuerRefDerPem**](SecretsApi.md#getpkiissuerrefderpem) | **GET** /pki/{issuer_ref}/der|/pem | 
-[**GetPkiIssuers**](SecretsApi.md#getpkiissuers) | **GET** /pki/issuers | 
-[**GetPkiJson**](SecretsApi.md#getpkijson) | **GET** /pki//json | 
-[**GetPkiKeyKeyRef**](SecretsApi.md#getpkikeykeyref) | **GET** /pki/key/{key_ref} | 
-[**GetPkiKeys**](SecretsApi.md#getpkikeys) | **GET** /pki/keys | 
-[**GetPkiRoles**](SecretsApi.md#getpkiroles) | **GET** /pki/roles | 
-[**GetPkiRolesName**](SecretsApi.md#getpkirolesname) | **GET** /pki/roles/{name} | 
-[**GetPkiTidyStatus**](SecretsApi.md#getpkitidystatus) | **GET** /pki/tidy-status | 
-[**GetRabbitmqConfigLease**](SecretsApi.md#getrabbitmqconfiglease) | **GET** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
-[**GetRabbitmqCredsName**](SecretsApi.md#getrabbitmqcredsname) | **GET** /rabbitmq/creds/{name} | Request RabbitMQ credentials for a certain role.
-[**GetRabbitmqRoles**](SecretsApi.md#getrabbitmqroles) | **GET** /rabbitmq/roles | Manage the roles that can be created with this backend.
-[**GetRabbitmqRolesName**](SecretsApi.md#getrabbitmqrolesname) | **GET** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-[**GetSecretConfig**](SecretsApi.md#getsecretconfig) | **GET** /secret/config | Read the backend level settings.
-[**GetSecretDataPath**](SecretsApi.md#getsecretdatapath) | **GET** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**GetSecretMetadataPath**](SecretsApi.md#getsecretmetadatapath) | **GET** /secret/metadata/{path} | Configures settings for the KV store
-[**GetSecretSubkeysPath**](SecretsApi.md#getsecretsubkeyspath) | **GET** /secret/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
-[**GetSshConfigCa**](SecretsApi.md#getsshconfigca) | **GET** /ssh/config/ca | Set the SSH private key used for signing certificates.
-[**GetSshConfigZeroaddress**](SecretsApi.md#getsshconfigzeroaddress) | **GET** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**GetSshPublicKey**](SecretsApi.md#getsshpublickey) | **GET** /ssh/public_key | Retrieve the public key.
-[**GetSshRoles**](SecretsApi.md#getsshroles) | **GET** /ssh/roles | Manage the &#39;roles&#39; that can be created with this backend.
-[**GetSshRolesRole**](SecretsApi.md#getsshrolesrole) | **GET** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
-[**GetTerraformConfig**](SecretsApi.md#getterraformconfig) | **GET** /terraform/config | 
-[**GetTerraformCredsName**](SecretsApi.md#getterraformcredsname) | **GET** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-[**GetTerraformRole**](SecretsApi.md#getterraformrole) | **GET** /terraform/role | 
-[**GetTerraformRoleName**](SecretsApi.md#getterraformrolename) | **GET** /terraform/role/{name} | 
-[**GetTotpCodeName**](SecretsApi.md#gettotpcodename) | **GET** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-[**GetTotpKeys**](SecretsApi.md#gettotpkeys) | **GET** /totp/keys | Manage the keys that can be created with this backend.
-[**GetTotpKeysName**](SecretsApi.md#gettotpkeysname) | **GET** /totp/keys/{name} | Manage the keys that can be created with this backend.
-[**GetTransitBackupName**](SecretsApi.md#gettransitbackupname) | **GET** /transit/backup/{name} | Backup the named key
-[**GetTransitCacheConfig**](SecretsApi.md#gettransitcacheconfig) | **GET** /transit/cache-config | Returns the size of the active cache
-[**GetTransitExportTypeName**](SecretsApi.md#gettransitexporttypename) | **GET** /transit/export/{type}/{name} | Export named encryption or signing key
-[**GetTransitExportTypeNameVersion**](SecretsApi.md#gettransitexporttypenameversion) | **GET** /transit/export/{type}/{name}/{version} | Export named encryption or signing key
-[**GetTransitKeys**](SecretsApi.md#gettransitkeys) | **GET** /transit/keys | Managed named encryption keys
-[**GetTransitKeysName**](SecretsApi.md#gettransitkeysname) | **GET** /transit/keys/{name} | Managed named encryption keys
-[**GetTransitWrappingKey**](SecretsApi.md#gettransitwrappingkey) | **GET** /transit/wrapping_key | Returns the public key to use for wrapping imported keys
-[**PostAdConfig**](SecretsApi.md#postadconfig) | **POST** /ad/config | Configure the AD server to connect to, along with password options.
-[**PostAdLibraryManageNameCheckIn**](SecretsApi.md#postadlibrarymanagenamecheckin) | **POST** /ad/library/manage/{name}/check-in | Check service accounts in to the library.
-[**PostAdLibraryName**](SecretsApi.md#postadlibraryname) | **POST** /ad/library/{name} | Update a library set.
-[**PostAdLibraryNameCheckIn**](SecretsApi.md#postadlibrarynamecheckin) | **POST** /ad/library/{name}/check-in | Check service accounts in to the library.
-[**PostAdLibraryNameCheckOut**](SecretsApi.md#postadlibrarynamecheckout) | **POST** /ad/library/{name}/check-out | Check a service account out from the library.
-[**PostAdRolesName**](SecretsApi.md#postadrolesname) | **POST** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**PostAdRotateRoleName**](SecretsApi.md#postadrotaterolename) | **POST** /ad/rotate-role/{name} | 
-[**PostAdRotateRoot**](SecretsApi.md#postadrotateroot) | **POST** /ad/rotate-root | 
-[**PostAlicloudConfig**](SecretsApi.md#postalicloudconfig) | **POST** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-[**PostAlicloudRoleName**](SecretsApi.md#postalicloudrolename) | **POST** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**PostAwsConfigLease**](SecretsApi.md#postawsconfiglease) | **POST** /aws/config/lease | Configure the default lease information for generated credentials.
-[**PostAwsConfigRoot**](SecretsApi.md#postawsconfigroot) | **POST** /aws/config/root | Configure the root credentials that are used to manage IAM.
-[**PostAwsConfigRotateRoot**](SecretsApi.md#postawsconfigrotateroot) | **POST** /aws/config/rotate-root | 
-[**PostAwsCreds**](SecretsApi.md#postawscreds) | **POST** /aws/creds | Generate AWS credentials from a specific Vault role.
-[**PostAwsRolesName**](SecretsApi.md#postawsrolesname) | **POST** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**PostAwsStsName**](SecretsApi.md#postawsstsname) | **POST** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
-[**PostAzureConfig**](SecretsApi.md#postazureconfig) | **POST** /azure/config | 
-[**PostAzureRolesName**](SecretsApi.md#postazurerolesname) | **POST** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**PostAzureRotateRoot**](SecretsApi.md#postazurerotateroot) | **POST** /azure/rotate-root | 
-[**PostConsulConfigAccess**](SecretsApi.md#postconsulconfigaccess) | **POST** /consul/config/access | 
-[**PostConsulRolesName**](SecretsApi.md#postconsulrolesname) | **POST** /consul/roles/{name} | 
-[**PostCubbyholePath**](SecretsApi.md#postcubbyholepath) | **POST** /cubbyhole/{path} | Store a secret at the specified location.
-[**PostGcpConfig**](SecretsApi.md#postgcpconfig) | **POST** /gcp/config | 
-[**PostGcpConfigRotateRoot**](SecretsApi.md#postgcpconfigrotateroot) | **POST** /gcp/config/rotate-root | 
-[**PostGcpKeyRoleset**](SecretsApi.md#postgcpkeyroleset) | **POST** /gcp/key/{roleset} | 
-[**PostGcpRolesetName**](SecretsApi.md#postgcprolesetname) | **POST** /gcp/roleset/{name} | 
-[**PostGcpRolesetNameRotate**](SecretsApi.md#postgcprolesetnamerotate) | **POST** /gcp/roleset/{name}/rotate | 
-[**PostGcpRolesetNameRotateKey**](SecretsApi.md#postgcprolesetnamerotatekey) | **POST** /gcp/roleset/{name}/rotate-key | 
-[**PostGcpRolesetRolesetKey**](SecretsApi.md#postgcprolesetrolesetkey) | **POST** /gcp/roleset/{roleset}/key | 
-[**PostGcpRolesetRolesetToken**](SecretsApi.md#postgcprolesetrolesettoken) | **POST** /gcp/roleset/{roleset}/token | 
-[**PostGcpStaticAccountName**](SecretsApi.md#postgcpstaticaccountname) | **POST** /gcp/static-account/{name} | 
-[**PostGcpStaticAccountNameKey**](SecretsApi.md#postgcpstaticaccountnamekey) | **POST** /gcp/static-account/{name}/key | 
-[**PostGcpStaticAccountNameRotateKey**](SecretsApi.md#postgcpstaticaccountnamerotatekey) | **POST** /gcp/static-account/{name}/rotate-key | 
-[**PostGcpStaticAccountNameToken**](SecretsApi.md#postgcpstaticaccountnametoken) | **POST** /gcp/static-account/{name}/token | 
-[**PostGcpTokenRoleset**](SecretsApi.md#postgcptokenroleset) | **POST** /gcp/token/{roleset} | 
-[**PostGcpkmsConfig**](SecretsApi.md#postgcpkmsconfig) | **POST** /gcpkms/config | Configure the GCP KMS secrets engine
-[**PostGcpkmsDecryptKey**](SecretsApi.md#postgcpkmsdecryptkey) | **POST** /gcpkms/decrypt/{key} | Decrypt a ciphertext value using a named key
-[**PostGcpkmsEncryptKey**](SecretsApi.md#postgcpkmsencryptkey) | **POST** /gcpkms/encrypt/{key} | Encrypt a plaintext value using a named key
-[**PostGcpkmsKeysConfigKey**](SecretsApi.md#postgcpkmskeysconfigkey) | **POST** /gcpkms/keys/config/{key} | Configure the key in Vault
-[**PostGcpkmsKeysDeregisterKey**](SecretsApi.md#postgcpkmskeysderegisterkey) | **POST** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
-[**PostGcpkmsKeysKey**](SecretsApi.md#postgcpkmskeyskey) | **POST** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**PostGcpkmsKeysRegisterKey**](SecretsApi.md#postgcpkmskeysregisterkey) | **POST** /gcpkms/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
-[**PostGcpkmsKeysRotateKey**](SecretsApi.md#postgcpkmskeysrotatekey) | **POST** /gcpkms/keys/rotate/{key} | Rotate a crypto key to a new primary version
-[**PostGcpkmsKeysTrimKey**](SecretsApi.md#postgcpkmskeystrimkey) | **POST** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
-[**PostGcpkmsReencryptKey**](SecretsApi.md#postgcpkmsreencryptkey) | **POST** /gcpkms/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
-[**PostGcpkmsSignKey**](SecretsApi.md#postgcpkmssignkey) | **POST** /gcpkms/sign/{key} | Signs a message or digest using a named key
-[**PostGcpkmsVerifyKey**](SecretsApi.md#postgcpkmsverifykey) | **POST** /gcpkms/verify/{key} | Verify a signature using a named key
-[**PostKubernetesConfig**](SecretsApi.md#postkubernetesconfig) | **POST** /kubernetes/config | 
-[**PostKubernetesCredsName**](SecretsApi.md#postkubernetescredsname) | **POST** /kubernetes/creds/{name} | 
-[**PostKubernetesRolesName**](SecretsApi.md#postkubernetesrolesname) | **POST** /kubernetes/roles/{name} | 
-[**PostKvPath**](SecretsApi.md#postkvpath) | **POST** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**PostMongodbatlasConfig**](SecretsApi.md#postmongodbatlasconfig) | **POST** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
-[**PostMongodbatlasCredsName**](SecretsApi.md#postmongodbatlascredsname) | **POST** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-[**PostMongodbatlasRolesName**](SecretsApi.md#postmongodbatlasrolesname) | **POST** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**PostNomadConfigAccess**](SecretsApi.md#postnomadconfigaccess) | **POST** /nomad/config/access | 
-[**PostNomadConfigLease**](SecretsApi.md#postnomadconfiglease) | **POST** /nomad/config/lease | Configure the lease parameters for generated tokens
-[**PostNomadRoleName**](SecretsApi.md#postnomadrolename) | **POST** /nomad/role/{name} | 
-[**PostOpenldapConfig**](SecretsApi.md#postopenldapconfig) | **POST** /openldap/config | 
-[**PostOpenldapRoleName**](SecretsApi.md#postopenldaprolename) | **POST** /openldap/role/{name} | 
-[**PostOpenldapRotateRoleName**](SecretsApi.md#postopenldaprotaterolename) | **POST** /openldap/rotate-role/{name} | 
-[**PostOpenldapRotateRoot**](SecretsApi.md#postopenldaprotateroot) | **POST** /openldap/rotate-root | 
-[**PostOpenldapStaticRoleName**](SecretsApi.md#postopenldapstaticrolename) | **POST** /openldap/static-role/{name} | 
-[**PostPkiBundle**](SecretsApi.md#postpkibundle) | **POST** /pki/bundle | 
-[**PostPkiCert**](SecretsApi.md#postpkicert) | **POST** /pki/cert | 
-[**PostPkiConfigCa**](SecretsApi.md#postpkiconfigca) | **POST** /pki/config/ca | 
-[**PostPkiConfigCrl**](SecretsApi.md#postpkiconfigcrl) | **POST** /pki/config/crl | 
-[**PostPkiConfigIssuers**](SecretsApi.md#postpkiconfigissuers) | **POST** /pki/config/issuers | 
-[**PostPkiConfigKeys**](SecretsApi.md#postpkiconfigkeys) | **POST** /pki/config/keys | 
-[**PostPkiConfigUrls**](SecretsApi.md#postpkiconfigurls) | **POST** /pki/config/urls | 
-[**PostPkiIntermediateCrossSign**](SecretsApi.md#postpkiintermediatecrosssign) | **POST** /pki/intermediate/cross-sign | 
-[**PostPkiIntermediateGenerateExported**](SecretsApi.md#postpkiintermediategenerateexported) | **POST** /pki/intermediate/generate/{exported} | 
-[**PostPkiIntermediateSetSigned**](SecretsApi.md#postpkiintermediatesetsigned) | **POST** /pki/intermediate/set-signed | 
-[**PostPkiInternalExported**](SecretsApi.md#postpkiinternalexported) | **POST** /pki/internal|exported | 
-[**PostPkiIssueRole**](SecretsApi.md#postpkiissuerole) | **POST** /pki/issue/{role} | 
-[**PostPkiIssuerIssuerRefIssueRole**](SecretsApi.md#postpkiissuerissuerrefissuerole) | **POST** /pki/issuer/{issuer_ref}/issue/{role} | 
-[**PostPkiIssuerIssuerRefSignIntermediate**](SecretsApi.md#postpkiissuerissuerrefsignintermediate) | **POST** /pki/issuer/{issuer_ref}/sign-intermediate | 
-[**PostPkiIssuerIssuerRefSignRole**](SecretsApi.md#postpkiissuerissuerrefsignrole) | **POST** /pki/issuer/{issuer_ref}/sign/{role} | 
-[**PostPkiIssuerIssuerRefSignSelfIssued**](SecretsApi.md#postpkiissuerissuerrefsignselfissued) | **POST** /pki/issuer/{issuer_ref}/sign-self-issued | 
-[**PostPkiIssuerIssuerRefSignVerbatim**](SecretsApi.md#postpkiissuerissuerrefsignverbatim) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim | 
-[**PostPkiIssuerIssuerRefSignVerbatimRole**](SecretsApi.md#postpkiissuerissuerrefsignverbatimrole) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim/{role} | 
-[**PostPkiIssuerRefDerPem**](SecretsApi.md#postpkiissuerrefderpem) | **POST** /pki/{issuer_ref}/der|/pem | 
-[**PostPkiIssuersGenerateIntermediateExported**](SecretsApi.md#postpkiissuersgenerateintermediateexported) | **POST** /pki/issuers/generate/intermediate/{exported} | 
-[**PostPkiIssuersGenerateRootExported**](SecretsApi.md#postpkiissuersgeneraterootexported) | **POST** /pki/issuers/generate/root/{exported} | 
-[**PostPkiJson**](SecretsApi.md#postpkijson) | **POST** /pki//json | 
-[**PostPkiKeyKeyRef**](SecretsApi.md#postpkikeykeyref) | **POST** /pki/key/{key_ref} | 
-[**PostPkiKeysImport**](SecretsApi.md#postpkikeysimport) | **POST** /pki/keys/import | 
-[**PostPkiKms**](SecretsApi.md#postpkikms) | **POST** /pki/kms | 
-[**PostPkiRevoke**](SecretsApi.md#postpkirevoke) | **POST** /pki/revoke | 
-[**PostPkiRolesName**](SecretsApi.md#postpkirolesname) | **POST** /pki/roles/{name} | 
-[**PostPkiRootGenerateExported**](SecretsApi.md#postpkirootgenerateexported) | **POST** /pki/root/generate/{exported} | 
-[**PostPkiRootReplace**](SecretsApi.md#postpkirootreplace) | **POST** /pki/root/replace | 
-[**PostPkiRootRotateExported**](SecretsApi.md#postpkirootrotateexported) | **POST** /pki/root/rotate/{exported} | 
-[**PostPkiRootSignIntermediate**](SecretsApi.md#postpkirootsignintermediate) | **POST** /pki/root/sign-intermediate | 
-[**PostPkiRootSignSelfIssued**](SecretsApi.md#postpkirootsignselfissued) | **POST** /pki/root/sign-self-issued | 
-[**PostPkiSignRole**](SecretsApi.md#postpkisignrole) | **POST** /pki/sign/{role} | 
-[**PostPkiSignVerbatim**](SecretsApi.md#postpkisignverbatim) | **POST** /pki/sign-verbatim | 
-[**PostPkiSignVerbatimRole**](SecretsApi.md#postpkisignverbatimrole) | **POST** /pki/sign-verbatim/{role} | 
-[**PostPkiTidy**](SecretsApi.md#postpkitidy) | **POST** /pki/tidy | 
-[**PostRabbitmqConfigConnection**](SecretsApi.md#postrabbitmqconfigconnection) | **POST** /rabbitmq/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
-[**PostRabbitmqConfigLease**](SecretsApi.md#postrabbitmqconfiglease) | **POST** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
-[**PostRabbitmqRolesName**](SecretsApi.md#postrabbitmqrolesname) | **POST** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-[**PostSecretConfig**](SecretsApi.md#postsecretconfig) | **POST** /secret/config | Configure backend level settings that are applied to every key in the key-value store.
-[**PostSecretDataPath**](SecretsApi.md#postsecretdatapath) | **POST** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**PostSecretDeletePath**](SecretsApi.md#postsecretdeletepath) | **POST** /secret/delete/{path} | Marks one or more versions as deleted in the KV store.
-[**PostSecretDestroyPath**](SecretsApi.md#postsecretdestroypath) | **POST** /secret/destroy/{path} | Permanently removes one or more versions in the KV store
-[**PostSecretMetadataPath**](SecretsApi.md#postsecretmetadatapath) | **POST** /secret/metadata/{path} | Configures settings for the KV store
-[**PostSecretUndeletePath**](SecretsApi.md#postsecretundeletepath) | **POST** /secret/undelete/{path} | Undeletes one or more versions from the KV store.
-[**PostSshConfigCa**](SecretsApi.md#postsshconfigca) | **POST** /ssh/config/ca | Set the SSH private key used for signing certificates.
-[**PostSshConfigZeroaddress**](SecretsApi.md#postsshconfigzeroaddress) | **POST** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**PostSshCredsRole**](SecretsApi.md#postsshcredsrole) | **POST** /ssh/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
-[**PostSshKeysKeyName**](SecretsApi.md#postsshkeyskeyname) | **POST** /ssh/keys/{key_name} | Register a shared private key with Vault.
-[**PostSshLookup**](SecretsApi.md#postsshlookup) | **POST** /ssh/lookup | List all the roles associated with the given IP address.
-[**PostSshRolesRole**](SecretsApi.md#postsshrolesrole) | **POST** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
-[**PostSshSignRole**](SecretsApi.md#postsshsignrole) | **POST** /ssh/sign/{role} | Request signing an SSH key using a certain role with the provided details.
-[**PostSshVerify**](SecretsApi.md#postsshverify) | **POST** /ssh/verify | Validate the OTP provided by Vault SSH Agent.
-[**PostTerraformConfig**](SecretsApi.md#postterraformconfig) | **POST** /terraform/config | 
-[**PostTerraformCredsName**](SecretsApi.md#postterraformcredsname) | **POST** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-[**PostTerraformRoleName**](SecretsApi.md#postterraformrolename) | **POST** /terraform/role/{name} | 
-[**PostTerraformRotateRoleName**](SecretsApi.md#postterraformrotaterolename) | **POST** /terraform/rotate-role/{name} | 
-[**PostTotpCodeName**](SecretsApi.md#posttotpcodename) | **POST** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-[**PostTotpKeysName**](SecretsApi.md#posttotpkeysname) | **POST** /totp/keys/{name} | Manage the keys that can be created with this backend.
-[**PostTransitCacheConfig**](SecretsApi.md#posttransitcacheconfig) | **POST** /transit/cache-config | Configures a new cache of the specified size
-[**PostTransitDatakeyPlaintextName**](SecretsApi.md#posttransitdatakeyplaintextname) | **POST** /transit/datakey/{plaintext}/{name} | Generate a data key
-[**PostTransitDecryptName**](SecretsApi.md#posttransitdecryptname) | **POST** /transit/decrypt/{name} | Decrypt a ciphertext value using a named key
-[**PostTransitEncryptName**](SecretsApi.md#posttransitencryptname) | **POST** /transit/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
-[**PostTransitHash**](SecretsApi.md#posttransithash) | **POST** /transit/hash | Generate a hash sum for input data
-[**PostTransitHashUrlalgorithm**](SecretsApi.md#posttransithashurlalgorithm) | **POST** /transit/hash/{urlalgorithm} | Generate a hash sum for input data
-[**PostTransitHmacName**](SecretsApi.md#posttransithmacname) | **POST** /transit/hmac/{name} | Generate an HMAC for input data using the named key
-[**PostTransitHmacNameUrlalgorithm**](SecretsApi.md#posttransithmacnameurlalgorithm) | **POST** /transit/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
-[**PostTransitKeysName**](SecretsApi.md#posttransitkeysname) | **POST** /transit/keys/{name} | Managed named encryption keys
-[**PostTransitKeysNameConfig**](SecretsApi.md#posttransitkeysnameconfig) | **POST** /transit/keys/{name}/config | Configure a named encryption key
-[**PostTransitKeysNameImport**](SecretsApi.md#posttransitkeysnameimport) | **POST** /transit/keys/{name}/import | Imports an externally-generated key into a new transit key
-[**PostTransitKeysNameImportVersion**](SecretsApi.md#posttransitkeysnameimportversion) | **POST** /transit/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
-[**PostTransitKeysNameRotate**](SecretsApi.md#posttransitkeysnamerotate) | **POST** /transit/keys/{name}/rotate | Rotate named encryption key
-[**PostTransitKeysNameTrim**](SecretsApi.md#posttransitkeysnametrim) | **POST** /transit/keys/{name}/trim | Trim key versions of a named key
-[**PostTransitRandom**](SecretsApi.md#posttransitrandom) | **POST** /transit/random | Generate random bytes
-[**PostTransitRandomSource**](SecretsApi.md#posttransitrandomsource) | **POST** /transit/random/{source} | Generate random bytes
-[**PostTransitRandomSourceUrlbytes**](SecretsApi.md#posttransitrandomsourceurlbytes) | **POST** /transit/random/{source}/{urlbytes} | Generate random bytes
-[**PostTransitRandomUrlbytes**](SecretsApi.md#posttransitrandomurlbytes) | **POST** /transit/random/{urlbytes} | Generate random bytes
-[**PostTransitRestore**](SecretsApi.md#posttransitrestore) | **POST** /transit/restore | Restore the named key
-[**PostTransitRestoreName**](SecretsApi.md#posttransitrestorename) | **POST** /transit/restore/{name} | Restore the named key
-[**PostTransitRewrapName**](SecretsApi.md#posttransitrewrapname) | **POST** /transit/rewrap/{name} | Rewrap ciphertext
-[**PostTransitSignName**](SecretsApi.md#posttransitsignname) | **POST** /transit/sign/{name} | Generate a signature for input data using the named key
-[**PostTransitSignNameUrlalgorithm**](SecretsApi.md#posttransitsignnameurlalgorithm) | **POST** /transit/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
-[**PostTransitVerifyName**](SecretsApi.md#posttransitverifyname) | **POST** /transit/verify/{name} | Verify a signature or HMAC for input data created using the named key
-[**PostTransitVerifyNameUrlalgorithm**](SecretsApi.md#posttransitverifynameurlalgorithm) | **POST** /transit/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
+[**DeleteAdConfig**](Secrets.md#deleteadconfig) | **DELETE** /ad/config | Configure the AD server to connect to, along with password options.
+[**DeleteAdLibraryName**](Secrets.md#deleteadlibraryname) | **DELETE** /ad/library/{name} | Delete a library set.
+[**DeleteAdRolesName**](Secrets.md#deleteadrolesname) | **DELETE** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**DeleteAlicloudConfig**](Secrets.md#deletealicloudconfig) | **DELETE** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
+[**DeleteAlicloudRoleName**](Secrets.md#deletealicloudrolename) | **DELETE** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**DeleteAwsRolesName**](Secrets.md#deleteawsrolesname) | **DELETE** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**DeleteAzureConfig**](Secrets.md#deleteazureconfig) | **DELETE** /azure/config | 
+[**DeleteAzureRolesName**](Secrets.md#deleteazurerolesname) | **DELETE** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**DeleteConsulRolesName**](Secrets.md#deleteconsulrolesname) | **DELETE** /consul/roles/{name} | 
+[**DeleteCubbyholePath**](Secrets.md#deletecubbyholepath) | **DELETE** /cubbyhole/{path} | Deletes the secret at the specified location.
+[**DeleteGcpRolesetName**](Secrets.md#deletegcprolesetname) | **DELETE** /gcp/roleset/{name} | 
+[**DeleteGcpStaticAccountName**](Secrets.md#deletegcpstaticaccountname) | **DELETE** /gcp/static-account/{name} | 
+[**DeleteGcpkmsConfig**](Secrets.md#deletegcpkmsconfig) | **DELETE** /gcpkms/config | Configure the GCP KMS secrets engine
+[**DeleteGcpkmsKeysDeregisterKey**](Secrets.md#deletegcpkmskeysderegisterkey) | **DELETE** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
+[**DeleteGcpkmsKeysKey**](Secrets.md#deletegcpkmskeyskey) | **DELETE** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**DeleteGcpkmsKeysTrimKey**](Secrets.md#deletegcpkmskeystrimkey) | **DELETE** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
+[**DeleteKubernetesConfig**](Secrets.md#deletekubernetesconfig) | **DELETE** /kubernetes/config | 
+[**DeleteKubernetesRolesName**](Secrets.md#deletekubernetesrolesname) | **DELETE** /kubernetes/roles/{name} | 
+[**DeleteKvPath**](Secrets.md#deletekvpath) | **DELETE** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**DeleteMongodbatlasRolesName**](Secrets.md#deletemongodbatlasrolesname) | **DELETE** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**DeleteNomadConfigAccess**](Secrets.md#deletenomadconfigaccess) | **DELETE** /nomad/config/access | 
+[**DeleteNomadConfigLease**](Secrets.md#deletenomadconfiglease) | **DELETE** /nomad/config/lease | Configure the lease parameters for generated tokens
+[**DeleteNomadRoleName**](Secrets.md#deletenomadrolename) | **DELETE** /nomad/role/{name} | 
+[**DeleteOpenldapConfig**](Secrets.md#deleteopenldapconfig) | **DELETE** /openldap/config | 
+[**DeleteOpenldapRoleName**](Secrets.md#deleteopenldaprolename) | **DELETE** /openldap/role/{name} | 
+[**DeleteOpenldapStaticRoleName**](Secrets.md#deleteopenldapstaticrolename) | **DELETE** /openldap/static-role/{name} | 
+[**DeletePkiIssuerRefDerPem**](Secrets.md#deletepkiissuerrefderpem) | **DELETE** /pki/{issuer_ref}/der|/pem | 
+[**DeletePkiJson**](Secrets.md#deletepkijson) | **DELETE** /pki//json | 
+[**DeletePkiKeyKeyRef**](Secrets.md#deletepkikeykeyref) | **DELETE** /pki/key/{key_ref} | 
+[**DeletePkiRolesName**](Secrets.md#deletepkirolesname) | **DELETE** /pki/roles/{name} | 
+[**DeletePkiRoot**](Secrets.md#deletepkiroot) | **DELETE** /pki/root | 
+[**DeleteRabbitmqRolesName**](Secrets.md#deleterabbitmqrolesname) | **DELETE** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
+[**DeleteSecretDataPath**](Secrets.md#deletesecretdatapath) | **DELETE** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**DeleteSecretMetadataPath**](Secrets.md#deletesecretmetadatapath) | **DELETE** /secret/metadata/{path} | Configures settings for the KV store
+[**DeleteSshConfigCa**](Secrets.md#deletesshconfigca) | **DELETE** /ssh/config/ca | Set the SSH private key used for signing certificates.
+[**DeleteSshConfigZeroaddress**](Secrets.md#deletesshconfigzeroaddress) | **DELETE** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**DeleteSshKeysKeyName**](Secrets.md#deletesshkeyskeyname) | **DELETE** /ssh/keys/{key_name} | Register a shared private key with Vault.
+[**DeleteSshRolesRole**](Secrets.md#deletesshrolesrole) | **DELETE** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**DeleteTerraformConfig**](Secrets.md#deleteterraformconfig) | **DELETE** /terraform/config | 
+[**DeleteTerraformRoleName**](Secrets.md#deleteterraformrolename) | **DELETE** /terraform/role/{name} | 
+[**DeleteTotpKeysName**](Secrets.md#deletetotpkeysname) | **DELETE** /totp/keys/{name} | Manage the keys that can be created with this backend.
+[**DeleteTransitKeysName**](Secrets.md#deletetransitkeysname) | **DELETE** /transit/keys/{name} | Managed named encryption keys
+[**GetAdConfig**](Secrets.md#getadconfig) | **GET** /ad/config | Configure the AD server to connect to, along with password options.
+[**GetAdCredsName**](Secrets.md#getadcredsname) | **GET** /ad/creds/{name} | 
+[**GetAdLibrary**](Secrets.md#getadlibrary) | **GET** /ad/library | 
+[**GetAdLibraryName**](Secrets.md#getadlibraryname) | **GET** /ad/library/{name} | Read a library set.
+[**GetAdLibraryNameStatus**](Secrets.md#getadlibrarynamestatus) | **GET** /ad/library/{name}/status | Check the status of the service accounts in a library set.
+[**GetAdRoles**](Secrets.md#getadroles) | **GET** /ad/roles | List the name of each role currently stored.
+[**GetAdRolesName**](Secrets.md#getadrolesname) | **GET** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**GetAdRotateRoot**](Secrets.md#getadrotateroot) | **GET** /ad/rotate-root | 
+[**GetAlicloudConfig**](Secrets.md#getalicloudconfig) | **GET** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
+[**GetAlicloudCredsName**](Secrets.md#getalicloudcredsname) | **GET** /alicloud/creds/{name} | Generate an API key or STS credential using the given role&#39;s configuration.&#39;
+[**GetAlicloudRole**](Secrets.md#getalicloudrole) | **GET** /alicloud/role | List the existing roles in this backend.
+[**GetAlicloudRoleName**](Secrets.md#getalicloudrolename) | **GET** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**GetAwsConfigLease**](Secrets.md#getawsconfiglease) | **GET** /aws/config/lease | Configure the default lease information for generated credentials.
+[**GetAwsConfigRoot**](Secrets.md#getawsconfigroot) | **GET** /aws/config/root | Configure the root credentials that are used to manage IAM.
+[**GetAwsCreds**](Secrets.md#getawscreds) | **GET** /aws/creds | Generate AWS credentials from a specific Vault role.
+[**GetAwsRoles**](Secrets.md#getawsroles) | **GET** /aws/roles | List the existing roles in this backend
+[**GetAwsRolesName**](Secrets.md#getawsrolesname) | **GET** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**GetAwsStsName**](Secrets.md#getawsstsname) | **GET** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
+[**GetAzureConfig**](Secrets.md#getazureconfig) | **GET** /azure/config | 
+[**GetAzureCredsRole**](Secrets.md#getazurecredsrole) | **GET** /azure/creds/{role} | 
+[**GetAzureRoles**](Secrets.md#getazureroles) | **GET** /azure/roles | List existing roles.
+[**GetAzureRolesName**](Secrets.md#getazurerolesname) | **GET** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**GetConsulConfigAccess**](Secrets.md#getconsulconfigaccess) | **GET** /consul/config/access | 
+[**GetConsulCredsRole**](Secrets.md#getconsulcredsrole) | **GET** /consul/creds/{role} | 
+[**GetConsulRoles**](Secrets.md#getconsulroles) | **GET** /consul/roles | 
+[**GetConsulRolesName**](Secrets.md#getconsulrolesname) | **GET** /consul/roles/{name} | 
+[**GetCubbyholePath**](Secrets.md#getcubbyholepath) | **GET** /cubbyhole/{path} | Retrieve the secret at the specified location.
+[**GetGcpConfig**](Secrets.md#getgcpconfig) | **GET** /gcp/config | 
+[**GetGcpKeyRoleset**](Secrets.md#getgcpkeyroleset) | **GET** /gcp/key/{roleset} | 
+[**GetGcpRolesetName**](Secrets.md#getgcprolesetname) | **GET** /gcp/roleset/{name} | 
+[**GetGcpRolesetRolesetKey**](Secrets.md#getgcprolesetrolesetkey) | **GET** /gcp/roleset/{roleset}/key | 
+[**GetGcpRolesetRolesetToken**](Secrets.md#getgcprolesetrolesettoken) | **GET** /gcp/roleset/{roleset}/token | 
+[**GetGcpRolesets**](Secrets.md#getgcprolesets) | **GET** /gcp/rolesets | 
+[**GetGcpStaticAccountName**](Secrets.md#getgcpstaticaccountname) | **GET** /gcp/static-account/{name} | 
+[**GetGcpStaticAccountNameKey**](Secrets.md#getgcpstaticaccountnamekey) | **GET** /gcp/static-account/{name}/key | 
+[**GetGcpStaticAccountNameToken**](Secrets.md#getgcpstaticaccountnametoken) | **GET** /gcp/static-account/{name}/token | 
+[**GetGcpStaticAccounts**](Secrets.md#getgcpstaticaccounts) | **GET** /gcp/static-accounts | 
+[**GetGcpTokenRoleset**](Secrets.md#getgcptokenroleset) | **GET** /gcp/token/{roleset} | 
+[**GetGcpkmsConfig**](Secrets.md#getgcpkmsconfig) | **GET** /gcpkms/config | Configure the GCP KMS secrets engine
+[**GetGcpkmsKeys**](Secrets.md#getgcpkmskeys) | **GET** /gcpkms/keys | List named keys
+[**GetGcpkmsKeysConfigKey**](Secrets.md#getgcpkmskeysconfigkey) | **GET** /gcpkms/keys/config/{key} | Configure the key in Vault
+[**GetGcpkmsKeysKey**](Secrets.md#getgcpkmskeyskey) | **GET** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**GetGcpkmsPubkeyKey**](Secrets.md#getgcpkmspubkeykey) | **GET** /gcpkms/pubkey/{key} | Retrieve the public key associated with the named key
+[**GetKubernetesConfig**](Secrets.md#getkubernetesconfig) | **GET** /kubernetes/config | 
+[**GetKubernetesRoles**](Secrets.md#getkubernetesroles) | **GET** /kubernetes/roles | 
+[**GetKubernetesRolesName**](Secrets.md#getkubernetesrolesname) | **GET** /kubernetes/roles/{name} | 
+[**GetKvPath**](Secrets.md#getkvpath) | **GET** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**GetMongodbatlasConfig**](Secrets.md#getmongodbatlasconfig) | **GET** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
+[**GetMongodbatlasCredsName**](Secrets.md#getmongodbatlascredsname) | **GET** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
+[**GetMongodbatlasRoles**](Secrets.md#getmongodbatlasroles) | **GET** /mongodbatlas/roles | List the existing roles in this backend
+[**GetMongodbatlasRolesName**](Secrets.md#getmongodbatlasrolesname) | **GET** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**GetNomadConfigAccess**](Secrets.md#getnomadconfigaccess) | **GET** /nomad/config/access | 
+[**GetNomadConfigLease**](Secrets.md#getnomadconfiglease) | **GET** /nomad/config/lease | Configure the lease parameters for generated tokens
+[**GetNomadCredsName**](Secrets.md#getnomadcredsname) | **GET** /nomad/creds/{name} | 
+[**GetNomadRole**](Secrets.md#getnomadrole) | **GET** /nomad/role | 
+[**GetNomadRoleName**](Secrets.md#getnomadrolename) | **GET** /nomad/role/{name} | 
+[**GetOpenldapConfig**](Secrets.md#getopenldapconfig) | **GET** /openldap/config | 
+[**GetOpenldapCredsName**](Secrets.md#getopenldapcredsname) | **GET** /openldap/creds/{name} | 
+[**GetOpenldapRole**](Secrets.md#getopenldaprole) | **GET** /openldap/role | 
+[**GetOpenldapRoleName**](Secrets.md#getopenldaprolename) | **GET** /openldap/role/{name} | 
+[**GetOpenldapStaticCredName**](Secrets.md#getopenldapstaticcredname) | **GET** /openldap/static-cred/{name} | 
+[**GetOpenldapStaticRole**](Secrets.md#getopenldapstaticrole) | **GET** /openldap/static-role | 
+[**GetOpenldapStaticRoleName**](Secrets.md#getopenldapstaticrolename) | **GET** /openldap/static-role/{name} | 
+[**GetPkiCa**](Secrets.md#getpkica) | **GET** /pki/ca | 
+[**GetPkiCaChain**](Secrets.md#getpkicachain) | **GET** /pki/ca_chain | 
+[**GetPkiCaPem**](Secrets.md#getpkicapem) | **GET** /pki/ca/pem | 
+[**GetPkiCertCaChain**](Secrets.md#getpkicertcachain) | **GET** /pki/cert/ca_chain | 
+[**GetPkiCertCrl**](Secrets.md#getpkicertcrl) | **GET** /pki/cert/crl | 
+[**GetPkiCertSerial**](Secrets.md#getpkicertserial) | **GET** /pki/cert/{serial} | 
+[**GetPkiCertSerialRaw**](Secrets.md#getpkicertserialraw) | **GET** /pki/cert/{serial}/raw | 
+[**GetPkiCertSerialRawPem**](Secrets.md#getpkicertserialrawpem) | **GET** /pki/cert/{serial}/raw/pem | 
+[**GetPkiCerts**](Secrets.md#getpkicerts) | **GET** /pki/certs | 
+[**GetPkiConfigCrl**](Secrets.md#getpkiconfigcrl) | **GET** /pki/config/crl | 
+[**GetPkiConfigIssuers**](Secrets.md#getpkiconfigissuers) | **GET** /pki/config/issuers | 
+[**GetPkiConfigKeys**](Secrets.md#getpkiconfigkeys) | **GET** /pki/config/keys | 
+[**GetPkiConfigUrls**](Secrets.md#getpkiconfigurls) | **GET** /pki/config/urls | 
+[**GetPkiCrl**](Secrets.md#getpkicrl) | **GET** /pki/crl | 
+[**GetPkiCrlPem**](Secrets.md#getpkicrlpem) | **GET** /pki/crl/pem | 
+[**GetPkiCrlRotate**](Secrets.md#getpkicrlrotate) | **GET** /pki/crl/rotate | 
+[**GetPkiDer**](Secrets.md#getpkider) | **GET** /pki//der | 
+[**GetPkiIssuerRefCrlPem**](Secrets.md#getpkiissuerrefcrlpem) | **GET** /pki/{issuer_ref}/crl/pem | 
+[**GetPkiIssuerRefDerPem**](Secrets.md#getpkiissuerrefderpem) | **GET** /pki/{issuer_ref}/der|/pem | 
+[**GetPkiIssuers**](Secrets.md#getpkiissuers) | **GET** /pki/issuers | 
+[**GetPkiJson**](Secrets.md#getpkijson) | **GET** /pki//json | 
+[**GetPkiKeyKeyRef**](Secrets.md#getpkikeykeyref) | **GET** /pki/key/{key_ref} | 
+[**GetPkiKeys**](Secrets.md#getpkikeys) | **GET** /pki/keys | 
+[**GetPkiRoles**](Secrets.md#getpkiroles) | **GET** /pki/roles | 
+[**GetPkiRolesName**](Secrets.md#getpkirolesname) | **GET** /pki/roles/{name} | 
+[**GetPkiTidyStatus**](Secrets.md#getpkitidystatus) | **GET** /pki/tidy-status | 
+[**GetRabbitmqConfigLease**](Secrets.md#getrabbitmqconfiglease) | **GET** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
+[**GetRabbitmqCredsName**](Secrets.md#getrabbitmqcredsname) | **GET** /rabbitmq/creds/{name} | Request RabbitMQ credentials for a certain role.
+[**GetRabbitmqRoles**](Secrets.md#getrabbitmqroles) | **GET** /rabbitmq/roles | Manage the roles that can be created with this backend.
+[**GetRabbitmqRolesName**](Secrets.md#getrabbitmqrolesname) | **GET** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
+[**GetSecretConfig**](Secrets.md#getsecretconfig) | **GET** /secret/config | Read the backend level settings.
+[**GetSecretDataPath**](Secrets.md#getsecretdatapath) | **GET** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**GetSecretMetadataPath**](Secrets.md#getsecretmetadatapath) | **GET** /secret/metadata/{path} | Configures settings for the KV store
+[**GetSecretSubkeysPath**](Secrets.md#getsecretsubkeyspath) | **GET** /secret/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
+[**GetSshConfigCa**](Secrets.md#getsshconfigca) | **GET** /ssh/config/ca | Set the SSH private key used for signing certificates.
+[**GetSshConfigZeroaddress**](Secrets.md#getsshconfigzeroaddress) | **GET** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**GetSshPublicKey**](Secrets.md#getsshpublickey) | **GET** /ssh/public_key | Retrieve the public key.
+[**GetSshRoles**](Secrets.md#getsshroles) | **GET** /ssh/roles | Manage the &#39;roles&#39; that can be created with this backend.
+[**GetSshRolesRole**](Secrets.md#getsshrolesrole) | **GET** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**GetTerraformConfig**](Secrets.md#getterraformconfig) | **GET** /terraform/config | 
+[**GetTerraformCredsName**](Secrets.md#getterraformcredsname) | **GET** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+[**GetTerraformRole**](Secrets.md#getterraformrole) | **GET** /terraform/role | 
+[**GetTerraformRoleName**](Secrets.md#getterraformrolename) | **GET** /terraform/role/{name} | 
+[**GetTotpCodeName**](Secrets.md#gettotpcodename) | **GET** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+[**GetTotpKeys**](Secrets.md#gettotpkeys) | **GET** /totp/keys | Manage the keys that can be created with this backend.
+[**GetTotpKeysName**](Secrets.md#gettotpkeysname) | **GET** /totp/keys/{name} | Manage the keys that can be created with this backend.
+[**GetTransitBackupName**](Secrets.md#gettransitbackupname) | **GET** /transit/backup/{name} | Backup the named key
+[**GetTransitCacheConfig**](Secrets.md#gettransitcacheconfig) | **GET** /transit/cache-config | Returns the size of the active cache
+[**GetTransitExportTypeName**](Secrets.md#gettransitexporttypename) | **GET** /transit/export/{type}/{name} | Export named encryption or signing key
+[**GetTransitExportTypeNameVersion**](Secrets.md#gettransitexporttypenameversion) | **GET** /transit/export/{type}/{name}/{version} | Export named encryption or signing key
+[**GetTransitKeys**](Secrets.md#gettransitkeys) | **GET** /transit/keys | Managed named encryption keys
+[**GetTransitKeysName**](Secrets.md#gettransitkeysname) | **GET** /transit/keys/{name} | Managed named encryption keys
+[**GetTransitWrappingKey**](Secrets.md#gettransitwrappingkey) | **GET** /transit/wrapping_key | Returns the public key to use for wrapping imported keys
+[**PostAdConfig**](Secrets.md#postadconfig) | **POST** /ad/config | Configure the AD server to connect to, along with password options.
+[**PostAdLibraryManageNameCheckIn**](Secrets.md#postadlibrarymanagenamecheckin) | **POST** /ad/library/manage/{name}/check-in | Check service accounts in to the library.
+[**PostAdLibraryName**](Secrets.md#postadlibraryname) | **POST** /ad/library/{name} | Update a library set.
+[**PostAdLibraryNameCheckIn**](Secrets.md#postadlibrarynamecheckin) | **POST** /ad/library/{name}/check-in | Check service accounts in to the library.
+[**PostAdLibraryNameCheckOut**](Secrets.md#postadlibrarynamecheckout) | **POST** /ad/library/{name}/check-out | Check a service account out from the library.
+[**PostAdRolesName**](Secrets.md#postadrolesname) | **POST** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**PostAdRotateRoleName**](Secrets.md#postadrotaterolename) | **POST** /ad/rotate-role/{name} | 
+[**PostAdRotateRoot**](Secrets.md#postadrotateroot) | **POST** /ad/rotate-root | 
+[**PostAlicloudConfig**](Secrets.md#postalicloudconfig) | **POST** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
+[**PostAlicloudRoleName**](Secrets.md#postalicloudrolename) | **POST** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**PostAwsConfigLease**](Secrets.md#postawsconfiglease) | **POST** /aws/config/lease | Configure the default lease information for generated credentials.
+[**PostAwsConfigRoot**](Secrets.md#postawsconfigroot) | **POST** /aws/config/root | Configure the root credentials that are used to manage IAM.
+[**PostAwsConfigRotateRoot**](Secrets.md#postawsconfigrotateroot) | **POST** /aws/config/rotate-root | 
+[**PostAwsCreds**](Secrets.md#postawscreds) | **POST** /aws/creds | Generate AWS credentials from a specific Vault role.
+[**PostAwsRolesName**](Secrets.md#postawsrolesname) | **POST** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**PostAwsStsName**](Secrets.md#postawsstsname) | **POST** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
+[**PostAzureConfig**](Secrets.md#postazureconfig) | **POST** /azure/config | 
+[**PostAzureRolesName**](Secrets.md#postazurerolesname) | **POST** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**PostAzureRotateRoot**](Secrets.md#postazurerotateroot) | **POST** /azure/rotate-root | 
+[**PostConsulConfigAccess**](Secrets.md#postconsulconfigaccess) | **POST** /consul/config/access | 
+[**PostConsulRolesName**](Secrets.md#postconsulrolesname) | **POST** /consul/roles/{name} | 
+[**PostCubbyholePath**](Secrets.md#postcubbyholepath) | **POST** /cubbyhole/{path} | Store a secret at the specified location.
+[**PostGcpConfig**](Secrets.md#postgcpconfig) | **POST** /gcp/config | 
+[**PostGcpConfigRotateRoot**](Secrets.md#postgcpconfigrotateroot) | **POST** /gcp/config/rotate-root | 
+[**PostGcpKeyRoleset**](Secrets.md#postgcpkeyroleset) | **POST** /gcp/key/{roleset} | 
+[**PostGcpRolesetName**](Secrets.md#postgcprolesetname) | **POST** /gcp/roleset/{name} | 
+[**PostGcpRolesetNameRotate**](Secrets.md#postgcprolesetnamerotate) | **POST** /gcp/roleset/{name}/rotate | 
+[**PostGcpRolesetNameRotateKey**](Secrets.md#postgcprolesetnamerotatekey) | **POST** /gcp/roleset/{name}/rotate-key | 
+[**PostGcpRolesetRolesetKey**](Secrets.md#postgcprolesetrolesetkey) | **POST** /gcp/roleset/{roleset}/key | 
+[**PostGcpRolesetRolesetToken**](Secrets.md#postgcprolesetrolesettoken) | **POST** /gcp/roleset/{roleset}/token | 
+[**PostGcpStaticAccountName**](Secrets.md#postgcpstaticaccountname) | **POST** /gcp/static-account/{name} | 
+[**PostGcpStaticAccountNameKey**](Secrets.md#postgcpstaticaccountnamekey) | **POST** /gcp/static-account/{name}/key | 
+[**PostGcpStaticAccountNameRotateKey**](Secrets.md#postgcpstaticaccountnamerotatekey) | **POST** /gcp/static-account/{name}/rotate-key | 
+[**PostGcpStaticAccountNameToken**](Secrets.md#postgcpstaticaccountnametoken) | **POST** /gcp/static-account/{name}/token | 
+[**PostGcpTokenRoleset**](Secrets.md#postgcptokenroleset) | **POST** /gcp/token/{roleset} | 
+[**PostGcpkmsConfig**](Secrets.md#postgcpkmsconfig) | **POST** /gcpkms/config | Configure the GCP KMS secrets engine
+[**PostGcpkmsDecryptKey**](Secrets.md#postgcpkmsdecryptkey) | **POST** /gcpkms/decrypt/{key} | Decrypt a ciphertext value using a named key
+[**PostGcpkmsEncryptKey**](Secrets.md#postgcpkmsencryptkey) | **POST** /gcpkms/encrypt/{key} | Encrypt a plaintext value using a named key
+[**PostGcpkmsKeysConfigKey**](Secrets.md#postgcpkmskeysconfigkey) | **POST** /gcpkms/keys/config/{key} | Configure the key in Vault
+[**PostGcpkmsKeysDeregisterKey**](Secrets.md#postgcpkmskeysderegisterkey) | **POST** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
+[**PostGcpkmsKeysKey**](Secrets.md#postgcpkmskeyskey) | **POST** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**PostGcpkmsKeysRegisterKey**](Secrets.md#postgcpkmskeysregisterkey) | **POST** /gcpkms/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
+[**PostGcpkmsKeysRotateKey**](Secrets.md#postgcpkmskeysrotatekey) | **POST** /gcpkms/keys/rotate/{key} | Rotate a crypto key to a new primary version
+[**PostGcpkmsKeysTrimKey**](Secrets.md#postgcpkmskeystrimkey) | **POST** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
+[**PostGcpkmsReencryptKey**](Secrets.md#postgcpkmsreencryptkey) | **POST** /gcpkms/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
+[**PostGcpkmsSignKey**](Secrets.md#postgcpkmssignkey) | **POST** /gcpkms/sign/{key} | Signs a message or digest using a named key
+[**PostGcpkmsVerifyKey**](Secrets.md#postgcpkmsverifykey) | **POST** /gcpkms/verify/{key} | Verify a signature using a named key
+[**PostKubernetesConfig**](Secrets.md#postkubernetesconfig) | **POST** /kubernetes/config | 
+[**PostKubernetesCredsName**](Secrets.md#postkubernetescredsname) | **POST** /kubernetes/creds/{name} | 
+[**PostKubernetesRolesName**](Secrets.md#postkubernetesrolesname) | **POST** /kubernetes/roles/{name} | 
+[**PostKvPath**](Secrets.md#postkvpath) | **POST** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**PostMongodbatlasConfig**](Secrets.md#postmongodbatlasconfig) | **POST** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
+[**PostMongodbatlasCredsName**](Secrets.md#postmongodbatlascredsname) | **POST** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
+[**PostMongodbatlasRolesName**](Secrets.md#postmongodbatlasrolesname) | **POST** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**PostNomadConfigAccess**](Secrets.md#postnomadconfigaccess) | **POST** /nomad/config/access | 
+[**PostNomadConfigLease**](Secrets.md#postnomadconfiglease) | **POST** /nomad/config/lease | Configure the lease parameters for generated tokens
+[**PostNomadRoleName**](Secrets.md#postnomadrolename) | **POST** /nomad/role/{name} | 
+[**PostOpenldapConfig**](Secrets.md#postopenldapconfig) | **POST** /openldap/config | 
+[**PostOpenldapRoleName**](Secrets.md#postopenldaprolename) | **POST** /openldap/role/{name} | 
+[**PostOpenldapRotateRoleName**](Secrets.md#postopenldaprotaterolename) | **POST** /openldap/rotate-role/{name} | 
+[**PostOpenldapRotateRoot**](Secrets.md#postopenldaprotateroot) | **POST** /openldap/rotate-root | 
+[**PostOpenldapStaticRoleName**](Secrets.md#postopenldapstaticrolename) | **POST** /openldap/static-role/{name} | 
+[**PostPkiBundle**](Secrets.md#postpkibundle) | **POST** /pki/bundle | 
+[**PostPkiCert**](Secrets.md#postpkicert) | **POST** /pki/cert | 
+[**PostPkiConfigCa**](Secrets.md#postpkiconfigca) | **POST** /pki/config/ca | 
+[**PostPkiConfigCrl**](Secrets.md#postpkiconfigcrl) | **POST** /pki/config/crl | 
+[**PostPkiConfigIssuers**](Secrets.md#postpkiconfigissuers) | **POST** /pki/config/issuers | 
+[**PostPkiConfigKeys**](Secrets.md#postpkiconfigkeys) | **POST** /pki/config/keys | 
+[**PostPkiConfigUrls**](Secrets.md#postpkiconfigurls) | **POST** /pki/config/urls | 
+[**PostPkiIntermediateCrossSign**](Secrets.md#postpkiintermediatecrosssign) | **POST** /pki/intermediate/cross-sign | 
+[**PostPkiIntermediateGenerateExported**](Secrets.md#postpkiintermediategenerateexported) | **POST** /pki/intermediate/generate/{exported} | 
+[**PostPkiIntermediateSetSigned**](Secrets.md#postpkiintermediatesetsigned) | **POST** /pki/intermediate/set-signed | 
+[**PostPkiInternalExported**](Secrets.md#postpkiinternalexported) | **POST** /pki/internal|exported | 
+[**PostPkiIssueRole**](Secrets.md#postpkiissuerole) | **POST** /pki/issue/{role} | 
+[**PostPkiIssuerIssuerRefIssueRole**](Secrets.md#postpkiissuerissuerrefissuerole) | **POST** /pki/issuer/{issuer_ref}/issue/{role} | 
+[**PostPkiIssuerIssuerRefSignIntermediate**](Secrets.md#postpkiissuerissuerrefsignintermediate) | **POST** /pki/issuer/{issuer_ref}/sign-intermediate | 
+[**PostPkiIssuerIssuerRefSignRole**](Secrets.md#postpkiissuerissuerrefsignrole) | **POST** /pki/issuer/{issuer_ref}/sign/{role} | 
+[**PostPkiIssuerIssuerRefSignSelfIssued**](Secrets.md#postpkiissuerissuerrefsignselfissued) | **POST** /pki/issuer/{issuer_ref}/sign-self-issued | 
+[**PostPkiIssuerIssuerRefSignVerbatim**](Secrets.md#postpkiissuerissuerrefsignverbatim) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim | 
+[**PostPkiIssuerIssuerRefSignVerbatimRole**](Secrets.md#postpkiissuerissuerrefsignverbatimrole) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim/{role} | 
+[**PostPkiIssuerRefDerPem**](Secrets.md#postpkiissuerrefderpem) | **POST** /pki/{issuer_ref}/der|/pem | 
+[**PostPkiIssuersGenerateIntermediateExported**](Secrets.md#postpkiissuersgenerateintermediateexported) | **POST** /pki/issuers/generate/intermediate/{exported} | 
+[**PostPkiIssuersGenerateRootExported**](Secrets.md#postpkiissuersgeneraterootexported) | **POST** /pki/issuers/generate/root/{exported} | 
+[**PostPkiJson**](Secrets.md#postpkijson) | **POST** /pki//json | 
+[**PostPkiKeyKeyRef**](Secrets.md#postpkikeykeyref) | **POST** /pki/key/{key_ref} | 
+[**PostPkiKeysImport**](Secrets.md#postpkikeysimport) | **POST** /pki/keys/import | 
+[**PostPkiKms**](Secrets.md#postpkikms) | **POST** /pki/kms | 
+[**PostPkiRevoke**](Secrets.md#postpkirevoke) | **POST** /pki/revoke | 
+[**PostPkiRolesName**](Secrets.md#postpkirolesname) | **POST** /pki/roles/{name} | 
+[**PostPkiRootGenerateExported**](Secrets.md#postpkirootgenerateexported) | **POST** /pki/root/generate/{exported} | 
+[**PostPkiRootReplace**](Secrets.md#postpkirootreplace) | **POST** /pki/root/replace | 
+[**PostPkiRootRotateExported**](Secrets.md#postpkirootrotateexported) | **POST** /pki/root/rotate/{exported} | 
+[**PostPkiRootSignIntermediate**](Secrets.md#postpkirootsignintermediate) | **POST** /pki/root/sign-intermediate | 
+[**PostPkiRootSignSelfIssued**](Secrets.md#postpkirootsignselfissued) | **POST** /pki/root/sign-self-issued | 
+[**PostPkiSignRole**](Secrets.md#postpkisignrole) | **POST** /pki/sign/{role} | 
+[**PostPkiSignVerbatim**](Secrets.md#postpkisignverbatim) | **POST** /pki/sign-verbatim | 
+[**PostPkiSignVerbatimRole**](Secrets.md#postpkisignverbatimrole) | **POST** /pki/sign-verbatim/{role} | 
+[**PostPkiTidy**](Secrets.md#postpkitidy) | **POST** /pki/tidy | 
+[**PostRabbitmqConfigConnection**](Secrets.md#postrabbitmqconfigconnection) | **POST** /rabbitmq/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
+[**PostRabbitmqConfigLease**](Secrets.md#postrabbitmqconfiglease) | **POST** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
+[**PostRabbitmqRolesName**](Secrets.md#postrabbitmqrolesname) | **POST** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
+[**PostSecretConfig**](Secrets.md#postsecretconfig) | **POST** /secret/config | Configure backend level settings that are applied to every key in the key-value store.
+[**PostSecretDataPath**](Secrets.md#postsecretdatapath) | **POST** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**PostSecretDeletePath**](Secrets.md#postsecretdeletepath) | **POST** /secret/delete/{path} | Marks one or more versions as deleted in the KV store.
+[**PostSecretDestroyPath**](Secrets.md#postsecretdestroypath) | **POST** /secret/destroy/{path} | Permanently removes one or more versions in the KV store
+[**PostSecretMetadataPath**](Secrets.md#postsecretmetadatapath) | **POST** /secret/metadata/{path} | Configures settings for the KV store
+[**PostSecretUndeletePath**](Secrets.md#postsecretundeletepath) | **POST** /secret/undelete/{path} | Undeletes one or more versions from the KV store.
+[**PostSshConfigCa**](Secrets.md#postsshconfigca) | **POST** /ssh/config/ca | Set the SSH private key used for signing certificates.
+[**PostSshConfigZeroaddress**](Secrets.md#postsshconfigzeroaddress) | **POST** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**PostSshCredsRole**](Secrets.md#postsshcredsrole) | **POST** /ssh/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
+[**PostSshKeysKeyName**](Secrets.md#postsshkeyskeyname) | **POST** /ssh/keys/{key_name} | Register a shared private key with Vault.
+[**PostSshLookup**](Secrets.md#postsshlookup) | **POST** /ssh/lookup | List all the roles associated with the given IP address.
+[**PostSshRolesRole**](Secrets.md#postsshrolesrole) | **POST** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**PostSshSignRole**](Secrets.md#postsshsignrole) | **POST** /ssh/sign/{role} | Request signing an SSH key using a certain role with the provided details.
+[**PostSshVerify**](Secrets.md#postsshverify) | **POST** /ssh/verify | Validate the OTP provided by Vault SSH Agent.
+[**PostTerraformConfig**](Secrets.md#postterraformconfig) | **POST** /terraform/config | 
+[**PostTerraformCredsName**](Secrets.md#postterraformcredsname) | **POST** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+[**PostTerraformRoleName**](Secrets.md#postterraformrolename) | **POST** /terraform/role/{name} | 
+[**PostTerraformRotateRoleName**](Secrets.md#postterraformrotaterolename) | **POST** /terraform/rotate-role/{name} | 
+[**PostTotpCodeName**](Secrets.md#posttotpcodename) | **POST** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+[**PostTotpKeysName**](Secrets.md#posttotpkeysname) | **POST** /totp/keys/{name} | Manage the keys that can be created with this backend.
+[**PostTransitCacheConfig**](Secrets.md#posttransitcacheconfig) | **POST** /transit/cache-config | Configures a new cache of the specified size
+[**PostTransitDatakeyPlaintextName**](Secrets.md#posttransitdatakeyplaintextname) | **POST** /transit/datakey/{plaintext}/{name} | Generate a data key
+[**PostTransitDecryptName**](Secrets.md#posttransitdecryptname) | **POST** /transit/decrypt/{name} | Decrypt a ciphertext value using a named key
+[**PostTransitEncryptName**](Secrets.md#posttransitencryptname) | **POST** /transit/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
+[**PostTransitHash**](Secrets.md#posttransithash) | **POST** /transit/hash | Generate a hash sum for input data
+[**PostTransitHashUrlalgorithm**](Secrets.md#posttransithashurlalgorithm) | **POST** /transit/hash/{urlalgorithm} | Generate a hash sum for input data
+[**PostTransitHmacName**](Secrets.md#posttransithmacname) | **POST** /transit/hmac/{name} | Generate an HMAC for input data using the named key
+[**PostTransitHmacNameUrlalgorithm**](Secrets.md#posttransithmacnameurlalgorithm) | **POST** /transit/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
+[**PostTransitKeysName**](Secrets.md#posttransitkeysname) | **POST** /transit/keys/{name} | Managed named encryption keys
+[**PostTransitKeysNameConfig**](Secrets.md#posttransitkeysnameconfig) | **POST** /transit/keys/{name}/config | Configure a named encryption key
+[**PostTransitKeysNameImport**](Secrets.md#posttransitkeysnameimport) | **POST** /transit/keys/{name}/import | Imports an externally-generated key into a new transit key
+[**PostTransitKeysNameImportVersion**](Secrets.md#posttransitkeysnameimportversion) | **POST** /transit/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
+[**PostTransitKeysNameRotate**](Secrets.md#posttransitkeysnamerotate) | **POST** /transit/keys/{name}/rotate | Rotate named encryption key
+[**PostTransitKeysNameTrim**](Secrets.md#posttransitkeysnametrim) | **POST** /transit/keys/{name}/trim | Trim key versions of a named key
+[**PostTransitRandom**](Secrets.md#posttransitrandom) | **POST** /transit/random | Generate random bytes
+[**PostTransitRandomSource**](Secrets.md#posttransitrandomsource) | **POST** /transit/random/{source} | Generate random bytes
+[**PostTransitRandomSourceUrlbytes**](Secrets.md#posttransitrandomsourceurlbytes) | **POST** /transit/random/{source}/{urlbytes} | Generate random bytes
+[**PostTransitRandomUrlbytes**](Secrets.md#posttransitrandomurlbytes) | **POST** /transit/random/{urlbytes} | Generate random bytes
+[**PostTransitRestore**](Secrets.md#posttransitrestore) | **POST** /transit/restore | Restore the named key
+[**PostTransitRestoreName**](Secrets.md#posttransitrestorename) | **POST** /transit/restore/{name} | Restore the named key
+[**PostTransitRewrapName**](Secrets.md#posttransitrewrapname) | **POST** /transit/rewrap/{name} | Rewrap ciphertext
+[**PostTransitSignName**](Secrets.md#posttransitsignname) | **POST** /transit/sign/{name} | Generate a signature for input data using the named key
+[**PostTransitSignNameUrlalgorithm**](Secrets.md#posttransitsignnameurlalgorithm) | **POST** /transit/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
+[**PostTransitVerifyName**](Secrets.md#posttransitverifyname) | **POST** /transit/verify/{name} | Verify a signature or HMAC for input data created using the named key
+[**PostTransitVerifyNameUrlalgorithm**](Secrets.md#posttransitverifynameurlalgorithm) | **POST** /transit/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
 
 
 <a name="deleteadconfig"></a>
@@ -336,7 +336,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -345,7 +345,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAdConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAdConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -404,7 +404,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -414,7 +414,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAdLibraryName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAdLibraryName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -476,7 +476,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -486,7 +486,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAdRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAdRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -548,7 +548,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -557,7 +557,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAlicloudConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAlicloudConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -616,7 +616,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -626,7 +626,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAlicloudRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAlicloudRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -688,7 +688,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
 
             try
@@ -698,7 +698,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAwsRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAwsRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -760,7 +760,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -768,7 +768,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -827,7 +827,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -837,7 +837,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteAzureRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteAzureRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -899,7 +899,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -908,7 +908,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteConsulRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteConsulRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -970,7 +970,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
 
             try
@@ -980,7 +980,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteCubbyholePath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteCubbyholePath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1042,7 +1042,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
 
             try
@@ -1051,7 +1051,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpRolesetName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpRolesetName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1113,7 +1113,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
 
             try
@@ -1122,7 +1122,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpStaticAccountName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpStaticAccountName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1184,7 +1184,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1193,7 +1193,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpkmsConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpkmsConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1252,7 +1252,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.
 
             try
@@ -1262,7 +1262,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpkmsKeysDeregisterKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpkmsKeysDeregisterKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1324,7 +1324,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -1334,7 +1334,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpkmsKeysKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpkmsKeysKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1396,7 +1396,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -1406,7 +1406,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteGcpkmsKeysTrimKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteGcpkmsKeysTrimKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1468,7 +1468,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1476,7 +1476,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteKubernetesConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteKubernetesConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1535,7 +1535,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1544,7 +1544,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteKubernetesRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteKubernetesRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1606,7 +1606,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -1616,7 +1616,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteKvPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteKvPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1678,7 +1678,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
 
             try
@@ -1688,7 +1688,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteMongodbatlasRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteMongodbatlasRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1750,7 +1750,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1758,7 +1758,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteNomadConfigAccess: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteNomadConfigAccess: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1817,7 +1817,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1826,7 +1826,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteNomadConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteNomadConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1885,7 +1885,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1894,7 +1894,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteNomadRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteNomadRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1956,7 +1956,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1964,7 +1964,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteOpenldapConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteOpenldapConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2023,7 +2023,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
 
             try
@@ -2032,7 +2032,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteOpenldapRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteOpenldapRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2094,7 +2094,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -2103,7 +2103,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteOpenldapStaticRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteOpenldapStaticRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2165,7 +2165,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -2174,7 +2174,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeletePkiIssuerRefDerPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeletePkiIssuerRefDerPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2236,7 +2236,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2244,7 +2244,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeletePkiJson: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeletePkiJson: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2303,7 +2303,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
 
             try
@@ -2312,7 +2312,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeletePkiKeyKeyRef: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeletePkiKeyKeyRef: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2374,7 +2374,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -2383,7 +2383,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeletePkiRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeletePkiRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2445,7 +2445,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2453,7 +2453,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeletePkiRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeletePkiRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2512,7 +2512,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -2522,7 +2522,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteRabbitmqRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteRabbitmqRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2584,7 +2584,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -2594,7 +2594,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSecretDataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSecretDataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2656,7 +2656,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -2666,7 +2666,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSecretMetadataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSecretMetadataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2728,7 +2728,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2737,7 +2737,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSshConfigCa: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSshConfigCa: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2796,7 +2796,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2805,7 +2805,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSshConfigZeroaddress: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSshConfigZeroaddress: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2864,7 +2864,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var keyName = "keyName_example";  // string | [Required] Name of the key
 
             try
@@ -2874,7 +2874,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSshKeysKeyName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSshKeysKeyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2936,7 +2936,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
 
             try
@@ -2946,7 +2946,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteSshRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteSshRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3008,7 +3008,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3016,7 +3016,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteTerraformConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteTerraformConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3075,7 +3075,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -3084,7 +3084,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteTerraformRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteTerraformRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3146,7 +3146,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -3156,7 +3156,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteTotpKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteTotpKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3218,7 +3218,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -3228,7 +3228,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.DeleteTransitKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.DeleteTransitKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3290,7 +3290,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3299,7 +3299,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3358,7 +3358,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -3367,7 +3367,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3429,7 +3429,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3438,7 +3438,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdLibrary: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdLibrary: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3500,7 +3500,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -3510,7 +3510,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdLibraryName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdLibraryName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3572,7 +3572,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
 
             try
@@ -3582,7 +3582,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdLibraryNameStatus: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdLibraryNameStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3644,7 +3644,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3654,7 +3654,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3716,7 +3716,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -3726,7 +3726,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3788,7 +3788,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3796,7 +3796,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAdRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAdRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3855,7 +3855,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3864,7 +3864,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAlicloudConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAlicloudConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3923,7 +3923,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -3933,7 +3933,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAlicloudCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAlicloudCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3995,7 +3995,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4005,7 +4005,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAlicloudRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAlicloudRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4067,7 +4067,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
 
             try
@@ -4077,7 +4077,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAlicloudRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAlicloudRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4139,7 +4139,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4148,7 +4148,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4207,7 +4207,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4216,7 +4216,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsConfigRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsConfigRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4275,7 +4275,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4284,7 +4284,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsCreds: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsCreds: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4343,7 +4343,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4353,7 +4353,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4415,7 +4415,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
 
             try
@@ -4425,7 +4425,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4487,7 +4487,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4497,7 +4497,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAwsStsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAwsStsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4559,7 +4559,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4567,7 +4567,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4626,7 +4626,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the Vault role
 
             try
@@ -4635,7 +4635,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAzureCredsRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAzureCredsRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4697,7 +4697,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4707,7 +4707,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAzureRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAzureRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4769,7 +4769,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -4779,7 +4779,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetAzureRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetAzureRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4841,7 +4841,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4849,7 +4849,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetConsulConfigAccess: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetConsulConfigAccess: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4908,7 +4908,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
 
             try
@@ -4917,7 +4917,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetConsulCredsRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetConsulCredsRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4979,7 +4979,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4988,7 +4988,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetConsulRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetConsulRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5050,7 +5050,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -5059,7 +5059,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetConsulRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetConsulRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5121,7 +5121,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -5132,7 +5132,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetCubbyholePath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetCubbyholePath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5195,7 +5195,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5203,7 +5203,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5262,7 +5262,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5271,7 +5271,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpKeyRoleset: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpKeyRoleset: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5333,7 +5333,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
 
             try
@@ -5342,7 +5342,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpRolesetName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpRolesetName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5404,7 +5404,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5413,7 +5413,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpRolesetRolesetKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpRolesetRolesetKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5475,7 +5475,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5484,7 +5484,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpRolesetRolesetToken: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpRolesetRolesetToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5546,7 +5546,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5555,7 +5555,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpRolesets: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpRolesets: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5617,7 +5617,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
 
             try
@@ -5626,7 +5626,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpStaticAccountName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpStaticAccountName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5688,7 +5688,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -5697,7 +5697,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpStaticAccountNameKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpStaticAccountNameKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5759,7 +5759,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -5768,7 +5768,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpStaticAccountNameToken: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpStaticAccountNameToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5830,7 +5830,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -5839,7 +5839,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpStaticAccounts: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpStaticAccounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5901,7 +5901,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -5910,7 +5910,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpTokenRoleset: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpTokenRoleset: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5972,7 +5972,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5981,7 +5981,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpkmsConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpkmsConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6040,7 +6040,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6050,7 +6050,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpkmsKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpkmsKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6112,7 +6112,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -6122,7 +6122,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpkmsKeysConfigKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpkmsKeysConfigKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6184,7 +6184,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -6194,7 +6194,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpkmsKeysKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpkmsKeysKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6256,7 +6256,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.
 
             try
@@ -6266,7 +6266,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetGcpkmsPubkeyKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetGcpkmsPubkeyKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6328,7 +6328,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6336,7 +6336,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetKubernetesConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetKubernetesConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6395,7 +6395,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6404,7 +6404,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetKubernetesRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetKubernetesRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6466,7 +6466,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6475,7 +6475,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetKubernetesRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetKubernetesRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6537,7 +6537,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -6548,7 +6548,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetKvPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetKvPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6611,7 +6611,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6620,7 +6620,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetMongodbatlasConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetMongodbatlasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6679,7 +6679,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -6689,7 +6689,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetMongodbatlasCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetMongodbatlasCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6751,7 +6751,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6761,7 +6761,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetMongodbatlasRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetMongodbatlasRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6823,7 +6823,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
 
             try
@@ -6833,7 +6833,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetMongodbatlasRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetMongodbatlasRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6895,7 +6895,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6903,7 +6903,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetNomadConfigAccess: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetNomadConfigAccess: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6962,7 +6962,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6971,7 +6971,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetNomadConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetNomadConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7030,7 +7030,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -7039,7 +7039,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetNomadCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetNomadCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7101,7 +7101,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7110,7 +7110,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetNomadRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetNomadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7172,7 +7172,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -7181,7 +7181,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetNomadRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetNomadRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7243,7 +7243,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7251,7 +7251,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7310,7 +7310,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the dynamic role.
 
             try
@@ -7319,7 +7319,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7381,7 +7381,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7390,7 +7390,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7452,7 +7452,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
 
             try
@@ -7461,7 +7461,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7523,7 +7523,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role.
 
             try
@@ -7532,7 +7532,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapStaticCredName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapStaticCredName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7594,7 +7594,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -7603,7 +7603,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapStaticRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapStaticRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7665,7 +7665,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -7674,7 +7674,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetOpenldapStaticRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetOpenldapStaticRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7736,7 +7736,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7744,7 +7744,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCa: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCa: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7803,7 +7803,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7811,7 +7811,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCaChain: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCaChain: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7870,7 +7870,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7878,7 +7878,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCaPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCaPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7937,7 +7937,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7945,7 +7945,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCertCaChain: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCertCaChain: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8004,7 +8004,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8012,7 +8012,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCertCrl: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCertCrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8071,7 +8071,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -8080,7 +8080,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCertSerial: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCertSerial: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8142,7 +8142,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -8151,7 +8151,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCertSerialRaw: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCertSerialRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8213,7 +8213,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
 
             try
@@ -8222,7 +8222,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCertSerialRawPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCertSerialRawPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8284,7 +8284,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -8293,7 +8293,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCerts: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCerts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8355,7 +8355,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8363,7 +8363,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiConfigCrl: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiConfigCrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8422,7 +8422,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8430,7 +8430,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiConfigIssuers: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiConfigIssuers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8489,7 +8489,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8497,7 +8497,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiConfigKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiConfigKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8556,7 +8556,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8564,7 +8564,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiConfigUrls: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiConfigUrls: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8623,7 +8623,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8631,7 +8631,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCrl: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8690,7 +8690,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8698,7 +8698,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCrlPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCrlPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8757,7 +8757,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8765,7 +8765,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiCrlRotate: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiCrlRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8824,7 +8824,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8832,7 +8832,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiDer: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiDer: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8891,7 +8891,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -8900,7 +8900,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiIssuerRefCrlPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiIssuerRefCrlPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8962,7 +8962,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
 
             try
@@ -8971,7 +8971,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiIssuerRefDerPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiIssuerRefDerPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9033,7 +9033,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9042,7 +9042,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiIssuers: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiIssuers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9104,7 +9104,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9112,7 +9112,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiJson: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiJson: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9171,7 +9171,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
 
             try
@@ -9180,7 +9180,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiKeyKeyRef: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiKeyKeyRef: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9242,7 +9242,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9251,7 +9251,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9313,7 +9313,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9322,7 +9322,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9384,7 +9384,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -9393,7 +9393,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9455,7 +9455,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9463,7 +9463,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetPkiTidyStatus: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiTidyStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9522,7 +9522,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9531,7 +9531,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetRabbitmqConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetRabbitmqConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9590,7 +9590,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9600,7 +9600,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetRabbitmqCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetRabbitmqCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9662,7 +9662,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -9672,7 +9672,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetRabbitmqRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetRabbitmqRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9734,7 +9734,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -9744,7 +9744,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetRabbitmqRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetRabbitmqRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9806,7 +9806,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -9815,7 +9815,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSecretConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSecretConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9874,7 +9874,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -9884,7 +9884,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSecretDataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSecretDataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9946,7 +9946,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -9957,7 +9957,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSecretMetadataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSecretMetadataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10020,7 +10020,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -10030,7 +10030,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSecretSubkeysPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSecretSubkeysPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10092,7 +10092,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10101,7 +10101,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSshConfigCa: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSshConfigCa: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10160,7 +10160,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10169,7 +10169,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSshConfigZeroaddress: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSshConfigZeroaddress: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10228,7 +10228,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10237,7 +10237,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSshPublicKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSshPublicKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10296,7 +10296,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10306,7 +10306,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSshRoles: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSshRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10368,7 +10368,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
 
             try
@@ -10378,7 +10378,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetSshRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetSshRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10440,7 +10440,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10448,7 +10448,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTerraformConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTerraformConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10507,7 +10507,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -10517,7 +10517,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTerraformCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTerraformCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10579,7 +10579,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10588,7 +10588,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTerraformRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTerraformRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10650,7 +10650,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -10659,7 +10659,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTerraformRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTerraformRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10721,7 +10721,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -10731,7 +10731,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTotpCodeName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTotpCodeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10793,7 +10793,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -10803,7 +10803,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTotpKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTotpKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10865,7 +10865,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
 
             try
@@ -10875,7 +10875,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTotpKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTotpKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10937,7 +10937,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -10947,7 +10947,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitBackupName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitBackupName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11009,7 +11009,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11018,7 +11018,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitCacheConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitCacheConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11077,7 +11077,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
 
@@ -11088,7 +11088,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitExportTypeName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitExportTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11151,7 +11151,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
             var version = "version_example";  // string | Version of the key
@@ -11163,7 +11163,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitExportTypeNameVersion: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitExportTypeNameVersion: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11227,7 +11227,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -11237,7 +11237,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11299,7 +11299,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -11309,7 +11309,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11371,7 +11371,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11380,7 +11380,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.GetTransitWrappingKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetTransitWrappingKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11439,7 +11439,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var adConfigRequest = new AdConfigRequest(); // AdConfigRequest |  (optional) 
 
             try
@@ -11449,7 +11449,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11511,7 +11511,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryManageCheckInRequest = new AdLibraryManageCheckInRequest(); // AdLibraryManageCheckInRequest |  (optional) 
 
@@ -11522,7 +11522,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdLibraryManageNameCheckIn: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdLibraryManageNameCheckIn: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11585,7 +11585,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryRequest = new AdLibraryRequest(); // AdLibraryRequest |  (optional) 
 
@@ -11596,7 +11596,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdLibraryName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdLibraryName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11659,7 +11659,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set.
             var adLibraryCheckInRequest = new AdLibraryCheckInRequest(); // AdLibraryCheckInRequest |  (optional) 
 
@@ -11670,7 +11670,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdLibraryNameCheckIn: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdLibraryNameCheckIn: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11733,7 +11733,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the set
             var adLibraryCheckOutRequest = new AdLibraryCheckOutRequest(); // AdLibraryCheckOutRequest |  (optional) 
 
@@ -11744,7 +11744,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdLibraryNameCheckOut: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdLibraryNameCheckOut: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11807,7 +11807,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var adRolesRequest = new AdRolesRequest(); // AdRolesRequest |  (optional) 
 
@@ -11818,7 +11818,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11881,7 +11881,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role
 
             try
@@ -11890,7 +11890,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdRotateRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdRotateRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11952,7 +11952,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11960,7 +11960,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAdRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAdRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12019,7 +12019,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var alicloudConfigRequest = new AlicloudConfigRequest(); // AlicloudConfigRequest |  (optional) 
 
             try
@@ -12029,7 +12029,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAlicloudConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAlicloudConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12091,7 +12091,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the role.
             var alicloudRoleRequest = new AlicloudRoleRequest(); // AlicloudRoleRequest |  (optional) 
 
@@ -12102,7 +12102,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAlicloudRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAlicloudRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12165,7 +12165,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var awsConfigLeaseRequest = new AwsConfigLeaseRequest(); // AwsConfigLeaseRequest |  (optional) 
 
             try
@@ -12175,7 +12175,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12237,7 +12237,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var awsConfigRootRequest = new AwsConfigRootRequest(); // AwsConfigRootRequest |  (optional) 
 
             try
@@ -12247,7 +12247,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsConfigRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsConfigRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12309,7 +12309,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -12317,7 +12317,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsConfigRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsConfigRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12376,7 +12376,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var awsCredsRequest = new AwsCredsRequest(); // AwsCredsRequest |  (optional) 
 
             try
@@ -12386,7 +12386,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsCreds: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsCreds: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12448,7 +12448,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var awsRolesRequest = new AwsRolesRequest(); // AwsRolesRequest |  (optional) 
 
@@ -12459,7 +12459,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12522,7 +12522,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var awsStsRequest = new AwsStsRequest(); // AwsStsRequest |  (optional) 
 
@@ -12533,7 +12533,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAwsStsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAwsStsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12596,7 +12596,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var azureConfigRequest = new AzureConfigRequest(); // AzureConfigRequest |  (optional) 
 
             try
@@ -12605,7 +12605,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAzureConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAzureConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12667,7 +12667,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var azureRolesRequest = new AzureRolesRequest(); // AzureRolesRequest |  (optional) 
 
@@ -12678,7 +12678,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAzureRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAzureRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12741,7 +12741,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -12749,7 +12749,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostAzureRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostAzureRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12808,7 +12808,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var consulConfigAccessRequest = new ConsulConfigAccessRequest(); // ConsulConfigAccessRequest |  (optional) 
 
             try
@@ -12817,7 +12817,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostConsulConfigAccess: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostConsulConfigAccess: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12879,7 +12879,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var consulRolesRequest = new ConsulRolesRequest(); // ConsulRolesRequest |  (optional) 
 
@@ -12889,7 +12889,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostConsulRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostConsulRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12952,7 +12952,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
 
             try
@@ -12962,7 +12962,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostCubbyholePath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostCubbyholePath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13024,7 +13024,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var gcpConfigRequest = new GcpConfigRequest(); // GcpConfigRequest |  (optional) 
 
             try
@@ -13033,7 +13033,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13095,7 +13095,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -13103,7 +13103,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpConfigRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpConfigRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13162,7 +13162,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
             var gcpKeyRequest = new GcpKeyRequest(); // GcpKeyRequest |  (optional) 
 
@@ -13172,7 +13172,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpKeyRoleset: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpKeyRoleset: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13235,7 +13235,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the role.
             var gcpRolesetRequest = new GcpRolesetRequest(); // GcpRolesetRequest |  (optional) 
 
@@ -13245,7 +13245,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpRolesetName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpRolesetName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13308,7 +13308,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -13317,7 +13317,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpRolesetNameRotate: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpRolesetNameRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13379,7 +13379,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
 
             try
@@ -13388,7 +13388,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpRolesetNameRotateKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpRolesetNameRotateKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13450,7 +13450,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
             var gcpRolesetKeyRequest = new GcpRolesetKeyRequest(); // GcpRolesetKeyRequest |  (optional) 
 
@@ -13460,7 +13460,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpRolesetRolesetKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpRolesetRolesetKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13523,7 +13523,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -13532,7 +13532,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpRolesetRolesetToken: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpRolesetRolesetToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13594,7 +13594,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
             var gcpStaticAccountRequest = new GcpStaticAccountRequest(); // GcpStaticAccountRequest |  (optional) 
 
@@ -13604,7 +13604,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpStaticAccountName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpStaticAccountName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13667,7 +13667,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
             var gcpStaticAccountKeyRequest = new GcpStaticAccountKeyRequest(); // GcpStaticAccountKeyRequest |  (optional) 
 
@@ -13677,7 +13677,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpStaticAccountNameKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpStaticAccountNameKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13740,7 +13740,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the account.
 
             try
@@ -13749,7 +13749,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpStaticAccountNameRotateKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpStaticAccountNameRotateKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13811,7 +13811,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Required. Name of the static account.
 
             try
@@ -13820,7 +13820,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpStaticAccountNameToken: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpStaticAccountNameToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13882,7 +13882,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var roleset = "roleset_example";  // string | Required. Name of the role set.
 
             try
@@ -13891,7 +13891,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpTokenRoleset: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpTokenRoleset: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -13953,7 +13953,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var gcpkmsConfigRequest = new GcpkmsConfigRequest(); // GcpkmsConfigRequest |  (optional) 
 
             try
@@ -13963,7 +13963,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14025,7 +14025,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsDecryptRequest = new GcpkmsDecryptRequest(); // GcpkmsDecryptRequest |  (optional) 
 
@@ -14036,7 +14036,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsDecryptKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsDecryptKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14099,7 +14099,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsEncryptRequest = new GcpkmsEncryptRequest(); // GcpkmsEncryptRequest |  (optional) 
 
@@ -14110,7 +14110,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsEncryptKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsEncryptKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14173,7 +14173,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
             var gcpkmsKeysConfigRequest = new GcpkmsKeysConfigRequest(); // GcpkmsKeysConfigRequest |  (optional) 
 
@@ -14184,7 +14184,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysConfigKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysConfigKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14247,7 +14247,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.
 
             try
@@ -14257,7 +14257,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysDeregisterKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysDeregisterKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14319,7 +14319,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
             var gcpkmsKeysRequest = new GcpkmsKeysRequest(); // GcpkmsKeysRequest |  (optional) 
 
@@ -14330,7 +14330,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14393,7 +14393,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.
             var gcpkmsKeysRegisterRequest = new GcpkmsKeysRegisterRequest(); // GcpkmsKeysRegisterRequest |  (optional) 
 
@@ -14404,7 +14404,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysRegisterKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysRegisterKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14467,7 +14467,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.
 
             try
@@ -14477,7 +14477,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysRotateKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysRotateKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14539,7 +14539,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault.
 
             try
@@ -14549,7 +14549,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsKeysTrimKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsKeysTrimKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14611,7 +14611,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.
             var gcpkmsReencryptRequest = new GcpkmsReencryptRequest(); // GcpkmsReencryptRequest |  (optional) 
 
@@ -14622,7 +14622,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsReencryptKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsReencryptKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14685,7 +14685,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsSignRequest = new GcpkmsSignRequest(); // GcpkmsSignRequest |  (optional) 
 
@@ -14696,7 +14696,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsSignKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsSignKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14759,7 +14759,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.
             var gcpkmsVerifyRequest = new GcpkmsVerifyRequest(); // GcpkmsVerifyRequest |  (optional) 
 
@@ -14770,7 +14770,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostGcpkmsVerifyKey: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostGcpkmsVerifyKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14833,7 +14833,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var kubernetesConfigRequest = new KubernetesConfigRequest(); // KubernetesConfigRequest |  (optional) 
 
             try
@@ -14842,7 +14842,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostKubernetesConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostKubernetesConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14904,7 +14904,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Vault role
             var kubernetesCredsRequest = new KubernetesCredsRequest(); // KubernetesCredsRequest |  (optional) 
 
@@ -14914,7 +14914,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostKubernetesCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostKubernetesCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -14977,7 +14977,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var kubernetesRolesRequest = new KubernetesRolesRequest(); // KubernetesRolesRequest |  (optional) 
 
@@ -14987,7 +14987,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostKubernetesRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostKubernetesRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15050,7 +15050,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
 
             try
@@ -15060,7 +15060,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostKvPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostKvPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15122,7 +15122,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var mongodbatlasConfigRequest = new MongodbatlasConfigRequest(); // MongodbatlasConfigRequest |  (optional) 
 
             try
@@ -15132,7 +15132,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostMongodbatlasConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostMongodbatlasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15194,7 +15194,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -15204,7 +15204,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostMongodbatlasCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostMongodbatlasCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15266,7 +15266,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the Roles
             var mongodbatlasRolesRequest = new MongodbatlasRolesRequest(); // MongodbatlasRolesRequest |  (optional) 
 
@@ -15277,7 +15277,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostMongodbatlasRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostMongodbatlasRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15340,7 +15340,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var nomadConfigAccessRequest = new NomadConfigAccessRequest(); // NomadConfigAccessRequest |  (optional) 
 
             try
@@ -15349,7 +15349,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostNomadConfigAccess: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostNomadConfigAccess: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15411,7 +15411,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var nomadConfigLeaseRequest = new NomadConfigLeaseRequest(); // NomadConfigLeaseRequest |  (optional) 
 
             try
@@ -15421,7 +15421,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostNomadConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostNomadConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15483,7 +15483,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var nomadRoleRequest = new NomadRoleRequest(); // NomadRoleRequest |  (optional) 
 
@@ -15493,7 +15493,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostNomadRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostNomadRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15556,7 +15556,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var openldapConfigRequest = new OpenldapConfigRequest(); // OpenldapConfigRequest |  (optional) 
 
             try
@@ -15565,7 +15565,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostOpenldapConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostOpenldapConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15627,7 +15627,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role (lowercase)
             var openldapRoleRequest = new OpenldapRoleRequest(); // OpenldapRoleRequest |  (optional) 
 
@@ -15637,7 +15637,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostOpenldapRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostOpenldapRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15700,7 +15700,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the static role
 
             try
@@ -15709,7 +15709,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostOpenldapRotateRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostOpenldapRotateRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15771,7 +15771,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
 
             try
             {
@@ -15779,7 +15779,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostOpenldapRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostOpenldapRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15838,7 +15838,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var openldapStaticRoleRequest = new OpenldapStaticRoleRequest(); // OpenldapStaticRoleRequest |  (optional) 
 
@@ -15848,7 +15848,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostOpenldapStaticRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostOpenldapStaticRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15911,7 +15911,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiBundleRequest = new PkiBundleRequest(); // PkiBundleRequest |  (optional) 
 
             try
@@ -15920,7 +15920,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiBundle: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiBundle: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -15982,7 +15982,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiCertRequest = new PkiCertRequest(); // PkiCertRequest |  (optional) 
 
             try
@@ -15991,7 +15991,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiCert: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiCert: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16053,7 +16053,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiConfigCaRequest = new PkiConfigCaRequest(); // PkiConfigCaRequest |  (optional) 
 
             try
@@ -16062,7 +16062,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiConfigCa: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiConfigCa: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16124,7 +16124,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiConfigCrlRequest = new PkiConfigCrlRequest(); // PkiConfigCrlRequest |  (optional) 
 
             try
@@ -16133,7 +16133,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiConfigCrl: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiConfigCrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16195,7 +16195,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiConfigIssuersRequest = new PkiConfigIssuersRequest(); // PkiConfigIssuersRequest |  (optional) 
 
             try
@@ -16204,7 +16204,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiConfigIssuers: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiConfigIssuers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16266,7 +16266,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiConfigKeysRequest = new PkiConfigKeysRequest(); // PkiConfigKeysRequest |  (optional) 
 
             try
@@ -16275,7 +16275,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiConfigKeys: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiConfigKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16337,7 +16337,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiConfigUrlsRequest = new PkiConfigUrlsRequest(); // PkiConfigUrlsRequest |  (optional) 
 
             try
@@ -16346,7 +16346,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiConfigUrls: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiConfigUrls: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16408,7 +16408,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiIntermediateCrossSignRequest = new PkiIntermediateCrossSignRequest(); // PkiIntermediateCrossSignRequest |  (optional) 
 
             try
@@ -16417,7 +16417,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIntermediateCrossSign: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIntermediateCrossSign: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16479,7 +16479,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIntermediateGenerateRequest = new PkiIntermediateGenerateRequest(); // PkiIntermediateGenerateRequest |  (optional) 
 
@@ -16489,7 +16489,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIntermediateGenerateExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIntermediateGenerateExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16552,7 +16552,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiIntermediateSetSignedRequest = new PkiIntermediateSetSignedRequest(); // PkiIntermediateSetSignedRequest |  (optional) 
 
             try
@@ -16561,7 +16561,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIntermediateSetSigned: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIntermediateSetSigned: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16623,7 +16623,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiInternalExportedRequest = new PkiInternalExportedRequest(); // PkiInternalExportedRequest |  (optional) 
 
             try
@@ -16632,7 +16632,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiInternalExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiInternalExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16694,7 +16694,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssueRequest = new PkiIssueRequest(); // PkiIssueRequest |  (optional) 
 
@@ -16704,7 +16704,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssueRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssueRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16767,7 +16767,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerIssueRequest = new PkiIssuerIssueRequest(); // PkiIssuerIssueRequest |  (optional) 
@@ -16778,7 +16778,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefIssueRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefIssueRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16842,7 +16842,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignIntermediateRequest = new PkiIssuerSignIntermediateRequest(); // PkiIssuerSignIntermediateRequest |  (optional) 
 
@@ -16852,7 +16852,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefSignIntermediate: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignIntermediate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16915,7 +16915,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerSignRequest = new PkiIssuerSignRequest(); // PkiIssuerSignRequest |  (optional) 
@@ -16926,7 +16926,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefSignRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -16990,7 +16990,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignSelfIssuedRequest = new PkiIssuerSignSelfIssuedRequest(); // PkiIssuerSignSelfIssuedRequest |  (optional) 
 
@@ -17000,7 +17000,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefSignSelfIssued: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignSelfIssued: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17063,7 +17063,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiIssuerSignVerbatimRequest = new PkiIssuerSignVerbatimRequest(); // PkiIssuerSignVerbatimRequest |  (optional) 
 
@@ -17073,7 +17073,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefSignVerbatim: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignVerbatim: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17136,7 +17136,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiIssuerSignVerbatimRequest = new PkiIssuerSignVerbatimRequest(); // PkiIssuerSignVerbatimRequest |  (optional) 
@@ -17147,7 +17147,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerIssuerRefSignVerbatimRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignVerbatimRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17211,7 +17211,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
             var pkiDerPemRequest = new PkiDerPemRequest(); // PkiDerPemRequest |  (optional) 
 
@@ -17221,7 +17221,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuerRefDerPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerRefDerPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17284,7 +17284,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIssuersGenerateIntermediateRequest = new PkiIssuersGenerateIntermediateRequest(); // PkiIssuersGenerateIntermediateRequest |  (optional) 
 
@@ -17294,7 +17294,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuersGenerateIntermediateExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuersGenerateIntermediateExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17357,7 +17357,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiIssuersGenerateRootRequest = new PkiIssuersGenerateRootRequest(); // PkiIssuersGenerateRootRequest |  (optional) 
 
@@ -17367,7 +17367,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiIssuersGenerateRootExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiIssuersGenerateRootExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17430,7 +17430,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiJsonRequest = new PkiJsonRequest(); // PkiJsonRequest |  (optional) 
 
             try
@@ -17439,7 +17439,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiJson: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiJson: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17501,7 +17501,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
             var pkiKeyRequest = new PkiKeyRequest(); // PkiKeyRequest |  (optional) 
 
@@ -17511,7 +17511,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiKeyKeyRef: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiKeyKeyRef: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17574,7 +17574,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiKeysImportRequest = new PkiKeysImportRequest(); // PkiKeysImportRequest |  (optional) 
 
             try
@@ -17583,7 +17583,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiKeysImport: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiKeysImport: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17645,7 +17645,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiKmsRequest = new PkiKmsRequest(); // PkiKmsRequest |  (optional) 
 
             try
@@ -17654,7 +17654,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiKms: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiKms: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17716,7 +17716,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiRevokeRequest = new PkiRevokeRequest(); // PkiRevokeRequest |  (optional) 
 
             try
@@ -17725,7 +17725,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRevoke: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17787,7 +17787,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var pkiRolesRequest = new PkiRolesRequest(); // PkiRolesRequest |  (optional) 
 
@@ -17797,7 +17797,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17860,7 +17860,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiRootGenerateRequest = new PkiRootGenerateRequest(); // PkiRootGenerateRequest |  (optional) 
 
@@ -17870,7 +17870,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRootGenerateExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRootGenerateExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -17933,7 +17933,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiRootReplaceRequest = new PkiRootReplaceRequest(); // PkiRootReplaceRequest |  (optional) 
 
             try
@@ -17942,7 +17942,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRootReplace: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRootReplace: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18004,7 +18004,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
             var pkiRootRotateRequest = new PkiRootRotateRequest(); // PkiRootRotateRequest |  (optional) 
 
@@ -18014,7 +18014,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRootRotateExported: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRootRotateExported: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18077,7 +18077,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiRootSignIntermediateRequest = new PkiRootSignIntermediateRequest(); // PkiRootSignIntermediateRequest |  (optional) 
 
             try
@@ -18086,7 +18086,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRootSignIntermediate: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRootSignIntermediate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18148,7 +18148,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiRootSignSelfIssuedRequest = new PkiRootSignSelfIssuedRequest(); // PkiRootSignSelfIssuedRequest |  (optional) 
 
             try
@@ -18157,7 +18157,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiRootSignSelfIssued: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiRootSignSelfIssued: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18219,7 +18219,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiSignRequest = new PkiSignRequest(); // PkiSignRequest |  (optional) 
 
@@ -18229,7 +18229,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiSignRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiSignRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18292,7 +18292,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiSignVerbatimRequest = new PkiSignVerbatimRequest(); // PkiSignVerbatimRequest |  (optional) 
 
             try
@@ -18301,7 +18301,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiSignVerbatim: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiSignVerbatim: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18363,7 +18363,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request
             var pkiSignVerbatimRequest = new PkiSignVerbatimRequest(); // PkiSignVerbatimRequest |  (optional) 
 
@@ -18373,7 +18373,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiSignVerbatimRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiSignVerbatimRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18436,7 +18436,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var pkiTidyRequest = new PkiTidyRequest(); // PkiTidyRequest |  (optional) 
 
             try
@@ -18445,7 +18445,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostPkiTidy: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostPkiTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18507,7 +18507,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var rabbitmqConfigConnectionRequest = new RabbitmqConfigConnectionRequest(); // RabbitmqConfigConnectionRequest |  (optional) 
 
             try
@@ -18517,7 +18517,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostRabbitmqConfigConnection: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostRabbitmqConfigConnection: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18579,7 +18579,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var rabbitmqConfigLeaseRequest = new RabbitmqConfigLeaseRequest(); // RabbitmqConfigLeaseRequest |  (optional) 
 
             try
@@ -18589,7 +18589,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostRabbitmqConfigLease: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostRabbitmqConfigLease: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18651,7 +18651,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
             var rabbitmqRolesRequest = new RabbitmqRolesRequest(); // RabbitmqRolesRequest |  (optional) 
 
@@ -18662,7 +18662,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostRabbitmqRolesName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostRabbitmqRolesName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18725,7 +18725,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var kvConfigRequest = new KvConfigRequest(); // KvConfigRequest |  (optional) 
 
             try
@@ -18735,7 +18735,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18797,7 +18797,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDataRequest = new KvDataRequest(); // KvDataRequest |  (optional) 
 
@@ -18808,7 +18808,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretDataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretDataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18871,7 +18871,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDeleteRequest = new KvDeleteRequest(); // KvDeleteRequest |  (optional) 
 
@@ -18882,7 +18882,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretDeletePath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretDeletePath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -18945,7 +18945,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvDestroyRequest = new KvDestroyRequest(); // KvDestroyRequest |  (optional) 
 
@@ -18956,7 +18956,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretDestroyPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretDestroyPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19019,7 +19019,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvMetadataRequest = new KvMetadataRequest(); // KvMetadataRequest |  (optional) 
 
@@ -19030,7 +19030,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretMetadataPath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretMetadataPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19093,7 +19093,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvUndeleteRequest = new KvUndeleteRequest(); // KvUndeleteRequest |  (optional) 
 
@@ -19104,7 +19104,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSecretUndeletePath: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSecretUndeletePath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19167,7 +19167,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var sshConfigCaRequest = new SshConfigCaRequest(); // SshConfigCaRequest |  (optional) 
 
             try
@@ -19177,7 +19177,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshConfigCa: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshConfigCa: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19239,7 +19239,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var sshConfigZeroaddressRequest = new SshConfigZeroaddressRequest(); // SshConfigZeroaddressRequest |  (optional) 
 
             try
@@ -19249,7 +19249,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshConfigZeroaddress: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshConfigZeroaddress: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19311,7 +19311,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required] Name of the role
             var sshCredsRequest = new SshCredsRequest(); // SshCredsRequest |  (optional) 
 
@@ -19322,7 +19322,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshCredsRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshCredsRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19385,7 +19385,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var keyName = "keyName_example";  // string | [Required] Name of the key
             var sshKeysRequest = new SshKeysRequest(); // SshKeysRequest |  (optional) 
 
@@ -19396,7 +19396,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshKeysKeyName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshKeysKeyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19459,7 +19459,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var sshLookupRequest = new SshLookupRequest(); // SshLookupRequest |  (optional) 
 
             try
@@ -19469,7 +19469,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshLookup: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19531,7 +19531,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
             var sshRolesRequest = new SshRolesRequest(); // SshRolesRequest |  (optional) 
 
@@ -19542,7 +19542,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshRolesRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19605,7 +19605,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | The desired role with configuration for this request.
             var sshSignRequest = new SshSignRequest(); // SshSignRequest |  (optional) 
 
@@ -19616,7 +19616,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshSignRole: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshSignRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19679,7 +19679,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var sshVerifyRequest = new SshVerifyRequest(); // SshVerifyRequest |  (optional) 
 
             try
@@ -19689,7 +19689,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostSshVerify: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostSshVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19751,7 +19751,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var terraformConfigRequest = new TerraformConfigRequest(); // TerraformConfigRequest |  (optional) 
 
             try
@@ -19760,7 +19760,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTerraformConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTerraformConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19822,7 +19822,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -19832,7 +19832,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTerraformCredsName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTerraformCredsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19894,7 +19894,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var terraformRoleRequest = new TerraformRoleRequest(); // TerraformRoleRequest |  (optional) 
 
@@ -19904,7 +19904,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTerraformRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTerraformRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -19967,7 +19967,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the team or organization role
 
             try
@@ -19976,7 +19976,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTerraformRotateRoleName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTerraformRotateRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20038,7 +20038,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
             var totpCodeRequest = new TotpCodeRequest(); // TotpCodeRequest |  (optional) 
 
@@ -20049,7 +20049,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTotpCodeName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTotpCodeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20112,7 +20112,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key.
             var totpKeysRequest = new TotpKeysRequest(); // TotpKeysRequest |  (optional) 
 
@@ -20123,7 +20123,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTotpKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTotpKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20186,7 +20186,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var transitCacheConfigRequest = new TransitCacheConfigRequest(); // TransitCacheConfigRequest |  (optional) 
 
             try
@@ -20196,7 +20196,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitCacheConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitCacheConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20258,7 +20258,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The backend key used for encrypting the data key
             var plaintext = "plaintext_example";  // string | \"plaintext\" will return the key in both plaintext and ciphertext; \"wrapped\" will return the ciphertext only.
             var transitDatakeyRequest = new TransitDatakeyRequest(); // TransitDatakeyRequest |  (optional) 
@@ -20270,7 +20270,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitDatakeyPlaintextName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitDatakeyPlaintextName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20334,7 +20334,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var transitDecryptRequest = new TransitDecryptRequest(); // TransitDecryptRequest |  (optional) 
 
@@ -20345,7 +20345,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitDecryptName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitDecryptName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20408,7 +20408,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the policy
             var transitEncryptRequest = new TransitEncryptRequest(); // TransitEncryptRequest |  (optional) 
 
@@ -20419,7 +20419,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitEncryptName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitEncryptName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20482,7 +20482,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var transitHashRequest = new TransitHashRequest(); // TransitHashRequest |  (optional) 
 
             try
@@ -20492,7 +20492,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitHash: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitHash: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20554,7 +20554,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var transitHashRequest = new TransitHashRequest(); // TransitHashRequest |  (optional) 
 
@@ -20565,7 +20565,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitHashUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitHashUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20628,7 +20628,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use for the HMAC function
             var transitHmacRequest = new TransitHmacRequest(); // TransitHmacRequest |  (optional) 
 
@@ -20639,7 +20639,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitHmacName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitHmacName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20702,7 +20702,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use for the HMAC function
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var transitHmacRequest = new TransitHmacRequest(); // TransitHmacRequest |  (optional) 
@@ -20714,7 +20714,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitHmacNameUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitHmacNameUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20778,7 +20778,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysRequest = new TransitKeysRequest(); // TransitKeysRequest |  (optional) 
 
@@ -20789,7 +20789,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20852,7 +20852,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysConfigRequest = new TransitKeysConfigRequest(); // TransitKeysConfigRequest |  (optional) 
 
@@ -20863,7 +20863,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysNameConfig: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysNameConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -20926,7 +20926,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the key
             var transitKeysImportRequest = new TransitKeysImportRequest(); // TransitKeysImportRequest |  (optional) 
 
@@ -20937,7 +20937,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysNameImport: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysNameImport: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21000,7 +21000,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the key
             var transitKeysImportVersionRequest = new TransitKeysImportVersionRequest(); // TransitKeysImportVersionRequest |  (optional) 
 
@@ -21011,7 +21011,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysNameImportVersion: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysNameImportVersion: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21074,7 +21074,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -21084,7 +21084,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysNameRotate: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysNameRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21146,7 +21146,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitKeysTrimRequest = new TransitKeysTrimRequest(); // TransitKeysTrimRequest |  (optional) 
 
@@ -21157,7 +21157,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitKeysNameTrim: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitKeysNameTrim: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21220,7 +21220,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
             try
@@ -21230,7 +21230,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRandom: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRandom: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21292,7 +21292,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
@@ -21303,7 +21303,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRandomSource: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRandomSource: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21366,7 +21366,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
@@ -21378,7 +21378,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRandomSourceUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRandomSourceUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21442,7 +21442,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var transitRandomRequest = new TransitRandomRequest(); // TransitRandomRequest |  (optional) 
 
@@ -21453,7 +21453,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRandomUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRandomUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21516,7 +21516,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var transitRestoreRequest = new TransitRestoreRequest(); // TransitRestoreRequest |  (optional) 
 
             try
@@ -21526,7 +21526,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRestore: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRestore: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21588,7 +21588,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | If set, this will be the name of the restored key.
             var transitRestoreRequest = new TransitRestoreRequest(); // TransitRestoreRequest |  (optional) 
 
@@ -21599,7 +21599,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRestoreName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRestoreName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21662,7 +21662,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var transitRewrapRequest = new TransitRewrapRequest(); // TransitRewrapRequest |  (optional) 
 
@@ -21673,7 +21673,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitRewrapName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitRewrapName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21736,7 +21736,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var transitSignRequest = new TransitSignRequest(); // TransitSignRequest |  (optional) 
 
@@ -21747,7 +21747,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitSignName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitSignName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21810,7 +21810,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
             var transitSignRequest = new TransitSignRequest(); // TransitSignRequest |  (optional) 
@@ -21822,7 +21822,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitSignNameUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitSignNameUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21886,7 +21886,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var transitVerifyRequest = new TransitVerifyRequest(); // TransitVerifyRequest |  (optional) 
 
@@ -21897,7 +21897,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitVerifyName: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitVerifyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -21960,7 +21960,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SecretsApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The key to use
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
             var transitVerifyRequest = new TransitVerifyRequest(); // TransitVerifyRequest |  (optional) 
@@ -21972,7 +21972,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SecretsApi.PostTransitVerifyNameUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling Secrets.PostTransitVerifyNameUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

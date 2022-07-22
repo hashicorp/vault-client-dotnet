@@ -1,169 +1,169 @@
-# VaultClient.Api.SystemApi
+# VaultClient.Api.System
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteSysAuditPath**](SystemApi.md#deletesysauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
-[**DeleteSysAuthPath**](SystemApi.md#deletesysauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
-[**DeleteSysConfigAuditingRequestHeadersHeader**](SystemApi.md#deletesysconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
-[**DeleteSysConfigCors**](SystemApi.md#deletesysconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
-[**DeleteSysConfigUiHeadersHeader**](SystemApi.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
-[**DeleteSysGenerateRoot**](SystemApi.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
-[**DeleteSysGenerateRootAttempt**](SystemApi.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
-[**DeleteSysMountsPath**](SystemApi.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
-[**DeleteSysPluginsCatalogName**](SystemApi.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
-[**DeleteSysPluginsCatalogTypeName**](SystemApi.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
-[**DeleteSysPoliciesAclName**](SystemApi.md#deletesyspoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
-[**DeleteSysPoliciesPasswordName**](SystemApi.md#deletesyspoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
-[**DeleteSysPolicyName**](SystemApi.md#deletesyspolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
-[**DeleteSysQuotasRateLimitName**](SystemApi.md#deletesysquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
-[**DeleteSysRaw**](SystemApi.md#deletesysraw) | **DELETE** /sys/raw | Delete the key with given path.
-[**DeleteSysRawPath**](SystemApi.md#deletesysrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
-[**DeleteSysRekeyBackup**](SystemApi.md#deletesysrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
-[**DeleteSysRekeyInit**](SystemApi.md#deletesysrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
-[**DeleteSysRekeyRecoveryKeyBackup**](SystemApi.md#deletesysrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-[**DeleteSysRekeyVerify**](SystemApi.md#deletesysrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
-[**GetSysAudit**](SystemApi.md#getsysaudit) | **GET** /sys/audit | List the enabled audit devices.
-[**GetSysAuth**](SystemApi.md#getsysauth) | **GET** /sys/auth | List the currently enabled credential backends.
-[**GetSysAuthPath**](SystemApi.md#getsysauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
-[**GetSysAuthPathTune**](SystemApi.md#getsysauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path&#39;s configuration.
-[**GetSysConfigAuditingRequestHeaders**](SystemApi.md#getsysconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
-[**GetSysConfigAuditingRequestHeadersHeader**](SystemApi.md#getsysconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
-[**GetSysConfigCors**](SystemApi.md#getsysconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
-[**GetSysConfigStateSanitized**](SystemApi.md#getsysconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
-[**GetSysConfigUiHeaders**](SystemApi.md#getsysconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
-[**GetSysConfigUiHeadersHeader**](SystemApi.md#getsysconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header&#39;s configuration
-[**GetSysGenerateRoot**](SystemApi.md#getsysgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
-[**GetSysGenerateRootAttempt**](SystemApi.md#getsysgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
-[**GetSysHaStatus**](SystemApi.md#getsyshastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
-[**GetSysHealth**](SystemApi.md#getsyshealth) | **GET** /sys/health | Returns the health status of Vault.
-[**GetSysHostInfo**](SystemApi.md#getsyshostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
-[**GetSysInFlightReq**](SystemApi.md#getsysinflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
-[**GetSysInit**](SystemApi.md#getsysinit) | **GET** /sys/init | Returns the initialization status of Vault.
-[**GetSysInternalCountersActivity**](SystemApi.md#getsysinternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
-[**GetSysInternalCountersActivityExport**](SystemApi.md#getsysinternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
-[**GetSysInternalCountersActivityMonthly**](SystemApi.md#getsysinternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
-[**GetSysInternalCountersConfig**](SystemApi.md#getsysinternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
-[**GetSysInternalCountersEntities**](SystemApi.md#getsysinternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
-[**GetSysInternalCountersRequests**](SystemApi.md#getsysinternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
-[**GetSysInternalCountersTokens**](SystemApi.md#getsysinternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
-[**GetSysInternalSpecsOpenapi**](SystemApi.md#getsysinternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
-[**GetSysInternalUiFeatureFlags**](SystemApi.md#getsysinternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
-[**GetSysInternalUiMounts**](SystemApi.md#getsysinternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
-[**GetSysInternalUiMountsPath**](SystemApi.md#getsysinternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
-[**GetSysInternalUiNamespaces**](SystemApi.md#getsysinternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
-[**GetSysInternalUiResultantAcl**](SystemApi.md#getsysinternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
-[**GetSysKeyStatus**](SystemApi.md#getsyskeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
-[**GetSysLeader**](SystemApi.md#getsysleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
-[**GetSysLeases**](SystemApi.md#getsysleases) | **GET** /sys/leases | List leases associated with this Vault cluster
-[**GetSysLeasesCount**](SystemApi.md#getsysleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
-[**GetSysLeasesLookup**](SystemApi.md#getsysleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
-[**GetSysLeasesLookupPrefix**](SystemApi.md#getsysleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
-[**GetSysMetrics**](SystemApi.md#getsysmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
-[**GetSysMonitor**](SystemApi.md#getsysmonitor) | **GET** /sys/monitor | 
-[**GetSysMounts**](SystemApi.md#getsysmounts) | **GET** /sys/mounts | List the currently mounted backends.
-[**GetSysMountsPath**](SystemApi.md#getsysmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
-[**GetSysMountsPathTune**](SystemApi.md#getsysmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-[**GetSysPluginsCatalog**](SystemApi.md#getsyspluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
-[**GetSysPluginsCatalogName**](SystemApi.md#getsyspluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
-[**GetSysPluginsCatalogType**](SystemApi.md#getsyspluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
-[**GetSysPluginsCatalogTypeName**](SystemApi.md#getsyspluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
-[**GetSysPoliciesAcl**](SystemApi.md#getsyspoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
-[**GetSysPoliciesAclName**](SystemApi.md#getsyspoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
-[**GetSysPoliciesPassword**](SystemApi.md#getsyspoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
-[**GetSysPoliciesPasswordName**](SystemApi.md#getsyspoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
-[**GetSysPoliciesPasswordNameGenerate**](SystemApi.md#getsyspoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
-[**GetSysPolicy**](SystemApi.md#getsyspolicy) | **GET** /sys/policy | List the configured access control policies.
-[**GetSysPolicyName**](SystemApi.md#getsyspolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
-[**GetSysPprof**](SystemApi.md#getsyspprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
-[**GetSysPprofAllocs**](SystemApi.md#getsyspprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
-[**GetSysPprofBlock**](SystemApi.md#getsyspprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
-[**GetSysPprofCmdline**](SystemApi.md#getsyspprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program&#39;s command line.
-[**GetSysPprofGoroutine**](SystemApi.md#getsyspprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
-[**GetSysPprofHeap**](SystemApi.md#getsyspprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
-[**GetSysPprofMutex**](SystemApi.md#getsyspprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
-[**GetSysPprofProfile**](SystemApi.md#getsyspprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
-[**GetSysPprofSymbol**](SystemApi.md#getsyspprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
-[**GetSysPprofThreadcreate**](SystemApi.md#getsyspprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
-[**GetSysPprofTrace**](SystemApi.md#getsyspproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
-[**GetSysQuotasConfig**](SystemApi.md#getsysquotasconfig) | **GET** /sys/quotas/config | 
-[**GetSysQuotasRateLimit**](SystemApi.md#getsysquotasratelimit) | **GET** /sys/quotas/rate-limit | 
-[**GetSysQuotasRateLimitName**](SystemApi.md#getsysquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
-[**GetSysRaw**](SystemApi.md#getsysraw) | **GET** /sys/raw | Read the value of the key at the given path.
-[**GetSysRawPath**](SystemApi.md#getsysrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
-[**GetSysRekeyBackup**](SystemApi.md#getsysrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
-[**GetSysRekeyInit**](SystemApi.md#getsysrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
-[**GetSysRekeyRecoveryKeyBackup**](SystemApi.md#getsysrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-[**GetSysRekeyVerify**](SystemApi.md#getsysrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
-[**GetSysRemountStatusMigrationId**](SystemApi.md#getsysremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
-[**GetSysReplicationStatus**](SystemApi.md#getsysreplicationstatus) | **GET** /sys/replication/status | 
-[**GetSysRotateConfig**](SystemApi.md#getsysrotateconfig) | **GET** /sys/rotate/config | 
-[**GetSysSealStatus**](SystemApi.md#getsyssealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
-[**GetSysVersionHistory**](SystemApi.md#getsysversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
-[**GetSysWrappingLookup**](SystemApi.md#getsyswrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester&#39;s token.
-[**PostSysAuditHashPath**](SystemApi.md#postsysaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
-[**PostSysAuditPath**](SystemApi.md#postsysauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
-[**PostSysAuthPath**](SystemApi.md#postsysauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
-[**PostSysAuthPathTune**](SystemApi.md#postsysauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
-[**PostSysCapabilities**](SystemApi.md#postsyscapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
-[**PostSysCapabilitiesAccessor**](SystemApi.md#postsyscapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
-[**PostSysCapabilitiesSelf**](SystemApi.md#postsyscapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
-[**PostSysConfigAuditingRequestHeadersHeader**](SystemApi.md#postsysconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
-[**PostSysConfigCors**](SystemApi.md#postsysconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
-[**PostSysConfigReloadSubsystem**](SystemApi.md#postsysconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
-[**PostSysConfigUiHeadersHeader**](SystemApi.md#postsysconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
-[**PostSysGenerateRoot**](SystemApi.md#postsysgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
-[**PostSysGenerateRootAttempt**](SystemApi.md#postsysgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
-[**PostSysGenerateRootUpdate**](SystemApi.md#postsysgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
-[**PostSysInit**](SystemApi.md#postsysinit) | **POST** /sys/init | Initialize a new Vault.
-[**PostSysInternalCountersConfig**](SystemApi.md#postsysinternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
-[**PostSysLeasesLookup**](SystemApi.md#postsysleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
-[**PostSysLeasesRenew**](SystemApi.md#postsysleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
-[**PostSysLeasesRenewUrlLeaseId**](SystemApi.md#postsysleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-[**PostSysLeasesRevoke**](SystemApi.md#postsysleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
-[**PostSysLeasesRevokeForcePrefix**](SystemApi.md#postsysleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-[**PostSysLeasesRevokePrefixPrefix**](SystemApi.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-[**PostSysLeasesRevokeUrlLeaseId**](SystemApi.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
-[**PostSysLeasesTidy**](SystemApi.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-[**PostSysMfaValidate**](SystemApi.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-[**PostSysMountsPath**](SystemApi.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
-[**PostSysMountsPathTune**](SystemApi.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-[**PostSysPluginsCatalogName**](SystemApi.md#postsyspluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
-[**PostSysPluginsCatalogTypeName**](SystemApi.md#postsyspluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
-[**PostSysPluginsReloadBackend**](SystemApi.md#postsyspluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
-[**PostSysPoliciesAclName**](SystemApi.md#postsyspoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
-[**PostSysPoliciesPasswordName**](SystemApi.md#postsyspoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
-[**PostSysPolicyName**](SystemApi.md#postsyspolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
-[**PostSysQuotasConfig**](SystemApi.md#postsysquotasconfig) | **POST** /sys/quotas/config | 
-[**PostSysQuotasRateLimitName**](SystemApi.md#postsysquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
-[**PostSysRaw**](SystemApi.md#postsysraw) | **POST** /sys/raw | Update the value of the key at the given path.
-[**PostSysRawPath**](SystemApi.md#postsysrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
-[**PostSysRekeyInit**](SystemApi.md#postsysrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
-[**PostSysRekeyUpdate**](SystemApi.md#postsysrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
-[**PostSysRekeyVerify**](SystemApi.md#postsysrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
-[**PostSysRemount**](SystemApi.md#postsysremount) | **POST** /sys/remount | Initiate a mount migration
-[**PostSysRenew**](SystemApi.md#postsysrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
-[**PostSysRenewUrlLeaseId**](SystemApi.md#postsysrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-[**PostSysRevoke**](SystemApi.md#postsysrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
-[**PostSysRevokeForcePrefix**](SystemApi.md#postsysrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-[**PostSysRevokePrefixPrefix**](SystemApi.md#postsysrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-[**PostSysRevokeUrlLeaseId**](SystemApi.md#postsysrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
-[**PostSysRotate**](SystemApi.md#postsysrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
-[**PostSysRotateConfig**](SystemApi.md#postsysrotateconfig) | **POST** /sys/rotate/config | 
-[**PostSysSeal**](SystemApi.md#postsysseal) | **POST** /sys/seal | Seal the Vault.
-[**PostSysStepDown**](SystemApi.md#postsysstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
-[**PostSysToolsHash**](SystemApi.md#postsystoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
-[**PostSysToolsHashUrlalgorithm**](SystemApi.md#postsystoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
-[**PostSysToolsRandom**](SystemApi.md#postsystoolsrandom) | **POST** /sys/tools/random | Generate random bytes
-[**PostSysToolsRandomSource**](SystemApi.md#postsystoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
-[**PostSysToolsRandomSourceUrlbytes**](SystemApi.md#postsystoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
-[**PostSysToolsRandomUrlbytes**](SystemApi.md#postsystoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
-[**PostSysUnseal**](SystemApi.md#postsysunseal) | **POST** /sys/unseal | Unseal the Vault.
-[**PostSysWrappingLookup**](SystemApi.md#postsyswrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
-[**PostSysWrappingRewrap**](SystemApi.md#postsyswrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
-[**PostSysWrappingUnwrap**](SystemApi.md#postsyswrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
-[**PostSysWrappingWrap**](SystemApi.md#postsyswrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
+[**DeleteSysAuditPath**](System.md#deletesysauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
+[**DeleteSysAuthPath**](System.md#deletesysauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
+[**DeleteSysConfigAuditingRequestHeadersHeader**](System.md#deletesysconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
+[**DeleteSysConfigCors**](System.md#deletesysconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
+[**DeleteSysConfigUiHeadersHeader**](System.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
+[**DeleteSysGenerateRoot**](System.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
+[**DeleteSysGenerateRootAttempt**](System.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
+[**DeleteSysMountsPath**](System.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
+[**DeleteSysPluginsCatalogName**](System.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
+[**DeleteSysPluginsCatalogTypeName**](System.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
+[**DeleteSysPoliciesAclName**](System.md#deletesyspoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
+[**DeleteSysPoliciesPasswordName**](System.md#deletesyspoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
+[**DeleteSysPolicyName**](System.md#deletesyspolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
+[**DeleteSysQuotasRateLimitName**](System.md#deletesysquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
+[**DeleteSysRaw**](System.md#deletesysraw) | **DELETE** /sys/raw | Delete the key with given path.
+[**DeleteSysRawPath**](System.md#deletesysrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
+[**DeleteSysRekeyBackup**](System.md#deletesysrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
+[**DeleteSysRekeyInit**](System.md#deletesysrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
+[**DeleteSysRekeyRecoveryKeyBackup**](System.md#deletesysrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+[**DeleteSysRekeyVerify**](System.md#deletesysrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
+[**GetSysAudit**](System.md#getsysaudit) | **GET** /sys/audit | List the enabled audit devices.
+[**GetSysAuth**](System.md#getsysauth) | **GET** /sys/auth | List the currently enabled credential backends.
+[**GetSysAuthPath**](System.md#getsysauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
+[**GetSysAuthPathTune**](System.md#getsysauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path&#39;s configuration.
+[**GetSysConfigAuditingRequestHeaders**](System.md#getsysconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
+[**GetSysConfigAuditingRequestHeadersHeader**](System.md#getsysconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
+[**GetSysConfigCors**](System.md#getsysconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
+[**GetSysConfigStateSanitized**](System.md#getsysconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
+[**GetSysConfigUiHeaders**](System.md#getsysconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
+[**GetSysConfigUiHeadersHeader**](System.md#getsysconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header&#39;s configuration
+[**GetSysGenerateRoot**](System.md#getsysgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
+[**GetSysGenerateRootAttempt**](System.md#getsysgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
+[**GetSysHaStatus**](System.md#getsyshastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
+[**GetSysHealth**](System.md#getsyshealth) | **GET** /sys/health | Returns the health status of Vault.
+[**GetSysHostInfo**](System.md#getsyshostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
+[**GetSysInFlightReq**](System.md#getsysinflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
+[**GetSysInit**](System.md#getsysinit) | **GET** /sys/init | Returns the initialization status of Vault.
+[**GetSysInternalCountersActivity**](System.md#getsysinternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
+[**GetSysInternalCountersActivityExport**](System.md#getsysinternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
+[**GetSysInternalCountersActivityMonthly**](System.md#getsysinternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
+[**GetSysInternalCountersConfig**](System.md#getsysinternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
+[**GetSysInternalCountersEntities**](System.md#getsysinternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalCountersRequests**](System.md#getsysinternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalCountersTokens**](System.md#getsysinternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalSpecsOpenapi**](System.md#getsysinternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
+[**GetSysInternalUiFeatureFlags**](System.md#getsysinternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
+[**GetSysInternalUiMounts**](System.md#getsysinternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
+[**GetSysInternalUiMountsPath**](System.md#getsysinternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
+[**GetSysInternalUiNamespaces**](System.md#getsysinternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalUiResultantAcl**](System.md#getsysinternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
+[**GetSysKeyStatus**](System.md#getsyskeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
+[**GetSysLeader**](System.md#getsysleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
+[**GetSysLeases**](System.md#getsysleases) | **GET** /sys/leases | List leases associated with this Vault cluster
+[**GetSysLeasesCount**](System.md#getsysleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
+[**GetSysLeasesLookup**](System.md#getsysleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
+[**GetSysLeasesLookupPrefix**](System.md#getsysleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
+[**GetSysMetrics**](System.md#getsysmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
+[**GetSysMonitor**](System.md#getsysmonitor) | **GET** /sys/monitor | 
+[**GetSysMounts**](System.md#getsysmounts) | **GET** /sys/mounts | List the currently mounted backends.
+[**GetSysMountsPath**](System.md#getsysmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
+[**GetSysMountsPathTune**](System.md#getsysmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+[**GetSysPluginsCatalog**](System.md#getsyspluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
+[**GetSysPluginsCatalogName**](System.md#getsyspluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
+[**GetSysPluginsCatalogType**](System.md#getsyspluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
+[**GetSysPluginsCatalogTypeName**](System.md#getsyspluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
+[**GetSysPoliciesAcl**](System.md#getsyspoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
+[**GetSysPoliciesAclName**](System.md#getsyspoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
+[**GetSysPoliciesPassword**](System.md#getsyspoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
+[**GetSysPoliciesPasswordName**](System.md#getsyspoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
+[**GetSysPoliciesPasswordNameGenerate**](System.md#getsyspoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
+[**GetSysPolicy**](System.md#getsyspolicy) | **GET** /sys/policy | List the configured access control policies.
+[**GetSysPolicyName**](System.md#getsyspolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
+[**GetSysPprof**](System.md#getsyspprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
+[**GetSysPprofAllocs**](System.md#getsyspprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
+[**GetSysPprofBlock**](System.md#getsyspprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
+[**GetSysPprofCmdline**](System.md#getsyspprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program&#39;s command line.
+[**GetSysPprofGoroutine**](System.md#getsyspprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
+[**GetSysPprofHeap**](System.md#getsyspprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
+[**GetSysPprofMutex**](System.md#getsyspprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
+[**GetSysPprofProfile**](System.md#getsyspprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
+[**GetSysPprofSymbol**](System.md#getsyspprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
+[**GetSysPprofThreadcreate**](System.md#getsyspprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
+[**GetSysPprofTrace**](System.md#getsyspproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
+[**GetSysQuotasConfig**](System.md#getsysquotasconfig) | **GET** /sys/quotas/config | 
+[**GetSysQuotasRateLimit**](System.md#getsysquotasratelimit) | **GET** /sys/quotas/rate-limit | 
+[**GetSysQuotasRateLimitName**](System.md#getsysquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
+[**GetSysRaw**](System.md#getsysraw) | **GET** /sys/raw | Read the value of the key at the given path.
+[**GetSysRawPath**](System.md#getsysrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
+[**GetSysRekeyBackup**](System.md#getsysrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
+[**GetSysRekeyInit**](System.md#getsysrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
+[**GetSysRekeyRecoveryKeyBackup**](System.md#getsysrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+[**GetSysRekeyVerify**](System.md#getsysrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
+[**GetSysRemountStatusMigrationId**](System.md#getsysremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
+[**GetSysReplicationStatus**](System.md#getsysreplicationstatus) | **GET** /sys/replication/status | 
+[**GetSysRotateConfig**](System.md#getsysrotateconfig) | **GET** /sys/rotate/config | 
+[**GetSysSealStatus**](System.md#getsyssealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
+[**GetSysVersionHistory**](System.md#getsysversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
+[**GetSysWrappingLookup**](System.md#getsyswrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester&#39;s token.
+[**PostSysAuditHashPath**](System.md#postsysaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
+[**PostSysAuditPath**](System.md#postsysauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
+[**PostSysAuthPath**](System.md#postsysauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
+[**PostSysAuthPathTune**](System.md#postsysauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
+[**PostSysCapabilities**](System.md#postsyscapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
+[**PostSysCapabilitiesAccessor**](System.md#postsyscapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
+[**PostSysCapabilitiesSelf**](System.md#postsyscapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
+[**PostSysConfigAuditingRequestHeadersHeader**](System.md#postsysconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
+[**PostSysConfigCors**](System.md#postsysconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
+[**PostSysConfigReloadSubsystem**](System.md#postsysconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
+[**PostSysConfigUiHeadersHeader**](System.md#postsysconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
+[**PostSysGenerateRoot**](System.md#postsysgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
+[**PostSysGenerateRootAttempt**](System.md#postsysgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
+[**PostSysGenerateRootUpdate**](System.md#postsysgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
+[**PostSysInit**](System.md#postsysinit) | **POST** /sys/init | Initialize a new Vault.
+[**PostSysInternalCountersConfig**](System.md#postsysinternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
+[**PostSysLeasesLookup**](System.md#postsysleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
+[**PostSysLeasesRenew**](System.md#postsysleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
+[**PostSysLeasesRenewUrlLeaseId**](System.md#postsysleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+[**PostSysLeasesRevoke**](System.md#postsysleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
+[**PostSysLeasesRevokeForcePrefix**](System.md#postsysleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+[**PostSysLeasesRevokePrefixPrefix**](System.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+[**PostSysLeasesRevokeUrlLeaseId**](System.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
+[**PostSysLeasesTidy**](System.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**PostSysMfaValidate**](System.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
+[**PostSysMountsPath**](System.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
+[**PostSysMountsPathTune**](System.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+[**PostSysPluginsCatalogName**](System.md#postsyspluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
+[**PostSysPluginsCatalogTypeName**](System.md#postsyspluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
+[**PostSysPluginsReloadBackend**](System.md#postsyspluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
+[**PostSysPoliciesAclName**](System.md#postsyspoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
+[**PostSysPoliciesPasswordName**](System.md#postsyspoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
+[**PostSysPolicyName**](System.md#postsyspolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
+[**PostSysQuotasConfig**](System.md#postsysquotasconfig) | **POST** /sys/quotas/config | 
+[**PostSysQuotasRateLimitName**](System.md#postsysquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
+[**PostSysRaw**](System.md#postsysraw) | **POST** /sys/raw | Update the value of the key at the given path.
+[**PostSysRawPath**](System.md#postsysrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
+[**PostSysRekeyInit**](System.md#postsysrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
+[**PostSysRekeyUpdate**](System.md#postsysrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
+[**PostSysRekeyVerify**](System.md#postsysrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
+[**PostSysRemount**](System.md#postsysremount) | **POST** /sys/remount | Initiate a mount migration
+[**PostSysRenew**](System.md#postsysrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
+[**PostSysRenewUrlLeaseId**](System.md#postsysrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+[**PostSysRevoke**](System.md#postsysrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
+[**PostSysRevokeForcePrefix**](System.md#postsysrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+[**PostSysRevokePrefixPrefix**](System.md#postsysrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+[**PostSysRevokeUrlLeaseId**](System.md#postsysrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
+[**PostSysRotate**](System.md#postsysrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
+[**PostSysRotateConfig**](System.md#postsysrotateconfig) | **POST** /sys/rotate/config | 
+[**PostSysSeal**](System.md#postsysseal) | **POST** /sys/seal | Seal the Vault.
+[**PostSysStepDown**](System.md#postsysstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
+[**PostSysToolsHash**](System.md#postsystoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
+[**PostSysToolsHashUrlalgorithm**](System.md#postsystoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
+[**PostSysToolsRandom**](System.md#postsystoolsrandom) | **POST** /sys/tools/random | Generate random bytes
+[**PostSysToolsRandomSource**](System.md#postsystoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
+[**PostSysToolsRandomSourceUrlbytes**](System.md#postsystoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
+[**PostSysToolsRandomUrlbytes**](System.md#postsystoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
+[**PostSysUnseal**](System.md#postsysunseal) | **POST** /sys/unseal | Unseal the Vault.
+[**PostSysWrappingLookup**](System.md#postsyswrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
+[**PostSysWrappingRewrap**](System.md#postsyswrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
+[**PostSysWrappingUnwrap**](System.md#postsyswrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
+[**PostSysWrappingWrap**](System.md#postsyswrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
 
 
 <a name="deletesysauditpath"></a>
@@ -192,7 +192,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
 
             try
@@ -202,7 +202,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysAuditPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysAuditPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -264,7 +264,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
 
             try
@@ -274,7 +274,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -336,7 +336,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | 
 
             try
@@ -346,7 +346,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -408,7 +408,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -417,7 +417,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -476,7 +476,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | The name of the header.
 
             try
@@ -486,7 +486,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -548,7 +548,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -557,7 +557,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -616,7 +616,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -625,7 +625,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -684,7 +684,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -694,7 +694,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -756,7 +756,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
 
             try
@@ -766,7 +766,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -828,7 +828,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
 
@@ -839,7 +839,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -902,7 +902,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -912,7 +912,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -974,7 +974,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -984,7 +984,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1046,7 +1046,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -1056,7 +1056,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1118,7 +1118,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the quota rule.
 
             try
@@ -1127,7 +1127,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1189,7 +1189,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1198,7 +1198,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRaw: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1257,7 +1257,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | 
 
             try
@@ -1267,7 +1267,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1329,7 +1329,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1338,7 +1338,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRekeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1399,7 +1399,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1408,7 +1408,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1467,7 +1467,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1476,7 +1476,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRekeyRecoveryKeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyRecoveryKeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1537,7 +1537,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1546,7 +1546,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.DeleteSysRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1605,7 +1605,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1614,7 +1614,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysAudit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAudit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1673,7 +1673,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1682,7 +1682,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysAuth: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuth: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1741,7 +1741,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
 
             try
@@ -1751,7 +1751,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1815,7 +1815,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Tune the configuration parameters for an auth path.
 
             try
@@ -1825,7 +1825,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysAuthPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuthPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1887,7 +1887,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -1896,7 +1896,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigAuditingRequestHeaders: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigAuditingRequestHeaders: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1955,7 +1955,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | 
 
             try
@@ -1965,7 +1965,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2027,7 +2027,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2036,7 +2036,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2097,7 +2097,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2106,7 +2106,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigStateSanitized: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigStateSanitized: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2165,7 +2165,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2175,7 +2175,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigUiHeaders: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigUiHeaders: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2237,7 +2237,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | The name of the header.
 
             try
@@ -2247,7 +2247,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2309,7 +2309,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2318,7 +2318,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2377,7 +2377,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2386,7 +2386,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2445,7 +2445,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2454,7 +2454,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysHaStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHaStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2513,7 +2513,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2522,7 +2522,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysHealth: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHealth: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2587,7 +2587,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2596,7 +2596,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysHostInfo: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHostInfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2657,7 +2657,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2666,7 +2666,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInFlightReq: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInFlightReq: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2725,7 +2725,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2734,7 +2734,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2793,7 +2793,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2802,7 +2802,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersActivity: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2861,7 +2861,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2870,7 +2870,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersActivityExport: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivityExport: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2929,7 +2929,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -2938,7 +2938,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersActivityMonthly: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivityMonthly: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2997,7 +2997,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3006,7 +3006,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3065,7 +3065,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3074,7 +3074,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersEntities: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersEntities: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3133,7 +3133,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3142,7 +3142,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersRequests: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersRequests: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3201,7 +3201,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3210,7 +3210,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalCountersTokens: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersTokens: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3269,7 +3269,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3278,7 +3278,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalSpecsOpenapi: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalSpecsOpenapi: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3337,7 +3337,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3346,7 +3346,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalUiFeatureFlags: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiFeatureFlags: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3405,7 +3405,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3414,7 +3414,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalUiMounts: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiMounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3473,7 +3473,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path of the mount.
 
             try
@@ -3483,7 +3483,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalUiMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3545,7 +3545,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3554,7 +3554,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalUiNamespaces: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiNamespaces: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3613,7 +3613,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3622,7 +3622,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysInternalUiResultantAcl: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiResultantAcl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3681,7 +3681,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3690,7 +3690,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysKeyStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysKeyStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3749,7 +3749,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3758,7 +3758,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysLeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3817,7 +3817,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3826,7 +3826,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysLeases: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeases: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3885,7 +3885,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3894,7 +3894,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysLeasesCount: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeasesCount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3953,7 +3953,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3963,7 +3963,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysLeasesLookup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeasesLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4025,7 +4025,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
             var list = "true";  // string | Must be set to `true`
 
@@ -4036,7 +4036,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysLeasesLookupPrefix: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeasesLookupPrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4099,7 +4099,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var format = "format_example";  // string | Format to export metrics into. Currently accepts only \"prometheus\". (optional) 
 
             try
@@ -4109,7 +4109,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysMetrics: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMetrics: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4171,7 +4171,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var logFormat = "\"standard\"";  // string | Output format of logs. Supported values are \"standard\" and \"json\". The default is \"standard\". (optional)  (default to "standard")
             var logLevel = "logLevel_example";  // string | Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\". (optional) 
 
@@ -4181,7 +4181,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysMonitor: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMonitor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4244,7 +4244,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4253,7 +4253,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysMounts: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4312,7 +4312,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -4322,7 +4322,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4384,7 +4384,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
 
             try
@@ -4394,7 +4394,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysMountsPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMountsPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4456,7 +4456,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4465,7 +4465,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPluginsCatalog: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalog: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4524,7 +4524,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
 
             try
@@ -4534,7 +4534,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4596,7 +4596,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
             var list = "true";  // string | Must be set to `true`
 
@@ -4607,7 +4607,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPluginsCatalogType: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogType: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4670,7 +4670,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
 
@@ -4681,7 +4681,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4744,7 +4744,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4754,7 +4754,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPoliciesAcl: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesAcl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4816,7 +4816,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -4826,7 +4826,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4888,7 +4888,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4898,7 +4898,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPoliciesPassword: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesPassword: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4960,7 +4960,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -4970,7 +4970,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5032,7 +5032,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the password policy.
 
             try
@@ -5042,7 +5042,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPoliciesPasswordNameGenerate: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesPasswordNameGenerate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5104,7 +5104,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -5114,7 +5114,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPolicy: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPolicy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5176,7 +5176,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
 
             try
@@ -5186,7 +5186,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5250,7 +5250,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5259,7 +5259,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprof: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprof: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5320,7 +5320,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5329,7 +5329,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofAllocs: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofAllocs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5390,7 +5390,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5399,7 +5399,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofBlock: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofBlock: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5460,7 +5460,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5469,7 +5469,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofCmdline: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofCmdline: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5530,7 +5530,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5539,7 +5539,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofGoroutine: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofGoroutine: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5600,7 +5600,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5609,7 +5609,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofHeap: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofHeap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5670,7 +5670,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5679,7 +5679,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofMutex: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofMutex: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5740,7 +5740,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5749,7 +5749,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofProfile: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofProfile: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5810,7 +5810,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5819,7 +5819,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofSymbol: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofSymbol: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5880,7 +5880,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5889,7 +5889,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofThreadcreate: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofThreadcreate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5950,7 +5950,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -5959,7 +5959,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysPprofTrace: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofTrace: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6018,7 +6018,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6026,7 +6026,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysQuotasConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysQuotasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6085,7 +6085,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6094,7 +6094,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysQuotasRateLimit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysQuotasRateLimit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6156,7 +6156,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the quota rule.
 
             try
@@ -6165,7 +6165,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6227,7 +6227,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
@@ -6237,7 +6237,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRaw: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6299,7 +6299,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | 
             var list = "list_example";  // string | Return a list if `true` (optional) 
 
@@ -6310,7 +6310,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6373,7 +6373,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6382,7 +6382,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRekeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6441,7 +6441,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6450,7 +6450,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6509,7 +6509,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6518,7 +6518,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRekeyRecoveryKeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyRecoveryKeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6577,7 +6577,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6586,7 +6586,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6645,7 +6645,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var migrationId = "migrationId_example";  // string | The ID of the migration operation
 
             try
@@ -6655,7 +6655,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRemountStatusMigrationId: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRemountStatusMigrationId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6717,7 +6717,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6725,7 +6725,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysReplicationStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysReplicationStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6784,7 +6784,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6792,7 +6792,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysRotateConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRotateConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6851,7 +6851,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -6860,7 +6860,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysSealStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysSealStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6919,7 +6919,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -6929,7 +6929,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysVersionHistory: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysVersionHistory: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6991,7 +6991,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -7000,7 +7000,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.GetSysWrappingLookup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysWrappingLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7059,7 +7059,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
             var systemAuditHashRequest = new SystemAuditHashRequest(); // SystemAuditHashRequest |  (optional) 
 
@@ -7070,7 +7070,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysAuditHashPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuditHashPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7133,7 +7133,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
             var systemAuditRequest = new SystemAuditRequest(); // SystemAuditRequest |  (optional) 
 
@@ -7144,7 +7144,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysAuditPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuditPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7209,7 +7209,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
             var systemAuthRequest = new SystemAuthRequest(); // SystemAuthRequest |  (optional) 
 
@@ -7220,7 +7220,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7285,7 +7285,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Tune the configuration parameters for an auth path.
             var systemAuthTuneRequest = new SystemAuthTuneRequest(); // SystemAuthTuneRequest |  (optional) 
 
@@ -7296,7 +7296,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysAuthPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuthPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7359,7 +7359,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemCapabilitiesRequest = new SystemCapabilitiesRequest(); // SystemCapabilitiesRequest |  (optional) 
 
             try
@@ -7369,7 +7369,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysCapabilities: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilities: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7431,7 +7431,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemCapabilitiesAccessorRequest = new SystemCapabilitiesAccessorRequest(); // SystemCapabilitiesAccessorRequest |  (optional) 
 
             try
@@ -7441,7 +7441,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysCapabilitiesAccessor: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilitiesAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7503,7 +7503,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemCapabilitiesSelfRequest = new SystemCapabilitiesSelfRequest(); // SystemCapabilitiesSelfRequest |  (optional) 
 
             try
@@ -7513,7 +7513,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysCapabilitiesSelf: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilitiesSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7575,7 +7575,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | 
             var systemConfigAuditingRequestHeadersRequest = new SystemConfigAuditingRequestHeadersRequest(); // SystemConfigAuditingRequestHeadersRequest |  (optional) 
 
@@ -7586,7 +7586,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7649,7 +7649,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemConfigCorsRequest = new SystemConfigCorsRequest(); // SystemConfigCorsRequest |  (optional) 
 
             try
@@ -7659,7 +7659,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7721,7 +7721,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var subsystem = "subsystem_example";  // string | 
 
             try
@@ -7731,7 +7731,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysConfigReloadSubsystem: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigReloadSubsystem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7793,7 +7793,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | The name of the header.
             var systemConfigUiHeadersRequest = new SystemConfigUiHeadersRequest(); // SystemConfigUiHeadersRequest |  (optional) 
 
@@ -7804,7 +7804,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7869,7 +7869,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemGenerateRootRequest = new SystemGenerateRootRequest(); // SystemGenerateRootRequest |  (optional) 
 
             try
@@ -7879,7 +7879,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7943,7 +7943,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemGenerateRootAttemptRequest = new SystemGenerateRootAttemptRequest(); // SystemGenerateRootAttemptRequest |  (optional) 
 
             try
@@ -7953,7 +7953,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8017,7 +8017,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemGenerateRootUpdateRequest = new SystemGenerateRootUpdateRequest(); // SystemGenerateRootUpdateRequest |  (optional) 
 
             try
@@ -8027,7 +8027,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysGenerateRootUpdate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRootUpdate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8091,7 +8091,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemInitRequest = new SystemInitRequest(); // SystemInitRequest |  (optional) 
 
             try
@@ -8101,7 +8101,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysInit: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8163,7 +8163,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemInternalCountersConfigRequest = new SystemInternalCountersConfigRequest(); // SystemInternalCountersConfigRequest |  (optional) 
 
             try
@@ -8173,7 +8173,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysInternalCountersConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysInternalCountersConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8235,7 +8235,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemLeasesLookupRequest = new SystemLeasesLookupRequest(); // SystemLeasesLookupRequest |  (optional) 
 
             try
@@ -8245,7 +8245,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesLookup: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8307,7 +8307,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemLeasesRenewRequest = new SystemLeasesRenewRequest(); // SystemLeasesRenewRequest |  (optional) 
 
             try
@@ -8317,7 +8317,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRenew: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8379,7 +8379,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemLeasesRenewLeaseRequest = new SystemLeasesRenewLeaseRequest(); // SystemLeasesRenewLeaseRequest |  (optional) 
 
@@ -8390,7 +8390,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRenewUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRenewUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8453,7 +8453,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemLeasesRevokeRequest = new SystemLeasesRevokeRequest(); // SystemLeasesRevokeRequest |  (optional) 
 
             try
@@ -8463,7 +8463,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRevoke: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8527,7 +8527,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
 
             try
@@ -8537,7 +8537,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRevokeForcePrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokeForcePrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8599,7 +8599,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
             var systemLeasesRevokePrefixRequest = new SystemLeasesRevokePrefixRequest(); // SystemLeasesRevokePrefixRequest |  (optional) 
 
@@ -8610,7 +8610,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRevokePrefixPrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokePrefixPrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8673,7 +8673,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemLeasesRevokeLeaseRequest = new SystemLeasesRevokeLeaseRequest(); // SystemLeasesRevokeLeaseRequest |  (optional) 
 
@@ -8684,7 +8684,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesRevokeUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokeUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8747,7 +8747,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -8756,7 +8756,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysLeasesTidy: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8815,7 +8815,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemMfaValidateRequest = new SystemMfaValidateRequest(); // SystemMfaValidateRequest |  (optional) 
 
             try
@@ -8825,7 +8825,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysMfaValidate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMfaValidate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8887,7 +8887,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
             var systemMountsRequest = new SystemMountsRequest(); // SystemMountsRequest |  (optional) 
 
@@ -8898,7 +8898,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8961,7 +8961,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
             var systemMountsTuneRequest = new SystemMountsTuneRequest(); // SystemMountsTuneRequest |  (optional) 
 
@@ -8972,7 +8972,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysMountsPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMountsPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9035,7 +9035,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
             var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
 
@@ -9046,7 +9046,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9109,7 +9109,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
             var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
@@ -9121,7 +9121,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9187,7 +9187,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemPluginsReloadBackendRequest = new SystemPluginsReloadBackendRequest(); // SystemPluginsReloadBackendRequest |  (optional) 
 
             try
@@ -9197,7 +9197,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPluginsReloadBackend: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsReloadBackend: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9259,7 +9259,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
             var systemPoliciesAclRequest = new SystemPoliciesAclRequest(); // SystemPoliciesAclRequest |  (optional) 
 
@@ -9270,7 +9270,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9333,7 +9333,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the password policy.
             var systemPoliciesPasswordRequest = new SystemPoliciesPasswordRequest(); // SystemPoliciesPasswordRequest |  (optional) 
 
@@ -9344,7 +9344,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9407,7 +9407,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
             var systemPolicyRequest = new SystemPolicyRequest(); // SystemPolicyRequest |  (optional) 
 
@@ -9418,7 +9418,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9481,7 +9481,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemQuotasConfigRequest = new SystemQuotasConfigRequest(); // SystemQuotasConfigRequest |  (optional) 
 
             try
@@ -9490,7 +9490,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysQuotasConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysQuotasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9552,7 +9552,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the quota rule.
             var systemQuotasRateLimitRequest = new SystemQuotasRateLimitRequest(); // SystemQuotasRateLimitRequest |  (optional) 
 
@@ -9562,7 +9562,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9625,7 +9625,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
 
             try
@@ -9635,7 +9635,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRaw: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9697,7 +9697,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | 
             var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
 
@@ -9708,7 +9708,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9773,7 +9773,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRekeyInitRequest = new SystemRekeyInitRequest(); // SystemRekeyInitRequest |  (optional) 
 
             try
@@ -9783,7 +9783,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9845,7 +9845,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRekeyUpdateRequest = new SystemRekeyUpdateRequest(); // SystemRekeyUpdateRequest |  (optional) 
 
             try
@@ -9855,7 +9855,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRekeyUpdate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyUpdate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9917,7 +9917,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRekeyVerifyRequest = new SystemRekeyVerifyRequest(); // SystemRekeyVerifyRequest |  (optional) 
 
             try
@@ -9927,7 +9927,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9989,7 +9989,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRemountRequest = new SystemRemountRequest(); // SystemRemountRequest |  (optional) 
 
             try
@@ -9999,7 +9999,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRemount: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRemount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10061,7 +10061,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRenewRequest = new SystemRenewRequest(); // SystemRenewRequest |  (optional) 
 
             try
@@ -10071,7 +10071,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRenew: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10133,7 +10133,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemRenewLeaseRequest = new SystemRenewLeaseRequest(); // SystemRenewLeaseRequest |  (optional) 
 
@@ -10144,7 +10144,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRenewUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRenewUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10207,7 +10207,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRevokeRequest = new SystemRevokeRequest(); // SystemRevokeRequest |  (optional) 
 
             try
@@ -10217,7 +10217,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRevoke: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10281,7 +10281,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
 
             try
@@ -10291,7 +10291,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRevokeForcePrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokeForcePrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10353,7 +10353,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
             var systemRevokePrefixRequest = new SystemRevokePrefixRequest(); // SystemRevokePrefixRequest |  (optional) 
 
@@ -10364,7 +10364,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRevokePrefixPrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokePrefixPrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10427,7 +10427,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
             var systemRevokeLeaseRequest = new SystemRevokeLeaseRequest(); // SystemRevokeLeaseRequest |  (optional) 
 
@@ -10438,7 +10438,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRevokeUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokeUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10501,7 +10501,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10510,7 +10510,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRotate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10569,7 +10569,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemRotateConfigRequest = new SystemRotateConfigRequest(); // SystemRotateConfigRequest |  (optional) 
 
             try
@@ -10578,7 +10578,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysRotateConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRotateConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10640,7 +10640,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10649,7 +10649,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysSeal: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysSeal: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10710,7 +10710,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -10719,7 +10719,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysStepDown: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysStepDown: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10778,7 +10778,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
 
             try
@@ -10788,7 +10788,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsHash: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsHash: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10850,7 +10850,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
             var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
 
@@ -10861,7 +10861,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsHashUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsHashUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10924,7 +10924,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
             try
@@ -10934,7 +10934,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsRandom: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandom: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10996,7 +10996,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
@@ -11007,7 +11007,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsRandomSource: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomSource: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11070,7 +11070,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
@@ -11082,7 +11082,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsRandomSourceUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomSourceUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11146,7 +11146,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
             var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
 
@@ -11157,7 +11157,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysToolsRandomUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11220,7 +11220,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemUnsealRequest = new SystemUnsealRequest(); // SystemUnsealRequest |  (optional) 
 
             try
@@ -11230,7 +11230,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysUnseal: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysUnseal: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11292,7 +11292,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemWrappingLookupRequest = new SystemWrappingLookupRequest(); // SystemWrappingLookupRequest |  (optional) 
 
             try
@@ -11302,7 +11302,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysWrappingLookup: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11364,7 +11364,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemWrappingRewrapRequest = new SystemWrappingRewrapRequest(); // SystemWrappingRewrapRequest |  (optional) 
 
             try
@@ -11374,7 +11374,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysWrappingRewrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingRewrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11436,7 +11436,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
             var systemWrappingUnwrapRequest = new SystemWrappingUnwrapRequest(); // SystemWrappingUnwrapRequest |  (optional) 
 
             try
@@ -11446,7 +11446,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysWrappingUnwrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingUnwrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11508,7 +11508,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new SystemApi(httpClient, config, httpClientHandler);
+            var apiInstance = new System(httpClient, config, httpClientHandler);
 
             try
             {
@@ -11517,7 +11517,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SystemApi.PostSysWrappingWrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingWrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

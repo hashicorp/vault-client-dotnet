@@ -1,114 +1,114 @@
-# VaultClient.Api.IdentityApi
+# VaultClient.Api.Identity
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteIdentityAliasIdId**](IdentityApi.md#deleteidentityaliasidid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**DeleteIdentityEntityAliasIdId**](IdentityApi.md#deleteidentityentityaliasidid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**DeleteIdentityEntityIdId**](IdentityApi.md#deleteidentityentityidid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**DeleteIdentityEntityNameName**](IdentityApi.md#deleteidentityentitynamename) | **DELETE** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**DeleteIdentityGroupAliasIdId**](IdentityApi.md#deleteidentitygroupaliasidid) | **DELETE** /identity/group-alias/id/{id} | 
-[**DeleteIdentityGroupIdId**](IdentityApi.md#deleteidentitygroupidid) | **DELETE** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**DeleteIdentityGroupNameName**](IdentityApi.md#deleteidentitygroupnamename) | **DELETE** /identity/group/name/{name} | 
-[**DeleteIdentityMfaLoginEnforcementName**](IdentityApi.md#deleteidentitymfaloginenforcementname) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
-[**DeleteIdentityMfaMethodDuoMethodId**](IdentityApi.md#deleteidentitymfamethodduomethodid) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
-[**DeleteIdentityMfaMethodOktaMethodId**](IdentityApi.md#deleteidentitymfamethodoktamethodid) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
-[**DeleteIdentityMfaMethodPingidMethodId**](IdentityApi.md#deleteidentitymfamethodpingidmethodid) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
-[**DeleteIdentityMfaMethodTotpMethodId**](IdentityApi.md#deleteidentitymfamethodtotpmethodid) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
-[**DeleteIdentityOidcAssignmentName**](IdentityApi.md#deleteidentityoidcassignmentname) | **DELETE** /identity/oidc/assignment/{name} | 
-[**DeleteIdentityOidcClientName**](IdentityApi.md#deleteidentityoidcclientname) | **DELETE** /identity/oidc/client/{name} | 
-[**DeleteIdentityOidcKeyName**](IdentityApi.md#deleteidentityoidckeyname) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**DeleteIdentityOidcProviderName**](IdentityApi.md#deleteidentityoidcprovidername) | **DELETE** /identity/oidc/provider/{name} | 
-[**DeleteIdentityOidcRoleName**](IdentityApi.md#deleteidentityoidcrolename) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**DeleteIdentityOidcScopeName**](IdentityApi.md#deleteidentityoidcscopename) | **DELETE** /identity/oidc/scope/{name} | 
-[**DeleteIdentityPersonaIdId**](IdentityApi.md#deleteidentitypersonaidid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**GetIdentityAliasId**](IdentityApi.md#getidentityaliasid) | **GET** /identity/alias/id | List all the alias IDs.
-[**GetIdentityAliasIdId**](IdentityApi.md#getidentityaliasidid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**GetIdentityEntityAliasId**](IdentityApi.md#getidentityentityaliasid) | **GET** /identity/entity-alias/id | List all the alias IDs.
-[**GetIdentityEntityAliasIdId**](IdentityApi.md#getidentityentityaliasidid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**GetIdentityEntityId**](IdentityApi.md#getidentityentityid) | **GET** /identity/entity/id | List all the entity IDs
-[**GetIdentityEntityIdId**](IdentityApi.md#getidentityentityidid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**GetIdentityEntityName**](IdentityApi.md#getidentityentityname) | **GET** /identity/entity/name | List all the entity names
-[**GetIdentityEntityNameName**](IdentityApi.md#getidentityentitynamename) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**GetIdentityGroupAliasId**](IdentityApi.md#getidentitygroupaliasid) | **GET** /identity/group-alias/id | List all the group alias IDs.
-[**GetIdentityGroupAliasIdId**](IdentityApi.md#getidentitygroupaliasidid) | **GET** /identity/group-alias/id/{id} | 
-[**GetIdentityGroupId**](IdentityApi.md#getidentitygroupid) | **GET** /identity/group/id | List all the group IDs.
-[**GetIdentityGroupIdId**](IdentityApi.md#getidentitygroupidid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**GetIdentityGroupName**](IdentityApi.md#getidentitygroupname) | **GET** /identity/group/name | 
-[**GetIdentityGroupNameName**](IdentityApi.md#getidentitygroupnamename) | **GET** /identity/group/name/{name} | 
-[**GetIdentityMfaLoginEnforcement**](IdentityApi.md#getidentitymfaloginenforcement) | **GET** /identity/mfa/login-enforcement | List login enforcements
-[**GetIdentityMfaLoginEnforcementName**](IdentityApi.md#getidentitymfaloginenforcementname) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
-[**GetIdentityMfaMethod**](IdentityApi.md#getidentitymfamethod) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
-[**GetIdentityMfaMethodDuo**](IdentityApi.md#getidentitymfamethodduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
-[**GetIdentityMfaMethodDuoMethodId**](IdentityApi.md#getidentitymfamethodduomethodid) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
-[**GetIdentityMfaMethodMethodId**](IdentityApi.md#getidentitymfamethodmethodid) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
-[**GetIdentityMfaMethodOkta**](IdentityApi.md#getidentitymfamethodokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
-[**GetIdentityMfaMethodOktaMethodId**](IdentityApi.md#getidentitymfamethodoktamethodid) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
-[**GetIdentityMfaMethodPingid**](IdentityApi.md#getidentitymfamethodpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
-[**GetIdentityMfaMethodPingidMethodId**](IdentityApi.md#getidentitymfamethodpingidmethodid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
-[**GetIdentityMfaMethodTotp**](IdentityApi.md#getidentitymfamethodtotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
-[**GetIdentityMfaMethodTotpMethodId**](IdentityApi.md#getidentitymfamethodtotpmethodid) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
-[**GetIdentityOidcAssignment**](IdentityApi.md#getidentityoidcassignment) | **GET** /identity/oidc/assignment | 
-[**GetIdentityOidcAssignmentName**](IdentityApi.md#getidentityoidcassignmentname) | **GET** /identity/oidc/assignment/{name} | 
-[**GetIdentityOidcClient**](IdentityApi.md#getidentityoidcclient) | **GET** /identity/oidc/client | 
-[**GetIdentityOidcClientName**](IdentityApi.md#getidentityoidcclientname) | **GET** /identity/oidc/client/{name} | 
-[**GetIdentityOidcConfig**](IdentityApi.md#getidentityoidcconfig) | **GET** /identity/oidc/config | OIDC configuration
-[**GetIdentityOidcKey**](IdentityApi.md#getidentityoidckey) | **GET** /identity/oidc/key | List OIDC keys
-[**GetIdentityOidcKeyName**](IdentityApi.md#getidentityoidckeyname) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**GetIdentityOidcProvider**](IdentityApi.md#getidentityoidcprovider) | **GET** /identity/oidc/provider | 
-[**GetIdentityOidcProviderName**](IdentityApi.md#getidentityoidcprovidername) | **GET** /identity/oidc/provider/{name} | 
-[**GetIdentityOidcProviderNameAuthorize**](IdentityApi.md#getidentityoidcprovidernameauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
-[**GetIdentityOidcProviderNameUserinfo**](IdentityApi.md#getidentityoidcprovidernameuserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
-[**GetIdentityOidcProviderNameWellKnownKeys**](IdentityApi.md#getidentityoidcprovidernamewellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
-[**GetIdentityOidcProviderNameWellKnownOpenidConfiguration**](IdentityApi.md#getidentityoidcprovidernamewellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
-[**GetIdentityOidcRole**](IdentityApi.md#getidentityoidcrole) | **GET** /identity/oidc/role | List configured OIDC roles
-[**GetIdentityOidcRoleName**](IdentityApi.md#getidentityoidcrolename) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**GetIdentityOidcScope**](IdentityApi.md#getidentityoidcscope) | **GET** /identity/oidc/scope | 
-[**GetIdentityOidcScopeName**](IdentityApi.md#getidentityoidcscopename) | **GET** /identity/oidc/scope/{name} | 
-[**GetIdentityOidcTokenName**](IdentityApi.md#getidentityoidctokenname) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
-[**GetIdentityOidcWellKnownKeys**](IdentityApi.md#getidentityoidcwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
-[**GetIdentityOidcWellKnownOpenidConfiguration**](IdentityApi.md#getidentityoidcwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
-[**GetIdentityPersonaId**](IdentityApi.md#getidentitypersonaid) | **GET** /identity/persona/id | List all the alias IDs.
-[**GetIdentityPersonaIdId**](IdentityApi.md#getidentitypersonaidid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PostIdentityAlias**](IdentityApi.md#postidentityalias) | **POST** /identity/alias | Create a new alias.
-[**PostIdentityAliasIdId**](IdentityApi.md#postidentityaliasidid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**PostIdentityEntity**](IdentityApi.md#postidentityentity) | **POST** /identity/entity | Create a new entity
-[**PostIdentityEntityAlias**](IdentityApi.md#postidentityentityalias) | **POST** /identity/entity-alias | Create a new alias.
-[**PostIdentityEntityAliasIdId**](IdentityApi.md#postidentityentityaliasidid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**PostIdentityEntityBatchDelete**](IdentityApi.md#postidentityentitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
-[**PostIdentityEntityIdId**](IdentityApi.md#postidentityentityidid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**PostIdentityEntityMerge**](IdentityApi.md#postidentityentitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
-[**PostIdentityEntityNameName**](IdentityApi.md#postidentityentitynamename) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**PostIdentityGroup**](IdentityApi.md#postidentitygroup) | **POST** /identity/group | Create a new group.
-[**PostIdentityGroupAlias**](IdentityApi.md#postidentitygroupalias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
-[**PostIdentityGroupAliasIdId**](IdentityApi.md#postidentitygroupaliasidid) | **POST** /identity/group-alias/id/{id} | 
-[**PostIdentityGroupIdId**](IdentityApi.md#postidentitygroupidid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**PostIdentityGroupNameName**](IdentityApi.md#postidentitygroupnamename) | **POST** /identity/group/name/{name} | 
-[**PostIdentityLookupEntity**](IdentityApi.md#postidentitylookupentity) | **POST** /identity/lookup/entity | Query entities based on various properties.
-[**PostIdentityLookupGroup**](IdentityApi.md#postidentitylookupgroup) | **POST** /identity/lookup/group | Query groups based on various properties.
-[**PostIdentityMfaLoginEnforcementName**](IdentityApi.md#postidentitymfaloginenforcementname) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
-[**PostIdentityMfaMethodDuoMethodId**](IdentityApi.md#postidentitymfamethodduomethodid) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
-[**PostIdentityMfaMethodOktaMethodId**](IdentityApi.md#postidentitymfamethodoktamethodid) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
-[**PostIdentityMfaMethodPingidMethodId**](IdentityApi.md#postidentitymfamethodpingidmethodid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
-[**PostIdentityMfaMethodTotpAdminDestroy**](IdentityApi.md#postidentitymfamethodtotpadmindestroy) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
-[**PostIdentityMfaMethodTotpAdminGenerate**](IdentityApi.md#postidentitymfamethodtotpadmingenerate) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
-[**PostIdentityMfaMethodTotpGenerate**](IdentityApi.md#postidentitymfamethodtotpgenerate) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
-[**PostIdentityMfaMethodTotpMethodId**](IdentityApi.md#postidentitymfamethodtotpmethodid) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
-[**PostIdentityOidcAssignmentName**](IdentityApi.md#postidentityoidcassignmentname) | **POST** /identity/oidc/assignment/{name} | 
-[**PostIdentityOidcClientName**](IdentityApi.md#postidentityoidcclientname) | **POST** /identity/oidc/client/{name} | 
-[**PostIdentityOidcConfig**](IdentityApi.md#postidentityoidcconfig) | **POST** /identity/oidc/config | OIDC configuration
-[**PostIdentityOidcIntrospect**](IdentityApi.md#postidentityoidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
-[**PostIdentityOidcKeyName**](IdentityApi.md#postidentityoidckeyname) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**PostIdentityOidcKeyNameRotate**](IdentityApi.md#postidentityoidckeynamerotate) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
-[**PostIdentityOidcProviderName**](IdentityApi.md#postidentityoidcprovidername) | **POST** /identity/oidc/provider/{name} | 
-[**PostIdentityOidcProviderNameAuthorize**](IdentityApi.md#postidentityoidcprovidernameauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
-[**PostIdentityOidcProviderNameToken**](IdentityApi.md#postidentityoidcprovidernametoken) | **POST** /identity/oidc/provider/{name}/token | 
-[**PostIdentityOidcProviderNameUserinfo**](IdentityApi.md#postidentityoidcprovidernameuserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
-[**PostIdentityOidcRoleName**](IdentityApi.md#postidentityoidcrolename) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**PostIdentityOidcScopeName**](IdentityApi.md#postidentityoidcscopename) | **POST** /identity/oidc/scope/{name} | 
-[**PostIdentityPersona**](IdentityApi.md#postidentitypersona) | **POST** /identity/persona | Create a new alias.
-[**PostIdentityPersonaIdId**](IdentityApi.md#postidentitypersonaidid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**DeleteIdentityAliasIdId**](Identity.md#deleteidentityaliasidid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**DeleteIdentityEntityAliasIdId**](Identity.md#deleteidentityentityaliasidid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**DeleteIdentityEntityIdId**](Identity.md#deleteidentityentityidid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**DeleteIdentityEntityNameName**](Identity.md#deleteidentityentitynamename) | **DELETE** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**DeleteIdentityGroupAliasIdId**](Identity.md#deleteidentitygroupaliasidid) | **DELETE** /identity/group-alias/id/{id} | 
+[**DeleteIdentityGroupIdId**](Identity.md#deleteidentitygroupidid) | **DELETE** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**DeleteIdentityGroupNameName**](Identity.md#deleteidentitygroupnamename) | **DELETE** /identity/group/name/{name} | 
+[**DeleteIdentityMfaLoginEnforcementName**](Identity.md#deleteidentitymfaloginenforcementname) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
+[**DeleteIdentityMfaMethodDuoMethodId**](Identity.md#deleteidentitymfamethodduomethodid) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
+[**DeleteIdentityMfaMethodOktaMethodId**](Identity.md#deleteidentitymfamethodoktamethodid) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
+[**DeleteIdentityMfaMethodPingidMethodId**](Identity.md#deleteidentitymfamethodpingidmethodid) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
+[**DeleteIdentityMfaMethodTotpMethodId**](Identity.md#deleteidentitymfamethodtotpmethodid) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
+[**DeleteIdentityOidcAssignmentName**](Identity.md#deleteidentityoidcassignmentname) | **DELETE** /identity/oidc/assignment/{name} | 
+[**DeleteIdentityOidcClientName**](Identity.md#deleteidentityoidcclientname) | **DELETE** /identity/oidc/client/{name} | 
+[**DeleteIdentityOidcKeyName**](Identity.md#deleteidentityoidckeyname) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**DeleteIdentityOidcProviderName**](Identity.md#deleteidentityoidcprovidername) | **DELETE** /identity/oidc/provider/{name} | 
+[**DeleteIdentityOidcRoleName**](Identity.md#deleteidentityoidcrolename) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**DeleteIdentityOidcScopeName**](Identity.md#deleteidentityoidcscopename) | **DELETE** /identity/oidc/scope/{name} | 
+[**DeleteIdentityPersonaIdId**](Identity.md#deleteidentitypersonaidid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**GetIdentityAliasId**](Identity.md#getidentityaliasid) | **GET** /identity/alias/id | List all the alias IDs.
+[**GetIdentityAliasIdId**](Identity.md#getidentityaliasidid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**GetIdentityEntityAliasId**](Identity.md#getidentityentityaliasid) | **GET** /identity/entity-alias/id | List all the alias IDs.
+[**GetIdentityEntityAliasIdId**](Identity.md#getidentityentityaliasidid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**GetIdentityEntityId**](Identity.md#getidentityentityid) | **GET** /identity/entity/id | List all the entity IDs
+[**GetIdentityEntityIdId**](Identity.md#getidentityentityidid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**GetIdentityEntityName**](Identity.md#getidentityentityname) | **GET** /identity/entity/name | List all the entity names
+[**GetIdentityEntityNameName**](Identity.md#getidentityentitynamename) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**GetIdentityGroupAliasId**](Identity.md#getidentitygroupaliasid) | **GET** /identity/group-alias/id | List all the group alias IDs.
+[**GetIdentityGroupAliasIdId**](Identity.md#getidentitygroupaliasidid) | **GET** /identity/group-alias/id/{id} | 
+[**GetIdentityGroupId**](Identity.md#getidentitygroupid) | **GET** /identity/group/id | List all the group IDs.
+[**GetIdentityGroupIdId**](Identity.md#getidentitygroupidid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**GetIdentityGroupName**](Identity.md#getidentitygroupname) | **GET** /identity/group/name | 
+[**GetIdentityGroupNameName**](Identity.md#getidentitygroupnamename) | **GET** /identity/group/name/{name} | 
+[**GetIdentityMfaLoginEnforcement**](Identity.md#getidentitymfaloginenforcement) | **GET** /identity/mfa/login-enforcement | List login enforcements
+[**GetIdentityMfaLoginEnforcementName**](Identity.md#getidentitymfaloginenforcementname) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
+[**GetIdentityMfaMethod**](Identity.md#getidentitymfamethod) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
+[**GetIdentityMfaMethodDuo**](Identity.md#getidentitymfamethodduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
+[**GetIdentityMfaMethodDuoMethodId**](Identity.md#getidentitymfamethodduomethodid) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
+[**GetIdentityMfaMethodMethodId**](Identity.md#getidentitymfamethodmethodid) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
+[**GetIdentityMfaMethodOkta**](Identity.md#getidentitymfamethodokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
+[**GetIdentityMfaMethodOktaMethodId**](Identity.md#getidentitymfamethodoktamethodid) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
+[**GetIdentityMfaMethodPingid**](Identity.md#getidentitymfamethodpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
+[**GetIdentityMfaMethodPingidMethodId**](Identity.md#getidentitymfamethodpingidmethodid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
+[**GetIdentityMfaMethodTotp**](Identity.md#getidentitymfamethodtotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
+[**GetIdentityMfaMethodTotpMethodId**](Identity.md#getidentitymfamethodtotpmethodid) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+[**GetIdentityOidcAssignment**](Identity.md#getidentityoidcassignment) | **GET** /identity/oidc/assignment | 
+[**GetIdentityOidcAssignmentName**](Identity.md#getidentityoidcassignmentname) | **GET** /identity/oidc/assignment/{name} | 
+[**GetIdentityOidcClient**](Identity.md#getidentityoidcclient) | **GET** /identity/oidc/client | 
+[**GetIdentityOidcClientName**](Identity.md#getidentityoidcclientname) | **GET** /identity/oidc/client/{name} | 
+[**GetIdentityOidcConfig**](Identity.md#getidentityoidcconfig) | **GET** /identity/oidc/config | OIDC configuration
+[**GetIdentityOidcKey**](Identity.md#getidentityoidckey) | **GET** /identity/oidc/key | List OIDC keys
+[**GetIdentityOidcKeyName**](Identity.md#getidentityoidckeyname) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**GetIdentityOidcProvider**](Identity.md#getidentityoidcprovider) | **GET** /identity/oidc/provider | 
+[**GetIdentityOidcProviderName**](Identity.md#getidentityoidcprovidername) | **GET** /identity/oidc/provider/{name} | 
+[**GetIdentityOidcProviderNameAuthorize**](Identity.md#getidentityoidcprovidernameauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
+[**GetIdentityOidcProviderNameUserinfo**](Identity.md#getidentityoidcprovidernameuserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
+[**GetIdentityOidcProviderNameWellKnownKeys**](Identity.md#getidentityoidcprovidernamewellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
+[**GetIdentityOidcProviderNameWellKnownOpenidConfiguration**](Identity.md#getidentityoidcprovidernamewellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
+[**GetIdentityOidcRole**](Identity.md#getidentityoidcrole) | **GET** /identity/oidc/role | List configured OIDC roles
+[**GetIdentityOidcRoleName**](Identity.md#getidentityoidcrolename) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**GetIdentityOidcScope**](Identity.md#getidentityoidcscope) | **GET** /identity/oidc/scope | 
+[**GetIdentityOidcScopeName**](Identity.md#getidentityoidcscopename) | **GET** /identity/oidc/scope/{name} | 
+[**GetIdentityOidcTokenName**](Identity.md#getidentityoidctokenname) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
+[**GetIdentityOidcWellKnownKeys**](Identity.md#getidentityoidcwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
+[**GetIdentityOidcWellKnownOpenidConfiguration**](Identity.md#getidentityoidcwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
+[**GetIdentityPersonaId**](Identity.md#getidentitypersonaid) | **GET** /identity/persona/id | List all the alias IDs.
+[**GetIdentityPersonaIdId**](Identity.md#getidentitypersonaidid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**PostIdentityAlias**](Identity.md#postidentityalias) | **POST** /identity/alias | Create a new alias.
+[**PostIdentityAliasIdId**](Identity.md#postidentityaliasidid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**PostIdentityEntity**](Identity.md#postidentityentity) | **POST** /identity/entity | Create a new entity
+[**PostIdentityEntityAlias**](Identity.md#postidentityentityalias) | **POST** /identity/entity-alias | Create a new alias.
+[**PostIdentityEntityAliasIdId**](Identity.md#postidentityentityaliasidid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**PostIdentityEntityBatchDelete**](Identity.md#postidentityentitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
+[**PostIdentityEntityIdId**](Identity.md#postidentityentityidid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**PostIdentityEntityMerge**](Identity.md#postidentityentitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
+[**PostIdentityEntityNameName**](Identity.md#postidentityentitynamename) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**PostIdentityGroup**](Identity.md#postidentitygroup) | **POST** /identity/group | Create a new group.
+[**PostIdentityGroupAlias**](Identity.md#postidentitygroupalias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
+[**PostIdentityGroupAliasIdId**](Identity.md#postidentitygroupaliasidid) | **POST** /identity/group-alias/id/{id} | 
+[**PostIdentityGroupIdId**](Identity.md#postidentitygroupidid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**PostIdentityGroupNameName**](Identity.md#postidentitygroupnamename) | **POST** /identity/group/name/{name} | 
+[**PostIdentityLookupEntity**](Identity.md#postidentitylookupentity) | **POST** /identity/lookup/entity | Query entities based on various properties.
+[**PostIdentityLookupGroup**](Identity.md#postidentitylookupgroup) | **POST** /identity/lookup/group | Query groups based on various properties.
+[**PostIdentityMfaLoginEnforcementName**](Identity.md#postidentitymfaloginenforcementname) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
+[**PostIdentityMfaMethodDuoMethodId**](Identity.md#postidentitymfamethodduomethodid) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
+[**PostIdentityMfaMethodOktaMethodId**](Identity.md#postidentitymfamethodoktamethodid) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
+[**PostIdentityMfaMethodPingidMethodId**](Identity.md#postidentitymfamethodpingidmethodid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
+[**PostIdentityMfaMethodTotpAdminDestroy**](Identity.md#postidentitymfamethodtotpadmindestroy) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
+[**PostIdentityMfaMethodTotpAdminGenerate**](Identity.md#postidentitymfamethodtotpadmingenerate) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
+[**PostIdentityMfaMethodTotpGenerate**](Identity.md#postidentitymfamethodtotpgenerate) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
+[**PostIdentityMfaMethodTotpMethodId**](Identity.md#postidentitymfamethodtotpmethodid) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
+[**PostIdentityOidcAssignmentName**](Identity.md#postidentityoidcassignmentname) | **POST** /identity/oidc/assignment/{name} | 
+[**PostIdentityOidcClientName**](Identity.md#postidentityoidcclientname) | **POST** /identity/oidc/client/{name} | 
+[**PostIdentityOidcConfig**](Identity.md#postidentityoidcconfig) | **POST** /identity/oidc/config | OIDC configuration
+[**PostIdentityOidcIntrospect**](Identity.md#postidentityoidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
+[**PostIdentityOidcKeyName**](Identity.md#postidentityoidckeyname) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**PostIdentityOidcKeyNameRotate**](Identity.md#postidentityoidckeynamerotate) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
+[**PostIdentityOidcProviderName**](Identity.md#postidentityoidcprovidername) | **POST** /identity/oidc/provider/{name} | 
+[**PostIdentityOidcProviderNameAuthorize**](Identity.md#postidentityoidcprovidernameauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
+[**PostIdentityOidcProviderNameToken**](Identity.md#postidentityoidcprovidernametoken) | **POST** /identity/oidc/provider/{name}/token | 
+[**PostIdentityOidcProviderNameUserinfo**](Identity.md#postidentityoidcprovidernameuserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
+[**PostIdentityOidcRoleName**](Identity.md#postidentityoidcrolename) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**PostIdentityOidcScopeName**](Identity.md#postidentityoidcscopename) | **POST** /identity/oidc/scope/{name} | 
+[**PostIdentityPersona**](Identity.md#postidentitypersona) | **POST** /identity/persona | Create a new alias.
+[**PostIdentityPersonaIdId**](Identity.md#postidentitypersonaidid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
 
 
 <a name="deleteidentityaliasidid"></a>
@@ -137,7 +137,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -147,7 +147,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -209,7 +209,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -219,7 +219,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityEntityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityEntityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -281,7 +281,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
 
             try
@@ -291,7 +291,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityEntityIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityEntityIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -353,7 +353,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
 
             try
@@ -363,7 +363,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityEntityNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityEntityNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -425,7 +425,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
 
             try
@@ -434,7 +434,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityGroupAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityGroupAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -496,7 +496,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
 
             try
@@ -506,7 +506,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityGroupIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityGroupIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -568,7 +568,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
 
             try
@@ -577,7 +577,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityGroupNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityGroupNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -639,7 +639,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
 
             try
@@ -649,7 +649,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityMfaLoginEnforcementName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityMfaLoginEnforcementName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -711,7 +711,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -721,7 +721,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityMfaMethodDuoMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityMfaMethodDuoMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -783,7 +783,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -793,7 +793,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityMfaMethodOktaMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityMfaMethodOktaMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -855,7 +855,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -865,7 +865,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityMfaMethodPingidMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityMfaMethodPingidMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -927,7 +927,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -937,7 +937,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityMfaMethodTotpMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityMfaMethodTotpMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -999,7 +999,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
 
             try
@@ -1008,7 +1008,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcAssignmentName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcAssignmentName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1070,7 +1070,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
 
             try
@@ -1079,7 +1079,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcClientName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcClientName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1141,7 +1141,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -1151,7 +1151,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcKeyName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcKeyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1213,7 +1213,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -1222,7 +1222,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcProviderName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcProviderName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1284,7 +1284,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -1294,7 +1294,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1356,7 +1356,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
 
             try
@@ -1365,7 +1365,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityOidcScopeName: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityOidcScopeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1427,7 +1427,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
 
             try
@@ -1437,7 +1437,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.DeleteIdentityPersonaIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.DeleteIdentityPersonaIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1499,7 +1499,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1509,7 +1509,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityAliasId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityAliasId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1571,7 +1571,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -1581,7 +1581,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1643,7 +1643,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1653,7 +1653,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityAliasId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityAliasId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1715,7 +1715,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
 
             try
@@ -1725,7 +1725,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1787,7 +1787,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1797,7 +1797,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1859,7 +1859,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
 
             try
@@ -1869,7 +1869,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1931,7 +1931,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -1941,7 +1941,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2003,7 +2003,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
 
             try
@@ -2013,7 +2013,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityEntityNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityEntityNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2075,7 +2075,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2085,7 +2085,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupAliasId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupAliasId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2147,7 +2147,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
 
             try
@@ -2156,7 +2156,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2218,7 +2218,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2228,7 +2228,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2290,7 +2290,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
 
             try
@@ -2300,7 +2300,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2362,7 +2362,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2371,7 +2371,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2433,7 +2433,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
 
             try
@@ -2442,7 +2442,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityGroupNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityGroupNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2504,7 +2504,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2514,7 +2514,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaLoginEnforcement: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2576,7 +2576,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
 
             try
@@ -2586,7 +2586,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaLoginEnforcementName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaLoginEnforcementName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2648,7 +2648,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2658,7 +2658,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethod: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2720,7 +2720,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2730,7 +2730,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodDuo: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodDuo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2792,7 +2792,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -2802,7 +2802,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodDuoMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodDuoMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2864,7 +2864,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -2874,7 +2874,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2936,7 +2936,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -2946,7 +2946,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodOkta: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodOkta: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3008,7 +3008,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -3018,7 +3018,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodOktaMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodOktaMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3080,7 +3080,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3090,7 +3090,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodPingid: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodPingid: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3152,7 +3152,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -3162,7 +3162,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodPingidMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodPingidMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3224,7 +3224,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3234,7 +3234,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodTotp: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodTotp: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3296,7 +3296,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
 
             try
@@ -3306,7 +3306,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityMfaMethodTotpMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityMfaMethodTotpMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3368,7 +3368,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3377,7 +3377,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcAssignment: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3439,7 +3439,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
 
             try
@@ -3448,7 +3448,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcAssignmentName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcAssignmentName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3510,7 +3510,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3519,7 +3519,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcClient: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3581,7 +3581,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
 
             try
@@ -3590,7 +3590,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcClientName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcClientName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3652,7 +3652,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
 
             try
             {
@@ -3661,7 +3661,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcConfig: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3720,7 +3720,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3730,7 +3730,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcKey: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3792,7 +3792,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
 
             try
@@ -3802,7 +3802,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcKeyName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcKeyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3864,7 +3864,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -3873,7 +3873,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProvider: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3935,7 +3935,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -3944,7 +3944,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProviderName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProviderName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4006,7 +4006,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -4015,7 +4015,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProviderNameAuthorize: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProviderNameAuthorize: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4077,7 +4077,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -4086,7 +4086,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProviderNameUserinfo: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProviderNameUserinfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4148,7 +4148,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -4157,7 +4157,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProviderNameWellKnownKeys: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProviderNameWellKnownKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4219,7 +4219,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -4228,7 +4228,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcProviderNameWellKnownOpenidConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcProviderNameWellKnownOpenidConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4290,7 +4290,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4300,7 +4300,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcRole: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4362,7 +4362,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4372,7 +4372,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4434,7 +4434,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4443,7 +4443,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcScope: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4505,7 +4505,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
 
             try
@@ -4514,7 +4514,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcScopeName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcScopeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4576,7 +4576,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
 
             try
@@ -4586,7 +4586,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcTokenName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcTokenName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4648,7 +4648,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4657,7 +4657,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcWellKnownKeys: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcWellKnownKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4716,7 +4716,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
 
             try
             {
@@ -4725,7 +4725,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityOidcWellKnownOpenidConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityOidcWellKnownOpenidConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4784,7 +4784,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
 
             try
@@ -4794,7 +4794,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityPersonaId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityPersonaId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4856,7 +4856,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
 
             try
@@ -4866,7 +4866,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.GetIdentityPersonaIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.GetIdentityPersonaIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4928,7 +4928,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityAliasRequest = new IdentityAliasRequest(); // IdentityAliasRequest |  (optional) 
 
             try
@@ -4938,7 +4938,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityAlias: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityAlias: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5000,7 +5000,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
             var identityAliasIdRequest = new IdentityAliasIdRequest(); // IdentityAliasIdRequest |  (optional) 
 
@@ -5011,7 +5011,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5074,7 +5074,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityEntityRequest = new IdentityEntityRequest(); // IdentityEntityRequest |  (optional) 
 
             try
@@ -5084,7 +5084,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntity: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5146,7 +5146,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityEntityAliasRequest = new IdentityEntityAliasRequest(); // IdentityEntityAliasRequest |  (optional) 
 
             try
@@ -5156,7 +5156,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityAlias: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityAlias: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5218,7 +5218,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the alias
             var identityEntityAliasIdRequest = new IdentityEntityAliasIdRequest(); // IdentityEntityAliasIdRequest |  (optional) 
 
@@ -5229,7 +5229,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5292,7 +5292,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityEntityBatchDeleteRequest = new IdentityEntityBatchDeleteRequest(); // IdentityEntityBatchDeleteRequest |  (optional) 
 
             try
@@ -5302,7 +5302,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityBatchDelete: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityBatchDelete: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5364,7 +5364,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
             var identityEntityIdRequest = new IdentityEntityIdRequest(); // IdentityEntityIdRequest |  (optional) 
 
@@ -5375,7 +5375,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5438,7 +5438,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityEntityMergeRequest = new IdentityEntityMergeRequest(); // IdentityEntityMergeRequest |  (optional) 
 
             try
@@ -5448,7 +5448,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityMerge: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityMerge: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5510,7 +5510,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the entity
             var identityEntityNameRequest = new IdentityEntityNameRequest(); // IdentityEntityNameRequest |  (optional) 
 
@@ -5521,7 +5521,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityEntityNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityEntityNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5584,7 +5584,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityGroupRequest = new IdentityGroupRequest(); // IdentityGroupRequest |  (optional) 
 
             try
@@ -5594,7 +5594,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityGroup: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5656,7 +5656,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityGroupAliasRequest = new IdentityGroupAliasRequest(); // IdentityGroupAliasRequest |  (optional) 
 
             try
@@ -5666,7 +5666,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityGroupAlias: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityGroupAlias: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5728,7 +5728,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group alias.
             var identityGroupAliasIdRequest = new IdentityGroupAliasIdRequest(); // IdentityGroupAliasIdRequest |  (optional) 
 
@@ -5738,7 +5738,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityGroupAliasIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityGroupAliasIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5801,7 +5801,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
             var identityGroupIdRequest = new IdentityGroupIdRequest(); // IdentityGroupIdRequest |  (optional) 
 
@@ -5812,7 +5812,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityGroupIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityGroupIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5875,7 +5875,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the group.
             var identityGroupNameRequest = new IdentityGroupNameRequest(); // IdentityGroupNameRequest |  (optional) 
 
@@ -5885,7 +5885,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityGroupNameName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityGroupNameName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5948,7 +5948,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityLookupEntityRequest = new IdentityLookupEntityRequest(); // IdentityLookupEntityRequest |  (optional) 
 
             try
@@ -5958,7 +5958,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityLookupEntity: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityLookupEntity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6020,7 +6020,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityLookupGroupRequest = new IdentityLookupGroupRequest(); // IdentityLookupGroupRequest |  (optional) 
 
             try
@@ -6030,7 +6030,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityLookupGroup: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityLookupGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6092,7 +6092,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name for this login enforcement configuration
             var identityMfaLoginEnforcementRequest = new IdentityMfaLoginEnforcementRequest(); // IdentityMfaLoginEnforcementRequest |  (optional) 
 
@@ -6103,7 +6103,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaLoginEnforcementName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaLoginEnforcementName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6166,7 +6166,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodDuoRequest = new IdentityMfaMethodDuoRequest(); // IdentityMfaMethodDuoRequest |  (optional) 
 
@@ -6177,7 +6177,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodDuoMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodDuoMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6240,7 +6240,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodOktaRequest = new IdentityMfaMethodOktaRequest(); // IdentityMfaMethodOktaRequest |  (optional) 
 
@@ -6251,7 +6251,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodOktaMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodOktaMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6314,7 +6314,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodPingidRequest = new IdentityMfaMethodPingidRequest(); // IdentityMfaMethodPingidRequest |  (optional) 
 
@@ -6325,7 +6325,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodPingidMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodPingidMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6388,7 +6388,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpAdminDestroyRequest = new IdentityMfaMethodTotpAdminDestroyRequest(); // IdentityMfaMethodTotpAdminDestroyRequest |  (optional) 
 
             try
@@ -6398,7 +6398,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodTotpAdminDestroy: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodTotpAdminDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6460,7 +6460,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpAdminGenerateRequest = new IdentityMfaMethodTotpAdminGenerateRequest(); // IdentityMfaMethodTotpAdminGenerateRequest |  (optional) 
 
             try
@@ -6470,7 +6470,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodTotpAdminGenerate: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodTotpAdminGenerate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6532,7 +6532,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityMfaMethodTotpGenerateRequest = new IdentityMfaMethodTotpGenerateRequest(); // IdentityMfaMethodTotpGenerateRequest |  (optional) 
 
             try
@@ -6542,7 +6542,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodTotpGenerate: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodTotpGenerate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6604,7 +6604,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             var identityMfaMethodTotpRequest = new IdentityMfaMethodTotpRequest(); // IdentityMfaMethodTotpRequest |  (optional) 
 
@@ -6615,7 +6615,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityMfaMethodTotpMethodId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityMfaMethodTotpMethodId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6678,7 +6678,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the assignment
             var identityOidcAssignmentRequest = new IdentityOidcAssignmentRequest(); // IdentityOidcAssignmentRequest |  (optional) 
 
@@ -6688,7 +6688,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcAssignmentName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcAssignmentName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6751,7 +6751,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the client.
             var identityOidcClientRequest = new IdentityOidcClientRequest(); // IdentityOidcClientRequest |  (optional) 
 
@@ -6761,7 +6761,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcClientName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcClientName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6824,7 +6824,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityOidcConfigRequest = new IdentityOidcConfigRequest(); // IdentityOidcConfigRequest |  (optional) 
 
             try
@@ -6834,7 +6834,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcConfig: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6896,7 +6896,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityOidcIntrospectRequest = new IdentityOidcIntrospectRequest(); // IdentityOidcIntrospectRequest |  (optional) 
 
             try
@@ -6906,7 +6906,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcIntrospect: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcIntrospect: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6968,7 +6968,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var identityOidcKeyRequest = new IdentityOidcKeyRequest(); // IdentityOidcKeyRequest |  (optional) 
 
@@ -6979,7 +6979,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcKeyName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcKeyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7042,7 +7042,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the key
             var identityOidcKeyRotateRequest = new IdentityOidcKeyRotateRequest(); // IdentityOidcKeyRotateRequest |  (optional) 
 
@@ -7053,7 +7053,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcKeyNameRotate: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcKeyNameRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7116,7 +7116,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderRequest = new IdentityOidcProviderRequest(); // IdentityOidcProviderRequest |  (optional) 
 
@@ -7126,7 +7126,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcProviderName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcProviderName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7189,7 +7189,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderAuthorizeRequest = new IdentityOidcProviderAuthorizeRequest(); // IdentityOidcProviderAuthorizeRequest |  (optional) 
 
@@ -7199,7 +7199,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcProviderNameAuthorize: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcProviderNameAuthorize: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7262,7 +7262,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
             var identityOidcProviderTokenRequest = new IdentityOidcProviderTokenRequest(); // IdentityOidcProviderTokenRequest |  (optional) 
 
@@ -7272,7 +7272,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcProviderNameToken: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcProviderNameToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7335,7 +7335,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the provider
 
             try
@@ -7344,7 +7344,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcProviderNameUserinfo: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcProviderNameUserinfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7406,7 +7406,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role
             var identityOidcRoleRequest = new IdentityOidcRoleRequest(); // IdentityOidcRoleRequest |  (optional) 
 
@@ -7417,7 +7417,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7480,7 +7480,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the scope
             var identityOidcScopeRequest = new IdentityOidcScopeRequest(); // IdentityOidcScopeRequest |  (optional) 
 
@@ -7490,7 +7490,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityOidcScopeName: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityOidcScopeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7553,7 +7553,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var identityPersonaRequest = new IdentityPersonaRequest(); // IdentityPersonaRequest |  (optional) 
 
             try
@@ -7563,7 +7563,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityPersona: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityPersona: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7625,7 +7625,7 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new IdentityApi(httpClient, config, httpClientHandler);
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var id = "id_example";  // string | ID of the persona
             var identityPersonaIdRequest = new IdentityPersonaIdRequest(); // IdentityPersonaIdRequest |  (optional) 
 
@@ -7636,7 +7636,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling IdentityApi.PostIdentityPersonaIdId: " + e.Message );
+                Debug.Print("Exception when calling Identity.PostIdentityPersonaIdId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

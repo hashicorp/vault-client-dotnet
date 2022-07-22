@@ -21,7 +21,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISecretsApiSync : IApiAccessor
+    public interface ISecretsSync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -3107,7 +3107,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISecretsApiAsync : IApiAccessor
+    public interface ISecretsAsync : IApiAccessor
     {
         #region Asynchronous Operations
    
@@ -6801,7 +6801,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISecretsApi : ISecretsApiSync, ISecretsApiAsync
+    public interface ISecrets : ISecretsSync, ISecretsAsync
     {
 
     }
@@ -6809,29 +6809,29 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class SecretsApi : IDisposable, ISecretsApi
+    public partial class Secrets : IDisposable, ISecrets
     {
         private VaultClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class.
+        /// Initializes a new instance of the <see cref="Secrets"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
-        public SecretsApi() : this((string)null)
+        public Secrets() : this((string)null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class.
+        /// Initializes a new instance of the <see cref="Secrets"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="basePath">The target service's base path in URL format.</param>
         /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
-        public SecretsApi(string basePath)
+        public Secrets(string basePath)
         {
             this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
                 VaultClient.Client.GlobalConfiguration.Instance,
@@ -6844,14 +6844,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Secrets"/> class using Configuration object.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="configuration">An instance of Configuration.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
-        public SecretsApi(VaultClient.Client.Configuration configuration)
+        public Secrets(VaultClient.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -6866,7 +6866,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class.
+        /// Initializes a new instance of the <see cref="Secrets"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
@@ -6876,12 +6876,12 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SecretsApi(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
+        public Secrets(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class.
+        /// Initializes a new instance of the <see cref="Secrets"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="basePath">The target service's base path in URL format.</param>
@@ -6893,7 +6893,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SecretsApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+        public Secrets(HttpClient client, string basePath, HttpClientHandler handler = null)
         {
             if (client == null) throw new ArgumentNullException("client");
 
@@ -6908,7 +6908,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Secrets"/> class using Configuration object.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="configuration">An instance of Configuration.</param>
@@ -6919,7 +6919,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public SecretsApi(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
+        public Secrets(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
@@ -6935,14 +6935,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecretsApi"/> class
+        /// Initializes a new instance of the <see cref="Secrets"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public SecretsApi(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
+        public Secrets(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -7097,7 +7097,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7141,7 +7141,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7187,7 +7187,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7231,7 +7231,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7355,7 +7355,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7399,7 +7399,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7445,7 +7445,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7489,7 +7489,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7613,7 +7613,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7657,7 +7657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7703,7 +7703,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7747,7 +7747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7793,7 +7793,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7837,7 +7837,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7883,7 +7883,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7927,7 +7927,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7973,7 +7973,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8017,7 +8017,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8141,7 +8141,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysDeregisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8185,7 +8185,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysDeregisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8231,7 +8231,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8275,7 +8275,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8321,7 +8321,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysTrimKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8365,7 +8365,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->DeleteGcpkmsKeysTrimKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8489,7 +8489,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8533,7 +8533,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8579,7 +8579,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8623,7 +8623,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8669,7 +8669,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8713,7 +8713,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8915,7 +8915,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8959,7 +8959,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9083,7 +9083,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9127,7 +9127,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9173,7 +9173,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9217,7 +9217,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9263,7 +9263,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->DeletePkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9307,7 +9307,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->DeletePkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9431,7 +9431,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->DeletePkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9475,7 +9475,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->DeletePkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9521,7 +9521,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeletePkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9565,7 +9565,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeletePkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9689,7 +9689,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9733,7 +9733,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9779,7 +9779,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9823,7 +9823,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9869,7 +9869,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9913,7 +9913,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->DeleteSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10115,7 +10115,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling SecretsApi->DeleteSshKeysKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10159,7 +10159,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling SecretsApi->DeleteSshKeysKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10205,7 +10205,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->DeleteSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10249,7 +10249,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->DeleteSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10373,7 +10373,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10417,7 +10417,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10463,7 +10463,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10507,7 +10507,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10553,7 +10553,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10597,7 +10597,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->DeleteTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10721,7 +10721,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10765,7 +10765,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10811,7 +10811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAdLibrary");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10855,7 +10855,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAdLibrary");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10901,7 +10901,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10945,7 +10945,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10991,7 +10991,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdLibraryNameStatus");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11035,7 +11035,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdLibraryNameStatus");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11081,7 +11081,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAdRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11125,7 +11125,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAdRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11171,7 +11171,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11215,7 +11215,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11417,7 +11417,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAlicloudCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11461,7 +11461,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAlicloudCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11507,7 +11507,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAlicloudRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11551,7 +11551,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAlicloudRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11597,7 +11597,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11641,7 +11641,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11921,7 +11921,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAwsRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11965,7 +11965,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAwsRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12011,7 +12011,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12055,7 +12055,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12101,7 +12101,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAwsStsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12145,7 +12145,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAwsStsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12269,7 +12269,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetAzureCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12313,7 +12313,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetAzureCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12359,7 +12359,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAzureRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12403,7 +12403,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetAzureRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12449,7 +12449,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12493,7 +12493,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12617,7 +12617,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetConsulCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12661,7 +12661,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetConsulCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12707,7 +12707,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetConsulRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12751,7 +12751,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetConsulRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12797,7 +12797,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12841,7 +12841,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -12888,7 +12888,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12937,7 +12937,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13065,7 +13065,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpKeyRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13109,7 +13109,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpKeyRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13155,7 +13155,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13199,7 +13199,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13245,7 +13245,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpRolesetRolesetKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13289,7 +13289,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpRolesetRolesetKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13335,7 +13335,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpRolesetRolesetToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13379,7 +13379,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpRolesetRolesetToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13425,7 +13425,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpRolesets");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13469,7 +13469,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpRolesets");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13515,7 +13515,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13559,7 +13559,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13605,7 +13605,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountNameKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13649,7 +13649,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountNameKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13695,7 +13695,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13739,7 +13739,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetGcpStaticAccountNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13785,7 +13785,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpStaticAccounts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13829,7 +13829,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpStaticAccounts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -13875,7 +13875,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpTokenRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -13919,7 +13919,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->GetGcpTokenRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14043,7 +14043,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpkmsKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14087,7 +14087,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetGcpkmsKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14133,7 +14133,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsKeysConfigKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14177,7 +14177,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsKeysConfigKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14223,7 +14223,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14267,7 +14267,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14313,7 +14313,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsPubkeyKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14357,7 +14357,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->GetGcpkmsPubkeyKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14481,7 +14481,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetKubernetesRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14525,7 +14525,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetKubernetesRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14571,7 +14571,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14615,7 +14615,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14662,7 +14662,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14711,7 +14711,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14839,7 +14839,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetMongodbatlasCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14883,7 +14883,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetMongodbatlasCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -14929,7 +14929,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetMongodbatlasRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -14973,7 +14973,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetMongodbatlasRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15019,7 +15019,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15063,7 +15063,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15265,7 +15265,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetNomadCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15309,7 +15309,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetNomadCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15355,7 +15355,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetNomadRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15399,7 +15399,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetNomadRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15445,7 +15445,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15489,7 +15489,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15613,7 +15613,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15657,7 +15657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15703,7 +15703,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetOpenldapRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15747,7 +15747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetOpenldapRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15793,7 +15793,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15837,7 +15837,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15883,7 +15883,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapStaticCredName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -15927,7 +15927,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapStaticCredName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -15973,7 +15973,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetOpenldapStaticRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16017,7 +16017,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetOpenldapStaticRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16063,7 +16063,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16107,7 +16107,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16543,7 +16543,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerial");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16587,7 +16587,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerial");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16633,7 +16633,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerialRaw");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16677,7 +16677,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerialRaw");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16723,7 +16723,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerialRawPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16767,7 +16767,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling SecretsApi->GetPkiCertSerialRawPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -16813,7 +16813,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiCerts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -16857,7 +16857,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiCerts");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17527,7 +17527,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->GetPkiIssuerRefCrlPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17571,7 +17571,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->GetPkiIssuerRefCrlPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17617,7 +17617,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->GetPkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17661,7 +17661,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->GetPkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17707,7 +17707,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiIssuers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17751,7 +17751,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiIssuers");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17875,7 +17875,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->GetPkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -17919,7 +17919,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->GetPkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -17965,7 +17965,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18009,7 +18009,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18055,7 +18055,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18099,7 +18099,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetPkiRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18145,7 +18145,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetPkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18189,7 +18189,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetPkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18391,7 +18391,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetRabbitmqCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18435,7 +18435,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetRabbitmqCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18481,7 +18481,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetRabbitmqRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18525,7 +18525,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetRabbitmqRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18571,7 +18571,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18615,7 +18615,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18739,7 +18739,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18783,7 +18783,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18830,7 +18830,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18879,7 +18879,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -18929,7 +18929,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretSubkeysPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -18973,7 +18973,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->GetSecretSubkeysPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19253,7 +19253,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetSshRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19297,7 +19297,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetSshRoles");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19343,7 +19343,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19387,7 +19387,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->GetSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19511,7 +19511,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTerraformCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19555,7 +19555,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTerraformCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19601,7 +19601,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTerraformRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19645,7 +19645,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTerraformRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19691,7 +19691,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19735,7 +19735,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19781,7 +19781,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTotpCodeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19825,7 +19825,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTotpCodeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19871,7 +19871,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTotpKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -19915,7 +19915,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTotpKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -19961,7 +19961,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20005,7 +20005,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20051,7 +20051,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitBackupName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20095,7 +20095,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitBackupName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20220,11 +20220,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitExportTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SecretsApi->GetTransitExportTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20270,11 +20270,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitExportTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SecretsApi->GetTransitExportTypeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20323,15 +20323,15 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'version' is set
             if (version == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'version' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20379,15 +20379,15 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'version' is set
             if (version == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'version' when calling SecretsApi->GetTransitExportTypeNameVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20435,7 +20435,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTransitKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20479,7 +20479,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling SecretsApi->GetTransitKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20525,7 +20525,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20569,7 +20569,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->GetTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20778,7 +20778,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryManageNameCheckIn");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20825,7 +20825,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryManageNameCheckIn");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20874,7 +20874,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -20921,7 +20921,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -20970,7 +20970,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryNameCheckIn");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21017,7 +21017,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryNameCheckIn");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21066,7 +21066,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryNameCheckOut");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21113,7 +21113,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdLibraryNameCheckOut");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21162,7 +21162,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21209,7 +21209,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21257,7 +21257,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21301,7 +21301,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAdRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21510,7 +21510,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21557,7 +21557,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAlicloudRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -21936,7 +21936,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -21983,7 +21983,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAwsRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22032,7 +22032,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAwsStsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22079,7 +22079,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAwsStsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22212,7 +22212,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22259,7 +22259,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostAzureRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22470,7 +22470,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22517,7 +22517,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostConsulRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22565,7 +22565,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22609,7 +22609,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostCubbyholePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22818,7 +22818,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpKeyRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22865,7 +22865,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpKeyRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -22914,7 +22914,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -22961,7 +22961,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23009,7 +23009,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23053,7 +23053,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23099,7 +23099,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetNameRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23143,7 +23143,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpRolesetNameRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23190,7 +23190,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpRolesetRolesetKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23237,7 +23237,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpRolesetRolesetKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23285,7 +23285,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpRolesetRolesetToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23329,7 +23329,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpRolesetRolesetToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23376,7 +23376,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23423,7 +23423,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23472,7 +23472,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23519,7 +23519,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23567,7 +23567,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23611,7 +23611,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23657,7 +23657,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23701,7 +23701,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostGcpStaticAccountNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23747,7 +23747,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpTokenRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23791,7 +23791,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling SecretsApi->PostGcpTokenRoleset");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -23922,7 +23922,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsDecryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -23969,7 +23969,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsDecryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24018,7 +24018,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsEncryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24065,7 +24065,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsEncryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24114,7 +24114,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysConfigKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24161,7 +24161,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysConfigKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24209,7 +24209,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysDeregisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24253,7 +24253,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysDeregisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24300,7 +24300,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24347,7 +24347,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24396,7 +24396,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysRegisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24443,7 +24443,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysRegisterKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24491,7 +24491,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24535,7 +24535,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysRotateKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24581,7 +24581,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysTrimKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24625,7 +24625,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsKeysTrimKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24672,7 +24672,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsReencryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24719,7 +24719,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsReencryptKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24768,7 +24768,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsSignKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24815,7 +24815,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsSignKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -24864,7 +24864,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsVerifyKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -24911,7 +24911,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling SecretsApi->PostGcpkmsVerifyKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25044,7 +25044,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostKubernetesCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25091,7 +25091,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostKubernetesCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25140,7 +25140,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25187,7 +25187,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostKubernetesRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25235,7 +25235,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25279,7 +25279,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostKvPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25409,7 +25409,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostMongodbatlasCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25453,7 +25453,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostMongodbatlasCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25500,7 +25500,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25547,7 +25547,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostMongodbatlasRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25764,7 +25764,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25811,7 +25811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostNomadRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -25944,7 +25944,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -25991,7 +25991,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26039,7 +26039,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26083,7 +26083,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26208,7 +26208,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -26255,7 +26255,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostOpenldapStaticRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -26976,7 +26976,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIntermediateGenerateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27023,7 +27023,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIntermediateGenerateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27240,7 +27240,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27287,7 +27287,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27337,11 +27337,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27390,11 +27390,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27444,7 +27444,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignIntermediate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27491,7 +27491,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignIntermediate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27541,11 +27541,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27594,11 +27594,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27648,7 +27648,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignSelfIssued");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27695,7 +27695,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignSelfIssued");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27744,7 +27744,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatim");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27791,7 +27791,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatim");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27841,11 +27841,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27894,11 +27894,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -27948,7 +27948,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -27995,7 +27995,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling SecretsApi->PostPkiIssuerRefDerPem");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28044,7 +28044,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIssuersGenerateIntermediateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28091,7 +28091,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIssuersGenerateIntermediateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28140,7 +28140,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIssuersGenerateRootExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28187,7 +28187,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiIssuersGenerateRootExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28320,7 +28320,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->PostPkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28367,7 +28367,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling SecretsApi->PostPkiKeyKeyRef");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28668,7 +28668,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostPkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28715,7 +28715,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostPkiRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28764,7 +28764,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiRootGenerateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28811,7 +28811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiRootGenerateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -28944,7 +28944,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiRootRotateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -28991,7 +28991,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling SecretsApi->PostPkiRootRotateExported");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29208,7 +29208,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29255,7 +29255,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29388,7 +29388,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29435,7 +29435,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostPkiSignVerbatimRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29736,7 +29736,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29783,7 +29783,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostRabbitmqRolesName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -29916,7 +29916,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -29963,7 +29963,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30012,7 +30012,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDeletePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30059,7 +30059,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDeletePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30108,7 +30108,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDestroyPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30155,7 +30155,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretDestroyPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30204,7 +30204,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30251,7 +30251,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretMetadataPath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30300,7 +30300,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretUndeletePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30347,7 +30347,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling SecretsApi->PostSecretUndeletePath");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30564,7 +30564,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30611,7 +30611,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshCredsRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30660,7 +30660,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling SecretsApi->PostSshKeysKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30707,7 +30707,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling SecretsApi->PostSshKeysKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30840,7 +30840,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30887,7 +30887,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshRolesRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -30936,7 +30936,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -30983,7 +30983,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling SecretsApi->PostSshSignRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31199,7 +31199,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31243,7 +31243,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformCredsName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31290,7 +31290,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31337,7 +31337,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31385,7 +31385,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31429,7 +31429,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTerraformRotateRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31476,7 +31476,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTotpCodeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31523,7 +31523,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTotpCodeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31572,7 +31572,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31619,7 +31619,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTotpKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31753,11 +31753,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitDatakeyPlaintextName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             // verify the required parameter 'plaintext' is set
             if (plaintext == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'plaintext' when calling SecretsApi->PostTransitDatakeyPlaintextName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31806,11 +31806,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitDatakeyPlaintextName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             // verify the required parameter 'plaintext' is set
             if (plaintext == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'plaintext' when calling SecretsApi->PostTransitDatakeyPlaintextName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31860,7 +31860,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitDecryptName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -31907,7 +31907,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitDecryptName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -31956,7 +31956,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitEncryptName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32003,7 +32003,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitEncryptName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32136,7 +32136,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitHashUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32183,7 +32183,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitHashUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32232,7 +32232,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitHmacName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32279,7 +32279,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitHmacName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32329,11 +32329,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitHmacNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitHmacNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32382,11 +32382,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitHmacNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitHmacNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32436,7 +32436,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32483,7 +32483,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32532,7 +32532,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameConfig");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32579,7 +32579,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameConfig");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32628,7 +32628,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameImport");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32675,7 +32675,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameImport");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32724,7 +32724,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameImportVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32771,7 +32771,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameImportVersion");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32819,7 +32819,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32863,7 +32863,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -32910,7 +32910,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameTrim");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -32957,7 +32957,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitKeysNameTrim");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33090,7 +33090,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SecretsApi->PostTransitRandomSource");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33137,7 +33137,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SecretsApi->PostTransitRandomSource");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33187,11 +33187,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SecretsApi->PostTransitRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SecretsApi->PostTransitRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33240,11 +33240,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling SecretsApi->PostTransitRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SecretsApi->PostTransitRandomSourceUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33294,7 +33294,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SecretsApi->PostTransitRandomUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33341,7 +33341,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling SecretsApi->PostTransitRandomUrlbytes");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33474,7 +33474,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitRestoreName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33521,7 +33521,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitRestoreName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33570,7 +33570,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitRewrapName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33617,7 +33617,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitRewrapName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33666,7 +33666,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitSignName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33713,7 +33713,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitSignName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33763,11 +33763,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitSignNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitSignNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33816,11 +33816,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitSignNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitSignNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33870,7 +33870,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitVerifyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -33917,7 +33917,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitVerifyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -33967,11 +33967,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -34020,11 +34020,11 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling SecretsApi->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling SecretsApi->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();

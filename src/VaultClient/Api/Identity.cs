@@ -21,7 +21,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IIdentityApiSync : IApiAccessor
+    public interface IIdentitySync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -1099,7 +1099,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IIdentityApiAsync : IApiAccessor
+    public interface IIdentityAsync : IApiAccessor
     {
         #region Asynchronous Operations
    
@@ -2387,7 +2387,7 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IIdentityApi : IIdentityApiSync, IIdentityApiAsync
+    public interface IIdentity : IIdentitySync, IIdentityAsync
     {
 
     }
@@ -2395,29 +2395,29 @@ namespace VaultClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class IdentityApi : IDisposable, IIdentityApi
+    public partial class Identity : IDisposable, IIdentity
     {
         private VaultClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class.
+        /// Initializes a new instance of the <see cref="Identity"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
-        public IdentityApi() : this((string)null)
+        public Identity() : this((string)null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class.
+        /// Initializes a new instance of the <see cref="Identity"/> class.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="basePath">The target service's base path in URL format.</param>
         /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
-        public IdentityApi(string basePath)
+        public Identity(string basePath)
         {
             this.Configuration = VaultClient.Client.Configuration.MergeConfigurations(
                 VaultClient.Client.GlobalConfiguration.Instance,
@@ -2430,14 +2430,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Identity"/> class using Configuration object.
         /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
         /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <param name="configuration">An instance of Configuration.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
-        public IdentityApi(VaultClient.Client.Configuration configuration)
+        public Identity(VaultClient.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -2452,7 +2452,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class.
+        /// Initializes a new instance of the <see cref="Identity"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
@@ -2462,12 +2462,12 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public IdentityApi(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
+        public Identity(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class.
+        /// Initializes a new instance of the <see cref="Identity"/> class.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="basePath">The target service's base path in URL format.</param>
@@ -2479,7 +2479,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public IdentityApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+        public Identity(HttpClient client, string basePath, HttpClientHandler handler = null)
         {
             if (client == null) throw new ArgumentNullException("client");
 
@@ -2494,7 +2494,7 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class using Configuration object.
+        /// Initializes a new instance of the <see cref="Identity"/> class using Configuration object.
         /// </summary>
         /// <param name="client">An instance of HttpClient.</param>
         /// <param name="configuration">An instance of Configuration.</param>
@@ -2505,7 +2505,7 @@ namespace VaultClient.Api
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public IdentityApi(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
+        public Identity(HttpClient client, VaultClient.Client.Configuration configuration, HttpClientHandler handler = null)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
             if (client == null) throw new ArgumentNullException("client");
@@ -2521,14 +2521,14 @@ namespace VaultClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IdentityApi"/> class
+        /// Initializes a new instance of the <see cref="Identity"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public IdentityApi(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
+        public Identity(VaultClient.Client.ISynchronousClient client, VaultClient.Client.IAsynchronousClient asyncClient, VaultClient.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -2605,7 +2605,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -2649,7 +2649,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -2695,7 +2695,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -2739,7 +2739,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -2785,7 +2785,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -2829,7 +2829,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -2875,7 +2875,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -2919,7 +2919,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -2965,7 +2965,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3009,7 +3009,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3055,7 +3055,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3099,7 +3099,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3145,7 +3145,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3189,7 +3189,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3235,7 +3235,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3279,7 +3279,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3325,7 +3325,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3369,7 +3369,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3415,7 +3415,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3459,7 +3459,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3505,7 +3505,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3549,7 +3549,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3595,7 +3595,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3639,7 +3639,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->DeleteIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3685,7 +3685,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3729,7 +3729,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3775,7 +3775,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3819,7 +3819,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3865,7 +3865,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3909,7 +3909,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -3955,7 +3955,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -3999,7 +3999,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4045,7 +4045,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4089,7 +4089,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4135,7 +4135,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4179,7 +4179,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->DeleteIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4225,7 +4225,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4269,7 +4269,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->DeleteIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4315,7 +4315,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4359,7 +4359,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4405,7 +4405,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4449,7 +4449,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4495,7 +4495,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4539,7 +4539,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4585,7 +4585,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4629,7 +4629,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4675,7 +4675,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4719,7 +4719,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4765,7 +4765,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4809,7 +4809,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4855,7 +4855,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4899,7 +4899,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityEntityName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -4945,7 +4945,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -4989,7 +4989,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5035,7 +5035,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5079,7 +5079,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupAliasId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5125,7 +5125,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5169,7 +5169,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5215,7 +5215,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5259,7 +5259,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5305,7 +5305,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5349,7 +5349,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5395,7 +5395,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5439,7 +5439,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityGroupName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5485,7 +5485,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5529,7 +5529,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5575,7 +5575,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaLoginEnforcement");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5619,7 +5619,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaLoginEnforcement");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5665,7 +5665,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5709,7 +5709,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5755,7 +5755,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5799,7 +5799,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethod");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5845,7 +5845,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodDuo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5889,7 +5889,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodDuo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -5935,7 +5935,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -5979,7 +5979,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6025,7 +6025,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6069,7 +6069,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6115,7 +6115,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodOkta");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6159,7 +6159,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodOkta");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6205,7 +6205,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6249,7 +6249,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6295,7 +6295,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodPingid");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6339,7 +6339,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodPingid");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6385,7 +6385,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6429,7 +6429,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6475,7 +6475,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodTotp");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6519,7 +6519,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityMfaMethodTotp");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6565,7 +6565,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6609,7 +6609,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->GetIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6655,7 +6655,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcAssignment");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6699,7 +6699,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcAssignment");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6745,7 +6745,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6789,7 +6789,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6835,7 +6835,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcClient");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6879,7 +6879,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcClient");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -6925,7 +6925,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -6969,7 +6969,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7093,7 +7093,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7137,7 +7137,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcKey");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7183,7 +7183,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7227,7 +7227,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7273,7 +7273,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcProvider");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7317,7 +7317,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcProvider");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7363,7 +7363,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7407,7 +7407,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7453,7 +7453,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameAuthorize");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7497,7 +7497,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameAuthorize");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7543,7 +7543,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameUserinfo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7587,7 +7587,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameUserinfo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7633,7 +7633,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7677,7 +7677,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7723,7 +7723,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7767,7 +7767,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7813,7 +7813,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7857,7 +7857,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcRole");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7903,7 +7903,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -7947,7 +7947,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -7993,7 +7993,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcScope");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8037,7 +8037,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityOidcScope");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8083,7 +8083,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8127,7 +8127,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8173,7 +8173,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcTokenName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8217,7 +8217,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->GetIdentityOidcTokenName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8419,7 +8419,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityPersonaId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8463,7 +8463,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling IdentityApi->GetIdentityPersonaId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8509,7 +8509,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8553,7 +8553,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->GetIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8684,7 +8684,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8731,7 +8731,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -8948,7 +8948,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -8995,7 +8995,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityEntityAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9128,7 +9128,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9175,7 +9175,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityEntityIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9308,7 +9308,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9355,7 +9355,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityEntityNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9572,7 +9572,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9619,7 +9619,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityGroupAliasIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9668,7 +9668,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9715,7 +9715,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityGroupIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -9764,7 +9764,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -9811,7 +9811,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityGroupNameName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10028,7 +10028,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10075,7 +10075,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityMfaLoginEnforcementName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10124,7 +10124,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10171,7 +10171,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10220,7 +10220,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10267,7 +10267,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10316,7 +10316,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10363,7 +10363,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10664,7 +10664,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10711,7 +10711,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling IdentityApi->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10760,7 +10760,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10807,7 +10807,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcAssignmentName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -10856,7 +10856,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -10903,7 +10903,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcClientName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11120,7 +11120,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11167,7 +11167,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcKeyName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11216,7 +11216,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcKeyNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11263,7 +11263,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcKeyNameRotate");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11312,7 +11312,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11359,7 +11359,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11408,7 +11408,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11455,7 +11455,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11504,7 +11504,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11551,7 +11551,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameToken");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11599,7 +11599,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11643,7 +11643,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11690,7 +11690,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11737,7 +11737,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcRoleName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11786,7 +11786,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -11833,7 +11833,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling IdentityApi->PostIdentityOidcScopeName");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
@@ -11966,7 +11966,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
 
@@ -12013,7 +12013,7 @@ namespace VaultClient.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling IdentityApi->PostIdentityPersonaIdId");
+                throw new VaultClient.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
 
             VaultClient.Client.RequestOptions localVarRequestOptions = new VaultClient.Client.RequestOptions();
