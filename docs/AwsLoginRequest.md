@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsLoginRequest
+# Vault.Model.AwsLoginRequest
 
 ## Properties
 

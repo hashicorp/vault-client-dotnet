@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityEntityMergeRequest
+# Vault.Model.IdentityEntityMergeRequest
 
 ## Properties
 

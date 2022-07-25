@@ -1,4 +1,4 @@
-# VaultClient.Model.OciLoginRequest
+# Vault.Model.OciLoginRequest
 
 ## Properties
 

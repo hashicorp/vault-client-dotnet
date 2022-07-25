@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemToolsRandomRequest
+# Vault.Model.SystemToolsRandomRequest
 
 ## Properties
 

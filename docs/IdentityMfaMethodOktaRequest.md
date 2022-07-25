@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaMethodOktaRequest
+# Vault.Model.IdentityMfaMethodOktaRequest
 
 ## Properties
 

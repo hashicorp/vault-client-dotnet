@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpkmsKeysConfigRequest
+# Vault.Model.GcpkmsKeysConfigRequest
 
 ## Properties
 

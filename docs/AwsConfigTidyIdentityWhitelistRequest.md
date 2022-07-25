@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsConfigTidyIdentityWhitelistRequest
+# Vault.Model.AwsConfigTidyIdentityWhitelistRequest
 
 ## Properties
 

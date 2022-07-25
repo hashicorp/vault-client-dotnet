@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemWrappingLookupRequest
+# Vault.Model.SystemWrappingLookupRequest
 
 ## Properties
 

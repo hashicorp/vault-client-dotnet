@@ -1,4 +1,4 @@
-# VaultClient.Model.AppIdMapAppIdRequest
+# Vault.Model.AppIdMapAppIdRequest
 
 ## Properties
 

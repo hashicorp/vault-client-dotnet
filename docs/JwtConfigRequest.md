@@ -1,4 +1,4 @@
-# VaultClient.Model.JwtConfigRequest
+# Vault.Model.JwtConfigRequest
 
 ## Properties
 

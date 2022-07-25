@@ -1,4 +1,4 @@
-# VaultClient.Model.TokenRevokeOrphanRequest
+# Vault.Model.TokenRevokeOrphanRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiKmsRequest
+# Vault.Model.PkiKmsRequest
 
 ## Properties
 

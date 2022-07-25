@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityEntityIdRequest
+# Vault.Model.IdentityEntityIdRequest
 
 ## Properties
 

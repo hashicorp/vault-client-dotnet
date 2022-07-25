@@ -1,4 +1,4 @@
-# VaultClient.Model.SshConfigCaRequest
+# Vault.Model.SshConfigCaRequest
 
 ## Properties
 

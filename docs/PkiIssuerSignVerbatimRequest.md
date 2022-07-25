@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiIssuerSignVerbatimRequest
+# Vault.Model.PkiIssuerSignVerbatimRequest
 
 ## Properties
 

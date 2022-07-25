@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaMethodDuoRequest
+# Vault.Model.IdentityMfaMethodDuoRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityOidcIntrospectRequest
+# Vault.Model.IdentityOidcIntrospectRequest
 
 ## Properties
 

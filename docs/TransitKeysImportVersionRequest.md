@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitKeysImportVersionRequest
+# Vault.Model.TransitKeysImportVersionRequest
 
 ## Properties
 

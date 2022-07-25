@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemConfigUiHeadersRequest
+# Vault.Model.SystemConfigUiHeadersRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.OpenldapRoleRequest
+# Vault.Model.OpenldapRoleRequest
 
 ## Properties
 

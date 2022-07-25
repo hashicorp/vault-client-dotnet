@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsTidyRoletagDenylistRequest
+# Vault.Model.AwsTidyRoletagDenylistRequest
 
 ## Properties
 

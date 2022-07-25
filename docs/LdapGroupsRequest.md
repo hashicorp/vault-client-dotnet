@@ -1,4 +1,4 @@
-# VaultClient.Model.LdapGroupsRequest
+# Vault.Model.LdapGroupsRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaMethodTotpAdminDestroyRequest
+# Vault.Model.IdentityMfaMethodTotpAdminDestroyRequest
 
 ## Properties
 

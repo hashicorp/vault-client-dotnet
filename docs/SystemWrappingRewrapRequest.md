@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemWrappingRewrapRequest
+# Vault.Model.SystemWrappingRewrapRequest
 
 ## Properties
 

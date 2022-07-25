@@ -1,4 +1,4 @@
-# VaultClient.Model.SshConfigZeroaddressRequest
+# Vault.Model.SshConfigZeroaddressRequest
 
 ## Properties
 

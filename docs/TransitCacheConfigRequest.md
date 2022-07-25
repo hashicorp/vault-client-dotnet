@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitCacheConfigRequest
+# Vault.Model.TransitCacheConfigRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitSignRequest
+# Vault.Model.TransitSignRequest
 
 ## Properties
 

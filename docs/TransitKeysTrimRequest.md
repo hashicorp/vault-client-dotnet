@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitKeysTrimRequest
+# Vault.Model.TransitKeysTrimRequest
 
 ## Properties
 

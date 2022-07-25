@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiRootGenerateRequest
+# Vault.Model.PkiRootGenerateRequest
 
 ## Properties
 

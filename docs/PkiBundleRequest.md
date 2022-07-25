@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiBundleRequest
+# Vault.Model.PkiBundleRequest
 
 ## Properties
 

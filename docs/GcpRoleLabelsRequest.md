@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpRoleLabelsRequest
+# Vault.Model.GcpRoleLabelsRequest
 
 ## Properties
 

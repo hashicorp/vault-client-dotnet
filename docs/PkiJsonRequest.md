@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiJsonRequest
+# Vault.Model.PkiJsonRequest
 
 ## Properties
 

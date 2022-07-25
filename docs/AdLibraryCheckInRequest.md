@@ -1,4 +1,4 @@
-# VaultClient.Model.AdLibraryCheckInRequest
+# Vault.Model.AdLibraryCheckInRequest
 
 ## Properties
 

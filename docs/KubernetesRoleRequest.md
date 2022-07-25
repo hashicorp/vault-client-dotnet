@@ -1,4 +1,4 @@
-# VaultClient.Model.KubernetesRoleRequest
+# Vault.Model.KubernetesRoleRequest
 
 ## Properties
 

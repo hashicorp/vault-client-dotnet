@@ -1,4 +1,4 @@
-# VaultClient.Model.AlicloudRoleRequest
+# Vault.Model.AlicloudRoleRequest
 
 ## Properties
 

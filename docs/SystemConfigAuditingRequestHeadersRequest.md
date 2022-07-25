@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemConfigAuditingRequestHeadersRequest
+# Vault.Model.SystemConfigAuditingRequestHeadersRequest
 
 ## Properties
 

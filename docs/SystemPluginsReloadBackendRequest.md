@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemPluginsReloadBackendRequest
+# Vault.Model.SystemPluginsReloadBackendRequest
 
 ## Properties
 

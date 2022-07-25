@@ -1,4 +1,4 @@
-# VaultClient.Model.TokenRolesRequest
+# Vault.Model.TokenRolesRequest
 
 ## Properties
 

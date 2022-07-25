@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemInternalCountersConfigRequest
+# Vault.Model.SystemInternalCountersConfigRequest
 
 ## Properties
 

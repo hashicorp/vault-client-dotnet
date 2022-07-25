@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsConfigStsRequest
+# Vault.Model.AwsConfigStsRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityEntityBatchDeleteRequest
+# Vault.Model.IdentityEntityBatchDeleteRequest
 
 ## Properties
 

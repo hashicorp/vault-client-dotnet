@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRenewLeaseRequest
+# Vault.Model.SystemRenewLeaseRequest
 
 ## Properties
 

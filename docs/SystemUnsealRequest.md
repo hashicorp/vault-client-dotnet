@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemUnsealRequest
+# Vault.Model.SystemUnsealRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityOidcScopeRequest
+# Vault.Model.IdentityOidcScopeRequest
 
 ## Properties
 

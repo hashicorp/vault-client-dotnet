@@ -1,4 +1,4 @@
-# VaultClient.Model.KvConfigRequest
+# Vault.Model.KvConfigRequest
 
 ## Properties
 

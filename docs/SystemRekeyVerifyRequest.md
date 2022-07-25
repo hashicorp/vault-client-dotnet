@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRekeyVerifyRequest
+# Vault.Model.SystemRekeyVerifyRequest
 
 ## Properties
 

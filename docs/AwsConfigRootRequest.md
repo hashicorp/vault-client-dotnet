@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsConfigRootRequest
+# Vault.Model.AwsConfigRootRequest
 
 ## Properties
 

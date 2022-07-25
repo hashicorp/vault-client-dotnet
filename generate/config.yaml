@@ -1,5 +1,9 @@
 additionalProperties:
   supportsRetry: false
-  packageName: VaultClient
+  packageName: Vault
   packageVersion: 0.0.1
 library: httpclient
+files:
+  Client.mustache:
+    destinationFilename: src/VaultClient.cs
+    templateType: SupportingFiles

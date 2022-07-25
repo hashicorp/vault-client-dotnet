@@ -1,4 +1,4 @@
-# VaultClient.Model.TerraformConfigRequest
+# Vault.Model.TerraformConfigRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsRoleTagRequest
+# Vault.Model.AwsRoleTagRequest
 
 ## Properties
 

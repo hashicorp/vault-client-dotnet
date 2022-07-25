@@ -1,4 +1,4 @@
-# VaultClient.Model.TerraformRoleRequest
+# Vault.Model.TerraformRoleRequest
 
 ## Properties
 

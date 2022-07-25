@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiConfigUrlsRequest
+# Vault.Model.PkiConfigUrlsRequest
 
 ## Properties
 

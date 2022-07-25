@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemPoliciesAclRequest
+# Vault.Model.SystemPoliciesAclRequest
 
 ## Properties
 

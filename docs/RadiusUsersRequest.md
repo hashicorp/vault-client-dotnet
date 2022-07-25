@@ -1,4 +1,4 @@
-# VaultClient.Model.RadiusUsersRequest
+# Vault.Model.RadiusUsersRequest
 
 ## Properties
 

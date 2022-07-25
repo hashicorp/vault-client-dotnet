@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleSecretIdBoundCidrsRequest
+# Vault.Model.ApproleRoleSecretIdBoundCidrsRequest
 
 ## Properties
 

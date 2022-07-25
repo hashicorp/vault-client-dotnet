@@ -1,4 +1,4 @@
-# VaultClient.Model.TotpCodeRequest
+# Vault.Model.TotpCodeRequest
 
 ## Properties
 

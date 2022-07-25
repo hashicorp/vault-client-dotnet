@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsConfigLeaseRequest
+# Vault.Model.AwsConfigLeaseRequest
 
 ## Properties
 

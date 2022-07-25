@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRekeyInitRequest
+# Vault.Model.SystemRekeyInitRequest
 
 ## Properties
 

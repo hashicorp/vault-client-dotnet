@@ -1,4 +1,4 @@
-# VaultClient.Model.TokenLookupRequest
+# Vault.Model.TokenLookupRequest
 
 ## Properties
 

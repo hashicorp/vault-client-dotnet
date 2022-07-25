@@ -1,4 +1,4 @@
-# VaultClient.Model.TokenRenewAccessorRequest
+# Vault.Model.TokenRenewAccessorRequest
 
 ## Properties
 

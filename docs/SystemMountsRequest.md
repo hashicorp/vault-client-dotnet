@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemMountsRequest
+# Vault.Model.SystemMountsRequest
 
 ## Properties
 

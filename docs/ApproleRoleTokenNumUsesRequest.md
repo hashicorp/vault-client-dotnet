@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleTokenNumUsesRequest
+# Vault.Model.ApproleRoleTokenNumUsesRequest
 
 ## Properties
 

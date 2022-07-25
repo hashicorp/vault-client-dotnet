@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemLeasesRevokeLeaseRequest
+# Vault.Model.SystemLeasesRevokeLeaseRequest
 
 ## Properties
 

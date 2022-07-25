@@ -1,4 +1,4 @@
-# VaultClient - the C# library for the HashiCorp Vault API
+# Vault - the C# library for the HashiCorp Vault API
 
 HTTP API that gives you full access to Vault. All API routes are prefixed with `/v1/`.
 
@@ -33,9 +33,9 @@ Generate the DLL using your preferred tool (e.g. `dotnet build`)
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 ```
 <a name="usage"></a>
 ## Usage
@@ -82,9 +82,9 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {

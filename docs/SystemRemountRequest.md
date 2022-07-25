@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRemountRequest
+# Vault.Model.SystemRemountRequest
 
 ## Properties
 

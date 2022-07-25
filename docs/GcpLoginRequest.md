@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpLoginRequest
+# Vault.Model.GcpLoginRequest
 
 ## Properties
 

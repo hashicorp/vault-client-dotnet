@@ -1,4 +1,4 @@
-# VaultClient.Model.CentrifyConfigRequest
+# Vault.Model.CentrifyConfigRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.OktaGroupsRequest
+# Vault.Model.OktaGroupsRequest
 
 ## Properties
 

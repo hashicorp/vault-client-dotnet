@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemCapabilitiesRequest
+# Vault.Model.SystemCapabilitiesRequest
 
 ## Properties
 

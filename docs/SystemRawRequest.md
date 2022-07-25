@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRawRequest
+# Vault.Model.SystemRawRequest
 
 ## Properties
 

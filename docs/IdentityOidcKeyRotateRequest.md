@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityOidcKeyRotateRequest
+# Vault.Model.IdentityOidcKeyRotateRequest
 
 ## Properties
 

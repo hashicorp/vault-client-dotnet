@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaLoginEnforcementRequest
+# Vault.Model.IdentityMfaLoginEnforcementRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.KubernetesLoginRequest
+# Vault.Model.KubernetesLoginRequest
 
 ## Properties
 

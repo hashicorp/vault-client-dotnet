@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitRewrapRequest
+# Vault.Model.TransitRewrapRequest
 
 ## Properties
 

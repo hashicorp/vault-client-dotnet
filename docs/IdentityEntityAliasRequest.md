@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityEntityAliasRequest
+# Vault.Model.IdentityEntityAliasRequest
 
 ## Properties
 

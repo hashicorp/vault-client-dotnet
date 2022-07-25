@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemAuthTuneRequest
+# Vault.Model.SystemAuthTuneRequest
 
 ## Properties
 

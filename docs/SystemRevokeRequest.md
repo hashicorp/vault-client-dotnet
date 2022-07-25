@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRevokeRequest
+# Vault.Model.SystemRevokeRequest
 
 ## Properties
 
