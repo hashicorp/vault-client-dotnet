@@ -16,9 +16,9 @@ namespace Vault
 {
     public class VaultClient
     {
-        public Auth Auth;
-        public Identity Identity;
-        public Secrets Secrets;
+        public Vault.Api.Auth Auth;
+        public Vault.Api.Identity Identity;
+        public Vault.Api.Secrets Secrets;
         public Vault.Api.System System;
 
         public VaultClient(string VaultAddress)
@@ -28,9 +28,9 @@ namespace Vault
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
-            this.Auth = new Auth(VaultAddress);
-            this.Identity = new Identity(VaultAddress);
-            this.Secrets = new Secrets(VaultAddress);
+            this.Auth = new Vault.Api.Auth(VaultAddress);
+            this.Identity = new Vault.Api.Identity(VaultAddress);
+            this.Secrets = new Vault.Api.Secrets(VaultAddress);
             this.System = new Vault.Api.System(VaultAddress);
         }
     }    
