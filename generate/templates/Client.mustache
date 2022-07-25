@@ -8,10 +8,13 @@ namespace {{packageName}}
 {
     public class {{packageName}}Client
     {
-        public Auth Auth;
-        public Identity Identity;
-        public Secrets Secrets;
-        public {{packageName}}.Api.System System;
+        {{#apiInfo}}
+        {{#apis}}
+        {{#operations}}
+        public {{packageName}}.Api.{{classname}} {{classname}};
+        {{/operations}}
+        {{/apis}}
+        {{/apiInfo}}
 
         public {{packageName}}Client(string VaultAddress)
         {
@@ -20,10 +23,13 @@ namespace {{packageName}}
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
-            this.Auth = new Auth(VaultAddress);
-            this.Identity = new Identity(VaultAddress);
-            this.Secrets = new Secrets(VaultAddress);
-            this.System = new {{packageName}}.Api.System(VaultAddress);
+            {{#apiInfo}}
+            {{#apis}}
+            {{#operations}}
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(VaultAddress);
+            {{/operations}}
+            {{/apis}}
+            {{/apiInfo}}
         }
     }    
 }

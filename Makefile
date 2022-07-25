@@ -42,12 +42,14 @@ generate:
 
 	sed -i'.original' -e 's/REPLACE~ME//g' README.md
 	sed -i'.original' -e 's/REPLACE~ME//g' docs/*.md
+	sed -i'.original' -e 's/REPLACE~ME//g' src/*.cs
 	sed -i'.original' -e 's/REPLACE~ME//g' src/Vault/Api/*.cs
 	sed -i'.original' -e 's/REPLACE~ME//g' src/Vault/Client/*.cs
 	sed -i'.original' -e 's/REPLACE~ME//g' src/Vault.Test/Api/*.cs
 
 	rm -f *.original
 	rm -f docs/*.original
+	rm -f src/*.original
 	rm -f src/Vault/Api/*.original
 	rm -f src/Vault/Client/*.original
 	rm -f src/Vault.Test/Api/*.original
