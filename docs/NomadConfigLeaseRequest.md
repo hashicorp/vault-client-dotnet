@@ -1,4 +1,4 @@
-# VaultClient.Model.NomadConfigLeaseRequest
+# Vault.Model.NomadConfigLeaseRequest
 
 ## Properties
 

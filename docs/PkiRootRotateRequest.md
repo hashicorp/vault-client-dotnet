@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiRootRotateRequest
+# Vault.Model.PkiRootRotateRequest
 
 ## Properties
 

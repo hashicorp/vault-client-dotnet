@@ -1,4 +1,4 @@
-# VaultClient.Model.ConsulConfigAccessRequest
+# Vault.Model.ConsulConfigAccessRequest
 
 ## Properties
 

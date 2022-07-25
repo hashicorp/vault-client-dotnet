@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemInitRequest
+# Vault.Model.SystemInitRequest
 
 ## Properties
 

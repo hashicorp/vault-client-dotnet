@@ -1,4 +1,4 @@
-# VaultClient.Model.AdRolesRequest
+# Vault.Model.AdRolesRequest
 
 ## Properties
 

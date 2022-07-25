@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiTidyRequest
+# Vault.Model.PkiTidyRequest
 
 ## Properties
 

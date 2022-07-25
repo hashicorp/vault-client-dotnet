@@ -1,4 +1,4 @@
-# VaultClient.Model.SshVerifyRequest
+# Vault.Model.SshVerifyRequest
 
 ## Properties
 

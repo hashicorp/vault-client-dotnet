@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleSecretIdDestroyRequest
+# Vault.Model.ApproleRoleSecretIdDestroyRequest
 
 ## Properties
 

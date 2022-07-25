@@ -1,4 +1,4 @@
-# VaultClient.Model.KvUndeleteRequest
+# Vault.Model.KvUndeleteRequest
 
 ## Properties
 

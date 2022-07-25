@@ -1,4 +1,4 @@
-# VaultClient.Model.OidcRoleRequest
+# Vault.Model.OidcRoleRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.CertCertsRequest
+# Vault.Model.CertCertsRequest
 
 ## Properties
 

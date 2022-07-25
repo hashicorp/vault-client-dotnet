@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleLoginRequest
+# Vault.Model.ApproleLoginRequest
 
 ## Properties
 

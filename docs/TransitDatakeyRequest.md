@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitDatakeyRequest
+# Vault.Model.TransitDatakeyRequest
 
 ## Properties
 

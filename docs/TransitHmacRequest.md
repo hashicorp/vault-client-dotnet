@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitHmacRequest
+# Vault.Model.TransitHmacRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.AdLibraryRequest
+# Vault.Model.AdLibraryRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.OciConfigRequest
+# Vault.Model.OciConfigRequest
 
 ## Properties
 

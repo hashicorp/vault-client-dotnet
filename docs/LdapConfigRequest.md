@@ -1,4 +1,4 @@
-# VaultClient.Model.LdapConfigRequest
+# Vault.Model.LdapConfigRequest
 
 ## Properties
 

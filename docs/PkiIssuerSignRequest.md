@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiIssuerSignRequest
+# Vault.Model.PkiIssuerSignRequest
 
 ## Properties
 

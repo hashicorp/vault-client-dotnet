@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiInternalExportedRequest
+# Vault.Model.PkiInternalExportedRequest
 
 ## Properties
 

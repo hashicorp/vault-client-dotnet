@@ -1,4 +1,4 @@
-# VaultClient.Model.AzureRoleRequest
+# Vault.Model.AzureRoleRequest
 
 ## Properties
 

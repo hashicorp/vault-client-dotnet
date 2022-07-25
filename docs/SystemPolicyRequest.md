@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemPolicyRequest
+# Vault.Model.SystemPolicyRequest
 
 ## Properties
 

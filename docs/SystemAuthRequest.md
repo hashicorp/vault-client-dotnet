@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemAuthRequest
+# Vault.Model.SystemAuthRequest
 
 ## Properties
 

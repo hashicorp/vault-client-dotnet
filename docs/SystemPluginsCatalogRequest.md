@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemPluginsCatalogRequest
+# Vault.Model.SystemPluginsCatalogRequest
 
 ## Properties
 

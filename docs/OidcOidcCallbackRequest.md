@@ -1,4 +1,4 @@
-# VaultClient.Model.OidcOidcCallbackRequest
+# Vault.Model.OidcOidcCallbackRequest
 
 ## Properties
 

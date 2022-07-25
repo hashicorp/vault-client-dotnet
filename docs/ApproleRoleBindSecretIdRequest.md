@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleBindSecretIdRequest
+# Vault.Model.ApproleRoleBindSecretIdRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRevokePrefixRequest
+# Vault.Model.SystemRevokePrefixRequest
 
 ## Properties
 

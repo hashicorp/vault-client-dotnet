@@ -1,4 +1,4 @@
-# VaultClient.Api.Secrets
+# Vault.Api.Secrets
 
 All URIs are relative to *http://localhost*
 
@@ -321,9 +321,9 @@ Configure the AD server to connect to, along with password options.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -389,9 +389,9 @@ Delete a library set.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -461,9 +461,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -533,9 +533,9 @@ Configure the access key and secret to use for RAM and STS calls.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -601,9 +601,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -673,9 +673,9 @@ Read, write and reference IAM policies that access keys can be made for.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -745,9 +745,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -812,9 +812,9 @@ Manage the Vault roles used to generate Azure credentials.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -884,9 +884,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -955,9 +955,9 @@ Deletes the secret at the specified location.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1027,9 +1027,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1098,9 +1098,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1169,9 +1169,9 @@ Configure the GCP KMS secrets engine
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1237,9 +1237,9 @@ Deregister an existing key in Vault
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1309,9 +1309,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1381,9 +1381,9 @@ Delete old crypto key versions from Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1453,9 +1453,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1520,9 +1520,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1591,9 +1591,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1663,9 +1663,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1735,9 +1735,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1802,9 +1802,9 @@ Configure the lease parameters for generated tokens
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1870,9 +1870,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1941,9 +1941,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2008,9 +2008,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2079,9 +2079,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2150,9 +2150,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2221,9 +2221,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2288,9 +2288,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2359,9 +2359,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2430,9 +2430,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2497,9 +2497,9 @@ Manage the roles that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2569,9 +2569,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2641,9 +2641,9 @@ Configures settings for the KV store
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2713,9 +2713,9 @@ Set the SSH private key used for signing certificates.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2781,9 +2781,9 @@ Assign zero address as default CIDR block for select roles.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2849,9 +2849,9 @@ Register a shared private key with Vault.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2921,9 +2921,9 @@ Manage the 'roles' that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2993,9 +2993,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3060,9 +3060,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3131,9 +3131,9 @@ Manage the keys that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3203,9 +3203,9 @@ Managed named encryption keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3275,9 +3275,9 @@ Configure the AD server to connect to, along with password options.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3343,9 +3343,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3414,9 +3414,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3485,9 +3485,9 @@ Read a library set.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3557,9 +3557,9 @@ Check the status of the service accounts in a library set.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3629,9 +3629,9 @@ List the name of each role currently stored.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3701,9 +3701,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3773,9 +3773,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3840,9 +3840,9 @@ Configure the access key and secret to use for RAM and STS calls.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3908,9 +3908,9 @@ Generate an API key or STS credential using the given role's configuration.'
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3980,9 +3980,9 @@ List the existing roles in this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4052,9 +4052,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4124,9 +4124,9 @@ Configure the default lease information for generated credentials.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4192,9 +4192,9 @@ Configure the root credentials that are used to manage IAM.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4260,9 +4260,9 @@ Generate AWS credentials from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4328,9 +4328,9 @@ List the existing roles in this backend
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4400,9 +4400,9 @@ Read, write and reference IAM policies that access keys can be made for.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4472,9 +4472,9 @@ Generate AWS credentials from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4544,9 +4544,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4611,9 +4611,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4682,9 +4682,9 @@ List existing roles.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4754,9 +4754,9 @@ Manage the Vault roles used to generate Azure credentials.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4826,9 +4826,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4893,9 +4893,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4964,9 +4964,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5035,9 +5035,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5106,9 +5106,9 @@ Retrieve the secret at the specified location.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5180,9 +5180,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5247,9 +5247,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5318,9 +5318,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5389,9 +5389,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5460,9 +5460,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5531,9 +5531,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5602,9 +5602,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5673,9 +5673,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5744,9 +5744,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5815,9 +5815,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5886,9 +5886,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5957,9 +5957,9 @@ Configure the GCP KMS secrets engine
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6025,9 +6025,9 @@ List named keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6097,9 +6097,9 @@ Configure the key in Vault
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6169,9 +6169,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6241,9 +6241,9 @@ Retrieve the public key associated with the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6313,9 +6313,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6380,9 +6380,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6451,9 +6451,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6522,9 +6522,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6596,9 +6596,9 @@ Configure the  credentials that are used to manage Database Users.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6664,9 +6664,9 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6736,9 +6736,9 @@ List the existing roles in this backend
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6808,9 +6808,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6880,9 +6880,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6947,9 +6947,9 @@ Configure the lease parameters for generated tokens
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7015,9 +7015,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7086,9 +7086,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7157,9 +7157,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7228,9 +7228,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7295,9 +7295,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7366,9 +7366,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7437,9 +7437,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7508,9 +7508,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7579,9 +7579,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7650,9 +7650,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7721,9 +7721,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7788,9 +7788,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7855,9 +7855,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7922,9 +7922,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7989,9 +7989,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8056,9 +8056,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8127,9 +8127,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8198,9 +8198,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8269,9 +8269,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8340,9 +8340,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8407,9 +8407,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8474,9 +8474,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8541,9 +8541,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8608,9 +8608,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8675,9 +8675,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8742,9 +8742,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8809,9 +8809,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8876,9 +8876,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -8947,9 +8947,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9018,9 +9018,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9089,9 +9089,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9156,9 +9156,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9227,9 +9227,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9298,9 +9298,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9369,9 +9369,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9440,9 +9440,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9507,9 +9507,9 @@ Configure the lease parameters for generated credentials
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9575,9 +9575,9 @@ Request RabbitMQ credentials for a certain role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9647,9 +9647,9 @@ Manage the roles that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9719,9 +9719,9 @@ Manage the roles that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9791,9 +9791,9 @@ Read the backend level settings.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9859,9 +9859,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -9931,9 +9931,9 @@ Configures settings for the KV store
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10005,9 +10005,9 @@ Read the structure of a secret entry from the Key-Value store with the values re
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10077,9 +10077,9 @@ Set the SSH private key used for signing certificates.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10145,9 +10145,9 @@ Assign zero address as default CIDR block for select roles.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10213,9 +10213,9 @@ Retrieve the public key.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10281,9 +10281,9 @@ Manage the 'roles' that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10353,9 +10353,9 @@ Manage the 'roles' that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10425,9 +10425,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10492,9 +10492,9 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10564,9 +10564,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10635,9 +10635,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10706,9 +10706,9 @@ Request time-based one-time use password or validate a password for a certain ke
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10778,9 +10778,9 @@ Manage the keys that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10850,9 +10850,9 @@ Manage the keys that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10922,9 +10922,9 @@ Backup the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -10994,9 +10994,9 @@ Returns the size of the active cache
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11062,9 +11062,9 @@ Export named encryption or signing key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11136,9 +11136,9 @@ Export named encryption or signing key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11212,9 +11212,9 @@ Managed named encryption keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11284,9 +11284,9 @@ Managed named encryption keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11356,9 +11356,9 @@ Returns the public key to use for wrapping imported keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11424,9 +11424,9 @@ Configure the AD server to connect to, along with password options.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11496,9 +11496,9 @@ Check service accounts in to the library.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11570,9 +11570,9 @@ Update a library set.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11644,9 +11644,9 @@ Check service accounts in to the library.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11718,9 +11718,9 @@ Check a service account out from the library.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11792,9 +11792,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11866,9 +11866,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -11937,9 +11937,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12004,9 +12004,9 @@ Configure the access key and secret to use for RAM and STS calls.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12076,9 +12076,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12150,9 +12150,9 @@ Configure the default lease information for generated credentials.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12222,9 +12222,9 @@ Configure the root credentials that are used to manage IAM.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12294,9 +12294,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12361,9 +12361,9 @@ Generate AWS credentials from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12433,9 +12433,9 @@ Read, write and reference IAM policies that access keys can be made for.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12507,9 +12507,9 @@ Generate AWS credentials from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12581,9 +12581,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12652,9 +12652,9 @@ Manage the Vault roles used to generate Azure credentials.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12726,9 +12726,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12793,9 +12793,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12864,9 +12864,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -12937,9 +12937,9 @@ Store a secret at the specified location.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13009,9 +13009,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13080,9 +13080,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13147,9 +13147,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13220,9 +13220,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13293,9 +13293,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13364,9 +13364,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13435,9 +13435,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13508,9 +13508,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13579,9 +13579,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13652,9 +13652,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13725,9 +13725,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13796,9 +13796,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13867,9 +13867,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -13938,9 +13938,9 @@ Configure the GCP KMS secrets engine
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14010,9 +14010,9 @@ Decrypt a ciphertext value using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14084,9 +14084,9 @@ Encrypt a plaintext value using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14158,9 +14158,9 @@ Configure the key in Vault
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14232,9 +14232,9 @@ Deregister an existing key in Vault
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14304,9 +14304,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14378,9 +14378,9 @@ Register an existing crypto key in Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14452,9 +14452,9 @@ Rotate a crypto key to a new primary version
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14524,9 +14524,9 @@ Delete old crypto key versions from Google Cloud KMS
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14596,9 +14596,9 @@ Re-encrypt existing ciphertext data to a new version
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14670,9 +14670,9 @@ Signs a message or digest using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14744,9 +14744,9 @@ Verify a signature using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14818,9 +14818,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14889,9 +14889,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -14962,9 +14962,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15035,9 +15035,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15107,9 +15107,9 @@ Configure the  credentials that are used to manage Database Users.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15179,9 +15179,9 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15251,9 +15251,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15325,9 +15325,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15396,9 +15396,9 @@ Configure the lease parameters for generated tokens
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15468,9 +15468,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15541,9 +15541,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15612,9 +15612,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15685,9 +15685,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15756,9 +15756,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15823,9 +15823,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15896,9 +15896,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -15967,9 +15967,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16038,9 +16038,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16109,9 +16109,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16180,9 +16180,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16251,9 +16251,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16322,9 +16322,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16393,9 +16393,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16464,9 +16464,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16537,9 +16537,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16608,9 +16608,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16679,9 +16679,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16752,9 +16752,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16827,9 +16827,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16900,9 +16900,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -16975,9 +16975,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17048,9 +17048,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17121,9 +17121,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17196,9 +17196,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17269,9 +17269,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17342,9 +17342,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17415,9 +17415,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17486,9 +17486,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17559,9 +17559,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17630,9 +17630,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17701,9 +17701,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17772,9 +17772,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17845,9 +17845,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17918,9 +17918,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -17989,9 +17989,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18062,9 +18062,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18133,9 +18133,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18204,9 +18204,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18277,9 +18277,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18348,9 +18348,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18421,9 +18421,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18492,9 +18492,9 @@ Configure the connection URI, username, and password to talk to RabbitMQ managem
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18564,9 +18564,9 @@ Configure the lease parameters for generated credentials
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18636,9 +18636,9 @@ Manage the roles that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18710,9 +18710,9 @@ Configure backend level settings that are applied to every key in the key-value 
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18782,9 +18782,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18856,9 +18856,9 @@ Marks one or more versions as deleted in the KV store.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -18930,9 +18930,9 @@ Permanently removes one or more versions in the KV store
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19004,9 +19004,9 @@ Configures settings for the KV store
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19078,9 +19078,9 @@ Undeletes one or more versions from the KV store.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19152,9 +19152,9 @@ Set the SSH private key used for signing certificates.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19224,9 +19224,9 @@ Assign zero address as default CIDR block for select roles.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19296,9 +19296,9 @@ Creates a credential for establishing SSH connection with the remote host.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19370,9 +19370,9 @@ Register a shared private key with Vault.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19444,9 +19444,9 @@ List all the roles associated with the given IP address.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19516,9 +19516,9 @@ Manage the 'roles' that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19590,9 +19590,9 @@ Request signing an SSH key using a certain role with the provided details.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19664,9 +19664,9 @@ Validate the OTP provided by Vault SSH Agent.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19736,9 +19736,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19807,9 +19807,9 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19879,9 +19879,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -19952,9 +19952,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20023,9 +20023,9 @@ Request time-based one-time use password or validate a password for a certain ke
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20097,9 +20097,9 @@ Manage the keys that can be created with this backend.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20171,9 +20171,9 @@ Configures a new cache of the specified size
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20243,9 +20243,9 @@ Generate a data key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20319,9 +20319,9 @@ Decrypt a ciphertext value using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20393,9 +20393,9 @@ Encrypt a plaintext value or a batch of plaintext blocks using a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20467,9 +20467,9 @@ Generate a hash sum for input data
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20539,9 +20539,9 @@ Generate a hash sum for input data
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20613,9 +20613,9 @@ Generate an HMAC for input data using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20687,9 +20687,9 @@ Generate an HMAC for input data using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20763,9 +20763,9 @@ Managed named encryption keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20837,9 +20837,9 @@ Configure a named encryption key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20911,9 +20911,9 @@ Imports an externally-generated key into a new transit key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -20985,9 +20985,9 @@ Imports an externally-generated key into an existing imported key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21059,9 +21059,9 @@ Rotate named encryption key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21131,9 +21131,9 @@ Trim key versions of a named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21205,9 +21205,9 @@ Generate random bytes
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21277,9 +21277,9 @@ Generate random bytes
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21351,9 +21351,9 @@ Generate random bytes
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21427,9 +21427,9 @@ Generate random bytes
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21501,9 +21501,9 @@ Restore the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21573,9 +21573,9 @@ Restore the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21647,9 +21647,9 @@ Rewrap ciphertext
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21721,9 +21721,9 @@ Generate a signature for input data using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21795,9 +21795,9 @@ Generate a signature for input data using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21871,9 +21871,9 @@ Verify a signature or HMAC for input data created using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -21945,9 +21945,9 @@ Verify a signature or HMAC for input data created using the named key
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {

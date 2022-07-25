@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRolePeriodRequest
+# Vault.Model.ApproleRolePeriodRequest
 
 ## Properties
 

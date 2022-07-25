@@ -1,4 +1,4 @@
-# VaultClient.Model.KvDataRequest
+# Vault.Model.KvDataRequest
 
 ## Properties
 

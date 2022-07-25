@@ -1,4 +1,4 @@
-# VaultClient.Model.TotpKeysRequest
+# Vault.Model.TotpKeysRequest
 
 ## Properties
 

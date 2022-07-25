@@ -1,4 +1,4 @@
-# VaultClient.Model.ConsulRolesRequest
+# Vault.Model.ConsulRolesRequest
 
 ## Properties
 

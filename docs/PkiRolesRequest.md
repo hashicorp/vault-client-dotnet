@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiRolesRequest
+# Vault.Model.PkiRolesRequest
 
 ## Properties
 

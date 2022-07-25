@@ -1,4 +1,4 @@
-# VaultClient.Model.MongodbatlasRolesRequest
+# Vault.Model.MongodbatlasRolesRequest
 
 ## Properties
 

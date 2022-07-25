@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpkmsSignRequest
+# Vault.Model.GcpkmsSignRequest
 
 ## Properties
 

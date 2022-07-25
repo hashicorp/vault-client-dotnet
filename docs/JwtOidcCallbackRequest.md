@@ -1,4 +1,4 @@
-# VaultClient.Model.JwtOidcCallbackRequest
+# Vault.Model.JwtOidcCallbackRequest
 
 ## Properties
 

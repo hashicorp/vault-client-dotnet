@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemGenerateRootAttemptRequest
+# Vault.Model.SystemGenerateRootAttemptRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemMountsTuneRequest
+# Vault.Model.SystemMountsTuneRequest
 
 ## Properties
 

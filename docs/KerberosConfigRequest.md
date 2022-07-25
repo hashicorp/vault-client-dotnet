@@ -1,4 +1,4 @@
-# VaultClient.Model.KerberosConfigRequest
+# Vault.Model.KerberosConfigRequest
 
 ## Properties
 

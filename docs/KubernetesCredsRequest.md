@@ -1,4 +1,4 @@
-# VaultClient.Model.KubernetesCredsRequest
+# Vault.Model.KubernetesCredsRequest
 
 ## Properties
 

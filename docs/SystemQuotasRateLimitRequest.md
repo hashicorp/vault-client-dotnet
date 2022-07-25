@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemQuotasRateLimitRequest
+# Vault.Model.SystemQuotasRateLimitRequest
 
 ## Properties
 

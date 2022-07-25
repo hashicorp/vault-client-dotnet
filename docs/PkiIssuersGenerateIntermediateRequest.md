@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiIssuersGenerateIntermediateRequest
+# Vault.Model.PkiIssuersGenerateIntermediateRequest
 
 ## Properties
 

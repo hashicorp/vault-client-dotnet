@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitDecryptRequest
+# Vault.Model.TransitDecryptRequest
 
 ## Properties
 

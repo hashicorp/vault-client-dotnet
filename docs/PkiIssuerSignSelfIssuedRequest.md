@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiIssuerSignSelfIssuedRequest
+# Vault.Model.PkiIssuerSignSelfIssuedRequest
 
 ## Properties
 

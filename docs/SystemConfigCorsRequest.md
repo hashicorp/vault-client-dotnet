@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemConfigCorsRequest
+# Vault.Model.SystemConfigCorsRequest
 
 ## Properties
 

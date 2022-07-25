@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemRotateConfigRequest
+# Vault.Model.SystemRotateConfigRequest
 
 ## Properties
 

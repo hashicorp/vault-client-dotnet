@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpkmsVerifyRequest
+# Vault.Model.GcpkmsVerifyRequest
 
 ## Properties
 

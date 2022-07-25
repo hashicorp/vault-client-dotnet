@@ -1,4 +1,4 @@
-# VaultClient.Model.OktaLoginRequest
+# Vault.Model.OktaLoginRequest
 
 ## Properties
 

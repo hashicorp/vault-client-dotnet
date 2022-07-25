@@ -1,4 +1,4 @@
-# VaultClient.Model.RabbitmqConfigLeaseRequest
+# Vault.Model.RabbitmqConfigLeaseRequest
 
 ## Properties
 

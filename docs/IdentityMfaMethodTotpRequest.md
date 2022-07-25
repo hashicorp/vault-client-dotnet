@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaMethodTotpRequest
+# Vault.Model.IdentityMfaMethodTotpRequest
 
 ## Properties
 

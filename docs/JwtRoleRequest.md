@@ -1,4 +1,4 @@
-# VaultClient.Model.JwtRoleRequest
+# Vault.Model.JwtRoleRequest
 
 ## Properties
 

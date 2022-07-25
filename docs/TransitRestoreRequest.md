@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitRestoreRequest
+# Vault.Model.TransitRestoreRequest
 
 ## Properties
 

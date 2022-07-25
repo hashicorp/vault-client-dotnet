@@ -1,4 +1,4 @@
-# VaultClient.Model.KubernetesConfigRequest
+# Vault.Model.KubernetesConfigRequest
 
 ## Properties
 

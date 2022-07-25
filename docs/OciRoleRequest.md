@@ -1,4 +1,4 @@
-# VaultClient.Model.OciRoleRequest
+# Vault.Model.OciRoleRequest
 
 ## Properties
 

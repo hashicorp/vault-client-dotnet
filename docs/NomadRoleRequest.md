@@ -1,4 +1,4 @@
-# VaultClient.Model.NomadRoleRequest
+# Vault.Model.NomadRoleRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.OpenldapStaticRoleRequest
+# Vault.Model.OpenldapStaticRoleRequest
 
 ## Properties
 

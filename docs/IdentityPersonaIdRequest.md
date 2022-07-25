@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityPersonaIdRequest
+# Vault.Model.IdentityPersonaIdRequest
 
 ## Properties
 

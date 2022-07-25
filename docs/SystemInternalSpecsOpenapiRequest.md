@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemInternalSpecsOpenapiRequest
+# Vault.Model.SystemInternalSpecsOpenapiRequest
 
 ## Properties
 

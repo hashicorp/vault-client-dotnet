@@ -1,4 +1,4 @@
-# VaultClient.Api.Identity
+# Vault.Api.Identity
 
 All URIs are relative to *http://localhost*
 
@@ -122,9 +122,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -194,9 +194,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -266,9 +266,9 @@ Update, read or delete an entity using entity ID
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -338,9 +338,9 @@ Update, read or delete an entity using entity name
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -410,9 +410,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -481,9 +481,9 @@ Update or delete an existing group using its ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -553,9 +553,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -624,9 +624,9 @@ Delete a login enforcement
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -696,9 +696,9 @@ Delete a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -768,9 +768,9 @@ Delete a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -840,9 +840,9 @@ Delete a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -912,9 +912,9 @@ Delete a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -984,9 +984,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1055,9 +1055,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1126,9 +1126,9 @@ CRUD operations for OIDC keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1198,9 +1198,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1269,9 +1269,9 @@ CRUD operations on OIDC Roles
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1341,9 +1341,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1412,9 +1412,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1484,9 +1484,9 @@ List all the alias IDs.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1556,9 +1556,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1628,9 +1628,9 @@ List all the alias IDs.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1700,9 +1700,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1772,9 +1772,9 @@ List all the entity IDs
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1844,9 +1844,9 @@ Update, read or delete an entity using entity ID
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1916,9 +1916,9 @@ List all the entity names
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -1988,9 +1988,9 @@ Update, read or delete an entity using entity name
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2060,9 +2060,9 @@ List all the group alias IDs.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2132,9 +2132,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2203,9 +2203,9 @@ List all the group IDs.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2275,9 +2275,9 @@ Update or delete an existing group using its ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2347,9 +2347,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2418,9 +2418,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2489,9 +2489,9 @@ List login enforcements
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2561,9 +2561,9 @@ Read the current login enforcement
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2633,9 +2633,9 @@ List MFA method configurations for all MFA methods
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2705,9 +2705,9 @@ List MFA method configurations for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2777,9 +2777,9 @@ Read the current configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2849,9 +2849,9 @@ Read the current configuration for the given ID regardless of the MFA method typ
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2921,9 +2921,9 @@ List MFA method configurations for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -2993,9 +2993,9 @@ Read the current configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3065,9 +3065,9 @@ List MFA method configurations for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3137,9 +3137,9 @@ Read the current configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3209,9 +3209,9 @@ List MFA method configurations for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3281,9 +3281,9 @@ Read the current configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3353,9 +3353,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3424,9 +3424,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3495,9 +3495,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3566,9 +3566,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3637,9 +3637,9 @@ OIDC configuration
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3705,9 +3705,9 @@ List OIDC keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3777,9 +3777,9 @@ CRUD operations for OIDC keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3849,9 +3849,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3920,9 +3920,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -3991,9 +3991,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4062,9 +4062,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4133,9 +4133,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4204,9 +4204,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4275,9 +4275,9 @@ List configured OIDC roles
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4347,9 +4347,9 @@ CRUD operations on OIDC Roles
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4419,9 +4419,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4490,9 +4490,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4561,9 +4561,9 @@ Generate an OIDC token
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4633,9 +4633,9 @@ Retrieve public keys
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4701,9 +4701,9 @@ Query OIDC configurations
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4769,9 +4769,9 @@ List all the alias IDs.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4841,9 +4841,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4913,9 +4913,9 @@ Create a new alias.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -4985,9 +4985,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5059,9 +5059,9 @@ Create a new entity
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5131,9 +5131,9 @@ Create a new alias.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5203,9 +5203,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5277,9 +5277,9 @@ Delete all of the entities provided
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5349,9 +5349,9 @@ Update, read or delete an entity using entity ID
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5423,9 +5423,9 @@ Merge two or more entities together
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5495,9 +5495,9 @@ Update, read or delete an entity using entity name
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5569,9 +5569,9 @@ Create a new group.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5641,9 +5641,9 @@ Creates a new group alias, or updates an existing one.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5713,9 +5713,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5786,9 +5786,9 @@ Update or delete an existing group using its ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5860,9 +5860,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -5933,9 +5933,9 @@ Query entities based on various properties.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6005,9 +6005,9 @@ Query groups based on various properties.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6077,9 +6077,9 @@ Create or update a login enforcement
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6151,9 +6151,9 @@ Update or create a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6225,9 +6225,9 @@ Update or create a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6299,9 +6299,9 @@ Update or create a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6373,9 +6373,9 @@ Destroys a TOTP secret for the given MFA method ID on the given entity
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6445,9 +6445,9 @@ Update or create TOTP secret for the given method ID on the given entity.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6517,9 +6517,9 @@ Update or create TOTP secret for the given method ID on the given entity.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6589,9 +6589,9 @@ Update or create a configuration for the given MFA method
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6663,9 +6663,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6736,9 +6736,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6809,9 +6809,9 @@ OIDC configuration
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6881,9 +6881,9 @@ Verify the authenticity of an OIDC token
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -6953,9 +6953,9 @@ CRUD operations for OIDC keys.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7027,9 +7027,9 @@ Rotate a named OIDC key.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7101,9 +7101,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7174,9 +7174,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7247,9 +7247,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7320,9 +7320,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7391,9 +7391,9 @@ CRUD operations on OIDC Roles
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7465,9 +7465,9 @@ No authorization required
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7538,9 +7538,9 @@ Create a new alias.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {
@@ -7610,9 +7610,9 @@ Update, read or delete an alias ID.
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using VaultClient.Api;
-using VaultClient.Client;
-using VaultClient.Model;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {

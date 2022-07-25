@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityMfaMethodPingidRequest
+# Vault.Model.IdentityMfaMethodPingidRequest
 
 ## Properties
 

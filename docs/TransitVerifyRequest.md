@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitVerifyRequest
+# Vault.Model.TransitVerifyRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.GithubLoginRequest
+# Vault.Model.GithubLoginRequest
 
 ## Properties
 

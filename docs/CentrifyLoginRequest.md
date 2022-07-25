@@ -1,4 +1,4 @@
-# VaultClient.Model.CentrifyLoginRequest
+# Vault.Model.CentrifyLoginRequest
 
 ## Properties
 

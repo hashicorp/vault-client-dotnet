@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiKeysImportRequest
+# Vault.Model.PkiKeysImportRequest
 
 ## Properties
 

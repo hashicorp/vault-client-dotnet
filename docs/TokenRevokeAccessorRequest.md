@@ -1,4 +1,4 @@
-# VaultClient.Model.TokenRevokeAccessorRequest
+# Vault.Model.TokenRevokeAccessorRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.SshRolesRequest
+# Vault.Model.SshRolesRequest
 
 ## Properties
 

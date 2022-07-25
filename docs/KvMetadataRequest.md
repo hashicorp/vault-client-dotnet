@@ -1,4 +1,4 @@
-# VaultClient.Model.KvMetadataRequest
+# Vault.Model.KvMetadataRequest
 
 ## Properties
 

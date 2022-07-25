@@ -1,4 +1,4 @@
-# VaultClient.Model.TransitHashRequest
+# Vault.Model.TransitHashRequest
 
 ## Properties
 

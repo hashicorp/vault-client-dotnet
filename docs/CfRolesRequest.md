@@ -1,4 +1,4 @@
-# VaultClient.Model.CfRolesRequest
+# Vault.Model.CfRolesRequest
 
 ## Properties
 

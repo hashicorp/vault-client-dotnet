@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpStaticAccountRequest
+# Vault.Model.GcpStaticAccountRequest
 
 ## Properties
 

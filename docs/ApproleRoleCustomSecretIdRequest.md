@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleCustomSecretIdRequest
+# Vault.Model.ApproleRoleCustomSecretIdRequest
 
 ## Properties
 

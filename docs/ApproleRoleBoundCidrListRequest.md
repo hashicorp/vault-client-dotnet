@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleBoundCidrListRequest
+# Vault.Model.ApproleRoleBoundCidrListRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemQuotasConfigRequest
+# Vault.Model.SystemQuotasConfigRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiDerPemRequest
+# Vault.Model.PkiDerPemRequest
 
 ## Properties
 

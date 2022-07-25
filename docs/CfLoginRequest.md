@@ -1,4 +1,4 @@
-# VaultClient.Model.CfLoginRequest
+# Vault.Model.CfLoginRequest
 
 ## Properties
 

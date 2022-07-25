@@ -1,4 +1,4 @@
-# VaultClient.Model.UserpassUsersPoliciesRequest
+# Vault.Model.UserpassUsersPoliciesRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsTidyIdentityAccesslistRequest
+# Vault.Model.AwsTidyIdentityAccesslistRequest
 
 ## Properties
 

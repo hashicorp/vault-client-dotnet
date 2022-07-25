@@ -1,4 +1,4 @@
-# VaultClient.Model.ApproleRoleTokenMaxTtlRequest
+# Vault.Model.ApproleRoleTokenMaxTtlRequest
 
 ## Properties
 

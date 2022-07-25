@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsConfigCertificateRequest
+# Vault.Model.AwsConfigCertificateRequest
 
 ## Properties
 

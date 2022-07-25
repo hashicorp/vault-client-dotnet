@@ -1,4 +1,4 @@
-# VaultClient.Model.AzureLoginRequest
+# Vault.Model.AzureLoginRequest
 
 ## Properties
 

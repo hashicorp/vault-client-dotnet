@@ -1,4 +1,4 @@
-# VaultClient.Model.AzureConfigRequest
+# Vault.Model.AzureConfigRequest
 
 ## Properties
 

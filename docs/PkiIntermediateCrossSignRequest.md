@@ -1,4 +1,4 @@
-# VaultClient.Model.PkiIntermediateCrossSignRequest
+# Vault.Model.PkiIntermediateCrossSignRequest
 
 ## Properties
 

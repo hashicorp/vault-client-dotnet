@@ -1,4 +1,4 @@
-# VaultClient.Model.OpenldapConfigRequest
+# Vault.Model.OpenldapConfigRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.IdentityOidcProviderTokenRequest
+# Vault.Model.IdentityOidcProviderTokenRequest
 
 ## Properties
 

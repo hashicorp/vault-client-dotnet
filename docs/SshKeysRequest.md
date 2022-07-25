@@ -1,4 +1,4 @@
-# VaultClient.Model.SshKeysRequest
+# Vault.Model.SshKeysRequest
 
 ## Properties
 

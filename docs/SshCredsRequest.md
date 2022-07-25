@@ -1,4 +1,4 @@
-# VaultClient.Model.SshCredsRequest
+# Vault.Model.SshCredsRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# VaultClient.Model.AwsCredsRequest
+# Vault.Model.AwsCredsRequest
 
 ## Properties
 

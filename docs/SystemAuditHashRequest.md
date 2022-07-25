@@ -1,4 +1,4 @@
-# VaultClient.Model.SystemAuditHashRequest
+# Vault.Model.SystemAuditHashRequest
 
 ## Properties
 

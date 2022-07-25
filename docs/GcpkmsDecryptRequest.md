@@ -1,4 +1,4 @@
-# VaultClient.Model.GcpkmsDecryptRequest
+# Vault.Model.GcpkmsDecryptRequest
 
 ## Properties
 

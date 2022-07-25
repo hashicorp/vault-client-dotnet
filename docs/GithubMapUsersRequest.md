@@ -1,4 +1,4 @@
-# VaultClient.Model.GithubMapUsersRequest
+# Vault.Model.GithubMapUsersRequest
 
 ## Properties
 
