@@ -9,8 +9,29 @@
 
 
 using System;
+using Vault.Api;
+using Vault.Client;
 
 namespace Vault
 {
-    
+    public class VaultClient
+    {
+        public Auth Auth;
+        public Identity Identity;
+        public Secrets Secrets;
+        public Vault.Api.System System;
+
+        public VaultClient(string VaultAddress)
+        {
+            if(string.IsNullOrEmpty(VaultAddress))
+            {
+                throw new ArgumentException("Cannot be empty", "VaultAddress");
+            }
+
+            this.Auth = new Auth(VaultAddress);
+            this.Identity = new Identity(VaultAddress);
+            this.Secrets = new Secrets(VaultAddress);
+            this.System = new Vault.Api.System(VaultAddress);
+        }
+    }    
 }
