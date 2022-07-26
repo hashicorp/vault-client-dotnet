@@ -198,6 +198,25 @@ namespace Vault.Client
                  this(Vault.Client.GlobalConfiguration.Instance.BasePath)
         {
         }
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApiClient" />.
+        /// </summary>
+        /// <param name="configuration">An instance of IReadableConfiguration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <remarks>
+        /// Some configuration settings will not be applied without passing an HttpClientHandler.
+        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+        /// </remarks>
+        public ApiClient(IReadableConfiguration configuration)
+        {
+            if (configuration == null) throw new ArgumentNullException("client cannot be null");
+  
+            _httpClientHandler = new HttpClientHandler();
+            _httpClient = new HttpClient(_httpClientHandler, true);
+            _baseUrl = configuration.BasePath;
+        }
+
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" />.
