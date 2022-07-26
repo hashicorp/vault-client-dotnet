@@ -166,10 +166,11 @@ namespace Vault.Client
     public partial class ApiClient : IDisposable, ISynchronousClient, IAsynchronousClient
     {
         private readonly string _baseUrl;
-        private readonly IReadableConfiguration _configuration;
         private readonly HttpClientHandler _httpClientHandler;
         private readonly HttpClient _httpClient;
         private readonly bool _disposeClient;
+
+        public readonly IReadableConfiguration Configuration;
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -313,14 +314,14 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            if (_configuration.UserAgent != null)
+            if (Configuration.UserAgent != null)
             {
-                request.Headers.TryAddWithoutValidation("User-Agent", _configuration.UserAgent);
+                request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
             }
 
-            if (_configuration.DefaultHeaders != null)
+            if (Configuration.DefaultHeaders != null)
             {
-                foreach (var headerParam in _configuration.DefaultHeaders)
+                foreach (var headerParam in Configuration.DefaultHeaders)
                 {
                     request.Headers.Add(headerParam.Key, headerParam.Value);
                 }
@@ -369,7 +370,7 @@ namespace Vault.Client
                     }
                     else
                     {
-                        var serializer = new CustomJsonCodec(SerializerSettings, _configuration);
+                        var serializer = new CustomJsonCodec(SerializerSettings, Configuration);
                         request.Content = new StringContent(serializer.Serialize(options.Data), new UTF8Encoding(),
                             "application/json");
                     }
@@ -441,26 +442,26 @@ namespace Vault.Client
         private async Task<ApiResponse<T>> ExecAsync<T>(HttpRequestMessage req,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            var deserializer = new CustomJsonCodec(SerializerSettings, _configuration);
+            var deserializer = new CustomJsonCodec(SerializerSettings, Configuration);
 
             var finalToken = cancellationToken;
 
-            if (_configuration.Timeout > 0)
+            if (Configuration.Timeout > 0)
             {
-                var tokenSource = new CancellationTokenSource(_configuration.Timeout);
+                var tokenSource = new CancellationTokenSource(Configuration.Timeout);
                 finalToken = CancellationTokenSource.CreateLinkedTokenSource(finalToken, tokenSource.Token).Token;
             }
 
-            if (_configuration.Proxy != null)
+            if (Configuration.Proxy != null)
             {
                 if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `Proxy` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.Proxy = _configuration.Proxy;
+                _httpClientHandler.Proxy = Configuration.Proxy;
             }
 
-            if (_configuration.ClientCertificates != null)
+            if (Configuration.ClientCertificates != null)
             {
                 if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `ClientCertificates` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.ClientCertificates.AddRange(_configuration.ClientCertificates);
+                _httpClientHandler.ClientCertificates.AddRange(Configuration.ClientCertificates);
             }
 
             var cookieContainer = req.Properties.ContainsKey("CookieContainer") ? req.Properties["CookieContainer"] as List<Cookie> : null;

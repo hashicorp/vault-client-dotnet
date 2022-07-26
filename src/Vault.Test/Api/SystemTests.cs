@@ -35,7 +35,7 @@ namespace Vault.Test.Api
 
         public SystemTests()
         {
-            instance = new Vault.Api.System();
+            // instance = new Vault.Api.System();
         }
 
         public void Dispose()

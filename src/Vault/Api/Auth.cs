@@ -6046,126 +6046,13 @@ namespace Vault.Api
     public partial class Auth : IDisposable, IAuth
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <returns></returns>
-        public Auth() : this((string)null)
+   
+        public Auth(ApiClient apiClient)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        public Auth(string basePath)
-        {
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                new Vault.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new Vault.Client.ApiClient(this.Configuration.BasePath);
-            this.Client =  this.ApiClient;
+            this.Configuration = apiClient.Configuration;
+            this.ApiClient = apiClient;
+            this.Client = apiClient;
             this.AsynchronousClient = this.ApiClient;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class using Configuration object.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        public Auth(Vault.Client.Configuration configuration)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new Vault.Client.ApiClient(this.Configuration.BasePath);
-            this.Client = this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public Auth(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public Auth(HttpClient client, string basePath, HttpClientHandler handler = null)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                new Vault.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new Vault.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client =  this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Auth"/> class using Configuration object.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public Auth(HttpClient client, Vault.Client.Configuration configuration, HttpClientHandler handler = null)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new Vault.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client = this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>

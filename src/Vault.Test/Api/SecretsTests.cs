@@ -35,7 +35,7 @@ namespace Vault.Test.Api
 
         public SecretsTests()
         {
-            instance = new Vault.Api.Secrets();
+            // instance = new Vault.Api.Secrets();
         }
 
         public void Dispose()

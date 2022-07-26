@@ -30,12 +30,12 @@ namespace {{packageName}}
             _configuration = new Configuration();
             _configuration.BasePath = VaultAddress;
 
-            _apiClient = new ApiClient();
+            _apiClient = new ApiClient(_configuration);
             
             {{#apiInfo}}
             {{#apis}}
             {{#operations}}
-            this.{{classname}} = new {{packageName}}.Api.{{classname}}(VaultAddress);
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(_apiClient);
             {{/operations}}
             {{/apis}}
             {{/apiInfo}}
