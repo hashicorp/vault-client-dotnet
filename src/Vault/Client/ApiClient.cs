@@ -165,7 +165,6 @@ namespace Vault.Client
     /// </remarks>
     public partial class ApiClient : IDisposable, ISynchronousClient, IAsynchronousClient
     {
-        private readonly string _baseUrl;
         private readonly HttpClientHandler _httpClientHandler;
         private readonly HttpClient _httpClient;
         private readonly bool _disposeClient;
@@ -190,16 +189,6 @@ namespace Vault.Client
         };
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />, defaulting to the global configurations' base url.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        public ApiClient() :
-                 this(Vault.Client.GlobalConfiguration.Instance.BasePath)
-        {
-        }
-        
-        /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" />.
         /// </summary>
         /// <param name="configuration">An instance of IReadableConfiguration.</param>
@@ -214,62 +203,8 @@ namespace Vault.Client
   
             _httpClientHandler = new HttpClientHandler();
             _httpClient = new HttpClient(_httpClientHandler, true);
-            _baseUrl = configuration.BasePath;
-        }
 
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <exception cref="ArgumentException"></exception>
-        public ApiClient(string basePath)
-        {
-            if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("basePath cannot be empty");
-
-            _httpClientHandler = new HttpClientHandler();
-            _httpClient = new HttpClient(_httpClientHandler, true);
-            _disposeClient = true;
-            _baseUrl = basePath;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />, defaulting to the global configurations' base url.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public ApiClient(HttpClient client, HttpClientHandler handler = null) :
-                 this(client, Vault.Client.GlobalConfiguration.Instance.BasePath, handler)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public ApiClient(HttpClient client, string basePath, HttpClientHandler handler = null)
-        {
-            if (client == null) throw new ArgumentNullException("client cannot be null");
-            if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("basePath cannot be empty");
-
-            _httpClientHandler = handler;
-            _httpClient = client;
-            _baseUrl = basePath;
+            Configuration = configuration;
         }
 
         /// <summary>
@@ -325,7 +260,7 @@ namespace Vault.Client
             if (path == null) throw new ArgumentNullException("path");
             if (options == null) throw new ArgumentNullException("options");
 
-            WebRequestPathBuilder builder = new WebRequestPathBuilder(_baseUrl, path);
+            WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath, path);
 
             builder.AddPathParameters(options.PathParameters);
 
