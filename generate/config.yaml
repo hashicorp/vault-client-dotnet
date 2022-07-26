@@ -5,5 +5,5 @@ additionalProperties:
 library: httpclient
 files:
   Client.mustache:
-    destinationFilename: src/VaultClient.cs
+    destinationFilename: src/Vault/VaultClient.cs
     templateType: SupportingFiles

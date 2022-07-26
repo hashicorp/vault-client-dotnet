@@ -22,7 +22,7 @@ namespace Vault
         public Vault.Api.System System;
         
         private readonly Configuration _configuration;
-        
+
         private readonly ApiClient _apiClient;
 
         public VaultClient(string VaultAddress)
