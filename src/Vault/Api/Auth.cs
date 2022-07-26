@@ -6274,7 +6274,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/alicloud/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6321,7 +6321,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6364,7 +6364,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6411,7 +6411,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6454,7 +6454,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6501,7 +6501,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6544,7 +6544,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6591,7 +6591,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6634,7 +6634,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6681,7 +6681,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6724,7 +6724,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6771,7 +6771,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6814,7 +6814,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6861,7 +6861,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6904,7 +6904,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6951,7 +6951,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6994,7 +6994,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7041,7 +7041,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7084,7 +7084,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7131,7 +7131,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7174,7 +7174,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7221,7 +7221,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7264,7 +7264,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7311,7 +7311,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7354,7 +7354,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7401,7 +7401,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7444,7 +7444,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7491,7 +7491,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7534,7 +7534,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7581,7 +7581,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7624,7 +7624,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7671,7 +7671,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7714,7 +7714,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7761,7 +7761,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7804,7 +7804,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7851,7 +7851,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7888,7 +7888,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/client", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7929,7 +7929,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/client", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7972,7 +7972,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8019,7 +8019,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8056,7 +8056,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8097,7 +8097,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8134,7 +8134,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8175,7 +8175,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8212,7 +8212,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8253,7 +8253,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8290,7 +8290,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8331,7 +8331,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8374,7 +8374,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8421,7 +8421,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8464,7 +8464,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8511,7 +8511,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8554,7 +8554,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8601,7 +8601,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8644,7 +8644,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8691,7 +8691,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8734,7 +8734,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8781,7 +8781,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8818,7 +8818,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/azure/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8859,7 +8859,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/azure/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8902,7 +8902,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/azure/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8949,7 +8949,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8992,7 +8992,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/cert/certs/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9039,7 +9039,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9082,7 +9082,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/cert/crls/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9129,7 +9129,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9166,7 +9166,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/cf/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9207,7 +9207,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cf/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9250,7 +9250,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/cf/roles/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9297,7 +9297,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9340,7 +9340,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/gcp/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9387,7 +9387,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9430,7 +9430,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/github/map/teams/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9477,7 +9477,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9520,7 +9520,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/github/map/users/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9567,7 +9567,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9610,7 +9610,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/jwt/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9657,7 +9657,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9700,7 +9700,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9747,7 +9747,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9790,7 +9790,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9837,7 +9837,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9880,7 +9880,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/ldap/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9927,7 +9927,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9970,7 +9970,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/ldap/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10017,7 +10017,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10054,7 +10054,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/oci/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10095,7 +10095,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oci/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10138,7 +10138,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/oci/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10185,7 +10185,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10228,7 +10228,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10275,7 +10275,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10318,7 +10318,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/okta/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10365,7 +10365,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10408,7 +10408,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/okta/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10455,7 +10455,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10498,7 +10498,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/radius/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10545,7 +10545,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10588,7 +10588,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/token/roles/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10635,7 +10635,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10678,7 +10678,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/auth/userpass/users/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10725,7 +10725,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10768,7 +10768,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10815,7 +10815,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10858,7 +10858,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10905,7 +10905,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10948,7 +10948,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/roles", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/alicloud/roles", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10995,7 +10995,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/roles", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/alicloud/roles", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11037,7 +11037,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/app-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/app-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11083,7 +11083,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/app-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/app-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11126,7 +11126,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11173,7 +11173,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11215,7 +11215,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/user-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/user-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11261,7 +11261,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/user-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/user-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11304,7 +11304,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11351,7 +11351,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11394,7 +11394,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11441,7 +11441,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11484,7 +11484,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11531,7 +11531,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11574,7 +11574,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11621,7 +11621,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11664,7 +11664,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11711,7 +11711,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11754,7 +11754,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/local-secret-ids", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/local-secret-ids", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11801,7 +11801,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/local-secret-ids", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/local-secret-ids", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11844,7 +11844,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11891,7 +11891,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11934,7 +11934,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11981,7 +11981,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12024,7 +12024,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12071,7 +12071,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12120,7 +12120,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12173,7 +12173,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12216,7 +12216,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12263,7 +12263,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12306,7 +12306,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12353,7 +12353,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12396,7 +12396,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12443,7 +12443,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12486,7 +12486,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12533,7 +12533,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12576,7 +12576,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12623,7 +12623,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12666,7 +12666,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12713,7 +12713,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12756,7 +12756,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12803,7 +12803,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12846,7 +12846,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12893,7 +12893,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12936,7 +12936,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/certificates", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/certificates", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12983,7 +12983,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/certificates", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/certificates", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13020,7 +13020,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/client", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13061,7 +13061,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/client", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13098,7 +13098,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/identity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/identity", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13139,7 +13139,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/identity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/identity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13182,7 +13182,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/sts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/sts", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13229,7 +13229,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/sts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/sts", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13272,7 +13272,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13319,7 +13319,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13356,7 +13356,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13397,7 +13397,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13434,7 +13434,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13475,7 +13475,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13512,7 +13512,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13553,7 +13553,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13590,7 +13590,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13631,7 +13631,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13674,7 +13674,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-accesslist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-accesslist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13721,7 +13721,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-accesslist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-accesslist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13764,7 +13764,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13811,7 +13811,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-accesslist/{instance_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13854,7 +13854,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-whitelist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-whitelist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13901,7 +13901,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-whitelist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-whitelist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13944,7 +13944,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13991,7 +13991,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/identity-whitelist/{instance_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14034,7 +14034,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14081,7 +14081,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14124,7 +14124,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14171,7 +14171,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14214,7 +14214,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/roles", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/roles", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14261,7 +14261,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roles", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roles", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14304,7 +14304,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-blacklist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-blacklist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14351,7 +14351,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-blacklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-blacklist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14394,7 +14394,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14441,7 +14441,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14484,7 +14484,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-denylist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-denylist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14531,7 +14531,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-denylist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-denylist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14574,7 +14574,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14621,7 +14621,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14658,7 +14658,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/azure/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14699,7 +14699,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14742,7 +14742,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/azure/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/azure/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14789,7 +14789,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14832,7 +14832,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/azure/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14879,7 +14879,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14916,7 +14916,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/centrify/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/centrify/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14957,7 +14957,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/centrify/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/centrify/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15000,7 +15000,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cert/certs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cert/certs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15047,7 +15047,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/certs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/certs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15090,7 +15090,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cert/certs/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15137,7 +15137,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15180,7 +15180,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cert/crls/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15227,7 +15227,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15264,7 +15264,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cf/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15305,7 +15305,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15348,7 +15348,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cf/roles", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cf/roles", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15395,7 +15395,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/roles", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/roles", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15438,7 +15438,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/cf/roles/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15485,7 +15485,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15522,7 +15522,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/gcp/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/gcp/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15563,7 +15563,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15606,7 +15606,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/gcp/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/gcp/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15653,7 +15653,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15696,7 +15696,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/gcp/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15743,7 +15743,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15786,7 +15786,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/gcp/roles", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/gcp/roles", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15833,7 +15833,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/roles", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/gcp/roles", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15870,7 +15870,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/github/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/github/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15911,7 +15911,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15953,7 +15953,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/github/map/teams", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/github/map/teams", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15999,7 +15999,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/teams", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/teams", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16042,7 +16042,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/github/map/teams/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16089,7 +16089,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16131,7 +16131,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/github/map/users", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/github/map/users", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16177,7 +16177,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/users", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16220,7 +16220,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/github/map/users/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16267,7 +16267,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16304,7 +16304,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/jwt/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/jwt/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16345,7 +16345,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16382,7 +16382,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/jwt/oidc/callback", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16423,7 +16423,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16466,7 +16466,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/jwt/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/jwt/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16513,7 +16513,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16556,7 +16556,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/jwt/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16603,7 +16603,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16640,7 +16640,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16681,7 +16681,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16718,7 +16718,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/config/ldap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16759,7 +16759,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16802,7 +16802,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/groups", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/groups", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16849,7 +16849,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/groups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/groups", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16892,7 +16892,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16939,7 +16939,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16976,7 +16976,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kerberos/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17017,7 +17017,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kerberos/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17054,7 +17054,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17095,7 +17095,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17138,7 +17138,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17185,7 +17185,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17228,7 +17228,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17275,7 +17275,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17312,7 +17312,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/ldap/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/ldap/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17353,7 +17353,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17396,7 +17396,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/ldap/groups", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/ldap/groups", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17443,7 +17443,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/groups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/groups", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17486,7 +17486,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/ldap/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17533,7 +17533,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17576,7 +17576,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/ldap/users", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/ldap/users", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17623,7 +17623,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/users", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17666,7 +17666,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/ldap/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17713,7 +17713,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17750,7 +17750,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oci/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17791,7 +17791,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17834,7 +17834,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oci/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oci/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17881,7 +17881,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17924,7 +17924,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oci/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17971,7 +17971,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18008,7 +18008,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oidc/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oidc/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18049,7 +18049,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18086,7 +18086,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oidc/oidc/callback", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18127,7 +18127,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18170,7 +18170,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oidc/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oidc/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18217,7 +18217,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18260,7 +18260,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18307,7 +18307,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18344,7 +18344,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18385,7 +18385,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18428,7 +18428,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/groups", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/groups", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18475,7 +18475,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/groups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/groups", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18518,7 +18518,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18565,7 +18565,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18608,7 +18608,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/users", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/users", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18655,7 +18655,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/users", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18698,7 +18698,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18745,7 +18745,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18788,7 +18788,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/okta/verify/{nonce}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/okta/verify/{nonce}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18835,7 +18835,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/verify/{nonce}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/okta/verify/{nonce}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18872,7 +18872,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/radius/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/radius/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18913,7 +18913,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18956,7 +18956,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/radius/users", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/radius/users", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19003,7 +19003,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/users", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19046,7 +19046,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/radius/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19093,7 +19093,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19136,7 +19136,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/token/accessors/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/token/accessors/", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19183,7 +19183,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/accessors/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/accessors/", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19220,7 +19220,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/token/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/token/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19261,7 +19261,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19298,7 +19298,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/token/lookup-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/token/lookup-self", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19339,7 +19339,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/lookup-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/lookup-self", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19382,7 +19382,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/token/roles", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/token/roles", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19429,7 +19429,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/roles", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/roles", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19472,7 +19472,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/token/roles/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19519,7 +19519,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19562,7 +19562,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/userpass/users", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/userpass/users", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19609,7 +19609,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/userpass/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/userpass/users", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19652,7 +19652,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/auth/userpass/users/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19699,7 +19699,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19739,7 +19739,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/alicloud/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/alicloud/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19783,7 +19783,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/alicloud/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/alicloud/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19829,7 +19829,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/alicloud/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19879,7 +19879,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/alicloud/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19919,7 +19919,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/app-id/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/app-id/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19963,7 +19963,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20009,7 +20009,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/app-id/login/{app_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/app-id/login/{app_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20059,7 +20059,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/login/{app_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/login/{app_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20105,7 +20105,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20155,7 +20155,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/map/app-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20201,7 +20201,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20251,7 +20251,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/app-id/map/user-id/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20291,7 +20291,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20335,7 +20335,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20381,7 +20381,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20431,7 +20431,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20477,7 +20477,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20527,7 +20527,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/bind-secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20573,7 +20573,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20623,7 +20623,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/bound-cidr-list", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20669,7 +20669,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/custom-secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/custom-secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20719,7 +20719,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/custom-secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/custom-secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20765,7 +20765,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20815,7 +20815,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/period", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20861,7 +20861,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20911,7 +20911,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/policies", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20957,7 +20957,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21007,7 +21007,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/role-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21053,7 +21053,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21103,7 +21103,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21149,7 +21149,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21199,7 +21199,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21245,7 +21245,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-accessor/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-accessor/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21295,7 +21295,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-accessor/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21341,7 +21341,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21391,7 +21391,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21437,7 +21437,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21487,7 +21487,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id/destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21533,7 +21533,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21583,7 +21583,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21629,7 +21629,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21679,7 +21679,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21725,7 +21725,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21775,7 +21775,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/secret-id-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21821,7 +21821,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21871,7 +21871,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-bound-cidrs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21917,7 +21917,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21967,7 +21967,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-max-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22013,7 +22013,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22063,7 +22063,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-num-uses", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22109,7 +22109,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22159,7 +22159,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/role/{role_name}/token-ttl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22196,7 +22196,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/approle/tidy/secret-id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/approle/tidy/secret-id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22237,7 +22237,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/tidy/secret-id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/approle/tidy/secret-id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22283,7 +22283,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22333,7 +22333,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/certificate/{cert_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22373,7 +22373,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/client", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22417,7 +22417,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/client", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/client", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22457,7 +22457,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/identity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/identity", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22501,7 +22501,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/identity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/identity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22538,7 +22538,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/rotate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/rotate-root", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22579,7 +22579,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/rotate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/rotate-root", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22625,7 +22625,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22675,7 +22675,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/sts/{account_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22715,7 +22715,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22759,7 +22759,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/identity-accesslist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22799,7 +22799,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22843,7 +22843,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/identity-whitelist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22883,7 +22883,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22927,7 +22927,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/roletag-blacklist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22967,7 +22967,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23011,7 +23011,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/config/tidy/roletag-denylist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23051,7 +23051,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23095,7 +23095,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23141,7 +23141,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23191,7 +23191,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23237,7 +23237,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/role/{role}/tag", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/role/{role}/tag", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23287,7 +23287,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/role/{role}/tag", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/role/{role}/tag", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23330,7 +23330,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23377,7 +23377,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/roletag-blacklist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23420,7 +23420,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23467,7 +23467,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/roletag-denylist/{role_tag}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23507,7 +23507,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/identity-accesslist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/identity-accesslist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23551,7 +23551,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/identity-accesslist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/identity-accesslist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23591,7 +23591,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/identity-whitelist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/identity-whitelist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23635,7 +23635,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/identity-whitelist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/identity-whitelist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23675,7 +23675,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/roletag-blacklist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23719,7 +23719,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/roletag-blacklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/roletag-blacklist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23759,7 +23759,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/roletag-denylist", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/aws/tidy/roletag-denylist", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23803,7 +23803,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/roletag-denylist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/aws/tidy/roletag-denylist", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23843,7 +23843,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/azure/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23887,7 +23887,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23927,7 +23927,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/azure/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/azure/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23971,7 +23971,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24017,7 +24017,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/azure/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24067,7 +24067,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/azure/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24107,7 +24107,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/centrify/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/centrify/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24151,7 +24151,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/centrify/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/centrify/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24191,7 +24191,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/centrify/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/centrify/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24235,7 +24235,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/centrify/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/centrify/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24281,7 +24281,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cert/certs/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24331,7 +24331,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/certs/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24371,7 +24371,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cert/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cert/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24415,7 +24415,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24461,7 +24461,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cert/crls/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24511,7 +24511,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/crls/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24551,7 +24551,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cert/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cert/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24595,7 +24595,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cert/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24635,7 +24635,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cf/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24679,7 +24679,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24719,7 +24719,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cf/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cf/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24763,7 +24763,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24809,7 +24809,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/cf/roles/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24859,7 +24859,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/cf/roles/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24899,7 +24899,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/gcp/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/gcp/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24943,7 +24943,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24983,7 +24983,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/gcp/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/gcp/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25027,7 +25027,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25073,7 +25073,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25123,7 +25123,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25169,7 +25169,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}/labels", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}/labels", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25219,7 +25219,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}/labels", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}/labels", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25265,7 +25265,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}/service-accounts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/gcp/role/{name}/service-accounts", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25315,7 +25315,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}/service-accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/gcp/role/{name}/service-accounts", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25355,7 +25355,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/github/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/github/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25399,7 +25399,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25439,7 +25439,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/github/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/github/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25483,7 +25483,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25529,7 +25529,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/github/map/teams/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25579,7 +25579,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/map/teams/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25625,7 +25625,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/github/map/users/{key}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25675,7 +25675,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/github/map/users/{key}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25715,7 +25715,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/jwt/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/jwt/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25759,7 +25759,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25799,7 +25799,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/jwt/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/jwt/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25843,7 +25843,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25883,7 +25883,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/jwt/oidc/auth_url", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/jwt/oidc/auth_url", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25927,7 +25927,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/oidc/auth_url", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/oidc/auth_url", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25967,7 +25967,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/jwt/oidc/callback", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26011,7 +26011,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/oidc/callback", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26057,7 +26057,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/jwt/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26107,7 +26107,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/jwt/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26147,7 +26147,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26191,7 +26191,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26231,7 +26231,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/config/ldap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26275,7 +26275,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/config/ldap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26321,7 +26321,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26371,7 +26371,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26411,7 +26411,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kerberos/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26455,7 +26455,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kerberos/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26495,7 +26495,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26539,7 +26539,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26579,7 +26579,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26623,7 +26623,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26669,7 +26669,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26719,7 +26719,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/kubernetes/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26759,7 +26759,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/ldap/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/ldap/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26803,7 +26803,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26849,7 +26849,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/ldap/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26899,7 +26899,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26945,7 +26945,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/ldap/login/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/ldap/login/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26995,7 +26995,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/login/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/login/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27041,7 +27041,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/ldap/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27091,7 +27091,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/ldap/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27131,7 +27131,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oci/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27175,7 +27175,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27221,7 +27221,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oci/login/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oci/login/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27271,7 +27271,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/login/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/login/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27317,7 +27317,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oci/role/{role}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27367,7 +27367,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oci/role/{role}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27407,7 +27407,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oidc/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oidc/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27451,7 +27451,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27491,7 +27491,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oidc/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oidc/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27535,7 +27535,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27575,7 +27575,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oidc/oidc/auth_url", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oidc/oidc/auth_url", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27619,7 +27619,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/oidc/auth_url", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/oidc/auth_url", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27659,7 +27659,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oidc/oidc/callback", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27703,7 +27703,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/oidc/callback", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27749,7 +27749,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27799,7 +27799,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27839,7 +27839,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/okta/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/okta/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27883,7 +27883,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27929,7 +27929,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/okta/groups/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27979,7 +27979,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/groups/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28025,7 +28025,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/okta/login/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/okta/login/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28075,7 +28075,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/login/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/login/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28121,7 +28121,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/okta/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28171,7 +28171,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/okta/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28211,7 +28211,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/radius/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/radius/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28255,7 +28255,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28295,7 +28295,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/radius/login", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/radius/login", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28339,7 +28339,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/login", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/login", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28385,7 +28385,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/radius/login/{urlusername}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/radius/login/{urlusername}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28435,7 +28435,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/login/{urlusername}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/login/{urlusername}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28481,7 +28481,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/radius/users/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28531,7 +28531,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/radius/users/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28568,7 +28568,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/create", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/create", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28609,7 +28609,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28646,7 +28646,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/create-orphan", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/create-orphan", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28687,7 +28687,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create-orphan", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create-orphan", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28730,7 +28730,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/create/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/create/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28777,7 +28777,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28817,7 +28817,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28861,7 +28861,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28901,7 +28901,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup-accessor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup-accessor", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28945,7 +28945,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup-accessor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup-accessor", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28985,7 +28985,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/lookup-self", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29029,7 +29029,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/lookup-self", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29069,7 +29069,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/renew", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/renew", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29113,7 +29113,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29153,7 +29153,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/renew-accessor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/renew-accessor", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29197,7 +29197,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew-accessor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew-accessor", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29237,7 +29237,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/renew-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/renew-self", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29281,7 +29281,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/renew-self", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29321,7 +29321,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29365,7 +29365,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29405,7 +29405,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-accessor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-accessor", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29449,7 +29449,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-accessor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-accessor", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29489,7 +29489,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-orphan", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-orphan", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29533,7 +29533,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-orphan", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-orphan", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29570,7 +29570,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/revoke-self", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29611,7 +29611,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/revoke-self", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29657,7 +29657,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/roles/{role_name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29707,7 +29707,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/roles/{role_name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29744,7 +29744,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/token/tidy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/token/tidy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29785,7 +29785,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/tidy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/token/tidy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29831,7 +29831,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/userpass/login/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/userpass/login/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29881,7 +29881,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/login/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/login/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29927,7 +29927,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29977,7 +29977,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30023,7 +30023,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}/password", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}/password", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30073,7 +30073,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}/password", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}/password", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30119,7 +30119,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}/policies", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/auth/userpass/users/{username}/policies", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30169,7 +30169,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}/policies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/auth/userpass/users/{username}/policies", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

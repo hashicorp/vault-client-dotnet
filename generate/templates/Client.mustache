@@ -15,6 +15,10 @@ namespace {{packageName}}
         {{/operations}}
         {{/apis}}
         {{/apiInfo}}
+        
+        private readonly Configuration _configuration;
+
+        private readonly ApiClient _apiClient;
 
         public {{packageName}}Client(string VaultAddress)
         {
@@ -23,6 +27,11 @@ namespace {{packageName}}
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
+            _configuration = new Configuration();
+            _configuration.BasePath = VaultAddress;
+
+            _apiClient = new ApiClient();
+            
             {{#apiInfo}}
             {{#apis}}
             {{#operations}}

@@ -2626,7 +2626,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2673,7 +2673,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2716,7 +2716,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2763,7 +2763,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2806,7 +2806,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/entity/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2853,7 +2853,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2896,7 +2896,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/entity/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2943,7 +2943,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2986,7 +2986,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3033,7 +3033,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3076,7 +3076,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/group/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3123,7 +3123,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3166,7 +3166,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/group/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3213,7 +3213,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3256,7 +3256,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3303,7 +3303,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3346,7 +3346,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3393,7 +3393,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3436,7 +3436,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3483,7 +3483,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3526,7 +3526,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3573,7 +3573,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3616,7 +3616,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3663,7 +3663,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3706,7 +3706,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3753,7 +3753,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3796,7 +3796,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3843,7 +3843,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3886,7 +3886,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3933,7 +3933,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3976,7 +3976,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4023,7 +4023,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4066,7 +4066,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4113,7 +4113,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4156,7 +4156,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4203,7 +4203,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4246,7 +4246,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/identity/persona/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4293,7 +4293,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4336,7 +4336,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/alias/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/alias/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4383,7 +4383,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4426,7 +4426,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4473,7 +4473,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4516,7 +4516,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4563,7 +4563,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4606,7 +4606,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4653,7 +4653,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4696,7 +4696,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4743,7 +4743,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4786,7 +4786,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4833,7 +4833,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4876,7 +4876,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/name", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity/name", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4923,7 +4923,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4966,7 +4966,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/entity/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5013,7 +5013,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5056,7 +5056,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5103,7 +5103,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5146,7 +5146,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5193,7 +5193,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5236,7 +5236,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5283,7 +5283,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5326,7 +5326,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5373,7 +5373,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5416,7 +5416,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/name", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group/name", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5463,7 +5463,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5506,7 +5506,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/group/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5553,7 +5553,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5596,7 +5596,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5643,7 +5643,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5686,7 +5686,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5733,7 +5733,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5776,7 +5776,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5823,7 +5823,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5866,7 +5866,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5913,7 +5913,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5956,7 +5956,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6003,7 +6003,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6046,7 +6046,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6093,7 +6093,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6136,7 +6136,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6183,7 +6183,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6226,7 +6226,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6273,7 +6273,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6316,7 +6316,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6363,7 +6363,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6406,7 +6406,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6453,7 +6453,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6496,7 +6496,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6543,7 +6543,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6586,7 +6586,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6633,7 +6633,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6676,7 +6676,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6723,7 +6723,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6766,7 +6766,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6813,7 +6813,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6856,7 +6856,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6903,7 +6903,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6946,7 +6946,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6993,7 +6993,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7030,7 +7030,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7071,7 +7071,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7114,7 +7114,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7161,7 +7161,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7204,7 +7204,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7251,7 +7251,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7294,7 +7294,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7341,7 +7341,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7384,7 +7384,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7431,7 +7431,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7474,7 +7474,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7521,7 +7521,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7564,7 +7564,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7611,7 +7611,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7654,7 +7654,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7701,7 +7701,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7744,7 +7744,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7791,7 +7791,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7834,7 +7834,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7881,7 +7881,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7924,7 +7924,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7971,7 +7971,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8014,7 +8014,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8061,7 +8061,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8104,7 +8104,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8151,7 +8151,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8194,7 +8194,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/token/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/token/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8241,7 +8241,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8278,7 +8278,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8319,7 +8319,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8356,7 +8356,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8397,7 +8397,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8440,7 +8440,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/persona/id", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/persona/id", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8487,7 +8487,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8530,7 +8530,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/identity/persona/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8577,7 +8577,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8617,7 +8617,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/alias", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/alias", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8661,7 +8661,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8707,7 +8707,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8757,7 +8757,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8797,7 +8797,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8841,7 +8841,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8881,7 +8881,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8925,7 +8925,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8971,7 +8971,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9021,7 +9021,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9061,7 +9061,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/batch-delete", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity/batch-delete", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9105,7 +9105,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/batch-delete", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/batch-delete", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9151,7 +9151,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9201,7 +9201,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9241,7 +9241,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/merge", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity/merge", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9285,7 +9285,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/merge", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/merge", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9331,7 +9331,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/entity/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9381,7 +9381,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9421,7 +9421,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/group", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9465,7 +9465,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9505,7 +9505,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group-alias", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/group-alias", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9549,7 +9549,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9595,7 +9595,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9645,7 +9645,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9691,7 +9691,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/group/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9741,7 +9741,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9787,7 +9787,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/group/name/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9837,7 +9837,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9877,7 +9877,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/lookup/entity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/lookup/entity", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9921,7 +9921,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/entity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/entity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9961,7 +9961,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/lookup/group", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/lookup/group", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10005,7 +10005,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/group", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/group", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10051,7 +10051,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10101,7 +10101,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10147,7 +10147,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10197,7 +10197,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10243,7 +10243,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10293,7 +10293,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10339,7 +10339,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10389,7 +10389,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10429,7 +10429,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10473,7 +10473,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10513,7 +10513,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10557,7 +10557,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10597,7 +10597,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10641,7 +10641,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10687,7 +10687,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10737,7 +10737,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10783,7 +10783,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10833,7 +10833,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10879,7 +10879,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10929,7 +10929,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10969,7 +10969,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11013,7 +11013,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11053,7 +11053,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/introspect", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/introspect", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11097,7 +11097,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/introspect", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/introspect", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11143,7 +11143,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11193,7 +11193,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11239,7 +11239,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11289,7 +11289,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11335,7 +11335,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11385,7 +11385,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11431,7 +11431,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11481,7 +11481,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11527,7 +11527,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11577,7 +11577,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11620,7 +11620,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11667,7 +11667,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11713,7 +11713,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11763,7 +11763,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11809,7 +11809,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11859,7 +11859,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11899,7 +11899,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/persona", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/persona", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11943,7 +11943,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11989,7 +11989,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/identity/persona/id/{id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12039,7 +12039,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

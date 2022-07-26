@@ -20,6 +20,10 @@ namespace Vault
         public Vault.Api.Identity Identity;
         public Vault.Api.Secrets Secrets;
         public Vault.Api.System System;
+        
+        private readonly Configuration _configuration;
+
+        private readonly ApiClient _apiClient;
 
         public VaultClient(string VaultAddress)
         {
@@ -28,6 +32,11 @@ namespace Vault
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
+            _configuration = new Configuration();
+            _configuration.BasePath = VaultAddress;
+
+            _apiClient = new ApiClient();
+            
             this.Auth = new Vault.Api.Auth(VaultAddress);
             this.Identity = new Vault.Api.Identity(VaultAddress);
             this.Secrets = new Vault.Api.Secrets(VaultAddress);
