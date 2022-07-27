@@ -20,17 +20,15 @@ namespace Vault
         public Vault.Api.Identity Identity;
         public Vault.Api.Secrets Secrets;
         public Vault.Api.System System;
-        
-        private readonly Configuration _configuration;
-        
+                
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultClient"/> class
         /// </summary>
         public VaultClient(Configuration configuration)
         {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(Configuration));
+            if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
 
-            var apiClient = new ApiClient(_configuration);
+            var apiClient = new ApiClient(configuration);
 
             this.Auth = new Vault.Api.Auth(apiClient);
             this.Identity = new Vault.Api.Identity(apiClient);
@@ -48,10 +46,10 @@ namespace Vault
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
-            _configuration = new Configuration();
-            _configuration.BasePath = VaultAddress;
+            var configuration = new Configuration();
+            configuration.BasePath = VaultAddress;
 
-            var apiClient = new ApiClient(_configuration);
+            var apiClient = new ApiClient(configuration);
             
             this.Auth = new Vault.Api.Auth(apiClient);
             this.Identity = new Vault.Api.Identity(apiClient);

@@ -15,17 +15,15 @@ namespace {{packageName}}
         {{/operations}}
         {{/apis}}
         {{/apiInfo}}
-        
-        private readonly Configuration _configuration;
-        
+                
         /// <summary>
         /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
         /// </summary>
         public {{packageName}}Client(Configuration configuration)
         {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(Configuration));
+            if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
 
-            var apiClient = new ApiClient(_configuration);
+            var apiClient = new ApiClient(configuration);
 
             {{#apiInfo}}
             {{#apis}}
@@ -46,10 +44,10 @@ namespace {{packageName}}
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
-            _configuration = new Configuration();
-            _configuration.BasePath = VaultAddress;
+            var configuration = new Configuration();
+            configuration.BasePath = VaultAddress;
 
-            var apiClient = new ApiClient(_configuration);
+            var apiClient = new ApiClient(configuration);
             
             {{#apiInfo}}
             {{#apis}}
