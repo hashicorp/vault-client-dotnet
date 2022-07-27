@@ -3513,6 +3513,8 @@ namespace Vault.Api
    
         public System(ApiClient apiClient)
         {
+            if (apiClient == null) throw new ArgumentNullException("ApiClient");
+            
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;

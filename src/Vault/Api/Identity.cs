@@ -2401,6 +2401,8 @@ namespace Vault.Api
    
         public Identity(ApiClient apiClient)
         {
+            if (apiClient == null) throw new ArgumentNullException("ApiClient");
+            
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
