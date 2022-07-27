@@ -6043,16 +6043,15 @@ namespace Vault.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class Auth : IDisposable, IAuth
+    public partial class Auth : IAuth
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
    
         public Auth(ApiClient apiClient)
         {
             this.Configuration = apiClient.Configuration;
-            this.ApiClient = apiClient;
             this.Client = apiClient;
-            this.AsynchronousClient = this.ApiClient;
+            this.AsynchronousClient = apiClient;
         }
 
         /// <summary>
@@ -6074,19 +6073,6 @@ namespace Vault.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
         }
-
-        /// <summary>
-        /// Disposes resources if they were created by us
-        /// </summary>
-        public void Dispose()
-        {
-            this.ApiClient?.Dispose();
-        }
-
-        /// <summary>
-        /// Holds the ApiClient if created
-        /// </summary>
-        public Vault.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
