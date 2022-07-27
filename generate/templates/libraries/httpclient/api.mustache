@@ -77,16 +77,17 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} partial class {{classname}} : IDisposable, {{interfacePrefix}}{{classname}}
+    {{>visibility}} partial class {{classname}} : {{interfacePrefix}}{{classname}}
     {
         private {{packageName}}.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
    
         public {{classname}}(ApiClient apiClient)
         {
+            if (apiClient == null) throw new ArgumentNullException("ApiClient");
+            
             this.Configuration = apiClient.Configuration;
-            this.ApiClient = apiClient;
             this.Client = apiClient;
-            this.AsynchronousClient = this.ApiClient;
+            this.AsynchronousClient = apiClient;
         }
 
         /// <summary>
@@ -112,19 +113,6 @@ namespace {{packageName}}.{{apiPackage}}
             this.Configuration = configuration;
             this.ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
         }
-
-        /// <summary>
-        /// Disposes resources if they were created by us
-        /// </summary>
-        public void Dispose()
-        {
-            this.ApiClient?.Dispose();
-        }
-
-        /// <summary>
-        /// Holds the ApiClient if created
-        /// </summary>
-        public {{packageName}}.Client.ApiClient ApiClient { get; set; } = null;
 
         {{#supportsAsync}}
         /// <summary>
