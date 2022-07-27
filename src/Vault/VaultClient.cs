@@ -22,7 +22,25 @@ namespace Vault
         public Vault.Api.System System;
         
         private readonly Configuration _configuration;
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VaultClient"/> class
+        /// </summary>
+        public VaultClient(Configuration configuration)
+        {
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(Configuration));
 
+            var apiClient = new ApiClient(_configuration);
+
+            this.Auth = new Vault.Api.Auth(apiClient);
+            this.Identity = new Vault.Api.Identity(apiClient);
+            this.Secrets = new Vault.Api.Secrets(apiClient);
+            this.System = new Vault.Api.System(apiClient);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VaultClient"/> class
+        /// </summary>
         public VaultClient(string VaultAddress)
         {
             if(string.IsNullOrEmpty(VaultAddress))
