@@ -23,8 +23,6 @@ namespace Vault
         
         private readonly Configuration _configuration;
 
-        private readonly ApiClient _apiClient;
-
         public VaultClient(string VaultAddress)
         {
             if(string.IsNullOrEmpty(VaultAddress))
@@ -35,12 +33,12 @@ namespace Vault
             _configuration = new Configuration();
             _configuration.BasePath = VaultAddress;
 
-            _apiClient = new ApiClient(_configuration);
+            var apiClient = new ApiClient(_configuration);
             
-            this.Auth = new Vault.Api.Auth(_apiClient);
-            this.Identity = new Vault.Api.Identity(_apiClient);
-            this.Secrets = new Vault.Api.Secrets(_apiClient);
-            this.System = new Vault.Api.System(_apiClient);
+            this.Auth = new Vault.Api.Auth(apiClient);
+            this.Identity = new Vault.Api.Identity(apiClient);
+            this.Secrets = new Vault.Api.Secrets(apiClient);
+            this.System = new Vault.Api.System(apiClient);
         }
     }    
 }
