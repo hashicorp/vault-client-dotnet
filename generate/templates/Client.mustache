@@ -17,7 +17,28 @@ namespace {{packageName}}
         {{/apiInfo}}
         
         private readonly Configuration _configuration;
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
+        /// </summary>
+        public {{packageName}}Client(Configuration configuration)
+        {
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(Configuration));
 
+            var apiClient = new ApiClient(_configuration);
+
+            {{#apiInfo}}
+            {{#apis}}
+            {{#operations}}
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(apiClient);
+            {{/operations}}
+            {{/apis}}
+            {{/apiInfo}}
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
+        /// </summary>
         public {{packageName}}Client(string VaultAddress)
         {
             if(string.IsNullOrEmpty(VaultAddress))
