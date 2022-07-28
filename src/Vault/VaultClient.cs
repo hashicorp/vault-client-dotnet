@@ -46,8 +46,7 @@ namespace Vault
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
-            var configuration = new Configuration();
-            configuration.BasePath = VaultAddress;
+            var configuration = new Configuration(VaultAddress);
 
             var apiClient = new ApiClient(configuration);
             

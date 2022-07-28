@@ -103,101 +103,14 @@ namespace {{packageName}}.Client
         #endregion Private Members
 
         #region Constructors
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
-        public Configuration()
+        public Configuration(string basePath)
         {
-            Proxy = null;
-            UserAgent = "{{httpUserAgent}}{{^httpUserAgent}}OpenAPI-Generator/{{packageVersion}}/csharp{{/httpUserAgent}}";
-            BasePath = "{{{basePath}}}";
-            DefaultHeaders = new {{^net35}}Concurrent{{/net35}}Dictionary<string, string>();
-            ApiKey = new {{^net35}}Concurrent{{/net35}}Dictionary<string, string>();
-            ApiKeyPrefix = new {{^net35}}Concurrent{{/net35}}Dictionary<string, string>();
-            {{#servers}}
-            {{#-first}}
-            Servers = new List<IReadOnlyDictionary<string, object>>()
-            {
-            {{/-first}}
-                {
-                    new Dictionary<string, object> {
-                        {"url", "{{{url}}}"},
-                        {"description", "{{{description}}}{{^description}}No description provided{{/description}}"},
-                        {{#variables}}
-                        {{#-first}}
-                        {
-                            "variables", new Dictionary<string, object> {
-                        {{/-first}}
-                                {
-                                    "{{{name}}}", new Dictionary<string, object> {
-                                        {"description", "{{{description}}}{{^description}}No description provided{{/description}}"},
-                                        {"default_value", "{{{defaultValue}}}"},
-                                        {{#enumValues}}
-                                        {{#-first}}
-                                        {
-                                            "enum_values", new List<string>() {
-                                        {{/-first}}
-                                                "{{{.}}}"{{^-last}},{{/-last}}
-                                        {{#-last}}
-                                            }
-                                        }
-                                        {{/-last}}
-                                        {{/enumValues}}
-                                    }
-                                }{{^-last}},{{/-last}}
-                        {{#-last}}
-                            }
-                        }
-                        {{/-last}}
-                        {{/variables}}
-                    }
-                }{{^-last}},{{/-last}}
-            {{#-last}}
-            };
-            {{/-last}}
-            {{/servers}}
-
-            // Setting Timeout has side effects (forces ApiClient creation).
-            Timeout = 100000;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
-        /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
-        public Configuration(
-            IDictionary<string, string> defaultHeaders,
-            IDictionary<string, string> apiKey,
-            IDictionary<string, string> apiKeyPrefix,
-            string basePath = "{{{basePath}}}") : this()
-        {
-            if (string.{{^net35}}IsNullOrWhiteSpace{{/net35}}{{#net35}}IsNullOrEmpty{{/net35}}(basePath))
-                throw new ArgumentException("The provided basePath is invalid.", "basePath");
-            if (defaultHeaders == null)
-                throw new ArgumentNullException("defaultHeaders");
-            if (apiKey == null)
-                throw new ArgumentNullException("apiKey");
-            if (apiKeyPrefix == null)
-                throw new ArgumentNullException("apiKeyPrefix");
+            if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
 
             BasePath = basePath;
-
-            foreach (var keyValuePair in defaultHeaders)
-            {
-                DefaultHeaders.Add(keyValuePair);
-            }
-
-            foreach (var keyValuePair in apiKey)
-            {
-                ApiKey.Add(keyValuePair);
-            }
-
-            foreach (var keyValuePair in apiKeyPrefix)
-            {
-                ApiKeyPrefix.Add(keyValuePair);
-            }
         }
 
         #endregion Constructors
