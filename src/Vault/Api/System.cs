@@ -3507,129 +3507,17 @@ namespace Vault.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class System : IDisposable, ISystem
+    public partial class System : ISystem
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <returns></returns>
-        public System() : this((string)null)
+   
+        public System(ApiClient apiClient)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        public System(string basePath)
-        {
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                new Vault.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new Vault.Client.ApiClient(this.Configuration.BasePath);
-            this.Client =  this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class using Configuration object.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        public System(Vault.Client.Configuration configuration)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new Vault.Client.ApiClient(this.Configuration.BasePath);
-            this.Client = this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public System(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public System(HttpClient client, string basePath, HttpClientHandler handler = null)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                new Vault.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new Vault.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client =  this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="System"/> class using Configuration object.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public System(HttpClient client, Vault.Client.Configuration configuration, HttpClientHandler handler = null)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = Vault.Client.Configuration.MergeConfigurations(
-                Vault.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new Vault.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client = this.ApiClient;
-            this.AsynchronousClient = this.ApiClient;
-            ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
+            if (apiClient == null) throw new ArgumentNullException("ApiClient");
+            
+            this.Configuration = apiClient.Configuration;
+            this.Client = apiClient;
+            this.AsynchronousClient = apiClient;
         }
 
         /// <summary>
@@ -3651,19 +3539,6 @@ namespace Vault.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
         }
-
-        /// <summary>
-        /// Disposes resources if they were created by us
-        /// </summary>
-        public void Dispose()
-        {
-            this.ApiClient?.Dispose();
-        }
-
-        /// <summary>
-        /// Holds the ApiClient if created
-        /// </summary>
-        public Vault.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -3738,7 +3613,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/audit/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3785,7 +3660,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3828,7 +3703,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/auth/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3875,7 +3750,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3918,7 +3793,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3965,7 +3840,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4002,7 +3877,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/cors", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4043,7 +3918,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/cors", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4086,7 +3961,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4133,7 +4008,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4170,7 +4045,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4211,7 +4086,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4248,7 +4123,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/generate-root/attempt", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4289,7 +4164,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4332,7 +4207,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/mounts/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4379,7 +4254,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4422,7 +4297,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4469,7 +4344,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4518,7 +4393,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4571,7 +4446,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4614,7 +4489,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policies/acl/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4661,7 +4536,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4704,7 +4579,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policies/password/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4751,7 +4626,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4794,7 +4669,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/policy/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4841,7 +4716,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4884,7 +4759,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4931,7 +4806,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4968,7 +4843,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/raw", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5009,7 +4884,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5052,7 +4927,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/raw/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5099,7 +4974,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5136,7 +5011,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/backup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5177,7 +5052,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/backup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5214,7 +5089,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/init", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5255,7 +5130,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/init", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5292,7 +5167,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5333,7 +5208,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5370,7 +5245,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/sys/rekey/verify", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5411,7 +5286,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/verify", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5448,7 +5323,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/audit", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/audit", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5489,7 +5364,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5526,7 +5401,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5567,7 +5442,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5610,7 +5485,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5657,7 +5532,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5700,7 +5575,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/auth/{path}/tune", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5747,7 +5622,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5784,7 +5659,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5825,7 +5700,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5868,7 +5743,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5915,7 +5790,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5952,7 +5827,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/cors", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5993,7 +5868,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6030,7 +5905,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/state/sanitized", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/state/sanitized", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6071,7 +5946,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6114,7 +5989,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6161,7 +6036,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6204,7 +6079,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6251,7 +6126,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6288,7 +6163,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/generate-root", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6329,7 +6204,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6366,7 +6241,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/generate-root/attempt", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6407,7 +6282,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6444,7 +6319,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/ha-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/ha-status", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6485,7 +6360,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6522,7 +6397,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/health", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/health", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6563,7 +6438,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/health", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/health", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6600,7 +6475,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/host-info", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/host-info", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6641,7 +6516,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6678,7 +6553,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/in-flight-req", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/in-flight-req", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6719,7 +6594,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6756,7 +6631,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/init", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6797,7 +6672,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/init", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6834,7 +6709,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6875,7 +6750,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6912,7 +6787,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/export", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/export", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6953,7 +6828,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6990,7 +6865,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7031,7 +6906,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7068,7 +6943,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7109,7 +6984,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7146,7 +7021,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/entities", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/entities", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7187,7 +7062,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7224,7 +7099,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/requests", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/requests", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7265,7 +7140,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7302,7 +7177,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/tokens", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/counters/tokens", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7343,7 +7218,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7380,7 +7255,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/specs/openapi", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/specs/openapi", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7421,7 +7296,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7458,7 +7333,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7499,7 +7374,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7536,7 +7411,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7577,7 +7452,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7620,7 +7495,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7667,7 +7542,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7704,7 +7579,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/namespaces", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/namespaces", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7745,7 +7620,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7782,7 +7657,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7823,7 +7698,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7860,7 +7735,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/key-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/key-status", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7901,7 +7776,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7938,7 +7813,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leader", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leader", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7979,7 +7854,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8016,7 +7891,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8057,7 +7932,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8094,7 +7969,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/count", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/count", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8135,7 +8010,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8178,7 +8053,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8225,7 +8100,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8274,7 +8149,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8327,7 +8202,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8369,7 +8244,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/metrics", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/metrics", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8415,7 +8290,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8462,7 +8337,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/monitor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/monitor", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8513,7 +8388,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8550,7 +8425,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8591,7 +8466,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8634,7 +8509,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8681,7 +8556,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8724,7 +8599,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/mounts/{path}/tune", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8771,7 +8646,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8808,7 +8683,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8849,7 +8724,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8892,7 +8767,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8939,7 +8814,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8988,7 +8863,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9041,7 +8916,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9090,7 +8965,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9143,7 +9018,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9186,7 +9061,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9233,7 +9108,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9276,7 +9151,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/acl/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9323,7 +9198,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9366,7 +9241,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9413,7 +9288,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9456,7 +9331,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9503,7 +9378,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9546,7 +9421,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9593,7 +9468,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9635,7 +9510,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9681,7 +9556,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9724,7 +9599,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/policy/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9771,7 +9646,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9808,7 +9683,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9849,7 +9724,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9886,7 +9761,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/allocs", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/allocs", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9927,7 +9802,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/allocs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/allocs", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9964,7 +9839,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/block", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/block", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10005,7 +9880,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/block", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/block", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10042,7 +9917,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/cmdline", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/cmdline", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10083,7 +9958,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/cmdline", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/cmdline", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10120,7 +9995,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/goroutine", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/goroutine", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10161,7 +10036,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/goroutine", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/goroutine", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10198,7 +10073,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/heap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/heap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10239,7 +10114,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/heap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/heap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10276,7 +10151,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/mutex", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/mutex", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10317,7 +10192,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/mutex", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/mutex", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10354,7 +10229,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/profile", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/profile", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10395,7 +10270,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/profile", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/profile", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10432,7 +10307,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/symbol", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/symbol", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10473,7 +10348,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/symbol", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/symbol", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10510,7 +10385,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/threadcreate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/threadcreate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10551,7 +10426,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/threadcreate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/threadcreate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10588,7 +10463,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/pprof/trace", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/pprof/trace", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10629,7 +10504,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/trace", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/trace", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10666,7 +10541,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10707,7 +10582,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10750,7 +10625,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10797,7 +10672,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10840,7 +10715,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10887,7 +10762,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10929,7 +10804,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/raw", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10975,7 +10850,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11023,7 +10898,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/raw/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11075,7 +10950,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11112,7 +10987,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/backup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11153,7 +11028,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/backup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11190,7 +11065,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/init", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11231,7 +11106,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/init", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11268,7 +11143,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11309,7 +11184,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/recovery-key-backup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11346,7 +11221,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rekey/verify", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11387,7 +11262,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/verify", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11430,7 +11305,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11477,7 +11352,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11514,7 +11389,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/replication/status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/replication/status", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11555,7 +11430,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/replication/status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/replication/status", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11592,7 +11467,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/rotate/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11633,7 +11508,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/rotate/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11670,7 +11545,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/seal-status", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/seal-status", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11711,7 +11586,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/seal-status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/seal-status", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11754,7 +11629,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/version-history/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/version-history/", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11801,7 +11676,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11838,7 +11713,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Object>("/sys/wrapping/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11879,7 +11754,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11925,7 +11800,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/audit-hash/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/audit-hash/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11975,7 +11850,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12021,7 +11896,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/audit/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12071,7 +11946,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12117,7 +11992,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12167,7 +12042,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12213,7 +12088,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/auth/{path}/tune", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12263,7 +12138,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12303,7 +12178,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12347,7 +12222,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12387,7 +12262,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-accessor", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-accessor", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12431,7 +12306,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12471,7 +12346,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-self", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/capabilities-self", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12515,7 +12390,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12561,7 +12436,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12611,7 +12486,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12651,7 +12526,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/cors", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12695,7 +12570,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12738,7 +12613,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12785,7 +12660,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12831,7 +12706,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12881,7 +12756,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12921,7 +12796,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12965,7 +12840,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13005,7 +12880,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/attempt", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13049,7 +12924,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13089,7 +12964,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/update", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/generate-root/update", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13133,7 +13008,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13173,7 +13048,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/init", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13217,7 +13092,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/init", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13257,7 +13132,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/internal/counters/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13301,7 +13176,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13341,7 +13216,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13385,7 +13260,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13425,7 +13300,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13469,7 +13344,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13515,7 +13390,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13565,7 +13440,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13605,7 +13480,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13649,7 +13524,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13692,7 +13567,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13739,7 +13614,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13785,7 +13660,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13835,7 +13710,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13881,7 +13756,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13931,7 +13806,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13968,7 +13843,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/leases/tidy", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/leases/tidy", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14009,7 +13884,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/tidy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/tidy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14049,7 +13924,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mfa/validate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mfa/validate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14093,7 +13968,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14139,7 +14014,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14189,7 +14064,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14235,7 +14110,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/mounts/{path}/tune", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14285,7 +14160,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14331,7 +14206,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14381,7 +14256,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14433,7 +14308,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14489,7 +14364,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14529,7 +14404,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/plugins/reload/backend", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/plugins/reload/backend", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14573,7 +14448,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14619,7 +14494,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policies/acl/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14669,7 +14544,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14715,7 +14590,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policies/password/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14765,7 +14640,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14811,7 +14686,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/policy/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14861,7 +14736,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14901,7 +14776,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/quotas/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14945,7 +14820,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14991,7 +14866,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15041,7 +14916,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15081,7 +14956,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/raw", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/raw", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15125,7 +15000,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15171,7 +15046,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/raw/{path}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15221,7 +15096,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15261,7 +15136,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/init", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15305,7 +15180,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15345,7 +15220,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/update", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/update", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15389,7 +15264,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15429,7 +15304,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rekey/verify", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15473,7 +15348,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15513,7 +15388,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/remount", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/remount", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15557,7 +15432,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15597,7 +15472,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/renew", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/renew", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15641,7 +15516,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15687,7 +15562,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15737,7 +15612,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15777,7 +15652,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15821,7 +15696,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15864,7 +15739,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15911,7 +15786,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15957,7 +15832,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16007,7 +15882,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16053,7 +15928,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16103,7 +15978,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16140,7 +16015,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rotate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rotate", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16181,7 +16056,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16221,7 +16096,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/rotate/config", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16265,7 +16140,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16302,7 +16177,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/seal", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/seal", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16343,7 +16218,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/seal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/seal", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16380,7 +16255,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/step-down", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/step-down", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16421,7 +16296,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/step-down", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/step-down", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16461,7 +16336,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16505,7 +16380,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16551,7 +16426,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16601,7 +16476,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16641,7 +16516,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16685,7 +16560,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16731,7 +16606,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16781,7 +16656,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16833,7 +16708,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16889,7 +16764,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16935,7 +16810,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16985,7 +16860,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17025,7 +16900,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/unseal", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/unseal", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17069,7 +16944,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17109,7 +16984,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/lookup", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17153,7 +17028,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17193,7 +17068,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/rewrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/rewrap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17237,7 +17112,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17277,7 +17152,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/unwrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/unwrap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17321,7 +17196,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17358,7 +17233,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/wrap", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/sys/wrapping/wrap", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17399,7 +17274,7 @@ namespace Vault.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/wrap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/wrap", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

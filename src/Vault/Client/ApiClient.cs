@@ -165,11 +165,11 @@ namespace Vault.Client
     /// </remarks>
     public partial class ApiClient : IDisposable, ISynchronousClient, IAsynchronousClient
     {
-        private readonly string _baseUrl;
-
         private readonly HttpClientHandler _httpClientHandler;
         private readonly HttpClient _httpClient;
         private readonly bool _disposeClient;
+
+        public readonly IReadableConfiguration Configuration;
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -189,67 +189,22 @@ namespace Vault.Client
         };
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />, defaulting to the global configurations' base url.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        public ApiClient() :
-                 this(Vault.Client.GlobalConfiguration.Instance.BasePath)
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" />.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <exception cref="ArgumentException"></exception>
-        public ApiClient(string basePath)
+        /// <param name="configuration">An instance of IReadableConfiguration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <remarks>
+        /// Some configuration settings will not be applied without passing an HttpClientHandler.
+        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+        /// </remarks>
+        public ApiClient(IReadableConfiguration configuration)
         {
-            if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("basePath cannot be empty");
-
+            if (configuration == null) throw new ArgumentNullException("client cannot be null");
+  
             _httpClientHandler = new HttpClientHandler();
             _httpClient = new HttpClient(_httpClientHandler, true);
-            _disposeClient = true;
-            _baseUrl = basePath;
-        }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />, defaulting to the global configurations' base url.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public ApiClient(HttpClient client, HttpClientHandler handler = null) :
-                 this(client, Vault.Client.GlobalConfiguration.Instance.BasePath, handler)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClient" />.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public ApiClient(HttpClient client, string basePath, HttpClientHandler handler = null)
-        {
-            if (client == null) throw new ArgumentNullException("client cannot be null");
-            if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("basePath cannot be empty");
-
-            _httpClientHandler = handler;
-            _httpClient = client;
-            _baseUrl = basePath;
+            Configuration = configuration;
         }
 
         /// <summary>
@@ -295,21 +250,17 @@ namespace Vault.Client
         /// <param name="method">The http verb.</param>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>[private] A new HttpRequestMessage instance.</returns>
         /// <exception cref="ArgumentNullException"></exception>
         private HttpRequestMessage NewRequest(
             HttpMethod method,
             string path,
-            RequestOptions options,
-            IReadableConfiguration configuration)
+            RequestOptions options)
         {
             if (path == null) throw new ArgumentNullException("path");
             if (options == null) throw new ArgumentNullException("options");
-            if (configuration == null) throw new ArgumentNullException("configuration");
 
-            WebRequestPathBuilder builder = new WebRequestPathBuilder(_baseUrl, path);
+            WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath, path);
 
             builder.AddPathParameters(options.PathParameters);
 
@@ -317,14 +268,14 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            if (configuration.UserAgent != null)
+            if (Configuration.UserAgent != null)
             {
-                request.Headers.TryAddWithoutValidation("User-Agent", configuration.UserAgent);
+                request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
             }
 
-            if (configuration.DefaultHeaders != null)
+            if (Configuration.DefaultHeaders != null)
             {
-                foreach (var headerParam in configuration.DefaultHeaders)
+                foreach (var headerParam in Configuration.DefaultHeaders)
                 {
                     request.Headers.Add(headerParam.Key, headerParam.Value);
                 }
@@ -373,7 +324,7 @@ namespace Vault.Client
                     }
                     else
                     {
-                        var serializer = new CustomJsonCodec(SerializerSettings, configuration);
+                        var serializer = new CustomJsonCodec(SerializerSettings, Configuration);
                         request.Content = new StringContent(serializer.Serialize(options.Data), new UTF8Encoding(),
                             "application/json");
                     }
@@ -437,35 +388,34 @@ namespace Vault.Client
             return transformed;
         }
 
-        private ApiResponse<T> Exec<T>(HttpRequestMessage req, IReadableConfiguration configuration)
+        private ApiResponse<T> Exec<T>(HttpRequestMessage req)
         {
-            return ExecAsync<T>(req, configuration).GetAwaiter().GetResult();
+            return ExecAsync<T>(req).GetAwaiter().GetResult();
         }
 
         private async Task<ApiResponse<T>> ExecAsync<T>(HttpRequestMessage req,
-            IReadableConfiguration configuration,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            var deserializer = new CustomJsonCodec(SerializerSettings, configuration);
+            var deserializer = new CustomJsonCodec(SerializerSettings, Configuration);
 
             var finalToken = cancellationToken;
 
-            if (configuration.Timeout > 0)
+            if (Configuration.Timeout > 0)
             {
-                var tokenSource = new CancellationTokenSource(configuration.Timeout);
+                var tokenSource = new CancellationTokenSource(Configuration.Timeout);
                 finalToken = CancellationTokenSource.CreateLinkedTokenSource(finalToken, tokenSource.Token).Token;
             }
 
-            if (configuration.Proxy != null)
+            if (Configuration.Proxy != null)
             {
                 if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `Proxy` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.Proxy = configuration.Proxy;
+                _httpClientHandler.Proxy = Configuration.Proxy;
             }
 
-            if (configuration.ClientCertificates != null)
+            if (Configuration.ClientCertificates != null)
             {
                 if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `ClientCertificates` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.ClientCertificates.AddRange(configuration.ClientCertificates);
+                _httpClientHandler.ClientCertificates.AddRange(Configuration.ClientCertificates);
             }
 
             var cookieContainer = req.Properties.ContainsKey("CookieContainer") ? req.Properties["CookieContainer"] as List<Cookie> : null;
@@ -512,14 +462,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Get, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Get, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -527,14 +474,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Post, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Post, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -542,14 +486,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Put, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Put, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -557,14 +498,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Delete, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Delete, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -572,14 +510,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Head, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Head, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -587,14 +522,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(HttpMethod.Options, path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(HttpMethod.Options, path, options), cancellationToken);
         }
 
         /// <summary>
@@ -602,14 +534,11 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return ExecAsync<T>(NewRequest(new HttpMethod("PATCH"), path, options, config), config, cancellationToken);
+            return ExecAsync<T>(NewRequest(new HttpMethod("PATCH"), path, options), cancellationToken);
         }
         #endregion IAsynchronousClient
 
@@ -619,13 +548,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Get<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
-        {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Get, path, options, config), config);
+        public ApiResponse<T> Get<T>(string path, RequestOptions options)
+        {            
+            return Exec<T>(NewRequest(HttpMethod.Get, path, options));
         }
 
         /// <summary>
@@ -633,13 +559,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Post<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Post<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Post, path, options, config), config);
+            return Exec<T>(NewRequest(HttpMethod.Post, path, options));
         }
 
         /// <summary>
@@ -647,13 +570,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Put<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Put<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Put, path, options, config), config);
+            return Exec<T>(NewRequest(HttpMethod.Put, path, options));
         }
 
         /// <summary>
@@ -661,13 +581,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Delete<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Delete<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Delete, path, options, config), config);
+            return Exec<T>(NewRequest(HttpMethod.Delete, path, options));
         }
 
         /// <summary>
@@ -675,13 +592,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Head<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Head<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Head, path, options, config), config);
+            return Exec<T>(NewRequest(HttpMethod.Head, path, options));
         }
 
         /// <summary>
@@ -689,13 +603,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Options<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Options<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(HttpMethod.Options, path, options, config), config);
+            return Exec<T>(NewRequest(HttpMethod.Options, path, options));
         }
 
         /// <summary>
@@ -703,13 +614,10 @@ namespace Vault.Client
         /// </summary>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
-        /// <param name="configuration">A per-request configuration object. It is assumed that any merge with
-        /// GlobalConfiguration has been done before calling this method.</param>
         /// <returns>A Task containing ApiResponse</returns>
-        public ApiResponse<T> Patch<T>(string path, RequestOptions options, IReadableConfiguration configuration = null)
+        public ApiResponse<T> Patch<T>(string path, RequestOptions options)
         {
-            var config = configuration ?? GlobalConfiguration.Instance;
-            return Exec<T>(NewRequest(new HttpMethod("PATCH"), path, options, config), config);
+            return Exec<T>(NewRequest(new HttpMethod("PATCH"), path, options));
         }
         #endregion ISynchronousClient
     }

@@ -15,7 +15,28 @@ namespace {{packageName}}
         {{/operations}}
         {{/apis}}
         {{/apiInfo}}
+                
+        /// <summary>
+        /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
+        /// </summary>
+        public {{packageName}}Client(Configuration configuration)
+        {
+            if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
 
+            var apiClient = new ApiClient(configuration);
+
+            {{#apiInfo}}
+            {{#apis}}
+            {{#operations}}
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(apiClient);
+            {{/operations}}
+            {{/apis}}
+            {{/apiInfo}}
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
+        /// </summary>
         public {{packageName}}Client(string VaultAddress)
         {
             if(string.IsNullOrEmpty(VaultAddress))
@@ -23,10 +44,15 @@ namespace {{packageName}}
                 throw new ArgumentException("Cannot be empty", "VaultAddress");
             }
 
+            var configuration = new Configuration();
+            configuration.BasePath = VaultAddress;
+
+            var apiClient = new ApiClient(configuration);
+            
             {{#apiInfo}}
             {{#apis}}
             {{#operations}}
-            this.{{classname}} = new {{packageName}}.Api.{{classname}}(VaultAddress);
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(apiClient);
             {{/operations}}
             {{/apis}}
             {{/apiInfo}}

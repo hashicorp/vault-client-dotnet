@@ -77,137 +77,17 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} partial class {{classname}} : IDisposable, {{interfacePrefix}}{{classname}}
+    {{>visibility}} partial class {{classname}} : {{interfacePrefix}}{{classname}}
     {
         private {{packageName}}.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <returns></returns>
-        public {{classname}}() : this((string)null)
+   
+        public {{classname}}(ApiClient apiClient)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        public {{classname}}(string basePath)
-        {
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                new {{packageName}}.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new {{packageName}}.Client.ApiClient(this.Configuration.BasePath);
-            this.Client =  this.ApiClient;
-            {{#supportsAsync}}
-            this.AsynchronousClient = this.ApiClient;
-            {{/supportsAsync}}
-            this.ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class using Configuration object.
-        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
-        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        public {{classname}}({{packageName}}.Client.Configuration configuration)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new {{packageName}}.Client.ApiClient(this.Configuration.BasePath);
-            this.Client = this.ApiClient;
-            {{#supportsAsync}}
-            this.AsynchronousClient = this.ApiClient;
-            {{/supportsAsync}}
-            ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public {{classname}}(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="basePath">The target service's base path in URL format.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public {{classname}}(HttpClient client, string basePath, HttpClientHandler handler = null)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                new {{packageName}}.Client.Configuration { BasePath = basePath }
-            );
-            this.ApiClient = new {{packageName}}.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client =  this.ApiClient;
-            {{#supportsAsync}}
-            this.AsynchronousClient = this.ApiClient;
-            {{/supportsAsync}}
-            this.ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class using Configuration object.
-        /// </summary>
-        /// <param name="client">An instance of HttpClient.</param>
-        /// <param name="configuration">An instance of Configuration.</param>
-        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns></returns>
-        /// <remarks>
-        /// Some configuration settings will not be applied without passing an HttpClientHandler.
-        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
-        /// </remarks>
-        public {{classname}}(HttpClient client, {{packageName}}.Client.Configuration configuration, HttpClientHandler handler = null)
-        {
-            if (configuration == null) throw new ArgumentNullException("configuration");
-            if (client == null) throw new ArgumentNullException("client");
-
-            this.Configuration = {{packageName}}.Client.Configuration.MergeConfigurations(
-                {{packageName}}.Client.GlobalConfiguration.Instance,
-                configuration
-            );
-            this.ApiClient = new {{packageName}}.Client.ApiClient(client, this.Configuration.BasePath, handler);
-            this.Client = this.ApiClient;
-            {{#supportsAsync}}
-            this.AsynchronousClient = this.ApiClient;
-            {{/supportsAsync}}
-            ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
+            if (apiClient == null) throw new ArgumentNullException("ApiClient");
+            
+            this.Configuration = apiClient.Configuration;
+            this.Client = apiClient;
+            this.AsynchronousClient = apiClient;
         }
 
         /// <summary>
@@ -233,19 +113,6 @@ namespace {{packageName}}.{{apiPackage}}
             this.Configuration = configuration;
             this.ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
         }
-
-        /// <summary>
-        /// Disposes resources if they were created by us
-        /// </summary>
-        public void Dispose()
-        {
-            this.ApiClient?.Dispose();
-        }
-
-        /// <summary>
-        /// Holds the ApiClient if created
-        /// </summary>
-        public {{packageName}}.Client.ApiClient ApiClient { get; set; } = null;
 
         {{#supportsAsync}}
         /// <summary>
@@ -479,7 +346,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/authMethods}}
 
             // make the HTTP request
-            var localVarResponse = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", localVarRequestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -664,7 +531,7 @@ namespace {{packageName}}.{{apiPackage}}
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

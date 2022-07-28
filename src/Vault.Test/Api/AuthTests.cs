@@ -35,7 +35,7 @@ namespace Vault.Test.Api
 
         public AuthTests()
         {
-            instance = new Vault.Api.Auth();
+            // instance = new Vault.Api.Auth();
         }
 
         public void Dispose()
