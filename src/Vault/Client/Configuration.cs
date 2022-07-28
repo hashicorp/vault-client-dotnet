@@ -473,43 +473,5 @@ namespace Vault.Client
         }
 
         #endregion Methods
-
-        #region Static Members
-        /// <summary>
-        /// Merge configurations.
-        /// </summary>
-        /// <param name="first">First configuration.</param>
-        /// <param name="second">Second configuration.</param>
-        /// <return>Merged configuration.</return>
-        public static IReadableConfiguration MergeConfigurations(IReadableConfiguration first, IReadableConfiguration second)
-        {
-            if (second == null) return first ?? GlobalConfiguration.Instance;
-
-            Dictionary<string, string> apiKey = first.ApiKey.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            Dictionary<string, string> apiKeyPrefix = first.ApiKeyPrefix.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            Dictionary<string, string> defaultHeaders = first.DefaultHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-
-            foreach (var kvp in second.ApiKey) apiKey[kvp.Key] = kvp.Value;
-            foreach (var kvp in second.ApiKeyPrefix) apiKeyPrefix[kvp.Key] = kvp.Value;
-            foreach (var kvp in second.DefaultHeaders) defaultHeaders[kvp.Key] = kvp.Value;
-
-            var config = new Configuration
-            {
-                ApiKey = apiKey,
-                ApiKeyPrefix = apiKeyPrefix,
-                DefaultHeaders = defaultHeaders,
-                BasePath = second.BasePath ?? first.BasePath,
-                Timeout = second.Timeout,
-                Proxy = second.Proxy ?? first.Proxy,
-                UserAgent = second.UserAgent ?? first.UserAgent,
-                Username = second.Username ?? first.Username,
-                Password = second.Password ?? first.Password,
-                AccessToken = second.AccessToken ?? first.AccessToken,
-                TempFolderPath = second.TempFolderPath ?? first.TempFolderPath,
-                DateTimeFormat = second.DateTimeFormat ?? first.DateTimeFormat
-            };
-            return config;
-        }
-        #endregion Static Members
     }
 }
