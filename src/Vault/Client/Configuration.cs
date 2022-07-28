@@ -93,68 +93,14 @@ namespace Vault.Client
         #endregion Private Members
 
         #region Constructors
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
-        public Configuration()
+        public Configuration(string basePath)
         {
-            Proxy = null;
-            UserAgent = "OpenAPI-Generator/0.0.1/csharp";
-            BasePath = "http://localhost";
-            DefaultHeaders = new ConcurrentDictionary<string, string>();
-            ApiKey = new ConcurrentDictionary<string, string>();
-            ApiKeyPrefix = new ConcurrentDictionary<string, string>();
-            Servers = new List<IReadOnlyDictionary<string, object>>()
-            {
-                {
-                    new Dictionary<string, object> {
-                        {"url", ""},
-                        {"description", "No description provided"},
-                    }
-                }
-            };
-
-            // Setting Timeout has side effects (forces ApiClient creation).
-            Timeout = 100000;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
-        /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
-        public Configuration(
-            IDictionary<string, string> defaultHeaders,
-            IDictionary<string, string> apiKey,
-            IDictionary<string, string> apiKeyPrefix,
-            string basePath = "http://localhost") : this()
-        {
-            if (string.IsNullOrWhiteSpace(basePath))
-                throw new ArgumentException("The provided basePath is invalid.", "basePath");
-            if (defaultHeaders == null)
-                throw new ArgumentNullException("defaultHeaders");
-            if (apiKey == null)
-                throw new ArgumentNullException("apiKey");
-            if (apiKeyPrefix == null)
-                throw new ArgumentNullException("apiKeyPrefix");
+            if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
 
             BasePath = basePath;
-
-            foreach (var keyValuePair in defaultHeaders)
-            {
-                DefaultHeaders.Add(keyValuePair);
-            }
-
-            foreach (var keyValuePair in apiKey)
-            {
-                ApiKey.Add(keyValuePair);
-            }
-
-            foreach (var keyValuePair in apiKeyPrefix)
-            {
-                ApiKeyPrefix.Add(keyValuePair);
-            }
         }
 
         #endregion Constructors
