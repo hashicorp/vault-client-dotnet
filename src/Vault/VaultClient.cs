@@ -9,6 +9,7 @@
 
 
 using System;
+using System.Net.Http;
 using Vault.Api;
 using Vault.Client;
 
@@ -49,6 +50,24 @@ namespace Vault
             var configuration = new Configuration(VaultAddress);
 
             var apiClient = new ApiClient(configuration);
+            
+            this.Auth = new Vault.Api.Auth(apiClient);
+            this.Identity = new Vault.Api.Identity(apiClient);
+            this.Secrets = new Vault.Api.Secrets(apiClient);
+            this.System = new Vault.Api.System(apiClient);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VaultClient"/> class
+        /// </summary>
+        public VaultClient(string VaultAddress, HttpClient httpClient)
+        {
+            if(string.IsNullOrEmpty(VaultAddress)) throw new ArgumentException("Cannot be empty", "VaultAddress");
+            if(httpClient == null) throw new ArgumentNullException(nameof(httpClient));
+
+            var configuration = new Configuration(VaultAddress);
+
+            var apiClient = new ApiClient(configuration, httpClient);
             
             this.Auth = new Vault.Api.Auth(apiClient);
             this.Identity = new Vault.Api.Identity(apiClient);

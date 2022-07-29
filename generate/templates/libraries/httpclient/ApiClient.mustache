@@ -206,6 +206,22 @@ namespace {{packageName}}.Client
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="ApiClient" />.
+        /// </summary>
+        /// <param name="configuration">An instance of IReadableConfiguration.</param>
+        /// <param name="httpClient">An instance of a preconfigured HttpClient.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public ApiClient(IReadableConfiguration configuration, HttpClient httpClient)
+        {
+            if (configuration == null) throw new ArgumentNullException("Client cannot be null");
+            if (httpClient == null) throw new ArgumentNullException("HttpClient cannot be null");
+
+            _httpClient = httpClient;
+
+            Configuration = configuration;
+        }
+
+        /// <summary>
         /// Disposes resources if they were created by us
         /// </summary>
         public void Dispose()
