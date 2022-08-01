@@ -2,6 +2,7 @@ additionalProperties:
   supportsRetry: false
   packageName: Vault
   packageVersion: 0.0.1
+  apiPrefix: v1
 library: httpclient
 files:
   Client.mustache:

@@ -26,6 +26,11 @@ namespace Vault.Client
     public class Configuration : IReadableConfiguration
     {
         #region Constants
+        
+        /// <summary>
+        /// Vault Api Path Prefix
+        /// </summary>
+        private const string _apiPrefix = "v1";
 
         /// <summary>
         /// Version of the package.
@@ -111,7 +116,7 @@ namespace Vault.Client
         /// Gets or sets the base path for API access.
         /// </summary>
         public virtual string BasePath {
-            get { return _basePath; }
+            get { return _basePath + _apiPrefix; }
             set { _basePath = value; }
         }
 
