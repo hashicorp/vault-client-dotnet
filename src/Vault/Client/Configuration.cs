@@ -105,7 +105,7 @@ namespace Vault.Client
         {
             if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
 
-            BasePath = basePath;
+            BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
         }
 
         #endregion Constructors
