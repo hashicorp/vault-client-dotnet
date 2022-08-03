@@ -84,7 +84,7 @@ namespace Vault.Client
         /// <param name="obj">The parameter (header, path, query, form).</param>
         /// <param name="configuration">An optional configuration instance, providing formatting options used in processing.</param>
         /// <returns>Formatted string.</returns>
-        public static string ParameterToString(object obj, IReadableConfiguration configuration = null)
+        public static string ParameterToString(object obj, Configuration configuration = null)
         {
             if (obj is DateTime dateTime)
                 // Return a formatted date string - Can be customized with Configuration.DateTimeFormat
