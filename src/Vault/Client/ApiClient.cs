@@ -35,7 +35,7 @@ namespace Vault.Client
     /// </summary>
     internal class CustomJsonCodec
     {
-        private readonly IReadableConfiguration _configuration;
+        private readonly Configuration _configuration;
         private static readonly string _contentType = "application/json";
         private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
@@ -50,12 +50,12 @@ namespace Vault.Client
             }
         };
 
-        public CustomJsonCodec(IReadableConfiguration configuration)
+        public CustomJsonCodec(Configuration configuration)
         {
             _configuration = configuration;
         }
 
-        public CustomJsonCodec(JsonSerializerSettings serializerSettings, IReadableConfiguration configuration)
+        public CustomJsonCodec(JsonSerializerSettings serializerSettings, Configuration configuration)
         {
             _serializerSettings = serializerSettings;
             _configuration = configuration;
@@ -163,13 +163,9 @@ namespace Vault.Client
     /// <remarks>
     /// The Dispose method will manage the HttpClient lifecycle when not passed by constructor.
     /// </remarks>
-    public partial class ApiClient : IDisposable, ISynchronousClient, IAsynchronousClient
+    public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     {
-        private readonly HttpClientHandler _httpClientHandler;
-        private readonly HttpClient _httpClient;
-        private readonly bool _disposeClient;
-
-        public readonly IReadableConfiguration Configuration;
+        public readonly Configuration Configuration;
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -191,30 +187,17 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" />.
         /// </summary>
-        /// <param name="configuration">An instance of IReadableConfiguration.</param>
+        /// <param name="configuration">An instance of Configuration.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <remarks>
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public ApiClient(IReadableConfiguration configuration)
+        public ApiClient(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
-  
-            _httpClientHandler = new HttpClientHandler();
-            _httpClient = new HttpClient(_httpClientHandler, true);
 
             Configuration = configuration;
-        }
-
-        /// <summary>
-        /// Disposes resources if they were created by us
-        /// </summary>
-        public void Dispose()
-        {
-            if(_disposeClient) {
-                _httpClient.Dispose();
-            }
         }
 
         /// Prepares multipart/form-data content
@@ -247,7 +230,6 @@ namespace Vault.Client
         /// At this point, all information for querying the service is known. Here, it is simply
         /// mapped into the a HttpRequestMessage.
         /// </summary>
-        /// <param name="method">The http verb.</param>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
         /// <returns>[private] A new HttpRequestMessage instance.</returns>
@@ -374,10 +356,10 @@ namespace Vault.Client
                 }
             }
 
-            if (_httpClientHandler != null && response != null)
+            if (Configuration.HttpClientHandler != null && response != null)
             {
                 try {
-                    foreach (Cookie cookie in _httpClientHandler.CookieContainer.GetCookies(uri))
+                    foreach (Cookie cookie in Configuration.HttpClientHandler.CookieContainer.GetCookies(uri))
                     {
                         transformed.Cookies.Add(cookie);
                     }
@@ -406,33 +388,21 @@ namespace Vault.Client
                 finalToken = CancellationTokenSource.CreateLinkedTokenSource(finalToken, tokenSource.Token).Token;
             }
 
-            if (Configuration.Proxy != null)
-            {
-                if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `Proxy` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.Proxy = Configuration.Proxy;
-            }
-
-            if (Configuration.ClientCertificates != null)
-            {
-                if(_httpClientHandler == null) throw new InvalidOperationException("Configuration `ClientCertificates` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
-                _httpClientHandler.ClientCertificates.AddRange(Configuration.ClientCertificates);
-            }
-
             var cookieContainer = req.Properties.ContainsKey("CookieContainer") ? req.Properties["CookieContainer"] as List<Cookie> : null;
 
             if (cookieContainer != null)
             {
-                if(_httpClientHandler == null) throw new InvalidOperationException("Request property `CookieContainer` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
+                if(Configuration.HttpClientHandler == null) throw new InvalidOperationException("Request property `CookieContainer` not supported when the client is explicitly created without an HttpClientHandler, use the proper constructor.");
                 foreach (var cookie in cookieContainer)
                 {
-                    _httpClientHandler.CookieContainer.Add(cookie);
+                    Configuration.HttpClientHandler.CookieContainer.Add(cookie);
                 }
             }
 
             InterceptRequest(req);
 
             HttpResponseMessage response;
-                response = await _httpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
+                response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
 
             if (!response.IsSuccessStatusCode)
             {
