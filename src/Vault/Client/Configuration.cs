@@ -26,7 +26,6 @@ namespace Vault.Client
     public class Configuration : IReadableConfiguration
     {
         #region Constants
-
         /// <summary>
         /// Version of the package.
         /// </summary>
@@ -100,7 +99,7 @@ namespace Vault.Client
         {
             if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
 
-            BasePath = basePath;
+            BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
         }
 
         #endregion Constructors
