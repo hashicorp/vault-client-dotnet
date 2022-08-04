@@ -27,7 +27,6 @@ namespace Vault.Client
     public class Configuration
     {
         #region Constants
-
         /// <summary>
         /// Version of the package.
         /// </summary>
@@ -105,7 +104,7 @@ namespace Vault.Client
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
             timeout = timeout ?? TimeSpan.FromSeconds(100);
 
-            BasePath = basePath;
+            BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
             HttpClient = new HttpClient(HttpClientHandler);
             HttpClient.Timeout = (TimeSpan)timeout;
         }

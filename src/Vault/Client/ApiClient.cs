@@ -241,8 +241,10 @@ namespace Vault.Client
         {
             if (path == null) throw new ArgumentNullException("path");
             if (options == null) throw new ArgumentNullException("options");
-
-            WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath, path);
+            
+            string prefix = "v1";
+            
+            WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath + prefix, path);
 
             builder.AddPathParameters(options.PathParameters);
 
