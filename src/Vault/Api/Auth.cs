@@ -6064,7 +6064,7 @@ namespace Vault.Api
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public Auth(Vault.Client.ISynchronousClient client, Vault.Client.IAsynchronousClient asyncClient, Vault.Client.IReadableConfiguration configuration)
+        public Auth(Vault.Client.ISynchronousClient client, Vault.Client.IAsynchronousClient asyncClient, Vault.Client.Configuration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -6099,7 +6099,7 @@ namespace Vault.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Vault.Client.IReadableConfiguration Configuration { get; set; }
+        public Vault.Client.Configuration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.

@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -23,7 +24,7 @@ namespace Vault.Client
     /// <summary>
     /// Represents a set of configuration settings
     /// </summary>
-    public class Configuration : IReadableConfiguration
+    public class Configuration
     {
         #region Constants
         /// <summary>
@@ -95,11 +96,17 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath)
+        public Configuration(string basePath, 
+                            HttpClientHandler httpClientHandler = null,
+                            TimeSpan? timeout = null)
         {
             if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
+            HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
+            timeout = timeout ?? TimeSpan.FromSeconds(100);
 
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
+            HttpClient = new HttpClient(HttpClientHandler);
+            HttpClient.Timeout = (TimeSpan)timeout;
         }
 
         #endregion Constructors
@@ -113,6 +120,16 @@ namespace Vault.Client
             get { return _basePath; }
             set { _basePath = value; }
         }
+
+        /// <summary>
+        /// The base HttpClient for making calls.
+        /// </summary>
+        public readonly HttpClient HttpClient;
+
+        /// <summary>
+        /// The HttpClientHandler for custom processing of api calls.
+        /// </summary>
+        public readonly HttpClientHandler HttpClientHandler;
 
         /// <summary>
         /// Gets or sets the default header.

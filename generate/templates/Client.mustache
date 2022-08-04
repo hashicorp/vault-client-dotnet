@@ -1,6 +1,7 @@
 {{>partial_header}}
 
 using System;
+using System.Net.Http;
 using {{packageName}}.Api;
 using {{packageName}}.Client;
 
@@ -25,29 +26,6 @@ namespace {{packageName}}
 
             var apiClient = new ApiClient(configuration);
 
-            {{#apiInfo}}
-            {{#apis}}
-            {{#operations}}
-            this.{{classname}} = new {{packageName}}.Api.{{classname}}(apiClient);
-            {{/operations}}
-            {{/apis}}
-            {{/apiInfo}}
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
-        /// </summary>
-        public {{packageName}}Client(string VaultAddress)
-        {
-            if(string.IsNullOrEmpty(VaultAddress))
-            {
-                throw new ArgumentException("Cannot be empty", "VaultAddress");
-            }
-
-            var configuration = new Configuration(VaultAddress);
-
-            var apiClient = new ApiClient(configuration);
-            
             {{#apiInfo}}
             {{#apis}}
             {{#operations}}
