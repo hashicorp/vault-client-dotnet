@@ -123,10 +123,13 @@ namespace Vault.Client
         }
 
         /// <summary>
-        /// Gets or sets the base path for API access.
+        /// The base HttpClient for making calls.
         /// </summary>
         public readonly HttpClient HttpClient;
 
+        /// <summary>
+        /// The HttpClientHandler for custom processing of api calls.
+        /// </summary>
         public readonly HttpClientHandler HttpClientHandler;
 
         /// <summary>
