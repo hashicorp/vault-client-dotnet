@@ -167,6 +167,21 @@ namespace Vault.Client
     {
         public readonly Configuration Configuration;
 
+        private readonly object tokenLock = new object();
+
+        private string _token;
+        public string Token 
+        {
+            get { return _token; }
+            set
+            {
+                lock(tokenLock)
+                {
+                    _token = value;
+                }
+            }
+        }
+
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
         /// These settings can be adjusted to accommodate custom serialization rules.
