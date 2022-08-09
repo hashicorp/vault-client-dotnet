@@ -266,7 +266,11 @@ namespace Vault.Client
             builder.AddQueryParameters(options.QueryParameters);
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
-
+            if(!string.IsNullOrEmpty(Token))
+            {
+                request.Headers.TryAddWithoutValidation("X-VAULT-TOKEN", Token);
+            }
+            
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
