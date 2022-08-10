@@ -6907,7 +6907,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ad/config", requestOptions);
 
@@ -6939,13 +6938,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -6991,7 +6988,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ad/library/{name}", requestOptions);
 
@@ -7028,7 +7024,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7036,7 +7031,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7081,7 +7075,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ad/roles/{name}", requestOptions);
 
@@ -7118,7 +7111,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7126,7 +7118,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7165,7 +7156,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/alicloud/config", requestOptions);
 
@@ -7197,13 +7187,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -7249,7 +7237,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/alicloud/role/{name}", requestOptions);
 
@@ -7286,7 +7273,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7294,7 +7280,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7339,7 +7324,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/aws/roles/{name}", requestOptions);
 
@@ -7376,7 +7360,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7384,7 +7367,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7423,7 +7405,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/azure/config", requestOptions);
 
@@ -7455,13 +7436,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -7507,7 +7486,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/azure/roles/{name}", requestOptions);
 
@@ -7544,7 +7522,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7552,7 +7529,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7597,7 +7573,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/consul/roles/{name}", requestOptions);
 
@@ -7634,7 +7609,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7642,7 +7616,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7687,7 +7660,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/cubbyhole/{path}", requestOptions);
 
@@ -7724,7 +7696,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7732,7 +7703,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -7777,7 +7747,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcp/roleset/{name}", requestOptions);
 
@@ -7814,7 +7783,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7822,7 +7790,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7867,7 +7834,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcp/static-account/{name}", requestOptions);
 
@@ -7904,7 +7870,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -7912,7 +7877,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -7951,7 +7915,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcpkms/config", requestOptions);
 
@@ -7983,13 +7946,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -8035,7 +7996,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcpkms/keys/deregister/{key}", requestOptions);
 
@@ -8072,7 +8032,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8080,7 +8039,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -8125,7 +8083,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcpkms/keys/{key}", requestOptions);
 
@@ -8162,7 +8119,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8170,7 +8126,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -8215,7 +8170,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/gcpkms/keys/trim/{key}", requestOptions);
 
@@ -8252,7 +8206,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8260,7 +8213,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -8299,7 +8251,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/kubernetes/config", requestOptions);
 
@@ -8331,13 +8282,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -8383,7 +8332,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/kubernetes/roles/{name}", requestOptions);
 
@@ -8420,7 +8368,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8428,7 +8375,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -8473,7 +8419,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/kv/{path}", requestOptions);
 
@@ -8510,7 +8455,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8518,7 +8462,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -8563,7 +8506,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
@@ -8600,7 +8542,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8608,7 +8549,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -8647,7 +8587,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/nomad/config/access", requestOptions);
 
@@ -8679,13 +8618,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -8725,7 +8662,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/nomad/config/lease", requestOptions);
 
@@ -8757,13 +8693,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -8809,7 +8743,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/nomad/role/{name}", requestOptions);
 
@@ -8846,7 +8779,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -8854,7 +8786,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -8893,7 +8824,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/openldap/config", requestOptions);
 
@@ -8925,13 +8855,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -8977,7 +8905,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/openldap/role/{name}", requestOptions);
 
@@ -9014,7 +8941,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9022,7 +8948,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -9067,7 +8992,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/openldap/static-role/{name}", requestOptions);
 
@@ -9104,7 +9028,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9112,7 +9035,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -9157,7 +9079,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
@@ -9194,7 +9115,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9202,7 +9122,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-
 
             // make the HTTP request
 
@@ -9241,7 +9160,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/pki//json", requestOptions);
 
@@ -9273,13 +9191,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -9325,7 +9241,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/pki/key/{key_ref}", requestOptions);
 
@@ -9362,7 +9277,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9370,7 +9284,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
-
 
             // make the HTTP request
 
@@ -9415,7 +9328,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/pki/roles/{name}", requestOptions);
 
@@ -9452,7 +9364,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9460,7 +9371,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -9499,7 +9409,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/pki/root", requestOptions);
 
@@ -9531,13 +9440,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -9583,7 +9490,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/rabbitmq/roles/{name}", requestOptions);
 
@@ -9620,7 +9526,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9628,7 +9533,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -9673,7 +9577,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/secret/data/{path}", requestOptions);
 
@@ -9710,7 +9613,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9718,7 +9620,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -9763,7 +9664,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/secret/metadata/{path}", requestOptions);
 
@@ -9800,7 +9700,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -9808,7 +9707,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -9847,7 +9745,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ssh/config/ca", requestOptions);
 
@@ -9879,13 +9776,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -9925,7 +9820,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ssh/config/zeroaddress", requestOptions);
 
@@ -9957,13 +9851,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -10009,7 +9901,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ssh/keys/{key_name}", requestOptions);
 
@@ -10046,7 +9937,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10054,7 +9944,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
-
 
             // make the HTTP request
 
@@ -10099,7 +9988,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/ssh/roles/{role}", requestOptions);
 
@@ -10136,7 +10024,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10144,7 +10031,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
-
 
             // make the HTTP request
 
@@ -10183,7 +10069,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/terraform/config", requestOptions);
 
@@ -10215,13 +10100,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -10267,7 +10150,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/terraform/role/{name}", requestOptions);
 
@@ -10304,7 +10186,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10312,7 +10193,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10357,7 +10237,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/totp/keys/{name}", requestOptions);
 
@@ -10394,7 +10273,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10402,7 +10280,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10447,7 +10324,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Delete<Object>("/transit/keys/{name}", requestOptions);
 
@@ -10484,7 +10360,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10492,7 +10367,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10531,7 +10405,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/config", requestOptions);
 
@@ -10563,13 +10436,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -10615,7 +10486,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/creds/{name}", requestOptions);
 
@@ -10652,7 +10522,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10660,7 +10529,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10705,7 +10573,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/library", requestOptions);
 
@@ -10742,7 +10609,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10750,7 +10616,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -10795,7 +10660,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/library/{name}", requestOptions);
 
@@ -10832,7 +10696,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10840,7 +10703,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10885,7 +10747,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/library/{name}/status", requestOptions);
 
@@ -10922,7 +10783,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -10930,7 +10790,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -10975,7 +10834,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/roles", requestOptions);
 
@@ -11012,7 +10870,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11020,7 +10877,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -11065,7 +10921,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/roles/{name}", requestOptions);
 
@@ -11102,7 +10957,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11110,7 +10964,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -11149,7 +11002,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ad/rotate-root", requestOptions);
 
@@ -11181,13 +11033,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -11227,7 +11077,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/alicloud/config", requestOptions);
 
@@ -11259,13 +11108,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -11311,7 +11158,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/alicloud/creds/{name}", requestOptions);
 
@@ -11348,7 +11194,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11356,7 +11201,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -11401,7 +11245,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/alicloud/role", requestOptions);
 
@@ -11438,7 +11281,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11446,7 +11288,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -11491,7 +11332,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/alicloud/role/{name}", requestOptions);
 
@@ -11528,7 +11368,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11536,7 +11375,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -11575,7 +11413,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/config/lease", requestOptions);
 
@@ -11607,13 +11444,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -11653,7 +11488,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/config/root", requestOptions);
 
@@ -11685,13 +11519,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -11731,7 +11563,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/creds", requestOptions);
 
@@ -11763,13 +11594,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -11815,7 +11644,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/roles", requestOptions);
 
@@ -11852,7 +11680,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11860,7 +11687,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -11905,7 +11731,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/roles/{name}", requestOptions);
 
@@ -11942,7 +11767,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -11950,7 +11774,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -11995,7 +11818,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/aws/sts/{name}", requestOptions);
 
@@ -12032,7 +11854,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12040,7 +11861,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -12079,7 +11899,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/azure/config", requestOptions);
 
@@ -12111,13 +11930,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -12163,7 +11980,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/azure/creds/{role}", requestOptions);
 
@@ -12200,7 +12016,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12208,7 +12023,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
-
 
             // make the HTTP request
 
@@ -12253,7 +12067,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/azure/roles", requestOptions);
 
@@ -12290,7 +12103,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12298,7 +12110,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -12343,7 +12154,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/azure/roles/{name}", requestOptions);
 
@@ -12380,7 +12190,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12388,7 +12197,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -12427,7 +12235,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/consul/config/access", requestOptions);
 
@@ -12459,13 +12266,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -12511,7 +12316,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/consul/creds/{role}", requestOptions);
 
@@ -12548,7 +12352,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12556,7 +12359,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
-
 
             // make the HTTP request
 
@@ -12601,7 +12403,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/consul/roles", requestOptions);
 
@@ -12638,7 +12439,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12646,7 +12446,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -12691,7 +12490,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/consul/roles/{name}", requestOptions);
 
@@ -12728,7 +12526,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12736,7 +12533,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -12786,7 +12582,6 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/cubbyhole/{path}", requestOptions);
 
@@ -12824,7 +12619,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -12836,7 +12630,6 @@ namespace Vault.Api
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
 
             // make the HTTP request
 
@@ -12875,7 +12668,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/config", requestOptions);
 
@@ -12907,13 +12699,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -12959,7 +12749,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/key/{roleset}", requestOptions);
 
@@ -12996,7 +12785,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13004,7 +12792,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -13049,7 +12836,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/roleset/{name}", requestOptions);
 
@@ -13086,7 +12872,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13094,7 +12879,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -13139,7 +12923,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/key", requestOptions);
 
@@ -13176,7 +12959,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13184,7 +12966,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -13229,7 +13010,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/token", requestOptions);
 
@@ -13266,7 +13046,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13274,7 +13053,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -13319,7 +13097,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/rolesets", requestOptions);
 
@@ -13356,7 +13133,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13364,7 +13140,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -13409,7 +13184,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/static-account/{name}", requestOptions);
 
@@ -13446,7 +13220,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13454,7 +13227,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -13499,7 +13271,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/static-account/{name}/key", requestOptions);
 
@@ -13536,7 +13307,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13544,7 +13314,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -13589,7 +13358,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/static-account/{name}/token", requestOptions);
 
@@ -13626,7 +13394,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13634,7 +13401,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -13679,7 +13445,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/static-accounts", requestOptions);
 
@@ -13716,7 +13481,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13724,7 +13488,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -13769,7 +13532,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcp/token/{roleset}", requestOptions);
 
@@ -13806,7 +13568,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13814,7 +13575,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -13853,7 +13613,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcpkms/config", requestOptions);
 
@@ -13885,13 +13644,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -13937,7 +13694,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcpkms/keys", requestOptions);
 
@@ -13974,7 +13730,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -13982,7 +13737,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -14027,7 +13781,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcpkms/keys/config/{key}", requestOptions);
 
@@ -14064,7 +13817,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14072,7 +13824,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -14117,7 +13868,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcpkms/keys/{key}", requestOptions);
 
@@ -14154,7 +13904,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14162,7 +13911,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -14207,7 +13955,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/gcpkms/pubkey/{key}", requestOptions);
 
@@ -14244,7 +13991,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14252,7 +13998,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -14291,7 +14036,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/kubernetes/config", requestOptions);
 
@@ -14323,13 +14067,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -14375,7 +14117,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/kubernetes/roles", requestOptions);
 
@@ -14412,7 +14153,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14420,7 +14160,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -14465,7 +14204,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/kubernetes/roles/{name}", requestOptions);
 
@@ -14502,7 +14240,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14510,7 +14247,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -14560,7 +14296,6 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/kv/{path}", requestOptions);
 
@@ -14598,7 +14333,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14610,7 +14344,6 @@ namespace Vault.Api
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
 
             // make the HTTP request
 
@@ -14649,7 +14382,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/mongodbatlas/config", requestOptions);
 
@@ -14681,13 +14413,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -14733,7 +14463,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/mongodbatlas/creds/{name}", requestOptions);
 
@@ -14770,7 +14499,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14778,7 +14506,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -14823,7 +14550,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/mongodbatlas/roles", requestOptions);
 
@@ -14860,7 +14586,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14868,7 +14593,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -14913,7 +14637,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
@@ -14950,7 +14673,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -14958,7 +14680,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -14997,7 +14718,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/nomad/config/access", requestOptions);
 
@@ -15029,13 +14749,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -15075,7 +14793,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/nomad/config/lease", requestOptions);
 
@@ -15107,13 +14824,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -15159,7 +14874,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/nomad/creds/{name}", requestOptions);
 
@@ -15196,7 +14910,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15204,7 +14917,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -15249,7 +14961,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/nomad/role", requestOptions);
 
@@ -15286,7 +14997,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15294,7 +15004,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -15339,7 +15048,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/nomad/role/{name}", requestOptions);
 
@@ -15376,7 +15084,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15384,7 +15091,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -15423,7 +15129,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/config", requestOptions);
 
@@ -15455,13 +15160,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -15507,7 +15210,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/creds/{name}", requestOptions);
 
@@ -15544,7 +15246,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15552,7 +15253,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -15597,7 +15297,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/role", requestOptions);
 
@@ -15634,7 +15333,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15642,7 +15340,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -15687,7 +15384,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/role/{name}", requestOptions);
 
@@ -15724,7 +15420,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15732,7 +15427,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -15777,7 +15471,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/static-cred/{name}", requestOptions);
 
@@ -15814,7 +15507,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15822,7 +15514,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -15867,7 +15558,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/static-role", requestOptions);
 
@@ -15904,7 +15594,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -15912,7 +15601,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -15957,7 +15645,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/openldap/static-role/{name}", requestOptions);
 
@@ -15994,7 +15681,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -16002,7 +15688,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -16041,7 +15726,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/ca", requestOptions);
 
@@ -16073,13 +15757,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16119,7 +15801,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/ca_chain", requestOptions);
 
@@ -16151,13 +15832,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16197,7 +15876,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/ca/pem", requestOptions);
 
@@ -16229,13 +15907,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16275,7 +15951,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/cert/ca_chain", requestOptions);
 
@@ -16307,13 +15982,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16353,7 +16026,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/cert/crl", requestOptions);
 
@@ -16385,13 +16057,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16437,7 +16107,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/cert/{serial}", requestOptions);
 
@@ -16474,7 +16143,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -16482,7 +16150,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
-
 
             // make the HTTP request
 
@@ -16527,7 +16194,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/cert/{serial}/raw", requestOptions);
 
@@ -16564,7 +16230,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -16572,7 +16237,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
-
 
             // make the HTTP request
 
@@ -16617,7 +16281,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/cert/{serial}/raw/pem", requestOptions);
 
@@ -16654,7 +16317,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -16662,7 +16324,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
-
 
             // make the HTTP request
 
@@ -16707,7 +16368,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/certs", requestOptions);
 
@@ -16744,7 +16404,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -16752,7 +16411,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -16791,7 +16449,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/config/crl", requestOptions);
 
@@ -16823,13 +16480,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16869,7 +16524,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/config/issuers", requestOptions);
 
@@ -16901,13 +16555,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -16947,7 +16599,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/config/keys", requestOptions);
 
@@ -16979,13 +16630,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17025,7 +16674,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/config/urls", requestOptions);
 
@@ -17057,13 +16705,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17103,7 +16749,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/crl", requestOptions);
 
@@ -17135,13 +16780,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17181,7 +16824,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/crl/pem", requestOptions);
 
@@ -17213,13 +16855,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17259,7 +16899,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/crl/rotate", requestOptions);
 
@@ -17291,13 +16930,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17337,7 +16974,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki//der", requestOptions);
 
@@ -17369,13 +17005,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17421,7 +17055,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/{issuer_ref}/crl/pem", requestOptions);
 
@@ -17458,7 +17091,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17466,7 +17098,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-
 
             // make the HTTP request
 
@@ -17511,7 +17142,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
@@ -17548,7 +17178,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17556,7 +17185,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-
 
             // make the HTTP request
 
@@ -17601,7 +17229,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/issuers", requestOptions);
 
@@ -17638,7 +17265,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17646,7 +17272,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -17685,7 +17310,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki//json", requestOptions);
 
@@ -17717,13 +17341,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -17769,7 +17391,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/key/{key_ref}", requestOptions);
 
@@ -17806,7 +17427,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17814,7 +17434,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
-
 
             // make the HTTP request
 
@@ -17859,7 +17478,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/keys", requestOptions);
 
@@ -17896,7 +17514,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17904,7 +17521,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -17949,7 +17565,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/roles", requestOptions);
 
@@ -17986,7 +17601,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -17994,7 +17608,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -18039,7 +17652,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/roles/{name}", requestOptions);
 
@@ -18076,7 +17688,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18084,7 +17695,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -18123,7 +17733,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/pki/tidy-status", requestOptions);
 
@@ -18155,13 +17764,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -18201,7 +17808,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/rabbitmq/config/lease", requestOptions);
 
@@ -18233,13 +17839,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -18285,7 +17889,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/rabbitmq/creds/{name}", requestOptions);
 
@@ -18322,7 +17925,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18330,7 +17932,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -18375,7 +17976,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/rabbitmq/roles", requestOptions);
 
@@ -18412,7 +18012,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18420,7 +18019,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -18465,7 +18063,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/rabbitmq/roles/{name}", requestOptions);
 
@@ -18502,7 +18099,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18510,7 +18106,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -18549,7 +18144,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/secret/config", requestOptions);
 
@@ -18581,13 +18175,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -18633,7 +18225,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/secret/data/{path}", requestOptions);
 
@@ -18670,7 +18261,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18678,7 +18268,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -18728,7 +18317,6 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/secret/metadata/{path}", requestOptions);
 
@@ -18766,7 +18354,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18778,7 +18365,6 @@ namespace Vault.Api
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
 
             // make the HTTP request
 
@@ -18823,7 +18409,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/secret/subkeys/{path}", requestOptions);
 
@@ -18860,7 +18445,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -18868,7 +18452,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -18907,7 +18490,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ssh/config/ca", requestOptions);
 
@@ -18939,13 +18521,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -18985,7 +18565,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ssh/config/zeroaddress", requestOptions);
 
@@ -19017,13 +18596,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -19063,7 +18640,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ssh/public_key", requestOptions);
 
@@ -19095,13 +18671,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -19147,7 +18721,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ssh/roles", requestOptions);
 
@@ -19184,7 +18757,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19192,7 +18764,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -19237,7 +18808,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/ssh/roles/{role}", requestOptions);
 
@@ -19274,7 +18844,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19282,7 +18851,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
-
 
             // make the HTTP request
 
@@ -19321,7 +18889,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/terraform/config", requestOptions);
 
@@ -19353,13 +18920,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -19405,7 +18970,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/terraform/creds/{name}", requestOptions);
 
@@ -19442,7 +19006,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19450,7 +19013,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -19495,7 +19057,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/terraform/role", requestOptions);
 
@@ -19532,7 +19093,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19540,7 +19100,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -19585,7 +19144,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/terraform/role/{name}", requestOptions);
 
@@ -19622,7 +19180,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19630,7 +19187,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -19675,7 +19231,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/totp/code/{name}", requestOptions);
 
@@ -19712,7 +19267,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19720,7 +19274,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -19765,7 +19318,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/totp/keys", requestOptions);
 
@@ -19802,7 +19354,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19810,7 +19361,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -19855,7 +19405,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/totp/keys/{name}", requestOptions);
 
@@ -19892,7 +19441,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19900,7 +19448,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -19945,7 +19492,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/backup/{name}", requestOptions);
 
@@ -19982,7 +19528,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -19990,7 +19535,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -20029,7 +19573,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/cache-config", requestOptions);
 
@@ -20061,13 +19604,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -20119,7 +19660,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/export/{type}/{name}", requestOptions);
 
@@ -20161,7 +19701,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20170,7 +19709,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-
 
             // make the HTTP request
 
@@ -20227,7 +19765,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
             requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/export/{type}/{name}/{version}", requestOptions);
 
@@ -20274,7 +19811,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20284,7 +19820,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
             requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
-
 
             // make the HTTP request
 
@@ -20329,7 +19864,6 @@ namespace Vault.Api
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/keys", requestOptions);
 
@@ -20366,7 +19900,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20374,7 +19907,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
 
             // make the HTTP request
 
@@ -20419,7 +19951,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/keys/{name}", requestOptions);
 
@@ -20456,7 +19987,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20464,7 +19994,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -20503,7 +20032,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Get<Object>("/transit/wrapping_key", requestOptions);
 
@@ -20535,13 +20063,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -20584,7 +20110,6 @@ namespace Vault.Api
 
             requestOptions.Data = adConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/config", requestOptions);
 
@@ -20618,7 +20143,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20626,7 +20150,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = adConfigRequest;
-
 
             // make the HTTP request
 
@@ -20674,7 +20197,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryManageCheckInRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/library/manage/{name}/check-in", requestOptions);
 
@@ -20713,7 +20235,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20722,7 +20243,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryManageCheckInRequest;
-
 
             // make the HTTP request
 
@@ -20770,7 +20290,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/library/{name}", requestOptions);
 
@@ -20809,7 +20328,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20818,7 +20336,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryRequest;
-
 
             // make the HTTP request
 
@@ -20866,7 +20383,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckInRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/library/{name}/check-in", requestOptions);
 
@@ -20905,7 +20421,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -20914,7 +20429,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckInRequest;
-
 
             // make the HTTP request
 
@@ -20962,7 +20476,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckOutRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/library/{name}/check-out", requestOptions);
 
@@ -21001,7 +20514,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21010,7 +20522,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adLibraryCheckOutRequest;
-
 
             // make the HTTP request
 
@@ -21058,7 +20569,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/roles/{name}", requestOptions);
 
@@ -21097,7 +20607,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21106,7 +20615,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = adRolesRequest;
-
 
             // make the HTTP request
 
@@ -21151,7 +20659,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/rotate-role/{name}", requestOptions);
 
@@ -21188,7 +20695,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21196,7 +20702,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -21235,7 +20740,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ad/rotate-root", requestOptions);
 
@@ -21267,13 +20771,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -21316,7 +20818,6 @@ namespace Vault.Api
 
             requestOptions.Data = alicloudConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/alicloud/config", requestOptions);
 
@@ -21350,7 +20851,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21358,7 +20858,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = alicloudConfigRequest;
-
 
             // make the HTTP request
 
@@ -21406,7 +20905,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = alicloudRoleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/alicloud/role/{name}", requestOptions);
 
@@ -21445,7 +20943,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21454,7 +20951,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = alicloudRoleRequest;
-
 
             // make the HTTP request
 
@@ -21496,7 +20992,6 @@ namespace Vault.Api
 
             requestOptions.Data = awsConfigLeaseRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/config/lease", requestOptions);
 
@@ -21530,7 +21025,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21538,7 +21032,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = awsConfigLeaseRequest;
-
 
             // make the HTTP request
 
@@ -21580,7 +21073,6 @@ namespace Vault.Api
 
             requestOptions.Data = awsConfigRootRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/config/root", requestOptions);
 
@@ -21614,7 +21106,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21622,7 +21113,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = awsConfigRootRequest;
-
 
             // make the HTTP request
 
@@ -21661,7 +21151,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/config/rotate-root", requestOptions);
 
@@ -21693,13 +21182,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -21742,7 +21229,6 @@ namespace Vault.Api
 
             requestOptions.Data = awsCredsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/creds", requestOptions);
 
@@ -21776,7 +21262,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21784,7 +21269,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = awsCredsRequest;
-
 
             // make the HTTP request
 
@@ -21832,7 +21316,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/roles/{name}", requestOptions);
 
@@ -21871,7 +21354,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21880,7 +21362,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsRolesRequest;
-
 
             // make the HTTP request
 
@@ -21928,7 +21409,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsStsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/aws/sts/{name}", requestOptions);
 
@@ -21967,7 +21447,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -21976,7 +21455,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = awsStsRequest;
-
 
             // make the HTTP request
 
@@ -22018,7 +21496,6 @@ namespace Vault.Api
 
             requestOptions.Data = azureConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/azure/config", requestOptions);
 
@@ -22052,7 +21529,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22060,7 +21536,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = azureConfigRequest;
-
 
             // make the HTTP request
 
@@ -22108,7 +21583,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = azureRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/azure/roles/{name}", requestOptions);
 
@@ -22147,7 +21621,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22156,7 +21629,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = azureRolesRequest;
-
 
             // make the HTTP request
 
@@ -22195,7 +21667,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/azure/rotate-root", requestOptions);
 
@@ -22227,13 +21698,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -22276,7 +21745,6 @@ namespace Vault.Api
 
             requestOptions.Data = consulConfigAccessRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/consul/config/access", requestOptions);
 
@@ -22310,7 +21778,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22318,7 +21785,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = consulConfigAccessRequest;
-
 
             // make the HTTP request
 
@@ -22366,7 +21832,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = consulRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/consul/roles/{name}", requestOptions);
 
@@ -22405,7 +21870,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22414,7 +21878,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = consulRolesRequest;
-
 
             // make the HTTP request
 
@@ -22459,7 +21922,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/cubbyhole/{path}", requestOptions);
 
@@ -22496,7 +21958,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22504,7 +21965,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -22546,7 +22006,6 @@ namespace Vault.Api
 
             requestOptions.Data = gcpConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/config", requestOptions);
 
@@ -22580,7 +22039,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22588,7 +22046,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = gcpConfigRequest;
-
 
             // make the HTTP request
 
@@ -22627,7 +22084,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/config/rotate-root", requestOptions);
 
@@ -22659,13 +22115,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -22714,7 +22168,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpKeyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/key/{roleset}", requestOptions);
 
@@ -22753,7 +22206,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22762,7 +22214,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpKeyRequest;
-
 
             // make the HTTP request
 
@@ -22810,7 +22261,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpRolesetRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/roleset/{name}", requestOptions);
 
@@ -22849,7 +22299,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22858,7 +22307,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpRolesetRequest;
-
 
             // make the HTTP request
 
@@ -22903,7 +22351,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate", requestOptions);
 
@@ -22940,7 +22387,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -22948,7 +22394,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -22993,7 +22438,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate-key", requestOptions);
 
@@ -23030,7 +22474,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23038,7 +22481,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -23086,7 +22528,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpRolesetKeyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/key", requestOptions);
 
@@ -23125,7 +22566,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23134,7 +22574,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
             requestOptions.Data = gcpRolesetKeyRequest;
-
 
             // make the HTTP request
 
@@ -23179,7 +22618,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/token", requestOptions);
 
@@ -23216,7 +22654,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23224,7 +22661,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -23272,7 +22708,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/static-account/{name}", requestOptions);
 
@@ -23311,7 +22746,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23320,7 +22754,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountRequest;
-
 
             // make the HTTP request
 
@@ -23368,7 +22801,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountKeyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/static-account/{name}/key", requestOptions);
 
@@ -23407,7 +22839,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23416,7 +22847,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = gcpStaticAccountKeyRequest;
-
 
             // make the HTTP request
 
@@ -23461,7 +22891,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/static-account/{name}/rotate-key", requestOptions);
 
@@ -23498,7 +22927,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23506,7 +22934,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -23551,7 +22978,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/static-account/{name}/token", requestOptions);
 
@@ -23588,7 +23014,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23596,7 +23021,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -23641,7 +23065,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcp/token/{roleset}", requestOptions);
 
@@ -23678,7 +23101,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23686,7 +23108,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
 
             // make the HTTP request
 
@@ -23728,7 +23149,6 @@ namespace Vault.Api
 
             requestOptions.Data = gcpkmsConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/config", requestOptions);
 
@@ -23762,7 +23182,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23770,7 +23189,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = gcpkmsConfigRequest;
-
 
             // make the HTTP request
 
@@ -23818,7 +23236,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsDecryptRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/decrypt/{key}", requestOptions);
 
@@ -23857,7 +23274,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23866,7 +23282,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsDecryptRequest;
-
 
             // make the HTTP request
 
@@ -23914,7 +23329,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsEncryptRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/encrypt/{key}", requestOptions);
 
@@ -23953,7 +23367,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -23962,7 +23375,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsEncryptRequest;
-
 
             // make the HTTP request
 
@@ -24010,7 +23422,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/config/{key}", requestOptions);
 
@@ -24049,7 +23460,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24058,7 +23468,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysConfigRequest;
-
 
             // make the HTTP request
 
@@ -24103,7 +23512,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/deregister/{key}", requestOptions);
 
@@ -24140,7 +23548,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24148,7 +23555,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -24196,7 +23602,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/{key}", requestOptions);
 
@@ -24235,7 +23640,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24244,7 +23648,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRequest;
-
 
             // make the HTTP request
 
@@ -24292,7 +23695,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRegisterRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/register/{key}", requestOptions);
 
@@ -24331,7 +23733,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24340,7 +23741,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsKeysRegisterRequest;
-
 
             // make the HTTP request
 
@@ -24385,7 +23785,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/rotate/{key}", requestOptions);
 
@@ -24422,7 +23821,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24430,7 +23828,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -24475,7 +23872,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/keys/trim/{key}", requestOptions);
 
@@ -24512,7 +23908,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24520,7 +23915,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
 
             // make the HTTP request
 
@@ -24568,7 +23962,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsReencryptRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/reencrypt/{key}", requestOptions);
 
@@ -24607,7 +24000,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24616,7 +24008,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsReencryptRequest;
-
 
             // make the HTTP request
 
@@ -24664,7 +24055,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/sign/{key}", requestOptions);
 
@@ -24703,7 +24093,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24712,7 +24101,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsSignRequest;
-
 
             // make the HTTP request
 
@@ -24760,7 +24148,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsVerifyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/gcpkms/verify/{key}", requestOptions);
 
@@ -24799,7 +24186,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24808,7 +24194,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
             requestOptions.Data = gcpkmsVerifyRequest;
-
 
             // make the HTTP request
 
@@ -24850,7 +24235,6 @@ namespace Vault.Api
 
             requestOptions.Data = kubernetesConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/kubernetes/config", requestOptions);
 
@@ -24884,7 +24268,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24892,7 +24275,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = kubernetesConfigRequest;
-
 
             // make the HTTP request
 
@@ -24940,7 +24322,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesCredsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/kubernetes/creds/{name}", requestOptions);
 
@@ -24979,7 +24360,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -24988,7 +24368,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesCredsRequest;
-
 
             // make the HTTP request
 
@@ -25036,7 +24415,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/kubernetes/roles/{name}", requestOptions);
 
@@ -25075,7 +24453,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25084,7 +24461,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = kubernetesRolesRequest;
-
 
             // make the HTTP request
 
@@ -25129,7 +24505,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/kv/{path}", requestOptions);
 
@@ -25166,7 +24541,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25174,7 +24548,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
 
             // make the HTTP request
 
@@ -25216,7 +24589,6 @@ namespace Vault.Api
 
             requestOptions.Data = mongodbatlasConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/mongodbatlas/config", requestOptions);
 
@@ -25250,7 +24622,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25258,7 +24629,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = mongodbatlasConfigRequest;
-
 
             // make the HTTP request
 
@@ -25303,7 +24673,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/mongodbatlas/creds/{name}", requestOptions);
 
@@ -25340,7 +24709,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25348,7 +24716,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -25396,7 +24763,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = mongodbatlasRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
@@ -25435,7 +24801,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25444,7 +24809,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = mongodbatlasRolesRequest;
-
 
             // make the HTTP request
 
@@ -25486,7 +24850,6 @@ namespace Vault.Api
 
             requestOptions.Data = nomadConfigAccessRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/nomad/config/access", requestOptions);
 
@@ -25520,7 +24883,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25528,7 +24890,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = nomadConfigAccessRequest;
-
 
             // make the HTTP request
 
@@ -25570,7 +24931,6 @@ namespace Vault.Api
 
             requestOptions.Data = nomadConfigLeaseRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/nomad/config/lease", requestOptions);
 
@@ -25604,7 +24964,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25612,7 +24971,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = nomadConfigLeaseRequest;
-
 
             // make the HTTP request
 
@@ -25660,7 +25018,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = nomadRoleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/nomad/role/{name}", requestOptions);
 
@@ -25699,7 +25056,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25708,7 +25064,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = nomadRoleRequest;
-
 
             // make the HTTP request
 
@@ -25750,7 +25105,6 @@ namespace Vault.Api
 
             requestOptions.Data = openldapConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/openldap/config", requestOptions);
 
@@ -25784,7 +25138,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25792,7 +25145,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = openldapConfigRequest;
-
 
             // make the HTTP request
 
@@ -25840,7 +25192,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapRoleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/openldap/role/{name}", requestOptions);
 
@@ -25879,7 +25230,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25888,7 +25238,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapRoleRequest;
-
 
             // make the HTTP request
 
@@ -25933,7 +25282,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/openldap/rotate-role/{name}", requestOptions);
 
@@ -25970,7 +25318,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -25978,7 +25325,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -26017,7 +25363,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/openldap/rotate-root", requestOptions);
 
@@ -26049,13 +25394,11 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
 
 
             // make the HTTP request
@@ -26104,7 +25447,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapStaticRoleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/openldap/static-role/{name}", requestOptions);
 
@@ -26143,7 +25485,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26152,7 +25493,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = openldapStaticRoleRequest;
-
 
             // make the HTTP request
 
@@ -26194,7 +25534,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiBundleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/bundle", requestOptions);
 
@@ -26228,7 +25567,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26236,7 +25574,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiBundleRequest;
-
 
             // make the HTTP request
 
@@ -26278,7 +25615,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiCertRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/cert", requestOptions);
 
@@ -26312,7 +25648,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26320,7 +25655,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiCertRequest;
-
 
             // make the HTTP request
 
@@ -26362,7 +25696,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiConfigCaRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/config/ca", requestOptions);
 
@@ -26396,7 +25729,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26404,7 +25736,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiConfigCaRequest;
-
 
             // make the HTTP request
 
@@ -26446,7 +25777,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiConfigCrlRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/config/crl", requestOptions);
 
@@ -26480,7 +25810,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26488,7 +25817,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiConfigCrlRequest;
-
 
             // make the HTTP request
 
@@ -26530,7 +25858,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiConfigIssuersRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/config/issuers", requestOptions);
 
@@ -26564,7 +25891,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26572,7 +25898,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiConfigIssuersRequest;
-
 
             // make the HTTP request
 
@@ -26614,7 +25939,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiConfigKeysRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/config/keys", requestOptions);
 
@@ -26648,7 +25972,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26656,7 +25979,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiConfigKeysRequest;
-
 
             // make the HTTP request
 
@@ -26698,7 +26020,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiConfigUrlsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/config/urls", requestOptions);
 
@@ -26732,7 +26053,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26740,7 +26060,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiConfigUrlsRequest;
-
 
             // make the HTTP request
 
@@ -26782,7 +26101,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiIntermediateCrossSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/intermediate/cross-sign", requestOptions);
 
@@ -26816,7 +26134,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26824,7 +26141,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiIntermediateCrossSignRequest;
-
 
             // make the HTTP request
 
@@ -26872,7 +26188,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIntermediateGenerateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/intermediate/generate/{exported}", requestOptions);
 
@@ -26911,7 +26226,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -26920,7 +26234,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIntermediateGenerateRequest;
-
 
             // make the HTTP request
 
@@ -26962,7 +26275,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiIntermediateSetSignedRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/intermediate/set-signed", requestOptions);
 
@@ -26996,7 +26308,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27004,7 +26315,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiIntermediateSetSignedRequest;
-
 
             // make the HTTP request
 
@@ -27046,7 +26356,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiInternalExportedRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/internal|exported", requestOptions);
 
@@ -27080,7 +26389,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27088,7 +26396,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiInternalExportedRequest;
-
 
             // make the HTTP request
 
@@ -27136,7 +26443,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssueRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issue/{role}", requestOptions);
 
@@ -27175,7 +26481,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27184,7 +26489,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssueRequest;
-
 
             // make the HTTP request
 
@@ -27238,7 +26542,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerIssueRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions);
 
@@ -27282,7 +26585,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27292,7 +26594,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerIssueRequest;
-
 
             // make the HTTP request
 
@@ -27340,7 +26641,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions);
 
@@ -27379,7 +26679,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27388,7 +26687,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
-
 
             // make the HTTP request
 
@@ -27442,7 +26740,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions);
 
@@ -27486,7 +26783,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27496,7 +26792,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerSignRequest;
-
 
             // make the HTTP request
 
@@ -27544,7 +26839,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions);
 
@@ -27583,7 +26877,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27592,7 +26885,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
-
 
             // make the HTTP request
 
@@ -27640,7 +26932,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions);
 
@@ -27679,7 +26970,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27688,7 +26978,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
-
 
             // make the HTTP request
 
@@ -27742,7 +27031,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions);
 
@@ -27786,7 +27074,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27796,7 +27083,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
-
 
             // make the HTTP request
 
@@ -27844,7 +27130,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiDerPemRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
@@ -27883,7 +27168,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27892,7 +27176,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
             requestOptions.Data = pkiDerPemRequest;
-
 
             // make the HTTP request
 
@@ -27940,7 +27223,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions);
 
@@ -27979,7 +27261,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -27988,7 +27269,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
-
 
             // make the HTTP request
 
@@ -28036,7 +27316,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateRootRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/issuers/generate/root/{exported}", requestOptions);
 
@@ -28075,7 +27354,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28084,7 +27362,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiIssuersGenerateRootRequest;
-
 
             // make the HTTP request
 
@@ -28126,7 +27403,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiJsonRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki//json", requestOptions);
 
@@ -28160,7 +27436,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28168,7 +27443,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiJsonRequest;
-
 
             // make the HTTP request
 
@@ -28216,7 +27490,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
             requestOptions.Data = pkiKeyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/key/{key_ref}", requestOptions);
 
@@ -28255,7 +27528,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28264,7 +27536,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
             requestOptions.Data = pkiKeyRequest;
-
 
             // make the HTTP request
 
@@ -28306,7 +27577,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiKeysImportRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/keys/import", requestOptions);
 
@@ -28340,7 +27610,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28348,7 +27617,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiKeysImportRequest;
-
 
             // make the HTTP request
 
@@ -28390,7 +27658,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiKmsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/kms", requestOptions);
 
@@ -28424,7 +27691,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28432,7 +27698,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiKmsRequest;
-
 
             // make the HTTP request
 
@@ -28474,7 +27739,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiRevokeRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/revoke", requestOptions);
 
@@ -28508,7 +27772,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28516,7 +27779,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiRevokeRequest;
-
 
             // make the HTTP request
 
@@ -28564,7 +27826,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = pkiRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/roles/{name}", requestOptions);
 
@@ -28603,7 +27864,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28612,7 +27872,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = pkiRolesRequest;
-
 
             // make the HTTP request
 
@@ -28660,7 +27919,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootGenerateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/root/generate/{exported}", requestOptions);
 
@@ -28699,7 +27957,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28708,7 +27965,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootGenerateRequest;
-
 
             // make the HTTP request
 
@@ -28750,7 +28006,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiRootReplaceRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/root/replace", requestOptions);
 
@@ -28784,7 +28039,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28792,7 +28046,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiRootReplaceRequest;
-
 
             // make the HTTP request
 
@@ -28840,7 +28093,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootRotateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/root/rotate/{exported}", requestOptions);
 
@@ -28879,7 +28131,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28888,7 +28139,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
             requestOptions.Data = pkiRootRotateRequest;
-
 
             // make the HTTP request
 
@@ -28930,7 +28180,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiRootSignIntermediateRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/root/sign-intermediate", requestOptions);
 
@@ -28964,7 +28213,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -28972,7 +28220,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiRootSignIntermediateRequest;
-
 
             // make the HTTP request
 
@@ -29014,7 +28261,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/root/sign-self-issued", requestOptions);
 
@@ -29048,7 +28294,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29056,7 +28301,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
-
 
             // make the HTTP request
 
@@ -29104,7 +28348,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/sign/{role}", requestOptions);
 
@@ -29143,7 +28386,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29152,7 +28394,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignRequest;
-
 
             // make the HTTP request
 
@@ -29194,7 +28435,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiSignVerbatimRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/sign-verbatim", requestOptions);
 
@@ -29228,7 +28468,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29236,7 +28475,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiSignVerbatimRequest;
-
 
             // make the HTTP request
 
@@ -29284,7 +28522,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignVerbatimRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/sign-verbatim/{role}", requestOptions);
 
@@ -29323,7 +28560,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29332,7 +28568,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = pkiSignVerbatimRequest;
-
 
             // make the HTTP request
 
@@ -29374,7 +28609,6 @@ namespace Vault.Api
 
             requestOptions.Data = pkiTidyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/pki/tidy", requestOptions);
 
@@ -29408,7 +28642,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29416,7 +28649,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = pkiTidyRequest;
-
 
             // make the HTTP request
 
@@ -29458,7 +28690,6 @@ namespace Vault.Api
 
             requestOptions.Data = rabbitmqConfigConnectionRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/rabbitmq/config/connection", requestOptions);
 
@@ -29492,7 +28723,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29500,7 +28730,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = rabbitmqConfigConnectionRequest;
-
 
             // make the HTTP request
 
@@ -29542,7 +28771,6 @@ namespace Vault.Api
 
             requestOptions.Data = rabbitmqConfigLeaseRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/rabbitmq/config/lease", requestOptions);
 
@@ -29576,7 +28804,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29584,7 +28811,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = rabbitmqConfigLeaseRequest;
-
 
             // make the HTTP request
 
@@ -29632,7 +28858,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = rabbitmqRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/rabbitmq/roles/{name}", requestOptions);
 
@@ -29671,7 +28896,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29680,7 +28904,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = rabbitmqRolesRequest;
-
 
             // make the HTTP request
 
@@ -29722,7 +28945,6 @@ namespace Vault.Api
 
             requestOptions.Data = kvConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/config", requestOptions);
 
@@ -29756,7 +28978,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29764,7 +28985,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = kvConfigRequest;
-
 
             // make the HTTP request
 
@@ -29812,7 +29032,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDataRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/data/{path}", requestOptions);
 
@@ -29851,7 +29070,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29860,7 +29078,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDataRequest;
-
 
             // make the HTTP request
 
@@ -29908,7 +29125,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDeleteRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/delete/{path}", requestOptions);
 
@@ -29947,7 +29163,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -29956,7 +29171,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDeleteRequest;
-
 
             // make the HTTP request
 
@@ -30004,7 +29218,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDestroyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/destroy/{path}", requestOptions);
 
@@ -30043,7 +29256,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30052,7 +29264,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvDestroyRequest;
-
 
             // make the HTTP request
 
@@ -30100,7 +29311,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvMetadataRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/metadata/{path}", requestOptions);
 
@@ -30139,7 +29349,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30148,7 +29357,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvMetadataRequest;
-
 
             // make the HTTP request
 
@@ -30196,7 +29404,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvUndeleteRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/secret/undelete/{path}", requestOptions);
 
@@ -30235,7 +29442,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30244,7 +29450,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = kvUndeleteRequest;
-
 
             // make the HTTP request
 
@@ -30286,7 +29491,6 @@ namespace Vault.Api
 
             requestOptions.Data = sshConfigCaRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/config/ca", requestOptions);
 
@@ -30320,7 +29524,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30328,7 +29531,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = sshConfigCaRequest;
-
 
             // make the HTTP request
 
@@ -30370,7 +29572,6 @@ namespace Vault.Api
 
             requestOptions.Data = sshConfigZeroaddressRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/config/zeroaddress", requestOptions);
 
@@ -30404,7 +29605,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30412,7 +29612,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = sshConfigZeroaddressRequest;
-
 
             // make the HTTP request
 
@@ -30460,7 +29659,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshCredsRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/creds/{role}", requestOptions);
 
@@ -30499,7 +29697,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30508,7 +29705,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshCredsRequest;
-
 
             // make the HTTP request
 
@@ -30556,7 +29752,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
             requestOptions.Data = sshKeysRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/keys/{key_name}", requestOptions);
 
@@ -30595,7 +29790,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30604,7 +29798,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
             requestOptions.Data = sshKeysRequest;
-
 
             // make the HTTP request
 
@@ -30646,7 +29839,6 @@ namespace Vault.Api
 
             requestOptions.Data = sshLookupRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/lookup", requestOptions);
 
@@ -30680,7 +29872,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30688,7 +29879,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = sshLookupRequest;
-
 
             // make the HTTP request
 
@@ -30736,7 +29926,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshRolesRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/roles/{role}", requestOptions);
 
@@ -30775,7 +29964,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30784,7 +29972,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshRolesRequest;
-
 
             // make the HTTP request
 
@@ -30832,7 +30019,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/sign/{role}", requestOptions);
 
@@ -30871,7 +30057,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30880,7 +30065,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
             requestOptions.Data = sshSignRequest;
-
 
             // make the HTTP request
 
@@ -30922,7 +30106,6 @@ namespace Vault.Api
 
             requestOptions.Data = sshVerifyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/ssh/verify", requestOptions);
 
@@ -30956,7 +30139,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -30964,7 +30146,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = sshVerifyRequest;
-
 
             // make the HTTP request
 
@@ -31006,7 +30187,6 @@ namespace Vault.Api
 
             requestOptions.Data = terraformConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/terraform/config", requestOptions);
 
@@ -31040,7 +30220,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31048,7 +30227,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = terraformConfigRequest;
-
 
             // make the HTTP request
 
@@ -31093,7 +30271,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/terraform/creds/{name}", requestOptions);
 
@@ -31130,7 +30307,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31138,7 +30314,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -31186,7 +30361,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = terraformRoleRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/terraform/role/{name}", requestOptions);
 
@@ -31225,7 +30399,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31234,7 +30407,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = terraformRoleRequest;
-
 
             // make the HTTP request
 
@@ -31279,7 +30451,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/terraform/rotate-role/{name}", requestOptions);
 
@@ -31316,7 +30487,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31324,7 +30494,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -31372,7 +30541,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpCodeRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/totp/code/{name}", requestOptions);
 
@@ -31411,7 +30579,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31420,7 +30587,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpCodeRequest;
-
 
             // make the HTTP request
 
@@ -31468,7 +30634,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpKeysRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/totp/keys/{name}", requestOptions);
 
@@ -31507,7 +30672,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31516,7 +30680,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = totpKeysRequest;
-
 
             // make the HTTP request
 
@@ -31558,7 +30721,6 @@ namespace Vault.Api
 
             requestOptions.Data = transitCacheConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/cache-config", requestOptions);
 
@@ -31592,7 +30754,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31600,7 +30761,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = transitCacheConfigRequest;
-
 
             // make the HTTP request
 
@@ -31654,7 +30814,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("plaintext", ClientUtils.ParameterToString(plaintext)); // path parameter
             requestOptions.Data = transitDatakeyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/datakey/{plaintext}/{name}", requestOptions);
 
@@ -31698,7 +30857,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31708,7 +30866,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("plaintext", ClientUtils.ParameterToString(plaintext)); // path parameter
             requestOptions.Data = transitDatakeyRequest;
-
 
             // make the HTTP request
 
@@ -31756,7 +30913,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitDecryptRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/decrypt/{name}", requestOptions);
 
@@ -31795,7 +30951,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31804,7 +30959,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitDecryptRequest;
-
 
             // make the HTTP request
 
@@ -31852,7 +31006,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitEncryptRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/encrypt/{name}", requestOptions);
 
@@ -31891,7 +31044,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31900,7 +31052,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitEncryptRequest;
-
 
             // make the HTTP request
 
@@ -31942,7 +31093,6 @@ namespace Vault.Api
 
             requestOptions.Data = transitHashRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/hash", requestOptions);
 
@@ -31976,7 +31126,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -31984,7 +31133,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = transitHashRequest;
-
 
             // make the HTTP request
 
@@ -32032,7 +31180,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitHashRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/hash/{urlalgorithm}", requestOptions);
 
@@ -32071,7 +31218,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32080,7 +31226,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitHashRequest;
-
 
             // make the HTTP request
 
@@ -32128,7 +31273,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitHmacRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/hmac/{name}", requestOptions);
 
@@ -32167,7 +31311,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32176,7 +31319,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitHmacRequest;
-
 
             // make the HTTP request
 
@@ -32230,7 +31372,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitHmacRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions);
 
@@ -32274,7 +31415,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32284,7 +31424,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitHmacRequest;
-
 
             // make the HTTP request
 
@@ -32332,7 +31471,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}", requestOptions);
 
@@ -32371,7 +31509,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32380,7 +31517,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysRequest;
-
 
             // make the HTTP request
 
@@ -32428,7 +31564,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysConfigRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}/config", requestOptions);
 
@@ -32467,7 +31602,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32476,7 +31610,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysConfigRequest;
-
 
             // make the HTTP request
 
@@ -32524,7 +31657,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}/import", requestOptions);
 
@@ -32563,7 +31695,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32572,7 +31703,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportRequest;
-
 
             // make the HTTP request
 
@@ -32620,7 +31750,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportVersionRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}/import_version", requestOptions);
 
@@ -32659,7 +31788,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32668,7 +31796,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysImportVersionRequest;
-
 
             // make the HTTP request
 
@@ -32713,7 +31840,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}/rotate", requestOptions);
 
@@ -32750,7 +31876,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32758,7 +31883,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
 
             // make the HTTP request
 
@@ -32806,7 +31930,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysTrimRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/keys/{name}/trim", requestOptions);
 
@@ -32845,7 +31968,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32854,7 +31976,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitKeysTrimRequest;
-
 
             // make the HTTP request
 
@@ -32896,7 +32017,6 @@ namespace Vault.Api
 
             requestOptions.Data = transitRandomRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/random", requestOptions);
 
@@ -32930,7 +32050,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -32938,7 +32057,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = transitRandomRequest;
-
 
             // make the HTTP request
 
@@ -32986,7 +32104,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.Data = transitRandomRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/random/{source}", requestOptions);
 
@@ -33025,7 +32142,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33034,7 +32150,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.Data = transitRandomRequest;
-
 
             // make the HTTP request
 
@@ -33088,7 +32203,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = transitRandomRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/random/{source}/{urlbytes}", requestOptions);
 
@@ -33132,7 +32246,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33142,7 +32255,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = transitRandomRequest;
-
 
             // make the HTTP request
 
@@ -33190,7 +32302,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = transitRandomRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/random/{urlbytes}", requestOptions);
 
@@ -33229,7 +32340,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33238,7 +32348,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = transitRandomRequest;
-
 
             // make the HTTP request
 
@@ -33280,7 +32389,6 @@ namespace Vault.Api
 
             requestOptions.Data = transitRestoreRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/restore", requestOptions);
 
@@ -33314,7 +32422,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33322,7 +32429,6 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = transitRestoreRequest;
-
 
             // make the HTTP request
 
@@ -33370,7 +32476,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRestoreRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/restore/{name}", requestOptions);
 
@@ -33409,7 +32514,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33418,7 +32522,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRestoreRequest;
-
 
             // make the HTTP request
 
@@ -33466,7 +32569,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRewrapRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/rewrap/{name}", requestOptions);
 
@@ -33505,7 +32607,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33514,7 +32615,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitRewrapRequest;
-
 
             // make the HTTP request
 
@@ -33562,7 +32662,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/sign/{name}", requestOptions);
 
@@ -33601,7 +32700,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33610,7 +32708,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitSignRequest;
-
 
             // make the HTTP request
 
@@ -33664,7 +32761,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitSignRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions);
 
@@ -33708,7 +32804,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33718,7 +32813,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitSignRequest;
-
 
             // make the HTTP request
 
@@ -33766,7 +32860,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitVerifyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/verify/{name}", requestOptions);
 
@@ -33805,7 +32898,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33814,7 +32906,6 @@ namespace Vault.Api
 
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = transitVerifyRequest;
-
 
             // make the HTTP request
 
@@ -33868,7 +32959,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitVerifyRequest;
 
-
             // make the HTTP request
             var response = this.Client.Post<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions);
 
@@ -33912,7 +33002,6 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
@@ -33922,7 +33011,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = transitVerifyRequest;
-
 
             // make the HTTP request
 

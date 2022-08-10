@@ -344,7 +344,6 @@ namespace {{packageName}}.{{apiPackage}}
             }
             {{/isHttpSignature}}
             {{/authMethods}}
-
             // make the HTTP request
             var response = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions);
 
@@ -398,7 +397,6 @@ namespace {{packageName}}.{{apiPackage}}
                 "{{{mediaType}}}"{{^-last}},{{/-last}}
                 {{/produces}}
             };
-
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
@@ -528,7 +526,6 @@ namespace {{packageName}}.{{apiPackage}}
             }
             {{/isHttpSignature}}
             {{/authMethods}}
-
             // make the HTTP request
 
             var response = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{{path}}}", requestOptions, cancellationToken).ConfigureAwait(false);
