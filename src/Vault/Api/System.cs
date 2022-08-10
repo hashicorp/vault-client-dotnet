@@ -3606,10 +3606,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -3649,13 +3649,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -3696,10 +3696,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -3739,13 +3739,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -3786,10 +3786,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -3829,13 +3829,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -3871,7 +3871,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -3908,10 +3908,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -3954,10 +3954,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -3997,13 +3997,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -4039,7 +4039,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4076,10 +4076,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4117,7 +4117,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4154,10 +4154,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4200,10 +4200,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -4243,13 +4243,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -4290,10 +4290,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4333,13 +4333,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4385,11 +4385,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
@@ -4434,14 +4434,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
@@ -4482,10 +4482,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4525,13 +4525,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4572,10 +4572,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4615,13 +4615,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4662,10 +4662,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4705,13 +4705,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4752,10 +4752,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4795,13 +4795,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -4837,7 +4837,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4874,10 +4874,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -4920,10 +4920,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -4963,13 +4963,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -5005,7 +5005,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5042,10 +5042,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5083,7 +5083,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5120,10 +5120,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5161,7 +5161,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5198,10 +5198,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5239,7 +5239,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5276,10 +5276,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5317,7 +5317,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5354,10 +5354,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5395,7 +5395,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5432,10 +5432,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5478,10 +5478,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -5521,13 +5521,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -5568,10 +5568,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -5611,13 +5611,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -5653,7 +5653,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5690,10 +5690,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5736,10 +5736,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -5779,13 +5779,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -5821,7 +5821,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5858,10 +5858,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5899,7 +5899,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5936,10 +5936,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -5982,10 +5982,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -6025,13 +6025,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -6072,10 +6072,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -6115,13 +6115,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
 
             // make the HTTP request
@@ -6157,7 +6157,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6194,10 +6194,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6235,7 +6235,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6272,10 +6272,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6313,7 +6313,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6350,10 +6350,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6391,7 +6391,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6428,10 +6428,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6469,7 +6469,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6506,10 +6506,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6547,7 +6547,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6584,10 +6584,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6625,7 +6625,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6662,10 +6662,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6703,7 +6703,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6740,10 +6740,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6781,7 +6781,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6818,10 +6818,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6859,7 +6859,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6896,10 +6896,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6937,7 +6937,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -6974,10 +6974,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7015,7 +7015,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7052,10 +7052,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7093,7 +7093,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7130,10 +7130,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7171,7 +7171,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7208,10 +7208,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7249,7 +7249,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7286,10 +7286,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7327,7 +7327,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7364,10 +7364,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7405,7 +7405,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7442,10 +7442,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7488,10 +7488,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -7531,13 +7531,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -7573,7 +7573,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7610,10 +7610,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7651,7 +7651,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7688,10 +7688,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7729,7 +7729,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7766,10 +7766,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7807,7 +7807,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7844,10 +7844,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7885,7 +7885,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7922,10 +7922,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -7963,7 +7963,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8000,10 +8000,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8046,10 +8046,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8089,13 +8089,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8141,11 +8141,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8190,14 +8190,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8234,12 +8234,12 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (format != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "format", format));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
             }
 
 
@@ -8276,15 +8276,15 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (format != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "format", format));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
             }
 
 
@@ -8323,16 +8323,16 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (logFormat != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
             }
             if (logLevel != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
             }
 
 
@@ -8370,19 +8370,19 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (logFormat != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
             }
             if (logLevel != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
             }
 
 
@@ -8419,7 +8419,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8456,10 +8456,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8502,10 +8502,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -8545,13 +8545,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -8592,10 +8592,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -8635,13 +8635,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
             // make the HTTP request
@@ -8677,7 +8677,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8714,10 +8714,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -8760,10 +8760,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -8803,13 +8803,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -8855,11 +8855,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8904,14 +8904,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -8957,11 +8957,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
@@ -9006,14 +9006,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
 
             // make the HTTP request
@@ -9054,10 +9054,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -9097,13 +9097,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -9144,10 +9144,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9187,13 +9187,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9234,10 +9234,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -9277,13 +9277,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -9324,10 +9324,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9367,13 +9367,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9414,10 +9414,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9457,13 +9457,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9500,12 +9500,12 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -9542,15 +9542,15 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -9592,10 +9592,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9635,13 +9635,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -9677,7 +9677,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9714,10 +9714,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9755,7 +9755,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9792,10 +9792,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9833,7 +9833,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9870,10 +9870,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9911,7 +9911,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9948,10 +9948,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -9989,7 +9989,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10026,10 +10026,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10067,7 +10067,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10104,10 +10104,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10145,7 +10145,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10182,10 +10182,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10223,7 +10223,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10260,10 +10260,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10301,7 +10301,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10338,10 +10338,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10379,7 +10379,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10416,10 +10416,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10457,7 +10457,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10494,10 +10494,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10535,7 +10535,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10572,10 +10572,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -10618,10 +10618,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -10661,13 +10661,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -10708,10 +10708,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -10751,13 +10751,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
 
             // make the HTTP request
@@ -10794,12 +10794,12 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -10836,15 +10836,15 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -10887,13 +10887,13 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -10935,16 +10935,16 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             if (list != null)
             {
-                requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
 
 
@@ -10981,7 +10981,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11018,10 +11018,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11059,7 +11059,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11096,10 +11096,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11137,7 +11137,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11174,10 +11174,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11215,7 +11215,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11252,10 +11252,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11298,10 +11298,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("migration_id", Vault.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
+            requestOptions.PathParameters.Add("migration_id", ClientUtils.ParameterToString(migrationId)); // path parameter
 
 
             // make the HTTP request
@@ -11341,13 +11341,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("migration_id", Vault.Client.ClientUtils.ParameterToString(migrationId)); // path parameter
+            requestOptions.PathParameters.Add("migration_id", ClientUtils.ParameterToString(migrationId)); // path parameter
 
 
             // make the HTTP request
@@ -11383,7 +11383,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11420,10 +11420,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11461,7 +11461,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11498,10 +11498,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11539,7 +11539,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11576,10 +11576,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11622,10 +11622,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -11665,13 +11665,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
 
             // make the HTTP request
@@ -11707,7 +11707,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11744,10 +11744,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -11792,10 +11792,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuditHashRequest;
 
 
@@ -11838,13 +11838,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuditHashRequest;
 
 
@@ -11888,10 +11888,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuditRequest;
 
 
@@ -11934,13 +11934,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuditRequest;
 
 
@@ -11984,10 +11984,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuthRequest;
 
 
@@ -12030,13 +12030,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuthRequest;
 
 
@@ -12080,10 +12080,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuthTuneRequest;
 
 
@@ -12126,13 +12126,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemAuthTuneRequest;
 
 
@@ -12171,7 +12171,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesRequest;
@@ -12211,10 +12211,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesRequest;
@@ -12255,7 +12255,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesAccessorRequest;
@@ -12295,10 +12295,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesAccessorRequest;
@@ -12339,7 +12339,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesSelfRequest;
@@ -12379,10 +12379,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemCapabilitiesSelfRequest;
@@ -12428,10 +12428,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
             requestOptions.Data = systemConfigAuditingRequestHeadersRequest;
 
 
@@ -12474,13 +12474,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
             requestOptions.Data = systemConfigAuditingRequestHeadersRequest;
 
 
@@ -12519,7 +12519,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemConfigCorsRequest;
@@ -12559,10 +12559,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemConfigCorsRequest;
@@ -12606,10 +12606,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("subsystem", Vault.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
+            requestOptions.PathParameters.Add("subsystem", ClientUtils.ParameterToString(subsystem)); // path parameter
 
 
             // make the HTTP request
@@ -12649,13 +12649,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("subsystem", Vault.Client.ClientUtils.ParameterToString(subsystem)); // path parameter
+            requestOptions.PathParameters.Add("subsystem", ClientUtils.ParameterToString(subsystem)); // path parameter
 
 
             // make the HTTP request
@@ -12698,10 +12698,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
             requestOptions.Data = systemConfigUiHeadersRequest;
 
 
@@ -12744,13 +12744,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", Vault.Client.ClientUtils.ParameterToString(header)); // path parameter
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
             requestOptions.Data = systemConfigUiHeadersRequest;
 
 
@@ -12789,7 +12789,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootRequest;
@@ -12829,10 +12829,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootRequest;
@@ -12873,7 +12873,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootAttemptRequest;
@@ -12913,10 +12913,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootAttemptRequest;
@@ -12957,7 +12957,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootUpdateRequest;
@@ -12997,10 +12997,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemGenerateRootUpdateRequest;
@@ -13041,7 +13041,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemInitRequest;
@@ -13081,10 +13081,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemInitRequest;
@@ -13125,7 +13125,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemInternalCountersConfigRequest;
@@ -13165,10 +13165,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemInternalCountersConfigRequest;
@@ -13209,7 +13209,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesLookupRequest;
@@ -13249,10 +13249,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesLookupRequest;
@@ -13293,7 +13293,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesRenewRequest;
@@ -13333,10 +13333,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesRenewRequest;
@@ -13382,10 +13382,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemLeasesRenewLeaseRequest;
 
 
@@ -13428,13 +13428,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemLeasesRenewLeaseRequest;
 
 
@@ -13473,7 +13473,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesRevokeRequest;
@@ -13513,10 +13513,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemLeasesRevokeRequest;
@@ -13560,10 +13560,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
@@ -13603,13 +13603,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
@@ -13652,10 +13652,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
             requestOptions.Data = systemLeasesRevokePrefixRequest;
 
 
@@ -13698,13 +13698,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
             requestOptions.Data = systemLeasesRevokePrefixRequest;
 
 
@@ -13748,10 +13748,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemLeasesRevokeLeaseRequest;
 
 
@@ -13794,13 +13794,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemLeasesRevokeLeaseRequest;
 
 
@@ -13837,7 +13837,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -13874,10 +13874,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -13917,7 +13917,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemMfaValidateRequest;
@@ -13957,10 +13957,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemMfaValidateRequest;
@@ -14006,10 +14006,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemMountsRequest;
 
 
@@ -14052,13 +14052,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemMountsRequest;
 
 
@@ -14102,10 +14102,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemMountsTuneRequest;
 
 
@@ -14148,13 +14148,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemMountsTuneRequest;
 
 
@@ -14198,10 +14198,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPluginsCatalogRequest;
 
 
@@ -14244,13 +14244,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPluginsCatalogRequest;
 
 
@@ -14299,11 +14299,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
             requestOptions.Data = systemPluginsCatalogRequest;
 
 
@@ -14351,14 +14351,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", Vault.Client.ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
             requestOptions.Data = systemPluginsCatalogRequest;
 
 
@@ -14397,7 +14397,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemPluginsReloadBackendRequest;
@@ -14437,10 +14437,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemPluginsReloadBackendRequest;
@@ -14486,10 +14486,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPoliciesAclRequest;
 
 
@@ -14532,13 +14532,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPoliciesAclRequest;
 
 
@@ -14582,10 +14582,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPoliciesPasswordRequest;
 
 
@@ -14628,13 +14628,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPoliciesPasswordRequest;
 
 
@@ -14678,10 +14678,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPolicyRequest;
 
 
@@ -14724,13 +14724,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemPolicyRequest;
 
 
@@ -14769,7 +14769,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemQuotasConfigRequest;
@@ -14809,10 +14809,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemQuotasConfigRequest;
@@ -14858,10 +14858,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemQuotasRateLimitRequest;
 
 
@@ -14904,13 +14904,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
             requestOptions.Data = systemQuotasRateLimitRequest;
 
 
@@ -14949,7 +14949,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRawRequest;
@@ -14989,10 +14989,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRawRequest;
@@ -15038,10 +15038,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemRawRequest;
 
 
@@ -15084,13 +15084,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", Vault.Client.ClientUtils.ParameterToString(path)); // path parameter
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
             requestOptions.Data = systemRawRequest;
 
 
@@ -15129,7 +15129,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyInitRequest;
@@ -15169,10 +15169,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyInitRequest;
@@ -15213,7 +15213,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyUpdateRequest;
@@ -15253,10 +15253,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyUpdateRequest;
@@ -15297,7 +15297,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyVerifyRequest;
@@ -15337,10 +15337,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRekeyVerifyRequest;
@@ -15381,7 +15381,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRemountRequest;
@@ -15421,10 +15421,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRemountRequest;
@@ -15465,7 +15465,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRenewRequest;
@@ -15505,10 +15505,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRenewRequest;
@@ -15554,10 +15554,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemRenewLeaseRequest;
 
 
@@ -15600,13 +15600,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemRenewLeaseRequest;
 
 
@@ -15645,7 +15645,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRevokeRequest;
@@ -15685,10 +15685,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRevokeRequest;
@@ -15732,10 +15732,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
@@ -15775,13 +15775,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
 
             // make the HTTP request
@@ -15824,10 +15824,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
             requestOptions.Data = systemRevokePrefixRequest;
 
 
@@ -15870,13 +15870,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", Vault.Client.ClientUtils.ParameterToString(prefix)); // path parameter
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
             requestOptions.Data = systemRevokePrefixRequest;
 
 
@@ -15920,10 +15920,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemRevokeLeaseRequest;
 
 
@@ -15966,13 +15966,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", Vault.Client.ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
             requestOptions.Data = systemRevokeLeaseRequest;
 
 
@@ -16009,7 +16009,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16046,10 +16046,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16089,7 +16089,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRotateConfigRequest;
@@ -16129,10 +16129,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemRotateConfigRequest;
@@ -16171,7 +16171,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16208,10 +16208,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16249,7 +16249,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16286,10 +16286,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -16329,7 +16329,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemToolsHashRequest;
@@ -16369,10 +16369,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemToolsHashRequest;
@@ -16418,10 +16418,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlalgorithm", Vault.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+            requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = systemToolsHashRequest;
 
 
@@ -16464,13 +16464,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlalgorithm", Vault.Client.ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+            requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
             requestOptions.Data = systemToolsHashRequest;
 
 
@@ -16509,7 +16509,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemToolsRandomRequest;
@@ -16549,10 +16549,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemToolsRandomRequest;
@@ -16598,10 +16598,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", Vault.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16644,13 +16644,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", Vault.Client.ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16699,11 +16699,11 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", Vault.Client.ClientUtils.ParameterToString(source)); // path parameter
-            requestOptions.PathParameters.Add("urlbytes", Vault.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16751,14 +16751,14 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", Vault.Client.ClientUtils.ParameterToString(source)); // path parameter
-            requestOptions.PathParameters.Add("urlbytes", Vault.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16802,10 +16802,10 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlbytes", Vault.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16848,13 +16848,13 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlbytes", Vault.Client.ClientUtils.ParameterToString(urlbytes)); // path parameter
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
             requestOptions.Data = systemToolsRandomRequest;
 
 
@@ -16893,7 +16893,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemUnsealRequest;
@@ -16933,10 +16933,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemUnsealRequest;
@@ -16977,7 +16977,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingLookupRequest;
@@ -17017,10 +17017,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingLookupRequest;
@@ -17061,7 +17061,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingRewrapRequest;
@@ -17101,10 +17101,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingRewrapRequest;
@@ -17145,7 +17145,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingUnwrapRequest;
@@ -17185,10 +17185,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.Data = systemWrappingUnwrapRequest;
@@ -17227,7 +17227,7 @@ namespace Vault.Api
             var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
@@ -17264,10 +17264,10 @@ namespace Vault.Api
             };
 
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var accept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
