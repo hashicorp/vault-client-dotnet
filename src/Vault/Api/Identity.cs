@@ -2405,25 +2405,6 @@ namespace Vault.Api
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Identity"/> class
-        /// using a Configuration object and client instance.
-        /// </summary>
-        /// <param name="client">The client interface for synchronous API access.</param>
-        /// <param name="asyncClient">The client interface for asynchronous API access.</param>
-        /// <param name="configuration">The configuration object.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        public Identity(Vault.Client.ISynchronousClient client, Vault.Client.IAsynchronousClient asyncClient, Vault.Client.Configuration configuration)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Client = client;
-            this.AsynchronousClient = asyncClient;
-            this.Configuration = configuration;
             this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
         }
 

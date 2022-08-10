@@ -87,29 +87,6 @@ namespace {{packageName}}.{{apiPackage}}
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="{{classname}}"/> class
-        /// using a Configuration object and client instance.
-        /// </summary>
-        /// <param name="client">The client interface for synchronous API access.</param>{{#supportsAsync}}
-        /// <param name="asyncClient">The client interface for asynchronous API access.</param>{{/supportsAsync}}
-        /// <param name="configuration">The configuration object.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        public {{classname}}({{packageName}}.Client.ISynchronousClient client, {{#supportsAsync}}{{packageName}}.Client.IAsynchronousClient asyncClient, {{/supportsAsync}}{{packageName}}.Client.Configuration configuration)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-            {{#supportsAsync}}
-            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
-            {{/supportsAsync}}
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Client = client;
-            {{#supportsAsync}}
-            this.AsynchronousClient = asyncClient;
-            {{/supportsAsync}}
-            this.Configuration = configuration;
             this.ExceptionFactory = {{packageName}}.Client.Configuration.DefaultExceptionFactory;
         }
 
