@@ -6946,7 +6946,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7033,7 +7032,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7120,7 +7118,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7195,7 +7192,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7282,7 +7278,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7369,7 +7364,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7444,7 +7438,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7531,7 +7524,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7618,7 +7610,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7705,7 +7696,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7792,7 +7782,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7879,7 +7868,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7954,7 +7942,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8041,7 +8028,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8128,7 +8114,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8215,7 +8200,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8290,7 +8274,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8377,7 +8360,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8464,7 +8446,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8551,7 +8532,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8626,7 +8606,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8701,7 +8680,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8788,7 +8766,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8863,7 +8840,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8950,7 +8926,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9037,7 +9012,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9124,7 +9098,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9199,7 +9172,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9286,7 +9258,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9373,7 +9344,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9448,7 +9418,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9535,7 +9504,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9622,7 +9590,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9709,7 +9676,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9784,7 +9750,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9859,7 +9824,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9946,7 +9910,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/keys/{key_name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10033,7 +9996,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10108,7 +10070,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10195,7 +10156,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10282,7 +10242,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10369,7 +10328,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10444,7 +10402,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10531,7 +10488,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10618,7 +10574,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10705,7 +10660,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10792,7 +10746,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}/status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10879,7 +10832,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10966,7 +10918,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11041,7 +10992,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ad/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11116,7 +11066,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11203,7 +11152,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11290,7 +11238,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11377,7 +11324,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11452,7 +11398,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11527,7 +11472,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11602,7 +11546,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/creds", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11689,7 +11632,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11776,7 +11718,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11863,7 +11804,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/aws/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11938,7 +11878,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12025,7 +11964,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/azure/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12112,7 +12050,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12199,7 +12136,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12274,7 +12210,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/consul/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12361,7 +12296,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/consul/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12448,7 +12382,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12535,7 +12468,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12632,7 +12564,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12707,7 +12638,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12794,7 +12724,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12881,7 +12810,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12968,7 +12896,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13055,7 +12982,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13142,7 +13068,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/rolesets", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13229,7 +13154,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13316,7 +13240,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13403,7 +13326,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13490,7 +13412,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-accounts", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13577,7 +13498,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13652,7 +13572,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13739,7 +13658,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13826,7 +13744,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13913,7 +13830,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14000,7 +13916,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/pubkey/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14075,7 +13990,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14162,7 +14076,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14249,7 +14162,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14346,7 +14258,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14421,7 +14332,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14508,7 +14418,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14595,7 +14504,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14682,7 +14590,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14757,7 +14664,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14832,7 +14738,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14919,7 +14824,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15006,7 +14910,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15093,7 +14996,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15168,7 +15070,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15255,7 +15156,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15342,7 +15242,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15429,7 +15328,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15516,7 +15414,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-cred/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15603,7 +15500,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15690,7 +15586,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15765,7 +15660,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15840,7 +15734,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca_chain", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15915,7 +15808,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15990,7 +15882,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/ca_chain", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16065,7 +15956,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16152,7 +16042,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16239,7 +16128,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16326,7 +16214,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16413,7 +16300,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/certs", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16488,7 +16374,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16563,7 +16448,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16638,7 +16522,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16713,7 +16596,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/urls", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16788,7 +16670,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16863,7 +16744,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16938,7 +16818,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17013,7 +16892,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki//der", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17100,7 +16978,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17187,7 +17064,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17274,7 +17150,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17349,7 +17224,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17436,7 +17310,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17523,7 +17396,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17610,7 +17482,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17697,7 +17568,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17772,7 +17642,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/pki/tidy-status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17847,7 +17716,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -17934,7 +17802,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18021,7 +17888,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18108,7 +17974,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18183,7 +18048,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/secret/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18270,7 +18134,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18367,7 +18230,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18454,7 +18316,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/secret/subkeys/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18529,7 +18390,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18604,7 +18464,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18679,7 +18538,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/public_key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18766,7 +18624,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18853,7 +18710,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -18928,7 +18784,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19015,7 +18870,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19102,7 +18956,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19189,7 +19042,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19276,7 +19128,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/totp/code/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19363,7 +19214,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19450,7 +19300,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19537,7 +19386,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/backup/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19612,7 +19460,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/cache-config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19711,7 +19558,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19822,7 +19668,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}/{version}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19909,7 +19754,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -19996,7 +19840,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20071,7 +19914,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/transit/wrapping_key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20152,7 +19994,6 @@ namespace Vault.Api
             requestOptions.Data = adConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20245,7 +20086,6 @@ namespace Vault.Api
             requestOptions.Data = adLibraryManageCheckInRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/manage/{name}/check-in", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20338,7 +20178,6 @@ namespace Vault.Api
             requestOptions.Data = adLibraryRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20431,7 +20270,6 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckInRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-in", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20524,7 +20362,6 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckOutRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-out", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20617,7 +20454,6 @@ namespace Vault.Api
             requestOptions.Data = adRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20704,7 +20540,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20779,7 +20614,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20860,7 +20694,6 @@ namespace Vault.Api
             requestOptions.Data = alicloudConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -20953,7 +20786,6 @@ namespace Vault.Api
             requestOptions.Data = alicloudRoleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21034,7 +20866,6 @@ namespace Vault.Api
             requestOptions.Data = awsConfigLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21115,7 +20946,6 @@ namespace Vault.Api
             requestOptions.Data = awsConfigRootRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21190,7 +21020,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21271,7 +21100,6 @@ namespace Vault.Api
             requestOptions.Data = awsCredsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/creds", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21364,7 +21192,6 @@ namespace Vault.Api
             requestOptions.Data = awsRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21457,7 +21284,6 @@ namespace Vault.Api
             requestOptions.Data = awsStsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/aws/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21538,7 +21364,6 @@ namespace Vault.Api
             requestOptions.Data = azureConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21631,7 +21456,6 @@ namespace Vault.Api
             requestOptions.Data = azureRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21706,7 +21530,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/azure/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21787,7 +21610,6 @@ namespace Vault.Api
             requestOptions.Data = consulConfigAccessRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/consul/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21880,7 +21702,6 @@ namespace Vault.Api
             requestOptions.Data = consulRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -21967,7 +21788,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22048,7 +21868,6 @@ namespace Vault.Api
             requestOptions.Data = gcpConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22123,7 +21942,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22216,7 +22034,6 @@ namespace Vault.Api
             requestOptions.Data = gcpKeyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22309,7 +22126,6 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22396,7 +22212,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22483,7 +22298,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22576,7 +22390,6 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetKeyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22663,7 +22476,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22756,7 +22568,6 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22849,7 +22660,6 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountKeyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -22936,7 +22746,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23023,7 +22832,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23110,7 +22918,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23191,7 +22998,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23284,7 +23090,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsDecryptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/decrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23377,7 +23182,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsEncryptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/encrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23470,7 +23274,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23557,7 +23360,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23650,7 +23452,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23743,7 +23544,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRegisterRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/register/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23830,7 +23630,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/rotate/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -23917,7 +23716,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24010,7 +23808,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsReencryptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/reencrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24103,7 +23900,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/sign/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24196,7 +23992,6 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsVerifyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/verify/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24277,7 +24072,6 @@ namespace Vault.Api
             requestOptions.Data = kubernetesConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24370,7 +24164,6 @@ namespace Vault.Api
             requestOptions.Data = kubernetesCredsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24463,7 +24256,6 @@ namespace Vault.Api
             requestOptions.Data = kubernetesRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24550,7 +24342,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24631,7 +24422,6 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24718,7 +24508,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24811,7 +24600,6 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24892,7 +24680,6 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigAccessRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -24973,7 +24760,6 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25066,7 +24852,6 @@ namespace Vault.Api
             requestOptions.Data = nomadRoleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25147,7 +24932,6 @@ namespace Vault.Api
             requestOptions.Data = openldapConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25240,7 +25024,6 @@ namespace Vault.Api
             requestOptions.Data = openldapRoleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25327,7 +25110,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25402,7 +25184,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25495,7 +25276,6 @@ namespace Vault.Api
             requestOptions.Data = openldapStaticRoleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25576,7 +25356,6 @@ namespace Vault.Api
             requestOptions.Data = pkiBundleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/bundle", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25657,7 +25436,6 @@ namespace Vault.Api
             requestOptions.Data = pkiCertRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/cert", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25738,7 +25516,6 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCaRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25819,7 +25596,6 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCrlRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25900,7 +25676,6 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigIssuersRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -25981,7 +25756,6 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigKeysRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26062,7 +25836,6 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigUrlsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/urls", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26143,7 +25916,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateCrossSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/cross-sign", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26236,7 +26008,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateGenerateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/generate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26317,7 +26088,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateSetSignedRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/set-signed", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26398,7 +26168,6 @@ namespace Vault.Api
             requestOptions.Data = pkiInternalExportedRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/internal|exported", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26491,7 +26260,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssueRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issue/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26596,7 +26364,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerIssueRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26689,7 +26456,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26794,7 +26560,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26887,7 +26652,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -26980,7 +26744,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27085,7 +26848,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27178,7 +26940,6 @@ namespace Vault.Api
             requestOptions.Data = pkiDerPemRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27271,7 +27032,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27364,7 +27124,6 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateRootRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/root/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27445,7 +27204,6 @@ namespace Vault.Api
             requestOptions.Data = pkiJsonRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27538,7 +27296,6 @@ namespace Vault.Api
             requestOptions.Data = pkiKeyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27619,7 +27376,6 @@ namespace Vault.Api
             requestOptions.Data = pkiKeysImportRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/keys/import", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27700,7 +27456,6 @@ namespace Vault.Api
             requestOptions.Data = pkiKmsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/kms", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27781,7 +27536,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRevokeRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27874,7 +27628,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -27967,7 +27720,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRootGenerateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/generate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28048,7 +27800,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRootReplaceRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/replace", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28141,7 +27892,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRootRotateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/rotate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28222,7 +27972,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignIntermediateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-intermediate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28303,7 +28052,6 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-self-issued", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28396,7 +28144,6 @@ namespace Vault.Api
             requestOptions.Data = pkiSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28477,7 +28224,6 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28570,7 +28316,6 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28651,7 +28396,6 @@ namespace Vault.Api
             requestOptions.Data = pkiTidyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/pki/tidy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28732,7 +28476,6 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigConnectionRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/connection", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28813,7 +28556,6 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28906,7 +28648,6 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -28987,7 +28728,6 @@ namespace Vault.Api
             requestOptions.Data = kvConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29080,7 +28820,6 @@ namespace Vault.Api
             requestOptions.Data = kvDataRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29173,7 +28912,6 @@ namespace Vault.Api
             requestOptions.Data = kvDeleteRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/delete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29266,7 +29004,6 @@ namespace Vault.Api
             requestOptions.Data = kvDestroyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/destroy/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29359,7 +29096,6 @@ namespace Vault.Api
             requestOptions.Data = kvMetadataRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29452,7 +29188,6 @@ namespace Vault.Api
             requestOptions.Data = kvUndeleteRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/secret/undelete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29533,7 +29268,6 @@ namespace Vault.Api
             requestOptions.Data = sshConfigCaRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29614,7 +29348,6 @@ namespace Vault.Api
             requestOptions.Data = sshConfigZeroaddressRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29707,7 +29440,6 @@ namespace Vault.Api
             requestOptions.Data = sshCredsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29800,7 +29532,6 @@ namespace Vault.Api
             requestOptions.Data = sshKeysRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/keys/{key_name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29881,7 +29612,6 @@ namespace Vault.Api
             requestOptions.Data = sshLookupRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -29974,7 +29704,6 @@ namespace Vault.Api
             requestOptions.Data = sshRolesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30067,7 +29796,6 @@ namespace Vault.Api
             requestOptions.Data = sshSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30148,7 +29876,6 @@ namespace Vault.Api
             requestOptions.Data = sshVerifyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30229,7 +29956,6 @@ namespace Vault.Api
             requestOptions.Data = terraformConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30316,7 +30042,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30409,7 +30134,6 @@ namespace Vault.Api
             requestOptions.Data = terraformRoleRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30496,7 +30220,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30589,7 +30312,6 @@ namespace Vault.Api
             requestOptions.Data = totpCodeRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/totp/code/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30682,7 +30404,6 @@ namespace Vault.Api
             requestOptions.Data = totpKeysRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30763,7 +30484,6 @@ namespace Vault.Api
             requestOptions.Data = transitCacheConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/cache-config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30868,7 +30588,6 @@ namespace Vault.Api
             requestOptions.Data = transitDatakeyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -30961,7 +30680,6 @@ namespace Vault.Api
             requestOptions.Data = transitDecryptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/decrypt/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31054,7 +30772,6 @@ namespace Vault.Api
             requestOptions.Data = transitEncryptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/encrypt/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31135,7 +30852,6 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31228,7 +30944,6 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31321,7 +31036,6 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31426,7 +31140,6 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31519,7 +31232,6 @@ namespace Vault.Api
             requestOptions.Data = transitKeysRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31612,7 +31324,6 @@ namespace Vault.Api
             requestOptions.Data = transitKeysConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31705,7 +31416,6 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31798,7 +31508,6 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportVersionRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import_version", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31885,7 +31594,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -31978,7 +31686,6 @@ namespace Vault.Api
             requestOptions.Data = transitKeysTrimRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/trim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32059,7 +31766,6 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32152,7 +31858,6 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32257,7 +31962,6 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32350,7 +32054,6 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32431,7 +32134,6 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32524,7 +32226,6 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32617,7 +32318,6 @@ namespace Vault.Api
             requestOptions.Data = transitRewrapRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/rewrap/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32710,7 +32410,6 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32815,7 +32514,6 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -32908,7 +32606,6 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -33013,7 +32710,6 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)

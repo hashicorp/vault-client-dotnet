@@ -3656,7 +3656,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -3743,7 +3742,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -3830,7 +3828,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -3905,7 +3902,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -3992,7 +3988,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4067,7 +4062,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4142,7 +4136,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4229,7 +4222,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4316,7 +4308,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4415,7 +4406,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4502,7 +4492,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4589,7 +4578,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4676,7 +4664,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4763,7 +4750,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4838,7 +4824,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -4925,7 +4910,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5000,7 +4984,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/backup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5075,7 +5058,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5150,7 +5132,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/recovery-key-backup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5225,7 +5206,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/rekey/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5300,7 +5280,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5375,7 +5354,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5462,7 +5440,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5549,7 +5526,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5624,7 +5600,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5711,7 +5686,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5786,7 +5760,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5861,7 +5834,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -5948,7 +5920,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6035,7 +6006,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6110,7 +6080,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6185,7 +6154,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6260,7 +6228,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6335,7 +6302,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/health", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6410,7 +6376,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6485,7 +6450,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6560,7 +6524,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6635,7 +6598,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6710,7 +6672,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6785,7 +6746,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6860,7 +6820,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -6935,7 +6894,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7010,7 +6968,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7085,7 +7042,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7160,7 +7116,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7235,7 +7190,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7310,7 +7264,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7397,7 +7350,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7472,7 +7424,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7547,7 +7498,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7622,7 +7572,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7697,7 +7646,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7772,7 +7720,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7847,7 +7794,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -7934,7 +7880,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8033,7 +7978,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8118,7 +8062,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8213,7 +8156,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8288,7 +8230,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8375,7 +8316,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8462,7 +8402,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8537,7 +8476,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8624,7 +8562,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8723,7 +8660,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8822,7 +8758,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8909,7 +8844,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -8996,7 +8930,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9083,7 +9016,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9170,7 +9102,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9257,7 +9188,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9342,7 +9272,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9429,7 +9358,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9504,7 +9432,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9579,7 +9506,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/allocs", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9654,7 +9580,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/block", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9729,7 +9654,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/cmdline", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9804,7 +9728,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/goroutine", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9879,7 +9802,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/heap", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -9954,7 +9876,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/mutex", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10029,7 +9950,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/profile", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10104,7 +10024,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/symbol", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10179,7 +10098,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/threadcreate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10254,7 +10172,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/pprof/trace", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10329,7 +10246,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10416,7 +10332,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10503,7 +10418,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10588,7 +10502,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10685,7 +10598,6 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10760,7 +10672,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/backup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10835,7 +10746,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10910,7 +10820,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/recovery-key-backup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -10985,7 +10894,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/rekey/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11072,7 +10980,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("migration_id", ClientUtils.ParameterToString(migrationId)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11147,7 +11054,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/replication/status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11222,7 +11128,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/rotate/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11297,7 +11202,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/seal-status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11384,7 +11288,6 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11459,7 +11362,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/wrapping/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11552,7 +11454,6 @@ namespace Vault.Api
             requestOptions.Data = systemAuditHashRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11645,7 +11546,6 @@ namespace Vault.Api
             requestOptions.Data = systemAuditRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11738,7 +11638,6 @@ namespace Vault.Api
             requestOptions.Data = systemAuthRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11831,7 +11730,6 @@ namespace Vault.Api
             requestOptions.Data = systemAuthTuneRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11912,7 +11810,6 @@ namespace Vault.Api
             requestOptions.Data = systemCapabilitiesRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -11993,7 +11890,6 @@ namespace Vault.Api
             requestOptions.Data = systemCapabilitiesAccessorRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12074,7 +11970,6 @@ namespace Vault.Api
             requestOptions.Data = systemCapabilitiesSelfRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12167,7 +12062,6 @@ namespace Vault.Api
             requestOptions.Data = systemConfigAuditingRequestHeadersRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12248,7 +12142,6 @@ namespace Vault.Api
             requestOptions.Data = systemConfigCorsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12335,7 +12228,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("subsystem", ClientUtils.ParameterToString(subsystem)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12428,7 +12320,6 @@ namespace Vault.Api
             requestOptions.Data = systemConfigUiHeadersRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12509,7 +12400,6 @@ namespace Vault.Api
             requestOptions.Data = systemGenerateRootRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12590,7 +12480,6 @@ namespace Vault.Api
             requestOptions.Data = systemGenerateRootAttemptRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12671,7 +12560,6 @@ namespace Vault.Api
             requestOptions.Data = systemGenerateRootUpdateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12752,7 +12640,6 @@ namespace Vault.Api
             requestOptions.Data = systemInitRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12833,7 +12720,6 @@ namespace Vault.Api
             requestOptions.Data = systemInternalCountersConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12914,7 +12800,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesLookupRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -12995,7 +12880,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesRenewRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13088,7 +12972,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesRenewLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13169,7 +13052,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesRevokeRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13256,7 +13138,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13349,7 +13230,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesRevokePrefixRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13442,7 +13322,6 @@ namespace Vault.Api
             requestOptions.Data = systemLeasesRevokeLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13517,7 +13396,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/tidy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13598,7 +13476,6 @@ namespace Vault.Api
             requestOptions.Data = systemMfaValidateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13691,7 +13568,6 @@ namespace Vault.Api
             requestOptions.Data = systemMountsRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13784,7 +13660,6 @@ namespace Vault.Api
             requestOptions.Data = systemMountsTuneRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13877,7 +13752,6 @@ namespace Vault.Api
             requestOptions.Data = systemPluginsCatalogRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -13982,7 +13856,6 @@ namespace Vault.Api
             requestOptions.Data = systemPluginsCatalogRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14063,7 +13936,6 @@ namespace Vault.Api
             requestOptions.Data = systemPluginsReloadBackendRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14156,7 +14028,6 @@ namespace Vault.Api
             requestOptions.Data = systemPoliciesAclRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14249,7 +14120,6 @@ namespace Vault.Api
             requestOptions.Data = systemPoliciesPasswordRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14342,7 +14212,6 @@ namespace Vault.Api
             requestOptions.Data = systemPolicyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14423,7 +14292,6 @@ namespace Vault.Api
             requestOptions.Data = systemQuotasConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14516,7 +14384,6 @@ namespace Vault.Api
             requestOptions.Data = systemQuotasRateLimitRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14597,7 +14464,6 @@ namespace Vault.Api
             requestOptions.Data = systemRawRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14690,7 +14556,6 @@ namespace Vault.Api
             requestOptions.Data = systemRawRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14771,7 +14636,6 @@ namespace Vault.Api
             requestOptions.Data = systemRekeyInitRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14852,7 +14716,6 @@ namespace Vault.Api
             requestOptions.Data = systemRekeyUpdateRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -14933,7 +14796,6 @@ namespace Vault.Api
             requestOptions.Data = systemRekeyVerifyRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15014,7 +14876,6 @@ namespace Vault.Api
             requestOptions.Data = systemRemountRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15095,7 +14956,6 @@ namespace Vault.Api
             requestOptions.Data = systemRenewRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15188,7 +15048,6 @@ namespace Vault.Api
             requestOptions.Data = systemRenewLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15269,7 +15128,6 @@ namespace Vault.Api
             requestOptions.Data = systemRevokeRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15356,7 +15214,6 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15449,7 +15306,6 @@ namespace Vault.Api
             requestOptions.Data = systemRevokePrefixRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15542,7 +15398,6 @@ namespace Vault.Api
             requestOptions.Data = systemRevokeLeaseRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15617,7 +15472,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15698,7 +15552,6 @@ namespace Vault.Api
             requestOptions.Data = systemRotateConfigRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15773,7 +15626,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/seal", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15848,7 +15700,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/step-down", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -15929,7 +15780,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsHashRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16022,7 +15872,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsHashRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16103,7 +15952,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16196,7 +16044,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16301,7 +16148,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16394,7 +16240,6 @@ namespace Vault.Api
             requestOptions.Data = systemToolsRandomRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16475,7 +16320,6 @@ namespace Vault.Api
             requestOptions.Data = systemUnsealRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16556,7 +16400,6 @@ namespace Vault.Api
             requestOptions.Data = systemWrappingLookupRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16637,7 +16480,6 @@ namespace Vault.Api
             requestOptions.Data = systemWrappingRewrapRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16718,7 +16560,6 @@ namespace Vault.Api
             requestOptions.Data = systemWrappingUnwrapRequest;
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
@@ -16793,7 +16634,6 @@ namespace Vault.Api
 
 
             // make the HTTP request
-
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/wrap", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
