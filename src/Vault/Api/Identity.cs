@@ -9,7 +9,6 @@
 
 
 using System;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Vault.Client;
@@ -30,7 +29,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityAliasIdId(string id);
@@ -40,7 +39,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityAliasIdId(string id);
@@ -50,7 +49,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityIdId(string id);
@@ -60,7 +59,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityNameName(string name);
@@ -70,7 +69,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupAliasIdId(string id);
@@ -80,7 +79,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupIdId(string id);
@@ -90,7 +89,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupNameName(string name);
@@ -100,7 +99,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name);
@@ -110,7 +109,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId);
@@ -120,7 +119,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId);
@@ -130,7 +129,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId);
@@ -140,7 +139,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId);
@@ -150,7 +149,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcAssignmentName(string name);
@@ -160,7 +159,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcClientName(string name);
@@ -170,7 +169,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcKeyName(string name);
@@ -180,7 +179,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcProviderName(string name);
@@ -190,7 +189,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcRoleName(string name);
@@ -200,7 +199,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcScopeName(string name);
@@ -210,7 +209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityPersonaIdId(string id);
@@ -220,7 +219,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityAliasId(string list);
@@ -230,7 +229,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityAliasIdId(string id);
@@ -240,7 +239,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityAliasId(string list);
@@ -250,7 +249,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityAliasIdId(string id);
@@ -260,7 +259,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityId(string list);
@@ -270,7 +269,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityIdId(string id);
@@ -280,7 +279,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityName(string list);
@@ -290,7 +289,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityNameName(string name);
@@ -300,7 +299,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupAliasId(string list);
@@ -310,7 +309,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupAliasIdId(string id);
@@ -320,7 +319,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupId(string list);
@@ -330,7 +329,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupIdId(string id);
@@ -340,7 +339,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupName(string list);
@@ -350,7 +349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupNameName(string name);
@@ -360,7 +359,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaLoginEnforcement(string list);
@@ -370,7 +369,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaLoginEnforcementName(string name);
@@ -380,7 +379,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethod(string list);
@@ -390,7 +389,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodDuo(string list);
@@ -400,7 +399,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId);
@@ -410,7 +409,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodMethodId(string methodId);
@@ -420,7 +419,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodOkta(string list);
@@ -430,7 +429,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId);
@@ -440,7 +439,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodPingid(string list);
@@ -450,7 +449,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId);
@@ -460,7 +459,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodTotp(string list);
@@ -470,7 +469,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId);
@@ -480,7 +479,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcAssignment(string list);
@@ -490,7 +489,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcAssignmentName(string name);
@@ -500,7 +499,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcClient(string list);
@@ -510,7 +509,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcClientName(string name);
@@ -520,7 +519,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcConfig();
         /// <summary>
@@ -529,7 +528,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcKey(string list);
@@ -539,7 +538,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcKeyName(string name);
@@ -549,7 +548,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProvider(string list);
@@ -559,7 +558,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderName(string name);
@@ -569,7 +568,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameAuthorize(string name);
@@ -579,7 +578,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameUserinfo(string name);
@@ -589,7 +588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name);
@@ -599,7 +598,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name);
@@ -609,7 +608,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcRole(string list);
@@ -619,7 +618,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcRoleName(string name);
@@ -629,7 +628,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcScope(string list);
@@ -639,7 +638,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcScopeName(string name);
@@ -649,7 +648,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcTokenName(string name);
@@ -659,7 +658,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcWellKnownKeys();
         /// <summary>
@@ -668,7 +667,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration();
         /// <summary>
@@ -677,7 +676,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityPersonaId(string list);
@@ -687,7 +686,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityPersonaIdId(string id);
@@ -697,7 +696,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest));
@@ -707,7 +706,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -718,7 +717,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest));
@@ -728,7 +727,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest));
@@ -738,7 +737,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -749,7 +748,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest));
@@ -759,7 +758,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -770,7 +769,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest));
@@ -780,7 +779,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -791,7 +790,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest));
@@ -801,7 +800,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest));
@@ -811,7 +810,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -822,7 +821,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -833,7 +832,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -844,7 +843,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest));
@@ -854,7 +853,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest));
@@ -864,7 +863,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -875,7 +874,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -886,7 +885,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -897,7 +896,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -908,7 +907,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest));
@@ -918,7 +917,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest));
@@ -928,7 +927,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest));
@@ -938,7 +937,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -949,7 +948,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -960,7 +959,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -971,7 +970,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest));
@@ -981,7 +980,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest));
@@ -991,7 +990,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1002,7 +1001,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1013,7 +1012,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1024,7 +1023,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1035,7 +1034,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1046,7 +1045,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcProviderNameUserinfo(string name);
@@ -1056,7 +1055,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1067,7 +1066,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1078,7 +1077,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest));
@@ -1088,7 +1087,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1109,7 +1108,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1121,7 +1120,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1133,7 +1132,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1145,7 +1144,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1157,7 +1156,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1169,7 +1168,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1181,7 +1180,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1193,7 +1192,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1205,7 +1204,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1217,7 +1216,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1229,7 +1228,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1241,7 +1240,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1253,7 +1252,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1265,7 +1264,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1277,7 +1276,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1289,7 +1288,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1301,7 +1300,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1313,7 +1312,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1325,7 +1324,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1337,7 +1336,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1349,7 +1348,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1361,7 +1360,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1373,7 +1372,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1385,7 +1384,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1397,7 +1396,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1409,7 +1408,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1421,7 +1420,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1433,7 +1432,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1445,7 +1444,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1457,7 +1456,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1469,7 +1468,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1481,7 +1480,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1493,7 +1492,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1505,7 +1504,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1517,7 +1516,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1529,7 +1528,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1541,7 +1540,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1553,7 +1552,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1565,7 +1564,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1577,7 +1576,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1589,7 +1588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1601,7 +1600,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1613,7 +1612,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1625,7 +1624,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1637,7 +1636,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1649,7 +1648,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1661,7 +1660,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1673,7 +1672,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1685,7 +1684,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1697,7 +1696,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1708,7 +1707,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1720,7 +1719,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1732,7 +1731,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1744,7 +1743,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1756,7 +1755,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1768,7 +1767,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1780,7 +1779,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1792,7 +1791,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1804,7 +1803,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1816,7 +1815,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1828,7 +1827,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1840,7 +1839,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1852,7 +1851,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1864,7 +1863,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1875,7 +1874,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1886,7 +1885,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1898,7 +1897,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1910,7 +1909,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1922,7 +1921,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1935,7 +1934,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1947,7 +1946,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1959,7 +1958,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1972,7 +1971,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1984,7 +1983,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1997,7 +1996,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2009,7 +2008,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2022,7 +2021,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2034,7 +2033,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2046,7 +2045,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2059,7 +2058,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2072,7 +2071,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2085,7 +2084,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2097,7 +2096,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2109,7 +2108,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2122,7 +2121,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2135,7 +2134,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2148,7 +2147,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2161,7 +2160,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2173,7 +2172,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2185,7 +2184,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2197,7 +2196,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2210,7 +2209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2223,7 +2222,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2236,7 +2235,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2248,7 +2247,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2260,7 +2259,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2273,7 +2272,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2286,7 +2285,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2299,7 +2298,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2312,7 +2311,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2325,7 +2324,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2337,7 +2336,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2350,7 +2349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2363,7 +2362,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2375,7 +2374,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2473,16 +2472,16 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityAliasIdId(string id)
+        public ApiResponse<Object> DeleteIdentityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2491,43 +2490,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2536,43 +2534,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityEntityAliasIdId(string id)
+        public ApiResponse<Object> DeleteIdentityEntityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2581,43 +2576,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2626,43 +2620,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityEntityIdId(string id)
+        public ApiResponse<Object> DeleteIdentityEntityIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2671,43 +2662,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2716,43 +2706,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityEntityNameName(string name)
+        public ApiResponse<Object> DeleteIdentityEntityNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2761,43 +2748,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/entity/name/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2806,43 +2792,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityGroupAliasIdId(string id)
+        public ApiResponse<Object> DeleteIdentityGroupAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2851,43 +2834,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2896,43 +2878,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityGroupIdId(string id)
+        public ApiResponse<Object> DeleteIdentityGroupIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2941,43 +2920,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -2986,43 +2964,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityGroupNameName(string name)
+        public ApiResponse<Object> DeleteIdentityGroupNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3031,43 +3006,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/group/name/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3076,43 +3050,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name)
+        public ApiResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3121,43 +3092,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3166,43 +3136,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId)
+        public ApiResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3211,43 +3178,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3256,43 +3222,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId)
+        public ApiResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3301,43 +3264,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3346,43 +3308,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId)
+        public ApiResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3391,43 +3350,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3436,43 +3394,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId)
+        public ApiResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3481,43 +3436,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3526,43 +3480,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcAssignmentName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcAssignmentName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3571,43 +3522,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3616,43 +3566,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcClientName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcClientName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3661,43 +3608,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3706,43 +3652,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcKeyName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcKeyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3751,43 +3694,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3796,43 +3738,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcProviderName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcProviderName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3841,43 +3780,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3886,43 +3824,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcRoleName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3931,43 +3866,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3976,43 +3910,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityOidcScopeName(string name)
+        public ApiResponse<Object> DeleteIdentityOidcScopeName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4021,43 +3952,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4066,43 +3996,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> DeleteIdentityPersonaIdId(string id)
+        public ApiResponse<Object> DeleteIdentityPersonaIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4111,43 +4038,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/identity/persona/id/{id}", localVarRequestOptions);
+            var response = this.Client.Delete<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> DeleteIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4156,43 +4082,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityAliasId(string list)
+        public ApiResponse<Object> GetIdentityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4201,43 +4124,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/alias/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4246,43 +4168,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityAliasIdId(string id)
+        public ApiResponse<Object> GetIdentityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4291,43 +4210,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4336,43 +4254,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityAliasId(string list)
+        public ApiResponse<Object> GetIdentityEntityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4381,43 +4296,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity-alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4426,43 +4340,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityAliasIdId(string id)
+        public ApiResponse<Object> GetIdentityEntityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4471,43 +4382,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4516,43 +4426,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the entity IDs 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityId(string list)
+        public ApiResponse<Object> GetIdentityEntityId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4561,43 +4468,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the entity IDs 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4606,43 +4512,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityIdId(string id)
+        public ApiResponse<Object> GetIdentityEntityIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4651,43 +4554,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4696,43 +4598,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the entity names 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityName(string list)
+        public ApiResponse<Object> GetIdentityEntityName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4741,43 +4640,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/name", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/name", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the entity names 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4786,43 +4684,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityEntityNameName(string name)
+        public ApiResponse<Object> GetIdentityEntityNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4831,43 +4726,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/entity/name/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4876,43 +4770,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the group alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupAliasId(string list)
+        public ApiResponse<Object> GetIdentityGroupAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4921,43 +4812,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group-alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the group alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4966,43 +4856,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupAliasIdId(string id)
+        public ApiResponse<Object> GetIdentityGroupAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5011,43 +4898,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5056,43 +4942,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the group IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupId(string list)
+        public ApiResponse<Object> GetIdentityGroupId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5101,43 +4984,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the group IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5146,43 +5028,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupIdId(string id)
+        public ApiResponse<Object> GetIdentityGroupIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5191,43 +5070,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5236,43 +5114,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupName(string list)
+        public ApiResponse<Object> GetIdentityGroupName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5281,43 +5156,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/name", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group/name", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5326,43 +5200,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityGroupNameName(string name)
+        public ApiResponse<Object> GetIdentityGroupNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5371,43 +5242,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/group/name/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5416,43 +5286,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List login enforcements 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaLoginEnforcement(string list)
+        public ApiResponse<Object> GetIdentityMfaLoginEnforcement(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5461,43 +5328,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List login enforcements 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5506,43 +5372,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaLoginEnforcementName(string name)
+        public ApiResponse<Object> GetIdentityMfaLoginEnforcementName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5551,43 +5414,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5596,43 +5458,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for all MFA methods 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethod(string list)
+        public ApiResponse<Object> GetIdentityMfaMethod(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5641,43 +5500,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethod", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethod", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for all MFA methods 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5686,43 +5544,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethod", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethod", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodDuo(string list)
+        public ApiResponse<Object> GetIdentityMfaMethodDuo(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5731,43 +5586,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/duo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5776,43 +5630,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId)
+        public ApiResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5821,43 +5672,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5866,43 +5716,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodMethodId(string methodId)
+        public ApiResponse<Object> GetIdentityMfaMethodMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5911,43 +5758,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5956,43 +5802,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodOkta(string list)
+        public ApiResponse<Object> GetIdentityMfaMethodOkta(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6001,43 +5844,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/okta", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6046,43 +5888,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId)
+        public ApiResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6091,43 +5930,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6136,43 +5974,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodPingid(string list)
+        public ApiResponse<Object> GetIdentityMfaMethodPingid(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6181,43 +6016,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/pingid", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6226,43 +6060,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId)
+        public ApiResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6271,43 +6102,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6316,43 +6146,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodTotp(string list)
+        public ApiResponse<Object> GetIdentityMfaMethodTotp(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6361,43 +6188,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/totp", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6406,43 +6232,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId)
+        public ApiResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6451,43 +6274,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6496,43 +6318,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcAssignment(string list)
+        public ApiResponse<Object> GetIdentityOidcAssignment(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6541,43 +6360,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/assignment", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignment", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignment", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6586,43 +6404,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignment", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignment", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcAssignmentName(string name)
+        public ApiResponse<Object> GetIdentityOidcAssignmentName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6631,43 +6446,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6676,43 +6490,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcClient(string list)
+        public ApiResponse<Object> GetIdentityOidcClient(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6721,43 +6532,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/client", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcClient", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcClient", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6766,43 +6576,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcClient", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcClient", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcClientName(string name)
+        public ApiResponse<Object> GetIdentityOidcClientName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6811,43 +6618,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6856,38 +6662,35 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcConfig()
+        public ApiResponse<Object> GetIdentityOidcConfig()
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6896,37 +6699,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/config", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6935,42 +6737,39 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List OIDC keys 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcKey(string list)
+        public ApiResponse<Object> GetIdentityOidcKey(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6979,43 +6778,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List OIDC keys 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7024,43 +6822,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcKey", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcKey", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcKeyName(string name)
+        public ApiResponse<Object> GetIdentityOidcKeyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7069,43 +6864,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7114,43 +6908,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProvider(string list)
+        public ApiResponse<Object> GetIdentityOidcProvider(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7159,43 +6950,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProvider", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProvider", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7204,43 +6994,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProvider", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProvider", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProviderName(string name)
+        public ApiResponse<Object> GetIdentityOidcProviderName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7249,43 +7036,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7294,43 +7080,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProviderNameAuthorize(string name)
+        public ApiResponse<Object> GetIdentityOidcProviderNameAuthorize(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7339,43 +7122,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7384,43 +7166,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProviderNameUserinfo(string name)
+        public ApiResponse<Object> GetIdentityOidcProviderNameUserinfo(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7429,43 +7208,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7474,43 +7252,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name)
+        public ApiResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7519,43 +7294,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7564,43 +7338,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name)
+        public ApiResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7609,43 +7380,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7654,43 +7424,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List configured OIDC roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcRole(string list)
+        public ApiResponse<Object> GetIdentityOidcRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7699,43 +7466,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List configured OIDC roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7744,43 +7510,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcRole", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcRole", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcRoleName(string name)
+        public ApiResponse<Object> GetIdentityOidcRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7789,43 +7552,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7834,43 +7596,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcScope(string list)
+        public ApiResponse<Object> GetIdentityOidcScope(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7879,43 +7638,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/scope", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcScope", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcScope", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7924,43 +7682,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcScope", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcScope", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcScopeName(string name)
+        public ApiResponse<Object> GetIdentityOidcScopeName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7969,43 +7724,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8014,43 +7768,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Generate an OIDC token 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcTokenName(string name)
+        public ApiResponse<Object> GetIdentityOidcTokenName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8059,43 +7810,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/token/{name}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/token/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcTokenName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcTokenName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Generate an OIDC token 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8104,38 +7854,35 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcTokenName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcTokenName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Retrieve public keys 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcWellKnownKeys()
+        public ApiResponse<Object> GetIdentityOidcWellKnownKeys()
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8144,37 +7891,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Retrieve public keys 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8183,37 +7929,34 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query OIDC configurations 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration()
+        public ApiResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration()
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8222,37 +7965,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query OIDC configurations 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8261,42 +8003,39 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityPersonaId(string list)
+        public ApiResponse<Object> GetIdentityPersonaId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8305,43 +8044,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/persona/id", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/persona/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityPersonaId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityPersonaId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8350,43 +8088,40 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.QueryParameters.Add(Vault.Client.ClientUtils.ParameterToMultiMap("", "list", list));
-
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityPersonaId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityPersonaId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> GetIdentityPersonaIdId(string id)
+        public ApiResponse<Object> GetIdentityPersonaIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8395,43 +8130,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/identity/persona/id/{id}", localVarRequestOptions);
+            var response = this.Client.Get<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> GetIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> GetIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8440,39 +8174,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest))
+        public ApiResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8482,39 +8213,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityAliasRequest;
-
+            requestOptions.Data = identityAliasRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/alias", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8524,44 +8254,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityAliasRequest;
-
+            requestOptions.Data = identityAliasRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest = default(IdentityAliasIdRequest))
+        public ApiResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest = default(IdentityAliasIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8571,45 +8298,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityAliasIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest = default(IdentityAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest = default(IdentityAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8619,40 +8345,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityAliasIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new entity 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest))
+        public ApiResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8662,39 +8385,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityEntityRequest;
-
+            requestOptions.Data = identityEntityRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntity", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntity", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new entity 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8704,39 +8426,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityEntityRequest;
-
+            requestOptions.Data = identityEntityRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntity", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntity", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest))
+        public ApiResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8746,39 +8465,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityEntityAliasRequest;
-
+            requestOptions.Data = identityEntityAliasRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity-alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8788,44 +8506,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityEntityAliasRequest;
-
+            requestOptions.Data = identityEntityAliasRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest = default(IdentityEntityAliasIdRequest))
+        public ApiResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest = default(IdentityEntityAliasIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8835,45 +8550,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityEntityAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityEntityAliasIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest = default(IdentityEntityAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest = default(IdentityEntityAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8883,40 +8597,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityEntityAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityEntityAliasIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete all of the entities provided 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest))
+        public ApiResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8926,39 +8637,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityEntityBatchDeleteRequest;
-
+            requestOptions.Data = identityEntityBatchDeleteRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/batch-delete", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/batch-delete", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Delete all of the entities provided 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -8968,44 +8678,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityEntityBatchDeleteRequest;
-
+            requestOptions.Data = identityEntityBatchDeleteRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/batch-delete", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/batch-delete", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest = default(IdentityEntityIdRequest))
+        public ApiResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest = default(IdentityEntityIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9015,45 +8722,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityEntityIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityEntityIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest = default(IdentityEntityIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest = default(IdentityEntityIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9063,40 +8769,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityEntityIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityEntityIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Merge two or more entities together 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest))
+        public ApiResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9106,39 +8809,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityEntityMergeRequest;
-
+            requestOptions.Data = identityEntityMergeRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/merge", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/merge", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityMerge", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityMerge", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Merge two or more entities together 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9148,44 +8850,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityEntityMergeRequest;
-
+            requestOptions.Data = identityEntityMergeRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/merge", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/merge", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityMerge", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityMerge", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest = default(IdentityEntityNameRequest))
+        public ApiResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest = default(IdentityEntityNameRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9195,45 +8894,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityEntityNameRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityEntityNameRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/entity/name/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest = default(IdentityEntityNameRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest = default(IdentityEntityNameRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9243,40 +8941,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityEntityNameRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityEntityNameRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityEntityNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityEntityNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new group. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest))
+        public ApiResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9286,39 +8981,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityGroupRequest;
-
+            requestOptions.Data = identityGroupRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/group", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new group. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9328,39 +9022,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityGroupRequest;
-
+            requestOptions.Data = identityGroupRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Creates a new group alias, or updates an existing one. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest))
+        public ApiResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9370,39 +9061,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityGroupAliasRequest;
-
+            requestOptions.Data = identityGroupAliasRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group-alias", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/group-alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Creates a new group alias, or updates an existing one. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9412,44 +9102,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityGroupAliasRequest;
-
+            requestOptions.Data = identityGroupAliasRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupAlias", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupAlias", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest = default(IdentityGroupAliasIdRequest))
+        public ApiResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest = default(IdentityGroupAliasIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9459,45 +9146,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityGroupAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityGroupAliasIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group-alias/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest = default(IdentityGroupAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest = default(IdentityGroupAliasIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9507,45 +9193,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityGroupAliasIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityGroupAliasIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest = default(IdentityGroupIdRequest))
+        public ApiResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest = default(IdentityGroupIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9555,45 +9238,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityGroupIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityGroupIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest = default(IdentityGroupIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest = default(IdentityGroupIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9603,45 +9285,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityGroupIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityGroupIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest = default(IdentityGroupNameRequest))
+        public ApiResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest = default(IdentityGroupNameRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9651,45 +9330,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityGroupNameRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityGroupNameRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/group/name/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest = default(IdentityGroupNameRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest = default(IdentityGroupNameRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9699,40 +9377,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityGroupNameRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityGroupNameRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/group/name/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityGroupNameName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityGroupNameName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query entities based on various properties. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest))
+        public ApiResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9742,39 +9417,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityLookupEntityRequest;
-
+            requestOptions.Data = identityLookupEntityRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/lookup/entity", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/lookup/entity", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityLookupEntity", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityLookupEntity", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query entities based on various properties. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9784,39 +9458,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityLookupEntityRequest;
-
+            requestOptions.Data = identityLookupEntityRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/entity", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/entity", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityLookupEntity", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityLookupEntity", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query groups based on various properties. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest))
+        public ApiResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9826,39 +9497,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityLookupGroupRequest;
-
+            requestOptions.Data = identityLookupGroupRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/lookup/group", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/lookup/group", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityLookupGroup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityLookupGroup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Query groups based on various properties. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9868,44 +9538,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityLookupGroupRequest;
-
+            requestOptions.Data = identityLookupGroupRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/group", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/group", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityLookupGroup", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityLookupGroup", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create or update a login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest = default(IdentityMfaLoginEnforcementRequest))
+        public ApiResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest = default(IdentityMfaLoginEnforcementRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9915,45 +9582,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityMfaLoginEnforcementRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityMfaLoginEnforcementRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create or update a login enforcement 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest = default(IdentityMfaLoginEnforcementRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest = default(IdentityMfaLoginEnforcementRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -9963,45 +9629,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityMfaLoginEnforcementRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityMfaLoginEnforcementRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/login-enforcement/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest = default(IdentityMfaMethodDuoRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest = default(IdentityMfaMethodDuoRequest))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10011,45 +9674,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodDuoRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodDuoRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest = default(IdentityMfaMethodDuoRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest = default(IdentityMfaMethodDuoRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10059,45 +9721,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodDuoRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodDuoRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest = default(IdentityMfaMethodOktaRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest = default(IdentityMfaMethodOktaRequest))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10107,45 +9766,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodOktaRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodOktaRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest = default(IdentityMfaMethodOktaRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest = default(IdentityMfaMethodOktaRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10155,45 +9813,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodOktaRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodOktaRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest = default(IdentityMfaMethodPingidRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest = default(IdentityMfaMethodPingidRequest))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10203,45 +9858,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodPingidRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodPingidRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest = default(IdentityMfaMethodPingidRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest = default(IdentityMfaMethodPingidRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10251,40 +9905,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodPingidRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodPingidRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10294,39 +9945,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
-
+            requestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/admin-destroy", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10336,39 +9986,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
-
+            requestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-destroy", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-destroy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10378,39 +10025,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
-
+            requestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/admin-generate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10420,39 +10066,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
-
+            requestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-generate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-generate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10462,39 +10105,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityMfaMethodTotpGenerateRequest;
-
+            requestOptions.Data = identityMfaMethodTotpGenerateRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/generate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10504,44 +10146,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityMfaMethodTotpGenerateRequest;
-
+            requestOptions.Data = identityMfaMethodTotpGenerateRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/generate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/generate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest = default(IdentityMfaMethodTotpRequest))
+        public ApiResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest = default(IdentityMfaMethodTotpRequest))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10551,45 +10190,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodTotpRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodTotpRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest = default(IdentityMfaMethodTotpRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest = default(IdentityMfaMethodTotpRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10599,45 +10237,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("method_id", Vault.Client.ClientUtils.ParameterToString(methodId)); // path parameter
-            localVarRequestOptions.Data = identityMfaMethodTotpRequest;
-
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+            requestOptions.Data = identityMfaMethodTotpRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest = default(IdentityOidcAssignmentRequest))
+        public ApiResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest = default(IdentityOidcAssignmentRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10647,45 +10282,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcAssignmentRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcAssignmentRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest = default(IdentityOidcAssignmentRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest = default(IdentityOidcAssignmentRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10695,45 +10329,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcAssignmentRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcAssignmentRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/assignment/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest = default(IdentityOidcClientRequest))
+        public ApiResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest = default(IdentityOidcClientRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10743,45 +10374,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcClientRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcClientRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/client/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest = default(IdentityOidcClientRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest = default(IdentityOidcClientRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10791,40 +10421,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcClientRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcClientRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/client/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcClientName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcClientName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest))
+        public ApiResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10834,39 +10461,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityOidcConfigRequest;
-
+            requestOptions.Data = identityOidcConfigRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/config", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10876,39 +10502,36 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityOidcConfigRequest;
-
+            requestOptions.Data = identityOidcConfigRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/config", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcConfig", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcConfig", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Verify the authenticity of an OIDC token 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest))
+        public ApiResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10918,39 +10541,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityOidcIntrospectRequest;
-
+            requestOptions.Data = identityOidcIntrospectRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/introspect", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/introspect", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcIntrospect", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcIntrospect", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Verify the authenticity of an OIDC token 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -10960,44 +10582,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityOidcIntrospectRequest;
-
+            requestOptions.Data = identityOidcIntrospectRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/introspect", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/introspect", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcIntrospect", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcIntrospect", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest = default(IdentityOidcKeyRequest))
+        public ApiResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest = default(IdentityOidcKeyRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11007,45 +10626,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcKeyRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcKeyRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest = default(IdentityOidcKeyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest = default(IdentityOidcKeyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11055,45 +10673,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcKeyRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcKeyRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Rotate a named OIDC key. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest = default(IdentityOidcKeyRotateRequest))
+        public ApiResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest = default(IdentityOidcKeyRotateRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11103,45 +10718,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcKeyRotateRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcKeyRotateRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/key/{name}/rotate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Rotate a named OIDC key. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest = default(IdentityOidcKeyRotateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest = default(IdentityOidcKeyRotateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11151,45 +10765,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcKeyRotateRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcKeyRotateRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}/rotate", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest = default(IdentityOidcProviderRequest))
+        public ApiResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest = default(IdentityOidcProviderRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11199,45 +10810,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest = default(IdentityOidcProviderRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest = default(IdentityOidcProviderRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11247,45 +10857,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest = default(IdentityOidcProviderAuthorizeRequest))
+        public ApiResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest = default(IdentityOidcProviderAuthorizeRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11295,45 +10902,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderAuthorizeRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderAuthorizeRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest = default(IdentityOidcProviderAuthorizeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest = default(IdentityOidcProviderAuthorizeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11343,45 +10949,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderAuthorizeRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderAuthorizeRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest = default(IdentityOidcProviderTokenRequest))
+        public ApiResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest = default(IdentityOidcProviderTokenRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11391,45 +10994,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderTokenRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderTokenRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest = default(IdentityOidcProviderTokenRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest = default(IdentityOidcProviderTokenRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11439,44 +11041,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcProviderTokenRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcProviderTokenRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/token", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcProviderNameUserinfo(string name)
+        public ApiResponse<Object> PostIdentityOidcProviderNameUserinfo(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11485,43 +11084,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11530,44 +11128,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/userinfo", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest = default(IdentityOidcRoleRequest))
+        public ApiResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest = default(IdentityOidcRoleRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11577,45 +11172,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcRoleRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcRoleRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/role/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest = default(IdentityOidcRoleRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest = default(IdentityOidcRoleRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11625,45 +11219,42 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcRoleRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcRoleRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/role/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcRoleName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcRoleName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest = default(IdentityOidcScopeRequest))
+        public ApiResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest = default(IdentityOidcScopeRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11673,45 +11264,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcScopeRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcScopeRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/oidc/scope/{name}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest = default(IdentityOidcScopeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest = default(IdentityOidcScopeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11721,40 +11311,37 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("name", Vault.Client.ClientUtils.ParameterToString(name)); // path parameter
-            localVarRequestOptions.Data = identityOidcScopeRequest;
-
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = identityOidcScopeRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/scope/{name}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityOidcScopeName", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityOidcScopeName", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest))
+        public ApiResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest))
         {
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11764,39 +11351,38 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.Data = identityPersonaRequest;
-
+            requestOptions.Data = identityPersonaRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/persona", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/persona", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityPersona", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityPersona", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11806,44 +11392,41 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = identityPersonaRequest;
-
+            requestOptions.Data = identityPersonaRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/persona", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityPersona", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityPersona", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Vault.Client.ApiResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest = default(IdentityPersonaIdRequest))
+        public ApiResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest = default(IdentityPersonaIdRequest))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11853,45 +11436,44 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityPersonaIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityPersonaIdRequest;
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/identity/persona/id/{id}", localVarRequestOptions);
+            var response = this.Client.Post<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
 
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="Vault.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<Vault.Client.ApiResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest = default(IdentityPersonaIdRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest = default(IdentityPersonaIdRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new Vault.Client.ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
 
-            Vault.Client.RequestOptions localVarRequestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11901,28 +11483,25 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
-            var localVarContentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            var localVarAccept = Vault.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("id", Vault.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = identityPersonaIdRequest;
-
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+            requestOptions.Data = identityPersonaIdRequest;
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/identity/persona/id/{id}", localVarRequestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostIdentityPersonaIdId", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PostIdentityPersonaIdId", response);
                 if (_exception != null) throw _exception;
             }
 
-            return localVarResponse;
+            return response;
         }
 
     }
