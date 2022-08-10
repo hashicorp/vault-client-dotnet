@@ -29,7 +29,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAdConfig();
         /// <summary>
@@ -38,7 +38,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAdLibraryName(string name);
@@ -48,7 +48,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAdRolesName(string name);
@@ -58,7 +58,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAlicloudConfig();
         /// <summary>
@@ -67,7 +67,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAlicloudRoleName(string name);
@@ -77,7 +77,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAwsRolesName(string name);
@@ -87,7 +87,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAzureConfig();
         /// <summary>
@@ -96,7 +96,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAzureRolesName(string name);
@@ -106,7 +106,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteConsulRolesName(string name);
@@ -116,7 +116,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteCubbyholePath(string path);
@@ -126,7 +126,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpRolesetName(string name);
@@ -136,7 +136,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpStaticAccountName(string name);
@@ -146,7 +146,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpkmsConfig();
         /// <summary>
@@ -155,7 +155,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpkmsKeysDeregisterKey(string key);
@@ -165,7 +165,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpkmsKeysKey(string key);
@@ -175,7 +175,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGcpkmsKeysTrimKey(string key);
@@ -185,7 +185,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteKubernetesConfig();
         /// <summary>
@@ -194,7 +194,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteKubernetesRolesName(string name);
@@ -204,7 +204,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteKvPath(string path);
@@ -214,7 +214,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMongodbatlasRolesName(string name);
@@ -224,7 +224,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteNomadConfigAccess();
         /// <summary>
@@ -233,7 +233,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteNomadConfigLease();
         /// <summary>
@@ -242,7 +242,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteNomadRoleName(string name);
@@ -252,7 +252,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOpenldapConfig();
         /// <summary>
@@ -261,7 +261,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOpenldapRoleName(string name);
@@ -271,7 +271,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOpenldapStaticRoleName(string name);
@@ -281,7 +281,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePkiIssuerRefDerPem(string issuerRef);
@@ -291,7 +291,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePkiJson();
         /// <summary>
@@ -300,7 +300,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePkiKeyKeyRef(string keyRef);
@@ -310,7 +310,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePkiRolesName(string name);
@@ -320,7 +320,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePkiRoot();
         /// <summary>
@@ -329,7 +329,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRabbitmqRolesName(string name);
@@ -339,7 +339,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSecretDataPath(string path);
@@ -349,7 +349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSecretMetadataPath(string path);
@@ -359,7 +359,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSshConfigCa();
         /// <summary>
@@ -368,7 +368,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSshConfigZeroaddress();
         /// <summary>
@@ -377,7 +377,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSshKeysKeyName(string keyName);
@@ -387,7 +387,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSshRolesRole(string role);
@@ -397,7 +397,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTerraformConfig();
         /// <summary>
@@ -406,7 +406,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTerraformRoleName(string name);
@@ -416,7 +416,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTotpKeysName(string name);
@@ -426,7 +426,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTransitKeysName(string name);
@@ -436,7 +436,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdConfig();
         /// <summary>
@@ -445,7 +445,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdCredsName(string name);
@@ -455,7 +455,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdLibrary(string list);
@@ -465,7 +465,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdLibraryName(string name);
@@ -475,7 +475,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdLibraryNameStatus(string name);
@@ -485,7 +485,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdRoles(string list);
@@ -495,7 +495,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdRolesName(string name);
@@ -505,7 +505,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAdRotateRoot();
         /// <summary>
@@ -514,7 +514,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAlicloudConfig();
         /// <summary>
@@ -523,7 +523,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAlicloudCredsName(string name);
@@ -533,7 +533,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAlicloudRole(string list);
@@ -543,7 +543,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAlicloudRoleName(string name);
@@ -553,7 +553,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsConfigLease();
         /// <summary>
@@ -562,7 +562,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsConfigRoot();
         /// <summary>
@@ -571,7 +571,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsCreds();
         /// <summary>
@@ -580,7 +580,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsRoles(string list);
@@ -590,7 +590,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsRolesName(string name);
@@ -600,7 +600,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAwsStsName(string name);
@@ -610,7 +610,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAzureConfig();
         /// <summary>
@@ -619,7 +619,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the Vault role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAzureCredsRole(string role);
@@ -629,7 +629,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAzureRoles(string list);
@@ -639,7 +639,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAzureRolesName(string name);
@@ -649,7 +649,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetConsulConfigAccess();
         /// <summary>
@@ -658,7 +658,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetConsulCredsRole(string role);
@@ -668,7 +668,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetConsulRoles(string list);
@@ -678,7 +678,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetConsulRolesName(string name);
@@ -688,7 +688,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -699,7 +699,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpConfig();
         /// <summary>
@@ -708,7 +708,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpKeyRoleset(string roleset);
@@ -718,7 +718,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpRolesetName(string name);
@@ -728,7 +728,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpRolesetRolesetKey(string roleset);
@@ -738,7 +738,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpRolesetRolesetToken(string roleset);
@@ -748,7 +748,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpRolesets(string list);
@@ -758,7 +758,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpStaticAccountName(string name);
@@ -768,7 +768,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpStaticAccountNameKey(string name);
@@ -778,7 +778,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpStaticAccountNameToken(string name);
@@ -788,7 +788,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpStaticAccounts(string list);
@@ -798,7 +798,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpTokenRoleset(string roleset);
@@ -808,7 +808,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpkmsConfig();
         /// <summary>
@@ -817,7 +817,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpkmsKeys(string list);
@@ -827,7 +827,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpkmsKeysConfigKey(string key);
@@ -837,7 +837,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpkmsKeysKey(string key);
@@ -847,7 +847,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetGcpkmsPubkeyKey(string key);
@@ -857,7 +857,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetKubernetesConfig();
         /// <summary>
@@ -866,7 +866,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetKubernetesRoles(string list);
@@ -876,7 +876,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetKubernetesRolesName(string name);
@@ -886,7 +886,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -897,7 +897,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetMongodbatlasConfig();
         /// <summary>
@@ -906,7 +906,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetMongodbatlasCredsName(string name);
@@ -916,7 +916,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetMongodbatlasRoles(string list);
@@ -926,7 +926,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetMongodbatlasRolesName(string name);
@@ -936,7 +936,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetNomadConfigAccess();
         /// <summary>
@@ -945,7 +945,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetNomadConfigLease();
         /// <summary>
@@ -954,7 +954,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetNomadCredsName(string name);
@@ -964,7 +964,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetNomadRole(string list);
@@ -974,7 +974,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetNomadRoleName(string name);
@@ -984,7 +984,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapConfig();
         /// <summary>
@@ -993,7 +993,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the dynamic role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapCredsName(string name);
@@ -1003,7 +1003,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapRole(string list);
@@ -1013,7 +1013,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapRoleName(string name);
@@ -1023,7 +1023,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapStaticCredName(string name);
@@ -1033,7 +1033,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapStaticRole(string list);
@@ -1043,7 +1043,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetOpenldapStaticRoleName(string name);
@@ -1053,7 +1053,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCa();
         /// <summary>
@@ -1062,7 +1062,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCaChain();
         /// <summary>
@@ -1071,7 +1071,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCaPem();
         /// <summary>
@@ -1080,7 +1080,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCertCaChain();
         /// <summary>
@@ -1089,7 +1089,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCertCrl();
         /// <summary>
@@ -1098,7 +1098,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCertSerial(string serial);
@@ -1108,7 +1108,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCertSerialRaw(string serial);
@@ -1118,7 +1118,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCertSerialRawPem(string serial);
@@ -1128,7 +1128,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCerts(string list);
@@ -1138,7 +1138,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiConfigCrl();
         /// <summary>
@@ -1147,7 +1147,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiConfigIssuers();
         /// <summary>
@@ -1156,7 +1156,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiConfigKeys();
         /// <summary>
@@ -1165,7 +1165,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiConfigUrls();
         /// <summary>
@@ -1174,7 +1174,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCrl();
         /// <summary>
@@ -1183,7 +1183,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCrlPem();
         /// <summary>
@@ -1192,7 +1192,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiCrlRotate();
         /// <summary>
@@ -1201,7 +1201,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiDer();
         /// <summary>
@@ -1210,7 +1210,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiIssuerRefCrlPem(string issuerRef);
@@ -1220,7 +1220,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiIssuerRefDerPem(string issuerRef);
@@ -1230,7 +1230,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiIssuers(string list);
@@ -1240,7 +1240,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiJson();
         /// <summary>
@@ -1249,7 +1249,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiKeyKeyRef(string keyRef);
@@ -1259,7 +1259,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiKeys(string list);
@@ -1269,7 +1269,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiRoles(string list);
@@ -1279,7 +1279,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiRolesName(string name);
@@ -1289,7 +1289,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetPkiTidyStatus();
         /// <summary>
@@ -1298,7 +1298,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetRabbitmqConfigLease();
         /// <summary>
@@ -1307,7 +1307,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetRabbitmqCredsName(string name);
@@ -1317,7 +1317,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetRabbitmqRoles(string list);
@@ -1327,7 +1327,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetRabbitmqRolesName(string name);
@@ -1337,7 +1337,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSecretConfig();
         /// <summary>
@@ -1346,7 +1346,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSecretDataPath(string path);
@@ -1356,7 +1356,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1367,7 +1367,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSecretSubkeysPath(string path);
@@ -1377,7 +1377,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSshConfigCa();
         /// <summary>
@@ -1386,7 +1386,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSshConfigZeroaddress();
         /// <summary>
@@ -1395,7 +1395,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSshPublicKey();
         /// <summary>
@@ -1404,7 +1404,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSshRoles(string list);
@@ -1414,7 +1414,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSshRolesRole(string role);
@@ -1424,7 +1424,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTerraformConfig();
         /// <summary>
@@ -1433,7 +1433,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTerraformCredsName(string name);
@@ -1443,7 +1443,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTerraformRole(string list);
@@ -1453,7 +1453,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTerraformRoleName(string name);
@@ -1463,7 +1463,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTotpCodeName(string name);
@@ -1473,7 +1473,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTotpKeys(string list);
@@ -1483,7 +1483,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTotpKeysName(string name);
@@ -1493,7 +1493,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTransitBackupName(string name);
@@ -1503,7 +1503,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTransitCacheConfig();
         /// <summary>
@@ -1512,7 +1512,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1523,7 +1523,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="version">Version of the key</param>
@@ -1535,7 +1535,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTransitKeys(string list);
@@ -1545,7 +1545,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTransitKeysName(string name);
@@ -1555,7 +1555,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetTransitWrappingKey();
         /// <summary>
@@ -1564,7 +1564,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="adConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAdConfig(AdConfigRequest adConfigRequest = default(AdConfigRequest));
@@ -1574,7 +1574,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryManageCheckInRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1585,7 +1585,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1596,7 +1596,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryCheckInRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1607,7 +1607,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set</param>
         /// <param name="adLibraryCheckOutRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1618,7 +1618,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="adRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1629,7 +1629,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAdRotateRoleName(string name);
@@ -1639,7 +1639,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAdRotateRoot();
         /// <summary>
@@ -1648,7 +1648,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAlicloudConfig(AlicloudConfigRequest alicloudConfigRequest = default(AlicloudConfigRequest));
@@ -1658,7 +1658,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="alicloudRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1669,7 +1669,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAwsConfigLease(AwsConfigLeaseRequest awsConfigLeaseRequest = default(AwsConfigLeaseRequest));
@@ -1679,7 +1679,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAwsConfigRoot(AwsConfigRootRequest awsConfigRootRequest = default(AwsConfigRootRequest));
@@ -1689,7 +1689,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAwsConfigRotateRoot();
         /// <summary>
@@ -1698,7 +1698,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAwsCreds(AwsCredsRequest awsCredsRequest = default(AwsCredsRequest));
@@ -1708,7 +1708,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="awsRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1719,7 +1719,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsStsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1730,7 +1730,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAzureConfig(AzureConfigRequest azureConfigRequest = default(AzureConfigRequest));
@@ -1740,7 +1740,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="azureRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1751,7 +1751,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostAzureRotateRoot();
         /// <summary>
@@ -1760,7 +1760,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="consulConfigAccessRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostConsulConfigAccess(ConsulConfigAccessRequest consulConfigAccessRequest = default(ConsulConfigAccessRequest));
@@ -1770,7 +1770,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="consulRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1781,7 +1781,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostCubbyholePath(string path);
@@ -1791,7 +1791,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpConfig(GcpConfigRequest gcpConfigRequest = default(GcpConfigRequest));
@@ -1801,7 +1801,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpConfigRotateRoot();
         /// <summary>
@@ -1810,7 +1810,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1821,7 +1821,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="gcpRolesetRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1832,7 +1832,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpRolesetNameRotate(string name);
@@ -1842,7 +1842,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpRolesetNameRotateKey(string name);
@@ -1852,7 +1852,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpRolesetKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1863,7 +1863,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpRolesetRolesetToken(string roleset);
@@ -1873,7 +1873,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="gcpStaticAccountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1884,7 +1884,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpStaticAccountKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1895,7 +1895,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpStaticAccountNameRotateKey(string name);
@@ -1905,7 +1905,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpStaticAccountNameToken(string name);
@@ -1915,7 +1915,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpTokenRoleset(string roleset);
@@ -1925,7 +1925,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpkmsConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpkmsConfig(GcpkmsConfigRequest gcpkmsConfigRequest = default(GcpkmsConfigRequest));
@@ -1935,7 +1935,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsDecryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1946,7 +1946,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsEncryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1957,7 +1957,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1968,7 +1968,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpkmsKeysDeregisterKey(string key);
@@ -1978,7 +1978,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1989,7 +1989,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.</param>
         /// <param name="gcpkmsKeysRegisterRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2000,7 +2000,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpkmsKeysRotateKey(string key);
@@ -2010,7 +2010,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostGcpkmsKeysTrimKey(string key);
@@ -2020,7 +2020,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="gcpkmsReencryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2031,7 +2031,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2042,7 +2042,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2053,7 +2053,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest = default(KubernetesConfigRequest));
@@ -2063,7 +2063,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Vault role</param>
         /// <param name="kubernetesCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2074,7 +2074,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="kubernetesRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2085,7 +2085,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostKvPath(string path);
@@ -2095,7 +2095,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mongodbatlasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostMongodbatlasConfig(MongodbatlasConfigRequest mongodbatlasConfigRequest = default(MongodbatlasConfigRequest));
@@ -2105,7 +2105,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostMongodbatlasCredsName(string name);
@@ -2115,7 +2115,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="mongodbatlasRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2126,7 +2126,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigAccessRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostNomadConfigAccess(NomadConfigAccessRequest nomadConfigAccessRequest = default(NomadConfigAccessRequest));
@@ -2136,7 +2136,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostNomadConfigLease(NomadConfigLeaseRequest nomadConfigLeaseRequest = default(NomadConfigLeaseRequest));
@@ -2146,7 +2146,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="nomadRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2157,7 +2157,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="openldapConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostOpenldapConfig(OpenldapConfigRequest openldapConfigRequest = default(OpenldapConfigRequest));
@@ -2167,7 +2167,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="openldapRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2178,7 +2178,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostOpenldapRotateRoleName(string name);
@@ -2188,7 +2188,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostOpenldapRotateRoot();
         /// <summary>
@@ -2197,7 +2197,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="openldapStaticRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2208,7 +2208,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBundleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiBundle(PkiBundleRequest pkiBundleRequest = default(PkiBundleRequest));
@@ -2218,7 +2218,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCertRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiCert(PkiCertRequest pkiCertRequest = default(PkiCertRequest));
@@ -2228,7 +2228,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiConfigCa(PkiConfigCaRequest pkiConfigCaRequest = default(PkiConfigCaRequest));
@@ -2238,7 +2238,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCrlRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiConfigCrl(PkiConfigCrlRequest pkiConfigCrlRequest = default(PkiConfigCrlRequest));
@@ -2248,7 +2248,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigIssuersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiConfigIssuers(PkiConfigIssuersRequest pkiConfigIssuersRequest = default(PkiConfigIssuersRequest));
@@ -2258,7 +2258,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiConfigKeys(PkiConfigKeysRequest pkiConfigKeysRequest = default(PkiConfigKeysRequest));
@@ -2268,7 +2268,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigUrlsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiConfigUrls(PkiConfigUrlsRequest pkiConfigUrlsRequest = default(PkiConfigUrlsRequest));
@@ -2278,7 +2278,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateCrossSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiIntermediateCrossSign(PkiIntermediateCrossSignRequest pkiIntermediateCrossSignRequest = default(PkiIntermediateCrossSignRequest));
@@ -2288,7 +2288,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIntermediateGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2299,7 +2299,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateSetSignedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiIntermediateSetSigned(PkiIntermediateSetSignedRequest pkiIntermediateSetSignedRequest = default(PkiIntermediateSetSignedRequest));
@@ -2309,7 +2309,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiInternalExportedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiInternalExported(PkiInternalExportedRequest pkiInternalExportedRequest = default(PkiInternalExportedRequest));
@@ -2319,7 +2319,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssueRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2330,7 +2330,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerIssueRequest"> (optional)</param>
@@ -2342,7 +2342,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2353,7 +2353,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignRequest"> (optional)</param>
@@ -2365,7 +2365,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignSelfIssuedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2376,7 +2376,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2387,7 +2387,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
@@ -2399,7 +2399,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiDerPemRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2410,7 +2410,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2421,7 +2421,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2432,7 +2432,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiJsonRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiJson(PkiJsonRequest pkiJsonRequest = default(PkiJsonRequest));
@@ -2442,7 +2442,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="pkiKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2453,7 +2453,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKeysImportRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiKeysImport(PkiKeysImportRequest pkiKeysImportRequest = default(PkiKeysImportRequest));
@@ -2463,7 +2463,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKmsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiKms(PkiKmsRequest pkiKmsRequest = default(PkiKmsRequest));
@@ -2473,7 +2473,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiRevoke(PkiRevokeRequest pkiRevokeRequest = default(PkiRevokeRequest));
@@ -2483,7 +2483,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="pkiRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2494,7 +2494,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2505,7 +2505,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootReplaceRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiRootReplace(PkiRootReplaceRequest pkiRootReplaceRequest = default(PkiRootReplaceRequest));
@@ -2515,7 +2515,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2526,7 +2526,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiRootSignIntermediate(PkiRootSignIntermediateRequest pkiRootSignIntermediateRequest = default(PkiRootSignIntermediateRequest));
@@ -2536,7 +2536,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignSelfIssuedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiRootSignSelfIssued(PkiRootSignSelfIssuedRequest pkiRootSignSelfIssuedRequest = default(PkiRootSignSelfIssuedRequest));
@@ -2546,7 +2546,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2557,7 +2557,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiSignVerbatim(PkiSignVerbatimRequest pkiSignVerbatimRequest = default(PkiSignVerbatimRequest));
@@ -2567,7 +2567,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2578,7 +2578,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiTidyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPkiTidy(PkiTidyRequest pkiTidyRequest = default(PkiTidyRequest));
@@ -2588,7 +2588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigConnectionRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostRabbitmqConfigConnection(RabbitmqConfigConnectionRequest rabbitmqConfigConnectionRequest = default(RabbitmqConfigConnectionRequest));
@@ -2598,7 +2598,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostRabbitmqConfigLease(RabbitmqConfigLeaseRequest rabbitmqConfigLeaseRequest = default(RabbitmqConfigLeaseRequest));
@@ -2608,7 +2608,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="rabbitmqRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2619,7 +2619,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kvConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostSecretConfig(KvConfigRequest kvConfigRequest = default(KvConfigRequest));
@@ -2629,7 +2629,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDataRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2640,7 +2640,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2651,7 +2651,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2662,7 +2662,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMetadataRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2673,7 +2673,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvUndeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2684,7 +2684,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigCaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostSshConfigCa(SshConfigCaRequest sshConfigCaRequest = default(SshConfigCaRequest));
@@ -2694,7 +2694,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigZeroaddressRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostSshConfigZeroaddress(SshConfigZeroaddressRequest sshConfigZeroaddressRequest = default(SshConfigZeroaddressRequest));
@@ -2704,7 +2704,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required] Name of the role</param>
         /// <param name="sshCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2715,7 +2715,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="sshKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2726,7 +2726,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostSshLookup(SshLookupRequest sshLookupRequest = default(SshLookupRequest));
@@ -2736,7 +2736,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="sshRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2747,7 +2747,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request.</param>
         /// <param name="sshSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2758,7 +2758,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostSshVerify(SshVerifyRequest sshVerifyRequest = default(SshVerifyRequest));
@@ -2768,7 +2768,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="terraformConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTerraformConfig(TerraformConfigRequest terraformConfigRequest = default(TerraformConfigRequest));
@@ -2778,7 +2778,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTerraformCredsName(string name);
@@ -2788,7 +2788,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="terraformRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2799,7 +2799,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the team or organization role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTerraformRotateRoleName(string name);
@@ -2809,7 +2809,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpCodeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2820,7 +2820,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2831,7 +2831,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitCacheConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTransitCacheConfig(TransitCacheConfigRequest transitCacheConfigRequest = default(TransitCacheConfigRequest));
@@ -2841,7 +2841,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The backend key used for encrypting the data key</param>
         /// <param name="plaintext">\&quot;plaintext\&quot; will return the key in both plaintext and ciphertext; \&quot;wrapped\&quot; will return the ciphertext only.</param>
         /// <param name="transitDatakeyRequest"> (optional)</param>
@@ -2853,7 +2853,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitDecryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2864,7 +2864,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitEncryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2875,7 +2875,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTransitHash(TransitHashRequest transitHashRequest = default(TransitHashRequest));
@@ -2885,7 +2885,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2896,7 +2896,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="transitHmacRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2907,7 +2907,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHmacRequest"> (optional)</param>
@@ -2919,7 +2919,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2930,7 +2930,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2941,7 +2941,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2952,7 +2952,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportVersionRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2963,7 +2963,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTransitKeysNameRotate(string name);
@@ -2973,7 +2973,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysTrimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2984,7 +2984,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTransitRandom(TransitRandomRequest transitRandomRequest = default(TransitRandomRequest));
@@ -2994,7 +2994,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3005,7 +3005,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
@@ -3017,7 +3017,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3028,7 +3028,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostTransitRestore(TransitRestoreRequest transitRestoreRequest = default(TransitRestoreRequest));
@@ -3038,7 +3038,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">If set, this will be the name of the restored key.</param>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3049,7 +3049,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3060,7 +3060,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3071,7 +3071,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitSignRequest"> (optional)</param>
@@ -3083,7 +3083,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3094,7 +3094,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
@@ -3116,7 +3116,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteAdConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3127,7 +3127,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3139,7 +3139,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3151,7 +3151,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteAlicloudConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3162,7 +3162,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3174,7 +3174,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3186,7 +3186,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3197,7 +3197,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3209,7 +3209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3221,7 +3221,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3233,7 +3233,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3245,7 +3245,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3257,7 +3257,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteGcpkmsConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3268,7 +3268,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3280,7 +3280,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3292,7 +3292,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3304,7 +3304,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteKubernetesConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3315,7 +3315,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3327,7 +3327,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3339,7 +3339,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3351,7 +3351,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteNomadConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3362,7 +3362,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteNomadConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3373,7 +3373,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3385,7 +3385,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteOpenldapConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3396,7 +3396,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3408,7 +3408,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3420,7 +3420,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3432,7 +3432,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeletePkiJsonAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3443,7 +3443,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3455,7 +3455,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3467,7 +3467,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeletePkiRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3478,7 +3478,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3490,7 +3490,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3502,7 +3502,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3514,7 +3514,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteSshConfigCaAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3525,7 +3525,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteSshConfigZeroaddressAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3536,7 +3536,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3548,7 +3548,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3560,7 +3560,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> DeleteTerraformConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3571,7 +3571,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3583,7 +3583,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3595,7 +3595,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3607,7 +3607,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAdConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3618,7 +3618,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3630,7 +3630,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3642,7 +3642,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3654,7 +3654,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3666,7 +3666,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3678,7 +3678,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3690,7 +3690,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAdRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3701,7 +3701,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAlicloudConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3712,7 +3712,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3724,7 +3724,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3736,7 +3736,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3748,7 +3748,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAwsConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3759,7 +3759,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAwsConfigRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3770,7 +3770,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAwsCredsAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3781,7 +3781,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3793,7 +3793,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3805,7 +3805,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3817,7 +3817,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3828,7 +3828,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the Vault role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3840,7 +3840,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3852,7 +3852,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3864,7 +3864,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetConsulConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3875,7 +3875,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3887,7 +3887,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3899,7 +3899,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3911,7 +3911,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -3924,7 +3924,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetGcpConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -3935,7 +3935,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3947,7 +3947,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3959,7 +3959,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3971,7 +3971,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3983,7 +3983,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3995,7 +3995,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4007,7 +4007,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4019,7 +4019,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4031,7 +4031,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4043,7 +4043,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4055,7 +4055,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetGcpkmsConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4066,7 +4066,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4078,7 +4078,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4090,7 +4090,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4102,7 +4102,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4114,7 +4114,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetKubernetesConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4125,7 +4125,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4137,7 +4137,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4149,7 +4149,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -4162,7 +4162,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetMongodbatlasConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4173,7 +4173,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4185,7 +4185,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4197,7 +4197,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4209,7 +4209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetNomadConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4220,7 +4220,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetNomadConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4231,7 +4231,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4243,7 +4243,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4255,7 +4255,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4267,7 +4267,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetOpenldapConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4278,7 +4278,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the dynamic role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4290,7 +4290,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4302,7 +4302,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4314,7 +4314,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4326,7 +4326,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4338,7 +4338,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4350,7 +4350,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCaAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4361,7 +4361,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCaChainAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4372,7 +4372,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCaPemAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4383,7 +4383,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCertCaChainAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4394,7 +4394,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCertCrlAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4405,7 +4405,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4417,7 +4417,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4429,7 +4429,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4441,7 +4441,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4453,7 +4453,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiConfigCrlAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4464,7 +4464,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiConfigIssuersAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4475,7 +4475,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiConfigKeysAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4486,7 +4486,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiConfigUrlsAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4497,7 +4497,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCrlAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4508,7 +4508,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCrlPemAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4519,7 +4519,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiCrlRotateAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4530,7 +4530,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiDerAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4541,7 +4541,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4553,7 +4553,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4565,7 +4565,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4577,7 +4577,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiJsonAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4588,7 +4588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4600,7 +4600,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4612,7 +4612,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4624,7 +4624,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4636,7 +4636,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetPkiTidyStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4647,7 +4647,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetRabbitmqConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4658,7 +4658,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4670,7 +4670,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4682,7 +4682,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4694,7 +4694,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetSecretConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4705,7 +4705,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4717,7 +4717,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -4730,7 +4730,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4742,7 +4742,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetSshConfigCaAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4753,7 +4753,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetSshConfigZeroaddressAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4764,7 +4764,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetSshPublicKeyAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4775,7 +4775,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4787,7 +4787,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4799,7 +4799,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetTerraformConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4810,7 +4810,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4822,7 +4822,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4834,7 +4834,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4846,7 +4846,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4858,7 +4858,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4870,7 +4870,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4882,7 +4882,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4894,7 +4894,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetTransitCacheConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4905,7 +4905,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -4918,7 +4918,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="version">Version of the key</param>
@@ -4932,7 +4932,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4944,7 +4944,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4956,7 +4956,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetTransitWrappingKeyAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -4967,7 +4967,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="adConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4979,7 +4979,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryManageCheckInRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -4992,7 +4992,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5005,7 +5005,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryCheckInRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5018,7 +5018,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set</param>
         /// <param name="adLibraryCheckOutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5031,7 +5031,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="adRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5044,7 +5044,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5056,7 +5056,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> PostAdRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -5067,7 +5067,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5079,7 +5079,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="alicloudRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5092,7 +5092,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5104,7 +5104,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5116,7 +5116,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> PostAwsConfigRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -5127,7 +5127,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5139,7 +5139,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="awsRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5152,7 +5152,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsStsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5165,7 +5165,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5177,7 +5177,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="azureRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5190,7 +5190,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> PostAzureRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -5201,7 +5201,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="consulConfigAccessRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5213,7 +5213,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="consulRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5226,7 +5226,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5238,7 +5238,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5250,7 +5250,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> PostGcpConfigRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -5261,7 +5261,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5274,7 +5274,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="gcpRolesetRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5287,7 +5287,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5299,7 +5299,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5311,7 +5311,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpRolesetKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5324,7 +5324,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5336,7 +5336,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="gcpStaticAccountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5349,7 +5349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpStaticAccountKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5362,7 +5362,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5374,7 +5374,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5386,7 +5386,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5398,7 +5398,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpkmsConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5410,7 +5410,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsDecryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5423,7 +5423,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsEncryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5436,7 +5436,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5449,7 +5449,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5461,7 +5461,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5474,7 +5474,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.</param>
         /// <param name="gcpkmsKeysRegisterRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5487,7 +5487,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5499,7 +5499,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5511,7 +5511,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="gcpkmsReencryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5524,7 +5524,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5537,7 +5537,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5550,7 +5550,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5562,7 +5562,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Vault role</param>
         /// <param name="kubernetesCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5575,7 +5575,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="kubernetesRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5588,7 +5588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5600,7 +5600,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mongodbatlasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5612,7 +5612,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5624,7 +5624,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="mongodbatlasRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5637,7 +5637,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigAccessRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5649,7 +5649,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5661,7 +5661,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="nomadRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5674,7 +5674,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="openldapConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5686,7 +5686,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="openldapRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5699,7 +5699,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5711,7 +5711,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> PostOpenldapRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -5722,7 +5722,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="openldapStaticRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5735,7 +5735,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBundleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5747,7 +5747,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCertRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5759,7 +5759,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5771,7 +5771,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCrlRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5783,7 +5783,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigIssuersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5795,7 +5795,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5807,7 +5807,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigUrlsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5819,7 +5819,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateCrossSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5831,7 +5831,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIntermediateGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5844,7 +5844,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateSetSignedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5856,7 +5856,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiInternalExportedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5868,7 +5868,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssueRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5881,7 +5881,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerIssueRequest"> (optional)</param>
@@ -5895,7 +5895,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5908,7 +5908,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignRequest"> (optional)</param>
@@ -5922,7 +5922,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignSelfIssuedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5935,7 +5935,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5948,7 +5948,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
@@ -5962,7 +5962,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiDerPemRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5975,7 +5975,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5988,7 +5988,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6001,7 +6001,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiJsonRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6013,7 +6013,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="pkiKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6026,7 +6026,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKeysImportRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6038,7 +6038,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6050,7 +6050,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6062,7 +6062,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="pkiRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6075,7 +6075,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6088,7 +6088,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootReplaceRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6100,7 +6100,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6113,7 +6113,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6125,7 +6125,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignSelfIssuedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6137,7 +6137,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6150,7 +6150,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6162,7 +6162,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6175,7 +6175,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiTidyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6187,7 +6187,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigConnectionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6199,7 +6199,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6211,7 +6211,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="rabbitmqRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6224,7 +6224,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kvConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6236,7 +6236,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDataRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6249,7 +6249,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6262,7 +6262,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6275,7 +6275,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMetadataRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6288,7 +6288,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvUndeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6301,7 +6301,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigCaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6313,7 +6313,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigZeroaddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6325,7 +6325,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required] Name of the role</param>
         /// <param name="sshCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6338,7 +6338,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="sshKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6351,7 +6351,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6363,7 +6363,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="sshRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6376,7 +6376,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request.</param>
         /// <param name="sshSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6389,7 +6389,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6401,7 +6401,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="terraformConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6413,7 +6413,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6425,7 +6425,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="terraformRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6438,7 +6438,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the team or organization role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6450,7 +6450,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpCodeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6463,7 +6463,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6476,7 +6476,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitCacheConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6488,7 +6488,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The backend key used for encrypting the data key</param>
         /// <param name="plaintext">\&quot;plaintext\&quot; will return the key in both plaintext and ciphertext; \&quot;wrapped\&quot; will return the ciphertext only.</param>
         /// <param name="transitDatakeyRequest"> (optional)</param>
@@ -6502,7 +6502,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitDecryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6515,7 +6515,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitEncryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6528,7 +6528,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6540,7 +6540,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6553,7 +6553,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="transitHmacRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6566,7 +6566,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHmacRequest"> (optional)</param>
@@ -6580,7 +6580,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6593,7 +6593,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6606,7 +6606,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6619,7 +6619,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6632,7 +6632,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6644,7 +6644,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysTrimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6657,7 +6657,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6669,7 +6669,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6682,7 +6682,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
@@ -6696,7 +6696,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6709,7 +6709,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6721,7 +6721,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">If set, this will be the name of the restored key.</param>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6734,7 +6734,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6747,7 +6747,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6760,7 +6760,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitSignRequest"> (optional)</param>
@@ -6774,7 +6774,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6787,7 +6787,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
@@ -6819,7 +6819,7 @@ namespace Vault.Api
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -6867,7 +6867,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAdConfig()
         {
@@ -6903,7 +6903,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteAdConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -6941,14 +6941,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAdLibraryName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6983,7 +6983,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6991,7 +6991,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdLibraryName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7027,14 +7027,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAdRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7069,7 +7069,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7077,7 +7077,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAdRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7113,7 +7113,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAlicloudConfig()
         {
@@ -7149,7 +7149,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteAlicloudConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -7187,14 +7187,14 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAlicloudRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7229,7 +7229,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7237,7 +7237,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAlicloudRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7273,14 +7273,14 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAwsRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7315,7 +7315,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7323,7 +7323,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAwsRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7359,7 +7359,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAzureConfig()
         {
@@ -7395,7 +7395,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -7433,14 +7433,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAzureRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7475,7 +7475,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7483,7 +7483,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteAzureRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7519,14 +7519,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteConsulRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7561,7 +7561,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7569,7 +7569,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteConsulRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7605,14 +7605,14 @@ namespace Vault.Api
         /// <summary>
         /// Deletes the secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteCubbyholePath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7647,7 +7647,7 @@ namespace Vault.Api
         /// <summary>
         /// Deletes the secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7655,7 +7655,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteCubbyholePath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7691,14 +7691,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpRolesetName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7733,7 +7733,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7741,7 +7741,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpRolesetName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7777,14 +7777,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpStaticAccountName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7819,7 +7819,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7827,7 +7827,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteGcpStaticAccountName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7863,7 +7863,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpkmsConfig()
         {
@@ -7899,7 +7899,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteGcpkmsConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -7937,14 +7937,14 @@ namespace Vault.Api
         /// <summary>
         /// Deregister an existing key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpkmsKeysDeregisterKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7979,7 +7979,7 @@ namespace Vault.Api
         /// <summary>
         /// Deregister an existing key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7987,7 +7987,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysDeregisterKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8023,14 +8023,14 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpkmsKeysKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8065,7 +8065,7 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8073,7 +8073,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8109,14 +8109,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete old crypto key versions from Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGcpkmsKeysTrimKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8151,7 +8151,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete old crypto key versions from Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8159,7 +8159,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->DeleteGcpkmsKeysTrimKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8195,7 +8195,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteKubernetesConfig()
         {
@@ -8231,7 +8231,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteKubernetesConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -8269,14 +8269,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteKubernetesRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8311,7 +8311,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8319,7 +8319,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteKubernetesRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8355,14 +8355,14 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteKvPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8397,7 +8397,7 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8405,7 +8405,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteKvPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8441,14 +8441,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteMongodbatlasRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8483,7 +8483,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8491,7 +8491,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteMongodbatlasRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8527,7 +8527,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteNomadConfigAccess()
         {
@@ -8563,7 +8563,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteNomadConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -8601,7 +8601,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteNomadConfigLease()
         {
@@ -8637,7 +8637,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteNomadConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -8675,14 +8675,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteNomadRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8717,7 +8717,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8725,7 +8725,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteNomadRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8761,7 +8761,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOpenldapConfig()
         {
@@ -8797,7 +8797,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteOpenldapConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -8835,14 +8835,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOpenldapRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8877,7 +8877,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8885,7 +8885,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8921,14 +8921,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOpenldapStaticRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8963,7 +8963,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8971,7 +8971,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteOpenldapStaticRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9007,14 +9007,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePkiIssuerRefDerPem(string issuerRef)
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9049,7 +9049,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9057,7 +9057,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->DeletePkiIssuerRefDerPem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9093,7 +9093,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePkiJson()
         {
@@ -9129,7 +9129,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeletePkiJsonAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -9167,14 +9167,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePkiKeyKeyRef(string keyRef)
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9209,7 +9209,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9217,7 +9217,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->DeletePkiKeyKeyRef");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9253,14 +9253,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePkiRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9295,7 +9295,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9303,7 +9303,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeletePkiRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9339,7 +9339,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePkiRoot()
         {
@@ -9375,7 +9375,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeletePkiRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -9413,14 +9413,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteRabbitmqRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9455,7 +9455,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9463,7 +9463,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteRabbitmqRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9499,14 +9499,14 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSecretDataPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9541,7 +9541,7 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9549,7 +9549,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretDataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9585,14 +9585,14 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSecretMetadataPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9627,7 +9627,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9635,7 +9635,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->DeleteSecretMetadataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9671,7 +9671,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSshConfigCa()
         {
@@ -9707,7 +9707,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteSshConfigCaAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -9745,7 +9745,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSshConfigZeroaddress()
         {
@@ -9781,7 +9781,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteSshConfigZeroaddressAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -9819,14 +9819,14 @@ namespace Vault.Api
         /// <summary>
         /// Register a shared private key with Vault. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSshKeysKeyName(string keyName)
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new ApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9861,7 +9861,7 @@ namespace Vault.Api
         /// <summary>
         /// Register a shared private key with Vault. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9869,7 +9869,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new ApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'keyName' when calling Secrets->DeleteSshKeysKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9905,14 +9905,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSshRolesRole(string role)
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9947,7 +9947,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9955,7 +9955,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->DeleteSshRolesRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9991,7 +9991,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteTerraformConfig()
         {
@@ -10027,7 +10027,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> DeleteTerraformConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -10065,14 +10065,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteTerraformRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10107,7 +10107,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10115,7 +10115,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTerraformRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10151,14 +10151,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteTotpKeysName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10193,7 +10193,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10201,7 +10201,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTotpKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10237,14 +10237,14 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteTransitKeysName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10279,7 +10279,7 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10287,7 +10287,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DeleteTransitKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10323,7 +10323,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdConfig()
         {
@@ -10359,7 +10359,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAdConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -10397,14 +10397,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10439,7 +10439,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10447,7 +10447,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10483,14 +10483,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdLibrary(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10525,7 +10525,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10533,7 +10533,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdLibrary");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10569,14 +10569,14 @@ namespace Vault.Api
         /// <summary>
         /// Read a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdLibraryName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10611,7 +10611,7 @@ namespace Vault.Api
         /// <summary>
         /// Read a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10619,7 +10619,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10655,14 +10655,14 @@ namespace Vault.Api
         /// <summary>
         /// Check the status of the service accounts in a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdLibraryNameStatus(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10697,7 +10697,7 @@ namespace Vault.Api
         /// <summary>
         /// Check the status of the service accounts in a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10705,7 +10705,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdLibraryNameStatus");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10741,14 +10741,14 @@ namespace Vault.Api
         /// <summary>
         /// List the name of each role currently stored. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10783,7 +10783,7 @@ namespace Vault.Api
         /// <summary>
         /// List the name of each role currently stored. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10791,7 +10791,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAdRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10827,14 +10827,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10869,7 +10869,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10877,7 +10877,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAdRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10913,7 +10913,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAdRotateRoot()
         {
@@ -10949,7 +10949,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAdRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -10987,7 +10987,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAlicloudConfig()
         {
@@ -11023,7 +11023,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAlicloudConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -11061,14 +11061,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate an API key or STS credential using the given role&#39;s configuration.&#39; 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAlicloudCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11103,7 +11103,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an API key or STS credential using the given role&#39;s configuration.&#39; 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11111,7 +11111,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11147,14 +11147,14 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAlicloudRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11189,7 +11189,7 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11197,7 +11197,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAlicloudRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11233,14 +11233,14 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAlicloudRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11275,7 +11275,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11283,7 +11283,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAlicloudRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11319,7 +11319,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the default lease information for generated credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsConfigLease()
         {
@@ -11355,7 +11355,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the default lease information for generated credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAwsConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -11393,7 +11393,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the root credentials that are used to manage IAM. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsConfigRoot()
         {
@@ -11429,7 +11429,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the root credentials that are used to manage IAM. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAwsConfigRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -11467,7 +11467,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsCreds()
         {
@@ -11503,7 +11503,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAwsCredsAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -11541,14 +11541,14 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11583,7 +11583,7 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11591,7 +11591,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAwsRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11627,14 +11627,14 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11669,7 +11669,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11677,7 +11677,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11713,14 +11713,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAwsStsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11755,7 +11755,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11763,7 +11763,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAwsStsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11799,7 +11799,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAzureConfig()
         {
@@ -11835,7 +11835,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -11873,14 +11873,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the Vault role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAzureCredsRole(string role)
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11915,7 +11915,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the Vault role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11923,7 +11923,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetAzureCredsRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11959,14 +11959,14 @@ namespace Vault.Api
         /// <summary>
         /// List existing roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAzureRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12001,7 +12001,7 @@ namespace Vault.Api
         /// <summary>
         /// List existing roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12009,7 +12009,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetAzureRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12045,14 +12045,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAzureRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12087,7 +12087,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12095,7 +12095,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetAzureRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12131,7 +12131,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetConsulConfigAccess()
         {
@@ -12167,7 +12167,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetConsulConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -12205,14 +12205,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetConsulCredsRole(string role)
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12247,7 +12247,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12255,7 +12255,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetConsulCredsRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12291,14 +12291,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetConsulRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12333,7 +12333,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12341,7 +12341,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetConsulRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12377,14 +12377,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetConsulRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12419,7 +12419,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12427,7 +12427,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetConsulRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12463,7 +12463,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -12471,7 +12471,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12510,7 +12510,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12519,7 +12519,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetCubbyholePath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12559,7 +12559,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpConfig()
         {
@@ -12595,7 +12595,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetGcpConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -12633,14 +12633,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpKeyRoleset(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12675,7 +12675,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12683,7 +12683,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpKeyRoleset");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12719,14 +12719,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpRolesetName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12761,7 +12761,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12769,7 +12769,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpRolesetName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12805,14 +12805,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpRolesetRolesetKey(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12847,7 +12847,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12855,7 +12855,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12891,14 +12891,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpRolesetRolesetToken(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12933,7 +12933,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -12941,7 +12941,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpRolesetRolesetToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12977,14 +12977,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpRolesets(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13019,7 +13019,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13027,7 +13027,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpRolesets");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13063,14 +13063,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpStaticAccountName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13105,7 +13105,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13113,7 +13113,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13149,14 +13149,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpStaticAccountNameKey(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13191,7 +13191,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13199,7 +13199,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13235,14 +13235,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpStaticAccountNameToken(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13277,7 +13277,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13285,7 +13285,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetGcpStaticAccountNameToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13321,14 +13321,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpStaticAccounts(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13363,7 +13363,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13371,7 +13371,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpStaticAccounts");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13407,14 +13407,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpTokenRoleset(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13449,7 +13449,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13457,7 +13457,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GetGcpTokenRoleset");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13493,7 +13493,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpkmsConfig()
         {
@@ -13529,7 +13529,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetGcpkmsConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -13567,14 +13567,14 @@ namespace Vault.Api
         /// <summary>
         /// List named keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpkmsKeys(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13609,7 +13609,7 @@ namespace Vault.Api
         /// <summary>
         /// List named keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13617,7 +13617,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetGcpkmsKeys");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13653,14 +13653,14 @@ namespace Vault.Api
         /// <summary>
         /// Configure the key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpkmsKeysConfigKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13695,7 +13695,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13703,7 +13703,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysConfigKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13739,14 +13739,14 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpkmsKeysKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13781,7 +13781,7 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13789,7 +13789,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsKeysKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13825,14 +13825,14 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the public key associated with the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetGcpkmsPubkeyKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13867,7 +13867,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the public key associated with the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -13875,7 +13875,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GetGcpkmsPubkeyKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13911,7 +13911,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetKubernetesConfig()
         {
@@ -13947,7 +13947,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetKubernetesConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -13985,14 +13985,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetKubernetesRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14027,7 +14027,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14035,7 +14035,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetKubernetesRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14071,14 +14071,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetKubernetesRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14113,7 +14113,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14121,7 +14121,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetKubernetesRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14157,7 +14157,7 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -14165,7 +14165,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14204,7 +14204,7 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14213,7 +14213,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetKvPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14253,7 +14253,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetMongodbatlasConfig()
         {
@@ -14289,7 +14289,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetMongodbatlasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -14327,14 +14327,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetMongodbatlasCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14369,7 +14369,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14377,7 +14377,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14413,14 +14413,14 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetMongodbatlasRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14455,7 +14455,7 @@ namespace Vault.Api
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14463,7 +14463,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetMongodbatlasRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14499,14 +14499,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetMongodbatlasRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14541,7 +14541,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14549,7 +14549,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetMongodbatlasRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14585,7 +14585,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetNomadConfigAccess()
         {
@@ -14621,7 +14621,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetNomadConfigAccessAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -14659,7 +14659,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetNomadConfigLease()
         {
@@ -14695,7 +14695,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetNomadConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -14733,14 +14733,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetNomadCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14775,7 +14775,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14783,7 +14783,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14819,14 +14819,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetNomadRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14861,7 +14861,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14869,7 +14869,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetNomadRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14905,14 +14905,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetNomadRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14947,7 +14947,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -14955,7 +14955,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetNomadRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14991,7 +14991,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapConfig()
         {
@@ -15027,7 +15027,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetOpenldapConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15065,14 +15065,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the dynamic role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15107,7 +15107,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the dynamic role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15115,7 +15115,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15151,14 +15151,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15193,7 +15193,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15201,7 +15201,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15237,14 +15237,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15279,7 +15279,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15287,7 +15287,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15323,14 +15323,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapStaticCredName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15365,7 +15365,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15373,7 +15373,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticCredName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15409,14 +15409,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapStaticRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15451,7 +15451,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15459,7 +15459,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetOpenldapStaticRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15495,14 +15495,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetOpenldapStaticRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15537,7 +15537,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -15545,7 +15545,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetOpenldapStaticRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15581,7 +15581,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCa()
         {
@@ -15617,7 +15617,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCaAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15655,7 +15655,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCaChain()
         {
@@ -15691,7 +15691,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCaChainAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15729,7 +15729,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCaPem()
         {
@@ -15765,7 +15765,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCaPemAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15803,7 +15803,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCertCaChain()
         {
@@ -15839,7 +15839,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCertCaChainAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15877,7 +15877,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCertCrl()
         {
@@ -15913,7 +15913,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCertCrlAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -15951,14 +15951,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCertSerial(string serial)
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15993,7 +15993,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -16001,7 +16001,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerial");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16037,14 +16037,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCertSerialRaw(string serial)
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16079,7 +16079,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -16087,7 +16087,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRaw");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16123,14 +16123,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCertSerialRawPem(string serial)
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16165,7 +16165,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="serial">Certificate serial number, in colon- or hyphen-separated octal</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -16173,7 +16173,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'serial' is set
             if (serial == null)
-                throw new ApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
+                throw new VaultApiException(400, "Missing required parameter 'serial' when calling Secrets->GetPkiCertSerialRawPem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16209,14 +16209,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCerts(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16251,7 +16251,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -16259,7 +16259,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiCerts");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16295,7 +16295,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiConfigCrl()
         {
@@ -16331,7 +16331,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiConfigCrlAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16369,7 +16369,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiConfigIssuers()
         {
@@ -16405,7 +16405,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiConfigIssuersAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16443,7 +16443,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiConfigKeys()
         {
@@ -16479,7 +16479,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiConfigKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16517,7 +16517,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiConfigUrls()
         {
@@ -16553,7 +16553,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiConfigUrlsAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16591,7 +16591,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCrl()
         {
@@ -16627,7 +16627,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCrlAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16665,7 +16665,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCrlPem()
         {
@@ -16701,7 +16701,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCrlPemAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16739,7 +16739,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiCrlRotate()
         {
@@ -16775,7 +16775,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiCrlRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16813,7 +16813,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiDer()
         {
@@ -16849,7 +16849,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiDerAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -16887,14 +16887,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiIssuerRefCrlPem(string issuerRef)
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16929,7 +16929,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -16937,7 +16937,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefCrlPem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16973,14 +16973,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiIssuerRefDerPem(string issuerRef)
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17015,7 +17015,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17023,7 +17023,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->GetPkiIssuerRefDerPem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17059,14 +17059,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiIssuers(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17101,7 +17101,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17109,7 +17109,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiIssuers");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17145,7 +17145,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiJson()
         {
@@ -17181,7 +17181,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiJsonAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -17219,14 +17219,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiKeyKeyRef(string keyRef)
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17261,7 +17261,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17269,7 +17269,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->GetPkiKeyKeyRef");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17305,14 +17305,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiKeys(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17347,7 +17347,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17355,7 +17355,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiKeys");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17391,14 +17391,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17433,7 +17433,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17441,7 +17441,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetPkiRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17477,14 +17477,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17519,7 +17519,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17527,7 +17527,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetPkiRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17563,7 +17563,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetPkiTidyStatus()
         {
@@ -17599,7 +17599,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetPkiTidyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -17637,7 +17637,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated credentials 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetRabbitmqConfigLease()
         {
@@ -17673,7 +17673,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated credentials 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetRabbitmqConfigLeaseAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -17711,14 +17711,14 @@ namespace Vault.Api
         /// <summary>
         /// Request RabbitMQ credentials for a certain role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetRabbitmqCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17753,7 +17753,7 @@ namespace Vault.Api
         /// <summary>
         /// Request RabbitMQ credentials for a certain role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17761,7 +17761,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17797,14 +17797,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetRabbitmqRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17839,7 +17839,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17847,7 +17847,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetRabbitmqRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17883,14 +17883,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetRabbitmqRolesName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17925,7 +17925,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -17933,7 +17933,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetRabbitmqRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17969,7 +17969,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the backend level settings. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSecretConfig()
         {
@@ -18005,7 +18005,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the backend level settings. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetSecretConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -18043,14 +18043,14 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSecretDataPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18085,7 +18085,7 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18093,7 +18093,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretDataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18129,7 +18129,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -18137,7 +18137,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18176,7 +18176,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18185,7 +18185,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretMetadataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18225,14 +18225,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the structure of a secret entry from the Key-Value store with the values removed. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSecretSubkeysPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18267,7 +18267,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the structure of a secret entry from the Key-Value store with the values removed. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18275,7 +18275,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->GetSecretSubkeysPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18311,7 +18311,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSshConfigCa()
         {
@@ -18347,7 +18347,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetSshConfigCaAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -18385,7 +18385,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSshConfigZeroaddress()
         {
@@ -18421,7 +18421,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetSshConfigZeroaddressAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -18459,7 +18459,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the public key. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSshPublicKey()
         {
@@ -18495,7 +18495,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the public key. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetSshPublicKeyAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -18533,14 +18533,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSshRoles(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18575,7 +18575,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18583,7 +18583,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetSshRoles");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18619,14 +18619,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSshRolesRole(string role)
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18661,7 +18661,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18669,7 +18669,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->GetSshRolesRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18705,7 +18705,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTerraformConfig()
         {
@@ -18741,7 +18741,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetTerraformConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -18779,14 +18779,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTerraformCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18821,7 +18821,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18829,7 +18829,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18865,14 +18865,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTerraformRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18907,7 +18907,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -18915,7 +18915,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTerraformRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18951,14 +18951,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTerraformRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18993,7 +18993,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19001,7 +19001,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTerraformRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19037,14 +19037,14 @@ namespace Vault.Api
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key . 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTotpCodeName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19079,7 +19079,7 @@ namespace Vault.Api
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key . 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19087,7 +19087,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpCodeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19123,14 +19123,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTotpKeys(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19165,7 +19165,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19173,7 +19173,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTotpKeys");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19209,14 +19209,14 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTotpKeysName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19251,7 +19251,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19259,7 +19259,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTotpKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19295,14 +19295,14 @@ namespace Vault.Api
         /// <summary>
         /// Backup the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTransitBackupName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19337,7 +19337,7 @@ namespace Vault.Api
         /// <summary>
         /// Backup the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19345,7 +19345,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitBackupName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19381,7 +19381,7 @@ namespace Vault.Api
         /// <summary>
         /// Returns the size of the active cache 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTransitCacheConfig()
         {
@@ -19417,7 +19417,7 @@ namespace Vault.Api
         /// <summary>
         /// Returns the size of the active cache 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetTransitCacheConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -19455,7 +19455,7 @@ namespace Vault.Api
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -19463,11 +19463,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19503,7 +19503,7 @@ namespace Vault.Api
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19512,11 +19512,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19553,7 +19553,7 @@ namespace Vault.Api
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="version">Version of the key</param>
@@ -19562,15 +19562,15 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'version' is set
             if (version == null)
-                throw new ApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19607,7 +19607,7 @@ namespace Vault.Api
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
         /// <param name="version">Version of the key</param>
@@ -19617,15 +19617,15 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling Secrets->GetTransitExportTypeNameVersion");
 
             // verify the required parameter 'version' is set
             if (version == null)
-                throw new ApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
+                throw new VaultApiException(400, "Missing required parameter 'version' when calling Secrets->GetTransitExportTypeNameVersion");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19663,14 +19663,14 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTransitKeys(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19705,7 +19705,7 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19713,7 +19713,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Secrets->GetTransitKeys");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19749,14 +19749,14 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTransitKeysName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19791,7 +19791,7 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19799,7 +19799,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GetTransitKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19835,7 +19835,7 @@ namespace Vault.Api
         /// <summary>
         /// Returns the public key to use for wrapping imported keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetTransitWrappingKey()
         {
@@ -19871,7 +19871,7 @@ namespace Vault.Api
         /// <summary>
         /// Returns the public key to use for wrapping imported keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetTransitWrappingKeyAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -19909,7 +19909,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="adConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAdConfig(AdConfigRequest adConfigRequest = default(AdConfigRequest))
@@ -19948,7 +19948,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the AD server to connect to, along with password options. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="adConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -19989,7 +19989,7 @@ namespace Vault.Api
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryManageCheckInRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -19997,7 +19997,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20034,7 +20034,7 @@ namespace Vault.Api
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryManageCheckInRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20043,7 +20043,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryManageNameCheckIn");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20081,7 +20081,7 @@ namespace Vault.Api
         /// <summary>
         /// Update a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -20089,7 +20089,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20126,7 +20126,7 @@ namespace Vault.Api
         /// <summary>
         /// Update a library set. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20135,7 +20135,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20173,7 +20173,7 @@ namespace Vault.Api
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryCheckInRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -20181,7 +20181,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20218,7 +20218,7 @@ namespace Vault.Api
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set.</param>
         /// <param name="adLibraryCheckInRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20227,7 +20227,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckIn");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20265,7 +20265,7 @@ namespace Vault.Api
         /// <summary>
         /// Check a service account out from the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set</param>
         /// <param name="adLibraryCheckOutRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -20273,7 +20273,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20310,7 +20310,7 @@ namespace Vault.Api
         /// <summary>
         /// Check a service account out from the library. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the set</param>
         /// <param name="adLibraryCheckOutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20319,7 +20319,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdLibraryNameCheckOut");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20357,7 +20357,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="adRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -20365,7 +20365,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20402,7 +20402,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="adRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20411,7 +20411,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20449,14 +20449,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAdRotateRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20491,7 +20491,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -20499,7 +20499,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAdRotateRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20535,7 +20535,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAdRotateRoot()
         {
@@ -20571,7 +20571,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> PostAdRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -20609,7 +20609,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAlicloudConfig(AlicloudConfigRequest alicloudConfigRequest = default(AlicloudConfigRequest))
@@ -20648,7 +20648,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -20689,7 +20689,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="alicloudRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -20697,7 +20697,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20734,7 +20734,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the role.</param>
         /// <param name="alicloudRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20743,7 +20743,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAlicloudRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20781,7 +20781,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the default lease information for generated credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAwsConfigLease(AwsConfigLeaseRequest awsConfigLeaseRequest = default(AwsConfigLeaseRequest))
@@ -20820,7 +20820,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the default lease information for generated credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -20861,7 +20861,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the root credentials that are used to manage IAM. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAwsConfigRoot(AwsConfigRootRequest awsConfigRootRequest = default(AwsConfigRootRequest))
@@ -20900,7 +20900,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the root credentials that are used to manage IAM. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsConfigRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -20941,7 +20941,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAwsConfigRotateRoot()
         {
@@ -20977,7 +20977,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> PostAwsConfigRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -21015,7 +21015,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAwsCreds(AwsCredsRequest awsCredsRequest = default(AwsCredsRequest))
@@ -21054,7 +21054,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -21095,7 +21095,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="awsRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -21103,7 +21103,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21140,7 +21140,7 @@ namespace Vault.Api
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="awsRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21149,7 +21149,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21187,7 +21187,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsStsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -21195,7 +21195,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21232,7 +21232,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate AWS credentials from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsStsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21241,7 +21241,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAwsStsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21279,7 +21279,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAzureConfig(AzureConfigRequest azureConfigRequest = default(AzureConfigRequest))
@@ -21318,7 +21318,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -21359,7 +21359,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="azureRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -21367,7 +21367,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21404,7 +21404,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="azureRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21413,7 +21413,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostAzureRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21451,7 +21451,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostAzureRotateRoot()
         {
@@ -21487,7 +21487,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> PostAzureRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -21525,7 +21525,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="consulConfigAccessRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostConsulConfigAccess(ConsulConfigAccessRequest consulConfigAccessRequest = default(ConsulConfigAccessRequest))
@@ -21564,7 +21564,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="consulConfigAccessRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -21605,7 +21605,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="consulRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -21613,7 +21613,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21650,7 +21650,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="consulRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21659,7 +21659,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostConsulRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21697,14 +21697,14 @@ namespace Vault.Api
         /// <summary>
         /// Store a secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostCubbyholePath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21739,7 +21739,7 @@ namespace Vault.Api
         /// <summary>
         /// Store a secret at the specified location. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -21747,7 +21747,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostCubbyholePath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21783,7 +21783,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpConfig(GcpConfigRequest gcpConfigRequest = default(GcpConfigRequest))
@@ -21822,7 +21822,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -21863,7 +21863,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpConfigRotateRoot()
         {
@@ -21899,7 +21899,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> PostGcpConfigRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -21937,7 +21937,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -21945,7 +21945,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21982,7 +21982,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21991,7 +21991,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpKeyRoleset");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22029,7 +22029,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="gcpRolesetRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -22037,7 +22037,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22074,7 +22074,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the role.</param>
         /// <param name="gcpRolesetRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22083,7 +22083,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22121,14 +22121,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpRolesetNameRotate(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22163,7 +22163,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22171,7 +22171,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22207,14 +22207,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpRolesetNameRotateKey(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22249,7 +22249,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22257,7 +22257,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpRolesetNameRotateKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22293,7 +22293,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpRolesetKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -22301,7 +22301,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22338,7 +22338,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpRolesetKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22347,7 +22347,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22385,14 +22385,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpRolesetRolesetToken(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22427,7 +22427,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22435,7 +22435,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpRolesetRolesetToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22471,7 +22471,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="gcpStaticAccountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -22479,7 +22479,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22516,7 +22516,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name to refer to this static account in Vault. Cannot be updated.</param>
         /// <param name="gcpStaticAccountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22525,7 +22525,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22563,7 +22563,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpStaticAccountKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -22571,7 +22571,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22608,7 +22608,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpStaticAccountKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22617,7 +22617,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22655,14 +22655,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpStaticAccountNameRotateKey(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22697,7 +22697,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22705,7 +22705,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameRotateKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22741,14 +22741,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpStaticAccountNameToken(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22783,7 +22783,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22791,7 +22791,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostGcpStaticAccountNameToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22827,14 +22827,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpTokenRoleset(string roleset)
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22869,7 +22869,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22877,7 +22877,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new ApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->PostGcpTokenRoleset");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22913,7 +22913,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpkmsConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpkmsConfig(GcpkmsConfigRequest gcpkmsConfigRequest = default(GcpkmsConfigRequest))
@@ -22952,7 +22952,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the GCP KMS secrets engine 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpkmsConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -22993,7 +22993,7 @@ namespace Vault.Api
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsDecryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23001,7 +23001,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23038,7 +23038,7 @@ namespace Vault.Api
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsDecryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23047,7 +23047,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsDecryptKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23085,7 +23085,7 @@ namespace Vault.Api
         /// <summary>
         /// Encrypt a plaintext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsEncryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23093,7 +23093,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23130,7 +23130,7 @@ namespace Vault.Api
         /// <summary>
         /// Encrypt a plaintext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsEncryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23139,7 +23139,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsEncryptKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23177,7 +23177,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23185,7 +23185,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23222,7 +23222,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23231,7 +23231,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysConfigKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23269,14 +23269,14 @@ namespace Vault.Api
         /// <summary>
         /// Deregister an existing key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpkmsKeysDeregisterKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23311,7 +23311,7 @@ namespace Vault.Api
         /// <summary>
         /// Deregister an existing key in Vault 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -23319,7 +23319,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysDeregisterKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23355,7 +23355,7 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23363,7 +23363,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23400,7 +23400,7 @@ namespace Vault.Api
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="gcpkmsKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23409,7 +23409,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23447,7 +23447,7 @@ namespace Vault.Api
         /// <summary>
         /// Register an existing crypto key in Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.</param>
         /// <param name="gcpkmsKeysRegisterRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23455,7 +23455,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23492,7 +23492,7 @@ namespace Vault.Api
         /// <summary>
         /// Register an existing crypto key in Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.</param>
         /// <param name="gcpkmsKeysRegisterRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23501,7 +23501,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRegisterKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23539,14 +23539,14 @@ namespace Vault.Api
         /// <summary>
         /// Rotate a crypto key to a new primary version 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpkmsKeysRotateKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23581,7 +23581,7 @@ namespace Vault.Api
         /// <summary>
         /// Rotate a crypto key to a new primary version 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -23589,7 +23589,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysRotateKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23625,14 +23625,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete old crypto key versions from Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostGcpkmsKeysTrimKey(string key)
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23667,7 +23667,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete old crypto key versions from Google Cloud KMS 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -23675,7 +23675,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsKeysTrimKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23711,7 +23711,7 @@ namespace Vault.Api
         /// <summary>
         /// Re-encrypt existing ciphertext data to a new version 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="gcpkmsReencryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23719,7 +23719,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23756,7 +23756,7 @@ namespace Vault.Api
         /// <summary>
         /// Re-encrypt existing ciphertext data to a new version 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.</param>
         /// <param name="gcpkmsReencryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23765,7 +23765,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsReencryptKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23803,7 +23803,7 @@ namespace Vault.Api
         /// <summary>
         /// Signs a message or digest using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23811,7 +23811,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23848,7 +23848,7 @@ namespace Vault.Api
         /// <summary>
         /// Signs a message or digest using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23857,7 +23857,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsSignKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23895,7 +23895,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -23903,7 +23903,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23940,7 +23940,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="key">Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.</param>
         /// <param name="gcpkmsVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23949,7 +23949,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'key' is set
             if (key == null)
-                throw new ApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
+                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->PostGcpkmsVerifyKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23987,7 +23987,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest = default(KubernetesConfigRequest))
@@ -24026,7 +24026,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24067,7 +24067,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Vault role</param>
         /// <param name="kubernetesCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -24075,7 +24075,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24112,7 +24112,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Vault role</param>
         /// <param name="kubernetesCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24121,7 +24121,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24159,7 +24159,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="kubernetesRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -24167,7 +24167,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24204,7 +24204,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="kubernetesRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24213,7 +24213,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostKubernetesRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24251,14 +24251,14 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostKvPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24293,7 +24293,7 @@ namespace Vault.Api
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24301,7 +24301,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostKvPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24337,7 +24337,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mongodbatlasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostMongodbatlasConfig(MongodbatlasConfigRequest mongodbatlasConfigRequest = default(MongodbatlasConfigRequest))
@@ -24376,7 +24376,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mongodbatlasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24417,14 +24417,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostMongodbatlasCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24459,7 +24459,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24467,7 +24467,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24503,7 +24503,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="mongodbatlasRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -24511,7 +24511,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24548,7 +24548,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the Roles</param>
         /// <param name="mongodbatlasRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24557,7 +24557,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostMongodbatlasRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24595,7 +24595,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigAccessRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostNomadConfigAccess(NomadConfigAccessRequest nomadConfigAccessRequest = default(NomadConfigAccessRequest))
@@ -24634,7 +24634,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigAccessRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24675,7 +24675,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostNomadConfigLease(NomadConfigLeaseRequest nomadConfigLeaseRequest = default(NomadConfigLeaseRequest))
@@ -24714,7 +24714,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated tokens 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="nomadConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24755,7 +24755,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="nomadRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -24763,7 +24763,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24800,7 +24800,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="nomadRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24809,7 +24809,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostNomadRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -24847,7 +24847,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="openldapConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostOpenldapConfig(OpenldapConfigRequest openldapConfigRequest = default(OpenldapConfigRequest))
@@ -24886,7 +24886,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="openldapConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -24927,7 +24927,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="openldapRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -24935,7 +24935,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24972,7 +24972,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role (lowercase)</param>
         /// <param name="openldapRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24981,7 +24981,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -25019,14 +25019,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostOpenldapRotateRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -25061,7 +25061,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the static role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25069,7 +25069,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapRotateRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -25105,7 +25105,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostOpenldapRotateRoot()
         {
@@ -25141,7 +25141,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> PostOpenldapRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -25179,7 +25179,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="openldapStaticRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -25187,7 +25187,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -25224,7 +25224,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="openldapStaticRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25233,7 +25233,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostOpenldapStaticRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -25271,7 +25271,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBundleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiBundle(PkiBundleRequest pkiBundleRequest = default(PkiBundleRequest))
@@ -25310,7 +25310,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiBundleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25351,7 +25351,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCertRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiCert(PkiCertRequest pkiCertRequest = default(PkiCertRequest))
@@ -25390,7 +25390,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCertRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25431,7 +25431,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiConfigCa(PkiConfigCaRequest pkiConfigCaRequest = default(PkiConfigCaRequest))
@@ -25470,7 +25470,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25511,7 +25511,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCrlRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiConfigCrl(PkiConfigCrlRequest pkiConfigCrlRequest = default(PkiConfigCrlRequest))
@@ -25550,7 +25550,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigCrlRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25591,7 +25591,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigIssuersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiConfigIssuers(PkiConfigIssuersRequest pkiConfigIssuersRequest = default(PkiConfigIssuersRequest))
@@ -25630,7 +25630,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigIssuersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25671,7 +25671,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiConfigKeys(PkiConfigKeysRequest pkiConfigKeysRequest = default(PkiConfigKeysRequest))
@@ -25710,7 +25710,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25751,7 +25751,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigUrlsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiConfigUrls(PkiConfigUrlsRequest pkiConfigUrlsRequest = default(PkiConfigUrlsRequest))
@@ -25790,7 +25790,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigUrlsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25831,7 +25831,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateCrossSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiIntermediateCrossSign(PkiIntermediateCrossSignRequest pkiIntermediateCrossSignRequest = default(PkiIntermediateCrossSignRequest))
@@ -25870,7 +25870,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateCrossSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -25911,7 +25911,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIntermediateGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -25919,7 +25919,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -25956,7 +25956,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIntermediateGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25965,7 +25965,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIntermediateGenerateExported");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26003,7 +26003,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateSetSignedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiIntermediateSetSigned(PkiIntermediateSetSignedRequest pkiIntermediateSetSignedRequest = default(PkiIntermediateSetSignedRequest))
@@ -26042,7 +26042,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiIntermediateSetSignedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -26083,7 +26083,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiInternalExportedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiInternalExported(PkiInternalExportedRequest pkiInternalExportedRequest = default(PkiInternalExportedRequest))
@@ -26122,7 +26122,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiInternalExportedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -26163,7 +26163,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssueRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26171,7 +26171,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26208,7 +26208,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssueRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26217,7 +26217,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssueRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26255,7 +26255,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerIssueRequest"> (optional)</param>
@@ -26264,11 +26264,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26306,7 +26306,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerIssueRequest"> (optional)</param>
@@ -26316,11 +26316,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefIssueRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26359,7 +26359,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26367,7 +26367,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26404,7 +26404,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26413,7 +26413,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignIntermediate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26451,7 +26451,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignRequest"> (optional)</param>
@@ -26460,11 +26460,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26502,7 +26502,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignRequest"> (optional)</param>
@@ -26512,11 +26512,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26555,7 +26555,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignSelfIssuedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26563,7 +26563,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26600,7 +26600,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignSelfIssuedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26609,7 +26609,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignSelfIssued");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26647,7 +26647,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26655,7 +26655,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26692,7 +26692,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26701,7 +26701,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatim");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26739,7 +26739,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
@@ -26748,11 +26748,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26790,7 +26790,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiIssuerSignVerbatimRequest"> (optional)</param>
@@ -26800,11 +26800,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiIssuerIssuerRefSignVerbatimRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26843,7 +26843,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiDerPemRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26851,7 +26851,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26888,7 +26888,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiDerPemRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26897,7 +26897,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'issuerRef' is set
             if (issuerRef == null)
-                throw new ApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PostPkiIssuerRefDerPem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -26935,7 +26935,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -26943,7 +26943,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26980,7 +26980,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26989,7 +26989,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateIntermediateExported");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27027,7 +27027,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -27035,7 +27035,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27072,7 +27072,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiIssuersGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27081,7 +27081,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiIssuersGenerateRootExported");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27119,7 +27119,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiJsonRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiJson(PkiJsonRequest pkiJsonRequest = default(PkiJsonRequest))
@@ -27158,7 +27158,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiJsonRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27199,7 +27199,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="pkiKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -27207,7 +27207,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27244,7 +27244,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyRef">Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key.</param>
         /// <param name="pkiKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27253,7 +27253,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyRef' is set
             if (keyRef == null)
-                throw new ApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
+                throw new VaultApiException(400, "Missing required parameter 'keyRef' when calling Secrets->PostPkiKeyKeyRef");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27291,7 +27291,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKeysImportRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiKeysImport(PkiKeysImportRequest pkiKeysImportRequest = default(PkiKeysImportRequest))
@@ -27330,7 +27330,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKeysImportRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27371,7 +27371,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKmsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiKms(PkiKmsRequest pkiKmsRequest = default(PkiKmsRequest))
@@ -27410,7 +27410,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiKmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27451,7 +27451,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiRevoke(PkiRevokeRequest pkiRevokeRequest = default(PkiRevokeRequest))
@@ -27490,7 +27490,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27531,7 +27531,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="pkiRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -27539,7 +27539,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27576,7 +27576,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="pkiRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27585,7 +27585,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostPkiRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27623,7 +27623,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -27631,7 +27631,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27668,7 +27668,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27677,7 +27677,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootGenerateExported");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27715,7 +27715,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootReplaceRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiRootReplace(PkiRootReplaceRequest pkiRootReplaceRequest = default(PkiRootReplaceRequest))
@@ -27754,7 +27754,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootReplaceRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27795,7 +27795,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -27803,7 +27803,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27840,7 +27840,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiRootRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27849,7 +27849,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'exported' is set
             if (exported == null)
-                throw new ApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PostPkiRootRotateExported");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27887,7 +27887,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignIntermediateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiRootSignIntermediate(PkiRootSignIntermediateRequest pkiRootSignIntermediateRequest = default(PkiRootSignIntermediateRequest))
@@ -27926,7 +27926,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignIntermediateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -27967,7 +27967,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignSelfIssuedRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiRootSignSelfIssued(PkiRootSignSelfIssuedRequest pkiRootSignSelfIssuedRequest = default(PkiRootSignSelfIssuedRequest))
@@ -28006,7 +28006,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiRootSignSelfIssuedRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28047,7 +28047,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28055,7 +28055,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28092,7 +28092,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28101,7 +28101,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28139,7 +28139,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiSignVerbatim(PkiSignVerbatimRequest pkiSignVerbatimRequest = default(PkiSignVerbatimRequest))
@@ -28178,7 +28178,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28219,7 +28219,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28227,7 +28227,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28264,7 +28264,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request</param>
         /// <param name="pkiSignVerbatimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28273,7 +28273,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostPkiSignVerbatimRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28311,7 +28311,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiTidyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostPkiTidy(PkiTidyRequest pkiTidyRequest = default(PkiTidyRequest))
@@ -28350,7 +28350,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiTidyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28391,7 +28391,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigConnectionRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostRabbitmqConfigConnection(RabbitmqConfigConnectionRequest rabbitmqConfigConnectionRequest = default(RabbitmqConfigConnectionRequest))
@@ -28430,7 +28430,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigConnectionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28471,7 +28471,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated credentials 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostRabbitmqConfigLease(RabbitmqConfigLeaseRequest rabbitmqConfigLeaseRequest = default(RabbitmqConfigLeaseRequest))
@@ -28510,7 +28510,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure the lease parameters for generated credentials 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="rabbitmqConfigLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28551,7 +28551,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="rabbitmqRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28559,7 +28559,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28596,7 +28596,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role.</param>
         /// <param name="rabbitmqRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28605,7 +28605,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostRabbitmqRolesName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28643,7 +28643,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kvConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSecretConfig(KvConfigRequest kvConfigRequest = default(KvConfigRequest))
@@ -28682,7 +28682,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kvConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -28723,7 +28723,7 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDataRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28731,7 +28731,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28768,7 +28768,7 @@ namespace Vault.Api
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDataRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28777,7 +28777,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28815,7 +28815,7 @@ namespace Vault.Api
         /// <summary>
         /// Marks one or more versions as deleted in the KV store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28823,7 +28823,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28860,7 +28860,7 @@ namespace Vault.Api
         /// <summary>
         /// Marks one or more versions as deleted in the KV store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28869,7 +28869,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDeletePath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28907,7 +28907,7 @@ namespace Vault.Api
         /// <summary>
         /// Permanently removes one or more versions in the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -28915,7 +28915,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28952,7 +28952,7 @@ namespace Vault.Api
         /// <summary>
         /// Permanently removes one or more versions in the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28961,7 +28961,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretDestroyPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -28999,7 +28999,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMetadataRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29007,7 +29007,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29044,7 +29044,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures settings for the KV store 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMetadataRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29053,7 +29053,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretMetadataPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29091,7 +29091,7 @@ namespace Vault.Api
         /// <summary>
         /// Undeletes one or more versions from the KV store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvUndeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29099,7 +29099,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29136,7 +29136,7 @@ namespace Vault.Api
         /// <summary>
         /// Undeletes one or more versions from the KV store. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvUndeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29145,7 +29145,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new ApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->PostSecretUndeletePath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29183,7 +29183,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigCaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSshConfigCa(SshConfigCaRequest sshConfigCaRequest = default(SshConfigCaRequest))
@@ -29222,7 +29222,7 @@ namespace Vault.Api
         /// <summary>
         /// Set the SSH private key used for signing certificates. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigCaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -29263,7 +29263,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigZeroaddressRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSshConfigZeroaddress(SshConfigZeroaddressRequest sshConfigZeroaddressRequest = default(SshConfigZeroaddressRequest))
@@ -29302,7 +29302,7 @@ namespace Vault.Api
         /// <summary>
         /// Assign zero address as default CIDR block for select roles. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshConfigZeroaddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -29343,7 +29343,7 @@ namespace Vault.Api
         /// <summary>
         /// Creates a credential for establishing SSH connection with the remote host. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required] Name of the role</param>
         /// <param name="sshCredsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29351,7 +29351,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29388,7 +29388,7 @@ namespace Vault.Api
         /// <summary>
         /// Creates a credential for establishing SSH connection with the remote host. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required] Name of the role</param>
         /// <param name="sshCredsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29397,7 +29397,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshCredsRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29435,7 +29435,7 @@ namespace Vault.Api
         /// <summary>
         /// Register a shared private key with Vault. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="sshKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29443,7 +29443,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new ApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29480,7 +29480,7 @@ namespace Vault.Api
         /// <summary>
         /// Register a shared private key with Vault. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="keyName">[Required] Name of the key</param>
         /// <param name="sshKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29489,7 +29489,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'keyName' is set
             if (keyName == null)
-                throw new ApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'keyName' when calling Secrets->PostSshKeysKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29527,7 +29527,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the roles associated with the given IP address. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSshLookup(SshLookupRequest sshLookupRequest = default(SshLookupRequest))
@@ -29566,7 +29566,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the roles associated with the given IP address. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -29607,7 +29607,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="sshRolesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29615,7 +29615,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29652,7 +29652,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">[Required for all types] Name of the role being created.</param>
         /// <param name="sshRolesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29661,7 +29661,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshRolesRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29699,7 +29699,7 @@ namespace Vault.Api
         /// <summary>
         /// Request signing an SSH key using a certain role with the provided details. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request.</param>
         /// <param name="sshSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -29707,7 +29707,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29744,7 +29744,7 @@ namespace Vault.Api
         /// <summary>
         /// Request signing an SSH key using a certain role with the provided details. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="role">The desired role with configuration for this request.</param>
         /// <param name="sshSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29753,7 +29753,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'role' is set
             if (role == null)
-                throw new ApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PostSshSignRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29791,7 +29791,7 @@ namespace Vault.Api
         /// <summary>
         /// Validate the OTP provided by Vault SSH Agent. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostSshVerify(SshVerifyRequest sshVerifyRequest = default(SshVerifyRequest))
@@ -29830,7 +29830,7 @@ namespace Vault.Api
         /// <summary>
         /// Validate the OTP provided by Vault SSH Agent. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sshVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -29871,7 +29871,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="terraformConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTerraformConfig(TerraformConfigRequest terraformConfigRequest = default(TerraformConfigRequest))
@@ -29910,7 +29910,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="terraformConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -29951,14 +29951,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTerraformCredsName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29993,7 +29993,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -30001,7 +30001,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformCredsName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30037,7 +30037,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="terraformRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30045,7 +30045,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30082,7 +30082,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="terraformRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30091,7 +30091,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30129,14 +30129,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the team or organization role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTerraformRotateRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30171,7 +30171,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the team or organization role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -30179,7 +30179,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTerraformRotateRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30215,7 +30215,7 @@ namespace Vault.Api
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key . 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpCodeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30223,7 +30223,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30260,7 +30260,7 @@ namespace Vault.Api
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key . 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpCodeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30269,7 +30269,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpCodeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30307,7 +30307,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30315,7 +30315,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30352,7 +30352,7 @@ namespace Vault.Api
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key.</param>
         /// <param name="totpKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30361,7 +30361,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTotpKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30399,7 +30399,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures a new cache of the specified size 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitCacheConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTransitCacheConfig(TransitCacheConfigRequest transitCacheConfigRequest = default(TransitCacheConfigRequest))
@@ -30438,7 +30438,7 @@ namespace Vault.Api
         /// <summary>
         /// Configures a new cache of the specified size 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitCacheConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -30479,7 +30479,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a data key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The backend key used for encrypting the data key</param>
         /// <param name="plaintext">\&quot;plaintext\&quot; will return the key in both plaintext and ciphertext; \&quot;wrapped\&quot; will return the ciphertext only.</param>
         /// <param name="transitDatakeyRequest"> (optional)</param>
@@ -30488,11 +30488,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             // verify the required parameter 'plaintext' is set
             if (plaintext == null)
-                throw new ApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
+                throw new VaultApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30530,7 +30530,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a data key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The backend key used for encrypting the data key</param>
         /// <param name="plaintext">\&quot;plaintext\&quot; will return the key in both plaintext and ciphertext; \&quot;wrapped\&quot; will return the ciphertext only.</param>
         /// <param name="transitDatakeyRequest"> (optional)</param>
@@ -30540,11 +30540,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDatakeyPlaintextName");
 
             // verify the required parameter 'plaintext' is set
             if (plaintext == null)
-                throw new ApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
+                throw new VaultApiException(400, "Missing required parameter 'plaintext' when calling Secrets->PostTransitDatakeyPlaintextName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30583,7 +30583,7 @@ namespace Vault.Api
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitDecryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30591,7 +30591,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30628,7 +30628,7 @@ namespace Vault.Api
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitDecryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30637,7 +30637,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitDecryptName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30675,7 +30675,7 @@ namespace Vault.Api
         /// <summary>
         /// Encrypt a plaintext value or a batch of plaintext blocks using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitEncryptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30683,7 +30683,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30720,7 +30720,7 @@ namespace Vault.Api
         /// <summary>
         /// Encrypt a plaintext value or a batch of plaintext blocks using a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the policy</param>
         /// <param name="transitEncryptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30729,7 +30729,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitEncryptName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30767,7 +30767,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTransitHash(TransitHashRequest transitHashRequest = default(TransitHashRequest))
@@ -30806,7 +30806,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -30847,7 +30847,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30855,7 +30855,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30892,7 +30892,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30901,7 +30901,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHashUrlalgorithm");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30939,7 +30939,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="transitHmacRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -30947,7 +30947,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30984,7 +30984,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="transitHmacRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30993,7 +30993,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31031,7 +31031,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHmacRequest"> (optional)</param>
@@ -31040,11 +31040,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31082,7 +31082,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use for the HMAC function</param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="transitHmacRequest"> (optional)</param>
@@ -31092,11 +31092,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitHmacNameUrlalgorithm");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31135,7 +31135,7 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31143,7 +31143,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31180,7 +31180,7 @@ namespace Vault.Api
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31189,7 +31189,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31227,7 +31227,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure a named encryption key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31235,7 +31235,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31272,7 +31272,7 @@ namespace Vault.Api
         /// <summary>
         /// Configure a named encryption key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31281,7 +31281,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameConfig");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31319,7 +31319,7 @@ namespace Vault.Api
         /// <summary>
         /// Imports an externally-generated key into a new transit key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31327,7 +31327,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31364,7 +31364,7 @@ namespace Vault.Api
         /// <summary>
         /// Imports an externally-generated key into a new transit key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31373,7 +31373,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImport");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31411,7 +31411,7 @@ namespace Vault.Api
         /// <summary>
         /// Imports an externally-generated key into an existing imported key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportVersionRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31419,7 +31419,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31456,7 +31456,7 @@ namespace Vault.Api
         /// <summary>
         /// Imports an externally-generated key into an existing imported key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the key</param>
         /// <param name="transitKeysImportVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31465,7 +31465,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameImportVersion");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31503,14 +31503,14 @@ namespace Vault.Api
         /// <summary>
         /// Rotate named encryption key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTransitKeysNameRotate(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31545,7 +31545,7 @@ namespace Vault.Api
         /// <summary>
         /// Rotate named encryption key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -31553,7 +31553,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameRotate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31589,7 +31589,7 @@ namespace Vault.Api
         /// <summary>
         /// Trim key versions of a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysTrimRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31597,7 +31597,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31634,7 +31634,7 @@ namespace Vault.Api
         /// <summary>
         /// Trim key versions of a named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitKeysTrimRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31643,7 +31643,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitKeysNameTrim");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31681,7 +31681,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTransitRandom(TransitRandomRequest transitRandomRequest = default(TransitRandomRequest))
@@ -31720,7 +31720,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -31761,7 +31761,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31769,7 +31769,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31806,7 +31806,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31815,7 +31815,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSource");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31853,7 +31853,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
@@ -31862,11 +31862,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31904,7 +31904,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
@@ -31914,11 +31914,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomSourceUrlbytes");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31957,7 +31957,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -31965,7 +31965,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32002,7 +32002,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="transitRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32011,7 +32011,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new ApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling Secrets->PostTransitRandomUrlbytes");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32049,7 +32049,7 @@ namespace Vault.Api
         /// <summary>
         /// Restore the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostTransitRestore(TransitRestoreRequest transitRestoreRequest = default(TransitRestoreRequest))
@@ -32088,7 +32088,7 @@ namespace Vault.Api
         /// <summary>
         /// Restore the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -32129,7 +32129,7 @@ namespace Vault.Api
         /// <summary>
         /// Restore the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">If set, this will be the name of the restored key.</param>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -32137,7 +32137,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32174,7 +32174,7 @@ namespace Vault.Api
         /// <summary>
         /// Restore the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">If set, this will be the name of the restored key.</param>
         /// <param name="transitRestoreRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32183,7 +32183,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRestoreName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32221,7 +32221,7 @@ namespace Vault.Api
         /// <summary>
         /// Rewrap ciphertext 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -32229,7 +32229,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32266,7 +32266,7 @@ namespace Vault.Api
         /// <summary>
         /// Rewrap ciphertext 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="transitRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32275,7 +32275,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitRewrapName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32313,7 +32313,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitSignRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -32321,7 +32321,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32358,7 +32358,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitSignRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32367,7 +32367,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32405,7 +32405,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitSignRequest"> (optional)</param>
@@ -32414,11 +32414,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32456,7 +32456,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitSignRequest"> (optional)</param>
@@ -32466,11 +32466,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitSignNameUrlalgorithm");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32509,7 +32509,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -32517,7 +32517,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32554,7 +32554,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32563,7 +32563,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -32601,7 +32601,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
@@ -32610,11 +32610,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32652,7 +32652,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The key to use</param>
         /// <param name="urlalgorithm">Hash algorithm to use (POST URL parameter)</param>
         /// <param name="transitVerifyRequest"> (optional)</param>
@@ -32662,11 +32662,11 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new ApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling Secrets->PostTransitVerifyNameUrlalgorithm");
 
 
             RequestOptions requestOptions = new RequestOptions();

@@ -142,7 +142,7 @@ namespace Vault.Client
             }
             catch (Exception e)
             {
-                throw new ApiException(500, e.Message);
+                throw new VaultApiException(500, e.Message);
             }
         }
 

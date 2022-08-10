@@ -52,7 +52,7 @@ namespace Vault.Client
             var status = (int)response.StatusCode;
             if (status >= 400)
             {
-                return new ApiException(status,
+                return new VaultApiException(status,
                     string.Format("Error calling {0}: {1}", methodName, response.RawContent),
                     response.RawContent, response.Headers);
             }
