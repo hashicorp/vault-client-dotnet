@@ -40,7 +40,7 @@ namespace Vault
         }
 
         /// <summary>
-        /// Sets the client token on the api client
+        /// Sets the client token to inject as a header into Api calls
         /// </summary>
         public void SetToken(string token)
         {
