@@ -15,7 +15,7 @@ namespace Vault.Client
     /// <summary>
     /// API Exception
     /// </summary>
-    public class ApiException : Exception
+    public class VaultApiException : Exception
     {
         /// <summary>
         /// Gets or sets the error code (HTTP status code)
@@ -36,28 +36,28 @@ namespace Vault.Client
         public Multimap<string, string> Headers { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
+        /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
-        public ApiException() { }
+        public VaultApiException() { }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
+        /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
-        public ApiException(int errorCode, string message) : base(message)
+        public VaultApiException(int errorCode, string message) : base(message)
         {
             this.ErrorCode = errorCode;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
+        /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
         /// <param name="errorContent">Error content.</param>
         /// <param name="headers">HTTP Headers.</param>
-        public ApiException(int errorCode, string message, object errorContent = null, Multimap<string, string> headers = null) : base(message)
+        public VaultApiException(int errorCode, string message, object errorContent = null, Multimap<string, string> headers = null) : base(message)
         {
             this.ErrorCode = errorCode;
             this.ErrorContent = errorContent;

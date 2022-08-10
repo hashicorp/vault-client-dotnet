@@ -29,7 +29,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityAliasIdId(string id);
@@ -39,7 +39,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityAliasIdId(string id);
@@ -49,7 +49,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityIdId(string id);
@@ -59,7 +59,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityEntityNameName(string name);
@@ -69,7 +69,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupAliasIdId(string id);
@@ -79,7 +79,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupIdId(string id);
@@ -89,7 +89,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityGroupNameName(string name);
@@ -99,7 +99,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name);
@@ -109,7 +109,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId);
@@ -119,7 +119,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId);
@@ -129,7 +129,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId);
@@ -139,7 +139,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId);
@@ -149,7 +149,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcAssignmentName(string name);
@@ -159,7 +159,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcClientName(string name);
@@ -169,7 +169,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcKeyName(string name);
@@ -179,7 +179,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcProviderName(string name);
@@ -189,7 +189,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcRoleName(string name);
@@ -199,7 +199,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityOidcScopeName(string name);
@@ -209,7 +209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteIdentityPersonaIdId(string id);
@@ -219,7 +219,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityAliasId(string list);
@@ -229,7 +229,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityAliasIdId(string id);
@@ -239,7 +239,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityAliasId(string list);
@@ -249,7 +249,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityAliasIdId(string id);
@@ -259,7 +259,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityId(string list);
@@ -269,7 +269,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityIdId(string id);
@@ -279,7 +279,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityName(string list);
@@ -289,7 +289,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityEntityNameName(string name);
@@ -299,7 +299,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupAliasId(string list);
@@ -309,7 +309,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupAliasIdId(string id);
@@ -319,7 +319,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupId(string list);
@@ -329,7 +329,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupIdId(string id);
@@ -339,7 +339,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupName(string list);
@@ -349,7 +349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityGroupNameName(string name);
@@ -359,7 +359,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaLoginEnforcement(string list);
@@ -369,7 +369,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaLoginEnforcementName(string name);
@@ -379,7 +379,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethod(string list);
@@ -389,7 +389,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodDuo(string list);
@@ -399,7 +399,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId);
@@ -409,7 +409,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodMethodId(string methodId);
@@ -419,7 +419,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodOkta(string list);
@@ -429,7 +429,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId);
@@ -439,7 +439,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodPingid(string list);
@@ -449,7 +449,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId);
@@ -459,7 +459,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodTotp(string list);
@@ -469,7 +469,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId);
@@ -479,7 +479,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcAssignment(string list);
@@ -489,7 +489,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcAssignmentName(string name);
@@ -499,7 +499,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcClient(string list);
@@ -509,7 +509,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcClientName(string name);
@@ -519,7 +519,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcConfig();
         /// <summary>
@@ -528,7 +528,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcKey(string list);
@@ -538,7 +538,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcKeyName(string name);
@@ -548,7 +548,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProvider(string list);
@@ -558,7 +558,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderName(string name);
@@ -568,7 +568,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameAuthorize(string name);
@@ -578,7 +578,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameUserinfo(string name);
@@ -588,7 +588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name);
@@ -598,7 +598,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name);
@@ -608,7 +608,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcRole(string list);
@@ -618,7 +618,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcRoleName(string name);
@@ -628,7 +628,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcScope(string list);
@@ -638,7 +638,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcScopeName(string name);
@@ -648,7 +648,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcTokenName(string name);
@@ -658,7 +658,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcWellKnownKeys();
         /// <summary>
@@ -667,7 +667,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration();
         /// <summary>
@@ -676,7 +676,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityPersonaId(string list);
@@ -686,7 +686,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetIdentityPersonaIdId(string id);
@@ -696,7 +696,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest));
@@ -706,7 +706,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -717,7 +717,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest));
@@ -727,7 +727,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest));
@@ -737,7 +737,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -748,7 +748,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest));
@@ -758,7 +758,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -769,7 +769,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest));
@@ -779,7 +779,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -790,7 +790,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest));
@@ -800,7 +800,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest));
@@ -810,7 +810,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -821,7 +821,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -832,7 +832,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -843,7 +843,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest));
@@ -853,7 +853,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest));
@@ -863,7 +863,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -874,7 +874,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -885,7 +885,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -896,7 +896,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -907,7 +907,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest));
@@ -917,7 +917,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest));
@@ -927,7 +927,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest));
@@ -937,7 +937,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -948,7 +948,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -959,7 +959,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -970,7 +970,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest));
@@ -980,7 +980,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest));
@@ -990,7 +990,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1001,7 +1001,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1012,7 +1012,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1023,7 +1023,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1034,7 +1034,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1045,7 +1045,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityOidcProviderNameUserinfo(string name);
@@ -1055,7 +1055,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1066,7 +1066,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1077,7 +1077,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest));
@@ -1087,7 +1087,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1108,7 +1108,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1120,7 +1120,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1132,7 +1132,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1144,7 +1144,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1156,7 +1156,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1168,7 +1168,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1180,7 +1180,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1192,7 +1192,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1204,7 +1204,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1216,7 +1216,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1228,7 +1228,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1240,7 +1240,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1252,7 +1252,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1264,7 +1264,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1276,7 +1276,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1288,7 +1288,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1300,7 +1300,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1312,7 +1312,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1324,7 +1324,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1336,7 +1336,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1348,7 +1348,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1360,7 +1360,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1372,7 +1372,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1384,7 +1384,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1396,7 +1396,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1408,7 +1408,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1420,7 +1420,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1432,7 +1432,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1444,7 +1444,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1456,7 +1456,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1468,7 +1468,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1480,7 +1480,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1492,7 +1492,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1504,7 +1504,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1516,7 +1516,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1528,7 +1528,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1540,7 +1540,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1552,7 +1552,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1564,7 +1564,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1576,7 +1576,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1588,7 +1588,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1600,7 +1600,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1612,7 +1612,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1624,7 +1624,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1636,7 +1636,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1648,7 +1648,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1660,7 +1660,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1672,7 +1672,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1684,7 +1684,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1696,7 +1696,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1707,7 +1707,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1719,7 +1719,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1731,7 +1731,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1743,7 +1743,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1755,7 +1755,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1767,7 +1767,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1779,7 +1779,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1791,7 +1791,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1803,7 +1803,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1815,7 +1815,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1827,7 +1827,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1839,7 +1839,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1851,7 +1851,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1863,7 +1863,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1874,7 +1874,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         Task<ApiResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken));
@@ -1885,7 +1885,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1897,7 +1897,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1909,7 +1909,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1921,7 +1921,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1934,7 +1934,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1946,7 +1946,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1958,7 +1958,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1971,7 +1971,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1983,7 +1983,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -1996,7 +1996,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2008,7 +2008,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2021,7 +2021,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2033,7 +2033,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2045,7 +2045,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2058,7 +2058,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2071,7 +2071,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2084,7 +2084,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2096,7 +2096,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2108,7 +2108,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2121,7 +2121,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2134,7 +2134,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2147,7 +2147,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2160,7 +2160,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2172,7 +2172,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2184,7 +2184,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2196,7 +2196,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2209,7 +2209,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2222,7 +2222,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2235,7 +2235,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2247,7 +2247,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2259,7 +2259,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2272,7 +2272,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2285,7 +2285,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2298,7 +2298,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2311,7 +2311,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2324,7 +2324,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2336,7 +2336,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2349,7 +2349,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2362,7 +2362,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2374,7 +2374,7 @@ namespace Vault.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -2405,26 +2405,7 @@ namespace Vault.Api
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Identity"/> class
-        /// using a Configuration object and client instance.
-        /// </summary>
-        /// <param name="client">The client interface for synchronous API access.</param>
-        /// <param name="asyncClient">The client interface for asynchronous API access.</param>
-        /// <param name="configuration">The configuration object.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        public Identity(Vault.Client.ISynchronousClient client, Vault.Client.IAsynchronousClient asyncClient, Vault.Client.Configuration configuration)
-        {
-            if (client == null) throw new ArgumentNullException("client");
-            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
-            if (configuration == null) throw new ArgumentNullException("configuration");
-
-            this.Client = client;
-            this.AsynchronousClient = asyncClient;
-            this.Configuration = configuration;
-            this.ExceptionFactory = Vault.Client.Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -2472,14 +2453,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2514,7 +2495,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2522,7 +2503,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2558,14 +2539,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityEntityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2600,7 +2581,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2608,7 +2589,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2644,14 +2625,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityEntityIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2686,7 +2667,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2694,7 +2675,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityEntityIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2730,14 +2711,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityEntityNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2772,7 +2753,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2780,7 +2761,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityEntityNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2816,14 +2797,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityGroupAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2858,7 +2839,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2866,7 +2847,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2902,14 +2883,14 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityGroupIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -2944,7 +2925,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2952,7 +2933,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityGroupIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -2988,14 +2969,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityGroupNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3030,7 +3011,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3038,7 +3019,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityGroupNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3074,14 +3055,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3116,7 +3097,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3124,7 +3105,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityMfaLoginEnforcementName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3160,14 +3141,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3202,7 +3183,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3210,7 +3191,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodDuoMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3246,14 +3227,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3288,7 +3269,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3296,7 +3277,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodOktaMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3332,14 +3313,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3374,7 +3355,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3382,7 +3363,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodPingidMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3418,14 +3399,14 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3460,7 +3441,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3468,7 +3449,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->DeleteIdentityMfaMethodTotpMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3504,14 +3485,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcAssignmentName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3546,7 +3527,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3554,7 +3535,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcAssignmentName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3590,14 +3571,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcClientName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3632,7 +3613,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3640,7 +3621,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcClientName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3676,14 +3657,14 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcKeyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3718,7 +3699,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3726,7 +3707,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3762,14 +3743,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcProviderName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3804,7 +3785,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3812,7 +3793,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcProviderName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3848,14 +3829,14 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3890,7 +3871,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3898,7 +3879,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3934,14 +3915,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityOidcScopeName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3976,7 +3957,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -3984,7 +3965,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->DeleteIdentityOidcScopeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4020,14 +4001,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteIdentityPersonaIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4062,7 +4043,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4070,7 +4051,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->DeleteIdentityPersonaIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4106,14 +4087,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4148,7 +4129,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4156,7 +4137,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4192,14 +4173,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4234,7 +4215,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4242,7 +4223,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4278,14 +4259,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4320,7 +4301,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4328,7 +4309,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4364,14 +4345,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4406,7 +4387,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4414,7 +4395,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4450,14 +4431,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the entity IDs 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4492,7 +4473,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the entity IDs 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4500,7 +4481,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4536,14 +4517,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4578,7 +4559,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4586,7 +4567,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4622,14 +4603,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the entity names 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4664,7 +4645,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the entity names 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4672,7 +4653,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4708,14 +4689,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityEntityNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4750,7 +4731,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4758,7 +4739,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4794,14 +4775,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the group alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4836,7 +4817,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the group alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4844,7 +4825,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4880,14 +4861,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupAliasIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4922,7 +4903,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -4930,7 +4911,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4966,14 +4947,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the group IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5008,7 +4989,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the group IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5016,7 +4997,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5052,14 +5033,14 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5094,7 +5075,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5102,7 +5083,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5138,14 +5119,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5180,7 +5161,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5188,7 +5169,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5224,14 +5205,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityGroupNameName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5266,7 +5247,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5274,7 +5255,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5310,14 +5291,14 @@ namespace Vault.Api
         /// <summary>
         /// List login enforcements 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaLoginEnforcement(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5352,7 +5333,7 @@ namespace Vault.Api
         /// <summary>
         /// List login enforcements 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5360,7 +5341,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5396,14 +5377,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaLoginEnforcementName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5438,7 +5419,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5446,7 +5427,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5482,14 +5463,14 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for all MFA methods 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethod(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5524,7 +5505,7 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for all MFA methods 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5532,7 +5513,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5568,14 +5549,14 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodDuo(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5610,7 +5591,7 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5618,7 +5599,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5654,14 +5635,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5696,7 +5677,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5704,7 +5685,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5740,14 +5721,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5782,7 +5763,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5790,7 +5771,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5826,14 +5807,14 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodOkta(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5868,7 +5849,7 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5876,7 +5857,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5912,14 +5893,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5954,7 +5935,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -5962,7 +5943,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5998,14 +5979,14 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodPingid(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6040,7 +6021,7 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6048,7 +6029,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6084,14 +6065,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6126,7 +6107,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6134,7 +6115,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6170,14 +6151,14 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodTotp(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6212,7 +6193,7 @@ namespace Vault.Api
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6220,7 +6201,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6256,14 +6237,14 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6298,7 +6279,7 @@ namespace Vault.Api
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6306,7 +6287,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6342,14 +6323,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcAssignment(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6384,7 +6365,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6392,7 +6373,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6428,14 +6409,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcAssignmentName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6470,7 +6451,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6478,7 +6459,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6514,14 +6495,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcClient(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6556,7 +6537,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6564,7 +6545,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6600,14 +6581,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcClientName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6642,7 +6623,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6650,7 +6631,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6686,7 +6667,7 @@ namespace Vault.Api
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcConfig()
         {
@@ -6722,7 +6703,7 @@ namespace Vault.Api
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -6760,14 +6741,14 @@ namespace Vault.Api
         /// <summary>
         /// List OIDC keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcKey(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6802,7 +6783,7 @@ namespace Vault.Api
         /// <summary>
         /// List OIDC keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6810,7 +6791,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6846,14 +6827,14 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcKeyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6888,7 +6869,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6896,7 +6877,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6932,14 +6913,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProvider(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6974,7 +6955,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -6982,7 +6963,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7018,14 +6999,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProviderName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7060,7 +7041,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7068,7 +7049,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7104,14 +7085,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProviderNameAuthorize(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7146,7 +7127,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7154,7 +7135,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7190,14 +7171,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProviderNameUserinfo(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7232,7 +7213,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7240,7 +7221,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7276,14 +7257,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7318,7 +7299,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7326,7 +7307,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7362,14 +7343,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7404,7 +7385,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7412,7 +7393,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7448,14 +7429,14 @@ namespace Vault.Api
         /// <summary>
         /// List configured OIDC roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7490,7 +7471,7 @@ namespace Vault.Api
         /// <summary>
         /// List configured OIDC roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7498,7 +7479,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7534,14 +7515,14 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcRoleName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7576,7 +7557,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7584,7 +7565,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7620,14 +7601,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcScope(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7662,7 +7643,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7670,7 +7651,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7706,14 +7687,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcScopeName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7748,7 +7729,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7756,7 +7737,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7792,14 +7773,14 @@ namespace Vault.Api
         /// <summary>
         /// Generate an OIDC token 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcTokenName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7834,7 +7815,7 @@ namespace Vault.Api
         /// <summary>
         /// Generate an OIDC token 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -7842,7 +7823,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7878,7 +7859,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve public keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcWellKnownKeys()
         {
@@ -7914,7 +7895,7 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve public keys 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -7952,7 +7933,7 @@ namespace Vault.Api
         /// <summary>
         /// Query OIDC configurations 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration()
         {
@@ -7988,7 +7969,7 @@ namespace Vault.Api
         /// <summary>
         /// Query OIDC configurations 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async Task<ApiResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken))
@@ -8026,14 +8007,14 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityPersonaId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8068,7 +8049,7 @@ namespace Vault.Api
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8076,7 +8057,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8112,14 +8093,14 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetIdentityPersonaIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8154,7 +8135,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8162,7 +8143,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8198,7 +8179,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest = default(IdentityAliasRequest))
@@ -8237,7 +8218,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8278,7 +8259,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -8286,7 +8267,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8323,7 +8304,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8332,7 +8313,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8370,7 +8351,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new entity 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest = default(IdentityEntityRequest))
@@ -8409,7 +8390,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new entity 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8450,7 +8431,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest = default(IdentityEntityAliasRequest))
@@ -8489,7 +8470,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8530,7 +8511,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -8538,7 +8519,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8575,7 +8556,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8584,7 +8565,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8622,7 +8603,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete all of the entities provided 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = default(IdentityEntityBatchDeleteRequest))
@@ -8661,7 +8642,7 @@ namespace Vault.Api
         /// <summary>
         /// Delete all of the entities provided 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8702,7 +8683,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -8710,7 +8691,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8747,7 +8728,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity ID 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8756,7 +8737,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8794,7 +8775,7 @@ namespace Vault.Api
         /// <summary>
         /// Merge two or more entities together 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest = default(IdentityEntityMergeRequest))
@@ -8833,7 +8814,7 @@ namespace Vault.Api
         /// <summary>
         /// Merge two or more entities together 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -8874,7 +8855,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -8882,7 +8863,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8919,7 +8900,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an entity using entity name 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8928,7 +8909,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8966,7 +8947,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new group. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest = default(IdentityGroupRequest))
@@ -9005,7 +8986,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new group. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9046,7 +9027,7 @@ namespace Vault.Api
         /// <summary>
         /// Creates a new group alias, or updates an existing one. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest = default(IdentityGroupAliasRequest))
@@ -9085,7 +9066,7 @@ namespace Vault.Api
         /// <summary>
         /// Creates a new group alias, or updates an existing one. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9126,7 +9107,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9134,7 +9115,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9171,7 +9152,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9180,7 +9161,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9218,7 +9199,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9226,7 +9207,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9263,7 +9244,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or delete an existing group using its ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9272,7 +9253,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9310,7 +9291,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9318,7 +9299,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9355,7 +9336,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9364,7 +9345,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9402,7 +9383,7 @@ namespace Vault.Api
         /// <summary>
         /// Query entities based on various properties. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest = default(IdentityLookupEntityRequest))
@@ -9441,7 +9422,7 @@ namespace Vault.Api
         /// <summary>
         /// Query entities based on various properties. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9482,7 +9463,7 @@ namespace Vault.Api
         /// <summary>
         /// Query groups based on various properties. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest = default(IdentityLookupGroupRequest))
@@ -9521,7 +9502,7 @@ namespace Vault.Api
         /// <summary>
         /// Query groups based on various properties. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9562,7 +9543,7 @@ namespace Vault.Api
         /// <summary>
         /// Create or update a login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9570,7 +9551,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9607,7 +9588,7 @@ namespace Vault.Api
         /// <summary>
         /// Create or update a login enforcement 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9616,7 +9597,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9654,7 +9635,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9662,7 +9643,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9699,7 +9680,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9708,7 +9689,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9746,7 +9727,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9754,7 +9735,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9791,7 +9772,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9800,7 +9781,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9838,7 +9819,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9846,7 +9827,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9883,7 +9864,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9892,7 +9873,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9930,7 +9911,7 @@ namespace Vault.Api
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = default(IdentityMfaMethodTotpAdminDestroyRequest))
@@ -9969,7 +9950,7 @@ namespace Vault.Api
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10010,7 +9991,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = default(IdentityMfaMethodTotpAdminGenerateRequest))
@@ -10049,7 +10030,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10090,7 +10071,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = default(IdentityMfaMethodTotpGenerateRequest))
@@ -10129,7 +10110,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10170,7 +10151,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10178,7 +10159,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10215,7 +10196,7 @@ namespace Vault.Api
         /// <summary>
         /// Update or create a configuration for the given MFA method 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10224,7 +10205,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new ApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10262,7 +10243,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10270,7 +10251,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10307,7 +10288,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10316,7 +10297,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10354,7 +10335,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10362,7 +10343,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10399,7 +10380,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10408,7 +10389,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10446,7 +10427,7 @@ namespace Vault.Api
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest = default(IdentityOidcConfigRequest))
@@ -10485,7 +10466,7 @@ namespace Vault.Api
         /// <summary>
         /// OIDC configuration 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10526,7 +10507,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify the authenticity of an OIDC token 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest = default(IdentityOidcIntrospectRequest))
@@ -10565,7 +10546,7 @@ namespace Vault.Api
         /// <summary>
         /// Verify the authenticity of an OIDC token 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -10606,7 +10587,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10614,7 +10595,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10651,7 +10632,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10660,7 +10641,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10698,7 +10679,7 @@ namespace Vault.Api
         /// <summary>
         /// Rotate a named OIDC key. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10706,7 +10687,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10743,7 +10724,7 @@ namespace Vault.Api
         /// <summary>
         /// Rotate a named OIDC key. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10752,7 +10733,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10790,7 +10771,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10798,7 +10779,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10835,7 +10816,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10844,7 +10825,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10882,7 +10863,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10890,7 +10871,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10927,7 +10908,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10936,7 +10917,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10974,7 +10955,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10982,7 +10963,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11019,7 +11000,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11028,7 +11009,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11066,14 +11047,14 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityOidcProviderNameUserinfo(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11108,7 +11089,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11116,7 +11097,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11152,7 +11133,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -11160,7 +11141,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11197,7 +11178,7 @@ namespace Vault.Api
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11206,7 +11187,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11244,7 +11225,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -11252,7 +11233,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11289,7 +11270,7 @@ namespace Vault.Api
         /// <summary>
         ///  
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11298,7 +11279,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11336,7 +11317,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest = default(IdentityPersonaRequest))
@@ -11375,7 +11356,7 @@ namespace Vault.Api
         /// <summary>
         /// Create a new alias. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -11416,7 +11397,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -11424,7 +11405,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11461,7 +11442,7 @@ namespace Vault.Api
         /// <summary>
         /// Update, read or delete an alias ID. 
         /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11470,7 +11451,7 @@ namespace Vault.Api
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
