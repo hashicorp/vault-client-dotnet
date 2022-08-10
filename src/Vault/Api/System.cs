@@ -3594,7 +3594,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3603,7 +3603,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -3639,7 +3639,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3684,7 +3684,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3693,7 +3693,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -3729,7 +3729,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3774,7 +3774,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3783,7 +3783,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -3819,7 +3819,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3859,7 +3859,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysConfigCors()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3868,7 +3868,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -3898,7 +3898,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3942,7 +3942,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -3951,7 +3951,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -3987,7 +3987,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4027,7 +4027,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysGenerateRoot()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4036,7 +4036,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4066,7 +4066,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4105,7 +4105,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysGenerateRootAttempt()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4114,7 +4114,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4144,7 +4144,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4188,7 +4188,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4197,7 +4197,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4233,7 +4233,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4278,7 +4278,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4287,7 +4287,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4323,7 +4323,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4373,7 +4373,7 @@ namespace Vault.Api
             if (type == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4382,7 +4382,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4424,7 +4424,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4470,7 +4470,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4479,7 +4479,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4515,7 +4515,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4560,7 +4560,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4569,7 +4569,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4605,7 +4605,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4650,7 +4650,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4659,7 +4659,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4695,7 +4695,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4740,7 +4740,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4749,7 +4749,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4785,7 +4785,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4825,7 +4825,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysRaw()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4834,7 +4834,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4864,7 +4864,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4908,7 +4908,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4917,7 +4917,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -4953,7 +4953,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -4993,7 +4993,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysRekeyBackup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5002,7 +5002,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5032,7 +5032,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5071,7 +5071,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysRekeyInit()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5080,7 +5080,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5110,7 +5110,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5149,7 +5149,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5158,7 +5158,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5188,7 +5188,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5227,7 +5227,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteSysRekeyVerify()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5236,7 +5236,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5266,7 +5266,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5305,7 +5305,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysAudit()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5314,7 +5314,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5344,7 +5344,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5383,7 +5383,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysAuth()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5392,7 +5392,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5422,7 +5422,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5466,7 +5466,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5475,7 +5475,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5511,7 +5511,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5556,7 +5556,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5565,7 +5565,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5601,7 +5601,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5641,7 +5641,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysConfigAuditingRequestHeaders()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5650,7 +5650,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5680,7 +5680,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5724,7 +5724,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5733,7 +5733,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5769,7 +5769,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5809,7 +5809,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysConfigCors()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5818,7 +5818,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5848,7 +5848,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5887,7 +5887,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysConfigStateSanitized()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5896,7 +5896,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -5926,7 +5926,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5970,7 +5970,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -5979,7 +5979,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6015,7 +6015,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6060,7 +6060,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6069,7 +6069,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6105,7 +6105,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6145,7 +6145,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysGenerateRoot()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6154,7 +6154,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6184,7 +6184,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6223,7 +6223,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysGenerateRootAttempt()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6232,7 +6232,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6262,7 +6262,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6301,7 +6301,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysHaStatus()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6310,7 +6310,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6340,7 +6340,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6379,7 +6379,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysHealth()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6388,7 +6388,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6418,7 +6418,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6457,7 +6457,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysHostInfo()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6466,7 +6466,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6496,7 +6496,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6535,7 +6535,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInFlightReq()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6544,7 +6544,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6574,7 +6574,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6613,7 +6613,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInit()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6622,7 +6622,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6652,7 +6652,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6691,7 +6691,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersActivity()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6700,7 +6700,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6730,7 +6730,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6769,7 +6769,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersActivityExport()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6778,7 +6778,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6808,7 +6808,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6847,7 +6847,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersActivityMonthly()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6856,7 +6856,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6886,7 +6886,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6925,7 +6925,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6934,7 +6934,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6964,7 +6964,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7003,7 +7003,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersEntities()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7012,7 +7012,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7042,7 +7042,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7081,7 +7081,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersRequests()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7090,7 +7090,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7120,7 +7120,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7159,7 +7159,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalCountersTokens()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7168,7 +7168,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7198,7 +7198,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7237,7 +7237,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalSpecsOpenapi()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7246,7 +7246,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7276,7 +7276,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7315,7 +7315,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalUiFeatureFlags()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7324,7 +7324,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7354,7 +7354,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7393,7 +7393,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalUiMounts()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7402,7 +7402,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7432,7 +7432,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7476,7 +7476,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7485,7 +7485,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7521,7 +7521,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7561,7 +7561,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalUiNamespaces()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7570,7 +7570,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7600,7 +7600,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7639,7 +7639,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysInternalUiResultantAcl()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7648,7 +7648,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7678,7 +7678,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7717,7 +7717,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysKeyStatus()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7726,7 +7726,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7756,7 +7756,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7795,7 +7795,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysLeader()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7804,7 +7804,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7834,7 +7834,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7873,7 +7873,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysLeases()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7882,7 +7882,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7912,7 +7912,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7951,7 +7951,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysLeasesCount()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7960,7 +7960,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7990,7 +7990,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8034,7 +8034,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8043,7 +8043,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8079,7 +8079,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8129,7 +8129,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8138,7 +8138,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8180,7 +8180,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8222,7 +8222,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysMetrics(string format = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8231,7 +8231,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8266,7 +8266,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8311,7 +8311,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8320,7 +8320,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8360,7 +8360,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8407,7 +8407,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysMounts()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8416,7 +8416,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8446,7 +8446,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8490,7 +8490,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8499,7 +8499,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8535,7 +8535,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8580,7 +8580,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8589,7 +8589,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8625,7 +8625,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8665,7 +8665,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPluginsCatalog()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8674,7 +8674,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8704,7 +8704,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8748,7 +8748,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8757,7 +8757,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8793,7 +8793,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8843,7 +8843,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8852,7 +8852,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8894,7 +8894,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8945,7 +8945,7 @@ namespace Vault.Api
             if (type == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8954,7 +8954,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8996,7 +8996,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9042,7 +9042,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9051,7 +9051,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9087,7 +9087,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9132,7 +9132,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9141,7 +9141,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9177,7 +9177,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9222,7 +9222,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9231,7 +9231,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9267,7 +9267,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9312,7 +9312,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9321,7 +9321,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9357,7 +9357,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9402,7 +9402,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9411,7 +9411,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9447,7 +9447,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9488,7 +9488,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPolicy(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9497,7 +9497,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9532,7 +9532,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9580,7 +9580,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9589,7 +9589,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9625,7 +9625,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9665,7 +9665,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprof()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9674,7 +9674,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9704,7 +9704,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9743,7 +9743,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofAllocs()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9752,7 +9752,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9782,7 +9782,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9821,7 +9821,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofBlock()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9830,7 +9830,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9860,7 +9860,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9899,7 +9899,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofCmdline()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9908,7 +9908,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9938,7 +9938,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9977,7 +9977,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofGoroutine()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9986,7 +9986,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10016,7 +10016,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10055,7 +10055,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofHeap()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10064,7 +10064,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10094,7 +10094,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10133,7 +10133,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofMutex()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10142,7 +10142,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10172,7 +10172,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10211,7 +10211,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofProfile()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10220,7 +10220,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10250,7 +10250,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10289,7 +10289,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofSymbol()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10298,7 +10298,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10328,7 +10328,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10367,7 +10367,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofThreadcreate()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10376,7 +10376,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10406,7 +10406,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10445,7 +10445,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysPprofTrace()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10454,7 +10454,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10484,7 +10484,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10523,7 +10523,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysQuotasConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10532,7 +10532,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10562,7 +10562,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10606,7 +10606,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10615,7 +10615,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10651,7 +10651,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10696,7 +10696,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10705,7 +10705,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10741,7 +10741,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10782,7 +10782,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRaw(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10791,7 +10791,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10826,7 +10826,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10875,7 +10875,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10884,7 +10884,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10925,7 +10925,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10969,7 +10969,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRekeyBackup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10978,7 +10978,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11008,7 +11008,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11047,7 +11047,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRekeyInit()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11056,7 +11056,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11086,7 +11086,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11125,7 +11125,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRekeyRecoveryKeyBackup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11134,7 +11134,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11164,7 +11164,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11203,7 +11203,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRekeyVerify()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11212,7 +11212,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11242,7 +11242,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11286,7 +11286,7 @@ namespace Vault.Api
             if (migrationId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11295,7 +11295,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11331,7 +11331,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11371,7 +11371,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysReplicationStatus()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11380,7 +11380,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11410,7 +11410,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11449,7 +11449,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysRotateConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11458,7 +11458,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11488,7 +11488,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11527,7 +11527,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysSealStatus()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11536,7 +11536,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11566,7 +11566,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11610,7 +11610,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11619,7 +11619,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11655,7 +11655,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11695,7 +11695,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetSysWrappingLookup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11704,7 +11704,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11734,7 +11734,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11779,7 +11779,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11789,7 +11789,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11827,7 +11827,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11875,7 +11875,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11885,7 +11885,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11923,7 +11923,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11971,7 +11971,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -11981,7 +11981,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12019,7 +12019,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12067,7 +12067,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12077,7 +12077,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12115,7 +12115,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12158,7 +12158,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12168,7 +12168,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12200,7 +12200,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12242,7 +12242,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12252,7 +12252,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12284,7 +12284,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12326,7 +12326,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12336,7 +12336,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12368,7 +12368,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12415,7 +12415,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12425,7 +12425,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12463,7 +12463,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12506,7 +12506,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12516,7 +12516,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12548,7 +12548,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12594,7 +12594,7 @@ namespace Vault.Api
             if (subsystem == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12603,7 +12603,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12639,7 +12639,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12685,7 +12685,7 @@ namespace Vault.Api
             if (header == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12695,7 +12695,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12733,7 +12733,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12776,7 +12776,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12786,7 +12786,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12818,7 +12818,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12860,7 +12860,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12870,7 +12870,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12902,7 +12902,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12944,7 +12944,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -12954,7 +12954,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12986,7 +12986,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13028,7 +13028,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13038,7 +13038,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13070,7 +13070,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13112,7 +13112,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13122,7 +13122,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13154,7 +13154,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13196,7 +13196,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13206,7 +13206,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13238,7 +13238,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13280,7 +13280,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13290,7 +13290,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13322,7 +13322,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13369,7 +13369,7 @@ namespace Vault.Api
             if (urlLeaseId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13379,7 +13379,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13417,7 +13417,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13460,7 +13460,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13470,7 +13470,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13502,7 +13502,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13548,7 +13548,7 @@ namespace Vault.Api
             if (prefix == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13557,7 +13557,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13593,7 +13593,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13639,7 +13639,7 @@ namespace Vault.Api
             if (prefix == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13649,7 +13649,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13687,7 +13687,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13735,7 +13735,7 @@ namespace Vault.Api
             if (urlLeaseId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13745,7 +13745,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13783,7 +13783,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13825,7 +13825,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysLeasesTidy()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13834,7 +13834,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13864,7 +13864,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13904,7 +13904,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13914,7 +13914,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13946,7 +13946,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -13993,7 +13993,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14003,7 +14003,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14041,7 +14041,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14089,7 +14089,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14099,7 +14099,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14137,7 +14137,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14185,7 +14185,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14195,7 +14195,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14233,7 +14233,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14286,7 +14286,7 @@ namespace Vault.Api
             if (type == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14296,7 +14296,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14340,7 +14340,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14384,7 +14384,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14394,7 +14394,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14426,7 +14426,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14473,7 +14473,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14483,7 +14483,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14521,7 +14521,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14569,7 +14569,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14579,7 +14579,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14617,7 +14617,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14665,7 +14665,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14675,7 +14675,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14713,7 +14713,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14756,7 +14756,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14766,7 +14766,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14798,7 +14798,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14845,7 +14845,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14855,7 +14855,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14893,7 +14893,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14936,7 +14936,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -14946,7 +14946,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14978,7 +14978,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15025,7 +15025,7 @@ namespace Vault.Api
             if (path == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15035,7 +15035,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15073,7 +15073,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15116,7 +15116,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15126,7 +15126,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15158,7 +15158,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15200,7 +15200,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15210,7 +15210,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15242,7 +15242,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15284,7 +15284,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15294,7 +15294,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15326,7 +15326,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15368,7 +15368,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15378,7 +15378,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15410,7 +15410,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15452,7 +15452,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15462,7 +15462,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15494,7 +15494,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15541,7 +15541,7 @@ namespace Vault.Api
             if (urlLeaseId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15551,7 +15551,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15589,7 +15589,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15632,7 +15632,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15642,7 +15642,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15674,7 +15674,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15720,7 +15720,7 @@ namespace Vault.Api
             if (prefix == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15729,7 +15729,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15765,7 +15765,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15811,7 +15811,7 @@ namespace Vault.Api
             if (prefix == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15821,7 +15821,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15859,7 +15859,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15907,7 +15907,7 @@ namespace Vault.Api
             if (urlLeaseId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15917,7 +15917,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15955,7 +15955,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -15997,7 +15997,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRotate()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16006,7 +16006,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16036,7 +16036,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16076,7 +16076,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16086,7 +16086,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16118,7 +16118,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16159,7 +16159,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysSeal()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16168,7 +16168,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16198,7 +16198,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16237,7 +16237,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysStepDown()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16246,7 +16246,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16276,7 +16276,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16316,7 +16316,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16326,7 +16326,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16358,7 +16358,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16405,7 +16405,7 @@ namespace Vault.Api
             if (urlalgorithm == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16415,7 +16415,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16453,7 +16453,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16496,7 +16496,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16506,7 +16506,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16538,7 +16538,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16585,7 +16585,7 @@ namespace Vault.Api
             if (source == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16595,7 +16595,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16633,7 +16633,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16686,7 +16686,7 @@ namespace Vault.Api
             if (urlbytes == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16696,7 +16696,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16740,7 +16740,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16789,7 +16789,7 @@ namespace Vault.Api
             if (urlbytes == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16799,7 +16799,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16837,7 +16837,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16880,7 +16880,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16890,7 +16890,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16922,7 +16922,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16964,7 +16964,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -16974,7 +16974,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17006,7 +17006,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17048,7 +17048,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17058,7 +17058,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17090,7 +17090,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17132,7 +17132,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17142,7 +17142,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17174,7 +17174,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -17215,7 +17215,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostSysWrappingWrap()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17224,7 +17224,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17254,7 +17254,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };

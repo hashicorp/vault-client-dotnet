@@ -180,7 +180,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/vendorExtensions.x-csharp-value-type}}
             {{/required}}
             {{/allParams}}
-            {{packageName}}.Client.RequestOptions requestOptions = new {{packageName}}.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 {{#consumes}}
@@ -195,7 +195,7 @@ namespace {{packageName}}.{{apiPackage}}
                 {{/produces}}
             };
 
-            var contentType = {{packageName}}.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -384,7 +384,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/required}}
             {{/allParams}}
 
-            {{packageName}}.Client.RequestOptions requestOptions = new {{packageName}}.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 {{#consumes}}

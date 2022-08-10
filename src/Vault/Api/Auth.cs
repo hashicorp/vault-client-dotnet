@@ -6130,7 +6130,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAlicloudRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6139,7 +6139,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6175,7 +6175,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAlicloudRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6220,7 +6220,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapAppIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6229,7 +6229,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6265,7 +6265,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapAppIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6310,7 +6310,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapUserIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6319,7 +6319,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6355,7 +6355,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthAppIdMapUserIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6400,7 +6400,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6409,7 +6409,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6445,7 +6445,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6490,7 +6490,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBindSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6499,7 +6499,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6535,7 +6535,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBindSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6580,7 +6580,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBoundCidrList");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6589,7 +6589,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6625,7 +6625,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameBoundCidrList");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6670,7 +6670,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePeriod");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6679,7 +6679,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6715,7 +6715,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePeriod");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6760,7 +6760,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePolicies");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6769,7 +6769,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6805,7 +6805,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNamePolicies");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6850,7 +6850,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6859,7 +6859,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6895,7 +6895,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6940,7 +6940,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -6949,7 +6949,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -6985,7 +6985,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7030,7 +7030,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7039,7 +7039,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7075,7 +7075,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdDestroy");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7120,7 +7120,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7129,7 +7129,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7165,7 +7165,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7210,7 +7210,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7219,7 +7219,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7255,7 +7255,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameSecretIdTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7300,7 +7300,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7309,7 +7309,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7345,7 +7345,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7390,7 +7390,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7399,7 +7399,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7435,7 +7435,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenMaxTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7480,7 +7480,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7489,7 +7489,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7525,7 +7525,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7570,7 +7570,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7579,7 +7579,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7615,7 +7615,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthApproleRoleRoleNameTokenTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7660,7 +7660,7 @@ namespace Vault.Api
             if (certName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->DeleteAuthAwsConfigCertificateCertName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7669,7 +7669,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7705,7 +7705,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->DeleteAuthAwsConfigCertificateCertName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7745,7 +7745,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAwsConfigClient()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7754,7 +7754,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7784,7 +7784,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAwsConfigClientAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7828,7 +7828,7 @@ namespace Vault.Api
             if (accountId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->DeleteAuthAwsConfigStsAccountId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7837,7 +7837,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7873,7 +7873,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->DeleteAuthAwsConfigStsAccountId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7913,7 +7913,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAwsConfigTidyIdentityAccesslist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7922,7 +7922,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -7952,7 +7952,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAwsConfigTidyIdentityAccesslistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -7991,7 +7991,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAwsConfigTidyIdentityWhitelist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8000,7 +8000,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8030,7 +8030,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAwsConfigTidyIdentityWhitelistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8069,7 +8069,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAwsConfigTidyRoletagBlacklist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8078,7 +8078,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8108,7 +8108,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAwsConfigTidyRoletagBlacklistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8147,7 +8147,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAwsConfigTidyRoletagDenylist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8156,7 +8156,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8186,7 +8186,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAwsConfigTidyRoletagDenylistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8230,7 +8230,7 @@ namespace Vault.Api
             if (instanceId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityAccesslistInstanceId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8239,7 +8239,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8275,7 +8275,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityAccesslistInstanceId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8320,7 +8320,7 @@ namespace Vault.Api
             if (instanceId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityWhitelistInstanceId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8329,7 +8329,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8365,7 +8365,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->DeleteAuthAwsIdentityWhitelistInstanceId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8410,7 +8410,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAwsRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8419,7 +8419,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8455,7 +8455,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthAwsRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8500,7 +8500,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagBlacklistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8509,7 +8509,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8545,7 +8545,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagBlacklistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8590,7 +8590,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagDenylistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8599,7 +8599,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8635,7 +8635,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->DeleteAuthAwsRoletagDenylistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8675,7 +8675,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthAzureConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8684,7 +8684,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8714,7 +8714,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8758,7 +8758,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthAzureRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8767,7 +8767,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8803,7 +8803,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthAzureRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8848,7 +8848,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCertsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8857,7 +8857,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8893,7 +8893,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCertsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8938,7 +8938,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCrlsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -8947,7 +8947,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -8983,7 +8983,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthCertCrlsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9023,7 +9023,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthCfConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9032,7 +9032,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9062,7 +9062,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthCfConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9106,7 +9106,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthCfRolesRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9115,7 +9115,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9151,7 +9151,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthCfRolesRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9196,7 +9196,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthGcpRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9205,7 +9205,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9241,7 +9241,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthGcpRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9286,7 +9286,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapTeamsKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9295,7 +9295,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9331,7 +9331,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapTeamsKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9376,7 +9376,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapUsersKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9385,7 +9385,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9421,7 +9421,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->DeleteAuthGithubMapUsersKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9466,7 +9466,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthJwtRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9475,7 +9475,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9511,7 +9511,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthJwtRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9556,7 +9556,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKerberosGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9565,7 +9565,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9601,7 +9601,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKerberosGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9646,7 +9646,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKubernetesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9655,7 +9655,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9691,7 +9691,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthKubernetesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9736,7 +9736,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9745,7 +9745,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9781,7 +9781,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9826,7 +9826,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9835,7 +9835,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9871,7 +9871,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthLdapUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9911,7 +9911,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> DeleteAuthOciConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9920,7 +9920,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -9950,7 +9950,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> DeleteAuthOciConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -9994,7 +9994,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthOciRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10003,7 +10003,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10039,7 +10039,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->DeleteAuthOciRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10084,7 +10084,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOidcRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10093,7 +10093,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10129,7 +10129,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOidcRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10174,7 +10174,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10183,7 +10183,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10219,7 +10219,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10264,7 +10264,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10273,7 +10273,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10309,7 +10309,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthOktaUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10354,7 +10354,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthRadiusUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10363,7 +10363,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10399,7 +10399,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->DeleteAuthRadiusUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10444,7 +10444,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthTokenRolesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10453,7 +10453,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10489,7 +10489,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->DeleteAuthTokenRolesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10534,7 +10534,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->DeleteAuthUserpassUsersUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10543,7 +10543,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10579,7 +10579,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->DeleteAuthUserpassUsersUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10624,7 +10624,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10633,7 +10633,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10669,7 +10669,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10714,7 +10714,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAlicloudRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10723,7 +10723,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10759,7 +10759,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAlicloudRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10804,7 +10804,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRoles");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10813,7 +10813,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10849,7 +10849,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAlicloudRoles");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10890,7 +10890,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAppIdMapAppId(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10899,7 +10899,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -10934,7 +10934,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAppIdMapAppIdAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10982,7 +10982,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapAppIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -10991,7 +10991,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11027,7 +11027,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapAppIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11068,7 +11068,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAppIdMapUserId(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11077,7 +11077,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11112,7 +11112,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAppIdMapUserIdAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11160,7 +11160,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapUserIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11169,7 +11169,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11205,7 +11205,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthAppIdMapUserIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11250,7 +11250,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11259,7 +11259,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11295,7 +11295,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11340,7 +11340,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11349,7 +11349,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11385,7 +11385,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11430,7 +11430,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBindSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11439,7 +11439,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11475,7 +11475,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBindSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11520,7 +11520,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBoundCidrList");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11529,7 +11529,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11565,7 +11565,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameBoundCidrList");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11610,7 +11610,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameLocalSecretIds");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11619,7 +11619,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11655,7 +11655,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameLocalSecretIds");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11700,7 +11700,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePeriod");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11709,7 +11709,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11745,7 +11745,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePeriod");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11790,7 +11790,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePolicies");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11799,7 +11799,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11835,7 +11835,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNamePolicies");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11880,7 +11880,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameRoleId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11889,7 +11889,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -11925,7 +11925,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameRoleId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11975,7 +11975,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -11984,7 +11984,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12026,7 +12026,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthApproleRoleRoleNameSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12072,7 +12072,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12081,7 +12081,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12117,7 +12117,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12162,7 +12162,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12171,7 +12171,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12207,7 +12207,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12252,7 +12252,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12261,7 +12261,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12297,7 +12297,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameSecretIdTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12342,7 +12342,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12351,7 +12351,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12387,7 +12387,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12432,7 +12432,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenMaxTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12441,7 +12441,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12477,7 +12477,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenMaxTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12522,7 +12522,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12531,7 +12531,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12567,7 +12567,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12612,7 +12612,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12621,7 +12621,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12657,7 +12657,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthApproleRoleRoleNameTokenTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12702,7 +12702,7 @@ namespace Vault.Api
             if (certName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->GetAuthAwsConfigCertificateCertName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12711,7 +12711,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12747,7 +12747,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->GetAuthAwsConfigCertificateCertName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12792,7 +12792,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigCertificates");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12801,7 +12801,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12837,7 +12837,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigCertificates");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12877,7 +12877,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigClient()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12886,7 +12886,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12916,7 +12916,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigClientAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12955,7 +12955,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigIdentity()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -12964,7 +12964,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -12994,7 +12994,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigIdentityAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13038,7 +13038,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigSts");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13047,7 +13047,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13083,7 +13083,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsConfigSts");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13128,7 +13128,7 @@ namespace Vault.Api
             if (accountId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->GetAuthAwsConfigStsAccountId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13137,7 +13137,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13173,7 +13173,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->GetAuthAwsConfigStsAccountId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13213,7 +13213,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigTidyIdentityAccesslist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13222,7 +13222,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13252,7 +13252,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigTidyIdentityAccesslistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13291,7 +13291,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigTidyIdentityWhitelist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13300,7 +13300,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13330,7 +13330,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigTidyIdentityWhitelistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13369,7 +13369,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigTidyRoletagBlacklist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13378,7 +13378,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13408,7 +13408,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigTidyRoletagBlacklistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13447,7 +13447,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAwsConfigTidyRoletagDenylist()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13456,7 +13456,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13486,7 +13486,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAwsConfigTidyRoletagDenylistAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13530,7 +13530,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityAccesslist");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13539,7 +13539,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13575,7 +13575,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityAccesslist");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13620,7 +13620,7 @@ namespace Vault.Api
             if (instanceId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityAccesslistInstanceId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13629,7 +13629,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13665,7 +13665,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityAccesslistInstanceId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13710,7 +13710,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityWhitelist");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13719,7 +13719,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13755,7 +13755,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsIdentityWhitelist");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13800,7 +13800,7 @@ namespace Vault.Api
             if (instanceId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityWhitelistInstanceId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13809,7 +13809,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13845,7 +13845,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'instanceId' when calling Auth->GetAuthAwsIdentityWhitelistInstanceId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13890,7 +13890,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13899,7 +13899,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -13935,7 +13935,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13980,7 +13980,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAwsRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -13989,7 +13989,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14025,7 +14025,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthAwsRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14070,7 +14070,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoles");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14079,7 +14079,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14115,7 +14115,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoles");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14160,7 +14160,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagBlacklist");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14169,7 +14169,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14205,7 +14205,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagBlacklist");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14250,7 +14250,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagBlacklistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14259,7 +14259,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14295,7 +14295,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagBlacklistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14340,7 +14340,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagDenylist");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14349,7 +14349,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14385,7 +14385,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAwsRoletagDenylist");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14430,7 +14430,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagDenylistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14439,7 +14439,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14475,7 +14475,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->GetAuthAwsRoletagDenylistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14515,7 +14515,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthAzureConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14524,7 +14524,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14554,7 +14554,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthAzureConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14598,7 +14598,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAzureRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14607,7 +14607,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14643,7 +14643,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthAzureRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14688,7 +14688,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthAzureRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14697,7 +14697,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14733,7 +14733,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthAzureRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14773,7 +14773,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthCentrifyConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14782,7 +14782,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14812,7 +14812,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthCentrifyConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14856,7 +14856,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCerts");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14865,7 +14865,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14901,7 +14901,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCerts");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14946,7 +14946,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCertsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -14955,7 +14955,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -14991,7 +14991,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCertsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15036,7 +15036,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCrlsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15045,7 +15045,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15081,7 +15081,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthCertCrlsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15121,7 +15121,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthCfConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15130,7 +15130,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15160,7 +15160,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthCfConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15204,7 +15204,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCfRoles");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15213,7 +15213,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15249,7 +15249,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCfRoles");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15294,7 +15294,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthCfRolesRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15303,7 +15303,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15339,7 +15339,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthCfRolesRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15379,7 +15379,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthGcpConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15388,7 +15388,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15418,7 +15418,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthGcpConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15462,7 +15462,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15471,7 +15471,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15507,7 +15507,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15552,7 +15552,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthGcpRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15561,7 +15561,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15597,7 +15597,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthGcpRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15642,7 +15642,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRoles");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15651,7 +15651,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15687,7 +15687,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthGcpRoles");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15727,7 +15727,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthGithubConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15736,7 +15736,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15766,7 +15766,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthGithubConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15806,7 +15806,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthGithubMapTeams(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15815,7 +15815,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15850,7 +15850,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthGithubMapTeamsAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15898,7 +15898,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapTeamsKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15907,7 +15907,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -15943,7 +15943,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapTeamsKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15984,7 +15984,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthGithubMapUsers(string list = default(string))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -15993,7 +15993,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16028,7 +16028,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthGithubMapUsersAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16076,7 +16076,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapUsersKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16085,7 +16085,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16121,7 +16121,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->GetAuthGithubMapUsersKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16161,7 +16161,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthJwtConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16170,7 +16170,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16200,7 +16200,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthJwtConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16239,7 +16239,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthJwtOidcCallback()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16248,7 +16248,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16278,7 +16278,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthJwtOidcCallbackAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16322,7 +16322,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthJwtRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16331,7 +16331,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16367,7 +16367,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthJwtRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16412,7 +16412,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthJwtRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16421,7 +16421,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16457,7 +16457,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthJwtRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16497,7 +16497,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthKerberosConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16506,7 +16506,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16536,7 +16536,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthKerberosConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16575,7 +16575,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthKerberosConfigLdap()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16584,7 +16584,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16614,7 +16614,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthKerberosConfigLdapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16658,7 +16658,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKerberosGroups");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16667,7 +16667,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16703,7 +16703,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKerberosGroups");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16748,7 +16748,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKerberosGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16757,7 +16757,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16793,7 +16793,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKerberosGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16833,7 +16833,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthKerberosLogin()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16842,7 +16842,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16872,7 +16872,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthKerberosLoginAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16911,7 +16911,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthKubernetesConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16920,7 +16920,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -16950,7 +16950,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthKubernetesConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -16994,7 +16994,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKubernetesRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17003,7 +17003,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17039,7 +17039,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthKubernetesRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17084,7 +17084,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKubernetesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17093,7 +17093,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17129,7 +17129,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthKubernetesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17169,7 +17169,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthLdapConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17178,7 +17178,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17208,7 +17208,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthLdapConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17252,7 +17252,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapGroups");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17261,7 +17261,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17297,7 +17297,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapGroups");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17342,7 +17342,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17351,7 +17351,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17387,7 +17387,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17432,7 +17432,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapUsers");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17441,7 +17441,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17477,7 +17477,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthLdapUsers");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17522,7 +17522,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17531,7 +17531,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17567,7 +17567,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthLdapUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17607,7 +17607,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthOciConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17616,7 +17616,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17646,7 +17646,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthOciConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17690,7 +17690,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOciRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17699,7 +17699,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17735,7 +17735,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOciRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17780,7 +17780,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthOciRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17789,7 +17789,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17825,7 +17825,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->GetAuthOciRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17865,7 +17865,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthOidcConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17874,7 +17874,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17904,7 +17904,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17943,7 +17943,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthOidcOidcCallback()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -17952,7 +17952,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -17982,7 +17982,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthOidcOidcCallbackAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18026,7 +18026,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOidcRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18035,7 +18035,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18071,7 +18071,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOidcRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18116,7 +18116,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOidcRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18125,7 +18125,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18161,7 +18161,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOidcRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18201,7 +18201,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthOktaConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18210,7 +18210,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18240,7 +18240,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthOktaConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18284,7 +18284,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaGroups");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18293,7 +18293,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18329,7 +18329,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaGroups");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18374,7 +18374,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18383,7 +18383,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18419,7 +18419,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18464,7 +18464,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaUsers");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18473,7 +18473,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18509,7 +18509,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthOktaUsers");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18554,7 +18554,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18563,7 +18563,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18599,7 +18599,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthOktaUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18644,7 +18644,7 @@ namespace Vault.Api
             if (nonce == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'nonce' when calling Auth->GetAuthOktaVerifyNonce");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18653,7 +18653,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18689,7 +18689,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'nonce' when calling Auth->GetAuthOktaVerifyNonce");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18729,7 +18729,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthRadiusConfig()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18738,7 +18738,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18768,7 +18768,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthRadiusConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18812,7 +18812,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthRadiusUsers");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18821,7 +18821,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18857,7 +18857,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthRadiusUsers");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18902,7 +18902,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthRadiusUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18911,7 +18911,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -18947,7 +18947,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->GetAuthRadiusUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -18992,7 +18992,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenAccessors");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19001,7 +19001,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19037,7 +19037,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenAccessors");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19077,7 +19077,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthTokenLookup()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19086,7 +19086,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19116,7 +19116,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthTokenLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19155,7 +19155,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> GetAuthTokenLookupSelf()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19164,7 +19164,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19194,7 +19194,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> GetAuthTokenLookupSelfAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19238,7 +19238,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenRoles");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19247,7 +19247,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19283,7 +19283,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthTokenRoles");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19328,7 +19328,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthTokenRolesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19337,7 +19337,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19373,7 +19373,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->GetAuthTokenRolesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19418,7 +19418,7 @@ namespace Vault.Api
             if (list == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthUserpassUsers");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19427,7 +19427,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19463,7 +19463,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthUserpassUsers");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19508,7 +19508,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->GetAuthUserpassUsersUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19517,7 +19517,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19553,7 +19553,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->GetAuthUserpassUsersUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -19594,7 +19594,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAlicloudLogin(AlicloudLoginRequest alicloudLoginRequest = default(AlicloudLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19604,7 +19604,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19636,7 +19636,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAlicloudLoginAsync(AlicloudLoginRequest alicloudLoginRequest = default(AlicloudLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19683,7 +19683,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAlicloudRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19693,7 +19693,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19731,7 +19731,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAlicloudRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19774,7 +19774,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAppIdLogin(AppIdLoginRequest appIdLoginRequest = default(AppIdLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19784,7 +19784,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19816,7 +19816,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAppIdLoginAsync(AppIdLoginRequest appIdLoginRequest = default(AppIdLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19863,7 +19863,7 @@ namespace Vault.Api
             if (appId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'appId' when calling Auth->PostAuthAppIdLoginAppId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19873,7 +19873,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -19911,7 +19911,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'appId' when calling Auth->PostAuthAppIdLoginAppId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19959,7 +19959,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapAppIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -19969,7 +19969,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20007,7 +20007,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapAppIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20055,7 +20055,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapUserIdKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20065,7 +20065,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20103,7 +20103,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthAppIdMapUserIdKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20146,7 +20146,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest = default(ApproleLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20156,7 +20156,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20188,7 +20188,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest = default(ApproleLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20235,7 +20235,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20245,7 +20245,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20283,7 +20283,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20331,7 +20331,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBindSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20341,7 +20341,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20379,7 +20379,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBindSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20427,7 +20427,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBoundCidrList");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20437,7 +20437,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20475,7 +20475,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameBoundCidrList");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20523,7 +20523,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameCustomSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20533,7 +20533,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20571,7 +20571,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameCustomSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20619,7 +20619,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePeriod");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20629,7 +20629,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20667,7 +20667,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePeriod");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20715,7 +20715,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePolicies");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20725,7 +20725,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20763,7 +20763,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNamePolicies");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20811,7 +20811,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameRoleId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20821,7 +20821,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20859,7 +20859,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameRoleId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20907,7 +20907,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -20917,7 +20917,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -20955,7 +20955,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21003,7 +21003,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21013,7 +21013,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21051,7 +21051,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorDestroy");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21099,7 +21099,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21109,7 +21109,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21147,7 +21147,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdAccessorLookup");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21195,7 +21195,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21205,7 +21205,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21243,7 +21243,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21291,7 +21291,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdDestroy");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21301,7 +21301,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21339,7 +21339,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdDestroy");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21387,7 +21387,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdLookup");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21397,7 +21397,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21435,7 +21435,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdLookup");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21483,7 +21483,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21493,7 +21493,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21531,7 +21531,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21579,7 +21579,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21589,7 +21589,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21627,7 +21627,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameSecretIdTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21675,7 +21675,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenBoundCidrs");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21685,7 +21685,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21723,7 +21723,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenBoundCidrs");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21771,7 +21771,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenMaxTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21781,7 +21781,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21819,7 +21819,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenMaxTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21867,7 +21867,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenNumUses");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21877,7 +21877,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -21915,7 +21915,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenNumUses");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21963,7 +21963,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenTtl");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -21973,7 +21973,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22011,7 +22011,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthApproleRoleRoleNameTokenTtl");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22053,7 +22053,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthApproleTidySecretId()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -22062,7 +22062,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22092,7 +22092,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthApproleTidySecretIdAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -22137,7 +22137,7 @@ namespace Vault.Api
             if (certName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->PostAuthAwsConfigCertificateCertName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22147,7 +22147,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22185,7 +22185,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'certName' when calling Auth->PostAuthAwsConfigCertificateCertName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22228,7 +22228,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigClient(AwsConfigClientRequest awsConfigClientRequest = default(AwsConfigClientRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22238,7 +22238,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22270,7 +22270,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigClientAsync(AwsConfigClientRequest awsConfigClientRequest = default(AwsConfigClientRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22312,7 +22312,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigIdentity(AwsConfigIdentityRequest awsConfigIdentityRequest = default(AwsConfigIdentityRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22322,7 +22322,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22354,7 +22354,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigIdentityAsync(AwsConfigIdentityRequest awsConfigIdentityRequest = default(AwsConfigIdentityRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22395,7 +22395,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigRotateRoot()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -22404,7 +22404,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22434,7 +22434,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigRotateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -22479,7 +22479,7 @@ namespace Vault.Api
             if (accountId == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->PostAuthAwsConfigStsAccountId");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22489,7 +22489,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22527,7 +22527,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'accountId' when calling Auth->PostAuthAwsConfigStsAccountId");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22570,7 +22570,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigTidyIdentityAccesslist(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest = default(AwsConfigTidyIdentityAccesslistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22580,7 +22580,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22612,7 +22612,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigTidyIdentityAccesslistAsync(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest = default(AwsConfigTidyIdentityAccesslistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22654,7 +22654,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigTidyIdentityWhitelist(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest = default(AwsConfigTidyIdentityWhitelistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22664,7 +22664,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22696,7 +22696,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigTidyIdentityWhitelistAsync(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest = default(AwsConfigTidyIdentityWhitelistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22738,7 +22738,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigTidyRoletagBlacklist(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest = default(AwsConfigTidyRoletagBlacklistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22748,7 +22748,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22780,7 +22780,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigTidyRoletagBlacklistAsync(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest = default(AwsConfigTidyRoletagBlacklistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22822,7 +22822,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsConfigTidyRoletagDenylist(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest = default(AwsConfigTidyRoletagDenylistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22832,7 +22832,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22864,7 +22864,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsConfigTidyRoletagDenylistAsync(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest = default(AwsConfigTidyRoletagDenylistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22906,7 +22906,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsLogin(AwsLoginRequest awsLoginRequest = default(AwsLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22916,7 +22916,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -22948,7 +22948,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsLoginAsync(AwsLoginRequest awsLoginRequest = default(AwsLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -22995,7 +22995,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23005,7 +23005,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23043,7 +23043,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23091,7 +23091,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23101,7 +23101,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23139,7 +23139,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthAwsRoleRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23186,7 +23186,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagBlacklistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -23195,7 +23195,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23231,7 +23231,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagBlacklistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -23276,7 +23276,7 @@ namespace Vault.Api
             if (roleTag == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagDenylistRoleTag");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -23285,7 +23285,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23321,7 +23321,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleTag' when calling Auth->PostAuthAwsRoletagDenylistRoleTag");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -23362,7 +23362,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsTidyIdentityAccesslist(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest = default(AwsTidyIdentityAccesslistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23372,7 +23372,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23404,7 +23404,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsTidyIdentityAccesslistAsync(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest = default(AwsTidyIdentityAccesslistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23446,7 +23446,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsTidyIdentityWhitelist(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest = default(AwsTidyIdentityWhitelistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23456,7 +23456,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23488,7 +23488,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsTidyIdentityWhitelistAsync(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest = default(AwsTidyIdentityWhitelistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23530,7 +23530,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsTidyRoletagBlacklist(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest = default(AwsTidyRoletagBlacklistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23540,7 +23540,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23572,7 +23572,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsTidyRoletagBlacklistAsync(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest = default(AwsTidyRoletagBlacklistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23614,7 +23614,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAwsTidyRoletagDenylist(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest = default(AwsTidyRoletagDenylistRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23624,7 +23624,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23656,7 +23656,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAwsTidyRoletagDenylistAsync(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest = default(AwsTidyRoletagDenylistRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23698,7 +23698,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAzureConfig(AzureConfigRequest azureConfigRequest = default(AzureConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23708,7 +23708,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23740,7 +23740,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAzureConfigAsync(AzureConfigRequest azureConfigRequest = default(AzureConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23782,7 +23782,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthAzureLogin(AzureLoginRequest azureLoginRequest = default(AzureLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23792,7 +23792,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23824,7 +23824,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthAzureLoginAsync(AzureLoginRequest azureLoginRequest = default(AzureLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23871,7 +23871,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthAzureRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23881,7 +23881,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -23919,7 +23919,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthAzureRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23962,7 +23962,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCentrifyConfig(CentrifyConfigRequest centrifyConfigRequest = default(CentrifyConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -23972,7 +23972,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24004,7 +24004,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCentrifyConfigAsync(CentrifyConfigRequest centrifyConfigRequest = default(CentrifyConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24046,7 +24046,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCentrifyLogin(CentrifyLoginRequest centrifyLoginRequest = default(CentrifyLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24056,7 +24056,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24088,7 +24088,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest = default(CentrifyLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24135,7 +24135,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCertsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24145,7 +24145,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24183,7 +24183,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCertsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24226,7 +24226,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCertConfig(CertConfigRequest certConfigRequest = default(CertConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24236,7 +24236,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24268,7 +24268,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCertConfigAsync(CertConfigRequest certConfigRequest = default(CertConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24315,7 +24315,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCrlsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24325,7 +24325,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24363,7 +24363,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthCertCrlsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24406,7 +24406,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCertLogin(CertLoginRequest certLoginRequest = default(CertLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24416,7 +24416,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24448,7 +24448,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCertLoginAsync(CertLoginRequest certLoginRequest = default(CertLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24490,7 +24490,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCfConfig(CfConfigRequest cfConfigRequest = default(CfConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24500,7 +24500,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24532,7 +24532,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCfConfigAsync(CfConfigRequest cfConfigRequest = default(CfConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24574,7 +24574,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthCfLogin(CfLoginRequest cfLoginRequest = default(CfLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24584,7 +24584,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24616,7 +24616,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthCfLoginAsync(CfLoginRequest cfLoginRequest = default(CfLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24663,7 +24663,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthCfRolesRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24673,7 +24673,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24711,7 +24711,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthCfRolesRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24754,7 +24754,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthGcpConfig(GcpConfigRequest gcpConfigRequest = default(GcpConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24764,7 +24764,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24796,7 +24796,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthGcpConfigAsync(GcpConfigRequest gcpConfigRequest = default(GcpConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24838,7 +24838,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthGcpLogin(GcpLoginRequest gcpLoginRequest = default(GcpLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24848,7 +24848,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24880,7 +24880,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthGcpLoginAsync(GcpLoginRequest gcpLoginRequest = default(GcpLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24927,7 +24927,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -24937,7 +24937,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -24975,7 +24975,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25023,7 +25023,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameLabels");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25033,7 +25033,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25071,7 +25071,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameLabels");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25119,7 +25119,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameServiceAccounts");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25129,7 +25129,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25167,7 +25167,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthGcpRoleNameServiceAccounts");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25210,7 +25210,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthGithubConfig(GithubConfigRequest githubConfigRequest = default(GithubConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25220,7 +25220,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25252,7 +25252,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthGithubConfigAsync(GithubConfigRequest githubConfigRequest = default(GithubConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25294,7 +25294,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthGithubLogin(GithubLoginRequest githubLoginRequest = default(GithubLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25304,7 +25304,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25336,7 +25336,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthGithubLoginAsync(GithubLoginRequest githubLoginRequest = default(GithubLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25383,7 +25383,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapTeamsKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25393,7 +25393,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25431,7 +25431,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapTeamsKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25479,7 +25479,7 @@ namespace Vault.Api
             if (key == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapUsersKey");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25489,7 +25489,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25527,7 +25527,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'key' when calling Auth->PostAuthGithubMapUsersKey");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25570,7 +25570,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthJwtConfig(JwtConfigRequest jwtConfigRequest = default(JwtConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25580,7 +25580,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25612,7 +25612,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthJwtConfigAsync(JwtConfigRequest jwtConfigRequest = default(JwtConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25654,7 +25654,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthJwtLogin(JwtLoginRequest jwtLoginRequest = default(JwtLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25664,7 +25664,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25696,7 +25696,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthJwtLoginAsync(JwtLoginRequest jwtLoginRequest = default(JwtLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25738,7 +25738,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthJwtOidcAuthUrl(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest = default(JwtOidcAuthUrlRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25748,7 +25748,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25780,7 +25780,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthJwtOidcAuthUrlAsync(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest = default(JwtOidcAuthUrlRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25822,7 +25822,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthJwtOidcCallback(JwtOidcCallbackRequest jwtOidcCallbackRequest = default(JwtOidcCallbackRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25832,7 +25832,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25864,7 +25864,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthJwtOidcCallbackAsync(JwtOidcCallbackRequest jwtOidcCallbackRequest = default(JwtOidcCallbackRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25911,7 +25911,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthJwtRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -25921,7 +25921,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -25959,7 +25959,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthJwtRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26002,7 +26002,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthKerberosConfig(KerberosConfigRequest kerberosConfigRequest = default(KerberosConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26012,7 +26012,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26044,7 +26044,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthKerberosConfigAsync(KerberosConfigRequest kerberosConfigRequest = default(KerberosConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26086,7 +26086,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthKerberosConfigLdap(KerberosConfigLdapRequest kerberosConfigLdapRequest = default(KerberosConfigLdapRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26096,7 +26096,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26128,7 +26128,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthKerberosConfigLdapAsync(KerberosConfigLdapRequest kerberosConfigLdapRequest = default(KerberosConfigLdapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26175,7 +26175,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKerberosGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26185,7 +26185,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26223,7 +26223,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKerberosGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26266,7 +26266,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthKerberosLogin(KerberosLoginRequest kerberosLoginRequest = default(KerberosLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26276,7 +26276,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26308,7 +26308,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthKerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest = default(KerberosLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26350,7 +26350,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest = default(KubernetesConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26360,7 +26360,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26392,7 +26392,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthKubernetesConfigAsync(KubernetesConfigRequest kubernetesConfigRequest = default(KubernetesConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26434,7 +26434,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthKubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest = default(KubernetesLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26444,7 +26444,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26476,7 +26476,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthKubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest = default(KubernetesLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26523,7 +26523,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKubernetesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26533,7 +26533,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26571,7 +26571,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthKubernetesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26614,7 +26614,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthLdapConfig(LdapConfigRequest ldapConfigRequest = default(LdapConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26624,7 +26624,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26656,7 +26656,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthLdapConfigAsync(LdapConfigRequest ldapConfigRequest = default(LdapConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26703,7 +26703,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26713,7 +26713,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26751,7 +26751,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26799,7 +26799,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthLdapLoginUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26809,7 +26809,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26847,7 +26847,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthLdapLoginUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26895,7 +26895,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26905,7 +26905,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -26943,7 +26943,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthLdapUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26986,7 +26986,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOciConfig(OciConfigRequest ociConfigRequest = default(OciConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -26996,7 +26996,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27028,7 +27028,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOciConfigAsync(OciConfigRequest ociConfigRequest = default(OciConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27075,7 +27075,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciLoginRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27085,7 +27085,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27123,7 +27123,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciLoginRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27171,7 +27171,7 @@ namespace Vault.Api
             if (role == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciRoleRole");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27181,7 +27181,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27219,7 +27219,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'role' when calling Auth->PostAuthOciRoleRole");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27262,7 +27262,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOidcConfig(OidcConfigRequest oidcConfigRequest = default(OidcConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27272,7 +27272,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27304,7 +27304,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOidcConfigAsync(OidcConfigRequest oidcConfigRequest = default(OidcConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27346,7 +27346,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOidcLogin(OidcLoginRequest oidcLoginRequest = default(OidcLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27356,7 +27356,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27388,7 +27388,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOidcLoginAsync(OidcLoginRequest oidcLoginRequest = default(OidcLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27430,7 +27430,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOidcOidcAuthUrl(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest = default(OidcOidcAuthUrlRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27440,7 +27440,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27472,7 +27472,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOidcOidcAuthUrlAsync(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest = default(OidcOidcAuthUrlRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27514,7 +27514,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOidcOidcCallback(OidcOidcCallbackRequest oidcOidcCallbackRequest = default(OidcOidcCallbackRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27524,7 +27524,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27556,7 +27556,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOidcOidcCallbackAsync(OidcOidcCallbackRequest oidcOidcCallbackRequest = default(OidcOidcCallbackRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27603,7 +27603,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOidcRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27613,7 +27613,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27651,7 +27651,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOidcRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27694,7 +27694,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthOktaConfig(OktaConfigRequest oktaConfigRequest = default(OktaConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27704,7 +27704,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27736,7 +27736,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthOktaConfigAsync(OktaConfigRequest oktaConfigRequest = default(OktaConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27783,7 +27783,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaGroupsName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27793,7 +27793,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27831,7 +27831,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaGroupsName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27879,7 +27879,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthOktaLoginUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27889,7 +27889,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -27927,7 +27927,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthOktaLoginUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27975,7 +27975,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -27985,7 +27985,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28023,7 +28023,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthOktaUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28066,7 +28066,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthRadiusConfig(RadiusConfigRequest radiusConfigRequest = default(RadiusConfigRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28076,7 +28076,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28108,7 +28108,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthRadiusConfigAsync(RadiusConfigRequest radiusConfigRequest = default(RadiusConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28150,7 +28150,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthRadiusLogin(RadiusLoginRequest radiusLoginRequest = default(RadiusLoginRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28160,7 +28160,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28192,7 +28192,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthRadiusLoginAsync(RadiusLoginRequest radiusLoginRequest = default(RadiusLoginRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28239,7 +28239,7 @@ namespace Vault.Api
             if (urlusername == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlusername' when calling Auth->PostAuthRadiusLoginUrlusername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28249,7 +28249,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28287,7 +28287,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'urlusername' when calling Auth->PostAuthRadiusLoginUrlusername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28335,7 +28335,7 @@ namespace Vault.Api
             if (name == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthRadiusUsersName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28345,7 +28345,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28383,7 +28383,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'name' when calling Auth->PostAuthRadiusUsersName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28425,7 +28425,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenCreate()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28434,7 +28434,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28464,7 +28464,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenCreateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28503,7 +28503,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenCreateOrphan()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28512,7 +28512,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28542,7 +28542,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenCreateOrphanAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28586,7 +28586,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenCreateRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28595,7 +28595,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28631,7 +28631,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenCreateRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -28672,7 +28672,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenLookup(TokenLookupRequest tokenLookupRequest = default(TokenLookupRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28682,7 +28682,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28714,7 +28714,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenLookupAsync(TokenLookupRequest tokenLookupRequest = default(TokenLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28756,7 +28756,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenLookupAccessor(TokenLookupAccessorRequest tokenLookupAccessorRequest = default(TokenLookupAccessorRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28766,7 +28766,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28798,7 +28798,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenLookupAccessorAsync(TokenLookupAccessorRequest tokenLookupAccessorRequest = default(TokenLookupAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28840,7 +28840,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenLookupSelf(TokenLookupSelfRequest tokenLookupSelfRequest = default(TokenLookupSelfRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28850,7 +28850,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28882,7 +28882,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenLookupSelfAsync(TokenLookupSelfRequest tokenLookupSelfRequest = default(TokenLookupSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28924,7 +28924,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRenew(TokenRenewRequest tokenRenewRequest = default(TokenRenewRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -28934,7 +28934,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -28966,7 +28966,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRenewAsync(TokenRenewRequest tokenRenewRequest = default(TokenRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29008,7 +29008,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest = default(TokenRenewAccessorRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29018,7 +29018,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29050,7 +29050,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest = default(TokenRenewAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29092,7 +29092,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest = default(TokenRenewSelfRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29102,7 +29102,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29134,7 +29134,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest = default(TokenRenewSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29176,7 +29176,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRevoke(TokenRevokeRequest tokenRevokeRequest = default(TokenRevokeRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29186,7 +29186,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29218,7 +29218,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest = default(TokenRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29260,7 +29260,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest = default(TokenRevokeAccessorRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29270,7 +29270,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29302,7 +29302,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest = default(TokenRevokeAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29344,7 +29344,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest = default(TokenRevokeOrphanRequest))
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29354,7 +29354,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29386,7 +29386,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest = default(TokenRevokeOrphanRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29427,7 +29427,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenRevokeSelf()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -29436,7 +29436,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29466,7 +29466,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenRevokeSelfAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -29511,7 +29511,7 @@ namespace Vault.Api
             if (roleName == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenRolesRoleName");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29521,7 +29521,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29559,7 +29559,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'roleName' when calling Auth->PostAuthTokenRolesRoleName");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29601,7 +29601,7 @@ namespace Vault.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Vault.Client.ApiResponse<Object> PostAuthTokenTidy()
         {
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -29610,7 +29610,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29640,7 +29640,7 @@ namespace Vault.Api
         public async Task<Vault.Client.ApiResponse<Object>> PostAuthTokenTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -29685,7 +29685,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassLoginUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29695,7 +29695,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29733,7 +29733,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassLoginUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29781,7 +29781,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsername");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29791,7 +29791,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29829,7 +29829,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsername");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29877,7 +29877,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePassword");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29887,7 +29887,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -29925,7 +29925,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePassword");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29973,7 +29973,7 @@ namespace Vault.Api
             if (username == null)
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePolicies");
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -29983,7 +29983,7 @@ namespace Vault.Api
             string[] _accepts = new string[] {
             };
 
-            var contentType = Vault.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
             if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
@@ -30021,7 +30021,7 @@ namespace Vault.Api
                 throw new Vault.Client.ApiException(400, "Missing required parameter 'username' when calling Auth->PostAuthUserpassUsersUsernamePolicies");
 
 
-            Vault.Client.RequestOptions requestOptions = new Vault.Client.RequestOptions();
+            RequestOptions requestOptions = new RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
