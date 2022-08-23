@@ -405,9 +405,9 @@ namespace {{packageName}}.Client
 
             HttpResponseMessage response;
 {{#supportsRetry}}
-            if (RetryConfiguration.AsyncRetryPolicy != null)
+            if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
-                var policy = RetryConfiguration.AsyncRetryPolicy;
+                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
                 var policyResult = await policy
                     .ExecuteAndCaptureAsync(() => Configuration.HttpClient.SendAsync(req, cancellationToken))
                     .ConfigureAwait(false);

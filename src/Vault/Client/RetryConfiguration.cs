@@ -9,23 +9,43 @@
 
 
 using Polly;
-using System.Net.Http;
+using System;
 
 namespace Vault.Client
 {
     /// <summary>
     /// Configuration class to set the polly retry policies to be applied to the requests.
     /// </summary>
-    public static class RetryConfiguration
+    public class RetryConfiguration
     {
         /// <summary>
         /// Retry policy
         /// </summary>
-        public static Policy<HttpResponseMessage> RetryPolicy { get; set; }
+        public Policy RetryPolicy { get; set; }
 
         /// <summary>
         /// Async retry policy
         /// </summary>
-        public static AsyncPolicy<HttpResponseMessage> AsyncRetryPolicy { get; set; }
+        public AsyncPolicy AsyncRetryPolicy { get; set; }
+
+        public RetryConfiguration(int MaxRetryCount, TimeSpan TimeSpan)
+        {
+            // Handle both exceptions and return values in one policy
+            int[] retryStatusCodes = {
+                408, // Request Timeout
+                500, // Internal Server Error
+                502, // Bad Gateway
+                503, // Service Unavailable
+                504, // Gateway Timeout
+            };
+            
+            AsyncRetryPolicy = Policy
+                                .Handle<Exception>()        
+                                .RetryAsync(MaxRetryCount, (exception, retryCount, context) => Console.WriteLine($"try: {retryCount}, Exception: {exception.Message}"));
+        
+            RetryPolicy = Policy
+                                .Handle<Exception>()
+                                .Retry(MaxRetryCount, (exception, retryCount, context) => Console.WriteLine("Here"));
+        }
     }
 }
