@@ -326,10 +326,7 @@ namespace Vault.Client
 
             return request;
         }
-
-        partial void InterceptRequest(HttpRequestMessage req);
-        partial void InterceptResponse(HttpRequestMessage req, HttpResponseMessage response);
-
+        
         private async Task<ApiResponse<T>> ToApiResponse<T>(HttpResponseMessage response, object responseData, Uri uri)
         {
             T result = (T) responseData;
@@ -402,8 +399,6 @@ namespace Vault.Client
                 }
             }
 
-            InterceptRequest(req);
-
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
@@ -439,8 +434,6 @@ namespace Vault.Client
             {
                 responseData = (T) (object) await response.Content.ReadAsStreamAsync();
             }
-
-            InterceptResponse(req, response);
 
             return await ToApiResponse<T>(response, responseData, req.RequestUri);
         }
