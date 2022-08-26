@@ -404,7 +404,7 @@ namespace {{packageName}}.Client
             {
                 var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(() => Configuration.HttpClient.SendAsync(req, cancellationToken))
+                    .ExecuteAndCaptureAsync(async () => await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken))
                     .ConfigureAwait(false);
                 response = (policyResult.Outcome == OutcomeType.Successful) ?
                     policyResult.Result : new HttpResponseMessage()

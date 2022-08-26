@@ -400,11 +400,11 @@ namespace Vault.Client
             }
 
             HttpResponseMessage response;
-            if (Configuration.RetryConfiguration.asyncRetryPolicy != null)
+            if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.asyncRetryPolicy;
+                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(() => Configuration.HttpClient.SendAsync(req, cancellationToken))
+                    .ExecuteAndCaptureAsync(async () => await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken))
                     .ConfigureAwait(false);
                 response = (policyResult.Outcome == OutcomeType.Successful) ?
                     policyResult.Result : new HttpResponseMessage()
