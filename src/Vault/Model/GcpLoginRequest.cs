@@ -22,7 +22,6 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
-using OpenAPIDateConverter = Vault.Client.OpenAPIDateConverter;
 
 namespace Vault.Model
 {
