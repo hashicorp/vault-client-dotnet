@@ -96,7 +96,8 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath, 
+        public Configuration(string basePath,
+                            string baseNamespace = "",
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null)
         {
@@ -105,6 +106,7 @@ namespace Vault.Client
             timeout = timeout ?? TimeSpan.FromSeconds(100);
 
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
+            BaseNamespace = baseNamespace;
             HttpClient = new HttpClient(HttpClientHandler);
             HttpClient.Timeout = (TimeSpan)timeout;
         }
@@ -119,6 +121,24 @@ namespace Vault.Client
         public virtual string BasePath {
             get { return _basePath; }
             set { _basePath = value; }
+        }
+
+        private readonly object namespaceLock = new object();
+  
+        /// <summary>
+        /// The base namespace
+        /// </summary>
+        private string _namespace;
+        public string BaseNamespace 
+        {
+            get { return _namespace; }
+            set
+            {
+                lock(namespaceLock)
+                {
+                    _namespace = value;
+                }
+            }
         }
 
         /// <summary>
