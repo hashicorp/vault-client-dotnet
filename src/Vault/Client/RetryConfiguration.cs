@@ -33,8 +33,6 @@ namespace Vault.Client
             HttpStatusCode.GatewayTimeout
         };
 
-        public delegate void RetryFunc(DelegateResult<HttpResponseMessage> result, int retryCount, Context context);
-
         /// <summary>
         /// Async retry policy
         /// </summary>
@@ -43,7 +41,7 @@ namespace Vault.Client
         /// <summary>
         /// Creates a new RetryConfiguration object
         /// </summary>
-        public RetryConfiguration(int MaxRetryCount, TimeSpan TimeSpan, RetryFunc retryFunc)
+        public RetryConfiguration(int MaxRetryCount, TimeSpan TimeSpan)
         {
             AsyncRetryPolicy = Policy
                     .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       

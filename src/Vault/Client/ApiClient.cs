@@ -402,16 +402,26 @@ namespace Vault.Client
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
+                              var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(async () => await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken))
-                    .ConfigureAwait(false);
-                response = (policyResult.Outcome == OutcomeType.Successful) ?
-                    policyResult.Result : new HttpResponseMessage()
+                    .ExecuteAndCaptureAsync(async () => 
                     {
-                        ReasonPhrase = policyResult.FinalException.ToString(),
-                        RequestMessage = req
+                        return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
+                    })
+                    .ConfigureAwait(false);
+
+                if(policyResult.Outcome == OutcomeType.Successful)
+                {
+                    response = new HttpResponseMessage() 
+                    {
+                        RequestMessage = req,
+                        StatusCode = policyResult.Result.StatusCode
                     };
+                }
+                else
+                {
+                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                }
             }
             else
             {
