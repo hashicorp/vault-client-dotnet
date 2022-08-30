@@ -36,9 +36,8 @@ namespace {{packageName}}.Client
         public RetryConfiguration(int MaxRetryCount, TimeSpan TimeSpan)
         {
             AsyncRetryPolicy = Policy
-                    .Handle<HttpRequestException>() 
-                    .OrResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       
-                    .RetryAsync(MaxRetryCount, (result, retryCount, context) => Console.WriteLine($"try: {retryCount}"));
+                    .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       
+                    .WaitAndRetryAsync(MaxRetryCount, _ => TimeSpan);
         }
 
         /// <summary>
