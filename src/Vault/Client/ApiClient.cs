@@ -172,7 +172,13 @@ namespace Vault.Client
         private string _token;
         public string Token 
         {
-            get { return _token; }
+            get 
+            { 
+                lock(tokenLock) 
+                {
+                    return _token; 
+                }
+            }
             set
             {
                 lock(tokenLock)
