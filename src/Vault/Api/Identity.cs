@@ -2480,8 +2480,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2525,8 +2524,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2568,8 +2566,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2613,8 +2610,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2656,8 +2652,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2701,8 +2696,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2744,8 +2738,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2789,8 +2782,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2832,8 +2824,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2877,8 +2868,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2920,8 +2910,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -2965,8 +2954,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3008,8 +2996,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3053,8 +3040,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3096,8 +3082,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3141,8 +3126,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3184,8 +3168,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3229,8 +3212,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3272,8 +3254,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3317,8 +3298,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3360,8 +3340,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3405,8 +3384,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3448,8 +3426,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3493,8 +3470,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3536,8 +3512,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3581,8 +3556,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3624,8 +3598,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3669,8 +3642,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3712,8 +3684,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3757,8 +3728,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3800,8 +3770,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3845,8 +3814,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3888,8 +3856,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -3933,8 +3900,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3976,8 +3942,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4021,8 +3986,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4064,8 +4028,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4109,8 +4072,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4152,8 +4114,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4197,8 +4158,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4240,8 +4200,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4285,8 +4244,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4328,8 +4286,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity-alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4373,8 +4330,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4416,8 +4372,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4461,8 +4416,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4504,8 +4458,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4549,8 +4502,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4592,8 +4544,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4637,8 +4588,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4680,8 +4630,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/name", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4725,8 +4674,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4768,8 +4716,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4813,8 +4760,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4856,8 +4802,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group-alias/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4901,8 +4846,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4944,8 +4888,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -4989,8 +4932,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5032,8 +4974,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5077,8 +5018,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5120,8 +5060,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5165,8 +5104,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5208,8 +5146,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group/name", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5253,8 +5190,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5296,8 +5232,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5341,8 +5276,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5384,8 +5318,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5429,8 +5362,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5472,8 +5404,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5517,8 +5448,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5560,8 +5490,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5605,8 +5534,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5648,8 +5576,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/duo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5693,8 +5620,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5736,8 +5662,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5781,8 +5706,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5824,8 +5748,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/{method_id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5869,8 +5792,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/{method_id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5912,8 +5834,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/okta", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -5957,8 +5878,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6000,8 +5920,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6045,8 +5964,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6088,8 +6006,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/pingid", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6133,8 +6050,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6176,8 +6092,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6221,8 +6136,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6264,8 +6178,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/totp", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6309,8 +6222,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6352,8 +6264,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6397,8 +6308,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6440,8 +6350,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/assignment", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6485,8 +6394,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6528,8 +6436,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6573,8 +6480,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6616,8 +6522,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/client", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6661,8 +6566,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6704,8 +6608,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6749,8 +6652,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6786,8 +6688,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6825,8 +6726,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6868,8 +6768,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6913,8 +6812,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6956,8 +6854,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7001,8 +6898,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7044,8 +6940,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7089,8 +6984,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7132,8 +7026,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7177,8 +7070,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7220,8 +7112,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/authorize";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7265,8 +7156,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/authorize";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7308,8 +7198,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/userinfo";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7353,8 +7242,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/userinfo";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7396,8 +7284,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/.well-known/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7441,8 +7328,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/.well-known/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7484,8 +7370,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/.well-known/openid-configuration";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7529,8 +7414,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/.well-known/openid-configuration";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7572,8 +7456,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7617,8 +7500,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7660,8 +7542,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7705,8 +7586,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7748,8 +7628,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/scope", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7793,8 +7672,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7836,8 +7714,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7881,8 +7758,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7924,8 +7800,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/token/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/token/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7969,8 +7844,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/token/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8006,8 +7880,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/.well-known/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8045,8 +7918,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/.well-known/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8082,8 +7954,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/.well-known/openid-configuration";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8121,8 +7992,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/.well-known/openid-configuration";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8164,8 +8034,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/persona/id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8209,8 +8078,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8252,8 +8120,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8297,8 +8164,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8337,8 +8203,7 @@ namespace Vault.Api
             requestOptions.Data = identityAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8379,8 +8244,7 @@ namespace Vault.Api
             requestOptions.Data = identityAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8425,8 +8289,7 @@ namespace Vault.Api
             requestOptions.Data = identityAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8473,8 +8336,7 @@ namespace Vault.Api
             requestOptions.Data = identityAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/alias/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8513,8 +8375,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8555,8 +8416,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8595,8 +8455,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity-alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8637,8 +8496,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8683,8 +8541,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8731,8 +8588,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity-alias/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8771,8 +8627,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityBatchDeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/batch-delete";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/batch-delete", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8813,8 +8668,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityBatchDeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/batch-delete";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/batch-delete", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8859,8 +8713,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8907,8 +8760,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8947,8 +8799,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityMergeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/merge";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/merge", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8989,8 +8840,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityMergeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/merge";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/merge", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9035,8 +8885,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityNameRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/entity/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9083,8 +8932,7 @@ namespace Vault.Api
             requestOptions.Data = identityEntityNameRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/entity/name/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9123,8 +8971,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/group", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9165,8 +9012,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9205,8 +9051,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/group-alias", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9247,8 +9092,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupAliasRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9293,8 +9137,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/group-alias/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9341,8 +9184,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupAliasIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group-alias/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9387,8 +9229,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/group/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9435,8 +9276,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9481,8 +9321,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupNameRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/group/name/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9529,8 +9368,7 @@ namespace Vault.Api
             requestOptions.Data = identityGroupNameRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/group/name/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9569,8 +9407,7 @@ namespace Vault.Api
             requestOptions.Data = identityLookupEntityRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/lookup/entity";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/lookup/entity", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9611,8 +9448,7 @@ namespace Vault.Api
             requestOptions.Data = identityLookupEntityRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/lookup/entity";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/entity", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9651,8 +9487,7 @@ namespace Vault.Api
             requestOptions.Data = identityLookupGroupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/lookup/group";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/lookup/group", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9693,8 +9528,7 @@ namespace Vault.Api
             requestOptions.Data = identityLookupGroupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/lookup/group";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/lookup/group", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9739,8 +9573,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaLoginEnforcementRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9787,8 +9620,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaLoginEnforcementRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/login-enforcement/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9833,8 +9665,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodDuoRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9881,8 +9712,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodDuoRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/duo/{method_id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9927,8 +9757,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodOktaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9975,8 +9804,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodOktaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/okta/{method_id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10021,8 +9849,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodPingidRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10069,8 +9896,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodPingidRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/pingid/{method_id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10109,8 +9935,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/admin-destroy";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/admin-destroy", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10151,8 +9976,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpAdminDestroyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/admin-destroy";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-destroy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10191,8 +10015,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/admin-generate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/admin-generate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10233,8 +10056,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpAdminGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/admin-generate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/admin-generate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10273,8 +10095,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/generate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/generate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10315,8 +10136,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/generate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/generate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10361,8 +10181,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10409,8 +10228,7 @@ namespace Vault.Api
             requestOptions.Data = identityMfaMethodTotpRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/mfa/method/totp/{method_id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10455,8 +10273,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcAssignmentRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/assignment/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10503,8 +10320,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcAssignmentRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/assignment/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10549,8 +10365,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcClientRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/client/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10597,8 +10412,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcClientRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/client/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10637,8 +10451,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10679,8 +10492,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10719,8 +10531,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcIntrospectRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/introspect";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/introspect", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10761,8 +10572,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcIntrospectRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/introspect";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/introspect", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10807,8 +10617,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/key/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10855,8 +10664,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10901,8 +10709,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcKeyRotateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}/rotate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/key/{name}/rotate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10949,8 +10756,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcKeyRotateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/key/{name}/rotate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/key/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10995,8 +10801,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11043,8 +10848,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11089,8 +10893,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderAuthorizeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/authorize";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11137,8 +10940,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderAuthorizeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/authorize";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11183,8 +10985,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderTokenRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/token";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11231,8 +11032,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcProviderTokenRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/token";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11274,8 +11074,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/userinfo";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11319,8 +11118,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/provider/{name}/userinfo";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11365,8 +11163,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11413,8 +11210,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11459,8 +11255,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcScopeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/oidc/scope/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11507,8 +11302,7 @@ namespace Vault.Api
             requestOptions.Data = identityOidcScopeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/oidc/scope/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11547,8 +11341,7 @@ namespace Vault.Api
             requestOptions.Data = identityPersonaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/persona", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11589,8 +11382,7 @@ namespace Vault.Api
             requestOptions.Data = identityPersonaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/persona", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11635,8 +11427,7 @@ namespace Vault.Api
             requestOptions.Data = identityPersonaIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/identity/persona/id/{id}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11683,8 +11474,7 @@ namespace Vault.Api
             requestOptions.Data = identityPersonaIdRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/identity/persona/id/{id}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/persona/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

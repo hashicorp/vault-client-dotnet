@@ -6888,8 +6888,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ad/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -6927,8 +6926,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6970,8 +6968,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ad/library/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7015,8 +7012,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7058,8 +7054,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ad/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7103,8 +7098,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7140,8 +7134,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/alicloud/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7179,8 +7172,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7222,8 +7214,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/alicloud/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7267,8 +7258,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7310,8 +7300,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/aws/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7355,8 +7344,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7392,8 +7380,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/azure/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7431,8 +7418,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7474,8 +7460,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/azure/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7519,8 +7504,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7562,8 +7546,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/consul/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7607,8 +7590,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7650,8 +7632,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/cubbyhole/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7695,8 +7676,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7738,8 +7718,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcp/roleset/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7783,8 +7762,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7826,8 +7804,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcp/static-account/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7871,8 +7848,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7908,8 +7884,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcpkms/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -7947,8 +7922,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7990,8 +7964,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/deregister/{key}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/deregister/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8035,8 +8008,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/deregister/{key}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8078,8 +8050,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8123,8 +8094,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8166,8 +8136,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/trim/{key}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/gcpkms/keys/trim/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8211,8 +8180,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/trim/{key}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8248,8 +8216,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/kubernetes/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8287,8 +8254,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8330,8 +8296,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/kubernetes/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8375,8 +8340,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8418,8 +8382,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/kv/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8463,8 +8426,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8506,8 +8468,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8551,8 +8512,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8588,8 +8548,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/nomad/config/access", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8627,8 +8586,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8664,8 +8622,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/nomad/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8703,8 +8660,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8746,8 +8702,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/nomad/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8791,8 +8746,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8828,8 +8782,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/openldap/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8867,8 +8820,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8910,8 +8862,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/openldap/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8955,8 +8906,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8998,8 +8948,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/openldap/static-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9043,8 +8992,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9086,8 +9034,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9131,8 +9078,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9168,8 +9114,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/pki//json", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9207,8 +9152,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9250,8 +9194,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/pki/key/{key_ref}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9295,8 +9238,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9338,8 +9280,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/pki/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9383,8 +9324,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9420,8 +9360,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/pki/root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9459,8 +9398,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/pki/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9502,8 +9440,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/rabbitmq/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9547,8 +9484,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9590,8 +9526,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/secret/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9635,8 +9570,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9678,8 +9612,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/secret/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9723,8 +9656,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9760,8 +9692,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ssh/config/ca", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9799,8 +9730,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9836,8 +9766,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ssh/config/zeroaddress", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9875,8 +9804,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9918,8 +9846,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/keys/{key_name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ssh/keys/{key_name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -9963,8 +9890,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_name", ClientUtils.ParameterToString(keyName)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/keys/{key_name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/keys/{key_name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10006,8 +9932,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/ssh/roles/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10051,8 +9976,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10088,8 +10012,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/terraform/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10127,8 +10050,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10170,8 +10092,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/terraform/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10215,8 +10136,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10258,8 +10178,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/totp/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10303,8 +10222,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10346,8 +10264,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = this.Client.Delete<Object>(fullPath, requestOptions);
+            var response = this.Client.Delete<Object>("/transit/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10391,8 +10308,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = await this.AsynchronousClient.DeleteAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10428,8 +10344,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10467,8 +10382,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10510,8 +10424,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10555,8 +10468,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10598,8 +10510,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/library", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10643,8 +10554,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10686,8 +10596,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/library/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10731,8 +10640,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10774,8 +10682,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/status";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/library/{name}/status", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10819,8 +10726,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/status";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/library/{name}/status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10862,8 +10768,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10907,8 +10812,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10950,8 +10854,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10995,8 +10898,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11032,8 +10934,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-root";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ad/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11071,8 +10972,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-root";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ad/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11108,8 +11008,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/alicloud/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11147,8 +11046,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11190,8 +11088,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/alicloud/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11235,8 +11132,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11278,8 +11174,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/alicloud/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11323,8 +11218,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11366,8 +11260,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/alicloud/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11411,8 +11304,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11448,8 +11340,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/lease";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11487,8 +11378,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/lease";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11524,8 +11414,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/root";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/config/root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11563,8 +11452,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/root";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/config/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11600,8 +11488,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/creds";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/creds", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11639,8 +11526,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/creds";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/creds", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11682,8 +11568,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11727,8 +11612,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11770,8 +11654,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11815,8 +11698,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11858,8 +11740,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/sts/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/aws/sts/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11903,8 +11784,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/sts/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/aws/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11940,8 +11820,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/azure/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -11979,8 +11858,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12022,8 +11900,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/creds/{role}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/azure/creds/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12067,8 +11944,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/creds/{role}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12110,8 +11986,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/azure/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12155,8 +12030,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12198,8 +12072,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/azure/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12243,8 +12116,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12280,8 +12152,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/config/access";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/consul/config/access", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12319,8 +12190,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/config/access";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12362,8 +12232,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/creds/{role}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/consul/creds/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12407,8 +12276,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/creds/{role}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12450,8 +12318,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/consul/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12495,8 +12362,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12538,8 +12404,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/consul/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12583,8 +12448,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12631,8 +12495,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/cubbyhole/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12681,8 +12544,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12718,8 +12580,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12757,8 +12618,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12800,8 +12660,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/key/{roleset}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/key/{roleset}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12845,8 +12704,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/key/{roleset}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12888,8 +12746,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/roleset/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -12933,8 +12790,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12976,8 +12832,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/key";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13021,8 +12876,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/key";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13064,8 +12918,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/token";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/roleset/{roleset}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13109,8 +12962,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/token";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13152,8 +13004,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/rolesets";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/rolesets", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13197,8 +13048,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/rolesets";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/rolesets", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13240,8 +13090,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13285,8 +13134,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13328,8 +13176,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/key";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13373,8 +13220,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/key";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13416,8 +13262,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/token";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/static-account/{name}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13461,8 +13306,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/token";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13504,8 +13348,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-accounts";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/static-accounts", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13549,8 +13392,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-accounts";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/static-accounts", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13592,8 +13434,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/token/{roleset}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcp/token/{roleset}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13637,8 +13478,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/token/{roleset}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcp/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13674,8 +13514,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcpkms/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13713,8 +13552,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13756,8 +13594,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcpkms/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13801,8 +13638,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13844,8 +13680,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/config/{key}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcpkms/keys/config/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13889,8 +13724,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/config/{key}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -13932,8 +13766,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcpkms/keys/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13977,8 +13810,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14020,8 +13852,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/pubkey/{key}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/gcpkms/pubkey/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14065,8 +13896,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/pubkey/{key}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/gcpkms/pubkey/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14102,8 +13932,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/kubernetes/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14141,8 +13970,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14184,8 +14012,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/kubernetes/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14229,8 +14056,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14272,8 +14098,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/kubernetes/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14317,8 +14142,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14365,8 +14189,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/kv/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14415,8 +14238,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14452,8 +14274,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/mongodbatlas/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14491,8 +14312,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14534,8 +14354,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/mongodbatlas/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14579,8 +14398,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14622,8 +14440,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/mongodbatlas/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14667,8 +14484,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14710,8 +14526,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14755,8 +14570,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14792,8 +14606,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/nomad/config/access", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14831,8 +14644,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14868,8 +14680,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/nomad/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14907,8 +14718,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -14950,8 +14760,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/nomad/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14995,8 +14804,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15038,8 +14846,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/nomad/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15083,8 +14890,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15126,8 +14932,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/nomad/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15171,8 +14976,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15208,8 +15012,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15247,8 +15050,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15290,8 +15092,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15335,8 +15136,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15378,8 +15178,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15423,8 +15222,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15466,8 +15264,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15511,8 +15308,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15554,8 +15350,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-cred/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/static-cred/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15599,8 +15394,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-cred/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-cred/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15642,8 +15436,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/static-role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15687,8 +15480,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15730,8 +15522,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/openldap/static-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15775,8 +15566,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15812,8 +15602,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/ca", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15851,8 +15640,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15888,8 +15676,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca_chain";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/ca_chain", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15927,8 +15714,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca_chain";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca_chain", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15964,8 +15750,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca/pem";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/ca/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16003,8 +15788,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/ca/pem";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/ca/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16040,8 +15824,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/ca_chain";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/cert/ca_chain", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16079,8 +15862,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/ca_chain";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/ca_chain", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16116,8 +15898,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/crl";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/cert/crl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16155,8 +15936,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/crl";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16198,8 +15978,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16243,8 +16022,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16286,8 +16064,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}/raw";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}/raw", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16331,8 +16108,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}/raw";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16374,8 +16150,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}/raw/pem";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/cert/{serial}/raw/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16419,8 +16194,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("serial", ClientUtils.ParameterToString(serial)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert/{serial}/raw/pem";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/cert/{serial}/raw/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16462,8 +16236,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/certs";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/certs", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16507,8 +16280,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/certs";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/certs", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16544,8 +16316,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/crl";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/config/crl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16583,8 +16354,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/crl";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16620,8 +16390,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/issuers";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/config/issuers", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16659,8 +16428,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/issuers";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16696,8 +16464,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/config/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16735,8 +16502,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16772,8 +16538,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/urls";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/config/urls", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16811,8 +16576,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/urls";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/config/urls", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16848,8 +16612,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/crl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16887,8 +16650,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16924,8 +16686,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl/pem";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/crl/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16963,8 +16724,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl/pem";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17000,8 +16760,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl/rotate";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/crl/rotate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17039,8 +16798,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/crl/rotate";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/crl/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17076,8 +16834,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//der";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki//der", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17115,8 +16872,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//der";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki//der", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17158,8 +16914,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/crl/pem";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/{issuer_ref}/crl/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17203,8 +16958,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/crl/pem";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/crl/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17246,8 +17000,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17291,8 +17044,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17334,8 +17086,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/issuers", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17379,8 +17130,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17416,8 +17166,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki//json", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17455,8 +17204,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17498,8 +17246,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/key/{key_ref}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17543,8 +17290,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key_ref", ClientUtils.ParameterToString(keyRef)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17586,8 +17332,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17631,8 +17376,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17674,8 +17418,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17719,8 +17462,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17762,8 +17504,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17807,8 +17548,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17844,8 +17584,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/tidy-status";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/pki/tidy-status", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17883,8 +17622,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/tidy-status";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/pki/tidy-status", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17920,8 +17658,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/lease";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/rabbitmq/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17959,8 +17696,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/lease";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18002,8 +17738,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/rabbitmq/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18047,8 +17782,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18090,8 +17824,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/rabbitmq/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18135,8 +17868,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18178,8 +17910,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/rabbitmq/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18223,8 +17954,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18260,8 +17990,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/secret/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18299,8 +18028,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18342,8 +18070,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/secret/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18387,8 +18114,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18435,8 +18161,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/secret/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18485,8 +18210,7 @@ namespace Vault.Api
             }
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18528,8 +18252,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/subkeys/{path}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/secret/subkeys/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18573,8 +18296,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/subkeys/{path}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/secret/subkeys/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18610,8 +18332,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ssh/config/ca", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18649,8 +18370,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18686,8 +18406,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ssh/config/zeroaddress", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18725,8 +18444,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18762,8 +18480,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/public_key";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ssh/public_key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18801,8 +18518,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/public_key";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/public_key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18844,8 +18560,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ssh/roles", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18889,8 +18604,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18932,8 +18646,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/ssh/roles/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18977,8 +18690,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19014,8 +18726,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/terraform/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19053,8 +18764,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19096,8 +18806,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/creds/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/terraform/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19141,8 +18850,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/creds/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19184,8 +18892,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/terraform/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19229,8 +18936,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19272,8 +18978,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/terraform/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19317,8 +19022,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19360,8 +19064,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/code/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/totp/code/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19405,8 +19108,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/code/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/code/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19448,8 +19150,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/totp/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19493,8 +19194,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19536,8 +19236,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/totp/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19581,8 +19280,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19624,8 +19322,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/backup/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/backup/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19669,8 +19366,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/backup/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/backup/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19706,8 +19402,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/cache-config";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/cache-config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19745,8 +19440,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/cache-config";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/cache-config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19794,8 +19488,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/export/{type}/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/export/{type}/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19845,8 +19538,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/export/{type}/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19900,8 +19592,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/export/{type}/{name}/{version}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/export/{type}/{name}/{version}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19957,8 +19648,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/export/{type}/{name}/{version}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/export/{type}/{name}/{version}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20000,8 +19690,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20045,8 +19734,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20088,8 +19776,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20133,8 +19820,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20170,8 +19856,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/wrapping_key";
-            var response = this.Client.Get<Object>(fullPath, requestOptions);
+            var response = this.Client.Get<Object>("/transit/wrapping_key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20209,8 +19894,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/wrapping_key";
-            var response = await this.AsynchronousClient.GetAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/transit/wrapping_key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20249,8 +19933,7 @@ namespace Vault.Api
             requestOptions.Data = adConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20291,8 +19974,7 @@ namespace Vault.Api
             requestOptions.Data = adConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20337,8 +20019,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryManageCheckInRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/manage/{name}/check-in";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/library/manage/{name}/check-in", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20385,8 +20066,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryManageCheckInRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/manage/{name}/check-in";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/manage/{name}/check-in", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20431,8 +20111,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/library/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20479,8 +20158,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20525,8 +20203,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckInRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/check-in";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/library/{name}/check-in", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20573,8 +20250,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckInRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/check-in";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-in", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20619,8 +20295,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckOutRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/check-out";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/library/{name}/check-out", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20667,8 +20342,7 @@ namespace Vault.Api
             requestOptions.Data = adLibraryCheckOutRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/library/{name}/check-out";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/library/{name}/check-out", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20713,8 +20387,7 @@ namespace Vault.Api
             requestOptions.Data = adRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20761,8 +20434,7 @@ namespace Vault.Api
             requestOptions.Data = adRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20804,8 +20476,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/rotate-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20849,8 +20520,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20886,8 +20556,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ad/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20925,8 +20594,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ad/rotate-root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ad/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -20965,8 +20633,7 @@ namespace Vault.Api
             requestOptions.Data = alicloudConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/alicloud/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21007,8 +20674,7 @@ namespace Vault.Api
             requestOptions.Data = alicloudConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21053,8 +20719,7 @@ namespace Vault.Api
             requestOptions.Data = alicloudRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/alicloud/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21101,8 +20766,7 @@ namespace Vault.Api
             requestOptions.Data = alicloudRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/alicloud/role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/alicloud/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21141,8 +20805,7 @@ namespace Vault.Api
             requestOptions.Data = awsConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/lease";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21183,8 +20846,7 @@ namespace Vault.Api
             requestOptions.Data = awsConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/lease";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21223,8 +20885,7 @@ namespace Vault.Api
             requestOptions.Data = awsConfigRootRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/config/root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21265,8 +20926,7 @@ namespace Vault.Api
             requestOptions.Data = awsConfigRootRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21302,8 +20962,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/rotate-root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/config/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21341,8 +21000,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/config/rotate-root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/config/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21381,8 +21039,7 @@ namespace Vault.Api
             requestOptions.Data = awsCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/creds";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/creds", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21423,8 +21080,7 @@ namespace Vault.Api
             requestOptions.Data = awsCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/creds";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/creds", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21469,8 +21125,7 @@ namespace Vault.Api
             requestOptions.Data = awsRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21517,8 +21172,7 @@ namespace Vault.Api
             requestOptions.Data = awsRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21563,8 +21217,7 @@ namespace Vault.Api
             requestOptions.Data = awsStsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/sts/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/aws/sts/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21611,8 +21264,7 @@ namespace Vault.Api
             requestOptions.Data = awsStsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/aws/sts/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/aws/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21651,8 +21303,7 @@ namespace Vault.Api
             requestOptions.Data = azureConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/azure/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21693,8 +21344,7 @@ namespace Vault.Api
             requestOptions.Data = azureConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21739,8 +21389,7 @@ namespace Vault.Api
             requestOptions.Data = azureRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/azure/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21787,8 +21436,7 @@ namespace Vault.Api
             requestOptions.Data = azureRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21824,8 +21472,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/rotate-root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/azure/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21863,8 +21510,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/azure/rotate-root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/azure/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21903,8 +21549,7 @@ namespace Vault.Api
             requestOptions.Data = consulConfigAccessRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/config/access";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/consul/config/access", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21945,8 +21590,7 @@ namespace Vault.Api
             requestOptions.Data = consulConfigAccessRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/config/access";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/consul/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21991,8 +21635,7 @@ namespace Vault.Api
             requestOptions.Data = consulRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/consul/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22039,8 +21682,7 @@ namespace Vault.Api
             requestOptions.Data = consulRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/consul/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/consul/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22082,8 +21724,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/cubbyhole/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22127,8 +21768,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/cubbyhole/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22167,8 +21807,7 @@ namespace Vault.Api
             requestOptions.Data = gcpConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22209,8 +21848,7 @@ namespace Vault.Api
             requestOptions.Data = gcpConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22246,8 +21884,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config/rotate-root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/config/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22285,8 +21922,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/config/rotate-root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/config/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22331,8 +21967,7 @@ namespace Vault.Api
             requestOptions.Data = gcpKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/key/{roleset}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/key/{roleset}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22379,8 +22014,7 @@ namespace Vault.Api
             requestOptions.Data = gcpKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/key/{roleset}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22425,8 +22059,7 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22473,8 +22106,7 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22516,8 +22148,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}/rotate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22561,8 +22192,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}/rotate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22604,8 +22234,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}/rotate-key";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/roleset/{name}/rotate-key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22649,8 +22278,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{name}/rotate-key";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{name}/rotate-key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22695,8 +22323,7 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/key";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22743,8 +22370,7 @@ namespace Vault.Api
             requestOptions.Data = gcpRolesetKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/key";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22786,8 +22412,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/token";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/roleset/{roleset}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22831,8 +22456,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/roleset/{roleset}/token";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22877,8 +22501,7 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22925,8 +22548,7 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22971,8 +22593,7 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/key";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23019,8 +22640,7 @@ namespace Vault.Api
             requestOptions.Data = gcpStaticAccountKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/key";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23062,8 +22682,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/rotate-key";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/rotate-key", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23107,8 +22726,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/rotate-key";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/rotate-key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23150,8 +22768,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/token";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/static-account/{name}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23195,8 +22812,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/static-account/{name}/token";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23238,8 +22854,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/token/{roleset}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcp/token/{roleset}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23283,8 +22898,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcp/token/{roleset}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcp/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23323,8 +22937,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23365,8 +22978,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23411,8 +23023,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsDecryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/decrypt/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/decrypt/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23459,8 +23070,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsDecryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/decrypt/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/decrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23505,8 +23115,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsEncryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/encrypt/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/encrypt/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23553,8 +23162,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsEncryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/encrypt/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/encrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23599,8 +23207,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/config/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/config/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23647,8 +23254,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/config/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/config/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23690,8 +23296,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/deregister/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/deregister/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23735,8 +23340,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/deregister/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/deregister/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23781,8 +23385,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23829,8 +23432,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23875,8 +23477,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRegisterRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/register/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/register/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23923,8 +23524,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsKeysRegisterRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/register/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/register/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23966,8 +23566,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/rotate/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/rotate/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24011,8 +23610,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/rotate/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/rotate/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24054,8 +23652,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/trim/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/keys/trim/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24099,8 +23696,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/keys/trim/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/keys/trim/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24145,8 +23741,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsReencryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/reencrypt/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/reencrypt/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24193,8 +23788,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsReencryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/reencrypt/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/reencrypt/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24239,8 +23833,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/sign/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/sign/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24287,8 +23880,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/sign/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/sign/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24333,8 +23925,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/verify/{key}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/gcpkms/verify/{key}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24381,8 +23972,7 @@ namespace Vault.Api
             requestOptions.Data = gcpkmsVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/gcpkms/verify/{key}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/gcpkms/verify/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24421,8 +24011,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/kubernetes/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24463,8 +24052,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24509,8 +24097,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/creds/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/kubernetes/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24557,8 +24144,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/creds/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24603,8 +24189,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/kubernetes/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24651,8 +24236,7 @@ namespace Vault.Api
             requestOptions.Data = kubernetesRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kubernetes/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kubernetes/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24694,8 +24278,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/kv/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24739,8 +24322,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/kv/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/kv/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24779,8 +24361,7 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/mongodbatlas/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24821,8 +24402,7 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24864,8 +24444,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/creds/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/mongodbatlas/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24909,8 +24488,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/creds/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24955,8 +24533,7 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/mongodbatlas/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25003,8 +24580,7 @@ namespace Vault.Api
             requestOptions.Data = mongodbatlasRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/mongodbatlas/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/mongodbatlas/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25043,8 +24619,7 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigAccessRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/nomad/config/access", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25085,8 +24660,7 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigAccessRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/access";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/access", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25125,8 +24699,7 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/nomad/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25167,8 +24740,7 @@ namespace Vault.Api
             requestOptions.Data = nomadConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/config/lease";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25213,8 +24785,7 @@ namespace Vault.Api
             requestOptions.Data = nomadRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/nomad/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25261,8 +24832,7 @@ namespace Vault.Api
             requestOptions.Data = nomadRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/nomad/role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/nomad/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25301,8 +24871,7 @@ namespace Vault.Api
             requestOptions.Data = openldapConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/openldap/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25343,8 +24912,7 @@ namespace Vault.Api
             requestOptions.Data = openldapConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25389,8 +24957,7 @@ namespace Vault.Api
             requestOptions.Data = openldapRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/openldap/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25437,8 +25004,7 @@ namespace Vault.Api
             requestOptions.Data = openldapRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25480,8 +25046,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/rotate-role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/openldap/rotate-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25525,8 +25090,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/rotate-role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25562,8 +25126,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/rotate-root";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/openldap/rotate-root", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25601,8 +25164,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/rotate-root";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/rotate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25647,8 +25209,7 @@ namespace Vault.Api
             requestOptions.Data = openldapStaticRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/openldap/static-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25695,8 +25256,7 @@ namespace Vault.Api
             requestOptions.Data = openldapStaticRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/openldap/static-role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/openldap/static-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25735,8 +25295,7 @@ namespace Vault.Api
             requestOptions.Data = pkiBundleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/bundle";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/bundle", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25777,8 +25336,7 @@ namespace Vault.Api
             requestOptions.Data = pkiBundleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/bundle";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/bundle", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25817,8 +25375,7 @@ namespace Vault.Api
             requestOptions.Data = pkiCertRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/cert", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25859,8 +25416,7 @@ namespace Vault.Api
             requestOptions.Data = pkiCertRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/cert";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/cert", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25899,8 +25455,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/ca";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/config/ca", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25941,8 +25496,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/ca";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25981,8 +25535,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCrlRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/crl";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/config/crl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26023,8 +25576,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigCrlRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/crl";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/crl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26063,8 +25615,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigIssuersRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/issuers";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/config/issuers", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26105,8 +25656,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigIssuersRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/issuers";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26145,8 +25695,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/keys";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/config/keys", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26187,8 +25736,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/keys";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/keys", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26227,8 +25775,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigUrlsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/urls";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/config/urls", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26269,8 +25816,7 @@ namespace Vault.Api
             requestOptions.Data = pkiConfigUrlsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/config/urls";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/config/urls", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26309,8 +25855,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateCrossSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/cross-sign";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/intermediate/cross-sign", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26351,8 +25896,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateCrossSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/cross-sign";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/cross-sign", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26397,8 +25941,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/generate/{exported}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/intermediate/generate/{exported}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26445,8 +25988,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/generate/{exported}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/generate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26485,8 +26027,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateSetSignedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/set-signed";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/intermediate/set-signed", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26527,8 +26068,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIntermediateSetSignedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/intermediate/set-signed";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/intermediate/set-signed", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26567,8 +26107,7 @@ namespace Vault.Api
             requestOptions.Data = pkiInternalExportedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/internal|exported";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/internal|exported", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26609,8 +26148,7 @@ namespace Vault.Api
             requestOptions.Data = pkiInternalExportedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/internal|exported";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/internal|exported", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26655,8 +26193,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssueRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issue/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issue/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26703,8 +26240,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssueRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issue/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issue/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26755,8 +26291,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerIssueRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/issue/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26809,8 +26344,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerIssueRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/issue/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/issue/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26855,8 +26389,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-intermediate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26903,8 +26436,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-intermediate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-intermediate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26955,8 +26487,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27009,8 +26540,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27055,8 +26585,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-self-issued";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27103,8 +26632,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignSelfIssuedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-self-issued";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-self-issued", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27149,8 +26677,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-verbatim";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27197,8 +26724,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-verbatim";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27249,8 +26775,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-verbatim/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27303,8 +26828,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuerSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuer/{issuer_ref}/sign-verbatim/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuer/{issuer_ref}/sign-verbatim/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27349,8 +26873,7 @@ namespace Vault.Api
             requestOptions.Data = pkiDerPemRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/{issuer_ref}/der|/pem", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27397,8 +26920,7 @@ namespace Vault.Api
             requestOptions.Data = pkiDerPemRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/{issuer_ref}/der|/pem";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27443,8 +26965,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers/generate/intermediate/{exported}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27491,8 +27012,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers/generate/intermediate/{exported}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/intermediate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27537,8 +27057,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateRootRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers/generate/root/{exported}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/issuers/generate/root/{exported}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27585,8 +27104,7 @@ namespace Vault.Api
             requestOptions.Data = pkiIssuersGenerateRootRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/issuers/generate/root/{exported}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/issuers/generate/root/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27625,8 +27143,7 @@ namespace Vault.Api
             requestOptions.Data = pkiJsonRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki//json", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27667,8 +27184,7 @@ namespace Vault.Api
             requestOptions.Data = pkiJsonRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki//json";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki//json", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27713,8 +27229,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/key/{key_ref}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27761,8 +27276,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/key/{key_ref}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/key/{key_ref}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27801,8 +27315,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKeysImportRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/keys/import";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/keys/import", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27843,8 +27356,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKeysImportRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/keys/import";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/keys/import", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27883,8 +27395,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKmsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/kms";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/kms", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27925,8 +27436,7 @@ namespace Vault.Api
             requestOptions.Data = pkiKmsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/kms";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/kms", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27965,8 +27475,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRevokeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/revoke";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/revoke", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28007,8 +27516,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRevokeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/revoke";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28053,8 +27561,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28101,8 +27608,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28147,8 +27653,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/generate/{exported}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/root/generate/{exported}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28195,8 +27700,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootGenerateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/generate/{exported}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/generate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28235,8 +27739,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootReplaceRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/replace";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/root/replace", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28277,8 +27780,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootReplaceRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/replace";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/replace", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28323,8 +27825,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootRotateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/rotate/{exported}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/root/rotate/{exported}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28371,8 +27872,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootRotateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/rotate/{exported}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/rotate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28411,8 +27911,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/sign-intermediate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/root/sign-intermediate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28453,8 +27952,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignIntermediateRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/sign-intermediate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-intermediate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28493,8 +27991,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/sign-self-issued";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/root/sign-self-issued", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28535,8 +28032,7 @@ namespace Vault.Api
             requestOptions.Data = pkiRootSignSelfIssuedRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/root/sign-self-issued";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/root/sign-self-issued", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28581,8 +28077,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/sign/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28629,8 +28124,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28669,8 +28163,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign-verbatim";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/sign-verbatim", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28711,8 +28204,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign-verbatim";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28757,8 +28249,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign-verbatim/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/sign-verbatim/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28805,8 +28296,7 @@ namespace Vault.Api
             requestOptions.Data = pkiSignVerbatimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/sign-verbatim/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/sign-verbatim/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28845,8 +28335,7 @@ namespace Vault.Api
             requestOptions.Data = pkiTidyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/tidy";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/pki/tidy", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28887,8 +28376,7 @@ namespace Vault.Api
             requestOptions.Data = pkiTidyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/pki/tidy";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/pki/tidy", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28927,8 +28415,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigConnectionRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/connection";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/rabbitmq/config/connection", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28969,8 +28456,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigConnectionRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/connection";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/connection", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29009,8 +28495,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/lease";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/rabbitmq/config/lease", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29051,8 +28536,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqConfigLeaseRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/config/lease";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/config/lease", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29097,8 +28581,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/rabbitmq/roles/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29145,8 +28628,7 @@ namespace Vault.Api
             requestOptions.Data = rabbitmqRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/rabbitmq/roles/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/rabbitmq/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29185,8 +28667,7 @@ namespace Vault.Api
             requestOptions.Data = kvConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29227,8 +28708,7 @@ namespace Vault.Api
             requestOptions.Data = kvConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29273,8 +28753,7 @@ namespace Vault.Api
             requestOptions.Data = kvDataRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29321,8 +28800,7 @@ namespace Vault.Api
             requestOptions.Data = kvDataRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/data/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29367,8 +28845,7 @@ namespace Vault.Api
             requestOptions.Data = kvDeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/delete/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/delete/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29415,8 +28892,7 @@ namespace Vault.Api
             requestOptions.Data = kvDeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/delete/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/delete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29461,8 +28937,7 @@ namespace Vault.Api
             requestOptions.Data = kvDestroyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/destroy/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/destroy/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29509,8 +28984,7 @@ namespace Vault.Api
             requestOptions.Data = kvDestroyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/destroy/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/destroy/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29555,8 +29029,7 @@ namespace Vault.Api
             requestOptions.Data = kvMetadataRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29603,8 +29076,7 @@ namespace Vault.Api
             requestOptions.Data = kvMetadataRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/metadata/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29649,8 +29121,7 @@ namespace Vault.Api
             requestOptions.Data = kvUndeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/undelete/{path}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/secret/undelete/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29697,8 +29168,7 @@ namespace Vault.Api
             requestOptions.Data = kvUndeleteRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/secret/undelete/{path}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/secret/undelete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29737,8 +29207,7 @@ namespace Vault.Api
             requestOptions.Data = sshConfigCaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/config/ca", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29779,8 +29248,7 @@ namespace Vault.Api
             requestOptions.Data = sshConfigCaRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/ca";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/ca", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29819,8 +29287,7 @@ namespace Vault.Api
             requestOptions.Data = sshConfigZeroaddressRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/config/zeroaddress", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29861,8 +29328,7 @@ namespace Vault.Api
             requestOptions.Data = sshConfigZeroaddressRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/config/zeroaddress";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/config/zeroaddress", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29907,8 +29373,7 @@ namespace Vault.Api
             requestOptions.Data = sshCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/creds/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/creds/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29955,8 +29420,7 @@ namespace Vault.Api
             requestOptions.Data = sshCredsRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/creds/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/creds/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30001,8 +29465,7 @@ namespace Vault.Api
             requestOptions.Data = sshKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/keys/{key_name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/keys/{key_name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30049,8 +29512,7 @@ namespace Vault.Api
             requestOptions.Data = sshKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/keys/{key_name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/keys/{key_name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30089,8 +29551,7 @@ namespace Vault.Api
             requestOptions.Data = sshLookupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/lookup";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/lookup", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30131,8 +29592,7 @@ namespace Vault.Api
             requestOptions.Data = sshLookupRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/lookup";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30177,8 +29637,7 @@ namespace Vault.Api
             requestOptions.Data = sshRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/roles/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30225,8 +29684,7 @@ namespace Vault.Api
             requestOptions.Data = sshRolesRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/roles/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/roles/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30271,8 +29729,7 @@ namespace Vault.Api
             requestOptions.Data = sshSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/sign/{role}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/sign/{role}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30319,8 +29776,7 @@ namespace Vault.Api
             requestOptions.Data = sshSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/sign/{role}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/sign/{role}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30359,8 +29815,7 @@ namespace Vault.Api
             requestOptions.Data = sshVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/verify";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/ssh/verify", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30401,8 +29856,7 @@ namespace Vault.Api
             requestOptions.Data = sshVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/ssh/verify";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/ssh/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30441,8 +29895,7 @@ namespace Vault.Api
             requestOptions.Data = terraformConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/terraform/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30483,8 +29936,7 @@ namespace Vault.Api
             requestOptions.Data = terraformConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30526,8 +29978,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/creds/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/terraform/creds/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30571,8 +30022,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/creds/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30617,8 +30067,7 @@ namespace Vault.Api
             requestOptions.Data = terraformRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/terraform/role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30665,8 +30114,7 @@ namespace Vault.Api
             requestOptions.Data = terraformRoleRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30708,8 +30156,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/rotate-role/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/terraform/rotate-role/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30753,8 +30200,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/terraform/rotate-role/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/terraform/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30799,8 +30245,7 @@ namespace Vault.Api
             requestOptions.Data = totpCodeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/code/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/totp/code/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30847,8 +30292,7 @@ namespace Vault.Api
             requestOptions.Data = totpCodeRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/code/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/totp/code/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30893,8 +30337,7 @@ namespace Vault.Api
             requestOptions.Data = totpKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/totp/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30941,8 +30384,7 @@ namespace Vault.Api
             requestOptions.Data = totpKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/totp/keys/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/totp/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30981,8 +30423,7 @@ namespace Vault.Api
             requestOptions.Data = transitCacheConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/cache-config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/cache-config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31023,8 +30464,7 @@ namespace Vault.Api
             requestOptions.Data = transitCacheConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/cache-config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/cache-config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31075,8 +30515,7 @@ namespace Vault.Api
             requestOptions.Data = transitDatakeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/datakey/{plaintext}/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/datakey/{plaintext}/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31129,8 +30568,7 @@ namespace Vault.Api
             requestOptions.Data = transitDatakeyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/datakey/{plaintext}/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/datakey/{plaintext}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31175,8 +30613,7 @@ namespace Vault.Api
             requestOptions.Data = transitDecryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/decrypt/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/decrypt/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31223,8 +30660,7 @@ namespace Vault.Api
             requestOptions.Data = transitDecryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/decrypt/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/decrypt/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31269,8 +30705,7 @@ namespace Vault.Api
             requestOptions.Data = transitEncryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/encrypt/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/encrypt/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31317,8 +30752,7 @@ namespace Vault.Api
             requestOptions.Data = transitEncryptRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/encrypt/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/encrypt/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31357,8 +30791,7 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hash";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/hash", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31399,8 +30832,7 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hash";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31445,8 +30877,7 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hash/{urlalgorithm}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/hash/{urlalgorithm}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31493,8 +30924,7 @@ namespace Vault.Api
             requestOptions.Data = transitHashRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hash/{urlalgorithm}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hash/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31539,8 +30969,7 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hmac/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/hmac/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31587,8 +31016,7 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hmac/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31639,8 +31067,7 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hmac/{name}/{urlalgorithm}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31693,8 +31120,7 @@ namespace Vault.Api
             requestOptions.Data = transitHmacRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/hmac/{name}/{urlalgorithm}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/hmac/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31739,8 +31165,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31787,8 +31212,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31833,8 +31257,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/config";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31881,8 +31304,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysConfigRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/config";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31927,8 +31349,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/import";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/import", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31975,8 +31396,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/import";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32021,8 +31441,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportVersionRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/import_version";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/import_version", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32069,8 +31488,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysImportVersionRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/import_version";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/import_version", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32112,8 +31530,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/rotate";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/rotate", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32157,8 +31574,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/rotate";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/rotate", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32203,8 +31619,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysTrimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/trim";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/keys/{name}/trim", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32251,8 +31666,7 @@ namespace Vault.Api
             requestOptions.Data = transitKeysTrimRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/keys/{name}/trim";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/keys/{name}/trim", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32291,8 +31705,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/random", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32333,8 +31746,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32379,8 +31791,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{source}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/random/{source}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32427,8 +31838,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{source}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32479,8 +31889,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{source}/{urlbytes}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/random/{source}/{urlbytes}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32533,8 +31942,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{source}/{urlbytes}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{source}/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32579,8 +31987,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{urlbytes}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/random/{urlbytes}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32627,8 +32034,7 @@ namespace Vault.Api
             requestOptions.Data = transitRandomRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/random/{urlbytes}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/random/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32667,8 +32073,7 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/restore";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/restore", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32709,8 +32114,7 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/restore";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32755,8 +32159,7 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/restore/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/restore/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32803,8 +32206,7 @@ namespace Vault.Api
             requestOptions.Data = transitRestoreRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/restore/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/restore/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32849,8 +32251,7 @@ namespace Vault.Api
             requestOptions.Data = transitRewrapRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/rewrap/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/rewrap/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32897,8 +32298,7 @@ namespace Vault.Api
             requestOptions.Data = transitRewrapRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/rewrap/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/rewrap/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32943,8 +32343,7 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/sign/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/sign/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32991,8 +32390,7 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/sign/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -33043,8 +32441,7 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/sign/{name}/{urlalgorithm}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -33097,8 +32494,7 @@ namespace Vault.Api
             requestOptions.Data = transitSignRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/sign/{name}/{urlalgorithm}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/sign/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -33143,8 +32539,7 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/verify/{name}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/verify/{name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -33191,8 +32586,7 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/verify/{name}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -33243,8 +32637,7 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/verify/{name}/{urlalgorithm}";
-            var response = this.Client.Post<Object>(fullPath, requestOptions);
+            var response = this.Client.Post<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -33297,8 +32690,7 @@ namespace Vault.Api
             requestOptions.Data = transitVerifyRequest;
 
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "/transit/verify/{name}/{urlalgorithm}";
-            var response = await this.AsynchronousClient.PostAsync<Object>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/transit/verify/{name}/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -321,8 +321,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/isHttpSignature}}
             {{/authMethods}}
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "{{path}}";
-            var response = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>(fullPath, requestOptions);
+            var response = this.Client.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{path}}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -504,8 +503,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/isHttpSignature}}
             {{/authMethods}}
             // make the HTTP request
-            var fullPath = "/" + this.Configuration.BaseNamespace + "{{path}}";
-            var response = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>(fullPath, requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}{{/lambda.titlecase}}Async<{{{returnType}}}{{^returnType}}Object{{/returnType}}>("{{path}}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
