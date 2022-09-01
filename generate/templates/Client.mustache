@@ -17,6 +17,8 @@ namespace {{packageName}}
         {{/apis}}
         {{/apiInfo}}
                 
+        ApiClient _apiClient;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="{{packageName}}Client"/> class
         /// </summary>
@@ -24,15 +26,31 @@ namespace {{packageName}}
         {
             if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
 
-            var apiClient = new ApiClient(configuration);
+            _apiClient = new ApiClient(configuration);
 
             {{#apiInfo}}
             {{#apis}}
             {{#operations}}
-            this.{{classname}} = new {{packageName}}.Api.{{classname}}(apiClient);
+            this.{{classname}} = new {{packageName}}.Api.{{classname}}(_apiClient);
             {{/operations}}
             {{/apis}}
             {{/apiInfo}}
+        }
+        
+        /// <summary>
+        /// Sets the Namespace value to be used as a header with api calls
+        /// </summary>
+        public void SetNamespace(string baseNamespace)
+        {
+            _apiClient.Configuration.BaseNamespace = baseNamespace;
+        }
+        
+        /// <summary>
+        /// Clears the currently set namespace
+        /// </summary>
+        public void ClearNamespace()
+        {
+            _apiClient.Configuration.BaseNamespace = string.Empty;
         }
     }    
 }
