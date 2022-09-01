@@ -251,6 +251,11 @@ namespace Vault.Client
             builder.AddQueryParameters(options.QueryParameters);
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
+            
+            if (Configuration.BaseNamespace != null)
+            {
+                request.Headers.TryAddWithoutValidation("X-VAULT-NAMESPACE", Configuration.BaseNamespace);
+            }
 
             if (Configuration.UserAgent != null)
             {
