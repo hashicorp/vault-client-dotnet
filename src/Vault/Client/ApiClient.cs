@@ -402,7 +402,7 @@ namespace Vault.Client
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
-                              var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
+                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
                 var policyResult = await policy
                     .ExecuteAndCaptureAsync(async () => 
                     {
