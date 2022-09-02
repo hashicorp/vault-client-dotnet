@@ -18,11 +18,12 @@ namespace {{packageName}}.Client
         /// Http status codes to retry on
         /// </summary>
         private static readonly HttpStatusCode[] _retryStatusCodes = {
-            HttpStatusCode.RequestTimeout,
-            HttpStatusCode.InternalServerError,
-            HttpStatusCode.BadGateway, 
-            HttpStatusCode.ServiceUnavailable,
-            HttpStatusCode.GatewayTimeout
+            HttpStatusCode.RequestTimeout,      // 408
+            HttpStatusCode.PreconditionFailed,  // 412
+            HttpStatusCode.InternalServerError, // 500
+            HttpStatusCode.BadGateway,          // 502
+            HttpStatusCode.ServiceUnavailable,  // 503
+            HttpStatusCode.GatewayTimeout,      // 504
         };
 
         /// <summary>
