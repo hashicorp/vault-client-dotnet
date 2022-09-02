@@ -37,7 +37,7 @@ namespace Vault.Client
         /// <summary>
         /// Async retry policy
         /// </summary>
-        public AsyncPolicy<HttpResponseMessage> AsyncRetryPolicy { get; set; }
+        public Polly.AsyncPolicy<HttpResponseMessage> AsyncRetryPolicy { get; set; }
 
         /// <summary>
         /// Creates a new RetryConfiguration object
