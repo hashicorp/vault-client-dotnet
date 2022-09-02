@@ -35,7 +35,7 @@ namespace Vault.Client
         {
             HttpRequestMessage clone = new HttpRequestMessage(req.Method, req.RequestUri);
 
-            clone.Content = CloneContent(req.Content);
+            clone.Content = CloneRequestContent(req.Content);
             clone.Version = req.Version;
 
             foreach (KeyValuePair<string, object> prop in req.Properties)
@@ -51,7 +51,7 @@ namespace Vault.Client
         /// </summary>
         /// <param name="content">HttpContent</param>
         /// <returns>HttpContent</returns>
-        public static HttpContent CloneContent(HttpContent content)
+        public static HttpContent CloneRequestContent(HttpContent content)
         {
             if (content == null) return null;
 
