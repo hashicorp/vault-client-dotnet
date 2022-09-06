@@ -325,7 +325,10 @@ namespace {{packageName}}.Client
 
             return request;
         }
-        
+
+        partial void InterceptRequest(HttpRequestMessage req);
+        partial void InterceptResponse(HttpRequestMessage req, HttpResponseMessage response);
+
         private async Task<ApiResponse<T>> ToApiResponse<T>(HttpResponseMessage response, object responseData, Uri uri)
         {
             T result = (T) responseData;
@@ -398,6 +401,8 @@ namespace {{packageName}}.Client
                 }
             }
 
+            InterceptRequest(req);
+
             HttpResponseMessage response;
 {{#supportsRetry}}
             if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
@@ -448,6 +453,8 @@ namespace {{packageName}}.Client
                 responseData = (T) (object) await response.Content.ReadAsStreamAsync();
             }
 
+            InterceptResponse(req, response);
+            
             return await ToApiResponse<T>(response, responseData, req.RequestUri);
         }
 
