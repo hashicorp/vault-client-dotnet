@@ -170,21 +170,11 @@ namespace Vault.Client
         private readonly object tokenLock = new object();
 
         private string _token;
-        public string Token 
+        public void SetToken(string token)
         {
-            get 
-            { 
-                lock(tokenLock) 
-                {
-                    return _token; 
-                }
-            }
-            set
+            lock(tokenLock)
             {
-                lock(tokenLock)
-                {
-                    _token = value;
-                }
+                _token = token;
             }
         }
 
@@ -272,9 +262,13 @@ namespace Vault.Client
             builder.AddQueryParameters(options.QueryParameters);
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
-            if (!string.IsNullOrEmpty(Token))
+
+            lock(tokenLock)
             {
-                request.Headers.TryAddWithoutValidation("X-Vault-Token", Token);
+                if (!string.IsNullOrEmpty(_token))
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Token", _token);
+                }
             }
             
             if (Configuration.UserAgent != null)

@@ -44,7 +44,12 @@ namespace Vault
         /// </summary>
         public void SetToken(string token)
         {
-            _apiClient.Token = token;   
+            if(string.IsNullOrEmpty(token))
+            {
+                throw new ArgumentNullException("Token cannot be empty");
+            }
+
+            _apiClient.SetToken(token);   
         }
-    }    
+    }
 }
