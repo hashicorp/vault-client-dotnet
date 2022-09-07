@@ -21,7 +21,9 @@ namespace Vault
         public Vault.Api.Identity Identity;
         public Vault.Api.Secrets Secrets;
         public Vault.Api.System System;
-                
+        
+        private ApiClient _apiClient;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultClient"/> class
         /// </summary>
@@ -29,12 +31,25 @@ namespace Vault
         {
             if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
 
-            var apiClient = new ApiClient(configuration);
+            _apiClient = new ApiClient(configuration);
 
-            this.Auth = new Vault.Api.Auth(apiClient);
-            this.Identity = new Vault.Api.Identity(apiClient);
-            this.Secrets = new Vault.Api.Secrets(apiClient);
-            this.System = new Vault.Api.System(apiClient);
+            this.Auth = new Vault.Api.Auth(_apiClient);
+            this.Identity = new Vault.Api.Identity(_apiClient);
+            this.Secrets = new Vault.Api.Secrets(_apiClient);
+            this.System = new Vault.Api.System(_apiClient);
         }
-    }    
+
+        /// <summary>
+        /// Sets the client token to inject as a header into Api calls
+        /// </summary>
+        public void SetToken(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+            {
+                throw new ArgumentNullException("Token cannot be empty");
+            }
+
+            _apiClient.SetToken(token);   
+        }
+    }
 }

@@ -167,6 +167,17 @@ namespace Vault.Client
     {
         public readonly Configuration Configuration;
 
+        private readonly object _tokenLock = new object();
+
+        private string _token;
+        public void SetToken(string token)
+        {
+            lock (_tokenLock)
+            {
+                _token = token;
+            }
+        }
+
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
         /// These settings can be adjusted to accommodate custom serialization rules.
@@ -252,6 +263,14 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
+            lock (_tokenLock)
+            {
+                if (!string.IsNullOrEmpty(_token))
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Token", _token);
+                }
+            }
+            
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
