@@ -167,12 +167,12 @@ namespace Vault.Client
     {
         public readonly Configuration Configuration;
 
-        private readonly object tokenLock = new object();
+        private readonly object _tokenLock = new object();
 
         private string _token;
         public void SetToken(string token)
         {
-            lock(tokenLock)
+            lock (_tokenLock)
             {
                 _token = token;
             }
@@ -263,7 +263,7 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            lock(tokenLock)
+            lock (_tokenLock)
             {
                 if (!string.IsNullOrEmpty(_token))
                 {
