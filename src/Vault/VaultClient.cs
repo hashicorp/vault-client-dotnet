@@ -51,5 +51,26 @@ namespace Vault
 
             _apiClient.SetToken(token);   
         }
+
+        /// <summary>
+        /// Sets the Namespace value to be used as a header with api calls
+        /// </summary>
+        public void SetNamespace(string baseNamespace)
+        {
+            if (string.IsNullOrEmpty(baseNamespace))
+            {
+                throw new ArgumentNullException("BaseNamespace cannot be empty");
+            }
+
+            _apiClient.Configuration.SetNamespace(baseNamespace);
+        }
+
+        /// <summary>
+        /// Clears the currently set namespace
+        /// </summary>
+        public void ClearNamespace()
+        {
+            _apiClient.Configuration.SetNamespace(string.Empty);
+        }
     }
 }

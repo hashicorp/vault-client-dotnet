@@ -158,6 +158,29 @@ namespace Vault.Client
         public virtual int Timeout { get; set; }
 
         /// <summary>
+        /// Lock for changing namespaces
+        /// </summary>
+        private readonly object namespaceLock = new object();
+
+        /// <summary>
+        /// The base namespace
+        /// </summary>
+        private string _namespace;
+
+        public string GetNamespace()
+        {
+            return _namespace;
+        }
+
+        public void SetNamespace(string newNamespace)
+        {
+            lock(namespaceLock)
+            {
+                _namespace = newNamespace;
+            }
+        }
+
+        /// <summary>
         /// Gets or sets the proxy
         /// </summary>
         /// <value>Proxy.</value>

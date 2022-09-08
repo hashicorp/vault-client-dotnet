@@ -271,6 +271,12 @@ namespace Vault.Client
                 }
             }
             
+            string baseNamespace = Configuration.GetNamespace();
+            if (baseNamespace != null)
+            {
+                request.Headers.TryAddWithoutValidation("X-Vault-Namespace", Configuration.GetNamespace());
+            }
+
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
