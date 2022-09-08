@@ -74,11 +74,10 @@ ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 Console.Writeline(resp.Content);
 ```
 
-*Note* All calls have both an async and synchronous implementation. E.g.
+*Note: All calls have both an async and synchronous implementation. E.g. *
 ```chsarp
 ApiResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
 ApiResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
-
 ```
 
 ### Auth Methods
