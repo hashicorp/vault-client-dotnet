@@ -27,26 +27,20 @@ Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
 Install-Package System.ComponentModel.Annotations
 ```
+
 <a name="installation"></a>
 ## Installation
 Generate the DLL using your preferred tool (e.g. `dotnet build`)
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
+using Vault;
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
 ```
 <a name="usage"></a>
 ## Usage
-
-To use the API client with a HTTP proxy, setup a `System.Net.WebProxy`
-```csharp
-Configuration c = new Configuration();
-System.Net.WebProxy webProxy = new System.Net.WebProxy("http://myProxyUrl:80/");
-webProxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
-c.Proxy = webProxy;
-```
 
 ### Connections
 Each ApiClass (properly the ApiClient inside it) will create an instance of HttpClient. It will use that for the entire lifecycle and dispose it when called the Dispose method.
@@ -77,46 +71,20 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 
 <a name="getting-started"></a>
 ## Getting Started
+### Creating a Vault Client
+The VaultClient requires you pass it a `Configuration` object. 
 
 ```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class Example
-    {
-        public static void Main()
-        {
-
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | The name of the role as it should appear in Vault.
-
-            try
-            {
-                // Create a role and associate policies to it.
-                apiInstance.DeleteAuthAlicloudRoleRole(role);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling Auth.DeleteAuthAlicloudRoleRole: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-
-        }
-    }
-}
+Configuration config = new Configuration("http:127.0.0.1:8200");
+VaultClient vaultClient = new VaultClient(config);
 ```
+
+### Secrets Engines
+```csharp
+```
+
+### Auth Methods
+
 
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
