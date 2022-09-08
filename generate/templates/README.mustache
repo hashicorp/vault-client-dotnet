@@ -114,9 +114,9 @@ vaultClient.SetToken("dev-only-token");
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
 
 ```csharp
-    ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
+ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 
-    /* Logic to deserialize ApiResponse object */
+Console.Writeline(resp.Content);
 ```
 
 ### Auth Methods
@@ -124,9 +124,9 @@ To call auth method endpoints, simply use the `VaultClient.Auth` object, as show
 request objects.
 
 ```csharp
-    ApiResponse<Object> resp = await vaultClient.Auth.PostAuthApproleLogin(new ApproleLoginRequest("role_id", "secret_id"));
+ApiResponse<Object> resp = await vaultClient.Auth.PostAuthApproleLogin(new ApproleLoginRequest("role_id", "secret_id"));
 
-    /* Logic to deserialize ApiResponse object */
+Console.Writeline(resp.Content);
 ```
 
 <a name="documentation-for-api-endpoints"></a>
