@@ -79,6 +79,16 @@ Configuration config = new Configuration("http:127.0.0.1:8200");
 VaultClient vaultClient = new VaultClient(config);
 ```
 
+You can also add custom configuration including a custom `HttpClientHandler` and a custom Timeout as shown below.
+
+```csharp
+HttpClientHandler myClientHandler = new HttpClientHandler();
+
+Configuration config = new Configuration("http://127.0.0.1:8200",
+                                          myClientHandler,
+                                          TimeSpan.FromSeconds(10));
+```
+
 ### Secrets Engines
 ```csharp
 ```
