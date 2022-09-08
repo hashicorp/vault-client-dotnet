@@ -119,6 +119,13 @@ ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 Console.Writeline(resp.Content);
 ```
 
+*Note* All calls have both an async and synchronous implementation. E.g.
+```chsarp
+ApiResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
+ApiResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
+
+```
+
 ### Auth Methods
 To call auth method endpoints, simply use the `VaultClient.Auth` object, as shown below. Some will require passing in 
 request objects.
