@@ -59,12 +59,30 @@ Configuration config = new Configuration("http://127.0.0.1:8200",
                                           TimeSpan.FromSeconds(10));
 ```
 
-### Secrets Engines
+The `SetToken` method can be used to set the `X-Vault-Token` header with the given token for subsequent requests.
+
 ```csharp
+vaultClient.SetToken("dev-only-token");
+```
+
+### Secrets Engines
+To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
+
+```csharp
+    ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
+
+    /* Logic to deserialize ApiResponse object */
 ```
 
 ### Auth Methods
+To call auth method endpoints, simply use the `VaultClient.Auth` object, as shown below. Some will require passing in 
+request objects.
 
+```csharp
+    ApiResponse<Object> resp = await vaultClient.Auth.PostAuthApproleLogin(new ApproleLoginRequest("role_id", "secret_id"));
+
+    /* Logic to deserialize ApiResponse object */
+```
 
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
