@@ -169,7 +169,10 @@ namespace Vault.Client
 
         public string GetNamespace()
         {
-            return _namespace;
+            lock(namespaceLock)
+            {
+                return _namespace;
+            }
         }
 
         public void SetNamespace(string newNamespace)

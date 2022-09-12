@@ -274,7 +274,7 @@ namespace Vault.Client
             string baseNamespace = Configuration.GetNamespace();
             if (baseNamespace != null)
             {
-                request.Headers.TryAddWithoutValidation("X-Vault-Namespace", Configuration.GetNamespace());
+                request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
             }
 
             if (Configuration.UserAgent != null)
