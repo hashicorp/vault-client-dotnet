@@ -77,7 +77,7 @@ namespace Example
             VaultClient vaultClient = new VaultClient(config);
             vaultClient.SetToken("root");
 
-            ApiResponse<Object> resp = await vaultClient.System.GetSysMounts();
+            ApiResponse<Object> resp = vaultClient.System.GetSysMounts();
 
             // Write out the json
             Console.Writeline(resp.Content);
