@@ -82,7 +82,32 @@ works with a Vault server started in dev mode with a hardcoded root token (e.g.
 `vault server -dev -dev-root-token-id="my-token");
 
 ```csharp
+using Vault;
+using Vault.Client;
+
+namespace Example
+{
+    public class Example
+    {
+        public static void Main()
+        {
+            string address = "http://127.0.0.1:8200";
+            Configuration config = new Configuration(address);
+
+            VaultClient vaultClient = new VaultClient(config);
+            vaultClient.SetToken("root");
+
+            ApiResponse<Object> resp = await vaultClient.System.GetSysMounts();
+
+            // Write out the json
+            Console.Writeline(resp.Content);
+        }
+    }
+}
 ```
+_**Note**_: the responses are currently generic objects that need
+to be marshalled into an appropriate model. Structured responses are 
+coming soon!
 
 ## Examples
 
