@@ -1273,3 +1273,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Authorization
 
 All endpoints do not require authorization.
+
+[hashicorp]:             https://www.hashicorp.com/
+[vault]:                 https://www.vaultproject.io/
+[openapi-spec]:          openapi.json
+[openapi-generator]:	 https://openapi-generator.tech/docs/generators/csharp-netcore
+[polly]:                 http://www.thepollyproject.org/
