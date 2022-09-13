@@ -97,7 +97,7 @@ namespace Example
             Configuration config = new Configuration(address);
 
             VaultClient vaultClient = new VaultClient(config);
-            vaultClient.SetToken("root");
+            vaultClient.SetToken("my-token");
 
             ApiResponse<Object> resp = vaultClient.System.GetSysMounts();
 
@@ -134,7 +134,7 @@ Configuration config = new Configuration("http://127.0.0.1:8200",
 The `SetToken` method can be used to set the `X-Vault-Token` header with the given token for subsequent requests.
 
 ```csharp
-vaultClient.SetToken("dev-only-token");
+vaultClient.SetToken("my-token");
 ```
 
 ### Secrets Engines
