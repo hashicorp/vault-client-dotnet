@@ -77,10 +77,17 @@ namespace Example
             VaultClient vaultClient = new VaultClient(config);
             vaultClient.SetToken("my-token");
 
-            ApiResponse<Object> resp = vaultClient.System.GetSysMounts();
+            try 
+            {
+                ApiResponse<Object> resp = vaultClient.System.GetSysMounts();
 
-            // Write out the json
-            Console.Writeline(resp.Content);
+                // Write out response content
+                Console.Writeline(resp.Content);
+            }
+            catch(VaultApiException)
+            {
+                Console.WriteLine("Failed to read mounts with message {0}", e.Message);
+            }
         }
     }
 }
