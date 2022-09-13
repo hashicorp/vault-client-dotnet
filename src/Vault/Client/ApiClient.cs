@@ -180,6 +180,7 @@ namespace Vault.Client
         
         private CustomHeaders CustomHeaders = new CustomHeaders();
 
+
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
         /// These settings can be adjusted to accommodate custom serialization rules.
@@ -210,9 +211,9 @@ namespace Vault.Client
         {
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
 
-            Configuration = configuration;            
+            Configuration = configuration;
         }
-
+        
         internal void SetToken(string token)
         {
             lock(_customHeaderLock)
@@ -294,8 +295,8 @@ namespace Vault.Client
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
                 }
-            }            
-
+            }
+                
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
