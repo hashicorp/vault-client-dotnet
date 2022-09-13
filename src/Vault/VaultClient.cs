@@ -62,7 +62,7 @@ namespace Vault
                 throw new ArgumentNullException("BaseNamespace cannot be empty");
             }
 
-            _apiClient.Configuration.SetNamespace(baseNamespace);
+            _apiClient.SetNamespace(baseNamespace);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Vault
         /// </summary>
         public void ClearNamespace()
         {
-            _apiClient.Configuration.SetNamespace(string.Empty);
+            _apiClient.SetNamespace(string.Empty);
         }
     }
 }

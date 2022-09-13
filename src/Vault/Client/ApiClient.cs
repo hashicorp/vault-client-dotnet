@@ -156,6 +156,15 @@ namespace Vault.Client
             set { throw new InvalidOperationException("Not allowed to set content type."); }
         }
     }
+
+    internal class CustomHeaders
+    {
+        public string Token { get; set; } = string.Empty;
+
+        /* To Do: Think of another name for this */ 
+        public string BaseNamespace { get; set; } = string.Empty;
+    }
+
     /// <summary>
     /// Provides a default implementation of an Api client (both synchronous and asynchronous implementations),
     /// encapsulating general REST accessor use cases.
@@ -167,16 +176,9 @@ namespace Vault.Client
     {
         public readonly Configuration Configuration;
 
-        private readonly object _tokenLock = new object();
-
-        private string _token;
-        public void SetToken(string token)
-        {
-            lock (_tokenLock)
-            {
-                _token = token;
-            }
-        }
+        private readonly object _customHeaderLock = new object();
+        
+        private CustomHeaders CustomHeaders = new CustomHeaders();
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -208,7 +210,23 @@ namespace Vault.Client
         {
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
 
-            Configuration = configuration;
+            Configuration = configuration;            
+        }
+
+        internal void SetToken(string token)
+        {
+            lock(_customHeaderLock)
+            {
+                CustomHeaders.Token = token;
+            }
+        }
+
+        internal void SetNamespace(string baseNamespace)
+        {
+            lock(_customHeaderLock)
+            {
+                CustomHeaders.BaseNamespace = baseNamespace;
+            }
         }
 
         /// Prepares multipart/form-data content
@@ -263,19 +281,20 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            lock (_tokenLock)
+            lock (_customHeaderLock)
             {
-                if (!string.IsNullOrEmpty(_token))
+                string token = CustomHeaders.Token;
+                if (!string.IsNullOrEmpty(token))
                 {
-                    request.Headers.TryAddWithoutValidation("X-Vault-Token", _token);
+                    request.Headers.TryAddWithoutValidation("X-Vault-Token", token);
                 }
-            }
-            
-            string baseNamespace = Configuration.GetNamespace();
-            if (!string.IsNullOrEmpty(baseNamespace))
-            {
-                request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
-            }
+
+                string baseNamespace = CustomHeaders.BaseNamespace;
+                if (!string.IsNullOrEmpty(baseNamespace))
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
+                }
+            }            
 
             if (Configuration.UserAgent != null)
             {
