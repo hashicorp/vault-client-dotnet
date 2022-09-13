@@ -8,6 +8,9 @@
 1. [Installation](#installation)
 1. [Getting Started](#getting-started)
 1. [Examples](#exmples)
+    - [Creating a VaultClient](#creating-a-vault-client)
+    - [Reading secrets with `kv v2`](#secrets-engines)
+    - [Logging in with `AppRole` auth method](#auth-methods)
 1. [Local Development](#local-development)
 1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
