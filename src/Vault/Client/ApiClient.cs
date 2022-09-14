@@ -157,7 +157,7 @@ namespace Vault.Client
         }
     }
 
-    internal class CustomHeaders
+    internal class RequestHeaders
     {
         public string Token { get; set; } = string.Empty;
 
@@ -176,9 +176,9 @@ namespace Vault.Client
     {
         public readonly Configuration Configuration;
 
-        private readonly object _customHeaderLock = new object();
+        private readonly object _requestHeaderLock = new object();
         
-        private CustomHeaders CustomHeaders = new CustomHeaders();
+        private RequestHeaders RequestHeaders = new RequestHeaders();
 
 
         /// <summary>
@@ -216,17 +216,17 @@ namespace Vault.Client
         
         internal void SetToken(string token)
         {
-            lock(_customHeaderLock)
+            lock(_requestHeaderLock)
             {
-                CustomHeaders.Token = token;
+                RequestHeaders.Token = token;
             }
         }
 
         internal void SetNamespace(string baseNamespace)
         {
-            lock(_customHeaderLock)
+            lock(_requestHeaderLock)
             {
-                CustomHeaders.BaseNamespace = baseNamespace;
+                RequestHeaders.BaseNamespace = baseNamespace;
             }
         }
 
@@ -282,15 +282,15 @@ namespace Vault.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            lock (_customHeaderLock)
+            lock (_requestHeaderLock)
             {
-                string token = CustomHeaders.Token;
+                string token = RequestHeaders.Token;
                 if (!string.IsNullOrEmpty(token))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Token", token);
                 }
 
-                string baseNamespace = CustomHeaders.BaseNamespace;
+                string baseNamespace = RequestHeaders.BaseNamespace;
                 if (!string.IsNullOrEmpty(baseNamespace))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
