@@ -154,6 +154,14 @@ namespace {{packageName}}.Client
             set { throw new InvalidOperationException("Not allowed to set content type."); }
         }
     }
+
+    internal class RequestHeaders
+    {
+        public string Token { get; set; } = string.Empty;
+
+        public string Namespace { get; set; } = string.Empty;
+    }
+
     /// <summary>
     /// Provides a default implementation of an Api client (both synchronous and asynchronous implementations),
     /// encapsulating general REST accessor use cases.
@@ -165,16 +173,10 @@ namespace {{packageName}}.Client
     {
         public readonly Configuration Configuration;
 
-        private readonly object _tokenLock = new object();
+        private readonly object _requestHeaderLock = new object();
+        
+        private RequestHeaders _requestHeaders = new RequestHeaders();
 
-        private string _token;
-        public void SetToken(string token)
-        {
-            lock (_tokenLock)
-            {
-                _token = token;
-            }
-        }
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -207,6 +209,22 @@ namespace {{packageName}}.Client
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
 
             Configuration = configuration;
+        }
+        
+        internal void SetToken(string token)
+        {
+            lock(_requestHeaderLock)
+            {
+                _requestHeaders.Token = token;
+            }
+        }
+
+        internal void SetNamespace(string Namespace)
+        {
+            lock(_requestHeaderLock)
+            {
+                _requestHeaders.Namespace = Namespace;
+            }
         }
 
         /// Prepares multipart/form-data content
@@ -262,14 +280,21 @@ namespace {{packageName}}.Client
 
             HttpRequestMessage request = new HttpRequestMessage(method, builder.GetFullUri());
 
-            lock (_tokenLock)
+            lock (_requestHeaderLock)
             {
-                if (!string.IsNullOrEmpty(_token))
+                string token = _requestHeaders.Token;
+                if (!string.IsNullOrEmpty(token))
                 {
-                    request.Headers.TryAddWithoutValidation("X-Vault-Token", _token);
+                    request.Headers.TryAddWithoutValidation("X-Vault-Token", token);
+                }
+
+                string ns = _requestHeaders.Namespace;
+                if (!string.IsNullOrEmpty(ns))
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
                 }
             }
-            
+
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);
