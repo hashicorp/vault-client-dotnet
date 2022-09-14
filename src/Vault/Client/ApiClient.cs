@@ -296,7 +296,7 @@ namespace Vault.Client
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
                 }
             }
-                
+
             if (Configuration.UserAgent != null)
             {
                 request.Headers.TryAddWithoutValidation("User-Agent", Configuration.UserAgent);

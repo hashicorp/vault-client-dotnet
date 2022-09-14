@@ -55,14 +55,14 @@ namespace Vault
         /// <summary>
         /// Sets the Namespace value to be used as a header with api calls
         /// </summary>
-        public void SetNamespace(string baseNamespace)
+        public void SetNamespace(string Namespace)
         {
-            if (string.IsNullOrEmpty(baseNamespace))
+            if (string.IsNullOrEmpty(Namespace))
             {
-                throw new ArgumentNullException("BaseNamespace cannot be empty");
+                throw new ArgumentNullException("Namespace cannot be empty");
             }
 
-            _apiClient.SetNamespace(baseNamespace);
+            _apiClient.SetNamespace(Namespace);
         }
 
         /// <summary>
