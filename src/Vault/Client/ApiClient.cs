@@ -161,8 +161,7 @@ namespace Vault.Client
     {
         public string Token { get; set; } = string.Empty;
 
-        /* To Do: Think of another name for this */ 
-        public string BaseNamespace { get; set; } = string.Empty;
+        public string Namespace { get; set; } = string.Empty;
     }
 
     /// <summary>
@@ -222,11 +221,11 @@ namespace Vault.Client
             }
         }
 
-        internal void SetNamespace(string baseNamespace)
+        internal void SetNamespace(string Namespace)
         {
             lock(_requestHeaderLock)
             {
-                _requestHeaders.BaseNamespace = baseNamespace;
+                _requestHeaders.Namespace = Namespace;
             }
         }
 
@@ -290,10 +289,10 @@ namespace Vault.Client
                     request.Headers.TryAddWithoutValidation("X-Vault-Token", token);
                 }
 
-                string baseNamespace = _requestHeaders.BaseNamespace;
-                if (!string.IsNullOrEmpty(baseNamespace))
+                string ns = _requestHeaders.Namespace;
+                if (!string.IsNullOrEmpty(ns))
                 {
-                    request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
+                    request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
                 }
             }
 
