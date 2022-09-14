@@ -106,7 +106,7 @@ namespace Example
                 // Write out response content
                 Console.Writeline(resp.Content);
             }
-            catch(VaultApiException)
+            catch (VaultApiException e)
             {
                 Console.WriteLine("Failed to read mounts with message {0}", e.Message);
             }
@@ -144,29 +144,24 @@ The `SetToken` method can be used to set the `X-Vault-Token` header with the giv
 vaultClient.SetToken("my-token");
 ```
 
-### Secrets Engines
+### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
 
 ```csharp
+// Read a secret
 ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 
 Console.Writeline(resp.Content);
 ```
 
-**Note** All calls have both an async and synchronous implementation. E.g.
+_**Note**_: we are using the generated endpoints for reading and writing `kv v2` secrets.
+These methods are hardcoded to use `/secret` as the mount path. In the future, we plan to 
+introduce overriding the default mountpath in each call.
+
+All calls have both an async and synchronous implementation. E.g.
 ```chsarp
 ApiResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
 ApiResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
-```
-
-### Auth Methods
-To call auth method endpoints, simply use the `VaultClient.Auth` object, as shown below. Some will require passing in 
-request objects.
-
-```csharp
-ApiResponse<Object> resp = await vaultClient.Auth.PostAuthApproleLogin(new ApproleLoginRequest("role_id", "secret_id"));
-
-Console.Writeline(resp.Content);
 ```
 
 <a name="documentation-for-api-endpoints"></a>
