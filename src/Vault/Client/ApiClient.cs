@@ -178,7 +178,7 @@ namespace Vault.Client
 
         private readonly object _requestHeaderLock = new object();
         
-        private RequestHeaders RequestHeaders = new RequestHeaders();
+        private RequestHeaders _requestHeaders = new RequestHeaders();
 
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace Vault.Client
         {
             lock(_requestHeaderLock)
             {
-                RequestHeaders.Token = token;
+                _requestHeaders.Token = token;
             }
         }
 
@@ -226,7 +226,7 @@ namespace Vault.Client
         {
             lock(_requestHeaderLock)
             {
-                RequestHeaders.BaseNamespace = baseNamespace;
+                _requestHeaders.BaseNamespace = baseNamespace;
             }
         }
 
@@ -284,13 +284,13 @@ namespace Vault.Client
 
             lock (_requestHeaderLock)
             {
-                string token = RequestHeaders.Token;
+                string token = _requestHeaders.Token;
                 if (!string.IsNullOrEmpty(token))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Token", token);
                 }
 
-                string baseNamespace = RequestHeaders.BaseNamespace;
+                string baseNamespace = _requestHeaders.BaseNamespace;
                 if (!string.IsNullOrEmpty(baseNamespace))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", baseNamespace);
