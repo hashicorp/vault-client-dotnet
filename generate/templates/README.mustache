@@ -138,10 +138,18 @@ Configuration config = new Configuration("http://127.0.0.1:8200",
                                           TimeSpan.FromSeconds(10));
 ```
 
+### Setting Headers
 The `SetToken` method can be used to set the `X-Vault-Token` header with the given token for subsequent requests.
 
 ```csharp
 vaultClient.SetToken("my-token");
+```
+
+The `SetNamespace` can be used to set the default namespace header. 
+
+```csharp
+vaultClient.SetNamespace("n1");
+vaultClient.ClearNamespace();
 ```
 
 ### Reading a KV Secret
