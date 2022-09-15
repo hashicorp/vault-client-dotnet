@@ -20,6 +20,7 @@
     <RepositoryType>git</RepositoryType>{{#releaseNote}}
     <PackageReleaseNotes>{{.}}</PackageReleaseNotes>{{/releaseNote}}{{#packageTags}}
     <PackageTags>{{{.}}}</PackageTags>{{/packageTags}}
+    <NoWarn>CS0612</NoWarn>
     {{#nullableReferenceTypes}}
     <Nullable>annotations</Nullable>
     {{/nullableReferenceTypes}}
