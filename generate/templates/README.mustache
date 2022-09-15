@@ -8,7 +8,7 @@
 1. [Installation](#installation)
 1. [Getting Started](#getting-started)
 1. [Examples](#exmples)
-    - [Creating a VaultClient](#creating-a-vault-client)
+    - [Configuring a Vault Client](#configuring-a-vault-client)
     - [Reading secrets with `kv v2`](#secrets-engines)
     - [Logging in with `AppRole` auth method](#auth-methods)
 1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
@@ -120,7 +120,7 @@ coming soon!
 
 ## Examples
 
-### Creating a Vault Client
+### Configuring a Vault Client
 The VaultClient requires you pass it a `Configuration` object. 
 
 ```csharp
@@ -128,14 +128,24 @@ Configuration config = new Configuration("http:127.0.0.1:8200");
 VaultClient vaultClient = new VaultClient(config);
 ```
 
-You can also add custom configuration including a custom `HttpClientHandler` and a custom Timeout as shown below.
+You can also add custom configuration including a custom `HttpClientHandler`.
+This can be used to intercept requests and add custom logic before the base
+`SendAsync` is called by the HttpClient. See [HttpClientHandler docs][[http-client-handler-docs]] for more details.
 
 ```csharp
+// Create a custom HttpClientHandler
 HttpClientHandler myClientHandler = new HttpClientHandler();
 
 Configuration config = new Configuration("http://127.0.0.1:8200",
-                                          myClientHandler,
-                                          TimeSpan.FromSeconds(10));
+                                          myClientHandler);
+```
+
+The VaultClient also allows you to set a custom Timeout for all API calls.
+
+```csharp
+Configuration config = new Configuration(basePath: address, 
+                                        httpClientHandler: httpClientHandler, 
+                                        timeout: TimeSpan.FromSeconds(15));
 ```
 
 ### Setting Headers
@@ -226,8 +236,9 @@ Authentication schemes defined for the API:
 
 {{/authMethods}}
 
-[hashicorp]:             https://www.hashicorp.com/
-[vault]:                 https://www.vaultproject.io/
-[openapi-spec]:          openapi.json
-[openapi-generator]:	 https://openapi-generator.tech/docs/generators/csharp-netcore
-[polly]:                 http://www.thepollyproject.org/
+[hashicorp]:                    https://www.hashicorp.com/
+[vault]:                        https://www.vaultproject.io/
+[openapi-spec]:                 openapi.json
+[openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
+[polly]:                        http://www.thepollyproject.org/
+[http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
