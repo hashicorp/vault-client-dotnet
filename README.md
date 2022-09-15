@@ -108,7 +108,7 @@ VaultClient vaultClient = new VaultClient(config);
 
 You can also add custom configuration including a custom `HttpClientHandler`.
 This can be used to intercept requests and add custom logic before the base
-`SendAsync` is called by the HttpClient. See [HttpClientHandler docs][[http-client-handler-docs]] for more details.
+`SendAsync` is called by the HttpClient. See [HttpClientHandler docs][http-client-handler-docs] for more details.
 
 ```csharp
 // Create a custom HttpClientHandler
