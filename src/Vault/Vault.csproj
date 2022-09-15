@@ -17,7 +17,7 @@
     <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
-    <NoWarn>CS0612</NoWarn>
+    <NoWarn>CS0612</NoWarn><!-- CS0612 is a warning for obsolete attributes. OpenApi marks all deprecated fields as obsolete making this a very noise warning-->
   </PropertyGroup>
 
   <ItemGroup>

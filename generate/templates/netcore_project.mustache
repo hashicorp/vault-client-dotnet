@@ -20,7 +20,7 @@
     <RepositoryType>git</RepositoryType>{{#releaseNote}}
     <PackageReleaseNotes>{{.}}</PackageReleaseNotes>{{/releaseNote}}{{#packageTags}}
     <PackageTags>{{{.}}}</PackageTags>{{/packageTags}}
-    <NoWarn>CS0612</NoWarn>
+    <NoWarn>CS0612</NoWarn><!-- CS0612 is a warning for obsolete attributes. OpenApi marks all deprecated fields as obsolete making this a very noise warning-->
     {{#nullableReferenceTypes}}
     <Nullable>annotations</Nullable>
     {{/nullableReferenceTypes}}
