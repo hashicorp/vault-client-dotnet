@@ -407,7 +407,10 @@ namespace Vault.Client
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
+                var retryPolicy = Configuration.RetryConfiguration.AsyncRetryPolicy;
+                var rateLimitPolicy = Configuration.RateLimitConfiguration.RateLimitPolicy;
+                Policy.WrapAsync<HttpResponseMessage>(retryPolicy, rateLimitPolicy);
+
                 var policyResult = await policy
                     .ExecuteAndCaptureAsync(async () => 
                     {
