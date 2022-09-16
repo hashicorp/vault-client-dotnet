@@ -82,7 +82,7 @@ namespace Vault.Client
 
         public async Task<T> Deserialize<T>(HttpResponseMessage response)
         {
-            var result = (T) await Deserialize(response, typeof(T));
+            var result = (T)await Deserialize(response, typeof(T));
             return result;
         }
 
@@ -180,7 +180,7 @@ namespace Vault.Client
         public readonly Configuration Configuration;
 
         private readonly object _requestHeaderLock = new object();
-        
+
         private RequestHeaders _requestHeaders = new RequestHeaders();
 
 
@@ -216,10 +216,10 @@ namespace Vault.Client
 
             Configuration = configuration;
         }
-        
+
         internal void SetToken(string token)
         {
-            lock(_requestHeaderLock)
+            lock (_requestHeaderLock)
             {
                 _requestHeaders.Token = token;
             }
@@ -227,7 +227,7 @@ namespace Vault.Client
 
         internal void SetNamespace(string Namespace)
         {
-            lock(_requestHeaderLock)
+            lock (_requestHeaderLock)
             {
                 _requestHeaders.Namespace = Namespace;
             }
@@ -275,9 +275,9 @@ namespace Vault.Client
         {
             if (path == null) throw new ArgumentNullException("path");
             if (options == null) throw new ArgumentNullException("options");
-            
+
             string prefix = "v1";
-            
+
             WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath + prefix, path);
 
             builder.AddPathParameters(options.PathParameters);
@@ -380,7 +380,7 @@ namespace Vault.Client
 
         private async Task<ApiResponse<T>> ToApiResponse<T>(HttpResponseMessage response, object responseData, Uri uri)
         {
-            T result = (T) responseData;
+            T result = (T)responseData;
             string rawContent = await response.Content.ReadAsStringAsync();
 
             var transformed = new ApiResponse<T>(response.StatusCode, new Multimap<string, string>(), result, rawContent)
@@ -409,13 +409,14 @@ namespace Vault.Client
 
             if (Configuration.HttpClientHandler != null && response != null)
             {
-                try {
+                try
+                {
                     foreach (Cookie cookie in Configuration.HttpClientHandler.CookieContainer.GetCookies(uri))
                     {
                         transformed.Cookies.Add(cookie);
                     }
                 }
-                catch (PlatformNotSupportedException) {}
+                catch (PlatformNotSupportedException) { }
             }
 
             return transformed;
@@ -455,15 +456,18 @@ namespace Vault.Client
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.RetryPolicy;
+                var retryPolicy = Configuration.RetryConfiguration.RetryPolicy;
+                var rateLimitPolicy = Configuration.RateLimitConfiguration.RateLimitPolicy;
+                var policy = Policy.WrapAsync<HttpResponseMessage>(retryPolicy, rateLimitPolicy);
+
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(async () => 
+                    .ExecuteAndCaptureAsync(async () =>
                     {
                         return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
                     })
                     .ConfigureAwait(false);
 
-                if(policyResult.Outcome == OutcomeType.Successful)
+                if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
                 }
@@ -487,11 +491,11 @@ namespace Vault.Client
             // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
             if (typeof(Vault.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
             {
-                responseData = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
+                responseData = (T)typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
             }
             else if (typeof(T).Name == "Stream") // for binary response
             {
-                responseData = (T) (object) await response.Content.ReadAsStreamAsync();
+                responseData = (T)(object)await response.Content.ReadAsStreamAsync();
             }
 
             InterceptResponse(req, response);
@@ -593,7 +597,7 @@ namespace Vault.Client
         /// <param name="options">The additional request options.</param>
         /// <returns>A Task containing ApiResponse</returns>
         public ApiResponse<T> Get<T>(string path, RequestOptions options)
-        {            
+        {
             return Exec<T>(NewRequest(HttpMethod.Get, path, options));
         }
 
