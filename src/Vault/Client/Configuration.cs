@@ -96,13 +96,13 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath, 
+        public Configuration(string basePath,
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
                             RateLimitConfiguration RateLimitConfiguration = null)
         {
-            if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
+            if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
@@ -120,7 +120,8 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
+        public virtual string BasePath
+        {
             get { return _basePath; }
             set { _basePath = value; }
         }
@@ -134,14 +135,18 @@ namespace Vault.Client
         /// The HttpClientHandler for custom processing of api calls.
         /// </summary>
         public readonly HttpClientHandler HttpClientHandler;
-        
+
         /// <summary>
         /// The Retry Configuration that creates a polly policy
         /// </summary>
         public readonly RetryConfiguration RetryConfiguration;
-        
+
         /// <summary>
+<<<<<<< HEAD
         /// The Ratelimit Configuration that wraps a polly policy
+=======
+        /// The Ratelimit Configuration that creates a polly policy
+>>>>>>> 9502eab (Adding Ratelimit policy)
         /// </summary>
         public readonly RateLimitConfiguration RateLimitConfiguration;
 
@@ -420,7 +425,7 @@ namespace Vault.Client
         {
             string report = "C# SDK (Vault) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version + "\n";
             report += "    Version of the API: 1.12.0\n";
             report += "    SDK Package Version: 0.0.1\n";
 
