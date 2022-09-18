@@ -461,11 +461,7 @@ namespace Vault.Client
 
                 if(policyResult.Outcome == OutcomeType.Successful)
                 {
-                    response = new HttpResponseMessage() 
-                    {
-                        RequestMessage = req,
-                        StatusCode = policyResult.Result.StatusCode
-                    };
+                    response = policyResult.Result;
                 }
                 else
                 {
