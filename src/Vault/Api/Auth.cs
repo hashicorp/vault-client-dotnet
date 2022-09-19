@@ -6045,7 +6045,10 @@ namespace Vault.Api
     public partial class Auth : IAuth
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-   
+
+        /// <summary>
+        /// Constructor for Auth
+        /// </summary>
         public Auth(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");

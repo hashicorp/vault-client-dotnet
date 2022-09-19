@@ -12,6 +12,10 @@ namespace {{packageName}}
         {{#apiInfo}}
         {{#apis}}
         {{#operations}}
+
+        /// <summary>
+        /// To access {{packageName}} {{classname}} methods
+        /// </summary>
         public {{packageName}}.Api.{{classname}} {{classname}};
         {{/operations}}
         {{/apis}}

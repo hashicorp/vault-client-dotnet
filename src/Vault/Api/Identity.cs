@@ -2397,7 +2397,10 @@ namespace Vault.Api
     public partial class Identity : IIdentity
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-   
+
+        /// <summary>
+        /// Constructor for Identity
+        /// </summary>
         public Identity(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");

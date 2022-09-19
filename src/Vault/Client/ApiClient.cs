@@ -173,6 +173,9 @@ namespace Vault.Client
     /// </remarks>
     public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     {
+        /// <summary>
+        /// Configuration object for all requests
+        /// </summary>
         public readonly Configuration Configuration;
 
         private readonly object _requestHeaderLock = new object();
@@ -259,6 +262,7 @@ namespace Vault.Client
         /// At this point, all information for querying the service is known. Here, it is simply
         /// mapped into the a HttpRequestMessage.
         /// </summary>
+        /// <param name="method">The type of Http method</param>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
         /// <returns>[private] A new HttpRequestMessage instance.</returns>
