@@ -9,6 +9,7 @@
 
 
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using Vault.Api;
 using Vault.Client;
@@ -71,6 +72,22 @@ namespace Vault
         public void ClearNamespace()
         {
             _apiClient.SetNamespace(string.Empty);
+        }
+
+        /// <summary>
+        /// Adds a dictionary of custom headers to current list of custom headers
+        /// </summary>
+        public void AddCustomHeaders(Dictionary<string, string> HeadersToAdd)
+        {
+            _apiClient.AddCustomHeaders(HeadersToAdd);
+        }
+
+        /// <summary>
+        /// Clear all custom headers
+        /// </summary>
+        public void ClearCustomHeaders()
+        {
+            _apiClient.ClearCustomHeaders();
         }
     }
 }
