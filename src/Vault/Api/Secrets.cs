@@ -6811,7 +6811,10 @@ namespace Vault.Api
     public partial class Secrets : ISecrets
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-   
+
+        /// <summary>
+        /// Constructor for Secrets
+        /// </summary>
         public Secrets(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");

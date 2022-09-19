@@ -17,9 +17,25 @@ namespace Vault
 {
     public class VaultClient
     {
+
+        /// <summary>
+        /// To access Vault Auth methods
+        /// </summary>
         public Vault.Api.Auth Auth;
+
+        /// <summary>
+        /// To access Vault Identity methods
+        /// </summary>
         public Vault.Api.Identity Identity;
+
+        /// <summary>
+        /// To access Vault Secrets methods
+        /// </summary>
         public Vault.Api.Secrets Secrets;
+
+        /// <summary>
+        /// To access Vault System methods
+        /// </summary>
         public Vault.Api.System System;
         
         private ApiClient _apiClient;
