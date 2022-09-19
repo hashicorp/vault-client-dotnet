@@ -25,8 +25,11 @@ namespace Vault.Client
         /// <summary>
         /// Http status codes to retry on
         /// </summary>
+        /// <remarks>
+        /// PreconditionFailed is apart of replication logic and is returned when 
+        /// "X-Vault-Index" isn't satisfied
+        /// </remarks>
         private static readonly HttpStatusCode[] _retryStatusCodes = {
-            HttpStatusCode.RequestTimeout,      // 408
             HttpStatusCode.PreconditionFailed,  // 412
             HttpStatusCode.InternalServerError, // 500
             HttpStatusCode.BadGateway,          // 502
