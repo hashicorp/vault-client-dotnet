@@ -449,9 +449,9 @@ namespace Vault.Client
             InterceptRequest(req);
 
             HttpResponseMessage response;
-            if (Configuration.RetryConfiguration.AsyncRetryPolicy != null)
+            if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.AsyncRetryPolicy;
+                var policy = Configuration.RetryConfiguration.RetryPolicy;
                 var policyResult = await policy
                     .ExecuteAndCaptureAsync(async () => 
                     {

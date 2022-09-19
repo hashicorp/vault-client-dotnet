@@ -40,14 +40,14 @@ namespace Vault.Client
         /// <summary>
         /// Async retry policy
         /// </summary>
-        public Polly.AsyncPolicy<HttpResponseMessage> AsyncRetryPolicy { get; set; }
+        public Polly.AsyncPolicy<HttpResponseMessage> RetryPolicy { get; set; }
 
         /// <summary>
         /// Creates a new RetryConfiguration object
         /// </summary>
         public RetryConfiguration(int MaxRetryCount, TimeSpan WaitTimeSpan)
         {
-            AsyncRetryPolicy = Policy
+            RetryPolicy = Policy
                     .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       
                     .WaitAndRetryAsync(MaxRetryCount, _ => WaitTimeSpan);
         }
@@ -55,9 +55,9 @@ namespace Vault.Client
         /// <summary>
         /// Creates a new RetryConfiguration object
         /// </summary>
-        public RetryConfiguration(AsyncRetryPolicy<HttpResponseMessage> asyncRetryPolicy)
+        public RetryConfiguration(AsyncRetryPolicy<HttpResponseMessage> retryPolicy)
         {
-            AsyncRetryPolicy = asyncRetryPolicy;
+            RetryPolicy = retryPolicy;
         }
     }
 }
