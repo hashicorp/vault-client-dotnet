@@ -239,6 +239,10 @@ namespace Vault.Client
             {
                 foreach (var header in headersToAdd)
                 {
+                    if(header.Key.StartsWith("X-VAULT"))
+                    {
+                        throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                    }
                     _requestHeaders.CustomHeaders.Add(header.Key, header.Value);
                 }
             }
