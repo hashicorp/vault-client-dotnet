@@ -45,6 +45,8 @@ namespace Vault.Client
         /// <summary>
         /// Creates a new RetryConfiguration object
         /// </summary>
+        /// <param name="MaxRetryCount">Maximum times to retry a request.</param>
+        /// <param name="WaitTimeSpan">Time to wait in between retries.</param>
         public RetryConfiguration(int MaxRetryCount, TimeSpan WaitTimeSpan)
         {
             RetryPolicy = Policy
