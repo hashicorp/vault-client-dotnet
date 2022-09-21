@@ -453,18 +453,24 @@ namespace {{packageName}}.Client
 
             HttpResponseMessage response;
 {{#supportsRetry}}
-            if (RetryConfiguration.AsyncRetryPolicy != null)
+            if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
-                var policy = RetryConfiguration.AsyncRetryPolicy;
+                var policy = Configuration.RetryConfiguration.RetryPolicy;
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(() => Configuration.HttpClient.SendAsync(req, cancellationToken))
-                    .ConfigureAwait(false);
-                response = (policyResult.Outcome == OutcomeType.Successful) ?
-                    policyResult.Result : new HttpResponseMessage()
+                    .ExecuteAndCaptureAsync(async () => 
                     {
-                        ReasonPhrase = policyResult.FinalException.ToString(),
-                        RequestMessage = req
-                    };
+                        return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
+                    })
+                    .ConfigureAwait(false);
+
+                if(policyResult.Outcome == OutcomeType.Successful)
+                {
+                    response = policyResult.Result;
+                }
+                else
+                {
+                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                }
             }
             else
             {

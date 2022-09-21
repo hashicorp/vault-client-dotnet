@@ -27,6 +27,7 @@ using Newtonsoft.Json.Serialization;
 using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Polly;
 
 namespace Vault.Client
 {
@@ -452,7 +453,29 @@ namespace Vault.Client
             InterceptRequest(req);
 
             HttpResponseMessage response;
+            if (Configuration.RetryConfiguration.RetryPolicy != null)
+            {
+                var policy = Configuration.RetryConfiguration.RetryPolicy;
+                var policyResult = await policy
+                    .ExecuteAndCaptureAsync(async () => 
+                    {
+                        return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
+                    })
+                    .ConfigureAwait(false);
+
+                if(policyResult.Outcome == OutcomeType.Successful)
+                {
+                    response = policyResult.Result;
+                }
+                else
+                {
+                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                }
+            }
+            else
+            {
                 response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
+            }
 
             if (!response.IsSuccessStatusCode)
             {
