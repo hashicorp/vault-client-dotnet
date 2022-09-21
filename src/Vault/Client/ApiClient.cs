@@ -491,7 +491,7 @@ namespace Vault.Client
             }
 
             InterceptResponse(req, response);
-            
+
             return await ToApiResponse<T>(response, responseData, req.RequestUri);
         }
 
