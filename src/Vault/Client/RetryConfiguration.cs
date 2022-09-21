@@ -46,12 +46,12 @@ namespace Vault.Client
         /// Creates a new RetryConfiguration object
         /// </summary>
         /// <param name="MaxRetryCount">Maximum times to retry a request.</param>
-        /// <param name="WaitTimeSpan">Time to wait in between retries.</param>
-        public RetryConfiguration(int MaxRetryCount, TimeSpan WaitTimeSpan)
+        /// <param name="TimeBetweenRetries">Time to wait in between retries.</param>
+        public RetryConfiguration(int MaxRetryCount, TimeSpan TimeBetweenRetries)
         {
             RetryPolicy = Policy
                     .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       
-                    .WaitAndRetryAsync(MaxRetryCount, _ => WaitTimeSpan);
+                    .WaitAndRetryAsync(MaxRetryCount, _ => TimeBetweenRetries);
         }
 
         /// <summary>
