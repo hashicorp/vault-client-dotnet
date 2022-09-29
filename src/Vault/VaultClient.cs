@@ -22,7 +22,7 @@ namespace Vault
         public Vault.Api.Identity Identity;
         public Vault.Api.Secrets Secrets;
         public Vault.Api.System System;
-        
+
         private ApiClient _apiClient;
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Vault
                 throw new ArgumentNullException("Token cannot be empty");
             }
 
-            _apiClient.SetToken(token);   
+            _apiClient.SetToken(token);
         }
 
         /// <summary>
@@ -77,9 +77,17 @@ namespace Vault
         /// <summary>
         /// Adds a dictionary of custom headers to current list of custom headers
         /// </summary>
-        public void AddCustomHeaders(Dictionary<string, string> HeadersToAdd)
+        public void AddCustomHeaders(Dictionary<string, string> headersToAdd)
         {
-            _apiClient.AddCustomHeaders(HeadersToAdd);
+            _apiClient.AddCustomHeaders(headersToAdd);
+        }
+
+        /// <summary>
+        /// Overwrites or adds an existing header
+        /// </summary>
+        public void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            _apiClient.SetCustomHeader(headerToAdd);
         }
 
         /// <summary>

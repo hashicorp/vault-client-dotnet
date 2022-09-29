@@ -245,6 +245,30 @@ namespace {{packageName}}.Client
                 }
             }
         }
+        
+        /// <summary>
+        /// Adds a KeyValuePair to the current list of custom headers.
+        /// If it already exists it will be overwritten
+        /// </summary>
+        internal void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                if (headerToAdd.Key.StartsWith("X-VAULT"))
+                {
+                    throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                }
+
+                if (_requestHeaders.CustomHeaders.ContainsKey(headerToAdd.Key))
+                {
+                    _requestHeaders.CustomHeaders[headerToAdd.Key] = headerToAdd.Value;
+                }
+                else
+                {
+                    _requestHeaders.CustomHeaders.Add(headerToAdd.Key, headerToAdd.Value);
+                }
+            }
+        }
 
         /// <summary>
         /// Clears all custom headers

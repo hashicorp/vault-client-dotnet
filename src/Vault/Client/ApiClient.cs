@@ -239,11 +239,35 @@ namespace Vault.Client
             {
                 foreach (var header in headersToAdd)
                 {
-                    if(header.Key.StartsWith("X-VAULT"))
+                    if (header.Key.StartsWith("X-VAULT"))
                     {
                         throw new ArgumentException("Header cannot start with \"X-VAULT\"");
                     }
                     _requestHeaders.CustomHeaders.Add(header.Key, header.Value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Adds a KeyValuePair to the current list of custom headers.
+        /// If it already exists it will be overwritten
+        /// </summary>
+        internal void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                if (headerToAdd.Key.StartsWith("X-VAULT"))
+                {
+                    throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                }
+
+                if (_requestHeaders.CustomHeaders.ContainsKey(headerToAdd.Key))
+                {
+                    _requestHeaders.CustomHeaders[headerToAdd.Key] = headerToAdd.Value;
+                }
+                else
+                {
+                    _requestHeaders.CustomHeaders.Add(headerToAdd.Key, headerToAdd.Value);
                 }
             }
         }
@@ -439,7 +463,7 @@ namespace Vault.Client
 
             if (Configuration.HttpClientHandler != null && response != null)
             {
-                try 
+                try
                 {
                     foreach (Cookie cookie in Configuration.HttpClientHandler.CookieContainer.GetCookies(uri))
                     {
@@ -484,7 +508,7 @@ namespace Vault.Client
             InterceptRequest(req);
 
             HttpResponseMessage response;
-                response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
+            response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -500,7 +524,7 @@ namespace Vault.Client
             }
             else if (typeof(T).Name == "Stream") // for binary response
             {
-                responseData = (T)(object) await response.Content.ReadAsStreamAsync();
+                responseData = (T)(object)await response.Content.ReadAsStreamAsync();
             }
 
             InterceptResponse(req, response);
@@ -602,7 +626,7 @@ namespace Vault.Client
         /// <param name="options">The additional request options.</param>
         /// <returns>A Task containing ApiResponse</returns>
         public ApiResponse<T> Get<T>(string path, RequestOptions options)
-        {            
+        {
             return Exec<T>(NewRequest(HttpMethod.Get, path, options));
         }
 
