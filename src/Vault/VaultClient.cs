@@ -9,6 +9,7 @@
 
 
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using Vault.Api;
 using Vault.Client;
@@ -37,7 +38,7 @@ namespace Vault
         /// To access Vault System methods
         /// </summary>
         public Vault.Api.System System;
-        
+
         private ApiClient _apiClient;
 
         /// <summary>
@@ -65,7 +66,7 @@ namespace Vault
                 throw new ArgumentNullException("Token cannot be empty");
             }
 
-            _apiClient.SetToken(token);   
+            _apiClient.SetToken(token);
         }
 
         /// <summary>
@@ -87,6 +88,30 @@ namespace Vault
         public void ClearNamespace()
         {
             _apiClient.SetNamespace(string.Empty);
+        }
+
+        /// <summary>
+        /// Adds a dictionary of custom headers to current list of custom headers
+        /// </summary>
+        public void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        {
+            _apiClient.AddCustomHeaders(headersToAdd);
+        }
+
+        /// <summary>
+        /// Overwrites or adds an existing header
+        /// </summary>
+        public void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            _apiClient.SetCustomHeader(headerToAdd);
+        }
+
+        /// <summary>
+        /// Clear all custom headers
+        /// </summary>
+        public void ClearCustomHeaders()
+        {
+            _apiClient.ClearCustomHeaders();
         }
     }
 }

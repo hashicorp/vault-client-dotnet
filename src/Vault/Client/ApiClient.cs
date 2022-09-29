@@ -82,7 +82,7 @@ namespace Vault.Client
 
         public async Task<T> Deserialize<T>(HttpResponseMessage response)
         {
-            var result = (T) await Deserialize(response, typeof(T));
+            var result = (T)await Deserialize(response, typeof(T));
             return result;
         }
 
@@ -163,6 +163,8 @@ namespace Vault.Client
         public string Token { get; set; } = string.Empty;
 
         public string Namespace { get; set; } = string.Empty;
+
+        public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
     /// <summary>
@@ -180,9 +182,8 @@ namespace Vault.Client
         public readonly Configuration Configuration;
 
         private readonly object _requestHeaderLock = new object();
-        
-        private RequestHeaders _requestHeaders = new RequestHeaders();
 
+        private RequestHeaders _requestHeaders = new RequestHeaders();
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -216,10 +217,10 @@ namespace Vault.Client
 
             Configuration = configuration;
         }
-        
+
         internal void SetToken(string token)
         {
-            lock(_requestHeaderLock)
+            lock (_requestHeaderLock)
             {
                 _requestHeaders.Token = token;
             }
@@ -227,9 +228,62 @@ namespace Vault.Client
 
         internal void SetNamespace(string Namespace)
         {
-            lock(_requestHeaderLock)
+            lock (_requestHeaderLock)
             {
                 _requestHeaders.Namespace = Namespace;
+            }
+        }
+
+        /// <summary>
+        /// Adds a dictionary of custom headers to current list of custom headers.
+        /// </summary>
+        internal void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                foreach (var header in headersToAdd)
+                {
+                    if (header.Key.StartsWith("X-VAULT"))
+                    {
+                        throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                    }
+                    _requestHeaders.CustomHeaders.Add(header.Key, header.Value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Adds a KeyValuePair to the current list of custom headers.
+        /// If it already exists it will be overwritten
+        /// </summary>
+        internal void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                if (headerToAdd.Key.StartsWith("X-VAULT"))
+                {
+                    throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                }
+
+                if (_requestHeaders.CustomHeaders.ContainsKey(headerToAdd.Key))
+                {
+                    _requestHeaders.CustomHeaders[headerToAdd.Key] = headerToAdd.Value;
+                }
+                else
+                {
+                    _requestHeaders.CustomHeaders.Add(headerToAdd.Key, headerToAdd.Value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Clears all custom headers
+        /// </summary>
+        internal void ClearCustomHeaders()
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.CustomHeaders.Clear();
             }
         }
 
@@ -275,9 +329,9 @@ namespace Vault.Client
         {
             if (path == null) throw new ArgumentNullException("path");
             if (options == null) throw new ArgumentNullException("options");
-            
+
             string prefix = "v1";
-            
+
             WebRequestPathBuilder builder = new WebRequestPathBuilder(Configuration.BasePath + prefix, path);
 
             builder.AddPathParameters(options.PathParameters);
@@ -298,6 +352,11 @@ namespace Vault.Client
                 if (!string.IsNullOrEmpty(ns))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
+                }
+
+                foreach (var header in _requestHeaders.CustomHeaders)
+                {
+                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
                 }
             }
 
@@ -380,7 +439,7 @@ namespace Vault.Client
 
         private async Task<ApiResponse<T>> ToApiResponse<T>(HttpResponseMessage response, object responseData, Uri uri)
         {
-            T result = (T) responseData;
+            T result = (T)responseData;
             string rawContent = await response.Content.ReadAsStringAsync();
 
             var transformed = new ApiResponse<T>(response.StatusCode, new Multimap<string, string>(), result, rawContent)
@@ -409,13 +468,14 @@ namespace Vault.Client
 
             if (Configuration.HttpClientHandler != null && response != null)
             {
-                try {
+                try
+                {
                     foreach (Cookie cookie in Configuration.HttpClientHandler.CookieContainer.GetCookies(uri))
                     {
                         transformed.Cookies.Add(cookie);
                     }
                 }
-                catch (PlatformNotSupportedException) {}
+                catch (PlatformNotSupportedException) { }
             }
 
             return transformed;
@@ -487,11 +547,11 @@ namespace Vault.Client
             // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
             if (typeof(Vault.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
             {
-                responseData = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
+                responseData = (T)typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
             }
             else if (typeof(T).Name == "Stream") // for binary response
             {
-                responseData = (T) (object) await response.Content.ReadAsStreamAsync();
+                responseData = (T)(object)await response.Content.ReadAsStreamAsync();
             }
 
             InterceptResponse(req, response);
@@ -593,7 +653,7 @@ namespace Vault.Client
         /// <param name="options">The additional request options.</param>
         /// <returns>A Task containing ApiResponse</returns>
         public ApiResponse<T> Get<T>(string path, RequestOptions options)
-        {            
+        {
             return Exec<T>(NewRequest(HttpMethod.Get, path, options));
         }
 
