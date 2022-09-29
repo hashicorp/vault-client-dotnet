@@ -27,6 +27,7 @@ using Newtonsoft.Json.Serialization;
 using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Polly;
 
 namespace Vault.Client
 {
@@ -175,6 +176,9 @@ namespace Vault.Client
     /// </remarks>
     public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     {
+        /// <summary>
+        /// Configuration object for all requests
+        /// </summary>
         public readonly Configuration Configuration;
 
         private readonly object _requestHeaderLock = new object();
@@ -313,6 +317,7 @@ namespace Vault.Client
         /// At this point, all information for querying the service is known. Here, it is simply
         /// mapped into the a HttpRequestMessage.
         /// </summary>
+        /// <param name="method">The type of Http method</param>
         /// <param name="path">The target path (or resource).</param>
         /// <param name="options">The additional request options.</param>
         /// <returns>[private] A new HttpRequestMessage instance.</returns>
@@ -508,7 +513,29 @@ namespace Vault.Client
             InterceptRequest(req);
 
             HttpResponseMessage response;
-            response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
+            if (Configuration.RetryConfiguration.RetryPolicy != null)
+            {
+                var policy = Configuration.RetryConfiguration.RetryPolicy;
+                var policyResult = await policy
+                    .ExecuteAndCaptureAsync(async () => 
+                    {
+                        return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
+                    })
+                    .ConfigureAwait(false);
+
+                if(policyResult.Outcome == OutcomeType.Successful)
+                {
+                    response = policyResult.Result;
+                }
+                else
+                {
+                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                }
+            }
+            else
+            {
+                response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
+            }
 
             if (!response.IsSuccessStatusCode)
             {

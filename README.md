@@ -16,8 +16,7 @@
 ## Overview
 
 A C# client library [generated][openapi-generator] from `OpenAPI` 
-[specification file][openapi-spec] to interact with [Hashicorp]hashicorp
-[Vault][vault]. The library currently supports the following features:
+[specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault]. The library currently supports the following features:
 
 - Custom HttpClientHandler
 - Retry logic using [Polly][polly]
@@ -59,7 +58,7 @@ using Vault.Model;
 Here is a simple copy-pastable example of using the library to get a list of
 currently enabled secrets engines (equivalent to `GET /v1/sys/mounts`). This example 
 works with a Vault server started in dev mode with a hardcoded root token (e.g.
-`vault server -dev -dev-root-token-id="my-token");
+`vault server -dev -dev-root-token-id="my-token"`);
 
 ```csharp
 using Vault;

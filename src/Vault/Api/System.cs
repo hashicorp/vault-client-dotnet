@@ -3509,7 +3509,10 @@ namespace Vault.Api
     public partial class System : ISystem
     {
         private Vault.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-   
+
+        /// <summary>
+        /// Constructor for System
+        /// </summary>
         public System(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");

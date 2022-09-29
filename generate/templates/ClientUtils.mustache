@@ -2,9 +2,11 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 {{#useCompareNetObjects}}
@@ -31,8 +33,50 @@ namespace {{packageName}}.Client
         {
             compareLogic = new CompareLogic();
         }
-
         {{/useCompareNetObjects}}
+
+        /// <summary>
+        /// Clones the given HttpRequestMessage and returns a new copy of Http request
+        /// </summary>
+        /// <param name="req">HttpRequestMessage</param>
+        /// <returns>HttpRequestMessage</returns>
+        public static HttpRequestMessage CloneRequest(HttpRequestMessage req)
+        {
+            HttpRequestMessage clone = new HttpRequestMessage(req.Method, req.RequestUri);
+
+            clone.Content = CloneRequestContent(req.Content);
+            clone.Version = req.Version;
+
+            foreach (KeyValuePair<string, object> prop in req.Properties)
+                clone.Properties.Add(prop);
+            
+            foreach (KeyValuePair<string, IEnumerable<string>> header in req.Headers)
+                clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
+
+            return clone;
+        }
+
+        /// <summary>
+        /// Clones the given HttpContent and returns a new copy of HttpContent
+        /// </summary>
+        /// <param name="content">HttpContent</param>
+        /// <returns>HttpContent</returns>
+        public static HttpContent CloneRequestContent(HttpContent content)
+        {
+            if (content == null) return null;
+
+            var ms = new MemoryStream();
+            content.CopyToAsync(ms).Wait();
+            ms.Position = 0;
+
+            var clone = new StreamContent(ms);
+            foreach (KeyValuePair<string, IEnumerable<string>> header in content.Headers)
+            {
+                clone.Headers.Add(header.Key, header.Value);
+            }
+            return clone;
+        }
+
         /// <summary>
         /// Sanitize filename by removing the path
         /// </summary>

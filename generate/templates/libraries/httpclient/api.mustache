@@ -79,7 +79,10 @@ namespace {{packageName}}.{{apiPackage}}
     {{>visibility}} partial class {{classname}} : {{interfacePrefix}}{{classname}}
     {
         private {{packageName}}.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
-   
+
+        /// <summary>
+        /// Constructor for {{classname}}
+        /// </summary>
         public {{classname}}(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");
