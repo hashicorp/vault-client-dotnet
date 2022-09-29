@@ -1,6 +1,7 @@
 {{>partial_header}}
 
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using {{packageName}}.Api;
 using {{packageName}}.Client;
@@ -73,6 +74,30 @@ namespace {{packageName}}
         public void ClearNamespace()
         {
             _apiClient.SetNamespace(string.Empty);
+        }
+
+        /// <summary>
+        /// Adds a dictionary of custom headers to current list of custom headers
+        /// </summary>
+        public void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        {
+            _apiClient.AddCustomHeaders(headersToAdd);
+        }
+        
+        /// <summary>
+        /// Overwrites or adds an existing header
+        /// </summary>
+        public void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            _apiClient.SetCustomHeader(headerToAdd);
+        }
+
+        /// <summary>
+        /// Clear all custom headers
+        /// </summary>
+        public void ClearCustomHeaders()
+        {
+            _apiClient.ClearCustomHeaders();
         }
     }
 }

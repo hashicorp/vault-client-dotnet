@@ -163,6 +163,8 @@ namespace Vault.Client
         public string Token { get; set; } = string.Empty;
 
         public string Namespace { get; set; } = string.Empty;
+
+        public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
     /// <summary>
@@ -182,7 +184,6 @@ namespace Vault.Client
         private readonly object _requestHeaderLock = new object();
 
         private RequestHeaders _requestHeaders = new RequestHeaders();
-
 
         /// <summary>
         /// Specifies the settings on a <see cref="JsonSerializer" /> object.
@@ -230,6 +231,59 @@ namespace Vault.Client
             lock (_requestHeaderLock)
             {
                 _requestHeaders.Namespace = Namespace;
+            }
+        }
+
+        /// <summary>
+        /// Adds a dictionary of custom headers to current list of custom headers.
+        /// </summary>
+        internal void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                foreach (var header in headersToAdd)
+                {
+                    if (header.Key.StartsWith("X-VAULT"))
+                    {
+                        throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                    }
+                    _requestHeaders.CustomHeaders.Add(header.Key, header.Value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Adds a KeyValuePair to the current list of custom headers.
+        /// If it already exists it will be overwritten
+        /// </summary>
+        internal void SetCustomHeader(KeyValuePair<string, string> headerToAdd)
+        {
+            lock (_requestHeaderLock)
+            {
+                if (headerToAdd.Key.StartsWith("X-VAULT"))
+                {
+                    throw new ArgumentException("Header cannot start with \"X-VAULT\"");
+                }
+
+                if (_requestHeaders.CustomHeaders.ContainsKey(headerToAdd.Key))
+                {
+                    _requestHeaders.CustomHeaders[headerToAdd.Key] = headerToAdd.Value;
+                }
+                else
+                {
+                    _requestHeaders.CustomHeaders.Add(headerToAdd.Key, headerToAdd.Value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Clears all custom headers
+        /// </summary>
+        internal void ClearCustomHeaders()
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.CustomHeaders.Clear();
             }
         }
 
@@ -298,6 +352,11 @@ namespace Vault.Client
                 if (!string.IsNullOrEmpty(ns))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
+                }
+
+                foreach (var header in _requestHeaders.CustomHeaders)
+                {
+                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
                 }
             }
 
