@@ -12,14 +12,14 @@ namespace Vault.Client
     /// </summary>
     public class RateLimitConfiguration
     {
-        public RateLimitPolicy RateLimitPolicy;
+        public AsyncRateLimitPolicy<HttpResponseMessage> RateLimitPolicy;
 
         public RateLimitConfiguration(int numberOfExecutions, TimeSpan perTimeSpan)
         {         
-            RateLimitPolicy = Policy.RateLimit(numberOfExecutions, perTimeSpan);
+            RateLimitPolicy = Policy.RateLimitAsync<HttpResponseMessage>(numberOfExecutions, perTimeSpan);
         }
 
-        public RateLimitConfiguration(RateLimitPolicy rateLimitPolicy)
+        public RateLimitConfiguration(AsyncRateLimitPolicy<HttpResponseMessage> rateLimitPolicy)
         {
             RateLimitPolicy = rateLimitPolicy;
         }
