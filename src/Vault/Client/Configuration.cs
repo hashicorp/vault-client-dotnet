@@ -100,13 +100,13 @@ namespace Vault.Client
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
-                            RateLimitConfiguration rateLimitConfiguration = null)
+                            RateLimitConfiguration RateLimitConfiguration = null)
         {
             if(string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
-            RateLimitConfiguration = rateLimitConfiguration ?? new RateLimitConfiguration(50, TimeSpan.FromSeconds(5));
+            RateLimitConfiguration = RateLimitConfiguration ?? new RateLimitConfiguration(50, TimeSpan.FromSeconds(5));
 
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
             HttpClient = new HttpClient(HttpClientHandler);
@@ -141,7 +141,7 @@ namespace Vault.Client
         public readonly RetryConfiguration RetryConfiguration;
         
         /// <summary>
-        /// The Ratelimit Configuration that creates a polly policy
+        /// The Ratelimit Configuration that wraps a polly policy
         /// </summary>
         public readonly RateLimitConfiguration RateLimitConfiguration;
 

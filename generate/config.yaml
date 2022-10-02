@@ -4,6 +4,9 @@ additionalProperties:
   packageVersion: 0.0.1
 library: httpclient
 files:
+  RateLimitConfiguration.mustache:
+    destinationFilename: src/Vault/Client/RateLimitConfiguration.cs
+    templateType: SupportingFiles
   Client.mustache:
     destinationFilename: src/Vault/VaultClient.cs
     templateType: SupportingFiles
