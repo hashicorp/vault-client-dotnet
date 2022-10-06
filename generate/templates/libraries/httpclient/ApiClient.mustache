@@ -240,7 +240,7 @@ namespace {{packageName}}.Client
             {
                 foreach (var header in headersToAdd)
                 {
-                    if(header.Key.StartsWith("X-VAULT"))
+                    if (header.Key.StartsWith("X-VAULT"))
                     {
                         throw new ArgumentException("Header cannot start with \"X-VAULT\"");
                     }
@@ -248,7 +248,7 @@ namespace {{packageName}}.Client
                 }
             }
         }
-        
+
         /// <summary>
         /// Adds a KeyValuePair to the current list of custom headers.
         /// If it already exists it will be overwritten
@@ -467,7 +467,7 @@ namespace {{packageName}}.Client
 
             if (Configuration.HttpClientHandler != null && response != null)
             {
-                try 
+                try
                 {
                     foreach (Cookie cookie in Configuration.HttpClientHandler.CookieContainer.GetCookies(uri))
                     {
@@ -554,7 +554,7 @@ namespace {{packageName}}.Client
             }
             else if (typeof(T).Name == "Stream") // for binary response
             {
-                responseData = (T)(object) await response.Content.ReadAsStreamAsync();
+                responseData = (T)(object)await response.Content.ReadAsStreamAsync();
             }
 
             InterceptResponse(req, response);
@@ -658,7 +658,7 @@ namespace {{packageName}}.Client
         /// <param name="options">The additional request options.</param>
         /// <returns>A Task containing ApiResponse</returns>
         public ApiResponse<T> Get<T>(string path, RequestOptions options)
-        {            
+        {
             return Exec<T>(NewRequest(HttpMethod.Get, path, options));
         }
 
