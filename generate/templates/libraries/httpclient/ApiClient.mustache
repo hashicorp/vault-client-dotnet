@@ -557,11 +557,7 @@ namespace {{packageName}}.Client
             }
             else if (typeof(T).Name == "Stream") // for binary response
             {
-<<<<<<< HEAD
                 responseData = (T)(object)await response.Content.ReadAsStreamAsync();
-=======
-                responseData = (T)(object) await response.Content.ReadAsStreamAsync();
->>>>>>> 75da5cc (Custom Header support (#28))
             }
 
             InterceptResponse(req, response);
