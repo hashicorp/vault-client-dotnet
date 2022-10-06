@@ -21,7 +21,7 @@ namespace {{packageName}}
         {{/operations}}
         {{/apis}}
         {{/apiInfo}}
-        
+
         private ApiClient _apiClient;
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace {{packageName}}
                 throw new ArgumentNullException("Token cannot be empty");
             }
 
-            _apiClient.SetToken(token);   
+            _apiClient.SetToken(token);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace {{packageName}}
         {
             _apiClient.AddCustomHeaders(headersToAdd);
         }
-        
+
         /// <summary>
         /// Overwrites or adds an existing header
         /// </summary>
