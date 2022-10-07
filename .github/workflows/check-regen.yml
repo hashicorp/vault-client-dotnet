@@ -2,7 +2,7 @@ name: check-regen
 
 on:
   pull_request:
-    branches: [ '**' ]
+    branches: ["**"]
 
 jobs:
   check-regen:
@@ -15,7 +15,7 @@ jobs:
       - name: check regenerated files
         run: |
           make regen
-          readonly changed_files="$(git diff --stat)"
+          readonly changed_files="$(git diff --stat ':!Vault.sln')"
           if [[ "$changed_files" != "" ]]; then
             echo "found diffs after running 'make regen'"
             echo "please run 'make regen' & commit the changed files:"
