@@ -2,6 +2,7 @@ additionalProperties:
   supportsRetry: true
   packageName: Vault
   packageVersion: 0.0.1
+  testTargetFramework: netstandard2
 library: httpclient
 files:
   Client.mustache:
