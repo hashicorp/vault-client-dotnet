@@ -28,6 +28,7 @@ generate:
 	docker run \
 		--rm \
 		--volume "${PWD}:/local" \
+		--user="$(shell id -u):$(shell id -g)" \
 			openapitools/openapi-generator-cli:$(OPENAPI_GENERATOR_VERSION) generate \
 				--generator-name   csharp-netcore \
 				--input-spec       /local/$(OPENAPI_SPEC_PATH) \
