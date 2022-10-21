@@ -113,5 +113,21 @@ namespace Vault
         {
             _apiClient.ClearCustomHeaders();
         }
+        
+        /// <summary>
+        /// Set MFA Credentials
+        /// </summary>
+        public void SetMFACredentials(List<string> MFACredentials)
+        {
+            _apiClient.SetMFACredentials(MFACredentials);
+        }
+
+        /// <summary>
+        /// Clear MFA Credentials headers
+        /// </summary>
+        public void ClearMFACredentials()
+        {
+            _apiClient.ClearMFACredentials();
+        }
     }
 }
