@@ -9,12 +9,50 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Security;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace {{packageName}}.Client
-{
+{    
+    /// <summary>
+    /// Represents the TLS Configuration
+    /// </summary>
+    public class TLSConfiguration
+    {
+        /// <summary>
+        /// X509 Certificate for the client
+        /// </summary>
+        public X509Certificate2 ClientCertificate = null;
+
+        /// <summary>
+        /// X509 Certificate chain for the client
+        /// </summary>
+        public X509CertificateCollection ClientCertificateCollection = null;
+
+        /// <summary>
+        /// X509 Certificate for the server
+        /// </summary>
+        public X509Certificate2 ServerCertificate = null;
+
+        /// <summary>
+        /// TLS Configuration object constructor
+        /// </summary>
+        public TLSConfiguration(X509Certificate2 serverCertificate,
+                                    X509Certificate2 clientCertificate = null,
+                                    X509CertificateCollection clientCertificateCollection = null)
+        {
+            if (clientCertificate == null && clientCertificateCollection == null)
+            {
+                throw new ArgumentNullException("Client certificate or client certificate collection must be specified");
+            }
+
+            ClientCertificate = clientCertificate;
+            ClientCertificateCollection = clientCertificateCollection;
+            ServerCertificate = serverCertificate;
+        }
+    }
     /// <summary>
     /// Represents a set of configuration settings
     /// </summary>
@@ -110,32 +148,45 @@ namespace {{packageName}}.Client
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
-                            X509Certificate2 clientCertificate = null,
-                            X509CertificateCollection certificateCollection = null)
+                            TLSConfiguration tlsConfiguration = null)
         {
             if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
-            
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
-            if (clientCertificate != null)
+
+            if (tlsConfiguration != null)
             {
-                if (!clientCertificate.HasPrivateKey)
+                TLSConfiguration = tlsConfiguration;
+                if (TLSConfiguration.ClientCertificate != null)
                 {
-                    throw new ArgumentException("Certificate does not contain a private key");
-                }
-                httpClientHandler.ClientCertificates.Add(clientCertificate);
-            } 
-            else if (certificateCollection != null)
-            {   
-                foreach (X509Certificate2 cert in certificateCollection)
-                {
-                    if (!clientCertificate.HasPrivateKey)
+                    if (!TLSConfiguration.ClientCertificate.HasPrivateKey)
                     {
                         throw new ArgumentException("Certificate does not contain a private key");
                     }
+                    httpClientHandler.ClientCertificates.Add(TLSConfiguration.ClientCertificate);
+                }
+                else if (TLSConfiguration.ClientCertificateCollection != null)
+                {
+                    foreach (X509Certificate2 cert in TLSConfiguration.ClientCertificateCollection)
+                    {
+                        if (!TLSConfiguration.ClientCertificate.HasPrivateKey)
+                        {
+                            throw new ArgumentException("Certificate does not contain a private key");
+                        }
+                    }
+
+                    httpClientHandler.ClientCertificates.AddRange(TLSConfiguration.ClientCertificateCollection);
                 }
 
-                httpClientHandler.ClientCertificates.AddRange(certificateCollection);
+                Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
+                delegate (object sender, X509Certificate serviceCertificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+                {
+                    return serviceCertificate.Equals(tlsConfiguration.ServerCertificate);
+                };
+
+                httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
+                httpClientHandler.ServerCertificateCustomValidationCallback = ValidateServiceCertficate;
             }
+
 
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
@@ -172,6 +223,11 @@ namespace {{packageName}}.Client
         /// The Retry Configuration that creates a polly policy
         /// </summary>
         public readonly RetryConfiguration RetryConfiguration;
+
+        /// <summary>
+        /// The TLS Configuration that holds client and server Certificates
+        /// </summary>
+        public readonly TLSConfiguration TLSConfiguration;
 
         /// <summary>
         /// Gets or sets the default header.
