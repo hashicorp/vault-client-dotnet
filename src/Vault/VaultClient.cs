@@ -115,7 +115,8 @@ namespace Vault
         }
         
         /// <summary>
-        /// Set MFA Credentials
+        /// Setting MFA Headers ("X-Vault-MFA") on subsequent requests
+        /// See: https://learn.hashicorp.com/tutorials/vault/multi-factor-authentication
         /// </summary>
         public void SetMFACredentials(List<string> MFACredentials)
         {
