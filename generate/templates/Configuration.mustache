@@ -106,7 +106,7 @@ namespace {{packageName}}.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath, 
+        public Configuration(string basePath,
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
@@ -152,7 +152,8 @@ namespace {{packageName}}.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
+        public virtual string BasePath 
+        {
             get { return _basePath; }
             set { _basePath = value; }
         }
@@ -166,12 +167,12 @@ namespace {{packageName}}.Client
         /// The HttpClientHandler for custom processing of api calls.
         /// </summary>
         public readonly HttpClientHandler HttpClientHandler;
-        
+
         /// <summary>
         /// The Retry Configuration that creates a polly policy
         /// </summary>
         public readonly RetryConfiguration RetryConfiguration;
-        
+
         /// <summary>
         /// Gets or sets the default header.
         /// </summary>
@@ -454,7 +455,7 @@ namespace {{packageName}}.Client
         {
             string report = "C# SDK ({{{packageName}}}) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version + "\n";
             report += "    Version of the API: {{{version}}}\n";
             report += "    SDK Package Version: {{{packageVersion}}}\n";
 

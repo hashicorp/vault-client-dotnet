@@ -104,7 +104,7 @@ namespace Vault.Client
                             X509CertificateCollection certificateCollection = null)
         {
             if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
-
+            
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
             if (clientCertificate != null)
             {
@@ -113,9 +113,9 @@ namespace Vault.Client
                     throw new ArgumentException("Certificate does not contain a private key");
                 }
                 httpClientHandler.ClientCertificates.Add(clientCertificate);
-            }
+            } 
             else if (certificateCollection != null)
-            {
+            {   
                 foreach (X509Certificate2 cert in certificateCollection)
                 {
                     if (!clientCertificate.HasPrivateKey)
@@ -142,7 +142,7 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath
+        public virtual string BasePath 
         {
             get { return _basePath; }
             set { _basePath = value; }
@@ -230,7 +230,7 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
-
+ 
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///
