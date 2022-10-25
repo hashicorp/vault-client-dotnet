@@ -544,15 +544,18 @@ namespace {{packageName}}.Client
 {{#supportsRetry}}
             if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.RetryPolicy;
+                var retryPolicy = Configuration.RetryConfiguration.RetryPolicy;
+                var rateLimitPolicy = Configuration.RateLimitConfiguration.RateLimitPolicy;
+                var policy = Policy.WrapAsync<HttpResponseMessage>(retryPolicy, rateLimitPolicy);
+
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(async () => 
+                    .ExecuteAndCaptureAsync(async () =>
                     {
                         return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
                     })
                     .ConfigureAwait(false);
 
-                if(policyResult.Outcome == OutcomeType.Successful)
+                if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
                 }
