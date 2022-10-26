@@ -164,6 +164,8 @@ namespace Vault.Client
 
         public string Namespace { get; set; } = string.Empty;
 
+        public List<string> MFACredentials = new List<string>();
+
         public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
@@ -287,6 +289,28 @@ namespace Vault.Client
             }
         }
 
+        /// <summary>
+        /// Set MFA Credential Headers 
+        /// </summary>
+        internal void SetMFACredentials(List<string> MFACredentials)
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.MFACredentials = MFACredentials;
+            }
+        }
+
+        /// <summary>
+        /// Clear MFA Credential Headers
+        /// </summary>
+        internal void ClearMFACredentials()
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.MFACredentials.Clear();
+            }
+        }
+        
         /// Prepares multipart/form-data content
         HttpContent PrepareMultipartFormDataContent(RequestOptions options)
         {
@@ -357,6 +381,11 @@ namespace Vault.Client
                 foreach (var header in _requestHeaders.CustomHeaders)
                 {
                     request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                }
+
+                foreach (string mfaCredential in _requestHeaders.MFACredentials)
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-MFA", mfaCredential);
                 }
             }
 
@@ -515,15 +544,18 @@ namespace Vault.Client
             HttpResponseMessage response;
             if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
-                var policy = Configuration.RetryConfiguration.RetryPolicy;
+                var retryPolicy = Configuration.RetryConfiguration.RetryPolicy;
+                var rateLimitPolicy = Configuration.RateLimitConfiguration.RateLimitPolicy;
+                var policy = Policy.WrapAsync<HttpResponseMessage>(retryPolicy, rateLimitPolicy);
+
                 var policyResult = await policy
-                    .ExecuteAndCaptureAsync(async () => 
+                    .ExecuteAndCaptureAsync(async () =>
                     {
                         return await Configuration.HttpClient.SendAsync(ClientUtils.CloneRequest(req), cancellationToken);
                     })
                     .ConfigureAwait(false);
 
-                if(policyResult.Outcome == OutcomeType.Successful)
+                if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
                 }

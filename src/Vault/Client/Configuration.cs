@@ -21,7 +21,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Vault.Client
-{    
+{
     /// <summary>
     /// Represents the TLS Configuration
     /// </summary>
@@ -138,6 +138,7 @@ namespace Vault.Client
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
+                            RateLimitConfiguration rateLimitConfiguration = null,
                             TLSConfiguration tlsConfiguration = null)
         {
             if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
@@ -180,6 +181,7 @@ namespace Vault.Client
 
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
+            RateLimitConfiguration = rateLimitConfiguration ?? new RateLimitConfiguration(50, TimeSpan.FromSeconds(5));
 
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
             HttpClient = new HttpClient(HttpClientHandler);
@@ -193,7 +195,7 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath 
+        public virtual string BasePath
         {
             get { return _basePath; }
             set { _basePath = value; }
@@ -209,6 +211,14 @@ namespace Vault.Client
         /// </summary>
         public readonly HttpClientHandler HttpClientHandler;
 
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// The Ratelimit Configuration that creates a polly policy
+        /// </summary>
+        public readonly RateLimitConfiguration RateLimitConfiguration;
+
+>>>>>>> main
         /// <summary>
         /// The Retry Configuration that creates a polly policy
         /// </summary>
@@ -286,7 +296,7 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
- 
+
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///

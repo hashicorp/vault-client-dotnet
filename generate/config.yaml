@@ -7,3 +7,6 @@ files:
   Client.mustache:
     destinationFilename: src/Vault/VaultClient.cs
     templateType: SupportingFiles
+  RateLimitConfiguration.mustache:
+    destinationFilename: src/Vault/Client/RateLimitConfiguration.cs
+    templateType: SupportingFiles

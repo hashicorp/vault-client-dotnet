@@ -113,5 +113,22 @@ namespace Vault
         {
             _apiClient.ClearCustomHeaders();
         }
+        
+        /// <summary>
+        /// Setting MFA Headers ("X-Vault-MFA") on subsequent requests
+        /// See: https://learn.hashicorp.com/tutorials/vault/multi-factor-authentication
+        /// </summary>
+        public void SetMFACredentials(List<string> MFACredentials)
+        {
+            _apiClient.SetMFACredentials(MFACredentials);
+        }
+
+        /// <summary>
+        /// Clear MFA Credentials headers
+        /// </summary>
+        public void ClearMFACredentials()
+        {
+            _apiClient.ClearMFACredentials();
+        }
     }
 }
