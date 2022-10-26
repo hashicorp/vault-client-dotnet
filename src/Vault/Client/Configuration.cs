@@ -21,7 +21,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Vault.Client
-{
+{    
     /// <summary>
     /// Represents the TLS Configuration
     /// </summary>
@@ -195,7 +195,7 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath
+        public virtual string BasePath 
         {
             get { return _basePath; }
             set { _basePath = value; }
@@ -211,14 +211,11 @@ namespace Vault.Client
         /// </summary>
         public readonly HttpClientHandler HttpClientHandler;
 
-<<<<<<< HEAD
-=======
         /// <summary>
         /// The Ratelimit Configuration that creates a polly policy
         /// </summary>
         public readonly RateLimitConfiguration RateLimitConfiguration;
 
->>>>>>> main
         /// <summary>
         /// The Retry Configuration that creates a polly policy
         /// </summary>
@@ -296,7 +293,7 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
-
+ 
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///
