@@ -170,7 +170,7 @@ namespace Vault.Client
                 Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
                 delegate (object sender, X509Certificate serviceCertificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
                 {
-                    return serviceCertificate.Equals(tlsConfiguration.ServerCertificate);
+                    return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
                 };
 
                 httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
