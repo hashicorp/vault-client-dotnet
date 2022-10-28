@@ -31,7 +31,7 @@ namespace Vault.Client
         /// X509 Certificate for the client 
         /// <remarks>
         /// This is a certificate used to authenticate
-        /// with Vault via the cert auth method.
+        /// with Vault via the cert auth method
         /// </remarks>
         /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
         /// </summary>
@@ -41,7 +41,7 @@ namespace Vault.Client
         /// X509 Certificate collection for the client
         /// <remarks>
         /// This is a certificate used to authenticate
-        /// with Vault via the cert auth method.
+        /// with Vault via the cert auth method
         /// </remarks>
         /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
         /// </summary>
@@ -49,11 +49,19 @@ namespace Vault.Client
 
         /// <summary>
         /// X509 Certificate for the server
+        /// <remarks>
+        /// This is a certificate used which the client
+        /// will use to verify the Vault server TLS Certificate
+        /// </remarks>
         /// </summary>
         public X509Certificate2 ServerCertificate = null;
 
         /// <summary>
-        /// 
+        /// X509 Certificate collection for the server
+        /// <remarks>
+        /// This is a certificate collection used which the client
+        /// will use to verify the Vault server TLS Certificate
+        /// </remarks>
         /// </summary>
         public X509CertificateCollection ServerCertificateCollection = null;
 
