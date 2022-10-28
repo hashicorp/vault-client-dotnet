@@ -28,12 +28,22 @@ namespace Vault.Client
     public class TLSConfiguration
     {
         /// <summary>
-        /// X509 Certificate for the client
+        /// X509 Certificate for the client 
+        /// <remarks>
+        /// This is a certificate used to authenticate
+        /// with Vault via the cert auth method.
+        /// </remarks>
+        /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
         /// </summary>
         public X509Certificate2 ClientCertificate = null;
 
         /// <summary>
-        /// X509 Certificate chain for the client
+        /// X509 Certificate collection for the client
+        /// <remarks>
+        /// This is a certificate used to authenticate
+        /// with Vault via the cert auth method.
+        /// </remarks>
+        /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
         /// </summary>
         public X509CertificateCollection ClientCertificateCollection = null;
 
@@ -41,6 +51,11 @@ namespace Vault.Client
         /// X509 Certificate for the server
         /// </summary>
         public X509Certificate2 ServerCertificate = null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public X509CertificateCollection ServerCertificateCollection = null;
 
         /// <summary>
         /// TLS Configuration object constructor
@@ -59,6 +74,7 @@ namespace Vault.Client
             ServerCertificate = serverCertificate;
         }
     }
+
     /// <summary>
     /// Represents a set of configuration settings
     /// </summary>
