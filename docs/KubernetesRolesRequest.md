@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedKubernetesNamespaces** | **List&lt;string&gt;** | A list of the Kubernetes namespaces in which credentials can be generated. If set to \&quot;*\&quot; all namespaces are allowed. | 
+**AllowedKubernetesNamespaceSelector** | **string** | A label selector for Kubernetes namespaces in which credentials can be generated. Accepts either a JSON or YAML object. If set with allowed_kubernetes_namespaces, the conditions are conjuncted. | [optional] 
+**AllowedKubernetesNamespaces** | **List&lt;string&gt;** | A list of the Kubernetes namespaces in which credentials can be generated. If set to \&quot;*\&quot; all namespaces are allowed. | [optional] 
 **ExtraAnnotations** | **Object** | Additional annotations to apply to all generated Kubernetes objects. | [optional] 
 **ExtraLabels** | **Object** | Additional labels to apply to all generated Kubernetes objects. | [optional] 
 **GeneratedRoleRules** | **string** | The Role or ClusterRole rules to use when generating a role. Accepts either a JSON or YAML object. If set, the entire chain of Kubernetes objects will be generated. | [optional] 

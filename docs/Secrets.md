@@ -23,11 +23,16 @@ Method | HTTP request | Description
 [**DeleteKubernetesConfig**](Secrets.md#deletekubernetesconfig) | **DELETE** /kubernetes/config | 
 [**DeleteKubernetesRolesName**](Secrets.md#deletekubernetesrolesname) | **DELETE** /kubernetes/roles/{name} | 
 [**DeleteKvPath**](Secrets.md#deletekvpath) | **DELETE** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**DeleteLdapConfig**](Secrets.md#deleteldapconfig) | **DELETE** /ldap/config | 
+[**DeleteLdapLibraryName**](Secrets.md#deleteldaplibraryname) | **DELETE** /ldap/library/{name} | Delete a library set.
+[**DeleteLdapRoleName**](Secrets.md#deleteldaprolename) | **DELETE** /ldap/role/{name} | 
+[**DeleteLdapStaticRoleName**](Secrets.md#deleteldapstaticrolename) | **DELETE** /ldap/static-role/{name} | 
 [**DeleteMongodbatlasRolesName**](Secrets.md#deletemongodbatlasrolesname) | **DELETE** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 [**DeleteNomadConfigAccess**](Secrets.md#deletenomadconfigaccess) | **DELETE** /nomad/config/access | 
 [**DeleteNomadConfigLease**](Secrets.md#deletenomadconfiglease) | **DELETE** /nomad/config/lease | Configure the lease parameters for generated tokens
 [**DeleteNomadRoleName**](Secrets.md#deletenomadrolename) | **DELETE** /nomad/role/{name} | 
 [**DeleteOpenldapConfig**](Secrets.md#deleteopenldapconfig) | **DELETE** /openldap/config | 
+[**DeleteOpenldapLibraryName**](Secrets.md#deleteopenldaplibraryname) | **DELETE** /openldap/library/{name} | Delete a library set.
 [**DeleteOpenldapRoleName**](Secrets.md#deleteopenldaprolename) | **DELETE** /openldap/role/{name} | 
 [**DeleteOpenldapStaticRoleName**](Secrets.md#deleteopenldapstaticrolename) | **DELETE** /openldap/static-role/{name} | 
 [**DeletePkiIssuerRefDerPem**](Secrets.md#deletepkiissuerrefderpem) | **DELETE** /pki/{issuer_ref}/der|/pem | 
@@ -93,6 +98,16 @@ Method | HTTP request | Description
 [**GetKubernetesRoles**](Secrets.md#getkubernetesroles) | **GET** /kubernetes/roles | 
 [**GetKubernetesRolesName**](Secrets.md#getkubernetesrolesname) | **GET** /kubernetes/roles/{name} | 
 [**GetKvPath**](Secrets.md#getkvpath) | **GET** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**GetLdapConfig**](Secrets.md#getldapconfig) | **GET** /ldap/config | 
+[**GetLdapCredsName**](Secrets.md#getldapcredsname) | **GET** /ldap/creds/{name} | 
+[**GetLdapLibrary**](Secrets.md#getldaplibrary) | **GET** /ldap/library | 
+[**GetLdapLibraryName**](Secrets.md#getldaplibraryname) | **GET** /ldap/library/{name} | Read a library set.
+[**GetLdapLibraryNameStatus**](Secrets.md#getldaplibrarynamestatus) | **GET** /ldap/library/{name}/status | Check the status of the service accounts in a library set.
+[**GetLdapRole**](Secrets.md#getldaprole) | **GET** /ldap/role | 
+[**GetLdapRoleName**](Secrets.md#getldaprolename) | **GET** /ldap/role/{name} | 
+[**GetLdapStaticCredName**](Secrets.md#getldapstaticcredname) | **GET** /ldap/static-cred/{name} | 
+[**GetLdapStaticRole**](Secrets.md#getldapstaticrole) | **GET** /ldap/static-role | 
+[**GetLdapStaticRoleName**](Secrets.md#getldapstaticrolename) | **GET** /ldap/static-role/{name} | 
 [**GetMongodbatlasConfig**](Secrets.md#getmongodbatlasconfig) | **GET** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
 [**GetMongodbatlasCredsName**](Secrets.md#getmongodbatlascredsname) | **GET** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
 [**GetMongodbatlasRoles**](Secrets.md#getmongodbatlasroles) | **GET** /mongodbatlas/roles | List the existing roles in this backend
@@ -104,6 +119,9 @@ Method | HTTP request | Description
 [**GetNomadRoleName**](Secrets.md#getnomadrolename) | **GET** /nomad/role/{name} | 
 [**GetOpenldapConfig**](Secrets.md#getopenldapconfig) | **GET** /openldap/config | 
 [**GetOpenldapCredsName**](Secrets.md#getopenldapcredsname) | **GET** /openldap/creds/{name} | 
+[**GetOpenldapLibrary**](Secrets.md#getopenldaplibrary) | **GET** /openldap/library | 
+[**GetOpenldapLibraryName**](Secrets.md#getopenldaplibraryname) | **GET** /openldap/library/{name} | Read a library set.
+[**GetOpenldapLibraryNameStatus**](Secrets.md#getopenldaplibrarynamestatus) | **GET** /openldap/library/{name}/status | Check the status of the service accounts in a library set.
 [**GetOpenldapRole**](Secrets.md#getopenldaprole) | **GET** /openldap/role | 
 [**GetOpenldapRoleName**](Secrets.md#getopenldaprolename) | **GET** /openldap/role/{name} | 
 [**GetOpenldapStaticCredName**](Secrets.md#getopenldapstaticcredname) | **GET** /openldap/static-cred/{name} | 
@@ -113,25 +131,30 @@ Method | HTTP request | Description
 [**GetPkiCaChain**](Secrets.md#getpkicachain) | **GET** /pki/ca_chain | 
 [**GetPkiCaPem**](Secrets.md#getpkicapem) | **GET** /pki/ca/pem | 
 [**GetPkiCertCaChain**](Secrets.md#getpkicertcachain) | **GET** /pki/cert/ca_chain | 
-[**GetPkiCertCrl**](Secrets.md#getpkicertcrl) | **GET** /pki/cert/crl | 
 [**GetPkiCertSerial**](Secrets.md#getpkicertserial) | **GET** /pki/cert/{serial} | 
 [**GetPkiCertSerialRaw**](Secrets.md#getpkicertserialraw) | **GET** /pki/cert/{serial}/raw | 
 [**GetPkiCertSerialRawPem**](Secrets.md#getpkicertserialrawpem) | **GET** /pki/cert/{serial}/raw/pem | 
 [**GetPkiCerts**](Secrets.md#getpkicerts) | **GET** /pki/certs | 
+[**GetPkiConfigAutoTidy**](Secrets.md#getpkiconfigautotidy) | **GET** /pki/config/auto-tidy | 
 [**GetPkiConfigCrl**](Secrets.md#getpkiconfigcrl) | **GET** /pki/config/crl | 
 [**GetPkiConfigIssuers**](Secrets.md#getpkiconfigissuers) | **GET** /pki/config/issuers | 
 [**GetPkiConfigKeys**](Secrets.md#getpkiconfigkeys) | **GET** /pki/config/keys | 
 [**GetPkiConfigUrls**](Secrets.md#getpkiconfigurls) | **GET** /pki/config/urls | 
 [**GetPkiCrl**](Secrets.md#getpkicrl) | **GET** /pki/crl | 
-[**GetPkiCrlPem**](Secrets.md#getpkicrlpem) | **GET** /pki/crl/pem | 
 [**GetPkiCrlRotate**](Secrets.md#getpkicrlrotate) | **GET** /pki/crl/rotate | 
+[**GetPkiCrlRotateDelta**](Secrets.md#getpkicrlrotatedelta) | **GET** /pki/crl/rotate-delta | 
+[**GetPkiDelta**](Secrets.md#getpkidelta) | **GET** /pki//delta | 
+[**GetPkiDeltaCrl**](Secrets.md#getpkideltacrl) | **GET** /pki/delta-crl | 
+[**GetPkiDeltaPem**](Secrets.md#getpkideltapem) | **GET** /pki//delta/pem | 
 [**GetPkiDer**](Secrets.md#getpkider) | **GET** /pki//der | 
-[**GetPkiIssuerRefCrlPem**](Secrets.md#getpkiissuerrefcrlpem) | **GET** /pki/{issuer_ref}/crl/pem | 
+[**GetPkiIssuerRefCrlPemDerDeltaPem**](Secrets.md#getpkiissuerrefcrlpemderdeltapem) | **GET** /pki/{issuer_ref}/crl/pem|/der|/delta/pem | 
 [**GetPkiIssuerRefDerPem**](Secrets.md#getpkiissuerrefderpem) | **GET** /pki/{issuer_ref}/der|/pem | 
 [**GetPkiIssuers**](Secrets.md#getpkiissuers) | **GET** /pki/issuers | 
 [**GetPkiJson**](Secrets.md#getpkijson) | **GET** /pki//json | 
 [**GetPkiKeyKeyRef**](Secrets.md#getpkikeykeyref) | **GET** /pki/key/{key_ref} | 
 [**GetPkiKeys**](Secrets.md#getpkikeys) | **GET** /pki/keys | 
+[**GetPkiOcspReq**](Secrets.md#getpkiocspreq) | **GET** /pki/ocsp/{req} | 
+[**GetPkiPem**](Secrets.md#getpkipem) | **GET** /pki//pem | 
 [**GetPkiRoles**](Secrets.md#getpkiroles) | **GET** /pki/roles | 
 [**GetPkiRolesName**](Secrets.md#getpkirolesname) | **GET** /pki/roles/{name} | 
 [**GetPkiTidyStatus**](Secrets.md#getpkitidystatus) | **GET** /pki/tidy-status | 
@@ -213,6 +236,15 @@ Method | HTTP request | Description
 [**PostKubernetesCredsName**](Secrets.md#postkubernetescredsname) | **POST** /kubernetes/creds/{name} | 
 [**PostKubernetesRolesName**](Secrets.md#postkubernetesrolesname) | **POST** /kubernetes/roles/{name} | 
 [**PostKvPath**](Secrets.md#postkvpath) | **POST** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**PostLdapConfig**](Secrets.md#postldapconfig) | **POST** /ldap/config | 
+[**PostLdapLibraryManageNameCheckIn**](Secrets.md#postldaplibrarymanagenamecheckin) | **POST** /ldap/library/manage/{name}/check-in | Check service accounts in to the library.
+[**PostLdapLibraryName**](Secrets.md#postldaplibraryname) | **POST** /ldap/library/{name} | Update a library set.
+[**PostLdapLibraryNameCheckIn**](Secrets.md#postldaplibrarynamecheckin) | **POST** /ldap/library/{name}/check-in | Check service accounts in to the library.
+[**PostLdapLibraryNameCheckOut**](Secrets.md#postldaplibrarynamecheckout) | **POST** /ldap/library/{name}/check-out | Check a service account out from the library.
+[**PostLdapRoleName**](Secrets.md#postldaprolename) | **POST** /ldap/role/{name} | 
+[**PostLdapRotateRoleName**](Secrets.md#postldaprotaterolename) | **POST** /ldap/rotate-role/{name} | 
+[**PostLdapRotateRoot**](Secrets.md#postldaprotateroot) | **POST** /ldap/rotate-root | 
+[**PostLdapStaticRoleName**](Secrets.md#postldapstaticrolename) | **POST** /ldap/static-role/{name} | 
 [**PostMongodbatlasConfig**](Secrets.md#postmongodbatlasconfig) | **POST** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
 [**PostMongodbatlasCredsName**](Secrets.md#postmongodbatlascredsname) | **POST** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
 [**PostMongodbatlasRolesName**](Secrets.md#postmongodbatlasrolesname) | **POST** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
@@ -220,12 +252,17 @@ Method | HTTP request | Description
 [**PostNomadConfigLease**](Secrets.md#postnomadconfiglease) | **POST** /nomad/config/lease | Configure the lease parameters for generated tokens
 [**PostNomadRoleName**](Secrets.md#postnomadrolename) | **POST** /nomad/role/{name} | 
 [**PostOpenldapConfig**](Secrets.md#postopenldapconfig) | **POST** /openldap/config | 
+[**PostOpenldapLibraryManageNameCheckIn**](Secrets.md#postopenldaplibrarymanagenamecheckin) | **POST** /openldap/library/manage/{name}/check-in | Check service accounts in to the library.
+[**PostOpenldapLibraryName**](Secrets.md#postopenldaplibraryname) | **POST** /openldap/library/{name} | Update a library set.
+[**PostOpenldapLibraryNameCheckIn**](Secrets.md#postopenldaplibrarynamecheckin) | **POST** /openldap/library/{name}/check-in | Check service accounts in to the library.
+[**PostOpenldapLibraryNameCheckOut**](Secrets.md#postopenldaplibrarynamecheckout) | **POST** /openldap/library/{name}/check-out | Check a service account out from the library.
 [**PostOpenldapRoleName**](Secrets.md#postopenldaprolename) | **POST** /openldap/role/{name} | 
 [**PostOpenldapRotateRoleName**](Secrets.md#postopenldaprotaterolename) | **POST** /openldap/rotate-role/{name} | 
 [**PostOpenldapRotateRoot**](Secrets.md#postopenldaprotateroot) | **POST** /openldap/rotate-root | 
 [**PostOpenldapStaticRoleName**](Secrets.md#postopenldapstaticrolename) | **POST** /openldap/static-role/{name} | 
 [**PostPkiBundle**](Secrets.md#postpkibundle) | **POST** /pki/bundle | 
 [**PostPkiCert**](Secrets.md#postpkicert) | **POST** /pki/cert | 
+[**PostPkiConfigAutoTidy**](Secrets.md#postpkiconfigautotidy) | **POST** /pki/config/auto-tidy | 
 [**PostPkiConfigCa**](Secrets.md#postpkiconfigca) | **POST** /pki/config/ca | 
 [**PostPkiConfigCrl**](Secrets.md#postpkiconfigcrl) | **POST** /pki/config/crl | 
 [**PostPkiConfigIssuers**](Secrets.md#postpkiconfigissuers) | **POST** /pki/config/issuers | 
@@ -234,22 +271,23 @@ Method | HTTP request | Description
 [**PostPkiIntermediateCrossSign**](Secrets.md#postpkiintermediatecrosssign) | **POST** /pki/intermediate/cross-sign | 
 [**PostPkiIntermediateGenerateExported**](Secrets.md#postpkiintermediategenerateexported) | **POST** /pki/intermediate/generate/{exported} | 
 [**PostPkiIntermediateSetSigned**](Secrets.md#postpkiintermediatesetsigned) | **POST** /pki/intermediate/set-signed | 
-[**PostPkiInternalExported**](Secrets.md#postpkiinternalexported) | **POST** /pki/internal|exported | 
 [**PostPkiIssueRole**](Secrets.md#postpkiissuerole) | **POST** /pki/issue/{role} | 
 [**PostPkiIssuerIssuerRefIssueRole**](Secrets.md#postpkiissuerissuerrefissuerole) | **POST** /pki/issuer/{issuer_ref}/issue/{role} | 
+[**PostPkiIssuerIssuerRefRevoke**](Secrets.md#postpkiissuerissuerrefrevoke) | **POST** /pki/issuer/{issuer_ref}/revoke | 
 [**PostPkiIssuerIssuerRefSignIntermediate**](Secrets.md#postpkiissuerissuerrefsignintermediate) | **POST** /pki/issuer/{issuer_ref}/sign-intermediate | 
 [**PostPkiIssuerIssuerRefSignRole**](Secrets.md#postpkiissuerissuerrefsignrole) | **POST** /pki/issuer/{issuer_ref}/sign/{role} | 
 [**PostPkiIssuerIssuerRefSignSelfIssued**](Secrets.md#postpkiissuerissuerrefsignselfissued) | **POST** /pki/issuer/{issuer_ref}/sign-self-issued | 
 [**PostPkiIssuerIssuerRefSignVerbatim**](Secrets.md#postpkiissuerissuerrefsignverbatim) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim | 
 [**PostPkiIssuerIssuerRefSignVerbatimRole**](Secrets.md#postpkiissuerissuerrefsignverbatimrole) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim/{role} | 
-[**PostPkiIssuerRefDerPem**](Secrets.md#postpkiissuerrefderpem) | **POST** /pki/{issuer_ref}/der|/pem | 
 [**PostPkiIssuersGenerateIntermediateExported**](Secrets.md#postpkiissuersgenerateintermediateexported) | **POST** /pki/issuers/generate/intermediate/{exported} | 
 [**PostPkiIssuersGenerateRootExported**](Secrets.md#postpkiissuersgeneraterootexported) | **POST** /pki/issuers/generate/root/{exported} | 
 [**PostPkiJson**](Secrets.md#postpkijson) | **POST** /pki//json | 
 [**PostPkiKeyKeyRef**](Secrets.md#postpkikeykeyref) | **POST** /pki/key/{key_ref} | 
 [**PostPkiKeysImport**](Secrets.md#postpkikeysimport) | **POST** /pki/keys/import | 
 [**PostPkiKms**](Secrets.md#postpkikms) | **POST** /pki/kms | 
+[**PostPkiOcsp**](Secrets.md#postpkiocsp) | **POST** /pki/ocsp | 
 [**PostPkiRevoke**](Secrets.md#postpkirevoke) | **POST** /pki/revoke | 
+[**PostPkiRevokeWithKey**](Secrets.md#postpkirevokewithkey) | **POST** /pki/revoke-with-key | 
 [**PostPkiRolesName**](Secrets.md#postpkirolesname) | **POST** /pki/roles/{name} | 
 [**PostPkiRootGenerateExported**](Secrets.md#postpkirootgenerateexported) | **POST** /pki/root/generate/{exported} | 
 [**PostPkiRootReplace**](Secrets.md#postpkirootreplace) | **POST** /pki/root/replace | 
@@ -260,6 +298,7 @@ Method | HTTP request | Description
 [**PostPkiSignVerbatim**](Secrets.md#postpkisignverbatim) | **POST** /pki/sign-verbatim | 
 [**PostPkiSignVerbatimRole**](Secrets.md#postpkisignverbatimrole) | **POST** /pki/sign-verbatim/{role} | 
 [**PostPkiTidy**](Secrets.md#postpkitidy) | **POST** /pki/tidy | 
+[**PostPkiTidyCancel**](Secrets.md#postpkitidycancel) | **POST** /pki/tidy-cancel | 
 [**PostRabbitmqConfigConnection**](Secrets.md#postrabbitmqconfigconnection) | **POST** /rabbitmq/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
 [**PostRabbitmqConfigLease**](Secrets.md#postrabbitmqconfiglease) | **POST** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
 [**PostRabbitmqRolesName**](Secrets.md#postrabbitmqrolesname) | **POST** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
@@ -272,6 +311,7 @@ Method | HTTP request | Description
 [**PostSshConfigCa**](Secrets.md#postsshconfigca) | **POST** /ssh/config/ca | Set the SSH private key used for signing certificates.
 [**PostSshConfigZeroaddress**](Secrets.md#postsshconfigzeroaddress) | **POST** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
 [**PostSshCredsRole**](Secrets.md#postsshcredsrole) | **POST** /ssh/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
+[**PostSshIssueRole**](Secrets.md#postsshissuerole) | **POST** /ssh/issue/{role} | 
 [**PostSshKeysKeyName**](Secrets.md#postsshkeyskeyname) | **POST** /ssh/keys/{key_name} | Register a shared private key with Vault.
 [**PostSshLookup**](Secrets.md#postsshlookup) | **POST** /ssh/lookup | List all the roles associated with the given IP address.
 [**PostSshRolesRole**](Secrets.md#postsshrolesrole) | **POST** /ssh/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
@@ -1652,6 +1692,287 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="deleteldapconfig"></a>
+# **DeleteLdapConfig**
+> void DeleteLdapConfig ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteLdapConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.DeleteLdapConfig();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DeleteLdapConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteldaplibraryname"></a>
+# **DeleteLdapLibraryName**
+> void DeleteLdapLibraryName (string name)
+
+Delete a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteLdapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Delete a library set.
+                apiInstance.DeleteLdapLibraryName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DeleteLdapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteldaprolename"></a>
+# **DeleteLdapRoleName**
+> void DeleteLdapRoleName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteLdapRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role (lowercase)
+
+            try
+            {
+                apiInstance.DeleteLdapRoleName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DeleteLdapRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role (lowercase) | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteldapstaticrolename"></a>
+# **DeleteLdapStaticRoleName**
+> void DeleteLdapStaticRoleName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteLdapStaticRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role
+
+            try
+            {
+                apiInstance.DeleteLdapStaticRoleName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DeleteLdapStaticRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="deletemongodbatlasrolesname"></a>
 # **DeleteMongodbatlasRolesName**
 > void DeleteMongodbatlasRolesName (string name)
@@ -1975,6 +2296,78 @@ namespace Example
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteopenldaplibraryname"></a>
+# **DeleteOpenldapLibraryName**
+> void DeleteOpenldapLibraryName (string name)
+
+Delete a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteOpenldapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Delete a library set.
+                apiInstance.DeleteOpenldapLibraryName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DeleteOpenldapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
 
 ### Return type
 
@@ -6585,6 +6978,714 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getldapconfig"></a>
+# **GetLdapConfig**
+> void GetLdapConfig ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetLdapConfig();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldapcredsname"></a>
+# **GetLdapCredsName**
+> void GetLdapCredsName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapCredsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the dynamic role.
+
+            try
+            {
+                apiInstance.GetLdapCredsName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapCredsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the dynamic role. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldaplibrary"></a>
+# **GetLdapLibrary**
+> void GetLdapLibrary (string list)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapLibraryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                apiInstance.GetLdapLibrary(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapLibrary: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldaplibraryname"></a>
+# **GetLdapLibraryName**
+> void GetLdapLibraryName (string name)
+
+Read a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Read a library set.
+                apiInstance.GetLdapLibraryName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldaplibrarynamestatus"></a>
+# **GetLdapLibraryNameStatus**
+> void GetLdapLibraryNameStatus (string name)
+
+Check the status of the service accounts in a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapLibraryNameStatusExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Check the status of the service accounts in a library set.
+                apiInstance.GetLdapLibraryNameStatus(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapLibraryNameStatus: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldaprole"></a>
+# **GetLdapRole**
+> void GetLdapRole (string list)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                apiInstance.GetLdapRole(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldaprolename"></a>
+# **GetLdapRoleName**
+> void GetLdapRoleName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role (lowercase)
+
+            try
+            {
+                apiInstance.GetLdapRoleName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role (lowercase) | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldapstaticcredname"></a>
+# **GetLdapStaticCredName**
+> void GetLdapStaticCredName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapStaticCredNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the static role.
+
+            try
+            {
+                apiInstance.GetLdapStaticCredName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapStaticCredName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the static role. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldapstaticrole"></a>
+# **GetLdapStaticRole**
+> void GetLdapStaticRole (string list)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapStaticRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                apiInstance.GetLdapStaticRole(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapStaticRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getldapstaticrolename"></a>
+# **GetLdapStaticRoleName**
+> void GetLdapStaticRoleName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetLdapStaticRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role
+
+            try
+            {
+                apiInstance.GetLdapStaticRoleName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetLdapStaticRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getmongodbatlasconfig"></a>
 # **GetMongodbatlasConfig**
 > void GetMongodbatlasConfig ()
@@ -7355,6 +8456,221 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getopenldaplibrary"></a>
+# **GetOpenldapLibrary**
+> void GetOpenldapLibrary (string list)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetOpenldapLibraryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                apiInstance.GetOpenldapLibrary(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetOpenldapLibrary: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getopenldaplibraryname"></a>
+# **GetOpenldapLibraryName**
+> void GetOpenldapLibraryName (string name)
+
+Read a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetOpenldapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Read a library set.
+                apiInstance.GetOpenldapLibraryName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetOpenldapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getopenldaplibrarynamestatus"></a>
+# **GetOpenldapLibraryNameStatus**
+> void GetOpenldapLibraryNameStatus (string name)
+
+Check the status of the service accounts in a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetOpenldapLibraryNameStatusExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+
+            try
+            {
+                // Check the status of the service accounts in a library set.
+                apiInstance.GetOpenldapLibraryNameStatus(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetOpenldapLibraryNameStatus: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getopenldaprole"></a>
 # **GetOpenldapRole**
 > void GetOpenldapRole (string list)
@@ -7978,73 +9294,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpkicertcrl"></a>
-# **GetPkiCertCrl**
-> void GetPkiCertCrl ()
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetPkiCertCrlExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-
-            try
-            {
-                apiInstance.GetPkiCertCrl();
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.GetPkiCertCrl: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getpkicertserial"></a>
 # **GetPkiCertSerial**
 > void GetPkiCertSerial (string serial)
@@ -8307,6 +9556,73 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkiconfigautotidy"></a>
+# **GetPkiConfigAutoTidy**
+> void GetPkiConfigAutoTidy ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiConfigAutoTidyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiConfigAutoTidy();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiConfigAutoTidy: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -8664,73 +9980,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpkicrlpem"></a>
-# **GetPkiCrlPem**
-> void GetPkiCrlPem ()
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetPkiCrlPemExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-
-            try
-            {
-                apiInstance.GetPkiCrlPem();
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.GetPkiCrlPem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getpkicrlrotate"></a>
 # **GetPkiCrlRotate**
 > void GetPkiCrlRotate ()
@@ -8766,6 +10015,274 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Secrets.GetPkiCrlRotate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkicrlrotatedelta"></a>
+# **GetPkiCrlRotateDelta**
+> void GetPkiCrlRotateDelta ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiCrlRotateDeltaExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiCrlRotateDelta();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiCrlRotateDelta: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkidelta"></a>
+# **GetPkiDelta**
+> void GetPkiDelta ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiDeltaExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiDelta();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiDelta: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkideltacrl"></a>
+# **GetPkiDeltaCrl**
+> void GetPkiDeltaCrl ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiDeltaCrlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiDeltaCrl();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiDeltaCrl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkideltapem"></a>
+# **GetPkiDeltaPem**
+> void GetPkiDeltaPem ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiDeltaPemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiDeltaPem();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiDeltaPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8865,9 +10382,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpkiissuerrefcrlpem"></a>
-# **GetPkiIssuerRefCrlPem**
-> void GetPkiIssuerRefCrlPem (string issuerRef)
+<a name="getpkiissuerrefcrlpemderdeltapem"></a>
+# **GetPkiIssuerRefCrlPemDerDeltaPem**
+> void GetPkiIssuerRefCrlPemDerDeltaPem (string issuerRef)
 
 
 
@@ -8882,7 +10399,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GetPkiIssuerRefCrlPemExample
+    public class GetPkiIssuerRefCrlPemDerDeltaPemExample
     {
         public static void Main()
         {
@@ -8896,11 +10413,11 @@ namespace Example
 
             try
             {
-                apiInstance.GetPkiIssuerRefCrlPem(issuerRef);
+                apiInstance.GetPkiIssuerRefCrlPemDerDeltaPem(issuerRef);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Secrets.GetPkiIssuerRefCrlPem: " + e.Message );
+                Debug.Print("Exception when calling Secrets.GetPkiIssuerRefCrlPemDerDeltaPem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9265,6 +10782,144 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkiocspreq"></a>
+# **GetPkiOcspReq**
+> void GetPkiOcspReq (string req)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiOcspReqExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var req = "req_example";  // string | base-64 encoded ocsp request
+
+            try
+            {
+                apiInstance.GetPkiOcspReq(req);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiOcspReq: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **req** | **string**| base-64 encoded ocsp request | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpkipem"></a>
+# **GetPkiPem**
+> void GetPkiPem ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiPemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetPkiPem();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiPem: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -15096,6 +16751,657 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postldapconfig"></a>
+# **PostLdapConfig**
+> void PostLdapConfig (LdapConfigRequest ldapConfigRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var ldapConfigRequest = new LdapConfigRequest(); // LdapConfigRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostLdapConfig(ldapConfigRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapConfigRequest** | [**LdapConfigRequest**](LdapConfigRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaplibrarymanagenamecheckin"></a>
+# **PostLdapLibraryManageNameCheckIn**
+> void PostLdapLibraryManageNameCheckIn (string name, LdapLibraryManageCheckInRequest ldapLibraryManageCheckInRequest = null)
+
+Check service accounts in to the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapLibraryManageNameCheckInExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var ldapLibraryManageCheckInRequest = new LdapLibraryManageCheckInRequest(); // LdapLibraryManageCheckInRequest |  (optional) 
+
+            try
+            {
+                // Check service accounts in to the library.
+                apiInstance.PostLdapLibraryManageNameCheckIn(name, ldapLibraryManageCheckInRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapLibraryManageNameCheckIn: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **ldapLibraryManageCheckInRequest** | [**LdapLibraryManageCheckInRequest**](LdapLibraryManageCheckInRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaplibraryname"></a>
+# **PostLdapLibraryName**
+> void PostLdapLibraryName (string name, LdapLibraryRequest ldapLibraryRequest = null)
+
+Update a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var ldapLibraryRequest = new LdapLibraryRequest(); // LdapLibraryRequest |  (optional) 
+
+            try
+            {
+                // Update a library set.
+                apiInstance.PostLdapLibraryName(name, ldapLibraryRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **ldapLibraryRequest** | [**LdapLibraryRequest**](LdapLibraryRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaplibrarynamecheckin"></a>
+# **PostLdapLibraryNameCheckIn**
+> void PostLdapLibraryNameCheckIn (string name, LdapLibraryCheckInRequest ldapLibraryCheckInRequest = null)
+
+Check service accounts in to the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapLibraryNameCheckInExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var ldapLibraryCheckInRequest = new LdapLibraryCheckInRequest(); // LdapLibraryCheckInRequest |  (optional) 
+
+            try
+            {
+                // Check service accounts in to the library.
+                apiInstance.PostLdapLibraryNameCheckIn(name, ldapLibraryCheckInRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapLibraryNameCheckIn: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **ldapLibraryCheckInRequest** | [**LdapLibraryCheckInRequest**](LdapLibraryCheckInRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaplibrarynamecheckout"></a>
+# **PostLdapLibraryNameCheckOut**
+> void PostLdapLibraryNameCheckOut (string name, LdapLibraryCheckOutRequest ldapLibraryCheckOutRequest = null)
+
+Check a service account out from the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapLibraryNameCheckOutExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set
+            var ldapLibraryCheckOutRequest = new LdapLibraryCheckOutRequest(); // LdapLibraryCheckOutRequest |  (optional) 
+
+            try
+            {
+                // Check a service account out from the library.
+                apiInstance.PostLdapLibraryNameCheckOut(name, ldapLibraryCheckOutRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapLibraryNameCheckOut: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set | 
+ **ldapLibraryCheckOutRequest** | [**LdapLibraryCheckOutRequest**](LdapLibraryCheckOutRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaprolename"></a>
+# **PostLdapRoleName**
+> void PostLdapRoleName (string name, LdapRoleRequest ldapRoleRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role (lowercase)
+            var ldapRoleRequest = new LdapRoleRequest(); // LdapRoleRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostLdapRoleName(name, ldapRoleRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role (lowercase) | 
+ **ldapRoleRequest** | [**LdapRoleRequest**](LdapRoleRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaprotaterolename"></a>
+# **PostLdapRotateRoleName**
+> void PostLdapRotateRoleName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapRotateRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the static role
+
+            try
+            {
+                apiInstance.PostLdapRotateRoleName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapRotateRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the static role | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldaprotateroot"></a>
+# **PostLdapRotateRoot**
+> void PostLdapRotateRoot ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapRotateRootExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.PostLdapRotateRoot();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapRotateRoot: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postldapstaticrolename"></a>
+# **PostLdapStaticRoleName**
+> void PostLdapStaticRoleName (string name, LdapStaticRoleRequest ldapStaticRoleRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostLdapStaticRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role
+            var ldapStaticRoleRequest = new LdapStaticRoleRequest(); // LdapStaticRoleRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostLdapStaticRoleName(name, ldapStaticRoleRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostLdapStaticRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+ **ldapStaticRoleRequest** | [**LdapStaticRoleRequest**](LdapStaticRoleRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postmongodbatlasconfig"></a>
 # **PostMongodbatlasConfig**
 > void PostMongodbatlasConfig (MongodbatlasConfigRequest mongodbatlasConfigRequest = null)
@@ -15601,6 +17907,302 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postopenldaplibrarymanagenamecheckin"></a>
+# **PostOpenldapLibraryManageNameCheckIn**
+> void PostOpenldapLibraryManageNameCheckIn (string name, OpenldapLibraryManageCheckInRequest openldapLibraryManageCheckInRequest = null)
+
+Check service accounts in to the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostOpenldapLibraryManageNameCheckInExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var openldapLibraryManageCheckInRequest = new OpenldapLibraryManageCheckInRequest(); // OpenldapLibraryManageCheckInRequest |  (optional) 
+
+            try
+            {
+                // Check service accounts in to the library.
+                apiInstance.PostOpenldapLibraryManageNameCheckIn(name, openldapLibraryManageCheckInRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostOpenldapLibraryManageNameCheckIn: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **openldapLibraryManageCheckInRequest** | [**OpenldapLibraryManageCheckInRequest**](OpenldapLibraryManageCheckInRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postopenldaplibraryname"></a>
+# **PostOpenldapLibraryName**
+> void PostOpenldapLibraryName (string name, OpenldapLibraryRequest openldapLibraryRequest = null)
+
+Update a library set.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostOpenldapLibraryNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var openldapLibraryRequest = new OpenldapLibraryRequest(); // OpenldapLibraryRequest |  (optional) 
+
+            try
+            {
+                // Update a library set.
+                apiInstance.PostOpenldapLibraryName(name, openldapLibraryRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostOpenldapLibraryName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **openldapLibraryRequest** | [**OpenldapLibraryRequest**](OpenldapLibraryRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postopenldaplibrarynamecheckin"></a>
+# **PostOpenldapLibraryNameCheckIn**
+> void PostOpenldapLibraryNameCheckIn (string name, OpenldapLibraryCheckInRequest openldapLibraryCheckInRequest = null)
+
+Check service accounts in to the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostOpenldapLibraryNameCheckInExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set.
+            var openldapLibraryCheckInRequest = new OpenldapLibraryCheckInRequest(); // OpenldapLibraryCheckInRequest |  (optional) 
+
+            try
+            {
+                // Check service accounts in to the library.
+                apiInstance.PostOpenldapLibraryNameCheckIn(name, openldapLibraryCheckInRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostOpenldapLibraryNameCheckIn: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set. | 
+ **openldapLibraryCheckInRequest** | [**OpenldapLibraryCheckInRequest**](OpenldapLibraryCheckInRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postopenldaplibrarynamecheckout"></a>
+# **PostOpenldapLibraryNameCheckOut**
+> void PostOpenldapLibraryNameCheckOut (string name, OpenldapLibraryCheckOutRequest openldapLibraryCheckOutRequest = null)
+
+Check a service account out from the library.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostOpenldapLibraryNameCheckOutExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the set
+            var openldapLibraryCheckOutRequest = new OpenldapLibraryCheckOutRequest(); // OpenldapLibraryCheckOutRequest |  (optional) 
+
+            try
+            {
+                // Check a service account out from the library.
+                apiInstance.PostOpenldapLibraryNameCheckOut(name, openldapLibraryCheckOutRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostOpenldapLibraryNameCheckOut: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the set | 
+ **openldapLibraryCheckOutRequest** | [**OpenldapLibraryCheckOutRequest**](OpenldapLibraryCheckOutRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postopenldaprolename"></a>
 # **PostOpenldapRoleName**
 > void PostOpenldapRoleName (string name, OpenldapRoleRequest openldapRoleRequest = null)
@@ -16005,6 +18607,77 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiCertRequest** | [**PkiCertRequest**](PkiCertRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpkiconfigautotidy"></a>
+# **PostPkiConfigAutoTidy**
+> void PostPkiConfigAutoTidy (PkiConfigAutoTidyRequest pkiConfigAutoTidyRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiConfigAutoTidyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pkiConfigAutoTidyRequest = new PkiConfigAutoTidyRequest(); // PkiConfigAutoTidyRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostPkiConfigAutoTidy(pkiConfigAutoTidyRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiConfigAutoTidy: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiConfigAutoTidyRequest** | [**PkiConfigAutoTidyRequest**](PkiConfigAutoTidyRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -16597,77 +19270,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postpkiinternalexported"></a>
-# **PostPkiInternalExported**
-> void PostPkiInternalExported (PkiInternalExportedRequest pkiInternalExportedRequest = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostPkiInternalExportedExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var pkiInternalExportedRequest = new PkiInternalExportedRequest(); // PkiInternalExportedRequest |  (optional) 
-
-            try
-            {
-                apiInstance.PostPkiInternalExported(pkiInternalExportedRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PostPkiInternalExported: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiInternalExportedRequest** | [**PkiInternalExportedRequest**](PkiInternalExportedRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postpkiissuerole"></a>
 # **PostPkiIssueRole**
 > void PostPkiIssueRole (string role, PkiIssueRequest pkiIssueRequest = null)
@@ -16806,6 +19408,77 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpkiissuerissuerrefrevoke"></a>
+# **PostPkiIssuerIssuerRefRevoke**
+> void PostPkiIssuerIssuerRefRevoke (string issuerRef)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiIssuerIssuerRefRevokeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+
+            try
+            {
+                apiInstance.PostPkiIssuerIssuerRefRevoke(issuerRef);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefRevoke: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -17163,79 +19836,6 @@ Name | Type | Description  | Notes
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **role** | **string**| The desired role with configuration for this request | 
  **pkiIssuerSignVerbatimRequest** | [**PkiIssuerSignVerbatimRequest**](PkiIssuerSignVerbatimRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="postpkiissuerrefderpem"></a>
-# **PostPkiIssuerRefDerPem**
-> void PostPkiIssuerRefDerPem (string issuerRef, PkiDerPemRequest pkiDerPemRequest = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostPkiIssuerRefDerPemExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
-            var pkiDerPemRequest = new PkiDerPemRequest(); // PkiDerPemRequest |  (optional) 
-
-            try
-            {
-                apiInstance.PostPkiIssuerRefDerPem(issuerRef, pkiDerPemRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PostPkiIssuerRefDerPem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
- **pkiDerPemRequest** | [**PkiDerPemRequest**](PkiDerPemRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -17690,6 +20290,73 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postpkiocsp"></a>
+# **PostPkiOcsp**
+> void PostPkiOcsp ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiOcspExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.PostPkiOcsp();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiOcsp: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postpkirevoke"></a>
 # **PostPkiRevoke**
 > void PostPkiRevoke (PkiRevokeRequest pkiRevokeRequest = null)
@@ -17739,6 +20406,77 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiRevokeRequest** | [**PkiRevokeRequest**](PkiRevokeRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpkirevokewithkey"></a>
+# **PostPkiRevokeWithKey**
+> void PostPkiRevokeWithKey (PkiRevokeWithKeyRequest pkiRevokeWithKeyRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiRevokeWithKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pkiRevokeWithKeyRequest = new PkiRevokeWithKeyRequest(); // PkiRevokeWithKeyRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostPkiRevokeWithKey(pkiRevokeWithKeyRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiRevokeWithKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiRevokeWithKeyRequest** | [**PkiRevokeWithKeyRequest**](PkiRevokeWithKeyRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -18471,6 +21209,73 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpkitidycancel"></a>
+# **PostPkiTidyCancel**
+> void PostPkiTidyCancel ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiTidyCancelExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.PostPkiTidyCancel();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiTidyCancel: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -19337,6 +22142,79 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | **string**| [Required] Name of the role | 
  **sshCredsRequest** | [**SshCredsRequest**](SshCredsRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postsshissuerole"></a>
+# **PostSshIssueRole**
+> void PostSshIssueRole (string role, SshIssueRequest sshIssueRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostSshIssueRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The desired role with configuration for this request.
+            var sshIssueRequest = new SshIssueRequest(); // SshIssueRequest |  (optional) 
+
+            try
+            {
+                apiInstance.PostSshIssueRole(role, sshIssueRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostSshIssueRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role with configuration for this request. | 
+ **sshIssueRequest** | [**SshIssueRequest**](SshIssueRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -20335,7 +23213,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the policy
+            var name = "name_example";  // string | Name of the key
             var transitDecryptRequest = new TransitDecryptRequest(); // TransitDecryptRequest |  (optional) 
 
             try
@@ -20358,7 +23236,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the policy | 
+ **name** | **string**| Name of the key | 
  **transitDecryptRequest** | [**TransitDecryptRequest**](TransitDecryptRequest.md)|  | [optional] 
 
 ### Return type
@@ -20409,7 +23287,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the policy
+            var name = "name_example";  // string | Name of the key
             var transitEncryptRequest = new TransitEncryptRequest(); // TransitEncryptRequest |  (optional) 
 
             try
@@ -20432,7 +23310,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the policy | 
+ **name** | **string**| Name of the key | 
  **transitEncryptRequest** | [**TransitEncryptRequest**](TransitEncryptRequest.md)|  | [optional] 
 
 ### Return type

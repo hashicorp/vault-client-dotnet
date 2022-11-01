@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **RedirectUri** | **string** | The redirection URI to which the response will be sent. | 
 **ResponseType** | **string** | The OIDC authentication flow to be used. The following response types are supported: &#39;code&#39; | 
 **Scope** | **string** | A space-delimited, case-sensitive list of scopes to be requested. The &#39;openid&#39; scope is required. | 
-**State** | **string** | The value used to maintain state between the authentication request and client. | 
+**State** | **string** | The value used to maintain state between the authentication request and client. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

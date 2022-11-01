@@ -5,8 +5,6 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DeleteAuthAlicloudRoleRole**](Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-[**DeleteAuthAppIdMapAppIdKey**](Auth.md#deleteauthappidmapappidkey) | **DELETE** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**DeleteAuthAppIdMapUserIdKey**](Auth.md#deleteauthappidmapuseridkey) | **DELETE** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 [**DeleteAuthApproleRoleRoleName**](Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/approle/role/{role_name} | Register an role with the backend.
 [**DeleteAuthApproleRoleRoleNameBindSecretId**](Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
 [**DeleteAuthApproleRoleRoleNameBoundCidrList**](Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -16,7 +14,7 @@ Method | HTTP request | Description
 [**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 [**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
 [**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 [**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 [**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 [**DeleteAuthApproleRoleRoleNameTokenNumUses**](Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -58,10 +56,6 @@ Method | HTTP request | Description
 [**GetAuthAlicloudRole**](Auth.md#getauthalicloudrole) | **GET** /auth/alicloud/role | Lists all the roles that are registered with Vault.
 [**GetAuthAlicloudRoleRole**](Auth.md#getauthalicloudrolerole) | **GET** /auth/alicloud/role/{role} | Create a role and associate policies to it.
 [**GetAuthAlicloudRoles**](Auth.md#getauthalicloudroles) | **GET** /auth/alicloud/roles | Lists all the roles that are registered with Vault.
-[**GetAuthAppIdMapAppId**](Auth.md#getauthappidmapappid) | **GET** /auth/app-id/map/app-id | Read mappings for app-id
-[**GetAuthAppIdMapAppIdKey**](Auth.md#getauthappidmapappidkey) | **GET** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**GetAuthAppIdMapUserId**](Auth.md#getauthappidmapuserid) | **GET** /auth/app-id/map/user-id | Read mappings for user-id
-[**GetAuthAppIdMapUserIdKey**](Auth.md#getauthappidmapuseridkey) | **GET** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 [**GetAuthApproleRole**](Auth.md#getauthapprolerole) | **GET** /auth/approle/role | Lists all the roles registered with the backend.
 [**GetAuthApproleRoleRoleName**](Auth.md#getauthapprolerolerolename) | **GET** /auth/approle/role/{role_name} | Register an role with the backend.
 [**GetAuthApproleRoleRoleNameBindSecretId**](Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
@@ -73,7 +67,7 @@ Method | HTTP request | Description
 [**GetAuthApproleRoleRoleNameSecretId**](Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
 [**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 [**GetAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 [**GetAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 [**GetAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 [**GetAuthApproleRoleRoleNameTokenNumUses**](Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -105,6 +99,7 @@ Method | HTTP request | Description
 [**GetAuthCentrifyConfig**](Auth.md#getauthcentrifyconfig) | **GET** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
 [**GetAuthCertCerts**](Auth.md#getauthcertcerts) | **GET** /auth/cert/certs | Manage trusted certificates used for authentication.
 [**GetAuthCertCertsName**](Auth.md#getauthcertcertsname) | **GET** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
+[**GetAuthCertConfig**](Auth.md#getauthcertconfig) | **GET** /auth/cert/config | 
 [**GetAuthCertCrlsName**](Auth.md#getauthcertcrlsname) | **GET** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
 [**GetAuthCfConfig**](Auth.md#getauthcfconfig) | **GET** /auth/cf/config | 
 [**GetAuthCfRoles**](Auth.md#getauthcfroles) | **GET** /auth/cf/roles | 
@@ -160,10 +155,6 @@ Method | HTTP request | Description
 [**GetAuthUserpassUsersUsername**](Auth.md#getauthuserpassusersusername) | **GET** /auth/userpass/users/{username} | Manage users allowed to authenticate.
 [**PostAuthAlicloudLogin**](Auth.md#postauthalicloudlogin) | **POST** /auth/alicloud/login | Authenticates an RAM entity with Vault.
 [**PostAuthAlicloudRoleRole**](Auth.md#postauthalicloudrolerole) | **POST** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-[**PostAuthAppIdLogin**](Auth.md#postauthappidlogin) | **POST** /auth/app-id/login | Log in with an App ID and User ID.
-[**PostAuthAppIdLoginAppId**](Auth.md#postauthappidloginappid) | **POST** /auth/app-id/login/{app_id} | Log in with an App ID and User ID.
-[**PostAuthAppIdMapAppIdKey**](Auth.md#postauthappidmapappidkey) | **POST** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-[**PostAuthAppIdMapUserIdKey**](Auth.md#postauthappidmapuseridkey) | **POST** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 [**PostAuthApproleLogin**](Auth.md#postauthapprolelogin) | **POST** /auth/approle/login | 
 [**PostAuthApproleRoleRoleName**](Auth.md#postauthapprolerolerolename) | **POST** /auth/approle/role/{role_name} | Register an role with the backend.
 [**PostAuthApproleRoleRoleNameBindSecretId**](Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
@@ -179,7 +170,7 @@ Method | HTTP request | Description
 [**PostAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
 [**PostAuthApproleRoleRoleNameSecretIdLookup**](Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/approle/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
 [**PostAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using &#39;role/&lt;role_name&gt;/secret-id&#39; or &#39;role/&lt;role_name&gt;/custom-secret-id&#39; endpoints.
+[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 [**PostAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 [**PostAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 [**PostAuthApproleRoleRoleNameTokenNumUses**](Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -327,150 +318,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | **string**| The name of the role as it should appear in Vault. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | empty body |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deleteauthappidmapappidkey"></a>
-# **DeleteAuthAppIdMapAppIdKey**
-> void DeleteAuthAppIdMapAppIdKey (string key)
-
-Read/write/delete a single app-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class DeleteAuthAppIdMapAppIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the app-id mapping
-
-            try
-            {
-                // Read/write/delete a single app-id mapping
-                apiInstance.DeleteAuthAppIdMapAppIdKey(key);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.DeleteAuthAppIdMapAppIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the app-id mapping | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | empty body |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deleteauthappidmapuseridkey"></a>
-# **DeleteAuthAppIdMapUserIdKey**
-> void DeleteAuthAppIdMapUserIdKey (string key)
-
-Read/write/delete a single user-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class DeleteAuthAppIdMapUserIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the user-id mapping
-
-            try
-            {
-                // Read/write/delete a single user-id mapping
-                apiInstance.DeleteAuthAppIdMapUserIdKey(key);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.DeleteAuthAppIdMapUserIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the user-id mapping | 
 
 ### Return type
 
@@ -1144,7 +991,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameSecretIdTtl**
 > void DeleteAuthApproleRoleRoleNameSecretIdTtl (string roleName)
 
-Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+Duration in seconds of the SecretID generated against the role.
 
 ### Example
 ```csharp
@@ -1171,7 +1018,7 @@ namespace Example
 
             try
             {
-                // Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+                // Duration in seconds of the SecretID generated against the role.
                 apiInstance.DeleteAuthApproleRoleRoleNameSecretIdTtl(roleName);
             }
             catch (ApiException  e)
@@ -4114,294 +3961,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getauthappidmapappid"></a>
-# **GetAuthAppIdMapAppId**
-> void GetAuthAppIdMapAppId (string list = null)
-
-Read mappings for app-id
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetAuthAppIdMapAppIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-
-            try
-            {
-                // Read mappings for app-id
-                apiInstance.GetAuthAppIdMapAppId(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GetAuthAppIdMapAppId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getauthappidmapappidkey"></a>
-# **GetAuthAppIdMapAppIdKey**
-> void GetAuthAppIdMapAppIdKey (string key)
-
-Read/write/delete a single app-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetAuthAppIdMapAppIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the app-id mapping
-
-            try
-            {
-                // Read/write/delete a single app-id mapping
-                apiInstance.GetAuthAppIdMapAppIdKey(key);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GetAuthAppIdMapAppIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the app-id mapping | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getauthappidmapuserid"></a>
-# **GetAuthAppIdMapUserId**
-> void GetAuthAppIdMapUserId (string list = null)
-
-Read mappings for user-id
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetAuthAppIdMapUserIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-
-            try
-            {
-                // Read mappings for user-id
-                apiInstance.GetAuthAppIdMapUserId(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GetAuthAppIdMapUserId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getauthappidmapuseridkey"></a>
-# **GetAuthAppIdMapUserIdKey**
-> void GetAuthAppIdMapUserIdKey (string key)
-
-Read/write/delete a single user-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GetAuthAppIdMapUserIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the user-id mapping
-
-            try
-            {
-                // Read/write/delete a single user-id mapping
-                apiInstance.GetAuthAppIdMapUserIdKey(key);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GetAuthAppIdMapUserIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the user-id mapping | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getauthapprolerole"></a>
 # **GetAuthApproleRole**
 > void GetAuthApproleRole (string list)
@@ -5200,7 +4759,7 @@ No authorization required
 # **GetAuthApproleRoleRoleNameSecretIdTtl**
 > void GetAuthApproleRoleRoleNameSecretIdTtl (string roleName)
 
-Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+Duration in seconds of the SecretID generated against the role.
 
 ### Example
 ```csharp
@@ -5227,7 +4786,7 @@ namespace Example
 
             try
             {
-                // Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+                // Duration in seconds of the SecretID generated against the role.
                 apiInstance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName);
             }
             catch (ApiException  e)
@@ -7422,6 +6981,73 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the certificate | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertconfig"></a>
+# **GetAuthCertConfig**
+> void GetAuthCertConfig ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+
+            try
+            {
+                apiInstance.GetAuthCertConfig();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -11331,300 +10957,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postauthappidlogin"></a>
-# **PostAuthAppIdLogin**
-> void PostAuthAppIdLogin (AppIdLoginRequest appIdLoginRequest = null)
-
-Log in with an App ID and User ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostAuthAppIdLoginExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
-
-            try
-            {
-                // Log in with an App ID and User ID.
-                apiInstance.PostAuthAppIdLogin(appIdLoginRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.PostAuthAppIdLogin: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appIdLoginRequest** | [**AppIdLoginRequest**](AppIdLoginRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="postauthappidloginappid"></a>
-# **PostAuthAppIdLoginAppId**
-> void PostAuthAppIdLoginAppId (string appId, AppIdLoginRequest appIdLoginRequest = null)
-
-Log in with an App ID and User ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostAuthAppIdLoginAppIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var appId = "appId_example";  // string | The unique app ID
-            var appIdLoginRequest = new AppIdLoginRequest(); // AppIdLoginRequest |  (optional) 
-
-            try
-            {
-                // Log in with an App ID and User ID.
-                apiInstance.PostAuthAppIdLoginAppId(appId, appIdLoginRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.PostAuthAppIdLoginAppId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **string**| The unique app ID | 
- **appIdLoginRequest** | [**AppIdLoginRequest**](AppIdLoginRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="postauthappidmapappidkey"></a>
-# **PostAuthAppIdMapAppIdKey**
-> void PostAuthAppIdMapAppIdKey (string key, AppIdMapAppIdRequest appIdMapAppIdRequest = null)
-
-Read/write/delete a single app-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostAuthAppIdMapAppIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the app-id mapping
-            var appIdMapAppIdRequest = new AppIdMapAppIdRequest(); // AppIdMapAppIdRequest |  (optional) 
-
-            try
-            {
-                // Read/write/delete a single app-id mapping
-                apiInstance.PostAuthAppIdMapAppIdKey(key, appIdMapAppIdRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.PostAuthAppIdMapAppIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the app-id mapping | 
- **appIdMapAppIdRequest** | [**AppIdMapAppIdRequest**](AppIdMapAppIdRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="postauthappidmapuseridkey"></a>
-# **PostAuthAppIdMapUserIdKey**
-> void PostAuthAppIdMapUserIdKey (string key, AppIdMapUserIdRequest appIdMapUserIdRequest = null)
-
-Read/write/delete a single user-id mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PostAuthAppIdMapUserIdKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the user-id mapping
-            var appIdMapUserIdRequest = new AppIdMapUserIdRequest(); // AppIdMapUserIdRequest |  (optional) 
-
-            try
-            {
-                // Read/write/delete a single user-id mapping
-                apiInstance.PostAuthAppIdMapUserIdKey(key, appIdMapUserIdRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.PostAuthAppIdMapUserIdKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the user-id mapping | 
- **appIdMapUserIdRequest** | [**AppIdMapUserIdRequest**](AppIdMapUserIdRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postauthapprolelogin"></a>
 # **PostAuthApproleLogin**
 > void PostAuthApproleLogin (ApproleLoginRequest approleLoginRequest = null)
@@ -12734,7 +12066,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameSecretIdTtl**
 > void PostAuthApproleRoleRoleNameSecretIdTtl (string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest = null)
 
-Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+Duration in seconds of the SecretID generated against the role.
 
 ### Example
 ```csharp
@@ -12762,7 +12094,7 @@ namespace Example
 
             try
             {
-                // Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+                // Duration in seconds of the SecretID generated against the role.
                 apiInstance.PostAuthApproleRoleRoleNameSecretIdTtl(roleName, approleRoleSecretIdTtlRequest);
             }
             catch (ApiException  e)
@@ -18307,7 +17639,7 @@ No authorization required
 
 <a name="postauthtokencreate"></a>
 # **PostAuthTokenCreate**
-> void PostAuthTokenCreate ()
+> void PostAuthTokenCreate (string format = null, TokenCreateRequest tokenCreateRequest = null)
 
 The token create path is used to create new tokens.
 
@@ -18332,11 +17664,13 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var format = "format_example";  // string | Return json formatted output (optional) 
+            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest |  (optional) 
 
             try
             {
                 // The token create path is used to create new tokens.
-                apiInstance.PostAuthTokenCreate();
+                apiInstance.PostAuthTokenCreate(format, tokenCreateRequest);
             }
             catch (ApiException  e)
             {
@@ -18350,7 +17684,11 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **string**| Return json formatted output | [optional] 
+ **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -18362,7 +17700,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 
@@ -18375,7 +17713,7 @@ No authorization required
 
 <a name="postauthtokencreateorphan"></a>
 # **PostAuthTokenCreateOrphan**
-> void PostAuthTokenCreateOrphan ()
+> void PostAuthTokenCreateOrphan (string format = null, TokenCreateOrphanRequest tokenCreateOrphanRequest = null)
 
 The token create path is used to create new orphan tokens.
 
@@ -18400,11 +17738,13 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var format = "format_example";  // string | Return json formatted output (optional) 
+            var tokenCreateOrphanRequest = new TokenCreateOrphanRequest(); // TokenCreateOrphanRequest |  (optional) 
 
             try
             {
                 // The token create path is used to create new orphan tokens.
-                apiInstance.PostAuthTokenCreateOrphan();
+                apiInstance.PostAuthTokenCreateOrphan(format, tokenCreateOrphanRequest);
             }
             catch (ApiException  e)
             {
@@ -18418,7 +17758,11 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **string**| Return json formatted output | [optional] 
+ **tokenCreateOrphanRequest** | [**TokenCreateOrphanRequest**](TokenCreateOrphanRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -18430,7 +17774,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 
@@ -18443,7 +17787,7 @@ No authorization required
 
 <a name="postauthtokencreaterolename"></a>
 # **PostAuthTokenCreateRoleName**
-> void PostAuthTokenCreateRoleName (string roleName)
+> void PostAuthTokenCreateRoleName (string roleName, string format = null, TokenCreateRequest tokenCreateRequest = null)
 
 This token create path is used to create new tokens adhering to the given role.
 
@@ -18469,11 +17813,13 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
+            var format = "format_example";  // string | Return json formatted output (optional) 
+            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest |  (optional) 
 
             try
             {
                 // This token create path is used to create new tokens adhering to the given role.
-                apiInstance.PostAuthTokenCreateRoleName(roleName);
+                apiInstance.PostAuthTokenCreateRoleName(roleName, format, tokenCreateRequest);
             }
             catch (ApiException  e)
             {
@@ -18491,6 +17837,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
+ **format** | **string**| Return json formatted output | [optional] 
+ **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -18502,7 +17850,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 

@@ -179,8 +179,6 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Auth* | [**DeleteAuthAlicloudRoleRole**](docs/Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-*Auth* | [**DeleteAuthAppIdMapAppIdKey**](docs/Auth.md#deleteauthappidmapappidkey) | **DELETE** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-*Auth* | [**DeleteAuthAppIdMapUserIdKey**](docs/Auth.md#deleteauthappidmapuseridkey) | **DELETE** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 *Auth* | [**DeleteAuthApproleRoleRoleName**](docs/Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/approle/role/{role_name} | Register an role with the backend.
 *Auth* | [**DeleteAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
 *Auth* | [**DeleteAuthApproleRoleRoleNameBoundCidrList**](docs/Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -190,7 +188,7 @@ Class | Method | HTTP request | Description
 *Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 *Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
 *Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 *Auth* | [**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 *Auth* | [**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 *Auth* | [**DeleteAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -232,10 +230,6 @@ Class | Method | HTTP request | Description
 *Auth* | [**GetAuthAlicloudRole**](docs/Auth.md#getauthalicloudrole) | **GET** /auth/alicloud/role | Lists all the roles that are registered with Vault.
 *Auth* | [**GetAuthAlicloudRoleRole**](docs/Auth.md#getauthalicloudrolerole) | **GET** /auth/alicloud/role/{role} | Create a role and associate policies to it.
 *Auth* | [**GetAuthAlicloudRoles**](docs/Auth.md#getauthalicloudroles) | **GET** /auth/alicloud/roles | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthAppIdMapAppId**](docs/Auth.md#getauthappidmapappid) | **GET** /auth/app-id/map/app-id | Read mappings for app-id
-*Auth* | [**GetAuthAppIdMapAppIdKey**](docs/Auth.md#getauthappidmapappidkey) | **GET** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-*Auth* | [**GetAuthAppIdMapUserId**](docs/Auth.md#getauthappidmapuserid) | **GET** /auth/app-id/map/user-id | Read mappings for user-id
-*Auth* | [**GetAuthAppIdMapUserIdKey**](docs/Auth.md#getauthappidmapuseridkey) | **GET** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 *Auth* | [**GetAuthApproleRole**](docs/Auth.md#getauthapprolerole) | **GET** /auth/approle/role | Lists all the roles registered with the backend.
 *Auth* | [**GetAuthApproleRoleRoleName**](docs/Auth.md#getauthapprolerolerolename) | **GET** /auth/approle/role/{role_name} | Register an role with the backend.
 *Auth* | [**GetAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
@@ -247,7 +241,7 @@ Class | Method | HTTP request | Description
 *Auth* | [**GetAuthApproleRoleRoleNameSecretId**](docs/Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
 *Auth* | [**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 *Auth* | [**GetAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**GetAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+*Auth* | [**GetAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 *Auth* | [**GetAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 *Auth* | [**GetAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 *Auth* | [**GetAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -279,6 +273,7 @@ Class | Method | HTTP request | Description
 *Auth* | [**GetAuthCentrifyConfig**](docs/Auth.md#getauthcentrifyconfig) | **GET** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
 *Auth* | [**GetAuthCertCerts**](docs/Auth.md#getauthcertcerts) | **GET** /auth/cert/certs | Manage trusted certificates used for authentication.
 *Auth* | [**GetAuthCertCertsName**](docs/Auth.md#getauthcertcertsname) | **GET** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
+*Auth* | [**GetAuthCertConfig**](docs/Auth.md#getauthcertconfig) | **GET** /auth/cert/config | 
 *Auth* | [**GetAuthCertCrlsName**](docs/Auth.md#getauthcertcrlsname) | **GET** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
 *Auth* | [**GetAuthCfConfig**](docs/Auth.md#getauthcfconfig) | **GET** /auth/cf/config | 
 *Auth* | [**GetAuthCfRoles**](docs/Auth.md#getauthcfroles) | **GET** /auth/cf/roles | 
@@ -334,10 +329,6 @@ Class | Method | HTTP request | Description
 *Auth* | [**GetAuthUserpassUsersUsername**](docs/Auth.md#getauthuserpassusersusername) | **GET** /auth/userpass/users/{username} | Manage users allowed to authenticate.
 *Auth* | [**PostAuthAlicloudLogin**](docs/Auth.md#postauthalicloudlogin) | **POST** /auth/alicloud/login | Authenticates an RAM entity with Vault.
 *Auth* | [**PostAuthAlicloudRoleRole**](docs/Auth.md#postauthalicloudrolerole) | **POST** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-*Auth* | [**PostAuthAppIdLogin**](docs/Auth.md#postauthappidlogin) | **POST** /auth/app-id/login | Log in with an App ID and User ID.
-*Auth* | [**PostAuthAppIdLoginAppId**](docs/Auth.md#postauthappidloginappid) | **POST** /auth/app-id/login/{app_id} | Log in with an App ID and User ID.
-*Auth* | [**PostAuthAppIdMapAppIdKey**](docs/Auth.md#postauthappidmapappidkey) | **POST** /auth/app-id/map/app-id/{key} | Read/write/delete a single app-id mapping
-*Auth* | [**PostAuthAppIdMapUserIdKey**](docs/Auth.md#postauthappidmapuseridkey) | **POST** /auth/app-id/map/user-id/{key} | Read/write/delete a single user-id mapping
 *Auth* | [**PostAuthApproleLogin**](docs/Auth.md#postauthapprolelogin) | **POST** /auth/approle/login | 
 *Auth* | [**PostAuthApproleRoleRoleName**](docs/Auth.md#postauthapprolerolerolename) | **POST** /auth/approle/role/{role_name} | Register an role with the backend.
 *Auth* | [**PostAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
@@ -353,7 +344,7 @@ Class | Method | HTTP request | Description
 *Auth* | [**PostAuthApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
 *Auth* | [**PostAuthApproleRoleRoleNameSecretIdLookup**](docs/Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/approle/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
 *Auth* | [**PostAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds, representing the lifetime of the SecretIDs that are generated against the role using 'role/<role_name>/secret-id' or 'role/<role_name>/custom-secret-id' endpoints.
+*Auth* | [**PostAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
 *Auth* | [**PostAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 *Auth* | [**PostAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 *Auth* | [**PostAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
@@ -573,11 +564,16 @@ Class | Method | HTTP request | Description
 *Secrets* | [**DeleteKubernetesConfig**](docs/Secrets.md#deletekubernetesconfig) | **DELETE** /kubernetes/config | 
 *Secrets* | [**DeleteKubernetesRolesName**](docs/Secrets.md#deletekubernetesrolesname) | **DELETE** /kubernetes/roles/{name} | 
 *Secrets* | [**DeleteKvPath**](docs/Secrets.md#deletekvpath) | **DELETE** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+*Secrets* | [**DeleteLdapConfig**](docs/Secrets.md#deleteldapconfig) | **DELETE** /ldap/config | 
+*Secrets* | [**DeleteLdapLibraryName**](docs/Secrets.md#deleteldaplibraryname) | **DELETE** /ldap/library/{name} | Delete a library set.
+*Secrets* | [**DeleteLdapRoleName**](docs/Secrets.md#deleteldaprolename) | **DELETE** /ldap/role/{name} | 
+*Secrets* | [**DeleteLdapStaticRoleName**](docs/Secrets.md#deleteldapstaticrolename) | **DELETE** /ldap/static-role/{name} | 
 *Secrets* | [**DeleteMongodbatlasRolesName**](docs/Secrets.md#deletemongodbatlasrolesname) | **DELETE** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 *Secrets* | [**DeleteNomadConfigAccess**](docs/Secrets.md#deletenomadconfigaccess) | **DELETE** /nomad/config/access | 
 *Secrets* | [**DeleteNomadConfigLease**](docs/Secrets.md#deletenomadconfiglease) | **DELETE** /nomad/config/lease | Configure the lease parameters for generated tokens
 *Secrets* | [**DeleteNomadRoleName**](docs/Secrets.md#deletenomadrolename) | **DELETE** /nomad/role/{name} | 
 *Secrets* | [**DeleteOpenldapConfig**](docs/Secrets.md#deleteopenldapconfig) | **DELETE** /openldap/config | 
+*Secrets* | [**DeleteOpenldapLibraryName**](docs/Secrets.md#deleteopenldaplibraryname) | **DELETE** /openldap/library/{name} | Delete a library set.
 *Secrets* | [**DeleteOpenldapRoleName**](docs/Secrets.md#deleteopenldaprolename) | **DELETE** /openldap/role/{name} | 
 *Secrets* | [**DeleteOpenldapStaticRoleName**](docs/Secrets.md#deleteopenldapstaticrolename) | **DELETE** /openldap/static-role/{name} | 
 *Secrets* | [**DeletePkiIssuerRefDerPem**](docs/Secrets.md#deletepkiissuerrefderpem) | **DELETE** /pki/{issuer_ref}/der|/pem | 
@@ -643,6 +639,16 @@ Class | Method | HTTP request | Description
 *Secrets* | [**GetKubernetesRoles**](docs/Secrets.md#getkubernetesroles) | **GET** /kubernetes/roles | 
 *Secrets* | [**GetKubernetesRolesName**](docs/Secrets.md#getkubernetesrolesname) | **GET** /kubernetes/roles/{name} | 
 *Secrets* | [**GetKvPath**](docs/Secrets.md#getkvpath) | **GET** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+*Secrets* | [**GetLdapConfig**](docs/Secrets.md#getldapconfig) | **GET** /ldap/config | 
+*Secrets* | [**GetLdapCredsName**](docs/Secrets.md#getldapcredsname) | **GET** /ldap/creds/{name} | 
+*Secrets* | [**GetLdapLibrary**](docs/Secrets.md#getldaplibrary) | **GET** /ldap/library | 
+*Secrets* | [**GetLdapLibraryName**](docs/Secrets.md#getldaplibraryname) | **GET** /ldap/library/{name} | Read a library set.
+*Secrets* | [**GetLdapLibraryNameStatus**](docs/Secrets.md#getldaplibrarynamestatus) | **GET** /ldap/library/{name}/status | Check the status of the service accounts in a library set.
+*Secrets* | [**GetLdapRole**](docs/Secrets.md#getldaprole) | **GET** /ldap/role | 
+*Secrets* | [**GetLdapRoleName**](docs/Secrets.md#getldaprolename) | **GET** /ldap/role/{name} | 
+*Secrets* | [**GetLdapStaticCredName**](docs/Secrets.md#getldapstaticcredname) | **GET** /ldap/static-cred/{name} | 
+*Secrets* | [**GetLdapStaticRole**](docs/Secrets.md#getldapstaticrole) | **GET** /ldap/static-role | 
+*Secrets* | [**GetLdapStaticRoleName**](docs/Secrets.md#getldapstaticrolename) | **GET** /ldap/static-role/{name} | 
 *Secrets* | [**GetMongodbatlasConfig**](docs/Secrets.md#getmongodbatlasconfig) | **GET** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
 *Secrets* | [**GetMongodbatlasCredsName**](docs/Secrets.md#getmongodbatlascredsname) | **GET** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
 *Secrets* | [**GetMongodbatlasRoles**](docs/Secrets.md#getmongodbatlasroles) | **GET** /mongodbatlas/roles | List the existing roles in this backend
@@ -654,6 +660,9 @@ Class | Method | HTTP request | Description
 *Secrets* | [**GetNomadRoleName**](docs/Secrets.md#getnomadrolename) | **GET** /nomad/role/{name} | 
 *Secrets* | [**GetOpenldapConfig**](docs/Secrets.md#getopenldapconfig) | **GET** /openldap/config | 
 *Secrets* | [**GetOpenldapCredsName**](docs/Secrets.md#getopenldapcredsname) | **GET** /openldap/creds/{name} | 
+*Secrets* | [**GetOpenldapLibrary**](docs/Secrets.md#getopenldaplibrary) | **GET** /openldap/library | 
+*Secrets* | [**GetOpenldapLibraryName**](docs/Secrets.md#getopenldaplibraryname) | **GET** /openldap/library/{name} | Read a library set.
+*Secrets* | [**GetOpenldapLibraryNameStatus**](docs/Secrets.md#getopenldaplibrarynamestatus) | **GET** /openldap/library/{name}/status | Check the status of the service accounts in a library set.
 *Secrets* | [**GetOpenldapRole**](docs/Secrets.md#getopenldaprole) | **GET** /openldap/role | 
 *Secrets* | [**GetOpenldapRoleName**](docs/Secrets.md#getopenldaprolename) | **GET** /openldap/role/{name} | 
 *Secrets* | [**GetOpenldapStaticCredName**](docs/Secrets.md#getopenldapstaticcredname) | **GET** /openldap/static-cred/{name} | 
@@ -663,25 +672,30 @@ Class | Method | HTTP request | Description
 *Secrets* | [**GetPkiCaChain**](docs/Secrets.md#getpkicachain) | **GET** /pki/ca_chain | 
 *Secrets* | [**GetPkiCaPem**](docs/Secrets.md#getpkicapem) | **GET** /pki/ca/pem | 
 *Secrets* | [**GetPkiCertCaChain**](docs/Secrets.md#getpkicertcachain) | **GET** /pki/cert/ca_chain | 
-*Secrets* | [**GetPkiCertCrl**](docs/Secrets.md#getpkicertcrl) | **GET** /pki/cert/crl | 
 *Secrets* | [**GetPkiCertSerial**](docs/Secrets.md#getpkicertserial) | **GET** /pki/cert/{serial} | 
 *Secrets* | [**GetPkiCertSerialRaw**](docs/Secrets.md#getpkicertserialraw) | **GET** /pki/cert/{serial}/raw | 
 *Secrets* | [**GetPkiCertSerialRawPem**](docs/Secrets.md#getpkicertserialrawpem) | **GET** /pki/cert/{serial}/raw/pem | 
 *Secrets* | [**GetPkiCerts**](docs/Secrets.md#getpkicerts) | **GET** /pki/certs | 
+*Secrets* | [**GetPkiConfigAutoTidy**](docs/Secrets.md#getpkiconfigautotidy) | **GET** /pki/config/auto-tidy | 
 *Secrets* | [**GetPkiConfigCrl**](docs/Secrets.md#getpkiconfigcrl) | **GET** /pki/config/crl | 
 *Secrets* | [**GetPkiConfigIssuers**](docs/Secrets.md#getpkiconfigissuers) | **GET** /pki/config/issuers | 
 *Secrets* | [**GetPkiConfigKeys**](docs/Secrets.md#getpkiconfigkeys) | **GET** /pki/config/keys | 
 *Secrets* | [**GetPkiConfigUrls**](docs/Secrets.md#getpkiconfigurls) | **GET** /pki/config/urls | 
 *Secrets* | [**GetPkiCrl**](docs/Secrets.md#getpkicrl) | **GET** /pki/crl | 
-*Secrets* | [**GetPkiCrlPem**](docs/Secrets.md#getpkicrlpem) | **GET** /pki/crl/pem | 
 *Secrets* | [**GetPkiCrlRotate**](docs/Secrets.md#getpkicrlrotate) | **GET** /pki/crl/rotate | 
+*Secrets* | [**GetPkiCrlRotateDelta**](docs/Secrets.md#getpkicrlrotatedelta) | **GET** /pki/crl/rotate-delta | 
+*Secrets* | [**GetPkiDelta**](docs/Secrets.md#getpkidelta) | **GET** /pki//delta | 
+*Secrets* | [**GetPkiDeltaCrl**](docs/Secrets.md#getpkideltacrl) | **GET** /pki/delta-crl | 
+*Secrets* | [**GetPkiDeltaPem**](docs/Secrets.md#getpkideltapem) | **GET** /pki//delta/pem | 
 *Secrets* | [**GetPkiDer**](docs/Secrets.md#getpkider) | **GET** /pki//der | 
-*Secrets* | [**GetPkiIssuerRefCrlPem**](docs/Secrets.md#getpkiissuerrefcrlpem) | **GET** /pki/{issuer_ref}/crl/pem | 
+*Secrets* | [**GetPkiIssuerRefCrlPemDerDeltaPem**](docs/Secrets.md#getpkiissuerrefcrlpemderdeltapem) | **GET** /pki/{issuer_ref}/crl/pem|/der|/delta/pem | 
 *Secrets* | [**GetPkiIssuerRefDerPem**](docs/Secrets.md#getpkiissuerrefderpem) | **GET** /pki/{issuer_ref}/der|/pem | 
 *Secrets* | [**GetPkiIssuers**](docs/Secrets.md#getpkiissuers) | **GET** /pki/issuers | 
 *Secrets* | [**GetPkiJson**](docs/Secrets.md#getpkijson) | **GET** /pki//json | 
 *Secrets* | [**GetPkiKeyKeyRef**](docs/Secrets.md#getpkikeykeyref) | **GET** /pki/key/{key_ref} | 
 *Secrets* | [**GetPkiKeys**](docs/Secrets.md#getpkikeys) | **GET** /pki/keys | 
+*Secrets* | [**GetPkiOcspReq**](docs/Secrets.md#getpkiocspreq) | **GET** /pki/ocsp/{req} | 
+*Secrets* | [**GetPkiPem**](docs/Secrets.md#getpkipem) | **GET** /pki//pem | 
 *Secrets* | [**GetPkiRoles**](docs/Secrets.md#getpkiroles) | **GET** /pki/roles | 
 *Secrets* | [**GetPkiRolesName**](docs/Secrets.md#getpkirolesname) | **GET** /pki/roles/{name} | 
 *Secrets* | [**GetPkiTidyStatus**](docs/Secrets.md#getpkitidystatus) | **GET** /pki/tidy-status | 
@@ -763,6 +777,15 @@ Class | Method | HTTP request | Description
 *Secrets* | [**PostKubernetesCredsName**](docs/Secrets.md#postkubernetescredsname) | **POST** /kubernetes/creds/{name} | 
 *Secrets* | [**PostKubernetesRolesName**](docs/Secrets.md#postkubernetesrolesname) | **POST** /kubernetes/roles/{name} | 
 *Secrets* | [**PostKvPath**](docs/Secrets.md#postkvpath) | **POST** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+*Secrets* | [**PostLdapConfig**](docs/Secrets.md#postldapconfig) | **POST** /ldap/config | 
+*Secrets* | [**PostLdapLibraryManageNameCheckIn**](docs/Secrets.md#postldaplibrarymanagenamecheckin) | **POST** /ldap/library/manage/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**PostLdapLibraryName**](docs/Secrets.md#postldaplibraryname) | **POST** /ldap/library/{name} | Update a library set.
+*Secrets* | [**PostLdapLibraryNameCheckIn**](docs/Secrets.md#postldaplibrarynamecheckin) | **POST** /ldap/library/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**PostLdapLibraryNameCheckOut**](docs/Secrets.md#postldaplibrarynamecheckout) | **POST** /ldap/library/{name}/check-out | Check a service account out from the library.
+*Secrets* | [**PostLdapRoleName**](docs/Secrets.md#postldaprolename) | **POST** /ldap/role/{name} | 
+*Secrets* | [**PostLdapRotateRoleName**](docs/Secrets.md#postldaprotaterolename) | **POST** /ldap/rotate-role/{name} | 
+*Secrets* | [**PostLdapRotateRoot**](docs/Secrets.md#postldaprotateroot) | **POST** /ldap/rotate-root | 
+*Secrets* | [**PostLdapStaticRoleName**](docs/Secrets.md#postldapstaticrolename) | **POST** /ldap/static-role/{name} | 
 *Secrets* | [**PostMongodbatlasConfig**](docs/Secrets.md#postmongodbatlasconfig) | **POST** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
 *Secrets* | [**PostMongodbatlasCredsName**](docs/Secrets.md#postmongodbatlascredsname) | **POST** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
 *Secrets* | [**PostMongodbatlasRolesName**](docs/Secrets.md#postmongodbatlasrolesname) | **POST** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
@@ -770,12 +793,17 @@ Class | Method | HTTP request | Description
 *Secrets* | [**PostNomadConfigLease**](docs/Secrets.md#postnomadconfiglease) | **POST** /nomad/config/lease | Configure the lease parameters for generated tokens
 *Secrets* | [**PostNomadRoleName**](docs/Secrets.md#postnomadrolename) | **POST** /nomad/role/{name} | 
 *Secrets* | [**PostOpenldapConfig**](docs/Secrets.md#postopenldapconfig) | **POST** /openldap/config | 
+*Secrets* | [**PostOpenldapLibraryManageNameCheckIn**](docs/Secrets.md#postopenldaplibrarymanagenamecheckin) | **POST** /openldap/library/manage/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**PostOpenldapLibraryName**](docs/Secrets.md#postopenldaplibraryname) | **POST** /openldap/library/{name} | Update a library set.
+*Secrets* | [**PostOpenldapLibraryNameCheckIn**](docs/Secrets.md#postopenldaplibrarynamecheckin) | **POST** /openldap/library/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**PostOpenldapLibraryNameCheckOut**](docs/Secrets.md#postopenldaplibrarynamecheckout) | **POST** /openldap/library/{name}/check-out | Check a service account out from the library.
 *Secrets* | [**PostOpenldapRoleName**](docs/Secrets.md#postopenldaprolename) | **POST** /openldap/role/{name} | 
 *Secrets* | [**PostOpenldapRotateRoleName**](docs/Secrets.md#postopenldaprotaterolename) | **POST** /openldap/rotate-role/{name} | 
 *Secrets* | [**PostOpenldapRotateRoot**](docs/Secrets.md#postopenldaprotateroot) | **POST** /openldap/rotate-root | 
 *Secrets* | [**PostOpenldapStaticRoleName**](docs/Secrets.md#postopenldapstaticrolename) | **POST** /openldap/static-role/{name} | 
 *Secrets* | [**PostPkiBundle**](docs/Secrets.md#postpkibundle) | **POST** /pki/bundle | 
 *Secrets* | [**PostPkiCert**](docs/Secrets.md#postpkicert) | **POST** /pki/cert | 
+*Secrets* | [**PostPkiConfigAutoTidy**](docs/Secrets.md#postpkiconfigautotidy) | **POST** /pki/config/auto-tidy | 
 *Secrets* | [**PostPkiConfigCa**](docs/Secrets.md#postpkiconfigca) | **POST** /pki/config/ca | 
 *Secrets* | [**PostPkiConfigCrl**](docs/Secrets.md#postpkiconfigcrl) | **POST** /pki/config/crl | 
 *Secrets* | [**PostPkiConfigIssuers**](docs/Secrets.md#postpkiconfigissuers) | **POST** /pki/config/issuers | 
@@ -784,22 +812,23 @@ Class | Method | HTTP request | Description
 *Secrets* | [**PostPkiIntermediateCrossSign**](docs/Secrets.md#postpkiintermediatecrosssign) | **POST** /pki/intermediate/cross-sign | 
 *Secrets* | [**PostPkiIntermediateGenerateExported**](docs/Secrets.md#postpkiintermediategenerateexported) | **POST** /pki/intermediate/generate/{exported} | 
 *Secrets* | [**PostPkiIntermediateSetSigned**](docs/Secrets.md#postpkiintermediatesetsigned) | **POST** /pki/intermediate/set-signed | 
-*Secrets* | [**PostPkiInternalExported**](docs/Secrets.md#postpkiinternalexported) | **POST** /pki/internal|exported | 
 *Secrets* | [**PostPkiIssueRole**](docs/Secrets.md#postpkiissuerole) | **POST** /pki/issue/{role} | 
 *Secrets* | [**PostPkiIssuerIssuerRefIssueRole**](docs/Secrets.md#postpkiissuerissuerrefissuerole) | **POST** /pki/issuer/{issuer_ref}/issue/{role} | 
+*Secrets* | [**PostPkiIssuerIssuerRefRevoke**](docs/Secrets.md#postpkiissuerissuerrefrevoke) | **POST** /pki/issuer/{issuer_ref}/revoke | 
 *Secrets* | [**PostPkiIssuerIssuerRefSignIntermediate**](docs/Secrets.md#postpkiissuerissuerrefsignintermediate) | **POST** /pki/issuer/{issuer_ref}/sign-intermediate | 
 *Secrets* | [**PostPkiIssuerIssuerRefSignRole**](docs/Secrets.md#postpkiissuerissuerrefsignrole) | **POST** /pki/issuer/{issuer_ref}/sign/{role} | 
 *Secrets* | [**PostPkiIssuerIssuerRefSignSelfIssued**](docs/Secrets.md#postpkiissuerissuerrefsignselfissued) | **POST** /pki/issuer/{issuer_ref}/sign-self-issued | 
 *Secrets* | [**PostPkiIssuerIssuerRefSignVerbatim**](docs/Secrets.md#postpkiissuerissuerrefsignverbatim) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim | 
 *Secrets* | [**PostPkiIssuerIssuerRefSignVerbatimRole**](docs/Secrets.md#postpkiissuerissuerrefsignverbatimrole) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim/{role} | 
-*Secrets* | [**PostPkiIssuerRefDerPem**](docs/Secrets.md#postpkiissuerrefderpem) | **POST** /pki/{issuer_ref}/der|/pem | 
 *Secrets* | [**PostPkiIssuersGenerateIntermediateExported**](docs/Secrets.md#postpkiissuersgenerateintermediateexported) | **POST** /pki/issuers/generate/intermediate/{exported} | 
 *Secrets* | [**PostPkiIssuersGenerateRootExported**](docs/Secrets.md#postpkiissuersgeneraterootexported) | **POST** /pki/issuers/generate/root/{exported} | 
 *Secrets* | [**PostPkiJson**](docs/Secrets.md#postpkijson) | **POST** /pki//json | 
 *Secrets* | [**PostPkiKeyKeyRef**](docs/Secrets.md#postpkikeykeyref) | **POST** /pki/key/{key_ref} | 
 *Secrets* | [**PostPkiKeysImport**](docs/Secrets.md#postpkikeysimport) | **POST** /pki/keys/import | 
 *Secrets* | [**PostPkiKms**](docs/Secrets.md#postpkikms) | **POST** /pki/kms | 
+*Secrets* | [**PostPkiOcsp**](docs/Secrets.md#postpkiocsp) | **POST** /pki/ocsp | 
 *Secrets* | [**PostPkiRevoke**](docs/Secrets.md#postpkirevoke) | **POST** /pki/revoke | 
+*Secrets* | [**PostPkiRevokeWithKey**](docs/Secrets.md#postpkirevokewithkey) | **POST** /pki/revoke-with-key | 
 *Secrets* | [**PostPkiRolesName**](docs/Secrets.md#postpkirolesname) | **POST** /pki/roles/{name} | 
 *Secrets* | [**PostPkiRootGenerateExported**](docs/Secrets.md#postpkirootgenerateexported) | **POST** /pki/root/generate/{exported} | 
 *Secrets* | [**PostPkiRootReplace**](docs/Secrets.md#postpkirootreplace) | **POST** /pki/root/replace | 
@@ -810,6 +839,7 @@ Class | Method | HTTP request | Description
 *Secrets* | [**PostPkiSignVerbatim**](docs/Secrets.md#postpkisignverbatim) | **POST** /pki/sign-verbatim | 
 *Secrets* | [**PostPkiSignVerbatimRole**](docs/Secrets.md#postpkisignverbatimrole) | **POST** /pki/sign-verbatim/{role} | 
 *Secrets* | [**PostPkiTidy**](docs/Secrets.md#postpkitidy) | **POST** /pki/tidy | 
+*Secrets* | [**PostPkiTidyCancel**](docs/Secrets.md#postpkitidycancel) | **POST** /pki/tidy-cancel | 
 *Secrets* | [**PostRabbitmqConfigConnection**](docs/Secrets.md#postrabbitmqconfigconnection) | **POST** /rabbitmq/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
 *Secrets* | [**PostRabbitmqConfigLease**](docs/Secrets.md#postrabbitmqconfiglease) | **POST** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
 *Secrets* | [**PostRabbitmqRolesName**](docs/Secrets.md#postrabbitmqrolesname) | **POST** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
@@ -822,6 +852,7 @@ Class | Method | HTTP request | Description
 *Secrets* | [**PostSshConfigCa**](docs/Secrets.md#postsshconfigca) | **POST** /ssh/config/ca | Set the SSH private key used for signing certificates.
 *Secrets* | [**PostSshConfigZeroaddress**](docs/Secrets.md#postsshconfigzeroaddress) | **POST** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
 *Secrets* | [**PostSshCredsRole**](docs/Secrets.md#postsshcredsrole) | **POST** /ssh/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
+*Secrets* | [**PostSshIssueRole**](docs/Secrets.md#postsshissuerole) | **POST** /ssh/issue/{role} | 
 *Secrets* | [**PostSshKeysKeyName**](docs/Secrets.md#postsshkeyskeyname) | **POST** /ssh/keys/{key_name} | Register a shared private key with Vault.
 *Secrets* | [**PostSshLookup**](docs/Secrets.md#postsshlookup) | **POST** /ssh/lookup | List all the roles associated with the given IP address.
 *Secrets* | [**PostSshRolesRole**](docs/Secrets.md#postsshrolesrole) | **POST** /ssh/roles/{role} | Manage the 'roles' that can be created with this backend.
@@ -865,6 +896,8 @@ Class | Method | HTTP request | Description
 *System* | [**DeleteSysConfigUiHeadersHeader**](docs/System.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
 *System* | [**DeleteSysGenerateRoot**](docs/System.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
 *System* | [**DeleteSysGenerateRootAttempt**](docs/System.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
+*System* | [**DeleteSysLoggers**](docs/System.md#deletesysloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
+*System* | [**DeleteSysLoggersName**](docs/System.md#deletesysloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
 *System* | [**DeleteSysMountsPath**](docs/System.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
 *System* | [**DeleteSysPluginsCatalogName**](docs/System.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
 *System* | [**DeleteSysPluginsCatalogTypeName**](docs/System.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
@@ -980,6 +1013,8 @@ Class | Method | HTTP request | Description
 *System* | [**PostSysLeasesRevokePrefixPrefix**](docs/System.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
 *System* | [**PostSysLeasesRevokeUrlLeaseId**](docs/System.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
 *System* | [**PostSysLeasesTidy**](docs/System.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+*System* | [**PostSysLoggers**](docs/System.md#postsysloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
+*System* | [**PostSysLoggersName**](docs/System.md#postsysloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
 *System* | [**PostSysMfaValidate**](docs/System.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
 *System* | [**PostSysMountsPath**](docs/System.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
 *System* | [**PostSysMountsPathTune**](docs/System.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
@@ -1032,9 +1067,6 @@ Class | Method | HTTP request | Description
  - [Model.AlicloudConfigRequest](docs/AlicloudConfigRequest.md)
  - [Model.AlicloudLoginRequest](docs/AlicloudLoginRequest.md)
  - [Model.AlicloudRoleRequest](docs/AlicloudRoleRequest.md)
- - [Model.AppIdLoginRequest](docs/AppIdLoginRequest.md)
- - [Model.AppIdMapAppIdRequest](docs/AppIdMapAppIdRequest.md)
- - [Model.AppIdMapUserIdRequest](docs/AppIdMapUserIdRequest.md)
  - [Model.ApproleLoginRequest](docs/ApproleLoginRequest.md)
  - [Model.ApproleRoleBindSecretIdRequest](docs/ApproleRoleBindSecretIdRequest.md)
  - [Model.ApproleRoleBoundCidrListRequest](docs/ApproleRoleBoundCidrListRequest.md)
@@ -1172,7 +1204,13 @@ Class | Method | HTTP request | Description
  - [Model.KvUndeleteRequest](docs/KvUndeleteRequest.md)
  - [Model.LdapConfigRequest](docs/LdapConfigRequest.md)
  - [Model.LdapGroupsRequest](docs/LdapGroupsRequest.md)
+ - [Model.LdapLibraryCheckInRequest](docs/LdapLibraryCheckInRequest.md)
+ - [Model.LdapLibraryCheckOutRequest](docs/LdapLibraryCheckOutRequest.md)
+ - [Model.LdapLibraryManageCheckInRequest](docs/LdapLibraryManageCheckInRequest.md)
+ - [Model.LdapLibraryRequest](docs/LdapLibraryRequest.md)
  - [Model.LdapLoginRequest](docs/LdapLoginRequest.md)
+ - [Model.LdapRoleRequest](docs/LdapRoleRequest.md)
+ - [Model.LdapStaticRoleRequest](docs/LdapStaticRoleRequest.md)
  - [Model.LdapUsersRequest](docs/LdapUsersRequest.md)
  - [Model.MongodbatlasConfigRequest](docs/MongodbatlasConfigRequest.md)
  - [Model.MongodbatlasRolesRequest](docs/MongodbatlasRolesRequest.md)
@@ -1192,20 +1230,23 @@ Class | Method | HTTP request | Description
  - [Model.OktaLoginRequest](docs/OktaLoginRequest.md)
  - [Model.OktaUsersRequest](docs/OktaUsersRequest.md)
  - [Model.OpenldapConfigRequest](docs/OpenldapConfigRequest.md)
+ - [Model.OpenldapLibraryCheckInRequest](docs/OpenldapLibraryCheckInRequest.md)
+ - [Model.OpenldapLibraryCheckOutRequest](docs/OpenldapLibraryCheckOutRequest.md)
+ - [Model.OpenldapLibraryManageCheckInRequest](docs/OpenldapLibraryManageCheckInRequest.md)
+ - [Model.OpenldapLibraryRequest](docs/OpenldapLibraryRequest.md)
  - [Model.OpenldapRoleRequest](docs/OpenldapRoleRequest.md)
  - [Model.OpenldapStaticRoleRequest](docs/OpenldapStaticRoleRequest.md)
  - [Model.PkiBundleRequest](docs/PkiBundleRequest.md)
  - [Model.PkiCertRequest](docs/PkiCertRequest.md)
+ - [Model.PkiConfigAutoTidyRequest](docs/PkiConfigAutoTidyRequest.md)
  - [Model.PkiConfigCaRequest](docs/PkiConfigCaRequest.md)
  - [Model.PkiConfigCrlRequest](docs/PkiConfigCrlRequest.md)
  - [Model.PkiConfigIssuersRequest](docs/PkiConfigIssuersRequest.md)
  - [Model.PkiConfigKeysRequest](docs/PkiConfigKeysRequest.md)
  - [Model.PkiConfigUrlsRequest](docs/PkiConfigUrlsRequest.md)
- - [Model.PkiDerPemRequest](docs/PkiDerPemRequest.md)
  - [Model.PkiIntermediateCrossSignRequest](docs/PkiIntermediateCrossSignRequest.md)
  - [Model.PkiIntermediateGenerateRequest](docs/PkiIntermediateGenerateRequest.md)
  - [Model.PkiIntermediateSetSignedRequest](docs/PkiIntermediateSetSignedRequest.md)
- - [Model.PkiInternalExportedRequest](docs/PkiInternalExportedRequest.md)
  - [Model.PkiIssueRequest](docs/PkiIssueRequest.md)
  - [Model.PkiIssuerIssueRequest](docs/PkiIssuerIssueRequest.md)
  - [Model.PkiIssuerSignIntermediateRequest](docs/PkiIssuerSignIntermediateRequest.md)
@@ -1219,6 +1260,7 @@ Class | Method | HTTP request | Description
  - [Model.PkiKeysImportRequest](docs/PkiKeysImportRequest.md)
  - [Model.PkiKmsRequest](docs/PkiKmsRequest.md)
  - [Model.PkiRevokeRequest](docs/PkiRevokeRequest.md)
+ - [Model.PkiRevokeWithKeyRequest](docs/PkiRevokeWithKeyRequest.md)
  - [Model.PkiRolesRequest](docs/PkiRolesRequest.md)
  - [Model.PkiRootGenerateRequest](docs/PkiRootGenerateRequest.md)
  - [Model.PkiRootReplaceRequest](docs/PkiRootReplaceRequest.md)
@@ -1237,6 +1279,7 @@ Class | Method | HTTP request | Description
  - [Model.SshConfigCaRequest](docs/SshConfigCaRequest.md)
  - [Model.SshConfigZeroaddressRequest](docs/SshConfigZeroaddressRequest.md)
  - [Model.SshCredsRequest](docs/SshCredsRequest.md)
+ - [Model.SshIssueRequest](docs/SshIssueRequest.md)
  - [Model.SshKeysRequest](docs/SshKeysRequest.md)
  - [Model.SshLookupRequest](docs/SshLookupRequest.md)
  - [Model.SshRolesRequest](docs/SshRolesRequest.md)
@@ -1264,6 +1307,7 @@ Class | Method | HTTP request | Description
  - [Model.SystemLeasesRevokeLeaseRequest](docs/SystemLeasesRevokeLeaseRequest.md)
  - [Model.SystemLeasesRevokePrefixRequest](docs/SystemLeasesRevokePrefixRequest.md)
  - [Model.SystemLeasesRevokeRequest](docs/SystemLeasesRevokeRequest.md)
+ - [Model.SystemLoggersRequest](docs/SystemLoggersRequest.md)
  - [Model.SystemMfaValidateRequest](docs/SystemMfaValidateRequest.md)
  - [Model.SystemMountsRequest](docs/SystemMountsRequest.md)
  - [Model.SystemMountsTuneRequest](docs/SystemMountsTuneRequest.md)
@@ -1293,6 +1337,8 @@ Class | Method | HTTP request | Description
  - [Model.SystemWrappingUnwrapRequest](docs/SystemWrappingUnwrapRequest.md)
  - [Model.TerraformConfigRequest](docs/TerraformConfigRequest.md)
  - [Model.TerraformRoleRequest](docs/TerraformRoleRequest.md)
+ - [Model.TokenCreateOrphanRequest](docs/TokenCreateOrphanRequest.md)
+ - [Model.TokenCreateRequest](docs/TokenCreateRequest.md)
  - [Model.TokenLookupAccessorRequest](docs/TokenLookupAccessorRequest.md)
  - [Model.TokenLookupRequest](docs/TokenLookupRequest.md)
  - [Model.TokenLookupSelfRequest](docs/TokenLookupSelfRequest.md)
