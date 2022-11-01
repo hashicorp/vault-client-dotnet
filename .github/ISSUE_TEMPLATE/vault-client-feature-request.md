@@ -7,11 +7,14 @@ assignees: ''
 
 ---
 
-**Describe the feature request or question**
+## Describe the feature request or question
+
 A clear and concise description of what the problem is. 
 
-**Link to the Vault API Docs that support this feature**
+## Link to the Vault API Docs that support this feature
+
 The Vault Docs URL
 
-**Additional context**
+## Additional context
+
 Add any other context or screenshots about the feature request here.
