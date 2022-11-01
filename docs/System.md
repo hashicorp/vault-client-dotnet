@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**DeleteSysConfigUiHeadersHeader**](System.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
 [**DeleteSysGenerateRoot**](System.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
 [**DeleteSysGenerateRootAttempt**](System.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
+[**DeleteSysLoggers**](System.md#deletesysloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
+[**DeleteSysLoggersName**](System.md#deletesysloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
 [**DeleteSysMountsPath**](System.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
 [**DeleteSysPluginsCatalogName**](System.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
 [**DeleteSysPluginsCatalogTypeName**](System.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
@@ -126,6 +128,8 @@ Method | HTTP request | Description
 [**PostSysLeasesRevokePrefixPrefix**](System.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
 [**PostSysLeasesRevokeUrlLeaseId**](System.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
 [**PostSysLeasesTidy**](System.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**PostSysLoggers**](System.md#postsysloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
+[**PostSysLoggersName**](System.md#postsysloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
 [**PostSysMfaValidate**](System.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
 [**PostSysMountsPath**](System.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
 [**PostSysMountsPathTune**](System.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
@@ -636,6 +640,146 @@ namespace Example
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletesysloggers"></a>
+# **DeleteSysLoggers**
+> void DeleteSysLoggers ()
+
+Revert the all loggers to use log level provided in config.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteSysLoggersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+
+            try
+            {
+                // Revert the all loggers to use log level provided in config.
+                apiInstance.DeleteSysLoggers();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.DeleteSysLoggers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletesysloggersname"></a>
+# **DeleteSysLoggersName**
+> void DeleteSysLoggersName (string name)
+
+Revert a single logger to use log level provided in config.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteSysLoggersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | The name of the logger to be modified.
+
+            try
+            {
+                // Revert a single logger to use log level provided in config.
+                apiInstance.DeleteSysLoggersName(name);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.DeleteSysLoggersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the logger to be modified. | 
 
 ### Return type
 
@@ -8779,6 +8923,152 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postsysloggers"></a>
+# **PostSysLoggers**
+> void PostSysLoggers (SystemLoggersRequest systemLoggersRequest = null)
+
+Modify the log level for all existing loggers.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostSysLoggersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest |  (optional) 
+
+            try
+            {
+                // Modify the log level for all existing loggers.
+                apiInstance.PostSysLoggers(systemLoggersRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PostSysLoggers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postsysloggersname"></a>
+# **PostSysLoggersName**
+> void PostSysLoggersName (string name, SystemLoggersRequest systemLoggersRequest = null)
+
+Modify the log level of a single logger.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostSysLoggersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | The name of the logger to be modified.
+            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest |  (optional) 
+
+            try
+            {
+                // Modify the log level of a single logger.
+                apiInstance.PostSysLoggersName(name, systemLoggersRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PostSysLoggersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the logger to be modified. | 
+ **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 

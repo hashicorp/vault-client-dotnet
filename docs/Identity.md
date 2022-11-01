@@ -3840,7 +3840,7 @@ No authorization required
 
 <a name="getidentityoidcprovider"></a>
 # **GetIdentityOidcProvider**
-> void GetIdentityOidcProvider (string list)
+> void GetIdentityOidcProvider (string list, string allowedClientId = null)
 
 
 
@@ -3866,10 +3866,11 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
+            var allowedClientId = "\"\"";  // string | Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional)  (default to "")
 
             try
             {
-                apiInstance.GetIdentityOidcProvider(list);
+                apiInstance.GetIdentityOidcProvider(list, allowedClientId);
             }
             catch (ApiException  e)
             {
@@ -3887,6 +3888,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **allowedClientId** | **string**| Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. | [optional] [default to &quot;&quot;]
 
 ### Return type
 

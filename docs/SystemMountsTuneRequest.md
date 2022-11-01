@@ -10,10 +10,11 @@ Name | Type | Description | Notes
 **AuditNonHmacResponseKeys** | **List&lt;string&gt;** | The list of keys in the response data object that will not be HMAC&#39;ed by audit devices. | [optional] 
 **DefaultLeaseTtl** | **string** | The default lease TTL for this mount. | [optional] 
 **Description** | **string** | User-friendly description for this credential backend. | [optional] 
-**ListingVisibility** | **string** | Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;&#39;. | [optional] 
+**ListingVisibility** | **string** | Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;hidden&#39;, with the empty default (&#39;&#39;) behaving like &#39;hidden&#39;. | [optional] 
 **MaxLeaseTtl** | **string** | The max lease TTL for this mount. | [optional] 
 **Options** | **Object** | The options to pass into the backend. Should be a json object with string keys and values. | [optional] 
 **PassthroughRequestHeaders** | **List&lt;string&gt;** | A list of headers to whitelist and pass from the request to the plugin. | [optional] 
+**PluginVersion** | **string** | The semantic version of the plugin to use. | [optional] 
 **TokenType** | **string** | The type of token to issue (service or batch). | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

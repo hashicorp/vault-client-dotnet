@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **MaxTtl** | **int** | The maximum password time-to-live. | [optional] 
 **PasswordPolicy** | **string** | Password policy to use to generate passwords | [optional] 
 **RequestTimeout** | **int** | Timeout, in seconds, for the connection when making requests against the server before returning back an error. | [optional] 
-**Schema** | **string** | The desired OpenLDAP schema used when modifying user account passwords. | [optional] [default to "openldap"]
+**Schema** | **string** | The desired LDAP schema used when modifying user account passwords. | [optional] [default to "openldap"]
 **Starttls** | **bool** | Issue a StartTLS command after establishing unencrypted connection (optional) | [optional] 
 **TlsMaxVersion** | **string** | Maximum TLS version to use. Accepted values are &#39;tls10&#39;, &#39;tls11&#39;, &#39;tls12&#39; or &#39;tls13&#39;. Defaults to &#39;tls12&#39; | [optional] [default to TlsMaxVersionEnum.Tls12]
 **TlsMinVersion** | **string** | Minimum TLS version to use. Accepted values are &#39;tls10&#39;, &#39;tls11&#39;, &#39;tls12&#39; or &#39;tls13&#39;. Defaults to &#39;tls12&#39; | [optional] [default to TlsMinVersionEnum.Tls12]
